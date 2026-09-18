@@ -23,8 +23,15 @@ bring-up, board audit and from-zero operating guide. Original 12 board reference
 ## Failures / limitations
 Initial XSim command-line forwarding failure retained in evidence/simulation/vn1/; fixed without changing
 assertions. Successful intermediate runs vn1_final/vn1_complete are historical, vn1_release is authoritative.
+An initial clean-clone attempt selected the original README commit because the preceding local commit
+failed with missing Git author identity. It correctly failed dependency installation; evidence is retained
+in evidence/reproducibility_initial/. Repository-local identity was then configured from the authenticated
+GitHub login using its noreply address, the checkpoint committed, and a source-cleanliness guard added.
 No target synthesis, place/route, bitstream, PS transport, physical timing, pressure, thermal or levitation tests.
-Reproduction status is recorded in evidence/reproducibility/ after clean-checkout execution.
+Clean-checkout reproduction: **PASS**, source commit 6b29f8b, new isolated venv, complete Python/Icarus/XSim
+regression and regenerated model CSVs match. Raw repeated-tool evidence is in evidence/reproducibility/validation/;
+commands, source commit and content hashes are in evidence/reproducibility/summary.json.
+This is a fresh local clone on the same Windows host, not a second physical target or OS.
 
 ## Decisions needed before next hardware stage
 Obtain full FPGA part/package/speed grade and bank VCCO; clarify malformed .const entries.

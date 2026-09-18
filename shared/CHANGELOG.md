@@ -10,3 +10,5 @@
 - Ran Icarus and Vivado 2025.2 XSim with identical repeat traces; target synthesis remains explicitly blocked.
 - Added characterization schemas, modular PCB interface, experimental roadmap and reproduction instructions.
 - Retained initial launcher failure and successive verification evidence. No fabricated hardware results or XDC.
+- Fresh local clone of 6b29f8b plus new venv passed complete dual-simulator validation and model CSV reproduction.
+- Preserved the earlier wrong-checkpoint reproduction failure, added a source-clean guard, and verified original board files unchanged.

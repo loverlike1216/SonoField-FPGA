@@ -27,7 +27,9 @@ traces under each of Icarus and Vivado XSim agree byte-for-byte. Each full trace
 `evidence/model/vn1/`: generated tables, assumptions and plots.
 `evidence/preflight/`: all 12 board files inventoried with SHA-256; 101 verbatim pin candidates.
 `evidence/synthesis/board_gate.log`: real Vivado 2025.2 invocation, expected missing-facts rejection.
-Clean-checkout reproduction and hygiene evidence are added under their corresponding evidence directories.
+`evidence/reproducibility/summary.json`: **PASS**, fresh local clone of source checkpoint 6b29f8b,
+new venv, full dual-simulator tests and matching model CSV content hashes. Repeated raw tool logs are preserved.
+`evidence/hygiene/`: structure/link/source-hash checks PASS; all 12 user board originals unchanged.
 
 ## NOT VALIDATED
 Board-target synthesis, implementation/timing/DRC, bitstream, physical FPGA outputs, actual PS communication,

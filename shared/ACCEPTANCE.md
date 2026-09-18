@@ -28,3 +28,6 @@ Automated evidence is ready for independent review. Overall VN1 acceptance remai
 TB15: three repeat traces per simulator, byte-identical. This satisfies the defined digital determinism
 check, not analog drift or measured field repeatability. Final board synthesis/timing and physical acceptance
 must remain open. No self-issued whole-project final acceptance is recorded.
+
+REPRODUCIBILITY_CHECK: fresh local clone at 6b29f8b, new venv and pinned installation completed all digital
+tests; regenerated model CSV content hashes agree. Evidence: evidence/reproducibility/summary.json.

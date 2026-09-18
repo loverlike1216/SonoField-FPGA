@@ -41,5 +41,6 @@ These do not block board-independent simulation or field modeling.
 ## Current execution result
 Digital/model implementation and cross-tool verification complete. Authoritative digital evidence:
 evidence/simulation/vn1_release/summary.json (PASS). Model outputs: evidence/model/vn1/.
-Physical synthesis/implementation/bring-up remain blocked. Finish clean-checkout reproduction, state/evidence
-audit and stable checkpoint; do not expand into PCB fabrication or advanced field modes.
+Physical synthesis/implementation/bring-up remain blocked. Clean-checkout/new-venv reproduction passed
+at source checkpoint 6b29f8b; all model CSV content hashes agree. State/evidence audit passed.
+Stable checkpoint is ready for review; do not expand into PCB fabrication or advanced field modes.

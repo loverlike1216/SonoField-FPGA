@@ -94,7 +94,21 @@ CORE_CLOCK_HZ、CLOCK_SOURCE；不要直接复制其他 Zynq 板的 part 或假�
 先单个电气表征，再双发射器，再小阵列。先小颗粒，再 5/10/25/50 mg。
 硬件关闭需要独立的上电默认禁用和功率互锁；数字仿真不能证明上电/掉电/失钟安全。
 
-## 8. 常见问题
+## 8. 干净检出复现
+
+先提交源代码检查点，然后在全新、尚不存在的 build 子目录复现：
+
+```powershell
+.\.venv\Scripts\python.exe scripts/reproduce.py --target build/repro_review
+```
+
+脚本从本地 Git 检出已提交版本，新建独立 venv，安装锁定依赖，运行完整双模拟器验证和模型，
+再比较模型 CSV 的统一换行文本哈希。输出 evidence/reproducibility/summary.json。
+这验证同一 Windows 主机上的干净安装复现，不是第二块物理板或第二种操作系统。
+若目标已存在，改用新的 build 子目录；脚本不会递归删除现有目录。
+保留已有的 evidence/reproducibility 结果后再运行新的复现，避免覆盖历史验收证据。
+
+## 9. 常见问题
 
 - 找不到 numpy/scipy：检查是否使用 .venv/Scripts/python.exe，以及锁文件安装是否成功。
 - 找不到模拟器：覆盖对应 --*-bin 参数，确认版本。不能跳过后仍报告完整通过。
