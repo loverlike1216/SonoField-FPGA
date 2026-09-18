@@ -1,0 +1,36 @@
+# Blocking facts and decisions
+
+## B01 — Exact part/package/speed grade
+Zynq-7020 family identified. Board photos do not establish a reliably readable complete ordering code.
+No schematic, BOM, manual or reference Vivado project is supplied. Do not select a guessed part.
+Blocks target synthesis, implementation and bitstream. Need legible chip marking or manufacturer BOM.
+
+## B02 — Clock source precedence RESOLVED by user
+hardware.const and EDA screenshot label N18 `33MHZ`; 3.png and the full peripheral table label
+N18 `33.333MHz`. User explicitly directed that constrain files prevail. Adopt N18 / 33,000,000 Hz
+as the documented input clock. Physical oscillator tolerance/frequency remains unmeasured.
+High-rate serializer clock still requires a justified clock-generation design and timing validation.
+
+## B03 — GPIO/voltage conflict (DECISION_CONFLICT)
+Problem: physical connector numbering conflicts. Evidence: gpio.const J3 pin1=T20 while 1.png
+pin1=U14; J4 pin1=H15 versus F19. J4 Pin6 occurs twice in .const (D18,E18).
+J6 V16 has no pin number in .const; 2.png lists V16 twice (16 and 20), whereas layout image
+shows Y16 on the earlier row. HDMI CEC is J5 in hardware.const and J15 in tables.
+Existing decision: user explicitly selected constrain files over screenshots.
+Conflict: cross-source differences resolved by this precedence; duplicate/missing entries within .const remain unresolved.
+Options: obtain revision-matched schematic, or manufacturer-confirmed pinout plus unpowered continuity test.
+Recommendation: resolve against manufacturer schematic before any board XDC or PCB connector assignment.
+Connector 5V supply labels do NOT establish FPGA bank VCCO or 5V-tolerant GPIO.
+
+## B04 — Serializer electrical architecture
+128 arbitrary 8-bit phases require 10.24 MHz simultaneous state refresh; serial bandwidth is 1.31072 Gbit/s.
+16 lanes x 8 bits need at least 81.92 MHz bit rate before latch/setup overhead. Logic simulation of a
+fast interface is not evidence that a 74AHC595 board supports it. Candidate must pass worst-case
+datasheet timing, loading, fanout, voltage and routed timing review before PCB-A is frozen.
+VN1 implements and simulates a 32-lane/four-used-output alternative at 132 MHz core, 66 MHz shift
+clock. AHCT at 5 V is the conditional component candidate. Board PLL, IO voltage and electrical
+timing/clock distribution remain unverified; no PCB freeze is authorized by a digital PASS.
+
+## B05 — Purchased transducer and physical validation
+No batch measurements, driver prototype, calibrated pressure, object mass or levitation evidence supplied.
+PH0 onward remain unvalidated. Absolute force and 50 mg support cannot be inferred from normalized pressure.

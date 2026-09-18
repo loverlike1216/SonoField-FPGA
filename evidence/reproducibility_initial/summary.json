@@ -1,0 +1,57 @@
+{
+  "status": "FAIL",
+  "target": "E:\\Codex-project\\AMD-SonoField-FPGA\\build\\repro_vn1",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "log": "source_commit.log"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "E:\\Codex-project\\AMD-SonoField-FPGA",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\build\\repro_vn1"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "log": "clone.log"
+    },
+    {
+      "command": [
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "venv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\build\\repro_vn1\\.venv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "log": "venv.log"
+    },
+    {
+      "command": [
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\build\\repro_vn1\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--cache-dir",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\build\\pip_cache",
+        "-r",
+        "requirements-lock.txt"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\build\\repro_vn1",
+      "exit_code": 1,
+      "log": "install.log"
+    }
+  ],
+  "started_utc": "2026-09-18T16:22:03.990399+00:00",
+  "source_commit": "c72b67092626fe3d81407effbd5ddff2e431f5b2",
+  "error": "install failed: ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements-lock.txt'\n\n[notice] A new release of pip is available: 23.0.1 -> 26.2.1\n[notice] To update, run: E:\\Codex-project\\AMD-SonoField-FPGA\\build\\repro_vn1\\.venv\\Scripts\\python.exe -m pip install --upgrade pip\n"
+}

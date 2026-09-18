@@ -1,0 +1,10 @@
+{
+  "classification": "SIMULATION_ESTIMATE",
+  "sound_speed_m_s": 343.0,
+  "attenuation_np_m": 0.0,
+  "geometry": {"total": 72, "pitch": 0.018, "gap": 0.16, "shape": "concave", "radius": 0.18, "diameter": 0.016, "frequency": 40000.0},
+  "mode": "STANDING_WAVE",
+  "target_m": [0, 0, 0],
+  "monte_carlo": {"seed": 7020, "trials": 50, "phase_error_std_degrees": 15.0, "relative_amplitude_std": 0.1},
+  "notes": "Exploration inputs, not frozen mechanics, measured environment or batch calibration"
+}

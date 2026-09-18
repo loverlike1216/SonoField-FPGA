@@ -1,0 +1,41 @@
+{
+  "config": {
+    "classification": "SIMULATION_ESTIMATE",
+    "sound_speed_m_s": 343.0,
+    "attenuation_np_m": 0.0,
+    "geometry": {
+      "total": 72,
+      "pitch": 0.018,
+      "gap": 0.16,
+      "shape": "concave",
+      "radius": 0.18,
+      "diameter": 0.016,
+      "frequency": 40000.0
+    },
+    "mode": "STANDING_WAVE",
+    "target_m": [
+      0,
+      0,
+      0
+    ],
+    "monte_carlo": {
+      "seed": 7020,
+      "trials": 50,
+      "phase_error_std_degrees": 15.0,
+      "relative_amplitude_std": 0.1
+    },
+    "notes": "Exploration inputs, not frozen mechanics, measured environment or batch calibration"
+  },
+  "monte_carlo_seed": 7020,
+  "pressure_units": "arbitrary; no SPL calibration",
+  "trap_proxy": "Rayleigh high contrast f1=f2=1; no gravity or finite-size scattering",
+  "basin_definition": "6-connected region containing origin below minimum boundary proxy on +/-10mm cube, 1mm grid",
+  "limitations": [
+    "No multiple scattering or mutual coupling",
+    "No measured driver/element transfer functions",
+    "Far-field piston approximation imperfect for TCT40",
+    "No temperature/RH absorption fit",
+    "No physical working-volume or mass-support guarantee",
+    "50mg example is outside small-particle validity"
+  ]
+}

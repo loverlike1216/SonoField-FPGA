@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED",
+  "reason": "Complete FPGA ordering code including package and speed grade is not documented",
+  "tool": "AMD Vivado 2025.2",
+  "command": "vivado.bat -mode batch -nolog -nojournal -source scripts/create_project.tcl",
+  "exit_code": 1,
+  "expected_failure": true,
+  "log": "board_gate.log",
+  "synthesis_executed": false,
+  "implementation_executed": false,
+  "bitstream_generated": false,
+  "hardware_verified": false
+}

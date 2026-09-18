@@ -1,0 +1,58 @@
+"""Fresh local Git clone + isolated venv + complete tests, all within the specified workspace."""
+import argparse
+import datetime
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT=Path(__file__).resolve().parents[1]
+
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument("--target",default="build/repro_vn1")
+    a=p.parse_args();target=(ROOT/a.target).resolve()
+    if ROOT not in target.parents or target.exists():
+        raise SystemExit("Reproduction target must be new and inside this workspace; nothing will be deleted")
+    evidence=ROOT/"evidence/reproducibility";evidence.mkdir(parents=True,exist_ok=True)
+    records=[];summary={"status":"RUNNING","target":str(target),"commands":records}
+    def run(name,cmd,cwd=ROOT):
+        result=subprocess.run([str(v) for v in cmd],cwd=cwd,capture_output=True,text=True,errors="replace",timeout=900)
+        (evidence/f"{name}.log").write_text(result.stdout+result.stderr,encoding="utf-8")
+        records.append({"command":[str(v) for v in cmd],"cwd":str(cwd),"exit_code":result.returncode,"log":name+".log"})
+        print(f"{name}: exit {result.returncode}",flush=True)
+        if result.returncode: raise RuntimeError(name+" failed: "+(result.stdout+result.stderr)[-1800:])
+        return result.stdout
+    try:
+        summary["started_utc"]=datetime.datetime.now(datetime.timezone.utc).isoformat()
+        dirty=run("source_status",["git","status","--porcelain","--untracked-files=no"]).strip()
+        if dirty:
+            raise RuntimeError("Commit the source checkpoint before attempting fresh-clone reproduction")
+        summary["source_commit"]=run("source_commit",["git","rev-parse","HEAD"]).strip()
+        run("clone",["git","clone","--no-hardlinks",ROOT,target])
+        run("venv",[sys.executable,"-m","venv",target/".venv"])
+        python=target/".venv/Scripts/python.exe"
+        run("install",[python,"-m","pip","install","--cache-dir",ROOT/"build/pip_cache","-r","requirements-lock.txt"],target)
+        run("dependency_check",[python,"-m","pip","check"],target)
+        run("full_validation",[python,"scripts/validate.py","--output","build/reproduced_evidence"],target)
+        run("model",[python,"-m","software.acoustic_model.visualize_field","--output","build/reproduced_model"],target)
+        matching=[]
+        for path in sorted((ROOT/"evidence/model/vn1").glob("*.csv")):
+            # CSV content identity is independent of Git/Windows newline conversion.
+            original=hashlib.sha256(path.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+            repeated=hashlib.sha256((target/"build/reproduced_model"/path.name).read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+            if original!=repeated:raise AssertionError("Model reproduction mismatch: "+path.name)
+            matching.append({"file":path.name,"canonical_lf_sha256":original})
+        digital=json.loads((target/"build/reproduced_evidence/summary.json").read_text())
+        if digital["status"]!="PASS":raise AssertionError("Reproduction digital gate incomplete")
+        run("repository_audit",[python,"scripts/check_repository.py"],target)
+        summary.update(status="PASS",model_csv_hashes=matching,digital_trace_sha256=digital["TB15"]["hashes"][0],
+                       note="Fresh local clone/new venv on same Windows host; not an independent physical board or OS")
+    except Exception as exc:
+        summary.update(status="FAIL",error=str(exc));raise
+    finally:
+        (evidence/"summary.json").write_text(json.dumps(summary,indent=2),encoding="utf-8")
+
+
+if __name__=="__main__":main()
