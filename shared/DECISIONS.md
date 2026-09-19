@@ -1,34 +1,36 @@
-# Architecture decisions — VN1
+# Current engineering decisions — v1
 
-All user-directed decisions below are retained. New implementation choices do not override hardware gates.
+Project SONOFIELD_FPGA. These are user-approved requirements or identified local implementation choices,
+not invented external ChatGPT decisions. Chat Source SonoField-FPGA is inaccessible; source message IDs UNKNOWN.
+Prior provenance is retained in Git history. Current references below use repository-root paths.
 
-| ADR | Decision | Status |
+| ID | Current decision | Source / validation consequence |
 |---|---|---|
-| ADR-001 | Robei Zynq-7020 is the main controller | Accepted by user; exact ordering code pending |
-| ADR-002 | Vivado 2025.2 is authoritative EDA | Accepted |
-| ADR-003 | TCT40-16T was the initial transmitter baseline | Superseded for current geometry by ADR-020; retained as history |
-| ADR-004 | Nominal acoustic frequency 40 kHz | Accepted |
-| ADR-005 | Digital architecture supports 128 channels | Accepted |
-| ADR-006 | First physical system uses opposed standing-wave arrays | Accepted |
-| ADR-007 | 6x6 + 6x6 was the demonstration target | Superseded for current design by ADR-021 |
-| ADR-008 | 8x8 + 8x8 was reserved for later expansion | User explicitly selected it in ADR-021; staged electrical bring-up remains |
-| ADR-009 | 8-bit phase representation | Accepted |
-| ADR-010 | Independent per-channel calibration | Accepted |
-| ADR-011 | Complete phase maps commit atomically at carrier boundary | Accepted |
-| ADR-012 | Host acoustic solver first, advanced FPGA field solver later | Accepted |
-| ADR-013 | 50 mg is a staged physical target, never a simulation guarantee | Accepted |
-| ADR-014 | User explicitly selected Zynq7020/constrain over screenshots | Accepted; 33 MHz/N18 documented, conflicting screenshot superseded |
-| ADR-015 | Integer fractional master phase clock; parallel shadow/active register banks | Local implementation decision; all channels coherent, no partial copy window |
-| ADR-016 | Requested and calibration values plus enable mask committed together | Local implementation decision; supports sparse P0/P1 arrays without remapping lower IDs |
-| ADR-017 | 32 lanes, four used outputs/package, 132 MHz core/66 MHz shift clock | **Candidate only**, simulated; no physical clock/PCB freeze |
-| ADR-018 | No guessed part, pin voltage, XDC or bitstream | Mandatory; blocks board-target synthesis pending exact part |
-| ADR-019 | Full maps generated for STANDING_WAVE and FOCUS; other mode IDs reserved | VN1 scope; unsupported modes explicitly reject |
-| ADR-020 | Use the user's pictured nominal 10 mm / 40 kHz transmitter candidate | User decision 2026-09-19; exact part, active aperture, capacitance and drive ratings unknown |
-| ADR-021 | Current assembly is opposed planar 8x8 + 8x8, 12 mm radiating-center pitch | User decision; 128 populated design channels, nominal body edge clearance 2 mm |
-| ADR-022 | Transducer Coordinate = Radiating Surface Center; origin is the array-pair geometric center | User decision; both faces share the same global XY frame |
-| ADR-023 | Nominal face-to-face gap 100 mm, adjustable 90..115 mm | User decision; upper/lower z=+/-g/2, centered mechanical adjustment |
-| ADR-024 | Preserve historical 16 mm outputs; regenerate maps for each face gap | New geometry cannot reuse old model evidence or quietly reinterpret old CSVs |
+| ADR-001 | Robei Zynq-7020 controller; exact part unresolved | User project brief; B01 |
+| ADR-002 | Vivado 2025.2 authoritative | User brief; simulation and synthesis distinguished |
+| ADR-003 | User-selected nominal 10 mm / 40 kHz transmitter | User supplier image; exact electrical ratings unresolved |
+| ADR-004 | 40 kHz common carrier | User brief; waveform reference |
+| ADR-005 | 128-channel capable digital design | User brief; multi-size regression |
+| ADR-006 | Opposed standing waves and geometric focusing | User brief; model estimates only |
+| ADR-009 | 8-bit requested and independent calibration phase | User brief; RTL/oracle tests |
+| ADR-011 | Complete-map atomic commit at period boundary | User brief; completeness and pending-write tests |
+| ADR-012 | Host solver first | User brief; advanced field solver outside scope |
+| ADR-013 | 50 mg is staged physical target | User brief; no simulated force guarantee |
+| ADR-014 | Zynq7020/constrain prevails over conflicting screenshots | Explicit user reply; documented N18 / 33 MHz, remaining malformed entries open |
+| ADR-015 | Shared fractional phase timebase, shadow/active registers | Local implementation; deterministic trace checks |
+| ADR-016 | Requested/calibration/mask committed together | Local implementation; no partial-array map |
+| ADR-017 | Candidate 32 serial lanes / four used outputs, 132 MHz core | Simulated candidate only; B04 electrical review required |
+| ADR-018 | No guessed part, voltage, XDC or bitstream | Mandatory board evidence gate |
+| ADR-019 | STANDING_WAVE and FOCUS implemented | Other modes reject; no fake results |
+| ADR-021 | Opposed planar 8x8 + 8x8 at 12 mm pitch | Explicit user geometry instruction |
+| ADR-022 | Coordinates at radiating-face centers, origin at pair center | Explicit user instruction; exact-grid tests |
+| ADR-023 | Face gap 100 mm, adjustable 90–115 mm, z=+/-g/2 | Explicit user instruction; range and phase tests |
+| ADR-024 | Regenerate phase maps for measured face gap | Geometry propagation model and cross-validation |
+| ADR-025 | Single active v1 directory, root cross-version governance | Current user organization instruction; same version, no v2 |
+| ADR-026 | Delete obsolete version records from current tree after integrity passes | Current user follow-up; Git history retained, fresh evidence required |
+| ADR-027 | Chat source SonoField-FPGA; blocked access is explicit | Current user reply + actual tool catalog inspection |
 
-ADR-017 alternatives: one 128-bit chain would require >=1.31 Gbit/s; 16x8 needs >=81.92 MHz plus
-overhead; 32x4 reduces bit-rate at cost of I/O/package count. The selected **simulation** candidate
-does not authorize fabrication. Need confirmed IO bank voltage, clock generation, buffering and timing review.
+For ADR-025/026 approval: Approved By User; source is the current Codex conversation, message ID/time UNKNOWN.
+Date of engineering record: 2026-09-19. Base commit: ada1b2062756a2b852ed643a6eaa04fdc746323b.
+Consequences: root/v1 path regression, full simulation and clean reproduction required. No hardware scope changes.
+Open hardware questions: AI-problem/problem/P-20260919-001 through 003. No external answers received.

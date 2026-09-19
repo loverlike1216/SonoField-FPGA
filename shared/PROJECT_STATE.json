@@ -4,23 +4,23 @@
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex-project\\AMD-SonoField-FPGA",
   "current_branch": "main",
-  "current_version": "VN1",
-  "current_stage": "RADIATING_SURFACE_GEOMETRY_128CH_10MM",
-  "execution": "PROJECT_EXECUTION_ACTIVE",
-  "status": "READY_FOR_REVIEW",
+  "current_version": "v1",
+  "current_stage": "V1_LAYOUT_AND_GOVERNANCE",
+  "execution": "PROJECT_ACTIVE",
+  "status": "PROJECT_ACTIVE",
   "scope_of_block": "Board-target synthesis, implementation and physical hardware",
   "digital_validation": "PASS",
-  "digital_evidence": "evidence/geometry_10mm/simulation_current/summary.json",
-  "model_evidence": "evidence/geometry_10mm/model",
-  "reproducibility": "PASS",
-  "overall_iteration_result": "REVISE_REQUIRED",
+  "digital_evidence": "v1/evidence/validation/summary.json",
+  "model_evidence": "v1/evidence/model",
+  "reproducibility": "PENDING_CURRENT_LAYOUT",
+  "overall_iteration_result": "REVISE",
   "board_synthesis": "BLOCKED",
   "implementation": "NOT_RUN",
   "external_acceptance": "PENDING",
   "hardware_verified": false,
   "exact_part": null,
   "documented_clock_hz": 33000000,
-  "reproducibility_evidence": "evidence/geometry_10mm/reproducibility/summary.json",
+  "reproducibility_evidence": "v1/evidence/reproducibility/summary.json",
   "next_stage": "VERIFIED_BOARD_INTEGRATION_THEN_PH0",
   "blocking_ids": [
     "B01",
@@ -29,8 +29,8 @@
     "B05",
     "B06"
   ],
-  "coordinate_evidence": "hardware/mechanical/geometry_10mm",
-  "current_report": "shared/GEOMETRY_10MM_REPORT.md",
+  "coordinate_evidence": "v1/hardware/mechanical/geometry_10mm",
+  "current_report": "shared/report_v1.md",
   "geometry": {
     "transducer_body_diameter_mm": 10,
     "pitch_mm": 12,
@@ -44,6 +44,25 @@
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
   },
-  "validated_source_commit": "a01629ca62d70ba9db2b853f59ce40ce72cdca5c",
-  "review_scope": "10 mm geometry and digital/model revision; board and physical gates remain blocked"
+  "review_scope": "10 mm geometry and digital/model revision; board and physical gates remain blocked",
+  "active_version": "v1",
+  "branch": "main",
+  "chat_source_name": "SonoField-FPGA",
+  "chat_access_status": "CHAT_MEMORY_ACCESS_BLOCKED",
+  "chat_sync_status": "BLOCKED",
+  "open_ai_problems": [
+    "P-20260919-001",
+    "P-20260919-002",
+    "P-20260919-003"
+  ],
+  "blocking_issues": [
+    "B01",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "CHAT_MEMORY_ACCESS_BLOCKED"
+  ],
+  "critical_issues": [],
+  "next_action": "Complete structure regression and fresh checkout reproduction; publish matching v1 layout"
 }

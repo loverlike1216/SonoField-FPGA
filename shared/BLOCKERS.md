@@ -27,7 +27,7 @@ Connector 5V supply labels do NOT establish FPGA bank VCCO or 5V-tolerant GPIO.
 16 lanes x 8 bits need at least 81.92 MHz bit rate before latch/setup overhead. Logic simulation of a
 fast interface is not evidence that a 74AHC595 board supports it. Candidate must pass worst-case
 datasheet timing, loading, fanout, voltage and routed timing review before PCB-A is frozen.
-VN1 implements and simulates a 32-lane/four-used-output alternative at 132 MHz core, 66 MHz shift
+v1 implements and simulates a 32-lane/four-used-output alternative at 132 MHz core, 66 MHz shift
 clock. AHCT at 5 V is the conditional component candidate. Board PLL, IO voltage and electrical
 timing/clock distribution remain unverified; no PCB freeze is authorized by a digital PASS.
 
@@ -40,4 +40,11 @@ User selected the pictured nominal 10 mm transmitter and a 128-channel planar ge
 geometry choice, not exact part identity. Capacitance, active aperture, drive rating, actual dimensions,
 mounting standoff and acoustic polarity remain unknown. Do not reuse the old 16 mm ratings.
 Nominal radiating-center coordinates are ready to implement; PCB/drill dimensions and power-stage freeze
-require batch measurements. Source: hardware/transducers/10mm_supplier_reference.md.
+require batch measurements. Source: v1/hardware/transducers/10mm_supplier_reference.md.
+
+## CHAT_MEMORY_ACCESS_BLOCKED — external history
+User designated SonoField-FPGA. No exposed tool can read its external ChatGPT history.
+AI-chat-memory records BLOCKED with zero imported messages. This blocks automatic history/decision
+sync, not v1 file organization or available digital tests. See AI-chat-memory/CHAT_MEMORY_IMPORT_REQUIRED.md.
+
+Open consultation records: AI-problem/problem/P-20260919-001 (B01/B03), 002 (B04), 003 (B05/B06).

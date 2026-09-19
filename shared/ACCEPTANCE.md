@@ -1,6 +1,6 @@
-# VN1 acceptance matrix — current 10 mm geometry revision
+# v1 acceptance matrix — current 10 mm geometry revision
 
-Automated evidence is ready for independent review. Overall VN1 acceptance remains external.
+Automated evidence is ready for independent review. Overall v1 acceptance remains external.
 
 | # | User criterion | Evidence/status |
 |---:|---|---|
@@ -30,10 +30,9 @@ TB15: three repeat traces per simulator, byte-identical. This satisfies the defi
 check, not analog drift or measured field repeatability. Final board synthesis/timing and physical acceptance
 must remain open. No self-issued whole-project final acceptance is recorded.
 
-Historical REPRODUCIBILITY_CHECK: fresh local clone at 6b29f8b passed the prior 16 mm revision.
-Current geometry evidence is under evidence/geometry_10mm; do not reuse historical hashes as its acceptance.
-The selected 128-position design supersedes the former 72-emitter demonstration requirement by explicit user instruction.
 
-Current REPRODUCIBILITY_CHECK: clean local clone at a01629c and new venv PASS.
-Complete digital gate, six model CSVs and 19 coordinate/phase CSVs reproduced on the same Windows host.
-Evidence: evidence/geometry_10mm/reproducibility/summary.json and validation/.
+## Current-layout review
+Only v1 is active. Root governance, AI source status, unique Problem IDs/body hashes and working
+root-to-v1 paths are required. Current digital evidence: v1/evidence/validation/summary.json.
+Fresh-checkout reproduction: v1/evidence/reproducibility/summary.json when complete.
+Organization acceptance is scoped separately from whole-platform hardware acceptance.

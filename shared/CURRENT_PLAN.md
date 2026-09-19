@@ -1,52 +1,41 @@
-# VN1 current plan — 10 mm / 128-channel radiating-surface revision
+# v1 execution contract — layout and governance
 
-## Current Goal
-Apply the user's new 10 mm transmitter, 12 mm radiating-center pitch, opposed 8x8 + 8x8 planar
-geometry. Nominal face-to-face gap 100 mm, adjustable 90..115 mm; origin remains the geometric center.
+## Goal
+Organize the existing project locally and on GitHub as a single active v1. No version upgrade.
 
-## Scope
-Record this explicit user decision as superseding the former 16 mm / 72-channel demonstration assumptions.
-Update geometry configuration/defaults, coordinate exports and diagrams, gap-dependent maps and acoustic
-comparisons. Regression-test new geometry through Python and both RTL simulators. Keep historical evidence
-unchanged. Preserve staged low-power bring-up and existing board/driver electrical blockers.
+## Inputs / authorization
+User explicitly requested the new personalized rules, stated 目前还是v1, and subsequently directed
+removal of obsolete version records after integrity validation. Chat Source: SonoField-FPGA.
+Baseline commit ada1b2062756a2b852ed643a6eaa04fdc746323b; clean main matched remote before work.
 
-## Non-Goals
-No fabricated transducer model/ratings, final PCB drilling tolerances, assumed PCB-to-face distance,
-guessed XDC/part, physical levitation claim or production fabrication.
+## Scope / architecture / allowed changes
+Root: README, AGENTS, CHANGELOG, shared, AI-chat-memory and AI-problem.
+v1: RTL, TB, software, tests, config, constraints, scripts, requirements, docs, hardware and evidence.
+Remove obsolete reports, evidence directories and migration snapshots from current tree only after fresh
+validation. Preserve existing Git commits. Keep stable module names and functional behavior.
 
-## Files Expected To Change
-config/, software/acoustic_model/, tests/, scripts/, docs/, hardware/mechanical/, evidence/, shared/, README.md.
-RTL timing logic is expected to remain unchanged; map inputs change. User board files remain untouched.
+## Do not change / non-goals
+No v2, no new hardware claims, no part/pin/rating guesses, no bitstream. Preserve original Zynq7020
+location and file hashes. No fabricated ChatGPT transcript or Decision. No release/visibility change.
 
-## Risks
-Image is a supplier dimension/reference sheet, not measured data: 10 mm body does not establish active aperture,
-capacitance, voltage rating, exact part or acoustic polarity. Nominal 2 mm lateral clearance needs actual
-tolerances. Radiating face gap must not be confused with PCB gap. Existing part/VCCO/serializer blockers remain.
+## Dependencies / risks
+Python 3.10, locked dependencies, Icarus and Vivado 2025.2. Root-to-v1 path boundaries require correction.
+ChatGPT history access is blocked; this does not block file organization. Hardware blockers remain open.
 
-## Validation
-First record current 12-test baseline and source checkpoint. Add exact coordinate, reflection, normals,
-gap-range/endpoints, channel mapping, physical envelope and regenerated-phase tests. Re-run full Python,
-Icarus and XSim gate, including actual 90/100/115 mm maps. Compare deterministic regenerated artifacts
-from a fresh committed checkout and new venv. Check documents/state no longer present old geometry as current.
+## Validation / evidence
+Before: 19 Python tests passed. After: complete Python/Icarus/XSim regression, independent waveform oracle,
+repeat trace hashes, unchanged RTL/TB bytes, six model CSVs and 19 coordinate/phase CSVs equal to baseline,
+12 board references unchanged, required documents/links/state/problem hashes correct, clean checkout/new venv.
+Capture real commands/exit codes in v1/evidence. Remove obsolete current-tree records after these gates.
 
-## Evidence Required
-Source image hash + transcribed supplier claims; baseline; 128 coordinate CSV/JSON; dimensioned layout;
-90..115 mm gap sweep, per-gap maps, command logs/exit codes, tool/source hashes and fresh reproduction.
+## Rollback
+Revert the scoped organization commits using normal Git history; never force push or erase old commits.
 
-## Done When
-User geometry encoded consistently, all feasible digital/model gates pass, historical results preserved,
-limitations updated, reviewable coordinate/phase artifacts produced, source/evidence committed on main.
+## Done when
+Only v1 current layout remains locally and remotely, documented commands execute, new evidence passes,
+state/hand-off complete, secret/license check passes, Git pushed and remote commit confirmed.
 
-## Need ChatGPT Decision?
-The user has already approved geometry/128-channel design changes; no further permission is needed for them.
-Actual part identification, board facts and power/PCB freeze still require evidence; do not guess.
-
-## Current execution result
-PREFLIGHT: clean main at f215460, origin matched; prior shared state and acceptance read.
-Previous digital/model evidence remains historical under evidence/simulation/vn1_release and evidence/model/vn1.
-Current geometry exports, 19 Python tests, Icarus and Vivado 2025.2 XSim gates PASS.
-Source-hash and repository audit PASS. New evidence is separate under geometry_10mm.
-Fresh source checkpoint a01629c plus new clone/venv: PASS; six model CSVs and 19 coordinate/phase CSVs match.
-Raw repeated tool evidence retained. Original 12 board files and historical evidence unchanged.
-Geometry/digital stage READY_FOR_REVIEW; board/driver/physical gates remain BLOCKED.
-Implementation complete for this revision; next work requires actual part and board evidence.
+## Progress
+Source relocated and tool paths updated. Full Python/Icarus/XSim regression PASS; model/coordinate equality and source/board integrity PASS.
+Obsolete current-tree records and obsolete local clone caches removed under user authorization.
+Repository audit PASS. Fresh checkout/new-venv reproduction follows the source checkpoint.
