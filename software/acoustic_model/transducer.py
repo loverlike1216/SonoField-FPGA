@@ -8,7 +8,7 @@ class Transducer:
     rtl_channel: int
     position: tuple[float, float, float]
     normal: tuple[float, float, float]
-    diameter: float = 0.016
+    diameter: float = 0.010  # acoustic piston approximation; actual active aperture is unmeasured
     frequency: float = 40000.0
     relative_amplitude: float = 1.0
     calibration_phase: float = 0.0  # radians, electronic correction, kept separate

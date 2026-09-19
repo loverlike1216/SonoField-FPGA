@@ -2,17 +2,21 @@
 
 All stages below are NOT VALIDATED. Digital tests do not count as hardware evidence.
 
+Current full geometry is user-selected 10 mm / 12 mm pitch / 8x8 + 8x8, face gap 100 mm adjustable
+90..115 mm. The original 72-channel demonstration prerequisite is superseded, while P0/P1 low-power
+commissioning remains. Do not energize all 128 uncharacterized channels just because the coordinates exist.
+
 | Stage | Required experiment | Evidence / exit gate |
 |---|---|---|
 | PH0 | Single TCT40 characterization and driver electrical checks | Batch, frequency response, polarity, differential Vpp/current/temperature, scope captures |
 | PH1 / P0 | Two opposed emitters on adjustable fixture | Relative phase, centerline pressure scan, gap and alignment sweep |
 | PH2 | Initial stable lightweight EPS particle | Measured mass/dimensions, duration, voltage/current, photo/video and environment |
 | PH3 / P1 | 4x4 upper + 4x4 lower | All 32 calibrated identities, stable light-particle trap and replacement/recalibration procedure |
-| PH4 / P2 | 6x6 + 6x6 | 72-channel geometry and phase validation; demonstration reliability |
+| PH4 | Populate/commission the selected 8x8 + 8x8 in verified module increments | 128 channel identities, measured face gap, calibration and demonstration reliability; 72-channel subset optional |
 | PH5 | Approximately 5,10,25,50 mg, sequentially | Separate weighed objects; dimensions/density; failed trials retained |
 | PH6 | Vertical node translation | Measured displacement trajectory, phase command log, retained trapping |
 | PH7 | Small-range XY motion | Measured displacement, stability and failure envelope |
-| PH8 / P3 | Optional 8x8 + 8x8 | Only when measured force/control limitation justifies 128 emitters |
+| PH8 | Further expansion beyond the selected geometry, only if justified | Separate decision based on measured force/control limitation |
 
 Before PH0, verify oscillator/part/VCCO and interlock wiring; scope two digital channels with drivers unpowered.
 Verify 0/90/180 degrees, reset, hardware inhibit and a phase commit with the physical serializer output.

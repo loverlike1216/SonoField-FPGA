@@ -2,7 +2,7 @@
 
 | Item | P0 purpose / quantity | Selection gate |
 |---|---|---|
-| TCT40-16T | At least 2 working emitters plus characterization samples | Same identifiable batch, actual dimensions/impedance |
+| User-selected 10 mm / 40 kHz transmitter | At least 2 characterization samples first; 128 positions in current full design | Exact part and batch identity, dimensions/impedance/voltage rating |
 | TCT40-16R or ultrasonic receiver | 1 minimum | Relative phase fixture; calibration needed for absolute pressure |
 | Robei Zynq-7020 | 1 existing target | Complete part/voltage confirmation |
 | TC4427A or reviewed equivalent | Prototype gate-driver candidate | Compatible chosen MOSFET topology, supply and load |

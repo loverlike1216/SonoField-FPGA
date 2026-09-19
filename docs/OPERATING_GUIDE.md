@@ -45,9 +45,13 @@ python -m venv .venv
 ```powershell
 .\.venv\Scripts\python.exe -m software.acoustic_model.visualize_field --output build/model_review
 .\.venv\Scripts\python.exe -m software.acoustic_model.phase_lut_generator --output build/phase_map.csv
+.\.venv\Scripts\python.exe -m software.acoustic_model.phase_lut_generator --gap-mm 115 --output build/phase_map_115mm.csv
+.\.venv\Scripts\python.exe -m software.acoustic_model.export_geometry --output build/geometry_review
 ```
 
-修改 config/acoustic_baseline.json 可调阵元数量、平面/凹面、间距、曲率、声速和目标点。
+当前 config/acoustic_baseline.json 固定用户选定的 128 路平面、10 mm 名义直径、12 mm 中心距，
+默认辐射面间距 100 mm。--gap-mm 允许 90..115 mm，越界拒绝；默认 z=±50 mm，原点居中。
+声速、目标点可在配置中明确调整；凹面保留为研究比较，不自动替代用户机械方案。
 不要把 `SIMULATION_ESTIMATE` 改成实测。图中声压为任意单位；CSV 附有假设与误差情景。
 phase_map.csv 固定 128 行，下阵列从 RTL 64 开始。未安装通道 enabled=0，仍要作为完整图写入。
 请求与校准分开保存。只实现 STANDING_WAVE/FOCUS，其他模式不会返回假相位图。
@@ -99,14 +103,14 @@ CORE_CLOCK_HZ、CLOCK_SOURCE；不要直接复制其他 Zynq 板的 part 或假�
 先提交源代码检查点，然后在全新、尚不存在的 build 子目录复现：
 
 ```powershell
-.\.venv\Scripts\python.exe scripts/reproduce.py --target build/repro_review
+.\.venv\Scripts\python.exe scripts/reproduce.py --target build/repro_review --output build/reproduction_review
 ```
 
 脚本从本地 Git 检出已提交版本，新建独立 venv，安装锁定依赖，运行完整双模拟器验证和模型，
-再比较模型 CSV 的统一换行文本哈希。输出 evidence/reproducibility/summary.json。
+再比较模型 CSV 的统一换行文本哈希及全部坐标/相位 CSV。输出指定目录内的 summary.json。
 这验证同一 Windows 主机上的干净安装复现，不是第二块物理板或第二种操作系统。
 若目标已存在，改用新的 build 子目录；脚本不会递归删除现有目录。
-保留已有的 evidence/reproducibility 结果后再运行新的复现，避免覆盖历史验收证据。
+输出目录也必须是新的路径，脚本拒绝覆盖历史复现证据。
 
 ## 9. 常见问题
 

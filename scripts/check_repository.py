@@ -30,13 +30,16 @@ def main():
         for link in re.findall(r"\]\(([^)]+)\)",p.read_text(encoding="utf-8")):
             if "://" not in link and not link.startswith("#") and not (p.parent/link.split("#")[0]).exists():
                 errors.append(f"Broken link {p.relative_to(ROOT)} -> {link}")
-    summary=json.loads((ROOT/"evidence/simulation/vn1_release/summary.json").read_text())
+    state=json.loads((ROOT/"shared/PROJECT_STATE.json").read_text(encoding="utf-8"))
+    summary=json.loads((ROOT/state["digital_evidence"]).read_text(encoding="utf-8"))
     if summary["status"]!="PASS":errors.append("Digital gate not PASS")
     for path,digest in summary["source_sha256"].items():
         if hashlib.sha256((ROOT/path.replace("\\","/")).read_bytes()).hexdigest()!=digest:
             errors.append("Evidence stale for "+path)
+    for path,digest in summary.get("source_text_sha256",{}).items():
+        if hashlib.sha256((ROOT/path).read_text(encoding="utf-8").encode("utf-8")).hexdigest()!=digest:
+            errors.append("Model/control evidence stale for "+path)
     if list((ROOT/"constraints").glob("*.xdc")):errors.append("Unexpected board XDC before hardware gate")
-    state=json.loads((ROOT/"shared/PROJECT_STATE.json").read_text())
     if state.get("hardware_verified"):errors.append("Unexpected hardware PASS claim")
     result={"status":"PASS" if not errors else "FAIL","errors":errors,
             "checks":["required artifacts","root generated-file hygiene","implementation markers",

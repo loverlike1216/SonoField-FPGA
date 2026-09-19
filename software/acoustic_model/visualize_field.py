@@ -9,7 +9,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from scipy.ndimage import label
-from .array_geometry import opposing_arrays, SHAPES
+from .array_geometry import opposing_arrays, SHAPES, planar_profile
 from .field_solver import pressure
 from .phase_solver import focus_phases, quantize_phase, dequantize_phase
 from .standing_wave import standing_wave_phases
@@ -68,9 +68,9 @@ def trap_proxy(elements,c):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--config",default="config/acoustic_baseline.json")
-    parser.add_argument("--output",default="evidence/model/vn1")
+    parser.add_argument("--output",default="build/model_10mm")
     args=parser.parse_args()
-    config=json.loads(Path(args.config).read_text()); out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
+    config=json.loads(Path(args.config).read_text(encoding="utf-8")); out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
     c=config["sound_speed_m_s"]; mc=config["monte_carlo"];rng=np.random.default_rng(mc["seed"])
     geometry=config["geometry"]; rows=[]
     for shape in ("planar","concave"):
@@ -90,17 +90,30 @@ def main():
     write_csv(out/"emitter_scaling.csv",rows)
     comparisons=[]
     for shape in ("planar","concave"):
-        for gap in (.120,.160,.200):
+        for gap in config["gap_sweep_m"]:
             a=opposing_arrays(**{**geometry,"shape":shape,"gap":gap})
             comparisons.append({"classification":"SIMULATION_ESTIMATE","shape":shape,"emitters":len(a),"gap_m":gap,
                                 "central_focus_pressure_au":float(abs(pressure(a,[[0,0,0]],focus_phases(a,sound_speed=c),c)[0])),
                                 **trap_proxy(a,c)})
     write_csv(out/"geometry_comparison.csv",comparisons)
+    nominal=planar_profile(config)
+    nominal_phase=dequantize_phase(quantize_phase(focus_phases(nominal,sound_speed=c)))
+    gap_rows=[]
+    for gap in config["gap_sweep_m"]:
+        array=planar_profile(config,gap)
+        regenerated=dequantize_phase(quantize_phase(focus_phases(array,sound_speed=c)))
+        correct=float(abs(pressure(array,[[0,0,0]],regenerated,c)[0]))
+        reused=float(abs(pressure(array,[[0,0,0]],nominal_phase,c)[0]))
+        gap_rows.append({"classification":"SIMULATION_ESTIMATE","face_gap_mm":gap*1000,
+                         "upper_face_z_mm":gap*500,"lower_face_z_mm":-gap*500,
+                         "regenerated_focus_pressure_au":correct,"nominal_map_reused_pressure_au":reused,
+                         "reuse_to_regenerated_ratio":reused/correct})
+    write_csv(out/"gap_response.csv",gap_rows)
     particles=[p.assessment(c) for p in scenarios()]
     write_csv(out/"particle_scenarios.csv",particles)
     write_csv(out/"reference_phase_map.csv",phase_map(opposing_arrays(**geometry),config["mode"],config["target_m"],c))
     channel_rows=[]
-    for e in opposing_arrays(128):
+    for e in nominal:
         channel_rows.append({"CHANNEL_ID":e.channel_id,"rtl_channel":e.rtl_channel,
                              "serializer_lane":e.rtl_channel//4,"q_output":e.rtl_channel%4,
                              "driver_module_16ch":e.rtl_channel//16,"driver_local_channel":e.rtl_channel%16})
@@ -123,6 +136,12 @@ def main():
         fig.colorbar(im,ax=ax,label="Pressure magnitude (a.u.)")
     fig.suptitle("SIMULATION ESTIMATE | opposed standing waves, y=0")
     fig.savefig(out/"standing_wave_comparison.png",dpi=160);plt.close(fig)
+    fig,ax=plt.subplots(figsize=(8,4.5),layout="constrained")
+    ax.plot([r["face_gap_mm"] for r in gap_rows],[r["regenerated_focus_pressure_au"] for r in gap_rows],"o-",label="Regenerated phase map")
+    ax.plot([r["face_gap_mm"] for r in gap_rows],[r["nominal_map_reused_pressure_au"] for r in gap_rows],"s--",label="100 mm map reused")
+    ax.set(xlabel="Radiating face-to-face gap (mm)",ylabel="Central focus pressure (arbitrary units)",
+           title="SIMULATION ESTIMATE | 128 x 10 mm, planar 12 mm pitch")
+    ax.grid(alpha=.25);ax.legend();fig.savefig(out/"gap_response.png",dpi=160);plt.close(fig)
     (out/"assumptions.json").write_text(json.dumps({"config":config,"monte_carlo_seed":mc["seed"],
         "pressure_units":"arbitrary; no SPL calibration","trap_proxy":"Rayleigh high contrast f1=f2=1; no gravity or finite-size scattering",
         "basin_definition":"6-connected region containing origin below minimum boundary proxy on +/-10mm cube, 1mm grid",

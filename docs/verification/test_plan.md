@@ -20,7 +20,10 @@
 
 Additional checks: serializer sticky overrun disables output, insufficient-clock profile fails with a
 specific bandwidth error, channel masks commit with the phase map, simultaneous WRITE+COMMIT rejected,
-12 Python acoustic/unit checks including analytic two-source superposition, directivity and gradient convergence.
+19 Python checks including analytic superposition, directivity, gradient convergence, exact radiating-center
+coordinates, face-gap travel limits, global symmetry, channel corners, envelope and gap-dependent phase maps.
+Current configured 128-channel STANDING_WAVE/FOCUS maps at 90/100/115 mm pass through the RTL bench
+in both simulators. Historical counts and trace evidence below remain associated with their original revision.
 
 Both simulators use the same self-checking benches, but the Python oracle computes expected time/intervals
 independently. The physical shift register, propagation skew and bridge are not modeled as timing-annotated

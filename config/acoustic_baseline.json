@@ -2,9 +2,27 @@
   "classification": "SIMULATION_ESTIMATE",
   "sound_speed_m_s": 343.0,
   "attenuation_np_m": 0.0,
-  "geometry": {"total": 72, "pitch": 0.018, "gap": 0.16, "shape": "concave", "radius": 0.18, "diameter": 0.016, "frequency": 40000.0},
+  "geometry": {"total": 128, "pitch": 0.012, "gap": 0.100, "shape": "planar", "radius": 0.18, "diameter": 0.010, "frequency": 40000.0},
+  "coordinate_reference": "RADIATING_SURFACE_CENTER",
+  "origin": "GEOMETRIC_CENTER_OF_RADIATING_SURFACE_CENTERS",
+  "gap_range_m": [0.090, 0.115],
+  "gap_sweep_m": [0.090, 0.095, 0.100, 0.105, 0.110, 0.115],
+  "transducer": {
+    "designation": "TCT40_10MM_CANDIDATE",
+    "exact_part": null,
+    "supplier_claim_body_diameter_m": 0.010,
+    "supplier_claim_body_height_m": 0.007,
+    "supplier_claim_pin_pitch_m": 0.005,
+    "supplier_claim_pin_diameter_m": 0.00065,
+    "supplier_claim_exposed_pin_length_m": 0.007,
+    "active_aperture_diameter_m": null,
+    "capacitance_pf": null,
+    "continuous_drive_rating_vpp": null,
+    "model_aperture_assumption_m": 0.010,
+    "mounting_standoff_m": null
+  },
   "mode": "STANDING_WAVE",
   "target_m": [0, 0, 0],
   "monte_carlo": {"seed": 7020, "trials": 50, "phase_error_std_degrees": 15.0, "relative_amplitude_std": 0.1},
-  "notes": "Exploration inputs, not frozen mechanics, measured environment or batch calibration"
+  "notes": "User-defined nominal planar geometry. Gap and XY coordinates reference radiating face centers, never PCB planes. Supplier-image dimensions are unmeasured. Acoustic piston diameter is a 10 mm approximation, not a measured active aperture. Curved comparisons are research alternatives only."
 }

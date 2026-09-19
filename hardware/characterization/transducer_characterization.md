@@ -1,4 +1,8 @@
-# TCT40-16T characterization database
+# Ultrasonic transmitter characterization database — current 10 mm candidate
+
+Current geometry uses the user's 10 mm transmitter image, not the former TCT40-16T electrical assumptions.
+Record the actual manufacturer/part alongside batch/sample IDs. Capacitance and allowable drive are unknown;
+do not fill them from a 16 mm product sheet. See hardware/transducers/10mm_supplier_reference.md.
 
 Status: no purchased sample has been measured. `transducer_measurements.csv` contains headers only.
 Never replace missing measurements with nominal datasheet values. Blank means unknown.
@@ -12,8 +16,10 @@ body diameter, pin spacing and height. Keep raw scope/CSV files referenced by ev
 
 1. Assign a permanent sample/batch ID and intended channel ID. Measure body, pins and height with calipers.
 2. Measure capacitance with stated meter frequency/voltage (e.g. 1 kHz small signal); measure baseline temperature.
-3. Use a current-limited single-channel driver with the transducer mechanically supported. Record differential Vpp.
-4. Begin at 10 Vpp. Sweep around 40 kHz at low duty for resonance/relative SPL and phase. Record frequency step,
+3. Confirm a permissible excitation range for the actual 10 mm part, then use a current-limited single-channel
+   driver with the transducer supported. The old 10 Vpp starting proposal is not a rating for this new part.
+   Record differential Vpp, including overshoot.
+4. Begin at the approved low excitation (10 Vpp only if qualified). Sweep around 40 kHz at low duty for resonance/relative SPL and phase. Record frequency step,
    settling time, geometry and receiver transfer-function limits. Resonance is measured, not assumed.
 5. In fixed geometry, compare the sample to a reference transmitter using a TCT40-16R or suitable receiver and
    oscilloscope trigger. Correct for cable/receiver phase. Reverse sample connection as a check, mark effective

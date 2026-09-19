@@ -1,4 +1,4 @@
-# VN1 acceptance matrix
+# VN1 acceptance matrix — current 10 mm geometry revision
 
 Automated evidence is ready for independent review. Overall VN1 acceptance remains external.
 
@@ -10,6 +10,7 @@ Automated evidence is ready for independent review. Overall VN1 acceptance remai
 | 4 | TCT40 baseline documented | docs/hardware/tct40_baseline.md, characterization procedure |
 | 5 | Python acoustic model | software/acoustic_model, analytic unit tests |
 | 6 | Configurable geometry | config/acoustic_baseline.json |
+| 6a | User's radiating-face geometry | 128 centers, 12 mm pitch, z=+/-g/2, nominal g=100 mm, range 90..115 mm; dedicated 7-test suite |
 | 7 | 2/32/72/128 geometries | Also 8/16; identity tests and field output |
 | 8 | RTL up to 128 | Icarus sizes 1/2/7/32/72/128 |
 | 9 | One deterministic timebase | tb_core + analytic Python oracle |
@@ -29,5 +30,6 @@ TB15: three repeat traces per simulator, byte-identical. This satisfies the defi
 check, not analog drift or measured field repeatability. Final board synthesis/timing and physical acceptance
 must remain open. No self-issued whole-project final acceptance is recorded.
 
-REPRODUCIBILITY_CHECK: fresh local clone at 6b29f8b, new venv and pinned installation completed all digital
-tests; regenerated model CSV content hashes agree. Evidence: evidence/reproducibility/summary.json.
+Historical REPRODUCIBILITY_CHECK: fresh local clone at 6b29f8b passed the prior 16 mm revision.
+Current geometry evidence is under evidence/geometry_10mm; do not reuse historical hashes as its acceptance.
+The selected 128-position design supersedes the former 72-emitter demonstration requirement by explicit user instruction.

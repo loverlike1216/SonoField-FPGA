@@ -5,28 +5,43 @@
   "workspace_path": "E:\\Codex-project\\AMD-SonoField-FPGA",
   "current_branch": "main",
   "current_version": "VN1",
-  "current_stage": "DIGITAL_PHASED_ARRAY_BASELINE_AND_TCT40_HARDWARE_ARCHITECTURE",
+  "current_stage": "RADIATING_SURFACE_GEOMETRY_128CH_10MM",
   "execution": "PROJECT_EXECUTION_ACTIVE",
-  "status": "READY_FOR_REVIEW",
+  "status": "REVISE_REQUIRED",
   "scope_of_block": "Board-target synthesis, implementation and physical hardware",
   "digital_validation": "PASS",
-  "digital_evidence": "evidence/simulation/vn1_release/summary.json",
-  "model_evidence": "evidence/model/vn1",
-  "reproducibility": "PASS",
-  "overall_iteration_result": "REVISE",
+  "digital_evidence": "evidence/geometry_10mm/simulation_current/summary.json",
+  "model_evidence": "evidence/geometry_10mm/model",
+  "reproducibility": "PENDING_THIS_REVISION",
+  "overall_iteration_result": "REVISE_REQUIRED",
   "board_synthesis": "BLOCKED",
   "implementation": "NOT_RUN",
   "external_acceptance": "PENDING",
   "hardware_verified": false,
   "exact_part": null,
   "documented_clock_hz": 33000000,
-  "reproducibility_evidence": "evidence/reproducibility/summary.json",
-  "validated_source_commit": "6b29f8bac7da8567afbb3c0475f72df43ff5f284",
+  "reproducibility_evidence": "evidence/geometry_10mm/reproducibility/summary.json",
   "next_stage": "VERIFIED_BOARD_INTEGRATION_THEN_PH0",
   "blocking_ids": [
     "B01",
     "B03",
     "B04",
-    "B05"
-  ]
+    "B05",
+    "B06"
+  ],
+  "coordinate_evidence": "hardware/mechanical/geometry_10mm",
+  "current_report": "shared/GEOMETRY_10MM_REPORT.md",
+  "geometry": {
+    "transducer_body_diameter_mm": 10,
+    "pitch_mm": 12,
+    "upper_channels": 64,
+    "lower_channels": 64,
+    "nominal_face_gap_mm": 100,
+    "face_gap_range_mm": [
+      90,
+      115
+    ],
+    "coordinate_reference": "RADIATING_SURFACE_CENTER",
+    "origin": "GEOMETRIC_CENTER"
+  }
 }

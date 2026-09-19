@@ -3,7 +3,7 @@ import csv
 import json
 from pathlib import Path
 import numpy as np
-from .array_geometry import opposing_arrays
+from .array_geometry import opposing_arrays, planar_profile
 from .phase_solver import focus_phases, quantize_phase
 from .standing_wave import standing_wave_phases
 
@@ -29,9 +29,10 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--config",default="config/acoustic_baseline.json")
     parser.add_argument("--output",default="build/phase_map.csv")
+    parser.add_argument("--gap-mm",type=float,help="Face-to-face gap, constrained to the configured mechanical range")
     args=parser.parse_args()
-    config=json.loads(Path(args.config).read_text())
-    elements=opposing_arrays(**config["geometry"])
+    config=json.loads(Path(args.config).read_text(encoding="utf-8"))
+    elements=planar_profile(config,None if args.gap_mm is None else args.gap_mm/1000)
     rows=phase_map(elements,config["mode"],config["target_m"],config["sound_speed_m_s"])
     output=Path(args.output); output.parent.mkdir(parents=True,exist_ok=True)
     with output.open("w",newline="") as stream:

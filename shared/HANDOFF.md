@@ -1,46 +1,39 @@
-# VN1 handoff
+# Current VN1 handoff — 10 mm / 128-channel face geometry
 
-Internal stage status: READY_FOR_REVIEW for the digital/model baseline, with board/physical blockers.
-Full VN1 acceptance cannot close while exact device identity is missing.
+## Goal / scope
+Execute user's 2026-09-19 geometry revision: nominal 10 mm emitters, 12 mm radiating-center pitch,
+upper/lower 8x8 arrays, 100 mm nominal face gap adjustable 90..115 mm. Origin stays at the common
+geometric center; upper/lower z=+/-g/2. Physical electrical bring-up remains staged.
 
-## What changed
-128-channel phase engine, separate request/calibration/mask, full-map boundary commit, safety and
-32-lane serializer candidate. Directional Python model, planar/concave comparisons, scaling/mismatch
-scans, particle sizes/validity flags, phase CSV generation. Added hardware interface, characterization,
-bring-up, board audit and from-zero operating guide. Original 12 board references remain unchanged/local.
+## Decisions / what changed
+ADR-020..024 record explicit replacement of the former 16 mm / 72-emitter assumptions. The selected
+current assembly is planar; curved comparison data cannot silently change its coordinates.
+Model/default configuration, exported coordinates/maps, gap studies, supplier provenance, mechanical
+datums, tests, guide and BOM were updated. Timing RTL is unchanged and its calibrated atomic-map interface is reused.
 
-## Commands and results
-- scripts/audit_board.py: 12 files / 101 documented pin candidates; no inferred IO standards.
-- scripts/validate.py --output evidence/simulation/vn1_release: PASS.
-- Python: 12 tests; Icarus: 1/2/7/32/72/128 channels; integrated serializer/safety/fault and model-map tests.
-- XSim 2025.2: core, system, fault and model-map tests PASS.
-- TB15: 3 Icarus and 3 XSim 128-channel traces byte-identical, SHA-256
-  `63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054`.
-- visualize_field: 12 scaling, 6 geometry, 5 particle scenarios plus CSV maps and two PNG figures.
-- Vivado create_project gate: expected exit 1 without documented part; **synthesis not executed**.
-- pip check: no broken requirements.
+## Evidence / results
+- Baseline f215460: 12 Python tests passed before changes.
+- Current: 19 Python tests passed; exact grid, symmetry, normals, gap limits, channel corners and dimensions checked.
+- Icarus + Vivado 2025.2 XSim: 128-channel standing/focus maps at 90/100/115 mm passed.
+- Three repeated traces per simulator still share hash 63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054.
+- Current full tool evidence: evidence/geometry_10mm/simulation_current/summary.json.
+- Model/scaling/gap outputs: evidence/geometry_10mm/model/; all estimates, no calibrated pascals/force.
+- Mechanical coordinates/figures/maps: hardware/mechanical/geometry_10mm/.
+- Fresh reproduction: pending source checkpoint and new venv; final result will be written to PROJECT_STATE.
 
-## Failures / limitations
-Initial XSim command-line forwarding failure retained in evidence/simulation/vn1/; fixed without changing
-assertions. Successful intermediate runs vn1_final/vn1_complete are historical, vn1_release is authoritative.
-An initial clean-clone attempt selected the original README commit because the preceding local commit
-failed with missing Git author identity. It correctly failed dependency installation; evidence is retained
-in evidence/reproducibility_initial/. Repository-local identity was then configured from the authenticated
-GitHub login using its noreply address, the checkpoint committed, and a source-cleanliness guard added.
-No target synthesis, place/route, bitstream, PS transport, physical timing, pressure, thermal or levitation tests.
-Clean-checkout reproduction: **PASS**, source commit 6b29f8b, new isolated venv, complete Python/Icarus/XSim
-regression and regenerated model CSVs match. Raw repeated-tool evidence is in evidence/reproducibility/validation/;
-commands, source commit and content hashes are in evidence/reproducibility/summary.json.
-This is a fresh local clone on the same Windows host, not a second physical target or OS.
+## Open issues / failures
+No new RTL functional failure. Existing board part/VCCO/pin gaps, serializer physical timing and hardware
+characterization remain. New 10 mm exact part, drive rating, capacitance, active aperture, tolerances and
+PCB mounting offset are unknown. Store missing quantities as unknown; do not borrow 16 mm ratings.
+The image's '+' / shell claim requires continuity and acoustic verification. PCB gap is not 100 mm by definition.
 
-## Decisions needed before next hardware stage
-Obtain full FPGA part/package/speed grade and bank VCCO; clarify malformed .const entries.
-Validate a 33→132 MHz clock implementation or revise the serial interface through a recorded ADR.
-Verify 5 V AHCT input compatibility and buffered clock distribution. Characterize purchased TCT40 batch.
-No more emitter count/voltage escalation without failure root cause evidence.
+## Historical evidence
+Initial 16 mm reference results remain under evidence/model/vn1, evidence/simulation/vn1_release and
+evidence/reproducibility. Original theory/transducer documents are preserved in docs/history/vn1_16mm.
+shared/VN1_REPORT.md remains the initial report; shared/GEOMETRY_10MM_REPORT.md describes the current revision.
+The original XSim launcher and wrong-checkpoint reproduction failures remain in their historical evidence directories.
 
 ## Next step
-Independent review of digital evidence and hardware assumptions, then verified-board synthesis/integration,
-then PH0 single-channel electrical measurements and P0 two-transducer standing-wave experiments.
-Optional later improvements: measured directivity fit, finite-particle scattering model, finer trap proxy grid,
-PS AXI bridge and external watchdog integration. Do not expand main VN1 scope merely to optimize simulation.
+Review new coordinate and phase artifacts; identify/characterize actual 10 mm samples and mounting datums,
+resolve board facts, then perform target synthesis/integration and one/two-emitter low-power experiments.
+The 128-position design is now explicit, but full-array power-up is not authorized by simulation alone.

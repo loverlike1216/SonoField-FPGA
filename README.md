@@ -1,6 +1,6 @@
 # SonoField-FPGA · VN1
 
-低成本 TCT40-16T 超声驻波悬浮平台的 **128 路 FPGA 数字基线与硬件架构**。
+低成本 **10 mm 超声发射器、上下各 8×8 的 128 路 FPGA 驻波悬浮平台**。
 本轮交付可运行的 Python 声场模型、SystemVerilog 相位核心、自动验证及硬件启动规程。
 尚未上板、未完成目标器件综合、未制造驱动板、未进行实物悬浮。50 mg 是逐级验证后的目标。
 
@@ -10,8 +10,15 @@
 | Repository | https://github.com/loverlike1216/SonoField-FPGA |
 | Workspace | E:\Codex-project\AMD-SonoField-FPGA |
 | Branch / version | main / VN1 |
-| Stage | DIGITAL_PHASED_ARRAY_BASELINE_AND_TCT40_HARDWARE_ARCHITECTURE |
+| Stage | RADIATING_SURFACE_GEOMETRY_128CH_10MM |
 | Board / EDA | Robei Zynq-7020 / AMD Vivado 2025.2 |
+
+当前几何由用户明确指定：辐射面中心点距 **12 mm**，上下辐射面间距默认 **100 mm**、
+可调 **90–115 mm**；全局原点为两个阵列辐射面中心组成空间的几何中心。
+默认上/下面 z=±50 mm，x/y 各为 −42、−30、−18、−6、6、18、30、42 mm。
+中心跨度 84×84 mm，名义壳体外包络 94×94 mm，相邻壳体间隙 2 mm。**这些不是 PCB 间距或外形尺寸。**
+详见 [机械坐标定义](hardware/mechanical/radiating_surface_geometry.md) 和
+[128 路坐标表](hardware/mechanical/geometry_10mm/coordinates_nominal.csv)。
 
 板卡资料按用户指定以 `Zynq7020/constrain` 为准：时钟记录为 N18 / 33 MHz。
 完整 FPGA 料号、I/O Bank 电压及 `.const` 内部少数引脚编号仍不完整，见
@@ -26,10 +33,11 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
 .\.venv\Scripts\python.exe -m software.acoustic_model.visualize_field --output build/model_review
 .\.venv\Scripts\python.exe -m software.acoustic_model.phase_lut_generator --output build/phase_map.csv
+.\.venv\Scripts\python.exe -m software.acoustic_model.export_geometry --output build/geometry_review
 .\.venv\Scripts\python.exe scripts/validate.py --output build/verification_review
 ```
 
-成功标准：12 项 Python 测试通过；Icarus 多通道配置通过；XSim 通过；三次 128 路轨迹与
+成功标准：19 项 Python 测试通过；Icarus 多通道配置通过；XSim 通过；三次 128 路轨迹与
 独立 Python 参考、另一模拟器一致；最终 JSON `status=PASS`。不要只根据退出码或波形图片判断。
 `--skip-xsim` 只产生 PARTIAL，不能当完整验证通过。
 
@@ -61,7 +69,8 @@ python -m venv .venv
 ## 结果与限制
 
 最新结果以 [交接](shared/HANDOFF.md)、[验收矩阵](shared/ACCEPTANCE.md)、
-[最终报告](shared/VN1_REPORT.md) 指向的证据为准。历史失败目录保留，不能与后续结果混为一谈。
+[当前几何报告](shared/GEOMETRY_10MM_REPORT.md) 指向的证据为准。初始 [VN1 报告](shared/VN1_REPORT.md)
+和旧 16 mm 输出作为历史保留，不能用于宣称新几何已被实测。
 声压是任意单位，几何与材料是假设；没有绝对力、实际工作体积或 50 mg 悬浮保证。
 132 MHz 是序列器集成仿真配置，并未验证板上倍频和布线。PS/AXI 传输、硬件时钟丢失保护、
 驱动电路与实际器件校准仍属后续集成任务。

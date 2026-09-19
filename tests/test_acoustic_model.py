@@ -67,9 +67,10 @@ class AcousticTests(unittest.TestCase):
         self.assertFalse(np.allclose(focus_phases(a,sound_speed=330),focus_phases(a,sound_speed=350)))
 
     def test_invalid_inputs_rejected(self):
-        for kw in ({"pitch":.01},{"shape":"invalid"},{"total":6},{"shape":"concave","radius":.01}):
+        for kw in ({"pitch":.009},{"shape":"invalid"},{"total":6},{"shape":"concave","radius":.01}):
             with self.assertRaises(ValueError): opposing_arrays(**kw)
-        with self.assertRaises(ValueError): pressure(opposing_arrays(2),[[0,0,.08]],[0,0])
+        pair=opposing_arrays(2)
+        with self.assertRaises(ValueError): pressure(pair,[pair[0].position],[0,0])
         with self.assertRaises(ValueError): focus_phases(opposing_arrays(2),sound_speed=0)
         with self.assertRaises(ValueError): phase_map(opposing_arrays(2),mode="TRAJECTORY")
 

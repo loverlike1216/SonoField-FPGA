@@ -20,7 +20,8 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--vivado-bin",default=os.environ.get("VIVADO_BIN",r"D:\Vivado\2025.2\2025.2\Vivado\bin"))
     parser.add_argument("--iverilog-bin",default=os.environ.get("IVERILOG_BIN",r"C:\iverilog\bin"))
-    parser.add_argument("--output",default="evidence/simulation/vn1_final")
+    parser.add_argument("--output",default="build/verification_review")
+    parser.add_argument("--config",default="config/acoustic_baseline.json")
     parser.add_argument("--skip-xsim",action="store_true",help="Marks XSim NOT_RUN; does not claim full gate")
     args=parser.parse_args()
     evidence=(ROOT/args.output).resolve(); evidence.mkdir(parents=True,exist_ok=True)
@@ -38,6 +39,21 @@ def main():
             raise RuntimeError(f"{label} failed: {proc.stdout[-2500:]}")
         return proc.stdout
     summary={"python":sys.version,"platform":sys.platform,"commands":results,"status":"RUNNING"}
+    config=json.loads((ROOT/args.config).read_text(encoding="utf-8"))
+    map_cases=[(n,config["geometry"]["gap"],"STANDING_WAVE") for n in (2,32,72)]
+    map_cases += [(128,g,mode) for g in (config["gap_range_m"][0],config["geometry"]["gap"],config["gap_range_m"][1])
+                  for mode in ("STANDING_WAVE","FOCUS")]
+    def prepare_map(count,gap,mode):
+        geometry={**config["geometry"],"total":count,"gap":gap}
+        rows=phase_map(opposing_arrays(**geometry),mode,config["target_m"],config["sound_speed_m_s"])
+        (work/"phase_map.hex").write_text("\n".join(f'{(r["enabled"]<<16)|(r["calibration_phase"]<<8)|r["requested_phase"]:05x}' for r in rows)+"\n")
+        expected=[]
+        for cycle in range(825):
+            phase=cycle*10240000//33000000
+            word=sum((int(r["enabled"] and ((phase-r["effective_phase"])%256)<128)<<r["rtl_channel"]) for r in rows)
+            expected.append(f"{word:032x}")
+        (work/"phase_waveform.hex").write_text("\n".join(expected)+"\n")
+        return f"{count}_{mode.lower()}_{gap*1000:g}mm"
     try:
         run("python_tests",[sys.executable,"-m","unittest","discover","-s","tests","-v"],ROOT)
         rtl=sorted((ROOT/"rtl").rglob("*.sv"))
@@ -60,16 +76,9 @@ def main():
             out=run(f"run_{name}",[vvp,work/f"{name}.vvp"])
             if "PASS " not in out: raise AssertionError(f"No completion marker: {name}")
         run("compile_model_map",[iv,"-g2012","-s","tb_phase_map","-o",work/"tb_phase_map.vvp",*rtl,ROOT/"tb/tb_phase_map.sv"])
-        for count in (2,32,72,128):
-            rows=phase_map(opposing_arrays(count,shape="concave"))
-            (work/"phase_map.hex").write_text("\n".join(f'{(r["enabled"]<<16)|(r["calibration_phase"]<<8)|r["requested_phase"]:05x}' for r in rows)+"\n")
-            expected=[]
-            for cycle in range(825):
-                phase=cycle*10240000//33000000
-                word=sum((int(r["enabled"] and ((phase-r["effective_phase"])%256)<128)<<r["rtl_channel"]) for r in rows)
-                expected.append(f"{word:032x}")
-            (work/"phase_waveform.hex").write_text("\n".join(expected)+"\n")
-            out=run(f"model_map_{count}",[vvp,work/"tb_phase_map.vvp"])
+        for count,gap,mode in map_cases:
+            label=prepare_map(count,gap,mode)
+            out=run(f"model_map_{label}",[vvp,work/"tb_phase_map.vvp"])
             if "PASS model phase map" not in out: raise AssertionError("Model-map integration incomplete")
         run("compile_bandwidth_guard",[iv,"-g2012","-s","tb_bad_bandwidth","-o",work/"bad_bandwidth.vvp",*rtl,ROOT/"tb/tb_bad_bandwidth.sv"])
         bad=subprocess.run([str(vvp),str(work/"bad_bandwidth.vvp")],cwd=work,capture_output=True,text=True,timeout=30)
@@ -86,6 +95,14 @@ def main():
             out=run("xvlog",[vb/"xvlog.bat","--sv",*rtl,ROOT/"tb/tb_core.sv",ROOT/"tb/tb_system.sv",ROOT/"tb/tb_serializer_fault.sv",ROOT/"tb/tb_phase_map.sv"])
             for name in ("tb_core","tb_system","tb_serializer_fault","tb_phase_map"):
                 run(f"xelab_{name}",[vb/"xelab.bat",name,"--snapshot",name+"_snapshot","--debug","typical"])
+                if name=="tb_phase_map":
+                    for count,gap,mode in map_cases:
+                        if count!=128:continue
+                        label=prepare_map(count,gap,mode)
+                        out=run(f"xsim_model_map_{label}",[vb/"xsim.bat",name+"_snapshot","--runall"])
+                        if "PASS model phase map" not in out or "Fatal:" in out:
+                            raise AssertionError("XSim model-map case failed: "+label)
+                    continue
                 for repeat in range(3 if name=="tb_core" else 1):
                     trace=work/f"xsim_{repeat}.csv"
                     command=[vb/"xsim.bat",name+"_snapshot","--runall"]
@@ -102,6 +119,11 @@ def main():
             summary["independent_simulator"]="NOT_RUN"
         summary["source_sha256"]={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
                                     for p in [*rtl,*sorted((ROOT/"tb").glob("*.sv"))]}
+        summary["model_map_cases"]=[{"channels":n,"face_gap_mm":g*1000,"mode":m} for n,g,m in map_cases]
+        summary["geometry_configuration"]=config
+        summary["source_text_sha256"]={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+            for p in [*sorted((ROOT/"software").rglob("*.py")),*sorted((ROOT/"tests").rglob("*.py")),
+                      *sorted((ROOT/"scripts").glob("*.py")),ROOT/args.config]}
         summary["status"]="PASS" if not args.skip_xsim else "PARTIAL"
     except Exception as exc:
         summary["status"]="FAIL"; summary["error"]=str(exc)

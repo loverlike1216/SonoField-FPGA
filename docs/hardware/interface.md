@@ -35,9 +35,11 @@ No bridge PCB or 128-channel component values are frozen in VN1.
 ## PCB-C carrier
 
 Mechanically locate and label UPPER_TX_00..63 and LOWER_TX_00..63; preserve these across calibration,
-CSV maps, tests and driver connectors. Simulation pitch 18 mm is provisional. Measure body diameter,
+CSV maps, tests and driver connectors. User-selected radiating-center pitch is 12 mm for nominal 10 mm bodies.
+Default face gap is 100 mm with centered 90..115 mm adjustment. Measure body diameter,
 pin separation, height, tolerance and effective polarity before designing holes or curved carriers.
-`evidence/model/vn1/channel_mapping.csv` specifies logical identities, not board/header pin assignments.
+`evidence/geometry_10mm/model/channel_mapping.csv` specifies logical identities, not board/header pin assignments.
+`hardware/mechanical/geometry_10mm/coordinates_nominal.csv` defines face centers. PCB planes remain unspecified.
 
 ## Proposed topology decision
 

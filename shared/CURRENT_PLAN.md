@@ -1,46 +1,49 @@
-# VN1 current plan
+# VN1 current plan — 10 mm / 128-channel radiating-surface revision
 
 ## Current Goal
-Build and verify a board-independent 128-channel timing baseline and TCT40 hardware architecture.
+Apply the user's new 10 mm transmitter, 12 mm radiating-center pitch, opposed 8x8 + 8x8 planar
+geometry. Nominal face-to-face gap 100 mm, adjustable 90..115 mm; origin remains the geometric center.
 
 ## Scope
-Audit all 12 supplied board files; record conflicts. Implement Python directional field model,
-planar/concave comparisons and emitter scaling. Implement common timebase, separate request/calibration,
-complete-map atomic commit, safe enable and parameterized serializer. Run Python, Icarus and
-Vivado 2025.2 XSim; synthesize only with a documented exact part. Supply physical bring-up guide.
+Record this explicit user decision as superseding the former 16 mm / 72-channel demonstration assumptions.
+Update geometry configuration/defaults, coordinate exports and diagrams, gap-dependent maps and acoustic
+comparisons. Regression-test new geometry through Python and both RTL simulators. Keep historical evidence
+unchanged. Preserve staged low-power bring-up and existing board/driver electrical blockers.
 
 ## Non-Goals
-No guessed XDC, no bitstream, final PCB, PS software integration, camera loop or physical levitation claim.
+No fabricated transducer model/ratings, final PCB drilling tolerances, assumed PCB-to-face distance,
+guessed XDC/part, physical levitation claim or production fabrication.
 
 ## Files Expected To Change
-rtl/, tb/, software/, tests/, scripts/, docs/, hardware/, constraints/, evidence/, shared/, README.md.
-Existing board files remain untouched and local (third-party redistribution rights unconfirmed).
+config/, software/acoustic_model/, tests/, scripts/, docs/, hardware/mechanical/, evidence/, shared/, README.md.
+RTL timing logic is expected to remain unchanged; map inputs change. User board files remain untouched.
 
 ## Risks
-Part/package/grade unreadable; clock/source disagreement resolved by user in favor of .const (33 MHz); malformed GPIO numbering;
-unknown bank voltage. 128 x 256 x 40 kHz = 1.31072 Gbit/s aggregate output state bandwidth.
-A naive 595 chain cannot meet this. Serializer is a digital interface candidate, not an approved PCB.
+Image is a supplier dimension/reference sheet, not measured data: 10 mm body does not establish active aperture,
+capacitance, voltage rating, exact part or acoustic polarity. Nominal 2 mm lateral clearance needs actual
+tolerances. Radiating face gap must not be confused with PCB gap. Existing part/VCCO/serializer blockers remain.
 
 ## Validation
-Analytic acoustic checks; TB01-TB15; complete-map rejection and safety fault cases;
-Python edge-by-edge oracle; three identical simulation runs; independent Icarus/XSim traces.
-Board-gate script must refuse synthesis/project generation without verified part and clock facts.
+First record current 12-test baseline and source checkpoint. Add exact coordinate, reflection, normals,
+gap-range/endpoints, channel mapping, physical envelope and regenerated-phase tests. Re-run full Python,
+Icarus and XSim gate, including actual 90/100/115 mm maps. Compare deterministic regenerated artifacts
+from a fresh committed checkout and new venv. Check documents/state no longer present old geometry as current.
 
 ## Evidence Required
-Board manifest hashes, exact commands/tool versions/exit codes, test summaries, trace hashes,
-field comparison CSV and plots, explicit synthesis/implementation status.
+Source image hash + transcribed supplier claims; baseline; 128 coordinate CSV/JSON; dimensioned layout;
+90..115 mm gap sweep, per-gap maps, command logs/exit codes, tool/source hashes and fresh reproduction.
 
 ## Done When
-All feasible digital/model gates pass; remaining hardware facts are explicitly blocked; documentation,
-state and evidence agree; clean reproducibility run; reviewed commit on main.
+User geometry encoded consistently, all feasible digital/model gates pass, historical results preserved,
+limitations updated, reviewable coordinate/phase artifacts produced, source/evidence committed on main.
 
 ## Need ChatGPT Decision?
-Yes for unresolved board facts and physical serializer component/topology freeze.
-These do not block board-independent simulation or field modeling.
+The user has already approved geometry/128-channel design changes; no further permission is needed for them.
+Actual part identification, board facts and power/PCB freeze still require evidence; do not guess.
 
 ## Current execution result
-Digital/model implementation and cross-tool verification complete. Authoritative digital evidence:
-evidence/simulation/vn1_release/summary.json (PASS). Model outputs: evidence/model/vn1/.
-Physical synthesis/implementation/bring-up remain blocked. Clean-checkout/new-venv reproduction passed
-at source checkpoint 6b29f8b; all model CSV content hashes agree. State/evidence audit passed.
-Stable checkpoint is ready for review; do not expand into PCB fabrication or advanced field modes.
+PREFLIGHT: clean main at f215460, origin matched; prior shared state and acceptance read.
+Previous digital/model evidence remains historical under evidence/simulation/vn1_release and evidence/model/vn1.
+Current geometry exports, 19 Python tests, Icarus and Vivado 2025.2 XSim gates PASS.
+Source-hash and repository audit PASS. New evidence is separate under geometry_10mm.
+Next: commit source checkpoint and perform fresh-clone/new-venv reproduction, then finalize handoff.

@@ -1,22 +1,30 @@
-# TCT40 baseline and limits
+# Current transmitter baseline — nominal 10 mm / 40 kHz
 
-Chosen family: TCT40-16T, nominal 40 kHz open-air transmitter, approximately 16 mm diameter, nF-class load.
-Purchased batch identity and all actual ratings are unknown. It is not a calibrated omnidirectional source.
+The user selected a 10 mm transmitter from a supplied shop image on 2026-09-19. Project identifier:
+`TCT40_10MM_CANDIDATE`. Exact manufacturer and part number are unknown; do not call it TCT40-16T.
+The prior 16 mm baseline is retained unchanged in docs/history/vn1_16mm/tct40_baseline.md.
 
-The component document hosted by SparkFun lists 40 kHz, transmitter frequency tolerance ±0.5 kHz,
-117 dB minimum and 2500 pF ±30% measured at 1 kHz below 1 V. It also lists an ambiguous 80 V maximum
-without enough information here to qualify continuous levitation drive. These are reference claims, not
-batch acceptance measurements or permission to use 80 V.
-[Reference component document](https://docs.sparkfun.com/SparkFun_Ultrasonic_Distance_Sensor-Qwiic/assets/component_documentation/TCT40-16-T-R.pdf).
+| Parameter | Current treatment |
+|---|---|
+| Nominal body diameter / frequency | 10 mm / 40 kHz, user-selected supplier claims |
+| Array / pitch | Opposed planar 8x8 + 8x8, 12 mm radiating-center pitch |
+| Face gap | Nominal 100 mm, adjustable 90..115 mm, origin centered |
+| Body height / pin spacing | Image says 7 mm / 5 mm; measure before footprint selection |
+| Active acoustic aperture | Unknown; 10 mm piston is only an explicit modeling approximation |
+| Capacitance / impedance | Unknown; old 16 mm 2–2.5 nF figures do not apply automatically |
+| Drive voltage rating | Unknown; no continuous-drive rating inferred from another part |
+| SPL | Image says >=110 dB with unspecified conditions; not model pressure calibration |
+| '+' / shell connection | Image claim; electrical and acoustic verification required |
 
-The user's 2 nF / 110–117 dB class baseline is retained as an assumption range; do not conflate vendors,
-distance, waveform, RMS/Vpp, duty cycle or SPL test conditions. Initial differential drive steps are
-10,12,16,~20 Vpp conditional on measurements. A symmetric full bridge on a 5 V supply can ideally produce
-10 Vpp across its load; supply voltage and transducer Vpp are not interchangeable. Overshoot counts.
+At the explicitly configured c=343 m/s and f=40 kHz, wavelength is 8.575 mm. The 12 mm pitch is
+about 1.40 wavelengths, still larger than lambda/2. Prioritize opposed standing waves and modest trap
+movement; do not promise wide-angle alias-free steering.
 
-At 343 m/s, wavelength is 8.575 mm. A provisional 18 mm pitch is about 2.10 wavelengths, not lambda/2.
-Use opposed standing waves and geometric focusing; large-angle grating-lobe-free steering is not a VN1 claim.
-The capacitance is only one part of the resonant electromechanical impedance. Sinusoidal reactive-current
-estimates cannot establish square-wave switching current, loss or safe bridge component values.
+Voltage progression 10→12→16→~20 Vpp remains only a candidate characterization sequence, conditional
+on qualification of this actual part. Do not assert even the first step is safe solely from its diameter.
+Differential Vpp, duty cycle, waveform, overshoot, driver temperature and measured batch behaviour must be recorded.
+No thermal/current/pressure or mass-support result exists for the new candidate.
 
-Characterization and conservative bring-up procedures: hardware/characterization/transducer_characterization.md.
+See hardware/transducers/10mm_supplier_reference.md for exact image provenance and limits,
+hardware/mechanical/radiating_surface_geometry.md for dimensional datums, and
+hardware/characterization/transducer_characterization.md for the measurement procedure.

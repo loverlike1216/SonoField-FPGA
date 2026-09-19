@@ -34,3 +34,10 @@ timing/clock distribution remain unverified; no PCB freeze is authorized by a di
 ## B05 — Purchased transducer and physical validation
 No batch measurements, driver prototype, calibrated pressure, object mass or levitation evidence supplied.
 PH0 onward remain unvalidated. Absolute force and 50 mg support cannot be inferred from normalized pressure.
+
+## B06 — New 10 mm part electrical/mechanical qualification
+User selected the pictured nominal 10 mm transmitter and a 128-channel planar geometry. This resolves
+geometry choice, not exact part identity. Capacitance, active aperture, drive rating, actual dimensions,
+mounting standoff and acoustic polarity remain unknown. Do not reuse the old 16 mm ratings.
+Nominal radiating-center coordinates are ready to implement; PCB/drill dimensions and power-stage freeze
+require batch measurements. Source: hardware/transducers/10mm_supplier_reference.md.

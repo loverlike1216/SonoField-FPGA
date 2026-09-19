@@ -4,14 +4,19 @@ from .transducer import Transducer
 SHAPES = {2: (1, 1), 8: (2, 2), 16: (2, 4), 32: (4, 4), 72: (6, 6), 128: (8, 8)}
 
 
-def opposing_arrays(total=72, pitch=0.018, gap=0.160, shape="planar", radius=0.180,
-                    diameter=0.016, frequency=40000.0):
-    """Meters. gap is on-axis face spacing. Cap rims extend toward the central workspace.
+def opposing_arrays(total=128, pitch=0.012, gap=0.100, shape="planar", radius=0.180,
+                    diameter=0.010, frequency=40000.0):
+    """Meters, positions are RADIATING SURFACE CENTERS, origin at array-pair center.
+
+    Planar faces lie at z=+/-gap/2. PCB coordinates require a separate mounting model.
+    Curved research alternatives: gap is on-axis face spacing; cap rims extend inward.
 
     IDs retain physical upper/lower mapping: upper RTL 0..63, lower RTL 64..127.
     No compact renumbering of lower channels for smaller arrays.
     """
-    if total not in SHAPES or pitch < diameter or gap <= 0 or shape not in ("planar", "concave"):
+    if (not all(math.isfinite(v) for v in (pitch,gap,radius,diameter,frequency)) or
+        total not in SHAPES or pitch < diameter or diameter <= 0 or gap <= 0 or
+        frequency <= 0 or shape not in ("planar", "concave")):
         raise ValueError("Invalid geometry, unsupported emitter count, or intersecting pitch")
     rows, cols = SHAPES[total]
     elements = []
@@ -35,3 +40,28 @@ def opposing_arrays(total=72, pitch=0.018, gap=0.160, shape="planar", radius=0.1
                 elements.append(Transducer(f"{side}_TX_{index:02d}", base+index, (x,y,z), normal,
                                           diameter=diameter, frequency=frequency))
     return elements
+
+
+def planar_profile(config, gap_m=None):
+    """Build the user-selected adjustable planar assembly, rejecting out-of-travel gaps.
+
+    Generic opposing_arrays remains available for explicitly labeled research alternatives.
+    """
+    geometry=dict(config["geometry"])
+    gap=geometry["gap"] if gap_m is None else float(gap_m)
+    limits=config["gap_range_m"]
+    if (config.get("coordinate_reference") != "RADIATING_SURFACE_CENTER" or
+        geometry["shape"] != "planar" or not math.isfinite(gap) or
+        not limits[0] <= gap <= limits[1]):
+        raise ValueError("Planar radiating-face profile requires a gap inside its documented travel range")
+    geometry["gap"]=gap
+    return opposing_arrays(**geometry)
+
+
+def coordinate_rows(elements):
+    """Millimeter export, both boards in one global frame (not mirrored fabrication views)."""
+    return [{"CHANNEL_ID":e.channel_id,"rtl_channel":e.rtl_channel,
+             "x_mm":round(e.position[0]*1000,9),"y_mm":round(e.position[1]*1000,9),
+             "z_mm":round(e.position[2]*1000,9),"normal_x":e.normal[0],
+             "normal_y":e.normal[1],"normal_z":e.normal[2],
+             "coordinate_reference":"RADIATING_SURFACE_CENTER"} for e in elements]
