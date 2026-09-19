@@ -13,7 +13,8 @@ User-approved cleanup preserves functioning source, current hardware geometry an
 Baseline/current 19 Python tests, complete Icarus and Vivado 2025.2 XSim regression PASS.
 RTL/TB/tests and 12 board references unchanged. Six model and 19 coordinate/phase CSVs match;
 three repeat traces per simulator retain identical hash. New evidence in v1/evidence.
-Fresh-checkout reproduction remains pending until source checkpoint is committed.
+Fresh local clone of 0b257de with new venv PASS. Both simulators, all Python tests, six model CSVs
+and 19 coordinate/phase CSVs reproduced on the same Windows host. No second OS/physical board implied.
 
 ## Not validated / blocking / risks
 External ChatGPT source SonoField-FPGA is named but unreadable; no original messages or decision invented.
@@ -27,3 +28,8 @@ Current transducer is nominal 10 mm / 40 kHz; exact continuous excitation, capac
 ## Next stage
 Review scoped directory result; qualify actual board/transducer/interface before target integration and PH0.
 Organization completion does not approve whole-platform hardware acceptance.
+
+## Result (organization scope only)
+ACCEPT WITH LIMITATIONS. Requested local/current GitHub layout is v1-only, with complete runnable source
+and newly generated evidence. External ChatGPT import is BLOCKED; hardware acceptance is not granted.
+See shared/HANDOFF.md and the machine-readable state for the next required inputs.

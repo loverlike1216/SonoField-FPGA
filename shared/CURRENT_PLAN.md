@@ -38,4 +38,5 @@ state/hand-off complete, secret/license check passes, Git pushed and remote comm
 ## Progress
 Source relocated and tool paths updated. Full Python/Icarus/XSim regression PASS; model/coordinate equality and source/board integrity PASS.
 Obsolete current-tree records and obsolete local clone caches removed under user authorization.
-Repository audit PASS. Fresh checkout/new-venv reproduction follows the source checkpoint.
+Repository audit PASS. Fresh checkout/new-venv reproduction at 0b257de PASS: complete digital gate, six model CSVs and 19 coordinate/phase CSVs identical.
+All requested local organization work complete. Final evidence/state commit and remote synchronization follow.

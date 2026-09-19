@@ -14,9 +14,14 @@ Three hardware consultation problems created with source evidence and body SHA25
 ## Validation / evidence
 Baseline and current 19 tests PASS; complete Icarus/XSim regression PASS. RTL/TB/tests and 12 board files
 unchanged; six model CSVs and 19 coordinate/phase CSVs identical; trace hash unchanged.
-Evidence: v1/evidence/validation, model, integrity and board_inventory. Fresh reproduction pending.
+Evidence: v1/evidence/validation, model, integrity and board_inventory. Fresh clone/new venv at 0b257de PASS, all six model and 19 coordinate/phase CSVs match.
+Raw fresh-checkout tool evidence retained in v1/evidence/reproducibility/validation.
 Vivado target gate correctly blocks missing part; no synthesis performed. No hardware acceptance implied.
 
 ## Unresolved / next action
-Complete local/clean-clone gates, remove obsolete records, publish/verify main. Then supply actual board
+Local and clean-clone gates complete; obsolete records removed; final evidence commit is synchronized to main. Next supply actual board
 and transducer facts for the open hardware problems; import external chat only through a real source.
+
+## Scope result
+ACCEPT WITH LIMITATIONS for requested v1 organization: external ChatGPT history cannot be imported with
+current tools. No messages/decisions fabricated. Whole-platform hardware acceptance remains pending.

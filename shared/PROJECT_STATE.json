@@ -5,14 +5,14 @@
   "workspace_path": "E:\\Codex-project\\AMD-SonoField-FPGA",
   "current_branch": "main",
   "current_version": "v1",
-  "current_stage": "V1_LAYOUT_AND_GOVERNANCE",
+  "current_stage": "V1_LAYOUT_AND_GOVERNANCE_COMPLETE",
   "execution": "PROJECT_ACTIVE",
   "status": "PROJECT_ACTIVE",
   "scope_of_block": "Board-target synthesis, implementation and physical hardware",
   "digital_validation": "PASS",
   "digital_evidence": "v1/evidence/validation/summary.json",
   "model_evidence": "v1/evidence/model",
-  "reproducibility": "PENDING_CURRENT_LAYOUT",
+  "reproducibility": "PASS",
   "overall_iteration_result": "REVISE",
   "board_synthesis": "BLOCKED",
   "implementation": "NOT_RUN",
@@ -44,7 +44,7 @@
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
   },
-  "review_scope": "10 mm geometry and digital/model revision; board and physical gates remain blocked",
+  "review_scope": "Current v1 layout/governance cleanup and reproduced digital behavior only; whole-platform acceptance remains pending",
   "active_version": "v1",
   "branch": "main",
   "chat_source_name": "SonoField-FPGA",
@@ -64,5 +64,10 @@
     "CHAT_MEMORY_ACCESS_BLOCKED"
   ],
   "critical_issues": [],
-  "next_action": "Complete structure regression and fresh checkout reproduction; publish matching v1 layout"
+  "next_action": "External review of v1; supply real board/transducer evidence and import ChatGPT history when available",
+  "validated_source_commit": "0b257de4bb31bceb10a0f6c4a35755b02e76a7f2",
+  "organization_result": "ACCEPT WITH LIMITATIONS",
+  "organization_limitations": [
+    "External ChatGPT source named but history access blocked; zero imported messages"
+  ]
 }
