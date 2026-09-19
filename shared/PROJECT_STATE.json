@@ -7,12 +7,12 @@
   "current_version": "VN1",
   "current_stage": "RADIATING_SURFACE_GEOMETRY_128CH_10MM",
   "execution": "PROJECT_EXECUTION_ACTIVE",
-  "status": "REVISE_REQUIRED",
+  "status": "READY_FOR_REVIEW",
   "scope_of_block": "Board-target synthesis, implementation and physical hardware",
   "digital_validation": "PASS",
   "digital_evidence": "evidence/geometry_10mm/simulation_current/summary.json",
   "model_evidence": "evidence/geometry_10mm/model",
-  "reproducibility": "PENDING_THIS_REVISION",
+  "reproducibility": "PASS",
   "overall_iteration_result": "REVISE_REQUIRED",
   "board_synthesis": "BLOCKED",
   "implementation": "NOT_RUN",
@@ -43,5 +43,7 @@
     ],
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
-  }
+  },
+  "validated_source_commit": "a01629ca62d70ba9db2b853f59ce40ce72cdca5c",
+  "review_scope": "10 mm geometry and digital/model revision; board and physical gates remain blocked"
 }

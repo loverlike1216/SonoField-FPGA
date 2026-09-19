@@ -32,7 +32,10 @@ Icarus and Vivado 2025.2 XSim pass complete digital regression and the actual 12
 and FOCUS maps at 90/100/115 mm. Digital timing RTL is unchanged; the existing repeated-trace hash remains
 `63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054`.
 Current command logs and source hashes: evidence/geometry_10mm/simulation_current/summary.json.
-Fresh-checkout reproduction status will be recorded in evidence/geometry_10mm/reproducibility/summary.json.
+Fresh local clone of `a01629c` with a new venv passed the complete gate on the same Windows host.
+All six model CSVs and 19 coordinate/phase CSVs reproduced exactly after newline normalization.
+Summary and retained raw tool logs: evidence/geometry_10mm/reproducibility/.
+This is clean-environment reproduction, not a second operating system or physical board.
 
 Model predicts about 11% loss in its normalized center-focus metric when reusing the 100 mm map at
 115 mm; this motivates recomputing phase, not a claim about physical levitation capacity.

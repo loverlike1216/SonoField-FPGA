@@ -2,6 +2,8 @@
 
 ## VN1 geometry revision — 2026-09-19
 
+- Fresh local clone/new venv at a01629c passed all 19 Python tests, both RTL simulators, six model and 19 coordinate/phase CSV comparisons.
+
 - Applied user-selected nominal 10 mm transmitter, 12 mm radiating-center pitch and opposed planar 8x8 + 8x8.
 - Defined origin at full radiating-center geometry center; nominal face gap 100 mm, centered adjustment 90..115 mm.
 - Exported face-coordinate CSV/JSON, dimensioned PNG/SVG, six gap profiles and 12 gap-specific phase maps.

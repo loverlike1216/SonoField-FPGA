@@ -33,3 +33,7 @@ must remain open. No self-issued whole-project final acceptance is recorded.
 Historical REPRODUCIBILITY_CHECK: fresh local clone at 6b29f8b passed the prior 16 mm revision.
 Current geometry evidence is under evidence/geometry_10mm; do not reuse historical hashes as its acceptance.
 The selected 128-position design supersedes the former 72-emitter demonstration requirement by explicit user instruction.
+
+Current REPRODUCIBILITY_CHECK: clean local clone at a01629c and new venv PASS.
+Complete digital gate, six model CSVs and 19 coordinate/phase CSVs reproduced on the same Windows host.
+Evidence: evidence/geometry_10mm/reproducibility/summary.json and validation/.

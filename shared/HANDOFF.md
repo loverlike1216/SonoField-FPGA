@@ -19,7 +19,9 @@ datums, tests, guide and BOM were updated. Timing RTL is unchanged and its calib
 - Current full tool evidence: evidence/geometry_10mm/simulation_current/summary.json.
 - Model/scaling/gap outputs: evidence/geometry_10mm/model/; all estimates, no calibrated pascals/force.
 - Mechanical coordinates/figures/maps: hardware/mechanical/geometry_10mm/.
-- Fresh reproduction: pending source checkpoint and new venv; final result will be written to PROJECT_STATE.
+- Fresh reproduction at a01629c: PASS in a new local clone/venv, complete dual-simulator validation.
+- Six model CSVs and 19 coordinate/phase CSVs reproduced; raw tool logs retained under reproducibility/validation.
+- All 12 original board files and historical evidence unchanged; preservation check PASS.
 
 ## Open issues / failures
 No new RTL functional failure. Existing board part/VCCO/pin gaps, serializer physical timing and hardware

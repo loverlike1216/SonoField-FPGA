@@ -46,4 +46,7 @@ PREFLIGHT: clean main at f215460, origin matched; prior shared state and accepta
 Previous digital/model evidence remains historical under evidence/simulation/vn1_release and evidence/model/vn1.
 Current geometry exports, 19 Python tests, Icarus and Vivado 2025.2 XSim gates PASS.
 Source-hash and repository audit PASS. New evidence is separate under geometry_10mm.
-Next: commit source checkpoint and perform fresh-clone/new-venv reproduction, then finalize handoff.
+Fresh source checkpoint a01629c plus new clone/venv: PASS; six model CSVs and 19 coordinate/phase CSVs match.
+Raw repeated tool evidence retained. Original 12 board files and historical evidence unchanged.
+Geometry/digital stage READY_FOR_REVIEW; board/driver/physical gates remain BLOCKED.
+Implementation complete for this revision; next work requires actual part and board evidence.
