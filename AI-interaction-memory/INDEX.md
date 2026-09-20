@@ -7,7 +7,7 @@ Source timestamps are UTC. Active version v1. Stage: INTERACTION_MEMORY.
 
 | Thread / Session | Role / Impact | First used | Last captured | Record | Status | Content SHA256 |
 |---|---|---|---|---|---|---|
-| 01a0b538-9430-7561-9ba4-623f57501f43 | codex / IMPLEMENTATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-20T01:13:24.974Z | [codex](codex/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | 22e12b2b866098f4791452d92ce033fb913056f3847427497d885a281754c3da |
-| 01a0b538-9430-7561-9ba4-623f57501f43 | tool-flow / VALIDATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-20T01:13:24.974Z | [tool-flow](tool-flow/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | f390ca11f336337d8a4c1e8c6a869c412d29f4bb7dd3e7b24d8d277259524a32 |
+| 01a0b538-9430-7561-9ba4-623f57501f43 | codex / IMPLEMENTATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-20T19:09:24.028Z | [codex](codex/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | c2db3d9f154cf45aa555be075e38d46f1f3de936d039d4d811e21b632f8ec895 |
+| 01a0b538-9430-7561-9ba4-623f57501f43 | tool-flow / VALIDATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-20T19:09:24.028Z | [tool-flow](tool-flow/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | c4e4e595d6d72096bf0b4c8c0b0e5b4409ea3c23c450a82d86ada09a0a0e81d3 |
 
 [Capture policy and commands](README.md) · [Current tool flow](tool-flow/T-20260920-001__interaction-memory.md)

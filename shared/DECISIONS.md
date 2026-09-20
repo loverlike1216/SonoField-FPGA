@@ -42,3 +42,10 @@ Do not export hidden/private provider instructions or reconstruct unavailable hi
 No new version and no change to FPGA/acoustic design. Validation: exporter tests + source integrity audit.
 Quoted historical instructions may retain old labels; active engineering layout remains v1 only.
 External ChatGPT access remains blocked; no decision is attributed to it.
+
+## ADR-029 — VERSION_UPGRADE_APPROVED (2026-09-21)
+
+From v1 to v2. Approved By: User. Approval Source: AI-interaction-memory/codex/instructions/v2_formal_development.md, sections 1 and 75.
+Freeze v1 unchanged at 487210d1a2b157bca52d1722c2343b50851a3578; complete reusable project copied to standalone v2.
+Only bootstrap/inherited baseline in this stage. No v3, PCB fabrication or calibration implementation now.
+External ChatGPT decision is not claimed. Freeze hashes: shared/versions/v1_freeze.json.

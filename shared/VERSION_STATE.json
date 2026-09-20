@@ -1,11 +1,13 @@
 {
   "active_version": "v1",
   "highest_version": "v1",
-  "status": "ACTIVE",
-  "upgrade_pending": false,
-  "pending_target": null,
-  "frozen_versions": [],
+  "status": "FROZEN",
+  "upgrade_pending": true,
+  "pending_target": "v2",
+  "frozen_versions": [
+    "v1"
+  ],
   "legacy_versions": [],
   "version_directory": "v1",
-  "approval_source": "Current user explicitly confirmed v1 and authorized organization and obsolete record deletion; message ID UNKNOWN"
+  "approval_source": "User attachment v2_formal_development.md sections 1 and 75; approval already granted"
 }
