@@ -49,3 +49,10 @@ From v1 to v2. Approved By: User. Approval Source: AI-interaction-memory/codex/i
 Freeze v1 unchanged at 487210d1a2b157bca52d1722c2343b50851a3578; complete reusable project copied to standalone v2.
 Only bootstrap/inherited baseline in this stage. No v3, PCB fabrication or calibration implementation now.
 External ChatGPT decision is not claimed. Freeze hashes: shared/versions/v1_freeze.json.
+
+## ADR-030 — v2 bootstrap evidence boundary (2026-09-21)
+
+Version: v2. Source: direct user formal instruction, section 75.
+Complete inherited baseline verified at e353c16d35da2b430f46ba5b83a5a9a79dd749b7. Fresh clone excludes v1 directory; parent Git tree unchanged.
+New BOM is PCB_PROPOSED input. Obsolete workbook version cell has no authority over explicit v2 approval.
+No calibration/ADC capability or external ChatGPT decision claimed. Stop before deeper stages.

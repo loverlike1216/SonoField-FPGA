@@ -17,3 +17,8 @@ Frozen-file SHA256 audit; full inherited Python/Icarus/XSim tests and waveform c
 
 ## Rollback / done when
 Normal revert of v2/governance changes, retaining v1 and Git history. Stop after bootstrap report for review. Full v2 hardware/calibration acceptance remains future work.
+
+## Completed checkpoint
+
+All scoped bootstrap gates PASS, including v1-absent clean reproduction. Source e353c16d35da2b430f46ba5b83a5a9a79dd749b7.
+Stopped for user/reviewer assessment. Next proposed stage V2.2 remains unstarted. Hardware blockers persist.

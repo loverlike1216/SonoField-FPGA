@@ -20,3 +20,6 @@ Scope: V2_BOOTSTRAP_AND_INHERITED_BASELINE only. This does not accept the full s
 
 Current results: shared/PROJECT_STATE.json and shared/report_v2.md. Whole-project blockers remain in BLOCKERS.md.
 Future ADC/calibration/pose/temperature work requires later stage verification; no fake PASS or empty runtime modules.
+
+Completed scoped gates: PASS at e353c16d35da2b430f46ba5b83a5a9a79dd749b7. V2_STANDALONE_REPRODUCIBILITY PASS.
+Review result: ACCEPT WITH LIMITATIONS for bootstrap only. No full v2 hardware acceptance.

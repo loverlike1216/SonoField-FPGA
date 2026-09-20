@@ -10,7 +10,7 @@ last_sync_time: UNKNOWN
 message_count: 0
 last_message_id: UNKNOWN
 content_hash: UNKNOWN
-active_version: v1
+active_version: v2
 ---
 
 # ChatGPT Chat Full Memory

@@ -12,9 +12,9 @@
   "digital_validation": "PASS",
   "digital_evidence": "v2/evidence/validation/summary.json",
   "model_evidence": "v2/evidence/model",
-  "reproducibility": "NOT_RUN",
-  "overall_iteration_result": "REVISE",
-  "board_synthesis": "BLOCKED",
+  "reproducibility": "PASS",
+  "overall_iteration_result": "ACCEPT WITH LIMITATIONS",
+  "board_synthesis": "BLOCKED_BY_BOARD_FACT",
   "implementation": "NOT_RUN",
   "external_acceptance": "PENDING",
   "hardware_verified": false,
@@ -44,7 +44,7 @@
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
   },
-  "review_scope": "v2 bootstrap and inherited baseline only",
+  "review_scope": "Complete v2 bootstrap and inherited digital/model baseline only; full v2 self-calibration/hardware acceptance is not claimed",
   "active_version": "v2",
   "branch": "main",
   "chat_source_name": "SonoField-FPGA",
@@ -64,18 +64,19 @@
     "CHAT_MEMORY_ACCESS_BLOCKED"
   ],
   "critical_issues": [],
-  "next_action": "Run clean sparse-clone v2 reproduction from committed source",
-  "validated_source_commit": null,
+  "next_action": "Stop for bootstrap review. Next proposed stage V2.2 calibration software model within v2.",
+  "validated_source_commit": "e353c16d35da2b430f46ba5b83a5a9a79dd749b7",
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "organization_limitations": [
-    "External ChatGPT source named but history access blocked; zero imported messages"
+    "External ChatGPT history inaccessible; current Codex transcript PARTIAL",
+    "Hardware, board target, calibration/ADC runtime remain outside this stage"
   ],
   "interaction_memory_index": "AI-interaction-memory/INDEX.md",
   "codex_thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
   "interaction_memory_status": "PARTIAL",
   "interaction_capture_mode": "CHECKPOINT_COMMAND; no background hook",
-  "interaction_memory_cutoff": "2026-09-20T19:19:27.938Z",
-  "interaction_message_count": 53,
+  "interaction_memory_cutoff": "2026-09-20T19:24:18.485Z",
+  "interaction_message_count": 55,
   "interaction_memory_result": "ACCEPT WITH LIMITATIONS",
   "bom": "v2/hardware/bom/BOM_MASTER.xlsx",
   "bom_status": "PCB_PROPOSED; imported input, not fabrication release",
@@ -84,5 +85,17 @@
     "P-20260919-002": "v1",
     "P-20260919-003": "v1"
   },
-  "problem_revalidation": "Requirements/evidence gaps still apply; no old decision automatically executed in v2"
+  "problem_revalidation": "Requirements/evidence gaps still apply; no old decision automatically executed in v2",
+  "bootstrap_result": "ACCEPT WITH LIMITATIONS",
+  "whole_platform_result": "REVISE",
+  "bootstrap_blocking_issues": [],
+  "bootstrap_critical_issues": [],
+  "last_remote_verified_source_commit": "e353c16d35da2b430f46ba5b83a5a9a79dd749b7",
+  "hardware_status": {
+    "TX_RX": "NOT_RUN",
+    "ADC_capture": "NOT_RUN",
+    "pose_calibration": "NOT_RUN",
+    "levitation": "NOT_RUN"
+  },
+  "bom_evidence": "v2/evidence/bootstrap/bom_audit.log"
 }
