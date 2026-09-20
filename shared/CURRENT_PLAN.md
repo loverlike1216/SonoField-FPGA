@@ -1,42 +1,36 @@
-# v1 execution contract — layout and governance
+# v1 execution contract — observable AI interaction memory
 
-## Goal
-Organize the existing project locally and on GitHub as a single active v1. No version upgrade.
+## Goal / user authorization
+Apply the new personalized rules: persist user/Codex messages and key observable tool flows locally and
+on the existing GitHub main branch. Keep v1; no hardware/RTL/model changes or new version.
 
-## Inputs / authorization
-User explicitly requested the new personalized rules, stated 目前还是v1, and subsequently directed
-removal of obsolete version records after integrity validation. Chat Source: SonoField-FPGA.
-Baseline commit ada1b2062756a2b852ed643a6eaa04fdc746323b; clean main matched remote before work.
+## Inputs / baseline
+Clean main 4ff3c38 equals origin/main. Repository audit PASS; existing digital evidence is unchanged.
+ChatGPT source remains SonoField-FPGA and BLOCKED. Local Codex JSONL exists for thread
+01a0b538-9430-7561-9ba4-623f57501f43 and its session metadata matches this exact workspace.
 
-## Scope / architecture / allowed changes
-Root: README, AGENTS, CHANGELOG, shared, AI-chat-memory and AI-problem.
-v1: RTL, TB, software, tests, config, constraints, scripts, requirements, docs, hardware and evidence.
-Remove obsolete reports, evidence directories and migration snapshots from current tree only after fresh
-validation. Preserve existing Git commits. Keep stable module names and functional behavior.
+## Scope / architecture
+AI-interaction-memory: index, session metadata, canonical Codex transcript, partial tool-call register and curated tool-flow reports,
+and a reusable allowlist exporter/checker. Register actual participation only; no made-up Work/Agent messages.
+Update project AGENTS, README, shared state/handoff/decision/changelog. Store a public-safe filtered copy.
 
-## Do not change / non-goals
-No v2, no new hardware claims, no part/pin/rating guesses, no bitstream. Preserve original Zynq7020
-location and file hashes. No fabricated ChatGPT transcript or Decision. No release/visibility change.
-
-## Dependencies / risks
-Python 3.10, locked dependencies, Icarus and Vivado 2025.2. Root-to-v1 path boundaries require correction.
-ChatGPT history access is blocked; this does not block file organization. Hardware blockers remain open.
+## Constraints / non-goals
+Never export analysis, reasoning, summaries, system/developer prompts or runtime metadata payloads.
+Only user-supplied instructions and visible assistant commentary/final answers are message sources.
+Do not reintroduce obsolete version trees; historical words in quoted user instructions remain verbatim.
+No global memory writes, no background service or fictitious automatic capture after turn completion.
+No source log edits. No full ChatGPT-history claim; no guessed earlier messages.
 
 ## Validation / evidence
-Before: 19 Python tests passed. After: complete Python/Icarus/XSim regression, independent waveform oracle,
-repeat trace hashes, unchanged RTL/TB bytes, six model CSVs and 19 coordinate/phase CSVs equal to baseline,
-12 board references unchanged, required documents/links/state/problem hashes correct, clean checkout/new venv.
-Capture real commands/exit codes in v1/evidence. Remove obsolete current-tree records after these gates.
+Test role/channel allowlist, secret redaction, source-workspace match, deterministic exports, integrity
+hash tampering, and explicit partial-history handling. Run existing repository audit to confirm no stale
+functional source hashes. Check text/links/JSON, scan public records for credentials and sensitive paths,
+commit/push and verify matching remote SHA. No RTL rerun needed for unchanged functional source.
 
-## Rollback
-Revert the scoped organization commits using normal Git history; never force push or erase old commits.
+## Rollback / done when
+Normal Git revert of scoped changes. Canonical transcript/index and source boundary are inspectable,
+sync command rerunnable, privacy checks pass, local/remote match, limitations documented.
 
-## Done when
-Only v1 current layout remains locally and remotely, documented commands execute, new evidence passes,
-state/hand-off complete, secret/license check passes, Git pushed and remote commit confirmed.
-
-## Progress
-Source relocated and tool paths updated. Full Python/Icarus/XSim regression PASS; model/coordinate equality and source/board integrity PASS.
-Obsolete current-tree records and obsolete local clone caches removed under user authorization.
-Repository audit PASS. Fresh checkout/new-venv reproduction at 0b257de PASS: complete digital gate, six model CSVs and 19 coordinate/phase CSVs identical.
-All requested local organization work complete. Final evidence/state commit and remote synchronization follow.
+## Execution result
+Real transcript and partial call register exported; eight tests, integrity/secret check and repository audit PASS.
+No functional engineering source changes; no new version. GitHub checkpoint sync follows reviewed capture.

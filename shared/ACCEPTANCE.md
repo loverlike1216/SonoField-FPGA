@@ -37,4 +37,8 @@ root-to-v1 paths are required. Current digital evidence: v1/evidence/validation/
 Fresh-checkout reproduction: v1/evidence/reproducibility/summary.json: PASS at source 0b257de.
 Organization acceptance is scoped separately from whole-platform hardware acceptance.
 
-Layout gate: PASS. Current-tree obsolete version paths/text: zero. Chat history synchronization: BLOCKED, accurately reported.
+Layout gate: PASS. Active engineering version directories: v1 only; historical wording may occur in quoted interaction records. Chat history synchronization: BLOCKED, accurately reported.
+
+Interaction capture gate: real source identity verified, visible-message allowlist, public redaction, hashes,
+repeat sync and tamper tests PASS. Historic wording is preserved only in transcript quotations.
+Coverage is PARTIAL; external ChatGPT history remains BLOCKED.

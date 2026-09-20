@@ -33,3 +33,9 @@ Organization completion does not approve whole-platform hardware acceptance.
 ACCEPT WITH LIMITATIONS. Requested local/current GitHub layout is v1-only, with complete runnable source
 and newly generated evidence. External ChatGPT import is BLOCKED; hardware acceptance is not granted.
 See shared/HANDOFF.md and the machine-readable state for the next required inputs.
+
+## Observable interaction configuration — 2026-09-20
+Actual Codex transcript and tool-call provenance exported under AI-interaction-memory, coverage PARTIAL.
+Eight capture tests plus integrity/secret-pattern and unchanged-source repository checks PASS.
+No hidden reasoning, fabricated external history or automatic background recording claimed.
+See shared/HANDOFF.md and AI-interaction-memory/README.md for checkpoint commands and limits.

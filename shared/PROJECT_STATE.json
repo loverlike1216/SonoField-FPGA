@@ -5,7 +5,7 @@
   "workspace_path": "E:\\Codex-project\\AMD-SonoField-FPGA",
   "current_branch": "main",
   "current_version": "v1",
-  "current_stage": "V1_LAYOUT_AND_GOVERNANCE_COMPLETE",
+  "current_stage": "V1_INTERACTION_MEMORY_CONFIGURED",
   "execution": "PROJECT_ACTIVE",
   "status": "PROJECT_ACTIVE",
   "scope_of_block": "Board-target synthesis, implementation and physical hardware",
@@ -64,10 +64,17 @@
     "CHAT_MEMORY_ACCESS_BLOCKED"
   ],
   "critical_issues": [],
-  "next_action": "External review of v1; supply real board/transducer evidence and import ChatGPT history when available",
+  "next_action": "Review scoped interaction-memory delivery; capture later visible messages at next checkpoint. Hardware problems remain open.",
   "validated_source_commit": "0b257de4bb31bceb10a0f6c4a35755b02e76a7f2",
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "organization_limitations": [
     "External ChatGPT source named but history access blocked; zero imported messages"
-  ]
+  ],
+  "interaction_memory_index": "AI-interaction-memory/INDEX.md",
+  "codex_thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
+  "interaction_memory_status": "PARTIAL",
+  "interaction_capture_mode": "CHECKPOINT_COMMAND; no background hook",
+  "interaction_memory_cutoff": "2026-09-20T01:13:24.974Z",
+  "interaction_message_count": 45,
+  "interaction_memory_result": "ACCEPT WITH LIMITATIONS"
 }

@@ -8,3 +8,6 @@
 *.txt text eol=lf
 *.log text eol=lf -whitespace
 *.png binary
+
+# Verbatim public transcript whitespace is source evidence, not source-code style.
+AI-interaction-memory/codex/*.md text eol=lf -whitespace

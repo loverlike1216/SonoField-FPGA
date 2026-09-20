@@ -1,27 +1,27 @@
-# v1 layout handoff
+# v1 interaction-memory handoff
 
-## Goal / inputs reviewed
-Apply user's new governance rules and explicit same-version cleanup request to local and GitHub layouts.
-Read current source, shared decisions, board blockers and latest complete digital evidence at ada1b20.
+## Goal / inputs
+Apply user's added observable AI-interaction rules and persist real Codex messages locally/GitHub.
+Preflight: 4ff3c38 main matched origin, v1 ACTIVE; shared/AI source/blockers and source session checked.
 
-## Changes
-Engineering files moved into v1; root retains governance/state/AI coordination. Current version is v1,
-not a new generation. Updated scripts, Tcl project label and manual commands. Original board folder stays
-at root. Obsolete current-tree records removed after integrity passed; Git history remains.
-Chat source SonoField-FPGA recorded as BLOCKED, with no fabricated import or decision.
-Three hardware consultation problems created with source evidence and body SHA256; external delivery blocked.
+## Changes made
+AI-interaction-memory now has a canonical sanitized Codex transcript, source-ID/time/hash manifest,
+index, partial tool-call register, curated tool flow, reusable sync/check command and eight privacy/provenance tests.
+AGENTS, README, state, governance review and ADR-028 updated. Other AI directories contain policies only.
+No invented external ChatGPT/Work/Agent conversations. Original Codex source logs remain read-only.
 
-## Validation / evidence
-Baseline and current 19 tests PASS; complete Icarus/XSim regression PASS. RTL/TB/tests and 12 board files
-unchanged; six model CSVs and 19 coordinate/phase CSVs identical; trace hash unchanged.
-Evidence: v1/evidence/validation, model, integrity and board_inventory. Fresh clone/new venv at 0b257de PASS, all six model and 19 coordinate/phase CSVs match.
-Raw fresh-checkout tool evidence retained in v1/evidence/reproducibility/validation.
-Vivado target gate correctly blocks missing part; no synthesis performed. No hardware acceptance implied.
+## Tests / evidence
+Eight exporter tests PASS. Capture integrity/secret-pattern check PASS. Existing repository audit PASS;
+no functional source hashes changed, so previous RTL/model evidence remains applicable. No new EDA run claimed.
+Evidence: v1/evidence/interaction_memory/validation.json. Tool-flow report retains observed initial UTF-8
+fixture and CRLF digest failures and their fixes. Source Chinese is intact (earlier terminal display issue corrected).
 
-## Unresolved / next action
-Local and clean-clone gates complete; obsolete records removed; final evidence commit is synchronized to main. Next supply actual board
-and transducer facts for the open hardware problems; import external chat only through a real source.
+## Limits / next action
+Codex coverage PARTIAL: compaction/open turn, omitted images and raw tool payloads. Only allowlisted visible
+messages are exported, never private reasoning/provider instructions. Run capture at next task start to include
+this task's final response after it exists in the source log. No background recorder or native hook installed.
+External ChatGPT SonoField-FPGA remains BLOCKED. Existing hardware problems unchanged.
+Diff/privacy review and normal main push complete this delivery; future checkpoints use documented commands.
 
-## Scope result
-ACCEPT WITH LIMITATIONS for requested v1 organization: external ChatGPT history cannot be imported with
-current tools. No messages/decisions fabricated. Whole-platform hardware acceptance remains pending.
+## Scoped result
+ACCEPT WITH LIMITATIONS for interaction-memory configuration. Whole-platform hardware acceptance remains external.

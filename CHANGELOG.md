@@ -1,5 +1,11 @@
 # Changelog
 
+## v1 — observable interaction memory
+
+- Added real local Codex transcript capture, session/tool register, index and checkpoint instructions.
+- Added privacy filters, source matching, repeat sync and hash integrity tests. No hidden reasoning exported.
+- External ChatGPT remains BLOCKED; Codex source coverage is explicitly PARTIAL.
+
 ## v1 — layout and governance
 
 - User authorized same-version local/GitHub organization and removal of obsolete version records.

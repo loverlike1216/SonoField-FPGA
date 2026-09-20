@@ -34,3 +34,11 @@ For ADR-025/026 approval: Approved By User; source is the current Codex conversa
 Date of engineering record: 2026-09-19. Base commit: ada1b2062756a2b852ed643a6eaa04fdc746323b.
 Consequences: root/v1 path regression, full simulation and clean reproduction required. No hardware scope changes.
 Open hardware questions: AI-problem/problem/P-20260919-001 through 003. No external answers received.
+
+## ADR-028 — observable Codex interaction memory (2026-09-20, v1)
+Source: user's current revised rules and explicit request, captured in AI-interaction-memory/codex/.
+Adopt canonical sanitized transcript, source-ID/hash/cutoff provenance and curated tool flows at checkpoints.
+Do not export hidden/private provider instructions or reconstruct unavailable history. PARTIAL stays PARTIAL.
+No new version and no change to FPGA/acoustic design. Validation: exporter tests + source integrity audit.
+Quoted historical instructions may retain old labels; active engineering layout remains v1 only.
+External ChatGPT access remains blocked; no decision is attributed to it.

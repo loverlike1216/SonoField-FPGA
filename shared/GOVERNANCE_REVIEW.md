@@ -20,3 +20,9 @@ The project-specific old naming instruction yields to the user's current explici
 Original Zynq7020 stays at the specified root path; it is local evidence rather than publishable source.
 Root .venv/build remain ignored tooling paths. They are not extra versions; obsolete clone caches were removed.
 Ordinary path fixes are self-contained implementation work; no external decision is required for them.
+
+## Added interaction layer
+New rules 86–100 require observable project messages/tool flows as assets. Local Codex rollout access is
+available for this thread; external ChatGPT remains unavailable. Capture uses an explicit allowlist and
+privacy-filtered public artifacts. Session is PARTIAL due to compaction/open turn and omitted images/tool
+payloads. No future automatic end-of-turn capture is promised. Re-run at documented checkpoints.

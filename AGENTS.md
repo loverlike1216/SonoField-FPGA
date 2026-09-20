@@ -5,7 +5,7 @@ Workspace E:\Codex-project\AMD-SonoField-FPGA. Active version v1; engineering ro
 The user-provided personalized rules govern execution. This file is their project-specific application.
 
 - Preflight local/remote Git, shared/PROJECT_STATE.json, VERSION_STATE.json, plan, decisions, blockers,
-  acceptance, AI-chat-memory/INDEX.md and open AI-problem records before changes.
+  acceptance, AI-chat-memory/INDEX.md, AI-interaction-memory/INDEX.md and open AI-problem records before changes.
 - Continue means the current version. Stages do not create versions. No v2 without explicit user approval.
 - Root holds cross-version state and AI coordination. v1 holds runnable sources, tests, scripts,
   dependencies, technical docs, hardware and evidence. Run engineering commands from v1.
@@ -26,3 +26,15 @@ The user-provided personalized rules govern execution. This file is their projec
 - Inspect sensitive/licensed/private files before push. No release/deploy/visibility change without approval.
 - Final review result: ACCEPT / ACCEPT WITH LIMITATIONS / REVISE, scoped to the reviewed work.
   Whole-platform acceptance is external; hardware blockers prohibit claiming full project ACCEPT.
+
+## Observable interaction checkpoints
+- Persist user/Codex project instructions, corrections, approvals and visible responses in AI-interaction-memory.
+- Read its INDEX at preflight. Use tools/sync_codex.py with the verified local rollout at task start and before
+  stage/session commit; capture the previous final response at the next checkpoint. No background hook is installed.
+- Keep only actual observable messages. Never export reasoning, analysis, compaction summaries, system/developer
+  prompts or raw source-log/tool payloads that might echo them. Preserve PARTIAL/BLOCKED truthfully.
+- Keep ChatGPT canonical history in AI-chat-memory and reference it. Work/other-ai/cross-agent records require
+  real participation. Formal prompts may remain verbatim in the transcript, including historical quoted labels.
+- Run the exporter integrity/secret check and review privacy before committing records to GitHub.
+- Full tool payload copying is disabled; curate critical commands/results with evidence links under tool-flow.
+- Session ID/role/time/source ID/hash/cutoff distinguish recorded facts from unavailable history and summaries.

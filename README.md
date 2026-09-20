@@ -11,6 +11,7 @@ PROJECT_ID: SONOFIELD_FPGA. Repository: https://github.com/loverlike1216/SonoFie
 | [v1/](v1/README.md) | 当前完整工程：RTL、模型、测试、脚本、硬件资料、技术文档及证据 |
 | [shared/](shared/PROJECT_STATE.md) | 当前状态、版本门禁、决策、阻塞、计划与交接 |
 | [AI-chat-memory/](AI-chat-memory/INDEX.md) | 指定 ChatGPT 对话的来源与真实同步状态 |
+| [AI-interaction-memory/](AI-interaction-memory/INDEX.md) | Codex 原始可见消息、会话索引、工具流与同步命令 |
 | [AI-problem/](AI-problem/README.md) | 带证据的问题与待取得的外部决策 |
 | [CHANGELOG.md](CHANGELOG.md) | 当前工程变更记录 |
 | Zynq7020/ | 用户本地板卡原始资料，位置不变，不发布 |
