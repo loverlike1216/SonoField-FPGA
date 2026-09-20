@@ -1,0 +1,17 @@
+Central ADC / Calibration Board — 8RX 同步采样,,,,,,,,,,,,
+,,,,,,,,,,,,
+Ref,MPN,Function,Rail,Qty,Design note,Status,,AD7606B 关键去耦/输入网络,,,,
+UADC,AD7606BBSTZ-RL,8ch simultaneous ADC,5V_A/3V3,1,"800kSPS/ch, 16-bit, 4-DOUT serial preferred",LOCK,,Item,Value,Qty,Placement,Note
+ULS0–1,SN74AXC8T245PWR,FPGA/ADC level shift,VIO/3V3,2,Keep until VCCO closed,LOCK,,AVCC decouple,100nF,4,At AVCC,Shortest return
+UEFUSE,TPS259470LRPWR,15V eFuse,15V,1,Same safety policy,LOCK,,VDRIVE,100nF,1,At pin,Logic supply
+UMON,INA226AIDGSR,Rail monitor,3V3,1,20mR shunt,LOCK,,REGCAP1/2,1uF,2,At pins,Follow ADI
+U3V3,AP63203WU-7,Logic 3.3V,15→3.3,1,Digital interface,LOCK,,REFCAPA/B,10uF,2,At pins,Ceramic
+U5P5,AP63200WU-7,Pre-regulator,15→5.5,1,Feeds clean LDO,LOCK,,REF,100nF,1,At REF,Internal ref
+U5V,ADP7118ACPZN5.0-R7,Clean ADC 5V,5.5→5,1,AD7606 AVCC,LOCK,,Input series,47R,8,At input,Cable damping
+FB1,BLM21PG221SN1D,Analog bead,5V_A,1,HF isolation,LOCK,,Input cap,1nF C0G,8,At input,RF filter
+UT,TMP117MAIDRVR,Board temp,3V3,1,Diagnostics,PREFERRED,,Local bulk,10uF,1,5V_A,Near ADC
+JRXU,KH-5224-8P8C,Upper analog,Analog,1,4 sig+GND pairs,LOCK,,,,,,
+JRXL,KH-5224-8P8C,Lower analog,Analog,1,4 sig+GND pairs,LOCK,,,,,,
+JFPGA,2×10 IDC,ADC digital,3V3/VIO,1,CONVST/BUSY/SCLK/DOUT,PREFERRED,,,,,,
+JENV,B4B-XH-A 4P,SHT45 link,3V3 I2C,1,3V3/GND/SCL/SDA,LOCK,,,,,,
+JPWR,XT30PW-M30.G.Y,15V input,15V,1,Independent star branch,LOCK,,,,,,

@@ -64,6 +64,19 @@ class CaptureTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "workspace"):
             sync.extract(self.source, self.repo / "different")
 
+    def test_version_change_preserves_message_history(self):
+        self.fixture()
+        state = self.repo / 'shared/PROJECT_STATE.json'
+        state.parent.mkdir()
+        state.write_text(json.dumps({'active_version': 'v1', 'current_stage': 'OLD'}))
+        first = sync.export(self.source, self.repo)
+        state.write_text(json.dumps({'active_version': 'v2', 'current_stage': 'BOOTSTRAP'}))
+        second = sync.export(self.source, self.repo)
+        self.assertEqual(first['messages'], second['messages'])
+        self.assertEqual(second['active_version'], 'v2')
+        self.assertIn('Active version v2', (self.repo/'AI-interaction-memory/INDEX.md').read_text(encoding='utf-8'))
+        self.assertEqual(sync.check(self.repo)['status'], 'PASS')
+
     def test_changed_history_rejected(self):
         self.fixture(); sync.export(self.source, self.repo)
         text = self.source.read_text(encoding="utf-8").replace("原始用户指令", "changed")

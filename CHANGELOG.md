@@ -21,3 +21,10 @@
 - Shared 40 kHz phase reference, requested/calibration separation, atomic map updates and safety gating.
 - 128 positions, 10 mm nominal diameter, 12 mm face-center pitch, 100 mm nominal face gap, 90–115 mm travel.
 - Python reference model and Icarus/Vivado XSim cross-validation; hardware gates remain open.
+
+## v2 — authorized bootstrap
+
+- Freeze v1 intact; copy the complete project into v2, including independently archived historical evidence.
+- Import user BOM unchanged with all sheets as CSV; current version governed by explicit v2 approval.
+- Add frozen-parent/standalone checks and version-aware interaction metadata. Fresh verification recorded in v2.
+- Calibration/ADC/PCB implementation remains subsequent work.

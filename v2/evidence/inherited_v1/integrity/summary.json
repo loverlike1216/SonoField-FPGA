@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "base_commit": "ada1b2062756a2b852ed643a6eaa04fdc746323b",
+  "rtl_tb_test_files_unchanged": [
+    {
+      "path": "v1/rtl/control/safety_controller.sv",
+      "sha256": "3949c09e0aedeaeeb0169f50d02c80767730feca420087e080f1530b0ff90657"
+    },
+    {
+      "path": "v1/rtl/output/channel_waveform.sv",
+      "sha256": "97237593ed1f7fa2a4e006f38bc2262402029af88854d1a68ea3f5551c550b74"
+    },
+    {
+      "path": "v1/rtl/output/serializer.sv",
+      "sha256": "5d20788a6428cdfd46a7ba9b4163444e1c426dede85f046e86fe6836cd43e174"
+    },
+    {
+      "path": "v1/rtl/phase/phase_bank.sv",
+      "sha256": "f93cab9b10f51d824bfbf6d1fd0a67cd3cb5d779db6ffaa9d6e0c3d329f3168e"
+    },
+    {
+      "path": "v1/rtl/sono_core.sv",
+      "sha256": "1d25f9c9ea884773397febfb57fca2c1a3a779f46bb9d63893186bdac88d207d"
+    },
+    {
+      "path": "v1/rtl/sono_top.sv",
+      "sha256": "6fdba0c92cf82e37e3247047a97168fc21da74a91d37ce9b1d5061c8c64e5427"
+    },
+    {
+      "path": "v1/rtl/timing/ultrasonic_timebase.sv",
+      "sha256": "f03a66f998b6df3d5adecd094bbc7964736ca1fc495ae958c85baa0e4ef36f8b"
+    },
+    {
+      "path": "v1/tb/tb_bad_bandwidth.sv",
+      "sha256": "ba7a63df1a2fc66abdd05d1e0a09a8a1f5c8638a073236316aa88bd985a81318"
+    },
+    {
+      "path": "v1/tb/tb_core.sv",
+      "sha256": "a1fb348297c833e6e7e2211c7978d85887a3b9e74277b0afc9f9e8c5afe1899a"
+    },
+    {
+      "path": "v1/tb/tb_phase_map.sv",
+      "sha256": "e39bed44f032db29983221aee2e8d213a795351e9cbbce76b116d5f912c3f65b"
+    },
+    {
+      "path": "v1/tb/tb_serializer_fault.sv",
+      "sha256": "82884280a08dd7dc168fa942dcd222bc10e3dcf71918bf34b7a30d331a01735c"
+    },
+    {
+      "path": "v1/tb/tb_system.sv",
+      "sha256": "a6a0aacf610f28f2c43e92a007ed5b3b885a008988ab44be1de25204a05b7519"
+    },
+    {
+      "path": "v1/tests/test_acoustic_model.py",
+      "sha256": "10cbf65e25262a0d2b02a523a8a25df50499fdec53afc22e83c03adf18edf7e5"
+    },
+    {
+      "path": "v1/tests/test_potential_proxy.py",
+      "sha256": "96a8889ade5ff1b8f8fcddd7fad810d6bea34b3c054674053b8466e1788bc9ec"
+    },
+    {
+      "path": "v1/tests/test_radiating_geometry.py",
+      "sha256": "233524bbfbb1875884369fb9f1d6d1ddd3504677701569feb5c716d357bbdd1b"
+    }
+  ],
+  "board_reference_count": 12,
+  "board_files_unchanged": true,
+  "model_csvs": [
+    {
+      "file": "v1/evidence/model/channel_mapping.csv",
+      "canonical_lf_sha256": "a28a1e1733ca49856ba2031ab9a91a77ff9e858e8232b6dee1af89cb0e929130"
+    },
+    {
+      "file": "v1/evidence/model/emitter_scaling.csv",
+      "canonical_lf_sha256": "883af7b3d86c6d209dae0c9f57d0209272b19508f706cbc11a4eca02adae959a"
+    },
+    {
+      "file": "v1/evidence/model/gap_response.csv",
+      "canonical_lf_sha256": "f4655bc55b5f3eda95ce8500cc915a4ad19327d258bad7ec5b6b2b42714109b6"
+    },
+    {
+      "file": "v1/evidence/model/geometry_comparison.csv",
+      "canonical_lf_sha256": "ca92740597284c5e727c9d884d1abbde65c151fc01fb8de485494130cf25d788"
+    },
+    {
+      "file": "v1/evidence/model/particle_scenarios.csv",
+      "canonical_lf_sha256": "dad4faebeb05ccb8b52d1a645e4eac2557cd90f6cccb868d7009c3373d069b4a"
+    },
+    {
+      "file": "v1/evidence/model/reference_phase_map.csv",
+      "canonical_lf_sha256": "c800ed6d4c09fa716900df991fa74896c2dda081582379fe8156dc7ff4f1cf75"
+    }
+  ],
+  "coordinate_phase_csvs": [
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/coordinates_100mm.csv",
+      "canonical_lf_sha256": "214476391d06da1f0d873adc1e89ce8a715b679fadb051713a7b276fdf8a4308"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/coordinates_105mm.csv",
+      "canonical_lf_sha256": "3a9d4986172ef4e82a3ebeda506867cf0d3ee2b458637e7d76cac9d978d42a3f"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/coordinates_110mm.csv",
+      "canonical_lf_sha256": "99c3f1981345b6a1d223867d67063ee1d6ef7cc2c378a57cf8322a448a87effc"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/coordinates_115mm.csv",
+      "canonical_lf_sha256": "0a02c7234c8e07349101a35d76925ec8e9b20af93d38b44dc80f6c7c48e7c28c"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/coordinates_90mm.csv",
+      "canonical_lf_sha256": "1166f6c2da7dabe3798a328b7c8b26399ceb1ab456a8d38f3d477a4d87283f76"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/coordinates_95mm.csv",
+      "canonical_lf_sha256": "ae0ebce8af009431889fd327dfed0a0a768c7417f73906a592ce3d02c40bce01"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/coordinates_nominal.csv",
+      "canonical_lf_sha256": "214476391d06da1f0d873adc1e89ce8a715b679fadb051713a7b276fdf8a4308"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_100mm.csv",
+      "canonical_lf_sha256": "fd712e10738df850fb2318f6c5962f7091a4bc4023300f90489b99e7faa15eb2"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_105mm.csv",
+      "canonical_lf_sha256": "807445a376b79c9b46db8f13fec863ad71d7b781a07fcb3beb698ae3eaab9e87"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_110mm.csv",
+      "canonical_lf_sha256": "111288ad5f7311119d3a1dd727677fa8b93cf7ea92991d11c1d48ab0c1f49cc2"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_115mm.csv",
+      "canonical_lf_sha256": "4c70ac5d73da4a1e627ff6c48a246f6f96e8662e12b00449e8bee825fb314934"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_90mm.csv",
+      "canonical_lf_sha256": "6e61c2621b3716f4be7dcb82dbfba618e8b4044501848c956f0e8e8b8c031706"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_95mm.csv",
+      "canonical_lf_sha256": "90fa0c09122c8633753fe3e8e9690e4806a847e8909ed3c095eb71ddf2c125ca"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_100mm.csv",
+      "canonical_lf_sha256": "c800ed6d4c09fa716900df991fa74896c2dda081582379fe8156dc7ff4f1cf75"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_105mm.csv",
+      "canonical_lf_sha256": "c5e814af32fa8ffa954d4f7e607d1d387e23678fe75598a0f9fc6e5fea78409d"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_110mm.csv",
+      "canonical_lf_sha256": "fd7ec46e2e8f5a4d69fbead3b83eab0253870ae3558054c9e7c787882f5a7560"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_115mm.csv",
+      "canonical_lf_sha256": "bdca11ca9b163edd80e4246ba2cccbce6db9bbde353208acde0de25ce0463e09"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_90mm.csv",
+      "canonical_lf_sha256": "f2c3ec47603f12493117a7ac6ef96daa1d38de9f90138f299f7f08f2aff6c26f"
+    },
+    {
+      "file": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_95mm.csv",
+      "canonical_lf_sha256": "dc1c1c72b294b8984684ad77dd3d4d39015a7e00404743c398fc3b423336b5c9"
+    }
+  ],
+  "deterministic_trace_unchanged": true,
+  "trace_sha256": "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054",
+  "obsolete_tree_cleanup_authorized_by": "Current user follow-up; preserve only v1 after integrity check. Git history retained."
+}

@@ -1,18 +1,6 @@
-# Current project state
+# Project state
 
-PROJECT_ID: SONOFIELD_FPGA. Project: SonoField-FPGA. Branch: main. Active/highest version: v1 / v1.
-Repository: https://github.com/loverlike1216/SonoField-FPGA.git.
-Workspace: E:\Codex-project\AMD-SonoField-FPGA. Engineering root: v1/.
-Current stage: V1_INTERACTION_MEMORY_CONFIGURED. Chat Source: SonoField-FPGA; history sync BLOCKED.
-Open AI problems: P-20260919-001, P-20260919-002, P-20260919-003.
-
-Functional baseline: 128-channel phase engine, current 10 mm / 12 mm pitch / 100 mm face-gap geometry.
-Completed: structure regression and fresh checkout/new-venv reproduction PASS. Current organization result:
-ACCEPT WITH LIMITATIONS (external ChatGPT history unavailable). Whole-platform hardware remains unaccepted. Machine-readable authority:
-[PROJECT_STATE.json](PROJECT_STATE.json), [VERSION_STATE.json](VERSION_STATE.json).
-
-Hardware: not verified; complete FPGA part, bank voltage, output interface and purchased-part
-characterization remain unresolved. No synthesis/implementation/levitation PASS is claimed.
-
-Observable Codex interaction memory: [index](../AI-interaction-memory/INDEX.md), PARTIAL, checkpoint command configured.
-Eight capture tests and integrity check PASS. Current external ChatGPT access remains BLOCKED.
+SONOFIELD_FPGA / SonoField-FPGA / main. Active v2, frozen v1.
+Stage: V2_BOOTSTRAP_AND_INHERITED_BASELINE. Current fresh checks pending.
+Authoritative machine state: PROJECT_STATE.json and VERSION_STATE.json.
+Hardware is NOT_RUN, target synthesis BLOCKED_BY_BOARD_FACT. External ChatGPT history BLOCKED.

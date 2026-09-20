@@ -1,0 +1,69 @@
+{
+  "config": {
+    "classification": "SIMULATION_ESTIMATE",
+    "sound_speed_m_s": 343.0,
+    "attenuation_np_m": 0.0,
+    "geometry": {
+      "total": 128,
+      "pitch": 0.012,
+      "gap": 0.1,
+      "shape": "planar",
+      "radius": 0.18,
+      "diameter": 0.01,
+      "frequency": 40000.0
+    },
+    "coordinate_reference": "RADIATING_SURFACE_CENTER",
+    "origin": "GEOMETRIC_CENTER_OF_RADIATING_SURFACE_CENTERS",
+    "gap_range_m": [
+      0.09,
+      0.115
+    ],
+    "gap_sweep_m": [
+      0.09,
+      0.095,
+      0.1,
+      0.105,
+      0.11,
+      0.115
+    ],
+    "transducer": {
+      "designation": "TCT40_10MM_CANDIDATE",
+      "exact_part": null,
+      "supplier_claim_body_diameter_m": 0.01,
+      "supplier_claim_body_height_m": 0.007,
+      "supplier_claim_pin_pitch_m": 0.005,
+      "supplier_claim_pin_diameter_m": 0.00065,
+      "supplier_claim_exposed_pin_length_m": 0.007,
+      "active_aperture_diameter_m": null,
+      "capacitance_pf": null,
+      "continuous_drive_rating_vpp": null,
+      "model_aperture_assumption_m": 0.01,
+      "mounting_standoff_m": null
+    },
+    "mode": "STANDING_WAVE",
+    "target_m": [
+      0,
+      0,
+      0
+    ],
+    "monte_carlo": {
+      "seed": 7020,
+      "trials": 50,
+      "phase_error_std_degrees": 15.0,
+      "relative_amplitude_std": 0.1
+    },
+    "notes": "User-defined nominal planar geometry. Gap and XY coordinates reference radiating face centers, never PCB planes. Supplier-image dimensions are unmeasured. Acoustic piston diameter is a 10 mm approximation, not a measured active aperture. Curved comparisons are research alternatives only."
+  },
+  "monte_carlo_seed": 7020,
+  "pressure_units": "arbitrary; no SPL calibration",
+  "trap_proxy": "Rayleigh high contrast f1=f2=1; no gravity or finite-size scattering",
+  "basin_definition": "6-connected region containing origin below minimum boundary proxy on +/-10mm cube, 1mm grid",
+  "limitations": [
+    "No multiple scattering or mutual coupling",
+    "No measured driver/element transfer functions",
+    "Far-field piston approximation imperfect for TCT40",
+    "No temperature/RH absorption fit",
+    "No physical working-volume or mass-support guarantee",
+    "50mg example is outside small-particle validity"
+  ]
+}

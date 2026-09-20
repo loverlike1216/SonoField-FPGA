@@ -15,3 +15,7 @@ tmp/
 *.sim/
 *.hw/
 *.ip_user_files/
+
+# Preserve user originals locally; canonical project import lives in v2.
+BOM/*.xlsx
+v2/hardware/transducers/references/

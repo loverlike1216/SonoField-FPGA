@@ -1,0 +1,858 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "frozen_v1_tree": "1d2bec2f8eb1c2151e7bf31f0c72fc88391d8a2d",
+  "frozen_files": 212,
+  "v1_worktree_present": true,
+  "coverage_files": 212,
+  "classifications": [
+    {
+      "path": "v2/README.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/VERSION_MANIFEST.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/config/acoustic_baseline.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/config/board_facts.json",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/constraints/README.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/docs/OPERATING_GUIDE.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/docs/RESEARCH_BASELINE.md",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/docs/architecture/digital_interface.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/docs/dependencies.md",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/docs/experiments/bringup.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/docs/hardware/board_facts.md",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/docs/hardware/interface.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/docs/hardware/tct40_baseline.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/docs/theory/model_and_results.md",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/docs/verification/test_plan.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/board_inventory/board_manifest.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/board_inventory/documented_pin_candidates.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/integrity/baseline_python.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/integrity/chat_capability.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/integrity/current_tree_scan.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/integrity/repository_audit.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/integrity/summary.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/integrity/supplier_source.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/interaction_memory/capture_check.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/interaction_memory/privacy_review.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/interaction_memory/repository_audit.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/interaction_memory/unit_tests.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/interaction_memory/validation.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/assumptions.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/channel_mapping.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/emitter_scaling.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/emitter_scaling.png",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/gap_response.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/gap_response.png",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/geometry_comparison.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/particle_scenarios.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/reference_phase_map.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/model/standing_wave_comparison.png",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/clone.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/coordinates.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/dependency_check.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/full_validation.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/install.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/model.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/repository_audit.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/source_commit.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/source_status.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/summary.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/bandwidth_guard.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_bandwidth_guard.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_core_1.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_core_128.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_core_2.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_core_32.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_core_7.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_core_72.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_model_map.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_tb_serializer_fault.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/compile_tb_system.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/iverilog_version.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_128_focus_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_128_focus_115mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_128_focus_90mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_128_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_128_standing_wave_115mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_128_standing_wave_90mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_2_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_32_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/model_map_72_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/python_tests.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_core_128_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_core_128_1.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_core_128_2.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_core_1_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_core_2_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_core_32_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_core_72_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_core_7_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_tb_serializer_fault.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/run_tb_system.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/summary.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xelab_tb_core.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xelab_tb_phase_map.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xelab_tb_serializer_fault.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xelab_tb_system.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_model_map_128_focus_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_model_map_128_focus_115mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_model_map_128_focus_90mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_model_map_128_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_model_map_128_standing_wave_115mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_model_map_128_standing_wave_90mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_tb_core_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_tb_core_1.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_tb_core_2.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_tb_serializer_fault_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xsim_tb_system_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/validation/xvlog.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/reproducibility/venv.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/synthesis_gate/board_gate.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/synthesis_gate/summary.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/bandwidth_guard.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_bandwidth_guard.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_core_1.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_core_128.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_core_2.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_core_32.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_core_7.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_core_72.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_model_map.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_tb_serializer_fault.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/compile_tb_system.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/iverilog_version.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_128_focus_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_128_focus_115mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_128_focus_90mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_128_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_128_standing_wave_115mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_128_standing_wave_90mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_2_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_32_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/model_map_72_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/python_tests.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_core_128_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_core_128_1.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_core_128_2.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_core_1_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_core_2_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_core_32_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_core_72_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_core_7_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_tb_serializer_fault.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/run_tb_system.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/summary.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xelab_tb_core.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xelab_tb_phase_map.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xelab_tb_serializer_fault.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xelab_tb_system.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_model_map_128_focus_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_model_map_128_focus_115mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_model_map_128_focus_90mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_model_map_128_standing_wave_100mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_model_map_128_standing_wave_115mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_model_map_128_standing_wave_90mm.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_tb_core_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_tb_core_1.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_tb_core_2.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_tb_serializer_fault_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xsim_tb_system_0.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/evidence/inherited_v1/validation/xvlog.log",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/bom/prototype_bom.md",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/hardware/characterization/object_measurements.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/characterization/transducer_characterization.md",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/characterization/transducer_measurements.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/array_dimensions.png",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/coordinates_100mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/coordinates_105mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/coordinates_110mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/coordinates_115mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/coordinates_90mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/coordinates_95mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/coordinates_nominal.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/coordinates_nominal.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/geometry_summary.json",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_100mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_105mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_110mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_115mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_90mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_95mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_100mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_105mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_110mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_115mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_90mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_95mm.csv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/mechanical/radiating_surface_geometry.md",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/hardware/transducers/10mm_supplier_reference.md",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/requirements-lock.txt",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/requirements.txt",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/rtl/control/safety_controller.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/rtl/output/channel_waveform.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/rtl/output/serializer.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/rtl/phase/phase_bank.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/rtl/sono_core.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/rtl/sono_top.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/rtl/timing/ultrasonic_timebase.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/scripts/audit_board.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/scripts/check_repository.py",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/scripts/check_waveform.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/scripts/create_project.tcl",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/scripts/reproduce.py",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/scripts/validate.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/__init__.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/__init__.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/array_geometry.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/export_geometry.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/field_solver.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/particle_model.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/phase_lut_generator.py",
+      "classification": "COPY_AND_EXTEND"
+    },
+    {
+      "path": "v2/software/acoustic_model/phase_solver.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/standing_wave.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/transducer.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/software/acoustic_model/visualize_field.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/tb/tb_bad_bandwidth.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/tb/tb_core.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/tb/tb_phase_map.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/tb/tb_serializer_fault.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/tb/tb_system.sv",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/tests/test_acoustic_model.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/tests/test_potential_proxy.py",
+      "classification": "COPY_UNCHANGED"
+    },
+    {
+      "path": "v2/tests/test_radiating_geometry.py",
+      "classification": "COPY_UNCHANGED"
+    }
+  ]
+}

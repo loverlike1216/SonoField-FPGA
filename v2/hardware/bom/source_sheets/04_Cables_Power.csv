@@ -1,0 +1,19 @@
+Cables / Power / Harness — 高速链路禁止用散乱杜邦线,,,,,,,
+,,,,,,,
+ID,Link,Cable,Wire/connector,Length,Qty,Routing rule,Source
+C-DIG-U,FPGA→Upper,50C IDC ribbon 2×25 F-F,UL2651 28AWG,<=200mm,1,Alternate signal/GND,LCSC custom
+C-DIG-L,FPGA→Lower,50C IDC ribbon 2×25 F-F,UL2651 28AWG,<=200mm,1,Same map as upper,LCSC custom
+C-ADC,FPGA→ADC,20C IDC ribbon 2×10 F-F,UL2651 28AWG,<=200mm,1,Ground-adjacent,LCSC custom
+C-ANA-U,Upper RX→ADC,Shielded Cat6,4 pairs,0.3–0.5m,1,Each pair SIGNAL+GND,Domestic Cat6
+C-ANA-L,Lower RX→ADC,Shielded Cat6,4 pairs,0.3–0.5m,1,Each pair SIGNAL+GND,Domestic Cat6
+C-PWR,PSU→3 boards,18AWG star splitter,XT30U-F×3,As needed,1,No daisy chain,Custom harness
+C-ENV,ADC→SHT45,4-wire,JST XH 4P,~150mm,1,3V3/GND/SCL/SDA,LCSC custom
+,,,,,,,
+,,,,,,,
+Power topology,,,,,,,
+Node,Part,Voltage,Limit,Feeds,Connection,Safety,Note
+Main PSU,GST120A15-R7B,15V/7A,105W,3 branches,Star,Certified enclosure,Bench first with adjustable PSU
+Upper,TPS259470,15V,~2A ILIM,64TX+logic+AFE,XT30,Fuse+eFuse,12V initial driver bring-up
+Lower,TPS259470,15V,~2A ILIM,64TX+logic+AFE,XT30,Fuse+eFuse,Symmetric
+ADC,TPS259470,15V,~2A ILIM,ADC+logic,XT30,Fuse+eFuse,Actual draw much lower
+SHT45,ADC 3V3,3.3V,<10mA,sensor,JST XH,Decoupled,Away from hot boards

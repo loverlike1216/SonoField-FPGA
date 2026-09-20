@@ -96,6 +96,9 @@ def write_changed(path, text):
 
 def export(source, repo=REPO):
     meta, messages, calls, boundary = extract(source, repo)
+    state_path=repo / "shared/PROJECT_STATE.json"
+    state=json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+    active=state.get("active_version", "UNKNOWN")
     root = repo / "AI-interaction-memory"
     sid = meta["id"]
     manifest_path = root / "sessions" / f"{sid}.json"
@@ -106,7 +109,7 @@ def export(source, repo=REPO):
         for event in old["messages"]:
             if new_by_id.get(event["id"]) != event["sha256"]:
                 raise ValueError("Source lost/changed a previously captured message; preserve old export and review")
-    header = (f"# Codex conversation — {sid}\n\nProject: SONOFIELD_FPGA. Active version at export: v1.\n"
+    header = (f"# Codex conversation — {sid}\n\nProject: SONOFIELD_FPGA. Active version at export: {active}.\n"
               f"Source: local Codex rollout `{source.name}`; provider OpenAI. Thread/session: {sid}.\n"
               "Sync status: PARTIAL. Public-safe source transcript, not a reconstructed summary.\n"
               "Only actual user messages and visible assistant commentary/final answers are included.\n"
@@ -130,7 +133,7 @@ def export(source, repo=REPO):
         output = c["output_reference"]
         flow += f"| {c['time']} | {c['name']} | {c['call_id']} | {c['source_line']} | {output['source_line'] if isinstance(output, dict) else output} |\n"
     write_changed(root / "tool-flow" / f"{sid}.md", flow)
-    manifest = {"project_id": "SONOFIELD_FPGA", "active_version": "v1", "thread_id": sid,
+    manifest = {"project_id": "SONOFIELD_FPGA", "active_version": active, "thread_id": sid,
                 "sync_status": "PARTIAL", "source_file": source.name, "started_at": meta["timestamp"],
                 **boundary, "message_count": len(messages), "tool_call_count": len(calls),
                 "messages": [{k: v for k, v in m.items() if k != "text"} for m in messages],
@@ -141,10 +144,12 @@ def export(source, repo=REPO):
 
 
 def index(root):
+    state_path=root.parent / "shared/PROJECT_STATE.json"
+    state=json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
     text = ("# AI Interaction Memory Index\n\nCanonical ChatGPT history: [SonoField-FPGA](../AI-chat-memory/SonoField-FPGA.md), BLOCKED.\n"
             "Codex records below are distinct from external ChatGPT history. Provider: OpenAI.\n"
             "Work, other AI and cross-agent consultations: none captured; no participation invented.\n"
-            "Source timestamps are UTC. Active version v1. Stage: INTERACTION_MEMORY.\n\n"
+            f"Source timestamps are UTC. Active version {state.get('active_version','UNKNOWN')}. Stage: {state.get('current_stage','UNKNOWN')}.\n\n"
             "| Thread / Session | Role / Impact | First used | Last captured | Record | Status | Content SHA256 |\n|---|---|---|---|---|---|---|\n")
     for p in sorted((root / "sessions").glob("*.json")):
         m = json.loads(p.read_text(encoding="utf-8")); sid = m["thread_id"]
@@ -152,6 +157,8 @@ def index(root):
             name = f"{kind}/{sid}.md"
             text += f"| {sid} | {kind} / {impact} | {m['started_at']} | {m['cutoff']} | [{kind}]({name}) | PARTIAL | {m['files'][name]} |\n"
     text += "\n[Capture policy and commands](README.md) · [Current tool flow](tool-flow/T-20260920-001__interaction-memory.md)\n"
+    if (root/'codex/instructions/v2_formal_development.md').exists():
+        text += "\n[User v2 instruction and approval](codex/instructions/v2_formal_development.md) · [v2 bootstrap flow](tool-flow/T-20260921-001__v2-bootstrap.md)\n"
     write_changed(root / "INDEX.md", text)
 
 

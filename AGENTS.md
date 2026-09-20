@@ -1,14 +1,14 @@
 # SonoField-FPGA engineering rules
 
 Project SONOFIELD_FPGA; repository loverlike1216/SonoField-FPGA; branch main.
-Workspace E:\Codex-project\AMD-SonoField-FPGA. Active version v1; engineering root v1/.
+Workspace E:\Codex-project\AMD-SonoField-FPGA. Active version v2; engineering root v2/.
 The user-provided personalized rules govern execution. This file is their project-specific application.
 
 - Preflight local/remote Git, shared/PROJECT_STATE.json, VERSION_STATE.json, plan, decisions, blockers,
   acceptance, AI-chat-memory/INDEX.md, AI-interaction-memory/INDEX.md and open AI-problem records before changes.
-- Continue means the current version. Stages do not create versions. No v2 without explicit user approval.
-- Root holds cross-version state and AI coordination. v1 holds runnable sources, tests, scripts,
-  dependencies, technical docs, hardware and evidence. Run engineering commands from v1.
+- Continue means the current version. Stages do not create versions. No v3 without explicit user approval.
+- Root holds cross-version state and AI coordination. v2 holds runnable sources, tests, scripts,
+  dependencies, technical docs, hardware and evidence. Run engineering commands from v2.
 - User approved same-version layout cleanup and removal of obsolete records from current tree.
   Keep Git history. Future version upgrades copy reusable content and freeze the old version intact.
 - Update execution contract before major changes; baseline, implement, run, cross-check, save evidence,
@@ -38,3 +38,8 @@ The user-provided personalized rules govern execution. This file is their projec
 - Run the exporter integrity/secret check and review privacy before committing records to GitHub.
 - Full tool payload copying is disabled; curate critical commands/results with evidence links under tool-flow.
 - Session ID/role/time/source ID/hash/cutoff distinguish recorded facts from unavailable history and summaries.
+
+## v2 authorization and frozen parent
+User attachment explicitly authorized v2. v1 is frozen and must remain byte-identical to shared/versions/v1_freeze.json.
+This stage only bootstraps a complete standalone v2 and repeats inherited verification. Stop for review before calibration/ADC development.
+No v2 execution may import sources/tests/config from v1. Root governance is shared. BOM source metadata does not override current user approval.

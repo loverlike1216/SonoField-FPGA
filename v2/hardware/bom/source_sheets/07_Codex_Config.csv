@@ -1,0 +1,35 @@
+Codex Hardware Configuration Baseline — Repository Facts Candidate,,,,,,,
+,,,,,,,
+Key,Value,Status,Codex instruction,,Codex STOP 条件（不得误判为“缺器件”）,,
+PROJECT_ID,SONOFIELD_FPGA,LOCK,Do not change,,Condition,Block?,Action
+VERSION,VN1 (current repo fact),LOCK,Continue current version; no automatic next version,,TCT40厂牌仍是通用型号,NO for RTL/model/schematic,Use envelope; block only footprint/drive final freeze
+MAIN_FPGA,Robei octagonal Zynq-7020,LOCK,Exact package remains target-bitstream blocker,,Zynq exact package unknown,YES for target bitstream only,Continue generic RTL/sim/model/schematic
+TX_COUNT,128,LOCK,64 upper + 64 lower,,VCCO unknown,NO for array schematic,Retain AXC translator
+RX_COUNT,8,LOCK,4 upper + 4 lower,,50mg未实测,NO for design,Never claim physical PASS
+TX_PART,TCT40-10T / 10mm / 40kHz / same lot,PRIMARY,Batch qualification required,,Serializer not routed,YES for Gerber freeze,Target STA + board timing review
+RX_PART,TCT40-10R matched family,PRIMARY,Batch qualification required,,Temporary stockout,NO if alternate rule exists,Use alternate table; record decision
+ARRAY_GEOMETRY,"8x8 per side, 12mm pitch",LOCK,Planar,,,,
+PCB_ARRAY_SIZE,130x130mm target,LOCK GEOMETRY,Edge may adjust; TX coordinates fixed,,,,
+NOMINAL_FACE_GAP,100mm,LOCK target,Range 90..115mm,,,,
+COORD_REFERENCE,Radiating Surface Center,LOCK,Origin=pair geometric center,,,,
+TX_DRIVER,TC4427AEOA713,LOCK,32 per board,,,,
+SERIALIZER,SN74LVC595APWR,LOCK,"16 per board, Q0-Q3 used",,,,
+CLOCK_BUFFER,SN74LVC244APWR,LOCK,4 SRCLK +4 RCLK branches,,,,
+LEVEL_TRANSLATOR,SN74AXC8T245PWR,LOCK,Keep until VCCO resolved,,,,
+RX_SWITCH,TMUX1574PWR,LOCK,Signal/VREF blanking,,,,
+RX_OPAMP,OPA4192IPWR,LOCK,2 per array board,,,,
+RX_VREF,REF5025AIDR,LOCK,2.5V bias,,,,
+ADC,AD7606BBSTZ-RL,LOCK,8ch simultaneous 16b 800kSPS,,,,
+AIR_SENSOR,SHT45-AD1B-R2,LOCK,Remote,,,,
+POWER_SUPPLY,15V/7A GST120A15-R7B preferred,PREFERRED,Bench first with adjustable PSU,,,,
+VDRV_ALLOWED,12..18V,LOCK safety,Never exceed TC4427A 18V,,,,
+LOGIC_RAIL,3.3V via AP63203,LOCK,Local,,,,
+ANALOG_RAIL,5.0V via AP63200 5.5V + ADP7118,LOCK,Local,,,,
+F_WORK_RULE,ONE shared f_work for all 128 TX,LOCK,Never per-channel independent frequency,,,,
+CAL_GEOMETRY,Opposite-side TX→4RX both directions,LOCK,512 paths,,,,
+CAL_ALGORITHM,Burst ToF coarse + carrier phase fine + 6DoF fit,LOCK,PL acquire; PS solve,,,,
+DIGITAL_CABLE,2×50pin IDC <=200mm,LOCK,No Dupont,,,,
+ANALOG_CABLE,"2× shielded Cat6, 4 sig/GND pairs",LOCK,Not Ethernet,,,,
+ADC_CABLE,1×20pin IDC <=200mm,LOCK,Ground pairing,,,,
+PCB_STACK,"Array/ADC 4-layer, L2 solid GND",LOCK,Do not downgrade final build,,,,
+BLOCKER_POLICY,Exact Zynq part/pins/VCCO + real TCT40 batch are evidence gates,LOCK,Do not guess; do not block unrelated RTL/model/schematic work,,,,

@@ -4,15 +4,15 @@
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex-project\\AMD-SonoField-FPGA",
   "current_branch": "main",
-  "current_version": "v1",
-  "current_stage": "V1_INTERACTION_MEMORY_CONFIGURED",
+  "current_version": "v2",
+  "current_stage": "V2_BOOTSTRAP_AND_INHERITED_BASELINE",
   "execution": "PROJECT_ACTIVE",
   "status": "PROJECT_ACTIVE",
   "scope_of_block": "Board-target synthesis, implementation and physical hardware",
   "digital_validation": "PASS",
-  "digital_evidence": "v1/evidence/validation/summary.json",
-  "model_evidence": "v1/evidence/model",
-  "reproducibility": "PASS",
+  "digital_evidence": "v2/evidence/validation/summary.json",
+  "model_evidence": "v2/evidence/model",
+  "reproducibility": "NOT_RUN",
   "overall_iteration_result": "REVISE",
   "board_synthesis": "BLOCKED",
   "implementation": "NOT_RUN",
@@ -20,8 +20,8 @@
   "hardware_verified": false,
   "exact_part": null,
   "documented_clock_hz": 33000000,
-  "reproducibility_evidence": "v1/evidence/reproducibility/summary.json",
-  "next_stage": "VERIFIED_BOARD_INTEGRATION_THEN_PH0",
+  "reproducibility_evidence": "v2/evidence/reproducibility/summary.json",
+  "next_stage": "V2.2_CALIBRATION_MODEL_AFTER_BOOTSTRAP_REVIEW",
   "blocking_ids": [
     "B01",
     "B03",
@@ -29,8 +29,8 @@
     "B05",
     "B06"
   ],
-  "coordinate_evidence": "v1/hardware/mechanical/geometry_10mm",
-  "current_report": "shared/report_v1.md",
+  "coordinate_evidence": "v2/hardware/mechanical/geometry_10mm",
+  "current_report": "shared/report_v2.md",
   "geometry": {
     "transducer_body_diameter_mm": 10,
     "pitch_mm": 12,
@@ -44,8 +44,8 @@
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
   },
-  "review_scope": "Current v1 layout/governance cleanup and reproduced digital behavior only; whole-platform acceptance remains pending",
-  "active_version": "v1",
+  "review_scope": "v2 bootstrap and inherited baseline only",
+  "active_version": "v2",
   "branch": "main",
   "chat_source_name": "SonoField-FPGA",
   "chat_access_status": "CHAT_MEMORY_ACCESS_BLOCKED",
@@ -64,8 +64,8 @@
     "CHAT_MEMORY_ACCESS_BLOCKED"
   ],
   "critical_issues": [],
-  "next_action": "Review scoped interaction-memory delivery; capture later visible messages at next checkpoint. Hardware problems remain open.",
-  "validated_source_commit": "0b257de4bb31bceb10a0f6c4a35755b02e76a7f2",
+  "next_action": "Run clean sparse-clone v2 reproduction from committed source",
+  "validated_source_commit": null,
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "organization_limitations": [
     "External ChatGPT source named but history access blocked; zero imported messages"
@@ -74,7 +74,15 @@
   "codex_thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
   "interaction_memory_status": "PARTIAL",
   "interaction_capture_mode": "CHECKPOINT_COMMAND; no background hook",
-  "interaction_memory_cutoff": "2026-09-20T01:13:24.974Z",
-  "interaction_message_count": 45,
-  "interaction_memory_result": "ACCEPT WITH LIMITATIONS"
+  "interaction_memory_cutoff": "2026-09-20T19:19:27.938Z",
+  "interaction_message_count": 53,
+  "interaction_memory_result": "ACCEPT WITH LIMITATIONS",
+  "bom": "v2/hardware/bom/BOM_MASTER.xlsx",
+  "bom_status": "PCB_PROPOSED; imported input, not fabrication release",
+  "inherited_problem_versions": {
+    "P-20260919-001": "v1",
+    "P-20260919-002": "v1",
+    "P-20260919-003": "v1"
+  },
+  "problem_revalidation": "Requirements/evidence gaps still apply; no old decision automatically executed in v2"
 }

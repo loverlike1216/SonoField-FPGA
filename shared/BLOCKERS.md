@@ -40,11 +40,20 @@ User selected the pictured nominal 10 mm transmitter and a 128-channel planar ge
 geometry choice, not exact part identity. Capacitance, active aperture, drive rating, actual dimensions,
 mounting standoff and acoustic polarity remain unknown. Do not reuse the old 16 mm ratings.
 Nominal radiating-center coordinates are ready to implement; PCB/drill dimensions and power-stage freeze
-require batch measurements. Source: v1/hardware/transducers/10mm_supplier_reference.md.
+require batch measurements. Source: v2/hardware/transducers/10mm_supplier_reference.md.
 
 ## CHAT_MEMORY_ACCESS_BLOCKED — external history
 User designated SonoField-FPGA. No exposed tool can read its external ChatGPT history.
 AI-chat-memory records BLOCKED with zero imported messages. This blocks automatic history/decision
-sync, not v1 file organization or available digital tests. See AI-chat-memory/CHAT_MEMORY_IMPORT_REQUIRED.md.
+sync, not v2 bootstrap organization or available digital tests. See AI-chat-memory/CHAT_MEMORY_IMPORT_REQUIRED.md.
 
 Open consultation records: AI-problem/problem/P-20260919-001 (B01/B03), 002 (B04), 003 (B05/B06).
+
+
+## v2 bootstrap revalidation (2026-09-21)
+New BOM selects the part baseline but does not close B01/B03 board facts, B04 physical timing,
+or B05/B06 batch qualification. The original three v1 Problem records retain original version/body
+hashes; they are historical consultations, not executable v2 decisions. No external decision was imported.
+The new formal user instruction authorizes architecture requirements directly. Full v2 calibration/ADC
+runtime remains future work; this is not a bootstrap implementation defect.
+BOM review: v2/hardware/bom/BOM_LOCK.md. Imported old version metadata is superseded by user approval.

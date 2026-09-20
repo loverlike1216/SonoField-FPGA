@@ -1,0 +1,15 @@
+Procurement / Alternate Policy — 防止 Codex 因缺货或型号歧义停工,,,,,,,,,,
+,,,,,,,,,,
+Item,Policy,Channel,Buy action,Constraint,Alternate,,采购冻结等级,,,
+TCT40-10T,PRIMARY,Same domestic seller/lot,Buy 160; characterize 128,Do not mix lots/vendors,MSO-A1040H07T benchmark/backup,,Level,Meaning,Codex behavior,Fabrication
+TCT40-10R,PRIMARY,Same family,Buy 16; install 8,Matched 10mm receiver,MSO-P1040H07R backup,,LOCK,工程型号已定,不得自行换型,可捕获原理图/封装
+TC4427AEOA713,LOCK,LCSC C20551,Buy 72,4.5–18V dual non-inverting,MIC4127 after full review,,PREFERRED,主选,按规则可换,换型复核
+AD7606BBSTZ-RL,LOCK,LCSC C651284,Buy 2,8ch simultaneous,AD7606C only with RTL change,,PRIMARY/BATCH,主器件待批次资格,不要停止数字开发,孔位/驱动最终值需实测
+OPA4192IPWR,LOCK,LCSC/Mouser China,Buy 6,Quad RRIO 5V low-noise >=5MHz,OPA4197/equiv reviewed,,DNP/TUNING,预留,默认不装,保留焊盘
+SN74AXC8T245PWR,LOCK,LCSC C882718,Buy 10,Dual-supply translation,Keep until VCCO closed,,PROVISIONAL,起始值,可按证据调整,非量产冻结值
+SN74LVC595APWR,LOCK,LCSC C52287685,Buy 36,3.3V timing margin,LVC compatible only,,,,,
+TPS259470LRPWR,LOCK,LCSC C3662793,Buy 5,eFuse safety retained,Same family,,,,,
+6.8uH inductors,PREFERRED,LCSC C167221,Buy 8,">=5A, Isat>=5.5A, DCR<=60mR",Bourns SRP6540-6R8M,,,,,
+RJ45 analog,LOCK function,Kinghelm C2683357,Buy 6,"Passive 8P8C, NO magnetics",Any shielded no-magnetics jack,,,,,
+IDC cables,LOCK topology,LCSC custom cable,MOQ1,No loose Dupont,Keyed 2.54mm IDC,,,,,
+Main PSU,PREFERRED,MEAN WELL China authorized,Buy1,15V regulated 6–8A certified,Equivalent certified PSU,,,,,
