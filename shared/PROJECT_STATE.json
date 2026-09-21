@@ -5,29 +5,30 @@
   "workspace_path": "E:\\Codex-project\\AMD-SonoField-FPGA",
   "current_branch": "main",
   "current_version": "v2",
-  "current_stage": "V2_BOOTSTRAP_AND_INHERITED_BASELINE",
+  "current_stage": "SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM",
   "execution": "PROJECT_ACTIVE",
   "status": "PROJECT_ACTIVE",
   "scope_of_block": "Board-target synthesis, implementation and physical hardware",
   "digital_validation": "PASS",
-  "digital_evidence": "v2/evidence/validation/summary.json",
+  "digital_evidence": "v2/evidence/self_calibration_stage/validation/summary.json",
   "model_evidence": "v2/evidence/model",
-  "reproducibility": "PASS",
-  "overall_iteration_result": "ACCEPT WITH LIMITATIONS",
+  "reproducibility": "PENDING_FRESH_CLONE",
+  "overall_iteration_result": "REVISE",
   "board_synthesis": "BLOCKED_BY_BOARD_FACT",
   "implementation": "NOT_RUN",
   "external_acceptance": "PENDING",
   "hardware_verified": false,
   "exact_part": null,
   "documented_clock_hz": 33000000,
-  "reproducibility_evidence": "v2/evidence/reproducibility/summary.json",
-  "next_stage": "V2.2_CALIBRATION_MODEL_AFTER_BOOTSTRAP_REVIEW",
+  "reproducibility_evidence": "v2/evidence/self_calibration_stage/reproducibility/summary.json",
+  "next_stage": "USER_CHATGPT_INDEPENDENT_REVIEW",
   "blocking_ids": [
     "B01",
     "B03",
     "B04",
     "B05",
-    "B06"
+    "B06",
+    "B07"
   ],
   "coordinate_evidence": "v2/hardware/mechanical/geometry_10mm",
   "current_report": "shared/report_v2.md",
@@ -44,7 +45,7 @@
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
   },
-  "review_scope": "Complete v2 bootstrap and inherited digital/model baseline only; full v2 self-calibration/hardware acceptance is not claimed",
+  "review_scope": "Current software/digital stage; hardware separately blocked",
   "active_version": "v2",
   "branch": "main",
   "chat_source_name": "SonoField-FPGA",
@@ -61,15 +62,16 @@
     "B04",
     "B05",
     "B06",
-    "CHAT_MEMORY_ACCESS_BLOCKED"
+    "CHAT_MEMORY_ACCESS_BLOCKED",
+    "B07"
   ],
   "critical_issues": [],
-  "next_action": "Stop for bootstrap review. Next proposed stage V2.2 calibration software model within v2.",
+  "next_action": "Fresh standalone clone validation, then independent review; stop before PCB implementation",
   "validated_source_commit": "e353c16d35da2b430f46ba5b83a5a9a79dd749b7",
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "organization_limitations": [
     "External ChatGPT history inaccessible; current Codex transcript PARTIAL",
-    "Hardware, board target, calibration/ADC runtime remain outside this stage"
+    "Physical board/AFE/ADC, PS transport and timing not verified"
   ],
   "interaction_memory_index": "AI-interaction-memory/INDEX.md",
   "codex_thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
@@ -97,5 +99,8 @@
     "pose_calibration": "NOT_RUN",
     "levitation": "NOT_RUN"
   },
-  "bom_evidence": "v2/evidence/bootstrap/bom_audit.log"
+  "bom_evidence": "v2/evidence/bootstrap/bom_audit.log",
+  "self_calibration_validation": "PASS",
+  "self_calibration_evidence": "v2/evidence/self_calibration_stage/validation/self_calibration/summary.json",
+  "software_stage_result": "PENDING_REPRODUCTION"
 }

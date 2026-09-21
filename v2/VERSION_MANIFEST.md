@@ -7,3 +7,7 @@ Scope: V2_BOOTSTRAP_AND_INHERITED_BASELINE only. No v3 approval.
 Architecture baseline: inherited 128-channel phase engine, acoustic model and complete verification.
 Future v2 calibration/ADC work remains NOT_IMPLEMENTED, with requirements captured separately.
 Acceptance and blockers are in root shared/. v1 is not required for normal v2 execution.
+
+
+Current stage: SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM, authorized by v2_self_calibration.md.
+Bootstrap-only boundary is historical. Same v2; v1 frozen. Evidence: evidence/self_calibration_stage.

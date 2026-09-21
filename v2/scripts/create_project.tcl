@@ -11,17 +11,19 @@ foreach required {PART PART_SOURCE CORE_CLOCK_HZ CLOCK_SOURCE} {
 if {![string match "*2025.2*" [version -short]]} {error "Authoritative tool must be Vivado 2025.2"}
 if {[llength [get_parts -quiet $PART]] != 1} {error "Unknown documented FPGA part"}
 create_project sonofield_v2 [file join $root build vivado] -part $PART -force
-foreach dir {rtl rtl/timing rtl/phase rtl/output rtl/control} {
+foreach dir {rtl rtl/timing rtl/phase rtl/output rtl/control rtl/acquisition rtl/calibration} {
     foreach source_file [glob -nocomplain [file join $root $dir *.sv]] {add_files $source_file}
 }
-set_property top sono_top [current_fileset]
-set_property generic "CLOCK_FREQ=$CORE_CLOCK_HZ" [current_fileset]
+set_property include_dirs [list [file join $root rtl generated]] [current_fileset]
+set_property top sono_digital_system [current_fileset]
+set_property generic "CLOCK_HZ=$CORE_CLOCK_HZ" [current_fileset]
 update_compile_order -fileset sources_1
 # Out-of-context synthesis avoids pretending command ports are board GPIO.
-synth_design -top sono_top -part $PART -mode out_of_context -generic CLOCK_FREQ=$CORE_CLOCK_HZ
+synth_design -top sono_digital_system -part $PART -mode out_of_context -generic CLOCK_HZ=$CORE_CLOCK_HZ
 create_clock -name core_clock -period [expr {1.0e9/$CORE_CLOCK_HZ}] [get_ports clk]
 file mkdir [file join $root evidence synthesis]
 report_utilization -file [file join $root evidence synthesis utilization.rpt]
 report_timing_summary -file [file join $root evidence synthesis timing_synthesis.rpt]
+report_cdc -details -file [file join $root evidence synthesis cdc.rpt]
 write_checkpoint -force [file join $root build vivado synthesized.dcp]
 # Implementation and bitstream intentionally require a separate, reviewed board integration stage.

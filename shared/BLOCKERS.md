@@ -57,3 +57,22 @@ hashes; they are historical consultations, not executable v2 decisions. No exter
 The new formal user instruction authorizes architecture requirements directly. Full v2 calibration/ADC
 runtime remains future work; this is not a bootstrap implementation defect.
 BOM review: v2/hardware/bom/BOM_LOCK.md. Imported old version metadata is superseded by user approval.
+
+
+## Current software/digital stage update (2026-09-21)
+
+The bootstrap-only future-work statement above is historical. v2 now implements and simulates
+ADC acquisition and self-calibration; see current report/evidence. Board-target synthesis,
+implementation, CDC/timing closure and all physical tests remain blocked by B01/B03/B04/B05/B06.
+B04's old AHCT candidate is superseded for v2 by the user BOM SN74LVC595APWR / SN74AXC8T245PWR /
+SN74LVC244APWR contract. Its 66 MHz physical timing concern remains open.
+
+## B07 — real RX/TX timing and phase references (hardware gate)
+
+Opposite-bank measurements form two phase graphs with independent gauges. Simulated RX anchors
+are not physical calibration. Before using a full calibrated hardware LUT, measure reference phase
+in each bank, receiver group delay and TX onset/ringup relative to captured clocks. Synthetic
+35 dB performance cannot substitute for that reference. Also validate the source-synchronous ADC
+return timing through actual translator/cable and provide the PS transport wrapper. Software rejects
+a real record paired with simulated reference provenance. This blocks physical deployment, not
+the explicitly authorized synthetic/digital stage.

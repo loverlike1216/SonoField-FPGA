@@ -28,3 +28,11 @@
 - Import user BOM unchanged with all sheets as CSV; current version governed by explicit v2 approval.
 - Add frozen-parent/standalone checks and version-aware interaction metadata. Fresh verification recorded in v2.
 - Calibration/ADC/PCB implementation remains subsequent work.
+
+
+## 2026-09-21 — v2 software/digital self-calibration
+
+Added four-lane AD7606B startup/readback/acquisition, 128-TX scanning, bounded host-ACK buffer,
+calibration/field modes and runtime frequency, standalone Python raw-to-LUT calibration, source
+configuration and hardware interface contract. Added 25 Python tests and CAL-TB01..15, exact
+ADC roundtrip and deterministic/noise evidence. Frozen v1 unchanged. No PCB or hardware claim.

@@ -10,7 +10,7 @@
 | Repository | https://github.com/loverlike1216/SonoField-FPGA |
 | Workspace | E:\Codex-project\AMD-SonoField-FPGA |
 | Branch / version | main / v2 |
-| Stage | V2_BOOTSTRAP_AND_INHERITED_BASELINE |
+| Stage | SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM |
 | Board / EDA | Robei Zynq-7020 / AMD Vivado 2025.2 |
 
 当前几何由用户明确指定：辐射面中心点距 **12 mm**，上下辐射面间距默认 **100 mm**、
@@ -37,7 +37,7 @@ python -m venv ..\.venv
 ..\.venv\Scripts\python.exe scripts/validate.py --output build/verification_review
 ```
 
-成功标准：19 项 Python 测试通过；Icarus 多通道配置通过；XSim 通过；三次 128 路轨迹与
+成功标准：44 项 Python 测试通过；Icarus 多通道配置通过；XSim 通过；三次 128 路轨迹与
 独立 Python 参考、另一模拟器一致；最终 JSON `status=PASS`。不要只根据退出码或波形图片判断。
 `--skip-xsim` 只产生 PARTIAL，不能当完整验证通过。
 
@@ -73,8 +73,10 @@ python -m venv ..\.venv
 132 MHz 是序列器集成仿真配置，并未验证板上倍频和布线。PS/AXI 传输、硬件时钟丢失保护、
 驱动电路与实际器件校准仍属后续集成任务。
 
-## v2 bootstrap boundary
+## 当前软件/数字阶段
 
-v1 frozen unchanged. Full inherited sources/tests are local to v2. Calibration/ADC runtime is not yet implemented.
-Current evidence is under evidence/validation and evidence/model; evidence/inherited_v1 is historical only.
-Formal hardware input: [BOM lock/review](hardware/bom/BOM_LOCK.md). Next development waits for bootstrap review.
+v1 保持冻结，继承的全部源码和测试仍在 v2。新增 AD7606B 四线采集、模式/扫描/缓冲/主机命令，
+以及原始采样到几何、谐振、相位、数据库与独立请求/校准 LUT 的软件处理链。
+当前完整验证入口是 scripts/validate.py；最新证据位于 evidence/self_calibration_stage/validation。
+物理测量、板级时序、PS/AXI 适配和 PCB 制造未完成。
+详见 [自校准架构](docs/architecture/SELF_CALIBRATION.md)、[软硬件接口](docs/hardware/PCB_SOFTWARE_INTERFACE.md)。

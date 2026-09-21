@@ -129,3 +129,25 @@ Run `python scripts/check_migration.py`, `python scripts/audit_bom.py` and `pyth
 The first audit checks immutable parent Git objects and local bytes when v1 is present. A sparse clone
 can validate parent provenance without a v1 directory. BOM audit compares all nonempty source cells to CSV
 using an independent reader. Imported prices/stock and electrical claims are not independently verified.
+
+
+## v2 self-calibration reproduction
+
+From v2 with the existing Python environment:
+
+```powershell
+..\.venv\Scripts\python.exe scripts/generate_system.py --check
+..\.venv\Scripts\python.exe -m software.calibration.experiment --output build/calibration_review
+..\.venv\Scripts\python.exe scripts/self_calibration_gate.py --output build/calibration_gate_review
+..\.venv\Scripts\python.exe scripts/validate.py --output build/full_review
+```
+
+The full validation command includes the dedicated calibration gate; do not run both for routine
+reproduction. The separate command is for targeted debug. Expect 44 Python tests, inherited TBs,
+CAL-TB01..15, byte-identical ADC roundtrips, three JSON/CSV repeats, and explicit noise failures.
+800 kSPS/132 MHz is a simulation profile, not a board clock assertion. `--skip-xsim` marks PARTIAL.
+The raw calibration cube is ~65 MB and stays under build; 1024 frames per capture fit 16 KiB PL RAM.
+The fresh-clone script also executes this full gate without any v1 working directory.
+
+Register semantics and real-hardware prerequisites: docs/hardware/PCB_SOFTWARE_INTERFACE.md.
+Invalid profile/unknown phase reference must fail; do not remove guards to produce a hardware LUT.

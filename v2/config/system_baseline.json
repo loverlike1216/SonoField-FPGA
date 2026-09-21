@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "project_version": "v2",
+  "tx_count": 128,
+  "rx_count": 8,
+  "phase_bits": 8,
+  "pitch_m": 0.012,
+  "nominal_gap_m": 0.1,
+  "gap_range_m": [
+    0.09,
+    0.115
+  ],
+  "xy_m": [
+    -0.042,
+    -0.03,
+    -0.018,
+    -0.006,
+    0.006,
+    0.018,
+    0.03,
+    0.042
+  ],
+  "rx_xy_m": [
+    [
+      0.054,
+      0.054
+    ],
+    [
+      -0.054,
+      0.054
+    ],
+    [
+      -0.054,
+      -0.054
+    ],
+    [
+      0.054,
+      -0.054
+    ]
+  ],
+  "adc_mapping": [
+    "UPPER_RX0",
+    "UPPER_RX1",
+    "UPPER_RX2",
+    "UPPER_RX3",
+    "LOWER_RX0",
+    "LOWER_RX1",
+    "LOWER_RX2",
+    "LOWER_RX3"
+  ],
+  "adc": {
+    "part": "AD7606BBSTZ-RL",
+    "sample_rate_hz": 800000,
+    "bits": 16,
+    "channels": 8,
+    "range_v": 5.0,
+    "vdrive_v": 3.3,
+    "lanes": 4,
+    "lane_channels": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "oversampling": 1,
+    "crc": false,
+    "status_header": false
+  },
+  "clock_hz": 132000000,
+  "carrier_hz": 40000,
+  "sweep_hz": [
+    38500,
+    38600,
+    38700,
+    38800,
+    38900,
+    39000,
+    39100,
+    39200,
+    39300,
+    39400,
+    39500,
+    39600,
+    39700,
+    39800,
+    39900,
+    40000,
+    40100,
+    40200,
+    40300,
+    40400,
+    40500,
+    40600,
+    40700,
+    40800,
+    40900,
+    41000,
+    41100,
+    41200,
+    41300,
+    41400,
+    41500
+  ],
+  "burst_cycles": 16,
+  "start_phase_rad": 0.0,
+  "pretrigger_samples": 32,
+  "main_samples": 800,
+  "ringdown_samples": 192,
+  "buffer_depth": 1024,
+  "settle_cycles": 13200,
+  "guard_cycles": 13200,
+  "ring_up_s": 2.5e-05,
+  "ring_down_s": 3.5e-05,
+  "environment": {
+    "temperature_c": 26.5,
+    "humidity_percent": 55.0,
+    "pressure_pa": 101325.0,
+    "pressure_source": "ASSUMED_STANDARD_ATMOSPHERE",
+    "co2_ppm": 420
+  },
+  "health": {
+    "weak_fraction": 0.4,
+    "outlier_fraction": 2.5,
+    "min_snr_db": 8.0,
+    "apply_recommended_mask": false
+  },
+  "pose": {
+    "bounds_translation_m": [
+      0.01,
+      0.01,
+      0.115
+    ],
+    "max_angle_deg": 5,
+    "outlier_m": 0.001,
+    "uncertainty_m": 0.00015
+  },
+  "synthetic": {
+    "seed": 7020,
+    "pose": [
+      0.0007,
+      -0.0005,
+      0.0988,
+      0.35,
+      -0.2,
+      0.15
+    ],
+    "snr_db": 35
+  },
+  "phase_reference": {
+    "rx_anchor_phase_rad": [
+      0.0,
+      0.0
+    ],
+    "reference_provenance": "SIMULATION_REFERENCE_ONLY; calibrated RX0 phase in each bank. Without real reference only per-bank relative phase is identifiable."
+  }
+}

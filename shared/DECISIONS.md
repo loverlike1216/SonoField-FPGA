@@ -56,3 +56,24 @@ Version: v2. Source: direct user formal instruction, section 75.
 Complete inherited baseline verified at e353c16d35da2b430f46ba5b83a5a9a79dd749b7. Fresh clone excludes v1 directory; parent Git tree unchanged.
 New BOM is PCB_PROPOSED input. Obsolete workbook version cell has no authority over explicit v2 approval.
 No calibration/ADC capability or external ChatGPT decision claimed. Stop before deeper stages.
+
+
+## ADR-031 — authorized v2 software/digital stage (2026-09-21)
+
+Version v2; source direct user instruction v2_self_calibration.md, sections 70/71. This supersedes
+ADR-029/030's bootstrap-only execution boundary for the new stage, not their historical results.
+Implement the complete raw ADC to geometry/frequency/phase/LUT pipeline and PL acquisition. Keep
+v1 frozen; no v3, PCB files, purchases, force push or physical claims. Source checkpoint begins
+at 5fa046d0ad3dd7fe0c44824b74b71f974f9a09bc. No external ChatGPT decision was imported.
+
+## ADR-032 — ADC and phase-reference contracts (2026-09-21)
+
+Version v2; source user requirements plus AD7606B Rev B protocol and actual simulations.
+Use software-mode four DOUT, 32 clocks/frame, +/-5 V for the 2.5 V biased AFE, explicit config/range
+readback and no CRC/status/OS header. Configuration/source mapping is checked, not guessed.
+Shared simulated 132 MHz clock; target PLL/VCCO/IO timing remains blocked. Register bus is a
+board-independent transport boundary. Bounded 16 KiB BRAM-style capture, host ACK before reuse.
+Keep per-bank phase gauge explicit: two simulated RX anchors enable a synthetic full map, while
+real RX reference measurement remains required. Reject active invalid channels or unreferenced
+whole-array LUTs. Coarse/fine refinement records its fitted-chain dependence and coarse baseline.
+Evidence: v2/evidence/self_calibration_stage/validation. No hardware freeze authorized.

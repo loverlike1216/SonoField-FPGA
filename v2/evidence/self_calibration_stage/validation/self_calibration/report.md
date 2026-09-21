@@ -1,0 +1,18 @@
+# Synthetic calibration
+
+SIMULATION_ESTIMATE. No physical measurements.
+
+- snr_db: 35
+- translation_error_mm: 0.020748169700379106
+- rotation_error_deg: 0.01685967757967064
+- pose_rms_mm: 0.0068031600074870404
+- f0_rmse_hz: 51.67872231431506
+- phase_rmse_deg: 0.6073452809588495
+- valid_channels: 128
+- path_count: 512
+- f_work_hz: 40300.0
+- record_sha256: aa45559a997db830b722d1af04fbe778e546d58d3df6ed2c5847a5d595657a81
+- raw_sha256: cc6e6b260cb82219ffd8bf2447fbfc4dc22ad52c8b2c750729bb8a92846bf1fa
+- lut_status: GENERATED
+
+Phase values require the declared RX phase reference; pressure is relative only.

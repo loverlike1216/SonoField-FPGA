@@ -41,5 +41,5 @@ The user-provided personalized rules govern execution. This file is their projec
 
 ## v2 authorization and frozen parent
 User attachment explicitly authorized v2. v1 is frozen and must remain byte-identical to shared/versions/v1_freeze.json.
-This stage only bootstraps a complete standalone v2 and repeats inherited verification. Stop for review before calibration/ADC development.
+Current user attachment v2_self_calibration.md authorizes the complete self-calibration software/digital stage in v2. Stop before PCB implementation.
 No v2 execution may import sources/tests/config from v1. Root governance is shared. BOM source metadata does not override current user approval.

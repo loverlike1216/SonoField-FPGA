@@ -30,7 +30,7 @@ def main():
     def run(label, command, cwd=work):
         started=datetime.datetime.now(datetime.timezone.utc).isoformat()
         proc=subprocess.run([str(x) for x in command],cwd=cwd,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,
-                            text=True,errors="replace",timeout=300)
+                            text=True,errors="replace",timeout=900)
         (evidence/f"{label}.log").write_text(proc.stdout,encoding="utf-8")
         results.append({"label":label,"command":[str(x) for x in command],"cwd":str(cwd),
                         "started_utc":started,"exit_code":proc.returncode,"log":f"{label}.log"})
@@ -62,7 +62,7 @@ def main():
         oracles=[]; hashes=[]
         for channels in (1,2,7,32,72,128):
             target=work/f"core_{channels}.vvp"
-            run(f"compile_core_{channels}",[iv,"-g2012","-s","tb_core",f"-Ptb_core.CHANNELS={channels}","-o",target,*rtl,ROOT/"tb/tb_core.sv"])
+            run(f"compile_core_{channels}",[iv,"-g2012","-I",ROOT/"rtl/generated","-s","tb_core",f"-Ptb_core.CHANNELS={channels}","-o",target,*rtl,ROOT/"tb/tb_core.sv"])
             repeats=3 if channels==128 else 1
             for repeat in range(repeats):
                 trace=work/f"core_{channels}_{repeat}.csv"
@@ -72,15 +72,15 @@ def main():
                 if channels==128: hashes.append(report["sha256"])
         if len(set(hashes))!=1: raise AssertionError("TB15 non-deterministic Icarus traces")
         for name in ("tb_system","tb_serializer_fault"):
-            run(f"compile_{name}",[iv,"-g2012","-s",name,"-o",work/f"{name}.vvp",*rtl,ROOT/f"tb/{name}.sv"])
+            run(f"compile_{name}",[iv,"-g2012","-I",ROOT/"rtl/generated","-s",name,"-o",work/f"{name}.vvp",*rtl,ROOT/f"tb/{name}.sv"])
             out=run(f"run_{name}",[vvp,work/f"{name}.vvp"])
             if "PASS " not in out: raise AssertionError(f"No completion marker: {name}")
-        run("compile_model_map",[iv,"-g2012","-s","tb_phase_map","-o",work/"tb_phase_map.vvp",*rtl,ROOT/"tb/tb_phase_map.sv"])
+        run("compile_model_map",[iv,"-g2012","-I",ROOT/"rtl/generated","-s","tb_phase_map","-o",work/"tb_phase_map.vvp",*rtl,ROOT/"tb/tb_phase_map.sv"])
         for count,gap,mode in map_cases:
             label=prepare_map(count,gap,mode)
             out=run(f"model_map_{label}",[vvp,work/"tb_phase_map.vvp"])
             if "PASS model phase map" not in out: raise AssertionError("Model-map integration incomplete")
-        run("compile_bandwidth_guard",[iv,"-g2012","-s","tb_bad_bandwidth","-o",work/"bad_bandwidth.vvp",*rtl,ROOT/"tb/tb_bad_bandwidth.sv"])
+        run("compile_bandwidth_guard",[iv,"-g2012","-I",ROOT/"rtl/generated","-s","tb_bad_bandwidth","-o",work/"bad_bandwidth.vvp",*rtl,ROOT/"tb/tb_bad_bandwidth.sv"])
         bad=subprocess.run([str(vvp),str(work/"bad_bandwidth.vvp")],cwd=work,capture_output=True,text=True,timeout=30)
         (evidence/"bandwidth_guard.log").write_text(bad.stdout+bad.stderr)
         if bad.returncode==0 or "Serializer bandwidth insufficient" not in bad.stdout:
@@ -92,7 +92,7 @@ def main():
         if not args.skip_xsim:
             vb=Path(args.vivado_bin)
             # XSim is part-independent; an FPGA package is not selected for behavioral simulation.
-            out=run("xvlog",[vb/"xvlog.bat","--sv",*rtl,ROOT/"tb/tb_core.sv",ROOT/"tb/tb_system.sv",ROOT/"tb/tb_serializer_fault.sv",ROOT/"tb/tb_phase_map.sv"])
+            out=run("xvlog",[vb/"xvlog.bat","--sv","-i",ROOT/"rtl/generated",*rtl,ROOT/"tb/tb_core.sv",ROOT/"tb/tb_system.sv",ROOT/"tb/tb_serializer_fault.sv",ROOT/"tb/tb_phase_map.sv"])
             for name in ("tb_core","tb_system","tb_serializer_fault","tb_phase_map"):
                 run(f"xelab_{name}",[vb/"xelab.bat",name,"--snapshot",name+"_snapshot","--debug","typical"])
                 if name=="tb_phase_map":
@@ -117,13 +117,15 @@ def main():
             summary["independent_simulator"]="Vivado 2025.2 XSim; 3 traces byte-identical to Icarus"
         else:
             summary["independent_simulator"]="NOT_RUN"
+        run("self_calibration_gate",[sys.executable,ROOT/"scripts/self_calibration_gate.py","--output",evidence/"self_calibration",*(["--skip-xsim"] if args.skip_xsim else [])],ROOT)
+        summary["self_calibration_evidence"]="self_calibration/summary.json"
         summary["source_sha256"]={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
                                     for p in [*rtl,*sorted((ROOT/"tb").glob("*.sv"))]}
         summary["model_map_cases"]=[{"channels":n,"face_gap_mm":g*1000,"mode":m} for n,g,m in map_cases]
         summary["geometry_configuration"]=config
         summary["source_text_sha256"]={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
             for p in [*sorted((ROOT/"software").rglob("*.py")),*sorted((ROOT/"tests").rglob("*.py")),
-                      *sorted((ROOT/"scripts").glob("*.py")),ROOT/args.config]}
+                      *sorted((ROOT/"scripts").glob("*.py")),*sorted((ROOT/"config").glob("*.json")),*sorted((ROOT/"rtl/generated").glob("*.svh"))]}
         summary["status"]="PASS" if not args.skip_xsim else "PARTIAL"
     except Exception as exc:
         summary["status"]="FAIL"; summary["error"]=str(exc)

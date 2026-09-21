@@ -1,24 +1,15 @@
-# Execution contract: V2_BOOTSTRAP_AND_INHERITED_BASELINE
+# SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM execution contract
 
-## Goal and approval
-User attachment explicitly approves v2. Freeze v1 without changing any file, then provide a complete standalone v2 baseline.
-
-## Scope / allowed changes
-Copy all tracked engineering inputs, preserve historical evidence, adapt version paths and tooling, import the supplied BOM unchanged with readable text exports, update root governance and AI checkpoints.
-
-## Non-goals / constraints
-Do not implement future self-calibration, ADC RTL, fabricate PCBs or claim hardware success. No guessed part/XDC or new version beyond v2. New BOM is a design input, not measurement or fresh supplier verification.
-
-## Inputs / dependencies
-User formal instruction, root BOM workbook, existing v1 source/evidence, board references, Python 3.10, Icarus and Vivado 2025.2. External ChatGPT reader remains unavailable.
-
-## Validation / required evidence
-Frozen-file SHA256 audit; full inherited Python/Icarus/XSim tests and waveform comparison; model/coordinate regeneration; clean clone/new venv with v1 absent from checkout; no runtime ../v1 imports; BOM cell/quantity audit and secret check; commit/push with remote equality.
-
-## Rollback / done when
-Normal revert of v2/governance changes, retaining v1 and Git history. Stop after bootstrap report for review. Full v2 hardware/calibration acceptance remains future work.
-
-## Completed checkpoint
-
-All scoped bootstrap gates PASS, including v1-absent clean reproduction. Source e353c16d35da2b430f46ba5b83a5a9a79dd749b7.
-Stopped for user/reviewer assessment. Next proposed stage V2.2 remains unstarted. Hardware blockers persist.
+Goal: complete the user-authorized v2 software and digital calibration chain; keep v1 frozen.
+Input: attachment archived in AI-interaction-memory/codex/instructions/v2_self_calibration.md.
+Scope: shared machine-readable configuration/registers, ADC/burst/scan/buffer/control RTL,
+behavioral ADC, realistic raw synthetic traces, TOF/phase/pose/sweep/f_work/health/database/LUT,
+plots and reports, Python/Icarus/XSim cross-check, standalone fresh reproduction and GitHub sync.
+Non-goals: PCB schematic/layout/Gerber, purchases, v3, invented target part, synthesis/physical PASS.
+Architecture: single synchronous PL command bus; bounded acknowledged captures; host nonlinear solver.
+Constraints: preserve requested/calibration split and atomics; invalid/clipped inputs fail closed;
+document ADC datasheet timing, hardware timing limitations and phase-reference identifiability.
+Validation: inherited gates, CAL-TB01..15, SW-T01..20, 512-path end-to-end, noisy/outlier cases,
+three deterministic runs, source hashes and clean v1-absent clone. Save failures and evidence.
+Rollback: ordinary Git revert of this stage; do not modify frozen v1. Done only after actual tests,
+reports, interface contract and commit/push verification. Stop before physical PCB work.
