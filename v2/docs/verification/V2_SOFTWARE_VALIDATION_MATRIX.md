@@ -3,7 +3,7 @@
 Scope: software and behavioral digital simulation. Source/evidence version v2; v1 frozen.
 Paths below are relative to v2. `V` means evidence/self_calibration_stage/validation_frequency.
 `C` means V/self_calibration. `R` means evidence/self_calibration_stage/reproducibility_review.
-PASS entries have actual tools behind them. R is pending until its summary says PASS.
+PASS entries have actual tools behind them. R passed on 2026-09-24 at 9c058fe3b02469a6d36a08e3a7cbedd19076e67b.
 
 | Requirement | Implementation | Unit test | Integration test | Independent oracle | Evidence | Status | Limitation |
 |---|---|---|---|---|---|---|---|
@@ -38,7 +38,7 @@ PASS entries have actual tools behind them. R is pending until its summary says 
 | SW-T20 LUT regeneration | pipeline + phase_bank | SW17/23 | Generated LUT -> real RTL bank | Requested/calibration sum | C/xsim.log | SIMULATED PASS | No hardware output measurement |
 | Mask and safety API | host.py/pipeline | SW16/20/23/25 | ACK/map/fault RTL tests | State/phase/mask checks | V/python_tests.log | TESTED PASS | Hardware adapter future |
 | Determinism | calibration gate | SW22 | Three JSON/CSV, three RTL runs | XSim vs Icarus raw hash | C/summary.json | TESTED PASS | Fixed stack/seed,1e-12 tolerance |
-| Standalone | reproduce.py | Environment/pip audit | Entire gate without v1 worktree | New venv/clone | R/summary.json | CHECK SUMMARY | Same Windows host |
+| Standalone | reproduce.py | Environment/pip audit | Entire gate without v1 worktree | New venv/clone | R/summary.json | TESTED PASS | Same Windows host |
 | Frozen parent | check_migration.py |212 hashes | Git tree/content audit | Git objects | Repository audit | VERIFIED | No v1 edits |
 | Target synthesis | create_project.tcl | Missing-part guard | Actual Vivado rejection | Verified board facts | evidence/self_calibration_stage/board_gate | BLOCKED | Exact part/VCCO unknown |
 | Hardware | Hardware contract | None | None | No physical evidence | shared/BLOCKERS.md at root | NOT_VERIFIED | No levitation claim |

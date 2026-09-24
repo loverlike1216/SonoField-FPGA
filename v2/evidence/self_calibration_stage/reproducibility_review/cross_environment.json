@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "scope": "Same host, fresh clone and locked venv; canonical UTF-8 LF",
+  "calibration_payload_match": true,
+  "excluded_provenance_field": "git_commit",
+  "original_git_commit": "4e5f0478e036cfefbadb2f6ceeb2ef1d180b6467",
+  "reproduced_git_commit": "9c058fe3b02469a6d36a08e3a7cbedd19076e67b",
+  "canonical_lf_sha256": {
+    "phase_lut.csv": "8591bcc1be8d9943d7c6d060580f34856dd4ce32818cdf07f1d754a337e5136d",
+    "channel_health.csv": "59aa502e48e3815981a8c893d5e8f259f486191aea5375f26dcbe93d76f4972c",
+    "path_quality.csv": "3e4608c89564892acf14ef0304a35f7990267610f1a61b2fe1d3d4249229381c",
+    "quality_summary.json": "7bb603aaf3b89ae5bc5bc07449bf96cd29acbbad033018708facfa5c2a77da96"
+  },
+  "adc_roundtrips": [
+    {
+      "frames": 1024,
+      "sha256": "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "tool_run": "Icarus 0"
+    },
+    {
+      "frames": 1024,
+      "sha256": "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "tool_run": "Icarus 1"
+    },
+    {
+      "frames": 1024,
+      "sha256": "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "tool_run": "Icarus 2"
+    },
+    {
+      "frames": 1024,
+      "sha256": "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "tool_run": "Vivado 2025.2 XSim"
+    }
+  ]
+}

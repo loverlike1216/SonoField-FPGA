@@ -7,8 +7,8 @@ Source timestamps are UTC. Active version v2. Stage: SELF_CALIBRATION_SOFTWARE_A
 
 | Thread / Session | Role / Impact | First used | Last captured | Record | Status | Content SHA256 |
 |---|---|---|---|---|---|---|
-| 01a0b538-9430-7561-9ba4-623f57501f43 | codex / IMPLEMENTATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-24T08:16:46.513Z | [codex](codex/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | 332decfe34cf15a64d8dab6665a7d0a46472cab1d16f60d66e5bea765a899422 |
-| 01a0b538-9430-7561-9ba4-623f57501f43 | tool-flow / VALIDATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-24T08:16:46.513Z | [tool-flow](tool-flow/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | b9ff28337be89efeaec0311bcf3a053cfeab8faeea71a2c57407cae08e85154a |
+| 01a0b538-9430-7561-9ba4-623f57501f43 | codex / IMPLEMENTATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-24T08:23:58.255Z | [codex](codex/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | ddfc2ea83b8d600091dd31ec1df37f2d19b1199b16b102e959b469d886bf99b9 |
+| 01a0b538-9430-7561-9ba4-623f57501f43 | tool-flow / VALIDATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-24T08:23:58.255Z | [tool-flow](tool-flow/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | 7eea4c44c38099a774e6e0f3f4f1a5a0ddbeb969a639a3695cbdc0fb74b7a585 |
 
 [Capture policy and commands](README.md) · [Current tool flow](tool-flow/T-20260920-001__interaction-memory.md)
 

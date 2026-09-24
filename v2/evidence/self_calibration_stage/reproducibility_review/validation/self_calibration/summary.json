@@ -1,0 +1,250 @@
+{
+  "adc_model": "AD7606B Rev B Figure 73; 9ns CS data, 15ns SCLK data, 650/850ns alternating conversion",
+  "adc_roundtrips": [
+    {
+      "frames": 1024,
+      "sha256": "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "tool_run": "Icarus 0"
+    },
+    {
+      "frames": 1024,
+      "sha256": "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "tool_run": "Icarus 1"
+    },
+    {
+      "frames": 1024,
+      "sha256": "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "tool_run": "Icarus 2"
+    },
+    {
+      "frames": 1024,
+      "sha256": "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "tool_run": "Vivado 2025.2 XSim"
+    }
+  ],
+  "classification": "SIMULATION_ESTIMATE",
+  "commands": [
+    {
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\scripts\\generate_system.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "generated_config.log",
+      "name": "generated_config"
+    },
+    {
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\generated",
+        "-s",
+        "tb_calibration",
+        "-o",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\build\\self_calibration_sim\\calibration.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\tb\\ad7606b_model.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\tb\\tb_calibration.sv"
+      ],
+      "exit_code": 0,
+      "log": "iverilog_compile.log",
+      "name": "iverilog_compile"
+    },
+    {
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\build\\self_calibration_sim\\calibration.vvp"
+      ],
+      "exit_code": 0,
+      "log": "icarus_0.log",
+      "name": "icarus_0"
+    },
+    {
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\build\\self_calibration_sim\\calibration.vvp"
+      ],
+      "exit_code": 0,
+      "log": "icarus_1.log",
+      "name": "icarus_1"
+    },
+    {
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\build\\self_calibration_sim\\calibration.vvp"
+      ],
+      "exit_code": 0,
+      "log": "icarus_2.log",
+      "name": "icarus_2"
+    },
+    {
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "-i",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\generated",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\tb\\ad7606b_model.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2\\tb\\tb_calibration.sv"
+      ],
+      "exit_code": 0,
+      "log": "xvlog.log",
+      "name": "xvlog"
+    },
+    {
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_calibration",
+        "--snapshot",
+        "calibration_snapshot",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "log": "xelab.log",
+      "name": "xelab"
+    },
+    {
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "calibration_snapshot",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "log": "xsim.log",
+      "name": "xsim"
+    }
+  ],
+  "noise_robustness": [
+    {
+      "f0_rmse_hz": 51.67872231431506,
+      "f_work_hz": 40300.0,
+      "lut_status": "GENERATED",
+      "path_count": 512,
+      "phase_rmse_deg": 0.6073452809588495,
+      "pose_rms_mm": 0.0068031600074870404,
+      "raw_sha256": "cc6e6b260cb82219ffd8bf2447fbfc4dc22ad52c8b2c750729bb8a92846bf1fa",
+      "record_sha256": "8cbdfeb91abec0fab3884377cfe5cffdce7239d3d265f5164e2e239084657651",
+      "rotation_error_deg": 0.01685967757967064,
+      "snr_db": 35,
+      "status": "WITHIN_BASELINE_LIMITS",
+      "translation_error_mm": 0.020748169700379106,
+      "valid_channels": 128
+    },
+    {
+      "f0_rmse_hz": 153.33883355704683,
+      "f_work_hz": 40300.0,
+      "lut_status": "BLOCKED: Active channel lacks valid calibration; explicitly approve a mask before generating a LUT",
+      "path_count": 512,
+      "phase_rmse_deg": 1.8738108157052595,
+      "pose_rms_mm": 0.016957144618088428,
+      "raw_sha256": "7011c6b48919fef9dbfcbdeac78b3b07997bfd217fd8049fc69d2be306b37f86",
+      "record_sha256": "1159c2749415e8fd02e1529f6169287d88a54f7f96502ecd76b135833e5d1902",
+      "rotation_error_deg": 0.048758305873915636,
+      "snr_db": 25,
+      "status": "OUTSIDE_BASELINE_LIMITS",
+      "translation_error_mm": 0.07623337595162123,
+      "valid_channels": 127
+    },
+    {
+      "error": "Unconnected RX phase calibration graph",
+      "snr_db": 15,
+      "status": "REJECTED"
+    },
+    {
+      "error": "Too few characterized TX channels",
+      "snr_db": 5,
+      "status": "REJECTED"
+    }
+  ],
+  "not_verified": [
+    "physical transducers/AFE/ADC/clock/board",
+    "target synthesis and timing closure",
+    "absolute pressure/force",
+    "PS AXI transport",
+    "real RX phase reference"
+  ],
+  "repeated_artifacts": [
+    {
+      "calibration.json": "c5c775cd6dc811ce9d1a10583051486e0df6df8576b7b5cd02b437f2992dbefe",
+      "channel_health.csv": "f842f60ea64e208177753ca0603dc2589f8782b2a575751f4806f8f2365d9229",
+      "path_quality.csv": "f7cb1428ad3ea12e7040f851406adf99adfe949f9ace725767f764529e24a413",
+      "phase_lut.csv": "ebc787f769351d3cc167fb39a1d2e3b00370348516e8c5fb64c01fc6339b6ba3",
+      "quality_summary.json": "c3c7499c6e79be2b8e59dde2052e5de06bcb7942e829bd595e1338b314154693"
+    },
+    {
+      "calibration.json": "c5c775cd6dc811ce9d1a10583051486e0df6df8576b7b5cd02b437f2992dbefe",
+      "channel_health.csv": "f842f60ea64e208177753ca0603dc2589f8782b2a575751f4806f8f2365d9229",
+      "path_quality.csv": "f7cb1428ad3ea12e7040f851406adf99adfe949f9ace725767f764529e24a413",
+      "phase_lut.csv": "ebc787f769351d3cc167fb39a1d2e3b00370348516e8c5fb64c01fc6339b6ba3",
+      "quality_summary.json": "c3c7499c6e79be2b8e59dde2052e5de06bcb7942e829bd595e1338b314154693"
+    },
+    {
+      "calibration.json": "c5c775cd6dc811ce9d1a10583051486e0df6df8576b7b5cd02b437f2992dbefe",
+      "channel_health.csv": "f842f60ea64e208177753ca0603dc2589f8782b2a575751f4806f8f2365d9229",
+      "path_quality.csv": "f7cb1428ad3ea12e7040f851406adf99adfe949f9ace725767f764529e24a413",
+      "phase_lut.csv": "ebc787f769351d3cc167fb39a1d2e3b00370348516e8c5fb64c01fc6339b6ba3",
+      "quality_summary.json": "c3c7499c6e79be2b8e59dde2052e5de06bcb7942e829bd595e1338b314154693"
+    }
+  ],
+  "rtl_decoded_tof_s": [
+    0.0005232145768251675,
+    0.00043614928829924357,
+    0.00032657606415945094,
+    0.00043904982589602307
+  ],
+  "scope": "512-path raw software pipeline; exact 1024x8 ADC RTL roundtrip; 128 captures in RTL scan use 32 frames each",
+  "simulation_only_override": {
+    "POWER_WAIT_CYCLES": 32,
+    "production": 264000001,
+    "reset_and_setup_delays": "unshortened"
+  },
+  "started_utc": "2026-09-24T08:19:33.624429+00:00",
+  "status": "PASS",
+  "synthetic_end_to_end": {
+    "f0_rmse_hz": 51.67872231431506,
+    "f_work_hz": 40300.0,
+    "lut_status": "GENERATED",
+    "path_count": 512,
+    "phase_rmse_deg": 0.6073452809588495,
+    "pose_rms_mm": 0.0068031600074870404,
+    "raw_sha256": "cc6e6b260cb82219ffd8bf2447fbfc4dc22ad52c8b2c750729bb8a92846bf1fa",
+    "record_sha256": "8cbdfeb91abec0fab3884377cfe5cffdce7239d3d265f5164e2e239084657651",
+    "rotation_error_deg": 0.01685967757967064,
+    "snr_db": 35,
+    "translation_error_mm": 0.020748169700379106,
+    "valid_channels": 128
+  },
+  "tolerances": {
+    "f0_rmse_hz": 80,
+    "numeric_repeat_absolute": 1e-12,
+    "phase_rmse_deg": 2,
+    "repeat_json_csv": "byte-identical canonical LF on same dependencies",
+    "rotation_deg": 0.1,
+    "translation_mm": 0.1
+  }
+}

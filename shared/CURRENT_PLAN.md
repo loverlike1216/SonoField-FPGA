@@ -13,3 +13,9 @@ Validation: inherited gates, CAL-TB01..15, SW-T01..20, 512-path end-to-end, nois
 three deterministic runs, source hashes and clean v1-absent clone. Save failures and evidence.
 Rollback: ordinary Git revert of this stage; do not modify frozen v1. Done only after actual tests,
 reports, interface contract and commit/push verification. Stop before physical PCB work.
+
+## Completed checkpoint: 2026-09-24
+
+Implementation, full local and fresh-clone gates, source push/remote verification complete.
+Source 9c058fe3b02469a6d36a08e3a7cbedd19076e67b. Evidence: v2/evidence/self_calibration_stage/reproducibility_review.
+Final report and interaction/evidence checkpoint follows. STOP for independent review; no PCB stage.

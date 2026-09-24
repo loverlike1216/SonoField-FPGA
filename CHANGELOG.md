@@ -36,3 +36,12 @@ Added four-lane AD7606B startup/readback/acquisition, 128-TX scanning, bounded h
 calibration/field modes and runtime frequency, standalone Python raw-to-LUT calibration, source
 configuration and hardware interface contract. Added 25 Python tests and CAL-TB01..15, exact
 ADC roundtrip and deterministic/noise evidence. Frozen v1 unchanged. No PCB or hardware claim.
+
+## 2026-09-24 — v2 software/digital delivery
+
+- Corrected stale serializer permission on abort/re-enable; uploaded computed common frequency with LUT.
+- Added per-path quality/report output and final 45-test full gate.
+- Fresh clone/new locked venv without v1 passed all Python/Icarus/XSim/audit/model/coordinate checks.
+- Preserved initial newline-hash audit failure; source evidence now uses explicit canonical LF text.
+- Verified renamed workspace, updated operational paths and session-scoped transcript relocation check.
+- Source 9c058fe3b02469a6d36a08e3a7cbedd19076e67b pushed; no frozen v1/PCB/hardware-result changes.

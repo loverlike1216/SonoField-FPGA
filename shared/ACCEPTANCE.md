@@ -43,7 +43,7 @@ The table above remains bootstrap history. Current scope is SELF_CALIBRATION_SOF
 | Robustness | Same thresholds at 35/25/15/5 dB; 25 dB exceeds f0 limit; 15/5 dB rejected; failures retained |
 | Safety | Safe reset/kill/abort/timeout, no overwrite before ACK, invalid/unreferenced LUT rejected |
 | Calibration output | Separate requested/calibration phases; full generated map committed and normal field restored in RTL |
-| Standalone | Fresh Git clone without v1 working directory + isolated locked venv + full gate; pending checkpoint |
+| Standalone | Fresh Git clone without v1 working directory + isolated locked venv + full gate PASS at 9c058fe3b02469a6d36a08e3a7cbedd19076e67b |
 | Interface | docs/hardware/PCB_SOFTWARE_INTERFACE.md; register map generated from JSON; no connector guesses |
 | Physical and target EDA | NOT_VERIFIED / BLOCKED, explicitly outside this stage's digital acceptance |
 

@@ -8,8 +8,8 @@ branch: main
 active_version: v2; v1 FROZEN
 stage: SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM
 local HEAD / origin HEAD at preflight: 5fa046d0ad3dd7fe0c44824b74b71f974f9a09bc
-validated source checkpoint: PENDING_SOURCE_COMMIT
-delivery: PENDING_FINAL_CHECKPOINT
+validated source checkpoint: 9c058fe3b02469a6d36a08e3a7cbedd19076e67b
+delivery: Validated source pushed and remote verified; this report and fresh evidence are delivered in the following documentation checkpoint. Its exact hash is reported to the user.
 
 Pre-commit calibration records identify the then-current Git parent. Exact changed implementation
 is identified by source hashes in the validation summary. Clean-clone records identify the committed
@@ -124,7 +124,14 @@ This is a fixed-seed synthetic operating envelope, not a universal measured SNR 
 
 Three byte-identical JSON / phase-LUT CSV / health CSV outputs per environment; numeric tolerance 1e-12.
 Three Icarus ADC hashes and XSim hash agree. Inherited traces still match the Python oracle.
-Fresh clone without v1 working directory and isolated locked venv: PENDING_FRESH_CLONE.
+Fresh clone without v1 working directory and isolated locked venv: PASS at 9c058fe3b02469a6d36a08e3a7cbedd19076e67b on 2026-09-24.
+
+[Fresh reproduction](../v2/evidence/self_calibration_stage/reproducibility_review/summary.json) and
+[cross-environment comparison](../v2/evidence/self_calibration_stage/reproducibility_review/cross_environment.json).
+45 Python tests and 10 interaction-export tests passed in the new environment. Six acoustic-model
+CSVs and 19 coordinate/phase CSVs matched. Calibration payload matched exactly after excluding
+only the Git provenance field; ADC sample bytes matched in both simulators. Same Windows host,
+not a second OS or physical system. Initial newline-hash failure remains archived separately.
 
 ## Hardware Interface Contract
 
@@ -142,8 +149,7 @@ No physical photos, scope traces or mass results exist. No 50 mg success claim i
 
 B01 exact FPGA package/speed; B03 VCCO/connector ambiguity; B04 serializer electrical margin;
 B05/B06 transducer and physical evidence; B07 real RX/TX timing/phase reference. External ChatGPT
-access BLOCKED. These limit deployment/full-platform acceptance. Fresh-clone reproduction remains
-the software delivery gate at this checkpoint.
+access BLOCKED. These limit deployment/full-platform acceptance. The software/digital reproduction gate passed; these blockers remain outside the completed simulation scope.
 
 ## Risks
 
@@ -151,6 +157,25 @@ TOF depends on envelope/group-delay assumptions; phase gauges need external refe
 timing and serializer timing require real translator/cable/skew constraints. Synthetic chip behavior
 does not qualify real silicon. 12 mm pitch is not lambda/2, and relative pressure does not prove force.
 External interlock must cover clock loss/power transients. Independent user/ChatGPT review pending.
+
+## Board Facts Found
+
+Robei Zynq-7020 family; user-selected constrain files document N18 / 33 MHz input.
+The complete package/speed ordering code and bank VCCO remain unknown. Duplicate/missing
+connector entries are unresolved. The simulated 132 MHz core is not a verified physical clock.
+No fabricated FPGA part or XDC was used; real Vivado board-gate rejection is archived.
+
+## Transducer Assumptions and Next Physical Hardware
+
+User selected nominal 10 mm transmitters at 12 mm radiating-surface-center pitch, two opposed
+8x8 arrays, 100 mm nominal face gap adjustable 90..115 mm, origin at their geometric center.
+These geometry requirements supersede the earlier 16 mm baseline. Exact purchased part,
+capacitance, active aperture, polarity, resonance, continuous voltage and tolerances remain
+unmeasured; neither supplier illustration nor normalized pressure establishes levitation force.
+Next hardware prerequisites are measured samples, a conservative single-channel driver,
+ultrasonic receiver/reference and scope, ADC/AFE prototype, verified board documentation,
+and instruments for current/temperature and particle mass/dimensions. No order is placed.
+Use staged PH0/PH1 characterization before a full array or any 50 mg attempt.
 
 ## Files Changed
 
@@ -161,11 +186,13 @@ build caches or raw capture cubes committed.
 
 ## Git Commit
 
-PENDING_SOURCE_COMMIT, then fresh-clone evidence checkpoint and non-force push to main.
+9c058fe3b02469a6d36a08e3a7cbedd19076e67b (validated source, pushed and verified). The following evidence/documentation commit retains this source unchanged.
 
 ## Next Recommended Stage
 
 Independent review of report/evidence. Only after user direction, close board/reference facts and
 perform PH0 electrical/receiver/ADC characterization. Do not automatically start PCB implementation.
 
-REVISE
+Scoped result for this software/digital stage; independent final review remains pending.
+
+ACCEPT WITH LIMITATIONS

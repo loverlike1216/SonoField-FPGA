@@ -66,3 +66,14 @@ and staged changes are present at E:\Codex_project\AMD-SonoField-FPGA. No move w
 by this resume. Current operational paths updated; historical evidence and frozen v1 unchanged.
 Fetch confirmed main is one local commit ahead, zero behind. ChatGPT history reader remains
 unavailable in the exposed tool catalog. Next: commit reviewed corrections and run fresh clone.
+
+## Final standalone reproduction and source synchronization
+
+Source 9c058fe3b02469a6d36a08e3a7cbedd19076e67b. Command from v2: `../.venv/Scripts/python.exe scripts/reproduce.py --target build/repro_v2_calibration_review --output evidence/self_calibration_stage/reproducibility_review`.
+Actual exit 0; all child commands exit 0. No v1 worktree; new locked environment, full 45 Python
+tests and Icarus/XSim, model, repository/BOM audits, 10 transcript tests, 19 coordinate CSVs PASS.
+Cross-environment calibration JSON (excluding Git commit only), canonical CSVs and binary ADC
+hashes match. `git push origin main` succeeded; `git ls-remote origin refs/heads/main` returned
+the source commit above on 2026-09-24. Final evidence/report checkpoint follows, with final
+remote hash reported directly. Public repository: privacy scan required before final push.
+Stage stopped before PCB implementation; hardware blockers and external ChatGPT BLOCKED remain.

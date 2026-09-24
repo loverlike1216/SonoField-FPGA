@@ -1,0 +1,50 @@
+test_all_geometries_and_ids (test_acoustic_model.AcousticTests) ... ok
+test_calibration_cancels_intrinsic_phase (test_acoustic_model.AcousticTests) ... ok
+test_central_node_and_antinode_separation (test_acoustic_model.AcousticTests) ... ok
+test_environment_changes_phase (test_acoustic_model.AcousticTests) ... ok
+test_export_keeps_lower_ids_and_disables_absent (test_acoustic_model.AcousticTests) ... ok
+test_focus_matches_triangle_bound (test_acoustic_model.AcousticTests) ... ok
+test_invalid_inputs_rejected (test_acoustic_model.AcousticTests) ... ok
+test_particle_units_and_no_guarantee (test_acoustic_model.AcousticTests) ... ok
+test_quantization_wrap_and_error (test_acoustic_model.AcousticTests) ... ok
+test_rear_radiation_suppressed (test_acoustic_model.AcousticTests) ... ok
+test_two_source_analytic_pressure (test_acoustic_model.AcousticTests) ... ok
+test_symmetry_and_gradient_step_convergence (test_potential_proxy.PotentialProxyTests) ... ok
+test_center_node_for_every_gap (test_radiating_geometry.RadiatingGeometryTests) ... ok
+test_corner_channel_mapping (test_radiating_geometry.RadiatingGeometryTests) ... ok
+test_envelope_and_travel_are_not_pcb_dimensions (test_radiating_geometry.RadiatingGeometryTests) ... ok
+test_gap_dependent_relative_phase_requires_new_map (test_radiating_geometry.RadiatingGeometryTests) ... ok
+test_gap_outside_limits_rejected (test_radiating_geometry.RadiatingGeometryTests) ... ok
+test_gap_sweep_keeps_xy_and_reflects_z (test_radiating_geometry.RadiatingGeometryTests) ... ok
+test_nominal_exact_grid_and_global_origin (test_radiating_geometry.RadiatingGeometryTests) ... ok
+test_SW01_coordinates (test_self_calibration.CalibrationTests) ... ok
+test_SW02_paths (test_self_calibration.CalibrationTests) ... ok
+test_SW03_sound_speed_reference (test_self_calibration.CalibrationTests) ... ok
+test_SW04_environment_limits (test_self_calibration.CalibrationTests) ... ok
+test_SW05_tof_fractional (test_self_calibration.CalibrationTests) ... ok
+test_SW06_phase_and_dc (test_self_calibration.CalibrationTests) ... ok
+test_SW07_circular_wrap (test_self_calibration.CalibrationTests) ... ok
+test_SW08_coarse_fine (test_self_calibration.CalibrationTests) ... ok
+test_SW09_ten_pose_cases (test_self_calibration.CalibrationTests) ... ok
+test_SW10_geometry_rejects_unobservable (test_self_calibration.CalibrationTests) ... ok
+test_SW11_resonance (test_self_calibration.CalibrationTests) ... ok
+test_SW12_common_carrier (test_self_calibration.CalibrationTests) ... ok
+test_SW13_full_raw_pipeline (test_self_calibration.CalibrationTests) ... ok
+test_SW14_phase_accuracy (test_self_calibration.CalibrationTests) ... ok
+test_SW15_frequency_accuracy (test_self_calibration.CalibrationTests) ... ok
+test_SW16_health_and_mask_policy (test_self_calibration.CalibrationTests) ... ok
+test_SW17_lut_separate_fields (test_self_calibration.CalibrationTests) ... ok
+test_SW18_database_hash_archive (test_self_calibration.CalibrationTests) ... ok
+test_SW19_signed_unpack_and_clip (test_self_calibration.CalibrationTests) ... ok
+test_SW20_control_errors_disable (test_self_calibration.CalibrationTests) ... ok
+test_SW21_rx_reference_is_explicit (test_self_calibration.CalibrationTests) ... ok
+test_SW22_fixed_seed (test_self_calibration.CalibrationTests) ... ok
+test_SW23_invalid_or_relative_lut_rejected (test_self_calibration.CalibrationTests) ... ok
+test_SW24_noisy_integer_tof (test_self_calibration.CalibrationTests) ... ok
+test_SW25_reject_synthetic_reference_for_real_capture (test_self_calibration.CalibrationTests) ... ok
+test_SW26_host_applies_common_frequency_before_field (test_self_calibration.CalibrationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 3.332s
+
+OK

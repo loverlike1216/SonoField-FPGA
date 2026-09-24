@@ -1,0 +1,215 @@
+{
+  "status": "PASS",
+  "target": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=no"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "log": "source_status.log"
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "log": "source_commit.log"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "E:\\Codex_project\\AMD-SonoField-FPGA",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "log": "clone.log"
+    },
+    {
+      "command": [
+        "git",
+        "sparse-checkout",
+        "init",
+        "--cone"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review",
+      "exit_code": 0,
+      "log": "sparse_init.log"
+    },
+    {
+      "command": [
+        "git",
+        "sparse-checkout",
+        "set",
+        "v2",
+        "shared",
+        "AI-chat-memory",
+        "AI-interaction-memory",
+        "AI-problem"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review",
+      "exit_code": 0,
+      "log": "sparse_scope.log"
+    },
+    {
+      "command": [
+        "git",
+        "checkout",
+        "main"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review",
+      "exit_code": 0,
+      "log": "checkout.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "venv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "log": "venv.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--cache-dir",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\pip_cache",
+        "-r",
+        "requirements-lock.txt"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2",
+      "exit_code": 0,
+      "log": "install.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2",
+      "exit_code": 0,
+      "log": "dependency_check.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "scripts/validate.py",
+        "--output",
+        "build/reproduced_evidence"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2",
+      "exit_code": 0,
+      "log": "full_validation.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.acoustic_model.visualize_field",
+        "--output",
+        "build/reproduced_model"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2",
+      "exit_code": 0,
+      "log": "model.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "scripts/check_repository.py"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2",
+      "exit_code": 0,
+      "log": "repository_audit.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "scripts/audit_bom.py"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2",
+      "exit_code": 0,
+      "log": "bom_audit.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "../AI-interaction-memory/tools",
+        "-p",
+        "test_sync_codex.py",
+        "-v"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2",
+      "exit_code": 0,
+      "log": "interaction_tests.log"
+    },
+    {
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.acoustic_model.export_geometry",
+        "--output",
+        "build/reproduced_coordinates"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\repro_v2_calibration_review\\v2",
+      "exit_code": 0,
+      "log": "coordinates.log"
+    }
+  ],
+  "started_utc": "2026-09-24T08:17:37.765367+00:00",
+  "source_commit": "9c058fe3b02469a6d36a08e3a7cbedd19076e67b",
+  "v1_worktree_present": false,
+  "coordinate_phase_csv_count": 19,
+  "model_csv_hashes": [
+    {
+      "file": "channel_mapping.csv",
+      "canonical_lf_sha256": "a28a1e1733ca49856ba2031ab9a91a77ff9e858e8232b6dee1af89cb0e929130"
+    },
+    {
+      "file": "emitter_scaling.csv",
+      "canonical_lf_sha256": "883af7b3d86c6d209dae0c9f57d0209272b19508f706cbc11a4eca02adae959a"
+    },
+    {
+      "file": "gap_response.csv",
+      "canonical_lf_sha256": "f4655bc55b5f3eda95ce8500cc915a4ad19327d258bad7ec5b6b2b42714109b6"
+    },
+    {
+      "file": "geometry_comparison.csv",
+      "canonical_lf_sha256": "ca92740597284c5e727c9d884d1abbde65c151fc01fb8de485494130cf25d788"
+    },
+    {
+      "file": "particle_scenarios.csv",
+      "canonical_lf_sha256": "dad4faebeb05ccb8b52d1a645e4eac2557cd90f6cccb868d7009c3373d069b4a"
+    },
+    {
+      "file": "reference_phase_map.csv",
+      "canonical_lf_sha256": "c800ed6d4c09fa716900df991fa74896c2dda081582379fe8156dc7ff4f1cf75"
+    }
+  ],
+  "digital_trace_sha256": "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054",
+  "V2_STANDALONE_REPRODUCIBILITY": "PASS",
+  "note": "Fresh sparse local clone/new venv with v1 absent on same Windows host; no physical board or independent OS"
+}
