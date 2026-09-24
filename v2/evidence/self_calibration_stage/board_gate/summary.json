@@ -1,0 +1,14 @@
+{
+  "status": "EXPECTED_BLOCK",
+  "exit_code": 1,
+  "command": [
+    "D:/Vivado/2025.2/2025.2/Vivado/bin/vivado.bat",
+    "-mode",
+    "batch",
+    "-nojournal",
+    "-source",
+    "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\scripts\\create_project.tcl"
+  ],
+  "reason": "Exact FPGA part unavailable; no synthesis attempted",
+  "matched_guard": true
+}

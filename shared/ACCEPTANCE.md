@@ -32,7 +32,7 @@ The table above remains bootstrap history. Current scope is SELF_CALIBRATION_SOF
 | Gate | Criterion and evidence |
 |---|---|
 | Inherited integrity | Same frozen 212-file v1 tree; all inherited tests and source coverage retained |
-| Python | 44 tests: 19 inherited + 25 calibration/control tests; full raw pipeline included |
+| Python | 45 tests: 19 inherited + 26 calibration/control tests; full raw pipeline included |
 | PL/ADC | CAL-TB01..15 plus fault tests under Icarus and Vivado 2025.2 XSim |
 | Raw roundtrip | 1024x8 signed samples, negative corner codes, exact Python->behavioral ADC->RTL->Python identity |
 | Sequence | Lower64..127 then upper0..63, four opposite RX paths each; 128 shorter RTL captures |

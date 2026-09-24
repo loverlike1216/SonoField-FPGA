@@ -10,6 +10,7 @@ from software.calibration.database import decode_frames,canonical
 from software.calibration.signal import estimate_tof,capture_quality
 from software.calibration.visualize import render
 from software.calibration.pipeline import phase_lut,process
+from software.calibration.report import write_report
 
 
 def main():
@@ -38,12 +39,13 @@ def main():
         repeats=[]
         for i in range(3):
             dest=work/f'python_repeat_{i}';record,diag,metrics=experiment(dest)
+            write_report(record,diag,metrics,dest)
             if not checks(metrics):raise AssertionError('Baseline estimator accuracy outside declared limits')
-            hashes={n:hashlib.sha256((dest/n).read_bytes()).hexdigest() for n in ['calibration.json','phase_lut.csv','channel_health.csv']}
+            hashes={n:hashlib.sha256((dest/n).read_bytes()).hexdigest() for n in ['calibration.json','phase_lut.csv','channel_health.csv','path_quality.csv','quality_summary.json']}
             repeats.append(hashes)
         if repeats[1:]!=[repeats[0]]*2:raise AssertionError('Nondeterministic calibration artifacts')
         summary['synthetic_end_to_end']=metrics;summary['repeated_artifacts']=repeats
-        for name in ['calibration.json','phase_lut.csv','channel_health.csv','report.md','metrics.json']:
+        for name in ['calibration.json','phase_lut.csv','channel_health.csv','path_quality.csv','quality_summary.json','report.md','metrics.json']:
             shutil.copy2(dest/name,output/name)
         render(cfg,record,diag,output/'plots')
         # Exact ADC round-trip includes signed corner codes, in the bank blanked for
@@ -52,6 +54,7 @@ def main():
         vector[0,4:]=[-32768,-1,0,32767]
         (work/'adc_vectors.hex').write_text('\n'.join(''.join(f'{int(v)&65535:04x}' for v in row[::-1]) for row in vector)+'\n')
         lut=phase_lut(cfg,record)
+        (work/'calibration_frequency.hex').write_text(f"{int(record['f_work']):08x}\n")
         (work/'calibration_map.hex').write_text('\n'.join(f"{(x['enabled']<<16)|(x['calibration_phase']<<8)|x['requested_phase']:05x}" for x in lut)+'\n')
         rtl=sorted((ROOT/'rtl').rglob('*.sv'));tb=[ROOT/'tb/ad7606b_model.sv',ROOT/'tb/tb_calibration.sv']
         iv=Path(os.environ.get('IVERILOG_BIN','C:/iverilog/bin'))

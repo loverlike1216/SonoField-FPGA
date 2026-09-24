@@ -3,7 +3,7 @@
 PROJECT_ID: SONOFIELD_FPGA
 project_name: SonoField-FPGA
 repository: https://github.com/loverlike1216/SonoField-FPGA.git
-workspace_path: E:\Codex-project\AMD-SonoField-FPGA
+workspace_path: E:\Codex_project\AMD-SonoField-FPGA
 branch: main
 active_version: v2; v1 FROZEN
 stage: SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM
@@ -80,9 +80,9 @@ remain separate 8-bit fields; physical polarity and RX group delay remain unmeas
 
 ## Validation
 
-44 Python tests PASS (19 inherited + 25 new). Inherited TB01..15 and CAL-TB01..15 plus fault tests PASS.
-[Validation summary](../v2/evidence/self_calibration_stage/validation/summary.json),
-[calibration summary](../v2/evidence/self_calibration_stage/validation/self_calibration/summary.json).
+45 Python tests PASS (19 inherited + 26 new). Inherited TB01..15 and CAL-TB01..15 plus fault tests PASS.
+[Validation summary](../v2/evidence/self_calibration_stage/validation_frequency/summary.json),
+[calibration summary](../v2/evidence/self_calibration_stage/validation_frequency/self_calibration/summary.json).
 
 ## Vivado Evidence
 
@@ -94,14 +94,15 @@ Tcl selects the integrated top and requests a CDC report only after the board ga
 
 Inherited counts 1/2/7/32/72/128 PASS. Three integrated acquisition runs return identical samples.
 128-TX scan covers both directions using 32-frame captures; full-buffer test uses 1024 frames.
-The generated calibrated phase map is loaded into the actual bank and normal field operation resumes.
+Computed f_work and the generated calibrated map are loaded into the actual engine; the normal
+field carrier period is measured against that selected frequency.
 
 ## Python Evidence
 
 Raw decoding, environment, TOF, phase/circular arithmetic, coarse/fine distance, robust pose,
 frequency optimizer, health, database and geometry/LUT tests pass. Relative-pressure plots:
-[focus](../v2/evidence/self_calibration_stage/validation/self_calibration/plots/field_focus.png),
-[standing wave](../v2/evidence/self_calibration_stage/validation/self_calibration/plots/field_standing_wave.png).
+[focus](../v2/evidence/self_calibration_stage/validation_frequency/self_calibration/plots/field_focus.png),
+[standing wave](../v2/evidence/self_calibration_stage/validation_frequency/self_calibration/plots/field_standing_wave.png).
 Research novelty is NOT_CONFIRMED; no novelty or absolute-force claim is inferred.
 
 ## End-to-End Synthetic Test
@@ -154,7 +155,7 @@ External interlock must cover clock loss/power transients. Independent user/Chat
 ## Files Changed
 
 New acquisition/calibration RTL and integrated top, generated registers, ADC model/testbench,
-software/calibration/characterization/control, configs and 25 tests. Validation/target Tcl extended.
+software/calibration/characterization/control, configs and 26 tests. Validation/target Tcl extended.
 Technical docs, shared state and observable interaction records updated. No frozen v1 edits,
 build caches or raw capture cubes committed.
 

@@ -119,7 +119,9 @@ def main():
             summary["independent_simulator"]="NOT_RUN"
         run("self_calibration_gate",[sys.executable,ROOT/"scripts/self_calibration_gate.py","--output",evidence/"self_calibration",*(["--skip-xsim"] if args.skip_xsim else [])],ROOT)
         summary["self_calibration_evidence"]="self_calibration/summary.json"
-        summary["source_sha256"]={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
+        # Git LF checkout must not invalidate identical SystemVerilog text from a CRLF worktree.
+        summary["source_hash_policy"]="CANONICAL_LF_UTF8"
+        summary["source_sha256"]={str(p.relative_to(ROOT)):hashlib.sha256(p.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
                                     for p in [*rtl,*sorted((ROOT/"tb").glob("*.sv"))]}
         summary["model_map_cases"]=[{"channels":n,"face_gap_mm":g*1000,"mode":m} for n,g,m in map_cases]
         summary["geometry_configuration"]=config

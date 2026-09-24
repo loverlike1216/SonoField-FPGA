@@ -77,7 +77,16 @@ def extract(source, expected_workspace):
                           "time": row.get("timestamp", "UNKNOWN"), "source_line": n})
         elif entry_type in ("function_call_output", "custom_tool_call_output"):
             outputs[item.get("call_id")] = {"time": row.get("timestamp", "UNKNOWN"), "source_line": n}
-    if not meta or Path(meta["cwd"]).resolve() != Path(expected_workspace).resolve():
+    workspace_match = bool(meta) and Path(meta["cwd"]).resolve() == Path(expected_workspace).resolve()
+    state_path = Path(expected_workspace) / "shared/PROJECT_STATE.json"
+    if meta and not workspace_match and state_path.exists():
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+        # A verified relocation is scoped to one project and session, never a global path bypass.
+        workspace_match = state.get("project_id") == "SONOFIELD_FPGA" and any(
+            item.get("thread_id") == meta["id"]
+            and Path(item["path"]).resolve() == Path(meta["cwd"]).resolve()
+            for item in state.get("verified_previous_workspaces", []))
+    if not workspace_match:
         raise ValueError("Session workspace does not match this repository")
     if not re.fullmatch(r"[a-zA-Z0-9-]+", meta["id"]):
         raise ValueError("Invalid session identity")

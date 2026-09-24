@@ -26,10 +26,13 @@ module tb_calibration;
  reg[31:0] before_word;
  reg checking=0;
  reg[16:0] calibrated_map[0:127];
+ reg[31:0] calibrated_frequency[0:0];
+ reg[63:0] normal_period_start;
  initial begin #20000000;$fatal(1,"CAL timeout");end
  always @(posedge clk)if(rst_n&&checking)begin
   if(dut.fault)$fatal(1,"Unexpected integrated fault %h",dut.bus_rdata);
   if(dut.calibrating && wave!=0 && wave!=(128'b1<<dut.selected_tx))$fatal(1,"More than selected TX driven");
+  if(dut.calibrating && !dut.burst_active && !oe)$fatal(1,"Stale output permit outside calibration burst");
   if(dut.scan_state>=1&&dut.scan_state<=3 && blank!=(dut.selected_tx>=64?2'b10:2'b01))$fatal(1,"Wrong RX blank direction");
   if(dut.burst_active)burst_ticks=burst_ticks+1;
   if(dut.frame_valid)begin
@@ -42,6 +45,7 @@ module tb_calibration;
  initial begin
   seen=0;burst_ticks=0;previous_stamp=0;
   $readmemh("calibration_map.hex",calibrated_map);
+  $readmemh("calibration_frequency.hex",calibrated_frequency);
   repeat(5)@(negedge clk);
   if(oe!==1||wave!==0)$fatal(1,"Reset not safe");
   rst_n=1;hardware_enable=1;
@@ -88,6 +92,7 @@ module tb_calibration;
   wait(dut.capture_ready);write_reg(REG_ACK_CAPTURE,1);wait(dut.scan_done);
   $display("PASS CAL-TB14 frequency sweep 38500/40000/41500 Hz and 400/800 kSPS");
   write_reg(REG_CONTROL,4);repeat(5)@(negedge clk);
+  write_reg(REG_FREQUENCY,calibrated_frequency[0]);
   for(k=0;k<128;k=k+1)begin
    write_reg(REG_MAP_CHANNEL,k);write_reg(REG_MAP_DATA,calibrated_map[k]);write_reg(REG_MAP_WRITE,1);
   end
@@ -96,10 +101,14 @@ module tb_calibration;
   for(k=0;k<128;k=k+1)
    if(dut.effective[k*8+:8]!==((calibrated_map[k][7:0]+calibrated_map[k][15:8])&8'hff))$fatal(1,"Calibrated phase sum %0d",k);
   write_reg(REG_MODE,MODE_NORMAL_FIELD);write_reg(REG_CONTROL,1);wait(!oe);
+  @(posedge dut.boundary);normal_period_start=dut.time_now;
+  @(posedge dut.boundary);
+  if(dut.time_now-normal_period_start<SYS_CLOCK_HZ/calibrated_frequency[0] ||
+     dut.time_now-normal_period_start>SYS_CLOCK_HZ/calibrated_frequency[0]+1)$fatal(1,"Computed f_work not applied to field engine");
   repeat(5000)@(negedge clk);
   $display("PASS CAL-TB12 return to normal field with Python calibrated atomic phase map");
   hardware_enable=0;#1;if(!oe)$fatal(1,"Hardware kill not asynchronous");
-  hardware_enable=1;write_reg(REG_CONTROL,4);repeat(5)@(negedge clk);
+  hardware_enable=1;write_reg(REG_CONTROL,4);
   write_reg(REG_MODE,MODE_CALIBRATE_GEOMETRY);write_reg(REG_CONTROL,3);
   wait(dut.burst_active);write_reg(REG_CONTROL,4);repeat(5)@(negedge clk);
   if(!oe||dut.burst_active||blank!=3)$fatal(1,"Abort not safe");

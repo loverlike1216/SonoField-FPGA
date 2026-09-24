@@ -1,7 +1,7 @@
 # SonoField-FPGA engineering rules
 
 Project SONOFIELD_FPGA; repository loverlike1216/SonoField-FPGA; branch main.
-Workspace E:\Codex-project\AMD-SonoField-FPGA. Active version v2; engineering root v2/.
+Workspace E:\Codex_project\AMD-SonoField-FPGA. Active version v2; engineering root v2/.
 The user-provided personalized rules govern execution. This file is their project-specific application.
 
 - Preflight local/remote Git, shared/PROJECT_STATE.json, VERSION_STATE.json, plan, decisions, blockers,

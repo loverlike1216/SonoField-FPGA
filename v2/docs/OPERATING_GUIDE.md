@@ -1,12 +1,12 @@
 # 从零操作与复现指南
 
 本工程当前是可验证的数字/模型基线，不是可直接下载上板的 bitstream。
-仓库根目录为 `E:\Codex-project\AMD-SonoField-FPGA`；运行目录为其 `v2` 子目录，已有板卡资料不要覆盖。
+仓库根目录为 `E:\Codex_project\AMD-SonoField-FPGA`；运行目录为其 `v2` 子目录，已有板卡资料不要覆盖。
 
 ## 1. 确认版本与工作区
 
 ```powershell
-Set-Location E:\Codex-project\AMD-SonoField-FPGA\v2
+Set-Location E:\Codex_project\AMD-SonoField-FPGA\v2
 git remote -v
 git branch --show-current
 git status --short
@@ -143,7 +143,7 @@ From v2 with the existing Python environment:
 ```
 
 The full validation command includes the dedicated calibration gate; do not run both for routine
-reproduction. The separate command is for targeted debug. Expect 44 Python tests, inherited TBs,
+reproduction. The separate command is for targeted debug. Expect 45 Python tests, inherited TBs,
 CAL-TB01..15, byte-identical ADC roundtrips, three JSON/CSV repeats, and explicit noise failures.
 800 kSPS/132 MHz is a simulation profile, not a board clock assertion. `--skip-xsim` marks PARTIAL.
 The raw calibration cube is ~65 MB and stays under build; 1024 frames per capture fit 16 KiB PL RAM.

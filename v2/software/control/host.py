@@ -58,6 +58,14 @@ class Controller:
 
     def acknowledge(self):self.write32(r.ACK_CAPTURE,1)
 
+    def apply_calibration(self, config, record, target=(0,0,0), field_mode='FOCUS'):
+        from ..calibration.pipeline import phase_lut
+        rows=phase_lut(config,record,target=target,field_mode=field_mode)
+        # Frequency and phase map are one host transaction sequence while outputs are safe.
+        self.configure(config,frequency=int(record['f_work']),count=1)
+        self.apply_map(rows)
+        return rows
+
     def apply_map(self, rows, mode=r.MODE_NORMAL_FIELD):
         if mode not in (r.MODE_NORMAL_FIELD,r.MODE_VALIDATE_FIELD):raise ValueError('Invalid field mode')
         if len(rows)!=128 or sorted(x['channel'] for x in rows)!=list(range(128)):raise ValueError('Complete unique map required')

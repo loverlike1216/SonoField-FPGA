@@ -1,0 +1,11 @@
+PASS CAL-TB13 safe OE during reset and verified ADC configuration
+PASS CAL-TB01 burst length / frequency; CAL-TB07 BUSY timing; CAL-TB08 frame capture; CAL-TB09 8-channel ordering
+PASS CAL-TB10 capture-buffer boundaries and backpressure; CAL-TB15 injected-vector exact comparison
+PASS CAL-TB02 single TX; CAL-TB03 64-channel scan order; CAL-TB04 lower-to-upper; CAL-TB05 upper-to-lower; CAL-TB06 RX blank state
+PASS CAL-TB14 frequency sweep 38500/40000/41500 Hz and 400/800 kSPS
+PASS CAL-TB12 return to normal field with Python calibrated atomic phase map
+PASS CAL-TB11 abort during calibration and asynchronous hardware kill
+PASS additional ADC timeout and safe mode
+PASS additional invalid register configuration fails closed
+PASS calibration digital system
+E:\Codex-project\AMD-SonoField-FPGA\v2\tb\tb_calibration.sv:126: $finish called at 7054809080 (1ps)

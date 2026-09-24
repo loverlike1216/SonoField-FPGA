@@ -40,3 +40,29 @@ Tool outputs containing provider/private prompts are not copied; safe exporter r
 ../../v2/evidence/self_calibration_stage/validation/summary.json and self_calibration/summary.json.
 ADCs require actual software initialization; RX phase references remain explicit hardware prerequisites.
 Software source and checks are reviewable without the physical board. No physical success is inferred.
+
+
+## Review and fresh-clone correction
+
+Source checkpoint 4e5f0478e036cfefbadb2f6ceeb2ef1d180b6467. The first sparse clone's full tests and
+model ran successfully, but repository audit rejected three RTL hashes after CRLF->LF checkout.
+Failure preserved in evidence/self_calibration_stage/reproducibility/summary.json. The hash policy
+now explicitly uses canonical UTF-8/LF for source text; frozen v1 byte hashes remain unchanged.
+Review also found a stale frame-enable token could survive a rapid abort/re-enable transition.
+Clearing the token on kill and gating calibration OE by live burst activity closes it; a new assertion
+checks no OE outside the burst. Full validation is rerun under validation_review before a new clone.
+Added a complete report generator with per-path quality CSV and health/mask/metadata summary.
+Privacy scan flagged only the public Icarus copyright email in --version output; manually reviewed
+as public license attribution and preserved. No credential was found; this is not private user data.
+
+Final integration gate also uploads computed f_work before the generated LUT, measures the
+normal carrier period, and tests the host transaction order (SW26). Final source validation
+is validation_frequency, 45 Python tests; earlier evidence retained with its original scope.
+
+## 2026-09-24 resume and workspace location
+
+The previously supplied E:\Codex-project path is absent. The same repository, HEAD 4e5f047
+and staged changes are present at E:\Codex_project\AMD-SonoField-FPGA. No move was performed
+by this resume. Current operational paths updated; historical evidence and frozen v1 unchanged.
+Fetch confirmed main is one local commit ahead, zero behind. ChatGPT history reader remains
+unavailable in the exposed tool catalog. Next: commit reviewed corrections and run fresh clone.

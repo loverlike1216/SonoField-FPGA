@@ -1,0 +1,42 @@
+[
+  {
+    "f0_rmse_hz": 51.67872231431506,
+    "f_work_hz": 40300.0,
+    "lut_status": "GENERATED",
+    "path_count": 512,
+    "phase_rmse_deg": 0.6073452809588495,
+    "pose_rms_mm": 0.0068031600074870404,
+    "raw_sha256": "cc6e6b260cb82219ffd8bf2447fbfc4dc22ad52c8b2c750729bb8a92846bf1fa",
+    "record_sha256": "1be42d3616a4b4aab100f03720fcfa5db17e254c68231cfccf1812c816150035",
+    "rotation_error_deg": 0.01685967757967064,
+    "snr_db": 35,
+    "status": "WITHIN_BASELINE_LIMITS",
+    "translation_error_mm": 0.020748169700379106,
+    "valid_channels": 128
+  },
+  {
+    "f0_rmse_hz": 153.33883355704683,
+    "f_work_hz": 40300.0,
+    "lut_status": "BLOCKED: Active channel lacks valid calibration; explicitly approve a mask before generating a LUT",
+    "path_count": 512,
+    "phase_rmse_deg": 1.8738108157052595,
+    "pose_rms_mm": 0.016957144618088428,
+    "raw_sha256": "7011c6b48919fef9dbfcbdeac78b3b07997bfd217fd8049fc69d2be306b37f86",
+    "record_sha256": "ab5d6ade6908cad1797d6e5af02fa9ca77103644250670481a5f681bfe625099",
+    "rotation_error_deg": 0.048758305873915636,
+    "snr_db": 25,
+    "status": "OUTSIDE_BASELINE_LIMITS",
+    "translation_error_mm": 0.07623337595162123,
+    "valid_channels": 127
+  },
+  {
+    "error": "Unconnected RX phase calibration graph",
+    "snr_db": 15,
+    "status": "REJECTED"
+  },
+  {
+    "error": "Too few characterized TX channels",
+    "snr_db": 5,
+    "status": "REJECTED"
+  }
+]

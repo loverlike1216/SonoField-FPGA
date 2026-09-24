@@ -128,3 +128,8 @@ Sources: [AD7606B Rev B](https://www.analog.com/media/en/technical-documentation
 [Cramer original](https://doi.org/10.1121/1.405827),
 [ETH acoustics equations](https://people.ee.ethz.ch/~isistaff/courses/ak1/skriptA1-english_2024.pdf),
 [independent humid-air reference](https://doi.org/10.1063/5.0294663).
+
+Host `apply_calibration` first writes computed f_work while SAFE, then uploads the complete LUT
+and restores NORMAL_FIELD. The integrated test measures the resulting runtime carrier period.
+Complete run report entry: `python -m software.calibration.report --output build/calibration_report`.
+The full validation gate also writes path_quality.csv and quality_summary.json.

@@ -56,7 +56,9 @@ def main():
     summary=json.loads((REPO/state["digital_evidence"]).read_text(encoding="utf-8"))
     if summary["status"]!="PASS":errors.append("Digital gate not PASS")
     for path,digest in summary["source_sha256"].items():
-        if hashlib.sha256((ROOT/path.replace("\\","/")).read_bytes()).hexdigest()!=digest:errors.append("Stale RTL evidence "+path)
+        source=ROOT/path.replace("\\","/")
+        data=source.read_text(encoding="utf-8").encode("utf-8") if summary.get("source_hash_policy")=="CANONICAL_LF_UTF8" else source.read_bytes()
+        if hashlib.sha256(data).hexdigest()!=digest:errors.append("Stale RTL evidence "+path)
     for path,digest in summary.get("source_text_sha256",{}).items():
         if hashlib.sha256((ROOT/path).read_text(encoding="utf-8").encode("utf-8")).hexdigest()!=digest:errors.append("Stale model/control evidence "+path)
     if list((ROOT/"constraints").glob("*.xdc")):errors.append("Unexpected XDC before board gate")

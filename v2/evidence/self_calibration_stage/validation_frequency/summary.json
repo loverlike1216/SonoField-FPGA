@@ -1,0 +1,1080 @@
+{
+  "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "win32",
+  "commands": [
+    {
+      "label": "python_tests",
+      "command": [
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2",
+      "started_utc": "2026-09-21T08:05:23.249297+00:00",
+      "exit_code": 0,
+      "log": "python_tests.log"
+    },
+    {
+      "label": "iverilog_version",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-V"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:27.474819+00:00",
+      "exit_code": 0,
+      "log": "iverilog_version.log"
+    },
+    {
+      "label": "compile_core_1",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_core",
+        "-Ptb_core.CHANNELS=1",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_1.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_core.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:27.532845+00:00",
+      "exit_code": 0,
+      "log": "compile_core_1.log"
+    },
+    {
+      "label": "run_core_1_0",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_1.vvp",
+        "+TRACE=E:/Codex-project/AMD-SonoField-FPGA/v2/build/validation/core_1_0.csv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:27.576357+00:00",
+      "exit_code": 0,
+      "log": "run_core_1_0.log"
+    },
+    {
+      "label": "compile_core_2",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_core",
+        "-Ptb_core.CHANNELS=2",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_2.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_core.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:27.680152+00:00",
+      "exit_code": 0,
+      "log": "compile_core_2.log"
+    },
+    {
+      "label": "run_core_2_0",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_2.vvp",
+        "+TRACE=E:/Codex-project/AMD-SonoField-FPGA/v2/build/validation/core_2_0.csv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:27.729182+00:00",
+      "exit_code": 0,
+      "log": "run_core_2_0.log"
+    },
+    {
+      "label": "compile_core_7",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_core",
+        "-Ptb_core.CHANNELS=7",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_7.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_core.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:27.857473+00:00",
+      "exit_code": 0,
+      "log": "compile_core_7.log"
+    },
+    {
+      "label": "run_core_7_0",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_7.vvp",
+        "+TRACE=E:/Codex-project/AMD-SonoField-FPGA/v2/build/validation/core_7_0.csv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:27.904049+00:00",
+      "exit_code": 0,
+      "log": "run_core_7_0.log"
+    },
+    {
+      "label": "compile_core_32",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_core",
+        "-Ptb_core.CHANNELS=32",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_32.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_core.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:28.170069+00:00",
+      "exit_code": 0,
+      "log": "compile_core_32.log"
+    },
+    {
+      "label": "run_core_32_0",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_32.vvp",
+        "+TRACE=E:/Codex-project/AMD-SonoField-FPGA/v2/build/validation/core_32_0.csv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:28.230105+00:00",
+      "exit_code": 0,
+      "log": "run_core_32_0.log"
+    },
+    {
+      "label": "compile_core_72",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_core",
+        "-Ptb_core.CHANNELS=72",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_72.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_core.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:29.239745+00:00",
+      "exit_code": 0,
+      "log": "compile_core_72.log"
+    },
+    {
+      "label": "run_core_72_0",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_72.vvp",
+        "+TRACE=E:/Codex-project/AMD-SonoField-FPGA/v2/build/validation/core_72_0.csv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:29.291762+00:00",
+      "exit_code": 0,
+      "log": "run_core_72_0.log"
+    },
+    {
+      "label": "compile_core_128",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_core",
+        "-Ptb_core.CHANNELS=128",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_128.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_core.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:31.517581+00:00",
+      "exit_code": 0,
+      "log": "compile_core_128.log"
+    },
+    {
+      "label": "run_core_128_0",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_128.vvp",
+        "+TRACE=E:/Codex-project/AMD-SonoField-FPGA/v2/build/validation/core_128_0.csv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:31.576720+00:00",
+      "exit_code": 0,
+      "log": "run_core_128_0.log"
+    },
+    {
+      "label": "run_core_128_1",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_128.vvp",
+        "+TRACE=E:/Codex-project/AMD-SonoField-FPGA/v2/build/validation/core_128_1.csv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:35.651429+00:00",
+      "exit_code": 0,
+      "log": "run_core_128_1.log"
+    },
+    {
+      "label": "run_core_128_2",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\core_128.vvp",
+        "+TRACE=E:/Codex-project/AMD-SonoField-FPGA/v2/build/validation/core_128_2.csv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:39.730614+00:00",
+      "exit_code": 0,
+      "log": "run_core_128_2.log"
+    },
+    {
+      "label": "compile_tb_system",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_system",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_system.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_system.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:43.803602+00:00",
+      "exit_code": 0,
+      "log": "compile_tb_system.log"
+    },
+    {
+      "label": "run_tb_system",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_system.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:43.870503+00:00",
+      "exit_code": 0,
+      "log": "run_tb_system.log"
+    },
+    {
+      "label": "compile_tb_serializer_fault",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_serializer_fault",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_serializer_fault.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_serializer_fault.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:44.239394+00:00",
+      "exit_code": 0,
+      "log": "compile_tb_serializer_fault.log"
+    },
+    {
+      "label": "run_tb_serializer_fault",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_serializer_fault.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:44.282784+00:00",
+      "exit_code": 0,
+      "log": "run_tb_serializer_fault.log"
+    },
+    {
+      "label": "compile_model_map",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_phase_map",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_phase_map.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:44.297291+00:00",
+      "exit_code": 0,
+      "log": "compile_model_map.log"
+    },
+    {
+      "label": "model_map_2_standing_wave_100mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:44.362975+00:00",
+      "exit_code": 0,
+      "log": "model_map_2_standing_wave_100mm.log"
+    },
+    {
+      "label": "model_map_32_standing_wave_100mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:44.480316+00:00",
+      "exit_code": 0,
+      "log": "model_map_32_standing_wave_100mm.log"
+    },
+    {
+      "label": "model_map_72_standing_wave_100mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:44.595377+00:00",
+      "exit_code": 0,
+      "log": "model_map_72_standing_wave_100mm.log"
+    },
+    {
+      "label": "model_map_128_standing_wave_90mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:44.726943+00:00",
+      "exit_code": 0,
+      "log": "model_map_128_standing_wave_90mm.log"
+    },
+    {
+      "label": "model_map_128_focus_90mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:44.888508+00:00",
+      "exit_code": 0,
+      "log": "model_map_128_focus_90mm.log"
+    },
+    {
+      "label": "model_map_128_standing_wave_100mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:45.035578+00:00",
+      "exit_code": 0,
+      "log": "model_map_128_standing_wave_100mm.log"
+    },
+    {
+      "label": "model_map_128_focus_100mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:45.191695+00:00",
+      "exit_code": 0,
+      "log": "model_map_128_focus_100mm.log"
+    },
+    {
+      "label": "model_map_128_standing_wave_115mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:45.336771+00:00",
+      "exit_code": 0,
+      "log": "model_map_128_standing_wave_115mm.log"
+    },
+    {
+      "label": "model_map_128_focus_115mm",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\tb_phase_map.vvp"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:45.478347+00:00",
+      "exit_code": 0,
+      "log": "model_map_128_focus_115mm.log"
+    },
+    {
+      "label": "compile_bandwidth_guard",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "-s",
+        "tb_bad_bandwidth",
+        "-o",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\bad_bandwidth.vvp",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_bad_bandwidth.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:45.614949+00:00",
+      "exit_code": 0,
+      "log": "compile_bandwidth_guard.log"
+    },
+    {
+      "label": "xvlog",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "-i",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\generated",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_digital_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\sono_top.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_core.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_system.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_serializer_fault.sv",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\tb\\tb_phase_map.sv"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:45.739071+00:00",
+      "exit_code": 0,
+      "log": "xvlog.log"
+    },
+    {
+      "label": "xelab_tb_core",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_core",
+        "--snapshot",
+        "tb_core_snapshot",
+        "--debug",
+        "typical"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:46.412063+00:00",
+      "exit_code": 0,
+      "log": "xelab_tb_core.log"
+    },
+    {
+      "label": "xsim_tb_core_0",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_core_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:48.918812+00:00",
+      "exit_code": 0,
+      "log": "xsim_tb_core_0.log"
+    },
+    {
+      "label": "xsim_tb_core_1",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_core_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:52.157885+00:00",
+      "exit_code": 0,
+      "log": "xsim_tb_core_1.log"
+    },
+    {
+      "label": "xsim_tb_core_2",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_core_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:55.395257+00:00",
+      "exit_code": 0,
+      "log": "xsim_tb_core_2.log"
+    },
+    {
+      "label": "xelab_tb_system",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_system",
+        "--snapshot",
+        "tb_system_snapshot",
+        "--debug",
+        "typical"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:05:58.628902+00:00",
+      "exit_code": 0,
+      "log": "xelab_tb_system.log"
+    },
+    {
+      "label": "xsim_tb_system_0",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_system_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:01.226041+00:00",
+      "exit_code": 0,
+      "log": "xsim_tb_system_0.log"
+    },
+    {
+      "label": "xelab_tb_serializer_fault",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_serializer_fault",
+        "--snapshot",
+        "tb_serializer_fault_snapshot",
+        "--debug",
+        "typical"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:03.645044+00:00",
+      "exit_code": 0,
+      "log": "xelab_tb_serializer_fault.log"
+    },
+    {
+      "label": "xsim_tb_serializer_fault_0",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_serializer_fault_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:04.582298+00:00",
+      "exit_code": 0,
+      "log": "xsim_tb_serializer_fault_0.log"
+    },
+    {
+      "label": "xelab_tb_phase_map",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_phase_map",
+        "--snapshot",
+        "tb_phase_map_snapshot",
+        "--debug",
+        "typical"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:07.003762+00:00",
+      "exit_code": 0,
+      "log": "xelab_tb_phase_map.log"
+    },
+    {
+      "label": "xsim_model_map_128_standing_wave_90mm",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_phase_map_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:09.364308+00:00",
+      "exit_code": 0,
+      "log": "xsim_model_map_128_standing_wave_90mm.log"
+    },
+    {
+      "label": "xsim_model_map_128_focus_90mm",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_phase_map_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:11.758814+00:00",
+      "exit_code": 0,
+      "log": "xsim_model_map_128_focus_90mm.log"
+    },
+    {
+      "label": "xsim_model_map_128_standing_wave_100mm",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_phase_map_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:14.173121+00:00",
+      "exit_code": 0,
+      "log": "xsim_model_map_128_standing_wave_100mm.log"
+    },
+    {
+      "label": "xsim_model_map_128_focus_100mm",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_phase_map_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:16.583755+00:00",
+      "exit_code": 0,
+      "log": "xsim_model_map_128_focus_100mm.log"
+    },
+    {
+      "label": "xsim_model_map_128_standing_wave_115mm",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_phase_map_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:18.998690+00:00",
+      "exit_code": 0,
+      "log": "xsim_model_map_128_standing_wave_115mm.log"
+    },
+    {
+      "label": "xsim_model_map_128_focus_115mm",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_phase_map_snapshot",
+        "--runall"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation",
+      "started_utc": "2026-09-21T08:06:21.410553+00:00",
+      "exit_code": 0,
+      "log": "xsim_model_map_128_focus_115mm.log"
+    },
+    {
+      "label": "self_calibration_gate",
+      "command": [
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\scripts\\self_calibration_gate.py",
+        "--output",
+        "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\evidence\\self_calibration_stage\\validation_frequency\\self_calibration"
+      ],
+      "cwd": "E:\\Codex-project\\AMD-SonoField-FPGA\\v2",
+      "started_utc": "2026-09-21T08:06:23.814574+00:00",
+      "exit_code": 0,
+      "log": "self_calibration_gate.log"
+    }
+  ],
+  "status": "PASS",
+  "bandwidth_guard": {
+    "status": "PASS",
+    "expected_nonzero_exit": 1,
+    "command": [
+      "C:\\iverilog\\bin\\vvp.exe",
+      "E:\\Codex-project\\AMD-SonoField-FPGA\\v2\\build\\validation\\bad_bandwidth.vvp"
+    ]
+  },
+  "python_oracles": [
+    {
+      "test": "TB14",
+      "status": "PASS",
+      "channels": 1,
+      "cycles": 8250,
+      "channel_cycle_comparisons": 8250,
+      "commit_cycles": [
+        825,
+        4950
+      ],
+      "sha256": "91bf1d0c83e3d250828a86066960958ca4bcf904ccc696b3cf512bffac3eb792"
+    },
+    {
+      "test": "TB14",
+      "status": "PASS",
+      "channels": 2,
+      "cycles": 8250,
+      "channel_cycle_comparisons": 16500,
+      "commit_cycles": [
+        825,
+        4950
+      ],
+      "sha256": "fa52b5d4b540535f06b152f89bd0799cefbd0e31c514fd36cb8a72089b39b79a"
+    },
+    {
+      "test": "TB14",
+      "status": "PASS",
+      "channels": 7,
+      "cycles": 8250,
+      "channel_cycle_comparisons": 57750,
+      "commit_cycles": [
+        825,
+        4950
+      ],
+      "sha256": "f03bcb80d997187799c915822b7ec670926c0efacc725d18d83e808b4c7771d0"
+    },
+    {
+      "test": "TB14",
+      "status": "PASS",
+      "channels": 32,
+      "cycles": 8250,
+      "channel_cycle_comparisons": 264000,
+      "commit_cycles": [
+        825,
+        4950
+      ],
+      "sha256": "c939320a906655f4c8d030e3d9fa74f9ac5ebdd29e6d523adde89572c8827e0b"
+    },
+    {
+      "test": "TB14",
+      "status": "PASS",
+      "channels": 72,
+      "cycles": 8250,
+      "channel_cycle_comparisons": 594000,
+      "commit_cycles": [
+        825,
+        4950
+      ],
+      "sha256": "65aab47f00323c602b45cc67b9cda0b887cd7d0884424a101d9a322d72c940f1"
+    },
+    {
+      "test": "TB14",
+      "status": "PASS",
+      "channels": 128,
+      "cycles": 8250,
+      "channel_cycle_comparisons": 1056000,
+      "commit_cycles": [
+        825,
+        4950
+      ],
+      "sha256": "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054"
+    },
+    {
+      "test": "TB14",
+      "status": "PASS",
+      "channels": 128,
+      "cycles": 8250,
+      "channel_cycle_comparisons": 1056000,
+      "commit_cycles": [
+        825,
+        4950
+      ],
+      "sha256": "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054"
+    },
+    {
+      "test": "TB14",
+      "status": "PASS",
+      "channels": 128,
+      "cycles": 8250,
+      "channel_cycle_comparisons": 1056000,
+      "commit_cycles": [
+        825,
+        4950
+      ],
+      "sha256": "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054"
+    }
+  ],
+  "TB15": {
+    "status": "PASS",
+    "repetitions": 3,
+    "hashes": [
+      "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054",
+      "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054",
+      "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054"
+    ]
+  },
+  "independent_simulator": "Vivado 2025.2 XSim; 3 traces byte-identical to Icarus",
+  "self_calibration_evidence": "self_calibration/summary.json",
+  "source_hash_policy": "CANONICAL_LF_UTF8",
+  "source_sha256": {
+    "rtl\\acquisition\\ad7606b_if.sv": "136678f0c6880ec26164884da54ee26af68a37657819cb517cff931244a5022c",
+    "rtl\\acquisition\\adc_serial.sv": "8647a75428cc5d06eef1130e8917efbca489acd5b17f73f8a19a66d9b6f319cb",
+    "rtl\\calibration\\burst_generator.sv": "3150b3766c786b493cb1eaaf2b46eea966c92160afe607baabca42f189649085",
+    "rtl\\calibration\\calibration_scheduler.sv": "ce32fbaf7855425ac153584bc987f6a5775650316452c59c6d7db7f79547b22b",
+    "rtl\\control\\safety_controller.sv": "3949c09e0aedeaeeb0169f50d02c80767730feca420087e080f1530b0ff90657",
+    "rtl\\output\\channel_waveform.sv": "97237593ed1f7fa2a4e006f38bc2262402029af88854d1a68ea3f5551c550b74",
+    "rtl\\output\\serializer.sv": "5d20788a6428cdfd46a7ba9b4163444e1c426dede85f046e86fe6836cd43e174",
+    "rtl\\phase\\phase_bank.sv": "f93cab9b10f51d824bfbf6d1fd0a67cd3cb5d779db6ffaa9d6e0c3d329f3168e",
+    "rtl\\sono_core.sv": "1d25f9c9ea884773397febfb57fca2c1a3a779f46bb9d63893186bdac88d207d",
+    "rtl\\sono_digital_system.sv": "80caf66082c162ff51fda15ed8403de2e80d5aa3b3f95afc8b0baabf156e92e3",
+    "rtl\\sono_top.sv": "6fdba0c92cf82e37e3247047a97168fc21da74a91d37ce9b1d5061c8c64e5427",
+    "rtl\\timing\\ultrasonic_timebase.sv": "f03a66f998b6df3d5adecd094bbc7964736ca1fc495ae958c85baa0e4ef36f8b",
+    "tb\\ad7606b_model.sv": "50ba0e2c0248c0c842bed7ff5c234fcfdc463e1579bf82b405cedbbca63d0fb1",
+    "tb\\tb_bad_bandwidth.sv": "ba7a63df1a2fc66abdd05d1e0a09a8a1f5c8638a073236316aa88bd985a81318",
+    "tb\\tb_calibration.sv": "90828812d79813f8e23cd988a82235c73630d3bc7d94e7875f794b3daf0369ea",
+    "tb\\tb_core.sv": "a1fb348297c833e6e7e2211c7978d85887a3b9e74277b0afc9f9e8c5afe1899a",
+    "tb\\tb_phase_map.sv": "e39bed44f032db29983221aee2e8d213a795351e9cbbce76b116d5f912c3f65b",
+    "tb\\tb_serializer_fault.sv": "82884280a08dd7dc168fa942dcd222bc10e3dcf71918bf34b7a30d331a01735c",
+    "tb\\tb_system.sv": "a6a0aacf610f28f2c43e92a007ed5b3b885a008988ab44be1de25204a05b7519"
+  },
+  "model_map_cases": [
+    {
+      "channels": 2,
+      "face_gap_mm": 100.0,
+      "mode": "STANDING_WAVE"
+    },
+    {
+      "channels": 32,
+      "face_gap_mm": 100.0,
+      "mode": "STANDING_WAVE"
+    },
+    {
+      "channels": 72,
+      "face_gap_mm": 100.0,
+      "mode": "STANDING_WAVE"
+    },
+    {
+      "channels": 128,
+      "face_gap_mm": 90.0,
+      "mode": "STANDING_WAVE"
+    },
+    {
+      "channels": 128,
+      "face_gap_mm": 90.0,
+      "mode": "FOCUS"
+    },
+    {
+      "channels": 128,
+      "face_gap_mm": 100.0,
+      "mode": "STANDING_WAVE"
+    },
+    {
+      "channels": 128,
+      "face_gap_mm": 100.0,
+      "mode": "FOCUS"
+    },
+    {
+      "channels": 128,
+      "face_gap_mm": 115.0,
+      "mode": "STANDING_WAVE"
+    },
+    {
+      "channels": 128,
+      "face_gap_mm": 115.0,
+      "mode": "FOCUS"
+    }
+  ],
+  "geometry_configuration": {
+    "classification": "SIMULATION_ESTIMATE",
+    "sound_speed_m_s": 343.0,
+    "attenuation_np_m": 0.0,
+    "geometry": {
+      "total": 128,
+      "pitch": 0.012,
+      "gap": 0.1,
+      "shape": "planar",
+      "radius": 0.18,
+      "diameter": 0.01,
+      "frequency": 40000.0
+    },
+    "coordinate_reference": "RADIATING_SURFACE_CENTER",
+    "origin": "GEOMETRIC_CENTER_OF_RADIATING_SURFACE_CENTERS",
+    "gap_range_m": [
+      0.09,
+      0.115
+    ],
+    "gap_sweep_m": [
+      0.09,
+      0.095,
+      0.1,
+      0.105,
+      0.11,
+      0.115
+    ],
+    "transducer": {
+      "designation": "TCT40_10MM_CANDIDATE",
+      "exact_part": null,
+      "supplier_claim_body_diameter_m": 0.01,
+      "supplier_claim_body_height_m": 0.007,
+      "supplier_claim_pin_pitch_m": 0.005,
+      "supplier_claim_pin_diameter_m": 0.00065,
+      "supplier_claim_exposed_pin_length_m": 0.007,
+      "active_aperture_diameter_m": null,
+      "capacitance_pf": null,
+      "continuous_drive_rating_vpp": null,
+      "model_aperture_assumption_m": 0.01,
+      "mounting_standoff_m": null
+    },
+    "mode": "STANDING_WAVE",
+    "target_m": [
+      0,
+      0,
+      0
+    ],
+    "monte_carlo": {
+      "seed": 7020,
+      "trials": 50,
+      "phase_error_std_degrees": 15.0,
+      "relative_amplitude_std": 0.1
+    },
+    "notes": "User-defined nominal planar geometry. Gap and XY coordinates reference radiating face centers, never PCB planes. Supplier-image dimensions are unmeasured. Acoustic piston diameter is a 10 mm approximation, not a measured active aperture. Curved comparisons are research alternatives only."
+  },
+  "source_text_sha256": {
+    "software/__init__.py": "7bda9b5d67fc4a63e4c1b14b7f2c51bdc32038527c8a4db3a028a0369747aa27",
+    "software/acoustic_model/__init__.py": "c1b125e3750409868a93b8c990d27746820ce5089d34d51a3ff2d5d73d1924ff",
+    "software/acoustic_model/array_geometry.py": "537c0a2029490565c133cf9a113b0ccf02a1ef5c1a8b46b61f292897171b8847",
+    "software/acoustic_model/export_geometry.py": "36359f7672bc3ecc873060dbdfce60bcaac8f539a56d8ab881d493e0b5a83738",
+    "software/acoustic_model/field_solver.py": "1d2353c7b160286ac31c22bec7a29db783ef4ac25a1dabb5fa1f6efeab5adeb9",
+    "software/acoustic_model/particle_model.py": "8953cbc7cdc84075260b34a8740ef277d296d1a6f29b422f1453d5f3f11f0625",
+    "software/acoustic_model/phase_lut_generator.py": "988ddf1f22528ad245c62c2a95c0f0d404e8cd1c676b35e91d68f65d9e939eef",
+    "software/acoustic_model/phase_solver.py": "995922c984babfb8a7cb3f862e2e92eb97f96d89d43ebfa629e159eddf81c8da",
+    "software/acoustic_model/standing_wave.py": "1d1927d02ddba0daa7a1d2690f16b1ddcd5a1bd85015f9d38f009d460d2f08d7",
+    "software/acoustic_model/transducer.py": "f7a275a0904304c156447ff128bd1fb38b8e8f9d918afb3508f7152d056453de",
+    "software/acoustic_model/visualize_field.py": "f9a00d01b1815fef6abbeb87fcf88f5c254a82bed33c139072625c6fea9a3234",
+    "software/calibration/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "software/calibration/config.py": "8ba5038def8ec08cd314eb8898fd5e41f7b296501cbdd1d0101192e96fa6973c",
+    "software/calibration/database.py": "103f5d1d98fc2cc968afd0b7a4ad6a80ff09e32afd8895f9dbdd8d9401dfc5a8",
+    "software/calibration/experiment.py": "cd790a60856d650e984da4600a17c67b82ddd094356f56450fa2f01bff626169",
+    "software/calibration/geometry.py": "ae0dcd6a7f0507f939bea2b512b05447ffcfbf002a6e5c053cc0dae9ce43e0ac",
+    "software/calibration/pipeline.py": "23805a93136db41d11a0b098a1d3437967312e80e8e9eb45a984cc14af5cd69e",
+    "software/calibration/report.py": "09f129c49043835717a43d286a70132a6fef279092d03fe849c6533572c85f02",
+    "software/calibration/signal.py": "517592dccb1a2d41c972744bb67a368faf7acbc7e5261e9ce0fa8b47064233cc",
+    "software/calibration/sound_speed.py": "98f953b4258a577f75e4ccd624f48d42ef40577d7c1a0c40d2e9e7f982a485b8",
+    "software/calibration/synthetic.py": "7d09e09c72d6a302c1c034a40e4acbb9c9d941f332d12b8e5a28dc63daa9de1b",
+    "software/calibration/visualize.py": "0db14b445c7857cb8473b3c3251d75f6a43e34befc05722ac25e28b21d10132f",
+    "software/characterization/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "software/characterization/response.py": "bc2a8552cbf5c7732522a239a64f644f3d1b0c221c3985a52db63812df4b3e16",
+    "software/control/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "software/control/host.py": "5afa3ce56adcfc3afeda9ae1a2051502610fe66050825acb20dcae724ba524fa",
+    "software/control/registers.py": "8be6700ce5131cd3928c1a9dbd7837615e7d414240b5e904392e87931d84cbe3",
+    "tests/test_acoustic_model.py": "10cbf65e25262a0d2b02a523a8a25df50499fdec53afc22e83c03adf18edf7e5",
+    "tests/test_potential_proxy.py": "96a8889ade5ff1b8f8fcddd7fad810d6bea34b3c054674053b8466e1788bc9ec",
+    "tests/test_radiating_geometry.py": "233524bbfbb1875884369fb9f1d6d1ddd3504677701569feb5c716d357bbdd1b",
+    "tests/test_self_calibration.py": "85d0d679c4922b1028bebe1a988fd0812ef0a00de532c9ee944031857f3afb2c",
+    "scripts/audit_board.py": "de5cbf385f6259b5bdf988ce35cc5f9e934ea5cdfb6309aafa4bdc401f48f51e",
+    "scripts/audit_bom.py": "234cd5b77305412fb2ac03725811b02051779c97c3bda21c671f37c2ac05884c",
+    "scripts/check_migration.py": "3b8e2cd16eca8fc271d524fdd615252dff49c64e15c2a5139f07447e7866f7b0",
+    "scripts/check_repository.py": "2f1b86e0fa5a31405589e95e586de70d34ff2f1bdb103f4a0ecf5a2ca611c2e7",
+    "scripts/check_waveform.py": "de91275544f88505de660e3a561cb2b46822f4532ef159bd00da23e1d2bb3115",
+    "scripts/generate_system.py": "d89bdec66e4c75097551f641021d403a8525f46d8a93aa34d82b97905e8f89a9",
+    "scripts/reproduce.py": "a288c29f8e887eb15221934d9b446136f430c065f6581a16aa190e422fa2407a",
+    "scripts/self_calibration_gate.py": "5094336e8dc4bb088b66cb6c218b45817df502bb7724c665b477027ab6c52b3e",
+    "scripts/validate.py": "00e3c1d9be0fb8f462da8bd09a65ec75baaf13ac7df37a5cf68563a06a8b8a49",
+    "config/acoustic_baseline.json": "2368c19cd55c69c00f4dd2dbf0c0944005e0533d819ca3ddfb2aade3e284efba",
+    "config/board_facts.json": "ff321610f7e7959ced6f4055456575b6fbce58ef3344b198735b3144d0593df3",
+    "config/hardware_parts.json": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
+    "config/register_map.json": "237a081d82bd960e9e64357a33573c3819c3a99f01e28e8969e39e33d9df3499",
+    "config/system_baseline.json": "d2b3c3f824ec6aa76775290677d283f9d0d17388e16b7fed9715a3e8e52a036c",
+    "rtl/generated/registers.svh": "7d4e89cbe0f79f3ec3db6e5f36e41221493469cba11468ea2fe17ce44efd38a8"
+  }
+}

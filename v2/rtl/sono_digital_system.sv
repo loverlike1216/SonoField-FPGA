@@ -90,13 +90,13 @@ module sono_digital_system #(
   if(!core_rst)begin frame_armed<=0;published<=0;tx_enable_timestamp<=0;end
   else begin
    if(tick)frame_armed<=!kill && ((normal&&map_valid)||(calibrating&&burst_active));
-   if(kill)published<=0;else if(frame_done)begin
+   if(kill)begin published<=0;frame_armed<=0;end else if(frame_done)begin
     published<=frame_armed;
     if(frame_armed&&!published&&calibrating)tx_enable_timestamp<=time_now;
    end
   end
  // External hardware kill bypasses synchronizers for immediate disable; release is synchronous.
- assign output_disable=!rst_n||!hardware_enable||kill||!published;
+ assign output_disable=!rst_n||!hardware_enable||kill||!published||(calibrating&&!burst_active);
  assign irq=capture_ready||scan_done||fault;
  assign bus_ready=bus_valid;
  integer i;

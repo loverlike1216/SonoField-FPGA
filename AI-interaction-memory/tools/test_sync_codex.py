@@ -64,6 +64,20 @@ class CaptureTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "workspace"):
             sync.extract(self.source, self.repo / "different")
 
+    def test_verified_relocation_is_session_scoped(self):
+        self.fixture()
+        moved = self.repo / "relocated"
+        (moved / "shared").mkdir(parents=True)
+        state = moved / "shared/PROJECT_STATE.json"
+        record = {"project_id": "SONOFIELD_FPGA", "verified_previous_workspaces": [
+            {"path": str(self.repo), "thread_id": "test-thread"}]}
+        state.write_text(json.dumps(record), encoding="utf-8")
+        self.assertEqual(len(sync.extract(self.source, moved)[1]), 3)
+        record["verified_previous_workspaces"][0]["thread_id"] = "other-thread"
+        state.write_text(json.dumps(record), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "workspace"):
+            sync.extract(self.source, moved)
+
     def test_version_change_preserves_message_history(self):
         self.fixture()
         state = self.repo / 'shared/PROJECT_STATE.json'

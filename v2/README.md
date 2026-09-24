@@ -8,7 +8,7 @@
 |---|---|
 | PROJECT_ID | SONOFIELD_FPGA |
 | Repository | https://github.com/loverlike1216/SonoField-FPGA |
-| Workspace | E:\Codex-project\AMD-SonoField-FPGA |
+| Workspace | E:\Codex_project\AMD-SonoField-FPGA |
 | Branch / version | main / v2 |
 | Stage | SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM |
 | Board / EDA | Robei Zynq-7020 / AMD Vivado 2025.2 |
@@ -37,7 +37,7 @@ python -m venv ..\.venv
 ..\.venv\Scripts\python.exe scripts/validate.py --output build/verification_review
 ```
 
-成功标准：44 项 Python 测试通过；Icarus 多通道配置通过；XSim 通过；三次 128 路轨迹与
+成功标准：45 项 Python 测试通过；Icarus 多通道配置通过；XSim 通过；三次 128 路轨迹与
 独立 Python 参考、另一模拟器一致；最终 JSON `status=PASS`。不要只根据退出码或波形图片判断。
 `--skip-xsim` 只产生 PARTIAL，不能当完整验证通过。
 

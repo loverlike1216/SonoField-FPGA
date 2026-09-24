@@ -151,5 +151,14 @@ class CalibrationTests(unittest.TestCase):
     def test_SW25_reject_synthetic_reference_for_real_capture(self):
         with self.assertRaises(ValueError):process(self.cfg,self.raw,self.cfg['sweep_hz'],{'classification':'HARDWARE_VERIFIED'},[])
 
+    def test_SW26_host_applies_common_frequency_before_field(self):
+        # Transport transcript only; actual register/field behavior is checked in both RTL simulators.
+        writes=[]
+        c=Controller(lambda address:192 if address==r.STATUS else 9,lambda a,v:writes.append((a,v)))
+        rows=c.apply_calibration(self.cfg,self.record)
+        self.assertEqual(len(rows),128)
+        self.assertIn((r.FREQUENCY,int(self.record['f_work'])),writes)
+        self.assertLess(writes.index((r.FREQUENCY,int(self.record['f_work']))),writes.index((r.MODE,r.MODE_NORMAL_FIELD)))
+
 
 if __name__=='__main__':unittest.main()

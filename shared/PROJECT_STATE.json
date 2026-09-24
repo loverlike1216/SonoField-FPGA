@@ -2,7 +2,7 @@
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
-  "workspace_path": "E:\\Codex-project\\AMD-SonoField-FPGA",
+  "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
   "current_branch": "main",
   "current_version": "v2",
   "current_stage": "SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM",
@@ -10,9 +10,9 @@
   "status": "PROJECT_ACTIVE",
   "scope_of_block": "Board-target synthesis, implementation and physical hardware",
   "digital_validation": "PASS",
-  "digital_evidence": "v2/evidence/self_calibration_stage/validation/summary.json",
+  "digital_evidence": "v2/evidence/self_calibration_stage/validation_frequency/summary.json",
   "model_evidence": "v2/evidence/model",
-  "reproducibility": "PENDING_FRESH_CLONE",
+  "reproducibility": "PENDING_CLEAN_CLONE_REVIEW",
   "overall_iteration_result": "REVISE",
   "board_synthesis": "BLOCKED_BY_BOARD_FACT",
   "implementation": "NOT_RUN",
@@ -20,7 +20,7 @@
   "hardware_verified": false,
   "exact_part": null,
   "documented_clock_hz": 33000000,
-  "reproducibility_evidence": "v2/evidence/self_calibration_stage/reproducibility/summary.json",
+  "reproducibility_evidence": "v2/evidence/self_calibration_stage/reproducibility_review/summary.json",
   "next_stage": "USER_CHATGPT_INDEPENDENT_REVIEW",
   "blocking_ids": [
     "B01",
@@ -101,6 +101,15 @@
   },
   "bom_evidence": "v2/evidence/bootstrap/bom_audit.log",
   "self_calibration_validation": "PASS",
-  "self_calibration_evidence": "v2/evidence/self_calibration_stage/validation/self_calibration/summary.json",
-  "software_stage_result": "PENDING_REPRODUCTION"
+  "self_calibration_evidence": "v2/evidence/self_calibration_stage/validation_frequency/self_calibration/summary.json",
+  "software_stage_result": "PENDING_REPRODUCTION",
+  "verified_previous_workspaces": [
+    {
+      "path": "E:\\Codex-project\\AMD-SonoField-FPGA",
+      "thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
+      "verified_at": "2026-09-24",
+      "verified_head": "4e5f0478e036cfefbadb2f6ceeb2ef1d180b6467",
+      "evidence": "Same Git origin, HEAD and preserved staged changes found under renamed parent; original path absent"
+    }
+  ]
 }
