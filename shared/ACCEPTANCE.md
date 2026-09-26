@@ -49,3 +49,7 @@ The table above remains bootstrap history. Current scope is SELF_CALIBRATION_SOF
 
 Whole-platform result remains REVISE; independent ChatGPT/user review is pending. Stage acceptance
 must not be interpreted as physical levitation, absolute force, board timing or synthesis acceptance.
+
+## Current schematic V1 gate — 2026-09-26
+Native single sheet,1561components/381texts; PDF and SVG: PASS.3992-pin intent audit and1338 independent channel/return checks: PASS. Save/reopen: PASS. Frozen v1:212/212unchanged. Native strict ERC:0fatal/0error/45warnings, classified and retained.
+Electrical release: REVISE. B01/B03/B04, independent watchdog/power qualification, MPN/package and physical AFE/batch gates remain OPEN. No FPGA synthesis, PCB implementation or hardware test executed in this schematic iteration. Earlier software acceptance is a different scope.

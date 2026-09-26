@@ -1,0 +1,607 @@
+[
+  {
+    "path": "v2/docs/architecture/digital_interface.md",
+    "bytes": 5702,
+    "sha256": "890d10329c0e33b53759f76a94fa22a7f7cfb6170daecd6a103af6120eba2912"
+  },
+  {
+    "path": "v2/docs/architecture/migration_inventory.json",
+    "bytes": 58715,
+    "sha256": "9483763252fd1453bd56a2926d5a16fb6083463c4fceb6520cc897c6b73396e8"
+  },
+  {
+    "path": "v2/docs/architecture/REGISTER_MAP.md",
+    "bytes": 887,
+    "sha256": "7754c3ea31b519f2bb0564235d46130f24ce3044d6c9f0a9c3e7ba89913a12b3"
+  },
+  {
+    "path": "v2/docs/architecture/SELF_CALIBRATION.md",
+    "bytes": 10035,
+    "sha256": "c38a1d7856deb2b25c1386b4187f85aead647eb10584b7da3dd46034254926d0"
+  },
+  {
+    "path": "v2/docs/architecture/V1_TO_V2_MIGRATION.md",
+    "bytes": 2298,
+    "sha256": "a25815a505a34d8f7662618d3ed0ff2f2d105bc4e3f68e5b2fd8e60de0d2b35e"
+  },
+  {
+    "path": "v2/docs/architecture/V2_REQUIREMENTS.md",
+    "bytes": 1679,
+    "sha256": "def427808fd6f56163cb9255f98d04ea6567f7a9c662d102376f17fee9a48618"
+  },
+  {
+    "path": "v2/docs/hardware/board_facts.md",
+    "bytes": 3136,
+    "sha256": "ec34dba61f88a22f6e0c3bc7c383bc298fbf2ecf84bb10d89299fa4b651cd66d"
+  },
+  {
+    "path": "v2/docs/hardware/interface.md",
+    "bytes": 3979,
+    "sha256": "2ecd2f5e7a26d68926d7f16c831969d0401a414a1cda5f3e8affd6a08246bd28"
+  },
+  {
+    "path": "v2/docs/hardware/PCB_SOFTWARE_INTERFACE.md",
+    "bytes": 8526,
+    "sha256": "48517f1e3214b7896086344b54642081acc6b35251a94c475ee6b9930eec0eac"
+  },
+  {
+    "path": "v2/docs/hardware/PCB_SOFTWARE_INTERFACE_REQUIREMENTS.md",
+    "bytes": 521,
+    "sha256": "a846d233c882fa19c1b56bbb10a2311b64afe81b0c85a1fa342d858bcddf26fb"
+  },
+  {
+    "path": "v2/docs/hardware/tct40_baseline.md",
+    "bytes": 2231,
+    "sha256": "a5993f7c4ff2168b328eab4f5f4c223f99285f0f5d9757b9ad313c8c99dd0bfe"
+  },
+  {
+    "path": "v2/hardware/bom/BOM_LOCK.md",
+    "bytes": 2405,
+    "sha256": "6bbc8ca86359620dbc9063125d61e01a1ee91ed5b8748685d92ed4c1821be490"
+  },
+  {
+    "path": "v2/hardware/bom/BOM_MASTER.csv",
+    "bytes": 18135,
+    "sha256": "aea277bcb2939f40cfadbcbad1b3d0f3d488674382f036a2550b6c72af9f1bef"
+  },
+  {
+    "path": "v2/hardware/bom/BOM_MASTER.xlsx",
+    "bytes": 43206,
+    "sha256": "750ad8cabe5279e2218d5d956f8154ae12444b21da76458ee0eb2aa6811c567c"
+  },
+  {
+    "path": "v2/hardware/bom/import_manifest.json",
+    "bytes": 10983,
+    "sha256": "d9cbd9a9628f9bd5109a39236354f22f8ffa5938cd30489ebcd594c4a1694618"
+  },
+  {
+    "path": "v2/hardware/bom/prototype_bom.md",
+    "bytes": 1774,
+    "sha256": "1a8c35058b5fca9e01f1df832b0524ecbbfda5a3ed29f3338fd8ada2be277a70"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/00_Executive.csv",
+    "bytes": 2007,
+    "sha256": "cc0c972396a53d3110d841a3266d4659c6538c4b7d0ed483f6eec6b1de0e23d2"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/01_BOM_Master.csv",
+    "bytes": 18227,
+    "sha256": "750d9d72e9c67fb948e6f9ba7e0fe9d43a2848d0402b0961c33ffd2b6fb32fa7"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/02_ArrayPCB_x2.csv",
+    "bytes": 2385,
+    "sha256": "b32966abec914a243b007acf33337fbf87d51f425071ffc06b35a2b6849588ae"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/03_ADC_Calibration.csv",
+    "bytes": 1460,
+    "sha256": "9f3c74d2bd44b5a121172398c0191ab85837ef4f389804ef703e17bdbcd0527c"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/04_Cables_Power.csv",
+    "bytes": 1304,
+    "sha256": "12c672f6b47dc0f8290419277c28b2bae279be1679a4b6c8f43c8bd727e7dd3a"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/05_Passive_Values.csv",
+    "bytes": 2456,
+    "sha256": "b7b791108cfbcd47d0676804fd738b78277874104a7f64a46eef94bdb701f9db"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/06_Procurement_Alternates.csv",
+    "bytes": 1705,
+    "sha256": "0e98a9d9a41a37919e9e56165e253d82a94c9e6e2fec57bb2d2d55d7d63d099f"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/07_Codex_Config.csv",
+    "bytes": 2848,
+    "sha256": "fe343168e87b66c3e87a222f67619585e30090b8d88846087bb27c1c196d9480"
+  },
+  {
+    "path": "v2/hardware/bom/source_sheets/08_Sources.csv",
+    "bytes": 2653,
+    "sha256": "3734fc1fe70b20236a56d86d8fde38e4cff764d3eee3ebe7756ac3e26db83492"
+  },
+  {
+    "path": "v2/hardware/characterization/object_measurements.csv",
+    "bytes": 268,
+    "sha256": "964e79b0e1a5a76486f1294234d8369f6d4c94d260151fdbf20fe16ae4637782"
+  },
+  {
+    "path": "v2/hardware/characterization/transducer_characterization.md",
+    "bytes": 3314,
+    "sha256": "5e1cd5b35372d40a211c33dc2e12d59dc915f071d43cc96aa9d21b23522d715b"
+  },
+  {
+    "path": "v2/hardware/characterization/transducer_measurements.csv",
+    "bytes": 331,
+    "sha256": "5b7a4b7116059f6585a66bd878dca79be3e905340dddc453bf94504162c0dcb7"
+  },
+  {
+    "path": "v2/hardware/mechanical/radiating_surface_geometry.md",
+    "bytes": 3683,
+    "sha256": "0904af15ea0ad251865039506594dc87c3efd455fcad6471cf5f7ffdfd1d3c2e"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/array_dimensions.png",
+    "bytes": 262610,
+    "sha256": "3addff3b733047bf56a4d80bb3c844a48bf2bfe15d2598efa7f3e62f4f635a3c"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+    "bytes": 148116,
+    "sha256": "7f4570c5eaecdfbb338975eabdb46f62ab0c7a344ad59f3bb86c123b13f2201a"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/coordinates_100mm.csv",
+    "bytes": 9001,
+    "sha256": "13fdeabd258577acc2acc34e8e19e7b05265b78d46713b515d0f1ce684c43df4"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/coordinates_105mm.csv",
+    "bytes": 9001,
+    "sha256": "ae60e14fc28ed915977157cad9e0f29f26b8ed2022f5827fa560792163f32265"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/coordinates_110mm.csv",
+    "bytes": 9001,
+    "sha256": "35c4706fb76baa43197c8d377402a562dae68a2954adabd22f898a7ac9c50942"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/coordinates_115mm.csv",
+    "bytes": 9001,
+    "sha256": "cb4803a4f60e0d8c7cd27c25da9b24441eba96416d6a4bece75ded0fa829c4c3"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/coordinates_90mm.csv",
+    "bytes": 9001,
+    "sha256": "5439e8ae4de7ba0cde5ba5551c42a173e3eceb968fb1cf03a7b97947eb741adc"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/coordinates_95mm.csv",
+    "bytes": 9001,
+    "sha256": "3f58455ca2be00df4aff69622273f6e7b0da1a38523a6f7712b20b401b0ab70f"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/coordinates_nominal.csv",
+    "bytes": 9001,
+    "sha256": "13fdeabd258577acc2acc34e8e19e7b05265b78d46713b515d0f1ce684c43df4"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/coordinates_nominal.json",
+    "bytes": 31957,
+    "sha256": "c40d1ff72900157fa1eafa1ee9b252500c0ea07ac586b7a6d7c762e92813832a"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/geometry_summary.json",
+    "bytes": 1564,
+    "sha256": "32fe467fd8d4b3db3360359846507fdf7c6fb59e1f6424a2d27e8ffbe4c4d84e"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_100mm.csv",
+    "bytes": 3556,
+    "sha256": "1a0197ecec65895b7b8f482d10bfae89fe0ef998380ba440984b5e599d01edfb"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_105mm.csv",
+    "bytes": 3620,
+    "sha256": "1ae800622469d0cb17566ff4d87cd144fb8912a57ee308a2b8c1de529755c21e"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_110mm.csv",
+    "bytes": 3620,
+    "sha256": "51a03a8688c43bc6cab1877231949445b814fc6bff1d709b9cd6c0e7006a6845"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_115mm.csv",
+    "bytes": 3620,
+    "sha256": "660e47b919aed2116c004bf28438b1dad9548b7c98125d9678167a956ba2f9e9"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_90mm.csv",
+    "bytes": 3540,
+    "sha256": "d83a458f331747b21fb3b7495394e0bb21af6ad6f5184b8700aed60e40ca2279"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_95mm.csv",
+    "bytes": 3524,
+    "sha256": "c91b4d9fd5efc606ce83ed927cf9431f5ef56c7b5e1627c929b6f054289c1a9b"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_100mm.csv",
+    "bytes": 3572,
+    "sha256": "f2c92a368c4cd198fa73944b8388c1fc40b3c5f44f8c325b3979ba1f3c4ed944"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_105mm.csv",
+    "bytes": 3604,
+    "sha256": "e711e4d3e9374048fb4517e951adf57c19293ee4d8fc92d087e5c6c12b81283b"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_110mm.csv",
+    "bytes": 3596,
+    "sha256": "882e82ba41d7194345e0d187f9c9d4d5ac10ba40104f12dd27fd0fcbc0e773b7"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_115mm.csv",
+    "bytes": 3620,
+    "sha256": "7d6e7d77032f77fda43defdfb702a98d783733f02be2299cc5e6b611f474d6c8"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_90mm.csv",
+    "bytes": 3532,
+    "sha256": "98db639beaf25bdf5a27b7a60cac6620fc601725aed3678dccf0d4a2b3b26bc9"
+  },
+  {
+    "path": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_95mm.csv",
+    "bytes": 3556,
+    "sha256": "0f9c1b18be013f60dee62db33cd43b1796a66791d6ec1f052e53229207f9bc03"
+  },
+  {
+    "path": "v2/hardware/transducers/10mm_supplier_reference.md",
+    "bytes": 2110,
+    "sha256": "cfe8abd419894ce2b72445484543c4252882334a2241355dbae5328e99782394"
+  },
+  {
+    "path": "v2/config/acoustic_baseline.json",
+    "bytes": 1410,
+    "sha256": "2368c19cd55c69c00f4dd2dbf0c0944005e0533d819ca3ddfb2aade3e284efba"
+  },
+  {
+    "path": "v2/config/board_facts.json",
+    "bytes": 496,
+    "sha256": "f419bf14e6497ee38ef555298116458527523d27d21e28112d00291553dc9e0d"
+  },
+  {
+    "path": "v2/config/hardware_parts.json",
+    "bytes": 335,
+    "sha256": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b"
+  },
+  {
+    "path": "v2/config/register_map.json",
+    "bytes": 1091,
+    "sha256": "97aaba496c194d592d03b56fa7c0ff602b0821df0ae36e60274208c20986f2f6"
+  },
+  {
+    "path": "v2/config/system_baseline.json",
+    "bytes": 2766,
+    "sha256": "609d59d5b498e8de1f7258e465b5254a373a657338b788e808fa0cfb2fb6fd41"
+  },
+  {
+    "path": "v2/rtl/sono_core.sv",
+    "bytes": 1927,
+    "sha256": "1d25f9c9ea884773397febfb57fca2c1a3a779f46bb9d63893186bdac88d207d"
+  },
+  {
+    "path": "v2/rtl/sono_digital_system.sv",
+    "bytes": 10257,
+    "sha256": "4accb1ad6016dfd9504b16cb16133c77fc0469d815114f81c7adbc894dde5ced"
+  },
+  {
+    "path": "v2/rtl/sono_top.sv",
+    "bytes": 2730,
+    "sha256": "6fdba0c92cf82e37e3247047a97168fc21da74a91d37ce9b1d5061c8c64e5427"
+  },
+  {
+    "path": "v2/rtl/acquisition/ad7606b_if.sv",
+    "bytes": 4213,
+    "sha256": "b0f11a0269ec2e08193413eea12a79c38c176c24475d9348ffdcbcac3722cb44"
+  },
+  {
+    "path": "v2/rtl/acquisition/adc_serial.sv",
+    "bytes": 1438,
+    "sha256": "8647a75428cc5d06eef1130e8917efbca489acd5b17f73f8a19a66d9b6f319cb"
+  },
+  {
+    "path": "v2/rtl/calibration/burst_generator.sv",
+    "bytes": 1069,
+    "sha256": "3150b3766c786b493cb1eaaf2b46eea966c92160afe607baabca42f189649085"
+  },
+  {
+    "path": "v2/rtl/calibration/calibration_scheduler.sv",
+    "bytes": 4003,
+    "sha256": "ce32fbaf7855425ac153584bc987f6a5775650316452c59c6d7db7f79547b22b"
+  },
+  {
+    "path": "v2/rtl/control/safety_controller.sv",
+    "bytes": 779,
+    "sha256": "3949c09e0aedeaeeb0169f50d02c80767730feca420087e080f1530b0ff90657"
+  },
+  {
+    "path": "v2/rtl/generated/registers.svh",
+    "bytes": 2021,
+    "sha256": "7d4e89cbe0f79f3ec3db6e5f36e41221493469cba11468ea2fe17ce44efd38a8"
+  },
+  {
+    "path": "v2/rtl/output/channel_waveform.sv",
+    "bytes": 664,
+    "sha256": "97237593ed1f7fa2a4e006f38bc2262402029af88854d1a68ea3f5551c550b74"
+  },
+  {
+    "path": "v2/rtl/output/serializer.sv",
+    "bytes": 2080,
+    "sha256": "5d20788a6428cdfd46a7ba9b4163444e1c426dede85f046e86fe6836cd43e174"
+  },
+  {
+    "path": "v2/rtl/phase/phase_bank.sv",
+    "bytes": 2873,
+    "sha256": "f93cab9b10f51d824bfbf6d1fd0a67cd3cb5d779db6ffaa9d6e0c3d329f3168e"
+  },
+  {
+    "path": "v2/rtl/timing/ultrasonic_timebase.sv",
+    "bytes": 1154,
+    "sha256": "f03a66f998b6df3d5adecd094bbc7964736ca1fc495ae958c85baa0e4ef36f8b"
+  },
+  {
+    "path": "v2/software/__init__.py",
+    "bytes": 41,
+    "sha256": "7bda9b5d67fc4a63e4c1b14b7f2c51bdc32038527c8a4db3a028a0369747aa27"
+  },
+  {
+    "path": "v2/software/acoustic_model/array_geometry.py",
+    "bytes": 3318,
+    "sha256": "537c0a2029490565c133cf9a113b0ccf02a1ef5c1a8b46b61f292897171b8847"
+  },
+  {
+    "path": "v2/software/acoustic_model/export_geometry.py",
+    "bytes": 6195,
+    "sha256": "36359f7672bc3ecc873060dbdfce60bcaac8f539a56d8ab881d493e0b5a83738"
+  },
+  {
+    "path": "v2/software/acoustic_model/field_solver.py",
+    "bytes": 1796,
+    "sha256": "1d2353c7b160286ac31c22bec7a29db783ef4ac25a1dabb5fa1f6efeab5adeb9"
+  },
+  {
+    "path": "v2/software/acoustic_model/particle_model.py",
+    "bytes": 1399,
+    "sha256": "8953cbc7cdc84075260b34a8740ef277d296d1a6f29b422f1453d5f3f11f0625"
+  },
+  {
+    "path": "v2/software/acoustic_model/phase_lut_generator.py",
+    "bytes": 2182,
+    "sha256": "988ddf1f22528ad245c62c2a95c0f0d404e8cd1c676b35e91d68f65d9e939eef"
+  },
+  {
+    "path": "v2/software/acoustic_model/phase_solver.py",
+    "bytes": 695,
+    "sha256": "995922c984babfb8a7cb3f862e2e92eb97f96d89d43ebfa629e159eddf81c8da"
+  },
+  {
+    "path": "v2/software/acoustic_model/standing_wave.py",
+    "bytes": 635,
+    "sha256": "1d1927d02ddba0daa7a1d2690f16b1ddcd5a1bd85015f9d38f009d460d2f08d7"
+  },
+  {
+    "path": "v2/software/acoustic_model/transducer.py",
+    "bytes": 948,
+    "sha256": "f7a275a0904304c156447ff128bd1fb38b8e8f9d918afb3508f7152d056453de"
+  },
+  {
+    "path": "v2/software/acoustic_model/visualize_field.py",
+    "bytes": 9695,
+    "sha256": "f9a00d01b1815fef6abbeb87fcf88f5c254a82bed33c139072625c6fea9a3234"
+  },
+  {
+    "path": "v2/software/acoustic_model/__init__.py",
+    "bytes": 77,
+    "sha256": "c1b125e3750409868a93b8c990d27746820ce5089d34d51a3ff2d5d73d1924ff"
+  },
+  {
+    "path": "v2/software/calibration/config.py",
+    "bytes": 1213,
+    "sha256": "8ba5038def8ec08cd314eb8898fd5e41f7b296501cbdd1d0101192e96fa6973c"
+  },
+  {
+    "path": "v2/software/calibration/database.py",
+    "bytes": 1453,
+    "sha256": "103f5d1d98fc2cc968afd0b7a4ad6a80ff09e32afd8895f9dbdd8d9401dfc5a8"
+  },
+  {
+    "path": "v2/software/calibration/experiment.py",
+    "bytes": 4181,
+    "sha256": "cd790a60856d650e984da4600a17c67b82ddd094356f56450fa2f01bff626169"
+  },
+  {
+    "path": "v2/software/calibration/geometry.py",
+    "bytes": 2847,
+    "sha256": "ae0dcd6a7f0507f939bea2b512b05447ffcfbf002a6e5c053cc0dae9ce43e0ac"
+  },
+  {
+    "path": "v2/software/calibration/pipeline.py",
+    "bytes": 8868,
+    "sha256": "4706ba13c18b9173239b71bd153f62ec3348c3baa0d4b72ae502a4297917ecc5"
+  },
+  {
+    "path": "v2/software/calibration/report.py",
+    "bytes": 3217,
+    "sha256": "09f129c49043835717a43d286a70132a6fef279092d03fe849c6533572c85f02"
+  },
+  {
+    "path": "v2/software/calibration/signal.py",
+    "bytes": 3699,
+    "sha256": "517592dccb1a2d41c972744bb67a368faf7acbc7e5261e9ce0fa8b47064233cc"
+  },
+  {
+    "path": "v2/software/calibration/sound_speed.py",
+    "bytes": 961,
+    "sha256": "98f953b4258a577f75e4ccd624f48d42ef40577d7c1a0c40d2e9e7f982a485b8"
+  },
+  {
+    "path": "v2/software/calibration/synthetic.py",
+    "bytes": 2723,
+    "sha256": "01d0abb9dd7f49335abc84a054b6e96907c87e8573b9f6adeffbec498029abf4"
+  },
+  {
+    "path": "v2/software/calibration/visualize.py",
+    "bytes": 4491,
+    "sha256": "0db14b445c7857cb8473b3c3251d75f6a43e34befc05722ac25e28b21d10132f"
+  },
+  {
+    "path": "v2/software/calibration/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "v2/software/characterization/response.py",
+    "bytes": 1462,
+    "sha256": "bc2a8552cbf5c7732522a239a64f644f3d1b0c221c3985a52db63812df4b3e16"
+  },
+  {
+    "path": "v2/software/characterization/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "v2/software/control/host.py",
+    "bytes": 4340,
+    "sha256": "5afa3ce56adcfc3afeda9ae1a2051502610fe66050825acb20dcae724ba524fa"
+  },
+  {
+    "path": "v2/software/control/registers.py",
+    "bytes": 761,
+    "sha256": "8be6700ce5131cd3928c1a9dbd7837615e7d414240b5e904392e87931d84cbe3"
+  },
+  {
+    "path": "v2/software/control/__init__.py",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "v2/tests/test_acoustic_model.py",
+    "bytes": 3975,
+    "sha256": "10cbf65e25262a0d2b02a523a8a25df50499fdec53afc22e83c03adf18edf7e5"
+  },
+  {
+    "path": "v2/tests/test_potential_proxy.py",
+    "bytes": 757,
+    "sha256": "96a8889ade5ff1b8f8fcddd7fad810d6bea34b3c054674053b8466e1788bc9ec"
+  },
+  {
+    "path": "v2/tests/test_radiating_geometry.py",
+    "bytes": 4047,
+    "sha256": "233524bbfbb1875884369fb9f1d6d1ddd3504677701569feb5c716d357bbdd1b"
+  },
+  {
+    "path": "v2/tests/test_self_calibration.py",
+    "bytes": 9101,
+    "sha256": "85d0d679c4922b1028bebe1a988fd0812ef0a00de532c9ee944031857f3afb2c"
+  },
+  {
+    "path": "BOM/README.md",
+    "bytes": 224,
+    "sha256": "492b29aa955a72e86133ad0dd1c8475ca9abecbdefcfa6a8d63a63ba8f49a657"
+  },
+  {
+    "path": "BOM/SonoField-FPGA_BOM_2026.9.20.xlsx",
+    "bytes": 43206,
+    "sha256": "750ad8cabe5279e2218d5d956f8154ae12444b21da76458ee0eb2aa6811c567c"
+  },
+  {
+    "path": "Zynq7020/075c1b752e612dda8d314e4415b73c13.png",
+    "bytes": 1417381,
+    "sha256": "02fd033bcd1cd588f86d3d1df0643eca277e9de069e65055ec859fd897f9a611"
+  },
+  {
+    "path": "Zynq7020/1.png",
+    "bytes": 20940,
+    "sha256": "fcd88c3dceefa6babd2d56a8e0560a593f8d1e059de7ba378ac5ddc7a10fc12f"
+  },
+  {
+    "path": "Zynq7020/1ec52b807edd6cf0dddcf8ffc4109a82.png",
+    "bytes": 318679,
+    "sha256": "558febe51cc53edaeaeb56bfa83c63a59f511dad1a6eaeac3ee0d0d00e1fd923"
+  },
+  {
+    "path": "Zynq7020/2.png",
+    "bytes": 39286,
+    "sha256": "5bf00ef9027a7aa543234b5c888c74e8f8316461c70567005434c9c03bb109dd"
+  },
+  {
+    "path": "Zynq7020/3.png",
+    "bytes": 45378,
+    "sha256": "491cc9853db4d65047d298da5f663cb26db53af5f712c47b467197859fde9cab"
+  },
+  {
+    "path": "Zynq7020/396993c30e2d447db53dcf3b509222a1.png",
+    "bytes": 126376,
+    "sha256": "c54498d6aa5440e0a88c2f5eba29e26e50a93a8b2887b747e5bf855d16b4849c"
+  },
+  {
+    "path": "Zynq7020/4cb7b508670dc325da8448dbf51cb117 (1).png",
+    "bytes": 1151415,
+    "sha256": "7950ce84014f9aa2d7975a29648c3afbcc406a221bf4a91cdd6e8232198cc403"
+  },
+  {
+    "path": "Zynq7020/4cb7b508670dc325da8448dbf51cb117.png",
+    "bytes": 1151415,
+    "sha256": "7950ce84014f9aa2d7975a29648c3afbcc406a221bf4a91cdd6e8232198cc403"
+  },
+  {
+    "path": "Zynq7020/9268ababf01f495387fe9e2705411573.png",
+    "bytes": 35727,
+    "sha256": "963c9ff7533f419313276c8d8e6f56c00a4fea88444742db6168250cdeb85e82"
+  },
+  {
+    "path": "Zynq7020/\u5c4f\u5e55\u622a\u56fe 2026-09-18 232246.png",
+    "bytes": 135222,
+    "sha256": "4f00ebd79ce4b04bd241c1657ef2e97e45aaf4b7599458026f5e6d0a0cc7ef86"
+  },
+  {
+    "path": "Zynq7020/constrain/gpio.const",
+    "bytes": 11458,
+    "sha256": "9c4ed524a66176fe89304896e0a1705d14f9f6587ad96f96edb2ca2c5757ae98"
+  },
+  {
+    "path": "Zynq7020/constrain/hardware.const",
+    "bytes": 6734,
+    "sha256": "65fefb95996297e6b53ab7e9e4ab976835d6e9de1429a8181bc4ed40fb18fa87"
+  },
+  {
+    "path": "AI-problem/README.md",
+    "bytes": 1257,
+    "sha256": "9700f148271cde52e16e31380235453ca2db2e39636a5845dfb8592376b34610"
+  },
+  {
+    "path": "AI-problem/decision/README.md",
+    "bytes": 205,
+    "sha256": "4f070c4dab1d3daae6283c3a2c7cd3c145011952229d67556315888f6b251180"
+  },
+  {
+    "path": "AI-problem/problem/P-20260919-001__board-facts.md",
+    "bytes": 2104,
+    "sha256": "31805d376145210bc5abd84c894202bc88f9439329b850206ce56552fee015a9"
+  },
+  {
+    "path": "AI-problem/problem/P-20260919-002__serializer-interface.md",
+    "bytes": 2263,
+    "sha256": "39521e0862d3c57bb87525e2490ad88a46c6f2f953a3e55fd72254579ab25809"
+  },
+  {
+    "path": "AI-problem/problem/P-20260919-003__transducer-qualification.md",
+    "bytes": 2245,
+    "sha256": "4bbae166a39eb9a82500c25134694effb26eb01fd9d346fd634cf849258111bf"
+  }
+]

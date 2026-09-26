@@ -1,0 +1,2700 @@
+{
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "sheets": [
+    {
+      "name": "POWER_INPUT_U",
+      "notes": [
+        "POWER_INPUT_U | DRAFT - NOT FOR FABRICATION",
+        "Independent external 12 V input; 12-15 V characterization only. Never apply 18 V as normal setpoint.",
+        "TPS259470L latch-off candidate; nominal UV=9.2 V, OV=16.8 V, current limit=2.02 A.",
+        "Values/ratings are design candidates. Fault signal is NOT a complete independent watchdog.",
+        "Input connector, fuse/TVS and cable selection remain OPEN; TP endpoints are NOT connector pin assignments."
+      ],
+      "parts": [
+        {
+          "key": "TPS259470LRPWR",
+          "ref": "U_EFUSE_U",
+          "value": "TPS259470LRPWR",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "UV_U",
+            "2": "OV_U",
+            "3": null,
+            "4": "FAULT_N_U",
+            "5": "VIN_U",
+            "6": "FUSED_U",
+            "7": "DVDT_U",
+            "8": "PGND_U",
+            "9": "ILM_U",
+            "10": "ITIMER_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_INPUT_U",
+          "value": "EXTERNAL_INPUT",
+          "x": 120,
+          "y": 670,
+          "nets": {
+            "1": "VIN_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_RETURN_U",
+          "value": "EXTERNAL_RETURN",
+          "x": 120,
+          "y": 570,
+          "nets": {
+            "1": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_U0",
+          "value": "100k 1%",
+          "x": 200,
+          "y": 330,
+          "nets": {
+            "1": "VIN_U",
+            "2": "UV_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_U1",
+          "value": "15k 1%",
+          "x": 550,
+          "y": 330,
+          "nets": {
+            "1": "UV_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_U2",
+          "value": "130k 1%",
+          "x": 900,
+          "y": 330,
+          "nets": {
+            "1": "VIN_U",
+            "2": "OV_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_U3",
+          "value": "10k 1%",
+          "x": 200,
+          "y": 230,
+          "nets": {
+            "1": "OV_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_U4",
+          "value": "1.65k 1%",
+          "x": 550,
+          "y": 230,
+          "nets": {
+            "1": "ILM_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_U5",
+          "value": "10k",
+          "x": 900,
+          "y": 230,
+          "nets": {
+            "1": "3V3_U",
+            "2": "FAULT_N_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_DVDT_U",
+          "value": "3.3nF 50V",
+          "x": 870,
+          "y": 620,
+          "nets": {
+            "1": "DVDT_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ITIMER_U",
+          "value": "2.2nF",
+          "x": 870,
+          "y": 520,
+          "nets": {
+            "1": "ITIMER_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_INPUT_U",
+          "value": "10uF 35V",
+          "x": 150,
+          "y": 440,
+          "nets": {
+            "1": "VIN_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SHUNT_U",
+          "value": "20mR 2W KELVIN",
+          "x": 520,
+          "y": 120,
+          "nets": {
+            "1": "FUSED_U",
+            "2": "VDRV_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_MONITOR_U",
+      "notes": [
+        "POWER_MONITOR_U | DRAFT - NOT FOR FABRICATION",
+        "Local I2C bus at local 3.3 V; host connection/level compatibility TBD.",
+        "INA226 address0x40, TMP117 address0x48 on EACH SEPARATE bus.",
+        "Kelvin shunt sense; signed current, alert limits and calibration must be configured/tested."
+      ],
+      "parts": [
+        {
+          "key": "INA226AIDGSR",
+          "ref": "U_CURRENT_U",
+          "value": "INA226AIDGSR",
+          "x": 270,
+          "y": 530,
+          "nets": {
+            "1": "DGND_U",
+            "2": "DGND_U",
+            "3": "CURRENT_ALERT_N_U",
+            "4": "I2C_U_SDA",
+            "5": "I2C_U_SCL",
+            "6": "3V3_U",
+            "7": "DGND_U",
+            "8": "VDRV_U",
+            "9": "VDRV_U",
+            "10": "FUSED_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "TMP117MAIDRVR",
+          "ref": "U_TEMP_U",
+          "value": "TMP117MAIDRVR",
+          "x": 800,
+          "y": 530,
+          "nets": {
+            "1": "I2C_U_SCL",
+            "2": "DGND_U",
+            "3": "TEMP_ALERT_N_U",
+            "4": "DGND_U",
+            "5": "3V3_U",
+            "6": "I2C_U_SDA",
+            "7": "DGND_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_CURRENT_U",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_TEMP_U",
+          "value": "100nF X7R",
+          "x": 800,
+          "y": 690,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_U0",
+          "value": "4.7k",
+          "x": 220,
+          "y": 320,
+          "nets": {
+            "1": "3V3_U",
+            "2": "I2C_U_SDA"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_U1",
+          "value": "4.7k",
+          "x": 750,
+          "y": 320,
+          "nets": {
+            "1": "3V3_U",
+            "2": "I2C_U_SCL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_U2",
+          "value": "4.7k",
+          "x": 220,
+          "y": 200,
+          "nets": {
+            "1": "3V3_U",
+            "2": "CURRENT_ALERT_N_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_U3",
+          "value": "4.7k",
+          "x": 750,
+          "y": 200,
+          "nets": {
+            "1": "3V3_U",
+            "2": "TEMP_ALERT_N_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_BUCK_UD",
+      "notes": [
+        "POWER_BUCK_UD | DRAFT - NOT FOR FABRICATION",
+        "AP63203 fixed3.3 V / AP63200 adjustable5.52 V; 6.8uH is unqualified BOM candidate.",
+        "Inductor Isat/DCR, ceramic DC bias, ripple/stability and startup must be checked.",
+        "Input and switching currents return to local PGND; no layout created."
+      ],
+      "parts": [
+        {
+          "key": "AP63203WU-7",
+          "ref": "U_BUCK_UD",
+          "value": "AP63203WU-7",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "3V3_U",
+            "2": "VDRV_U",
+            "3": "VDRV_U",
+            "4": "PGND_U",
+            "5": "SW_UD",
+            "6": "BST_UD"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "L",
+          "ref": "L_BUCK_UD",
+          "value": "6.8uH ISAT_TBD",
+          "x": 810,
+          "y": 520,
+          "nets": {
+            "1": "SW_UD",
+            "2": "3V3_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_IN_UD",
+          "value": "10uF 35V",
+          "x": 180,
+          "y": 660,
+          "nets": {
+            "1": "VDRV_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BOOT_UD",
+          "value": "100nF",
+          "x": 650,
+          "y": 680,
+          "nets": {
+            "1": "BST_UD",
+            "2": "SW_UD"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O1_UD",
+          "value": "22uF 16V",
+          "x": 380,
+          "y": 290,
+          "nets": {
+            "1": "3V3_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O2_UD",
+          "value": "22uF 16V",
+          "x": 820,
+          "y": 290,
+          "nets": {
+            "1": "3V3_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_BUCK_UP",
+      "notes": [
+        "POWER_BUCK_UP | DRAFT - NOT FOR FABRICATION",
+        "AP63203 fixed3.3 V / AP63200 adjustable5.52 V; 6.8uH is unqualified BOM candidate.",
+        "Inductor Isat/DCR, ceramic DC bias, ripple/stability and startup must be checked.",
+        "Input and switching currents return to local PGND; no layout created."
+      ],
+      "parts": [
+        {
+          "key": "AP63200WU-7",
+          "ref": "U_BUCK_UP",
+          "value": "AP63200WU-7",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "FB_UP",
+            "2": "VDRV_U",
+            "3": "VDRV_U",
+            "4": "PGND_U",
+            "5": "SW_UP",
+            "6": "BST_UP"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "L",
+          "ref": "L_BUCK_UP",
+          "value": "6.8uH ISAT_TBD",
+          "x": 810,
+          "y": 520,
+          "nets": {
+            "1": "SW_UP",
+            "2": "5V5_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_IN_UP",
+          "value": "10uF 35V",
+          "x": 180,
+          "y": 660,
+          "nets": {
+            "1": "VDRV_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BOOT_UP",
+          "value": "100nF",
+          "x": 650,
+          "y": 680,
+          "nets": {
+            "1": "BST_UP",
+            "2": "SW_UP"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O1_UP",
+          "value": "22uF 16V",
+          "x": 380,
+          "y": 290,
+          "nets": {
+            "1": "5V5_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O2_UP",
+          "value": "22uF 16V",
+          "x": 820,
+          "y": 290,
+          "nets": {
+            "1": "5V5_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_FB_TOP_UP",
+          "value": "590k 1%",
+          "x": 270,
+          "y": 160,
+          "nets": {
+            "1": "5V5_U",
+            "2": "FB_UP"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_FB_BOTTOM_UP",
+          "value": "100k 1%",
+          "x": 800,
+          "y": 160,
+          "nets": {
+            "1": "FB_UP",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_ANALOG_U",
+      "notes": [
+        "POWER_ANALOG_U | DRAFT - NOT FOR FABRICATION",
+        "Fixed5.0 V ADP7118: SENSE to output, SS open; EP to AGND.",
+        "Ferrite before LDO; effective capacitor >=2.2uF over DC bias/temp. 200mA LDO limit.",
+        "Ground links express intended common reference; physical return-path review remains mandatory."
+      ],
+      "parts": [
+        {
+          "key": "BLM21PG221SN1D",
+          "ref": "FB_ANALOG_U",
+          "value": "BLM21PG221SN1D",
+          "x": 200,
+          "y": 610,
+          "nets": {
+            "1": "5V5_U",
+            "2": "LDO_IN_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "ADP7118ACPZN5.0-R7",
+          "ref": "U_LDO_U",
+          "value": "ADP7118ACPZN5.0-R7",
+          "x": 650,
+          "y": 550,
+          "nets": {
+            "1": "5VA_U",
+            "2": "5VA_U",
+            "3": "AGND_U",
+            "4": "LDO_IN_U",
+            "5": null,
+            "6": "LDO_IN_U",
+            "7": "AGND_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LDO_IN_U",
+          "value": "4.7uF 16V",
+          "x": 200,
+          "y": 400,
+          "nets": {
+            "1": "LDO_IN_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LDO_OUT_U",
+          "value": "4.7uF 16V",
+          "x": 840,
+          "y": 400,
+          "nets": {
+            "1": "5VA_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GROUND_D_U",
+          "value": "0R RETURN_LINK",
+          "x": 250,
+          "y": 230,
+          "nets": {
+            "1": "DGND_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GROUND_A_U",
+          "value": "0R RETURN_LINK",
+          "x": 750,
+          "y": 230,
+          "nets": {
+            "1": "AGND_U",
+            "2": "PGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_INPUT_L",
+      "notes": [
+        "POWER_INPUT_L | DRAFT - NOT FOR FABRICATION",
+        "Independent external 12 V input; 12-15 V characterization only. Never apply 18 V as normal setpoint.",
+        "TPS259470L latch-off candidate; nominal UV=9.2 V, OV=16.8 V, current limit=2.02 A.",
+        "Values/ratings are design candidates. Fault signal is NOT a complete independent watchdog.",
+        "Input connector, fuse/TVS and cable selection remain OPEN; TP endpoints are NOT connector pin assignments."
+      ],
+      "parts": [
+        {
+          "key": "TPS259470LRPWR",
+          "ref": "U_EFUSE_L",
+          "value": "TPS259470LRPWR",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "UV_L",
+            "2": "OV_L",
+            "3": null,
+            "4": "FAULT_N_L",
+            "5": "VIN_L",
+            "6": "FUSED_L",
+            "7": "DVDT_L",
+            "8": "PGND_L",
+            "9": "ILM_L",
+            "10": "ITIMER_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_INPUT_L",
+          "value": "EXTERNAL_INPUT",
+          "x": 120,
+          "y": 670,
+          "nets": {
+            "1": "VIN_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_RETURN_L",
+          "value": "EXTERNAL_RETURN",
+          "x": 120,
+          "y": 570,
+          "nets": {
+            "1": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_L0",
+          "value": "100k 1%",
+          "x": 200,
+          "y": 330,
+          "nets": {
+            "1": "VIN_L",
+            "2": "UV_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_L1",
+          "value": "15k 1%",
+          "x": 550,
+          "y": 330,
+          "nets": {
+            "1": "UV_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_L2",
+          "value": "130k 1%",
+          "x": 900,
+          "y": 330,
+          "nets": {
+            "1": "VIN_L",
+            "2": "OV_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_L3",
+          "value": "10k 1%",
+          "x": 200,
+          "y": 230,
+          "nets": {
+            "1": "OV_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_L4",
+          "value": "1.65k 1%",
+          "x": 550,
+          "y": 230,
+          "nets": {
+            "1": "ILM_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_L5",
+          "value": "10k",
+          "x": 900,
+          "y": 230,
+          "nets": {
+            "1": "3V3_L",
+            "2": "FAULT_N_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_DVDT_L",
+          "value": "3.3nF 50V",
+          "x": 870,
+          "y": 620,
+          "nets": {
+            "1": "DVDT_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ITIMER_L",
+          "value": "2.2nF",
+          "x": 870,
+          "y": 520,
+          "nets": {
+            "1": "ITIMER_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_INPUT_L",
+          "value": "10uF 35V",
+          "x": 150,
+          "y": 440,
+          "nets": {
+            "1": "VIN_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SHUNT_L",
+          "value": "20mR 2W KELVIN",
+          "x": 520,
+          "y": 120,
+          "nets": {
+            "1": "FUSED_L",
+            "2": "VDRV_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_MONITOR_L",
+      "notes": [
+        "POWER_MONITOR_L | DRAFT - NOT FOR FABRICATION",
+        "Local I2C bus at local 3.3 V; host connection/level compatibility TBD.",
+        "INA226 address0x40, TMP117 address0x48 on EACH SEPARATE bus.",
+        "Kelvin shunt sense; signed current, alert limits and calibration must be configured/tested."
+      ],
+      "parts": [
+        {
+          "key": "INA226AIDGSR",
+          "ref": "U_CURRENT_L",
+          "value": "INA226AIDGSR",
+          "x": 270,
+          "y": 530,
+          "nets": {
+            "1": "DGND_L",
+            "2": "DGND_L",
+            "3": "CURRENT_ALERT_N_L",
+            "4": "I2C_L_SDA",
+            "5": "I2C_L_SCL",
+            "6": "3V3_L",
+            "7": "DGND_L",
+            "8": "VDRV_L",
+            "9": "VDRV_L",
+            "10": "FUSED_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "TMP117MAIDRVR",
+          "ref": "U_TEMP_L",
+          "value": "TMP117MAIDRVR",
+          "x": 800,
+          "y": 530,
+          "nets": {
+            "1": "I2C_L_SCL",
+            "2": "DGND_L",
+            "3": "TEMP_ALERT_N_L",
+            "4": "DGND_L",
+            "5": "3V3_L",
+            "6": "I2C_L_SDA",
+            "7": "DGND_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_CURRENT_L",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_TEMP_L",
+          "value": "100nF X7R",
+          "x": 800,
+          "y": 690,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_L0",
+          "value": "4.7k",
+          "x": 220,
+          "y": 320,
+          "nets": {
+            "1": "3V3_L",
+            "2": "I2C_L_SDA"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_L1",
+          "value": "4.7k",
+          "x": 750,
+          "y": 320,
+          "nets": {
+            "1": "3V3_L",
+            "2": "I2C_L_SCL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_L2",
+          "value": "4.7k",
+          "x": 220,
+          "y": 200,
+          "nets": {
+            "1": "3V3_L",
+            "2": "CURRENT_ALERT_N_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_L3",
+          "value": "4.7k",
+          "x": 750,
+          "y": 200,
+          "nets": {
+            "1": "3V3_L",
+            "2": "TEMP_ALERT_N_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_BUCK_LD",
+      "notes": [
+        "POWER_BUCK_LD | DRAFT - NOT FOR FABRICATION",
+        "AP63203 fixed3.3 V / AP63200 adjustable5.52 V; 6.8uH is unqualified BOM candidate.",
+        "Inductor Isat/DCR, ceramic DC bias, ripple/stability and startup must be checked.",
+        "Input and switching currents return to local PGND; no layout created."
+      ],
+      "parts": [
+        {
+          "key": "AP63203WU-7",
+          "ref": "U_BUCK_LD",
+          "value": "AP63203WU-7",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "3V3_L",
+            "2": "VDRV_L",
+            "3": "VDRV_L",
+            "4": "PGND_L",
+            "5": "SW_LD",
+            "6": "BST_LD"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "L",
+          "ref": "L_BUCK_LD",
+          "value": "6.8uH ISAT_TBD",
+          "x": 810,
+          "y": 520,
+          "nets": {
+            "1": "SW_LD",
+            "2": "3V3_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_IN_LD",
+          "value": "10uF 35V",
+          "x": 180,
+          "y": 660,
+          "nets": {
+            "1": "VDRV_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BOOT_LD",
+          "value": "100nF",
+          "x": 650,
+          "y": 680,
+          "nets": {
+            "1": "BST_LD",
+            "2": "SW_LD"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O1_LD",
+          "value": "22uF 16V",
+          "x": 380,
+          "y": 290,
+          "nets": {
+            "1": "3V3_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O2_LD",
+          "value": "22uF 16V",
+          "x": 820,
+          "y": 290,
+          "nets": {
+            "1": "3V3_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_BUCK_LP",
+      "notes": [
+        "POWER_BUCK_LP | DRAFT - NOT FOR FABRICATION",
+        "AP63203 fixed3.3 V / AP63200 adjustable5.52 V; 6.8uH is unqualified BOM candidate.",
+        "Inductor Isat/DCR, ceramic DC bias, ripple/stability and startup must be checked.",
+        "Input and switching currents return to local PGND; no layout created."
+      ],
+      "parts": [
+        {
+          "key": "AP63200WU-7",
+          "ref": "U_BUCK_LP",
+          "value": "AP63200WU-7",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "FB_LP",
+            "2": "VDRV_L",
+            "3": "VDRV_L",
+            "4": "PGND_L",
+            "5": "SW_LP",
+            "6": "BST_LP"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "L",
+          "ref": "L_BUCK_LP",
+          "value": "6.8uH ISAT_TBD",
+          "x": 810,
+          "y": 520,
+          "nets": {
+            "1": "SW_LP",
+            "2": "5V5_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_IN_LP",
+          "value": "10uF 35V",
+          "x": 180,
+          "y": 660,
+          "nets": {
+            "1": "VDRV_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BOOT_LP",
+          "value": "100nF",
+          "x": 650,
+          "y": 680,
+          "nets": {
+            "1": "BST_LP",
+            "2": "SW_LP"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O1_LP",
+          "value": "22uF 16V",
+          "x": 380,
+          "y": 290,
+          "nets": {
+            "1": "5V5_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O2_LP",
+          "value": "22uF 16V",
+          "x": 820,
+          "y": 290,
+          "nets": {
+            "1": "5V5_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_FB_TOP_LP",
+          "value": "590k 1%",
+          "x": 270,
+          "y": 160,
+          "nets": {
+            "1": "5V5_L",
+            "2": "FB_LP"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_FB_BOTTOM_LP",
+          "value": "100k 1%",
+          "x": 800,
+          "y": 160,
+          "nets": {
+            "1": "FB_LP",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_ANALOG_L",
+      "notes": [
+        "POWER_ANALOG_L | DRAFT - NOT FOR FABRICATION",
+        "Fixed5.0 V ADP7118: SENSE to output, SS open; EP to AGND.",
+        "Ferrite before LDO; effective capacitor >=2.2uF over DC bias/temp. 200mA LDO limit.",
+        "Ground links express intended common reference; physical return-path review remains mandatory."
+      ],
+      "parts": [
+        {
+          "key": "BLM21PG221SN1D",
+          "ref": "FB_ANALOG_L",
+          "value": "BLM21PG221SN1D",
+          "x": 200,
+          "y": 610,
+          "nets": {
+            "1": "5V5_L",
+            "2": "LDO_IN_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "ADP7118ACPZN5.0-R7",
+          "ref": "U_LDO_L",
+          "value": "ADP7118ACPZN5.0-R7",
+          "x": 650,
+          "y": 550,
+          "nets": {
+            "1": "5VA_L",
+            "2": "5VA_L",
+            "3": "AGND_L",
+            "4": "LDO_IN_L",
+            "5": null,
+            "6": "LDO_IN_L",
+            "7": "AGND_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LDO_IN_L",
+          "value": "4.7uF 16V",
+          "x": 200,
+          "y": 400,
+          "nets": {
+            "1": "LDO_IN_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LDO_OUT_L",
+          "value": "4.7uF 16V",
+          "x": 840,
+          "y": 400,
+          "nets": {
+            "1": "5VA_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GROUND_D_L",
+          "value": "0R RETURN_LINK",
+          "x": 250,
+          "y": 230,
+          "nets": {
+            "1": "DGND_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GROUND_A_L",
+          "value": "0R RETURN_LINK",
+          "x": 750,
+          "y": 230,
+          "nets": {
+            "1": "AGND_L",
+            "2": "PGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_INPUT_A",
+      "notes": [
+        "POWER_INPUT_A | DRAFT - NOT FOR FABRICATION",
+        "Independent external 12 V input; 12-15 V characterization only. Never apply 18 V as normal setpoint.",
+        "TPS259470L latch-off candidate; nominal UV=9.2 V, OV=16.8 V, current limit=2.02 A.",
+        "Values/ratings are design candidates. Fault signal is NOT a complete independent watchdog.",
+        "Input connector, fuse/TVS and cable selection remain OPEN; TP endpoints are NOT connector pin assignments."
+      ],
+      "parts": [
+        {
+          "key": "TPS259470LRPWR",
+          "ref": "U_EFUSE_A",
+          "value": "TPS259470LRPWR",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "UV_A",
+            "2": "OV_A",
+            "3": null,
+            "4": "FAULT_N_A",
+            "5": "VIN_A",
+            "6": "FUSED_A",
+            "7": "DVDT_A",
+            "8": "PGND_A",
+            "9": "ILM_A",
+            "10": "ITIMER_A"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_INPUT_A",
+          "value": "EXTERNAL_INPUT",
+          "x": 120,
+          "y": 670,
+          "nets": {
+            "1": "VIN_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_RETURN_A",
+          "value": "EXTERNAL_RETURN",
+          "x": 120,
+          "y": 570,
+          "nets": {
+            "1": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_A0",
+          "value": "100k 1%",
+          "x": 200,
+          "y": 330,
+          "nets": {
+            "1": "VIN_A",
+            "2": "UV_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_A1",
+          "value": "15k 1%",
+          "x": 550,
+          "y": 330,
+          "nets": {
+            "1": "UV_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_A2",
+          "value": "130k 1%",
+          "x": 900,
+          "y": 330,
+          "nets": {
+            "1": "VIN_A",
+            "2": "OV_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_A3",
+          "value": "10k 1%",
+          "x": 200,
+          "y": 230,
+          "nets": {
+            "1": "OV_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_A4",
+          "value": "1.65k 1%",
+          "x": 550,
+          "y": 230,
+          "nets": {
+            "1": "ILM_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_EFUSE_A5",
+          "value": "10k",
+          "x": 900,
+          "y": 230,
+          "nets": {
+            "1": "3V3_A",
+            "2": "FAULT_N_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_DVDT_A",
+          "value": "3.3nF 50V",
+          "x": 870,
+          "y": 620,
+          "nets": {
+            "1": "DVDT_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ITIMER_A",
+          "value": "2.2nF",
+          "x": 870,
+          "y": 520,
+          "nets": {
+            "1": "ITIMER_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_INPUT_A",
+          "value": "10uF 35V",
+          "x": 150,
+          "y": 440,
+          "nets": {
+            "1": "VIN_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SHUNT_A",
+          "value": "20mR 2W KELVIN",
+          "x": 520,
+          "y": 120,
+          "nets": {
+            "1": "FUSED_A",
+            "2": "VDRV_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_MONITOR_A",
+      "notes": [
+        "POWER_MONITOR_A | DRAFT - NOT FOR FABRICATION",
+        "Local I2C bus at local 3.3 V; host connection/level compatibility TBD.",
+        "INA226 address0x40, TMP117 address0x48 on EACH SEPARATE bus.",
+        "Kelvin shunt sense; signed current, alert limits and calibration must be configured/tested."
+      ],
+      "parts": [
+        {
+          "key": "INA226AIDGSR",
+          "ref": "U_CURRENT_A",
+          "value": "INA226AIDGSR",
+          "x": 270,
+          "y": 530,
+          "nets": {
+            "1": "DGND_A",
+            "2": "DGND_A",
+            "3": "CURRENT_ALERT_N_A",
+            "4": "I2C_A_SDA",
+            "5": "I2C_A_SCL",
+            "6": "3V3_A",
+            "7": "DGND_A",
+            "8": "VDRV_A",
+            "9": "VDRV_A",
+            "10": "FUSED_A"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "TMP117MAIDRVR",
+          "ref": "U_TEMP_A",
+          "value": "TMP117MAIDRVR",
+          "x": 800,
+          "y": 530,
+          "nets": {
+            "1": "I2C_A_SCL",
+            "2": "DGND_A",
+            "3": "TEMP_ALERT_N_A",
+            "4": "DGND_A",
+            "5": "3V3_A",
+            "6": "I2C_A_SDA",
+            "7": "DGND_A"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_CURRENT_A",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "3V3_A",
+            "2": "DGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_TEMP_A",
+          "value": "100nF X7R",
+          "x": 800,
+          "y": 690,
+          "nets": {
+            "1": "3V3_A",
+            "2": "DGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_A0",
+          "value": "4.7k",
+          "x": 220,
+          "y": 320,
+          "nets": {
+            "1": "3V3_A",
+            "2": "I2C_A_SDA"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_A1",
+          "value": "4.7k",
+          "x": 750,
+          "y": 320,
+          "nets": {
+            "1": "3V3_A",
+            "2": "I2C_A_SCL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_A2",
+          "value": "4.7k",
+          "x": 220,
+          "y": 200,
+          "nets": {
+            "1": "3V3_A",
+            "2": "CURRENT_ALERT_N_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_MON_PULL_A3",
+          "value": "4.7k",
+          "x": 750,
+          "y": 200,
+          "nets": {
+            "1": "3V3_A",
+            "2": "TEMP_ALERT_N_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_BUCK_AD",
+      "notes": [
+        "POWER_BUCK_AD | DRAFT - NOT FOR FABRICATION",
+        "AP63203 fixed3.3 V / AP63200 adjustable5.52 V; 6.8uH is unqualified BOM candidate.",
+        "Inductor Isat/DCR, ceramic DC bias, ripple/stability and startup must be checked.",
+        "Input and switching currents return to local PGND; no layout created."
+      ],
+      "parts": [
+        {
+          "key": "AP63203WU-7",
+          "ref": "U_BUCK_AD",
+          "value": "AP63203WU-7",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "3V3_A",
+            "2": "VDRV_A",
+            "3": "VDRV_A",
+            "4": "PGND_A",
+            "5": "SW_AD",
+            "6": "BST_AD"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "L",
+          "ref": "L_BUCK_AD",
+          "value": "6.8uH ISAT_TBD",
+          "x": 810,
+          "y": 520,
+          "nets": {
+            "1": "SW_AD",
+            "2": "3V3_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_IN_AD",
+          "value": "10uF 35V",
+          "x": 180,
+          "y": 660,
+          "nets": {
+            "1": "VDRV_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BOOT_AD",
+          "value": "100nF",
+          "x": 650,
+          "y": 680,
+          "nets": {
+            "1": "BST_AD",
+            "2": "SW_AD"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O1_AD",
+          "value": "22uF 16V",
+          "x": 380,
+          "y": 290,
+          "nets": {
+            "1": "3V3_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O2_AD",
+          "value": "22uF 16V",
+          "x": 820,
+          "y": 290,
+          "nets": {
+            "1": "3V3_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_BUCK_AP",
+      "notes": [
+        "POWER_BUCK_AP | DRAFT - NOT FOR FABRICATION",
+        "AP63203 fixed3.3 V / AP63200 adjustable5.52 V; 6.8uH is unqualified BOM candidate.",
+        "Inductor Isat/DCR, ceramic DC bias, ripple/stability and startup must be checked.",
+        "Input and switching currents return to local PGND; no layout created."
+      ],
+      "parts": [
+        {
+          "key": "AP63200WU-7",
+          "ref": "U_BUCK_AP",
+          "value": "AP63200WU-7",
+          "x": 430,
+          "y": 530,
+          "nets": {
+            "1": "FB_AP",
+            "2": "VDRV_A",
+            "3": "VDRV_A",
+            "4": "PGND_A",
+            "5": "SW_AP",
+            "6": "BST_AP"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "L",
+          "ref": "L_BUCK_AP",
+          "value": "6.8uH ISAT_TBD",
+          "x": 810,
+          "y": 520,
+          "nets": {
+            "1": "SW_AP",
+            "2": "5V5_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_IN_AP",
+          "value": "10uF 35V",
+          "x": 180,
+          "y": 660,
+          "nets": {
+            "1": "VDRV_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BOOT_AP",
+          "value": "100nF",
+          "x": 650,
+          "y": 680,
+          "nets": {
+            "1": "BST_AP",
+            "2": "SW_AP"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O1_AP",
+          "value": "22uF 16V",
+          "x": 380,
+          "y": 290,
+          "nets": {
+            "1": "5V5_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BUCK_O2_AP",
+          "value": "22uF 16V",
+          "x": 820,
+          "y": 290,
+          "nets": {
+            "1": "5V5_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_FB_TOP_AP",
+          "value": "590k 1%",
+          "x": 270,
+          "y": 160,
+          "nets": {
+            "1": "5V5_A",
+            "2": "FB_AP"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_FB_BOTTOM_AP",
+          "value": "100k 1%",
+          "x": 800,
+          "y": 160,
+          "nets": {
+            "1": "FB_AP",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "POWER_ANALOG_A",
+      "notes": [
+        "POWER_ANALOG_A | DRAFT - NOT FOR FABRICATION",
+        "Fixed5.0 V ADP7118: SENSE to output, SS open; EP to AGND.",
+        "Ferrite before LDO; effective capacitor >=2.2uF over DC bias/temp. 200mA LDO limit.",
+        "Ground links express intended common reference; physical return-path review remains mandatory."
+      ],
+      "parts": [
+        {
+          "key": "BLM21PG221SN1D",
+          "ref": "FB_ANALOG_A",
+          "value": "BLM21PG221SN1D",
+          "x": 200,
+          "y": 610,
+          "nets": {
+            "1": "5V5_A",
+            "2": "LDO_IN_A"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "ADP7118ACPZN5.0-R7",
+          "ref": "U_LDO_A",
+          "value": "ADP7118ACPZN5.0-R7",
+          "x": 650,
+          "y": 550,
+          "nets": {
+            "1": "5VA_A",
+            "2": "5VA_A",
+            "3": "AGND_A",
+            "4": "LDO_IN_A",
+            "5": null,
+            "6": "LDO_IN_A",
+            "7": "AGND_A"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LDO_IN_A",
+          "value": "4.7uF 16V",
+          "x": 200,
+          "y": 400,
+          "nets": {
+            "1": "LDO_IN_A",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LDO_OUT_A",
+          "value": "4.7uF 16V",
+          "x": 840,
+          "y": 400,
+          "nets": {
+            "1": "5VA_A",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GROUND_D_A",
+          "value": "0R RETURN_LINK",
+          "x": 250,
+          "y": 230,
+          "nets": {
+            "1": "DGND_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GROUND_A_A",
+          "value": "0R RETURN_LINK",
+          "x": 750,
+          "y": 230,
+          "nets": {
+            "1": "AGND_A",
+            "2": "PGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "SYSTEM_REFERENCE_AND_ENVIRONMENT",
+      "notes": [
+        "SYSTEM_REFERENCE_AND_ENVIRONMENT | DRAFT - NOT FOR FABRICATION",
+        "System reference joins local returns. Cable return topology NOT frozen.",
+        "SHT45 remote ambient measurement; keep away from drivers. Dedicated 3.3 V I2C bus.",
+        "Do not connect unknown PS/PL voltage domains directly to these monitor buses."
+      ],
+      "parts": [
+        {
+          "key": "R",
+          "ref": "R_SYSTEM_GND_U",
+          "value": "0R STAR_INTENT",
+          "x": 220,
+          "y": 600,
+          "nets": {
+            "1": "PGND_U",
+            "2": "SYSTEM_GND"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SYSTEM_GND_L",
+          "value": "0R STAR_INTENT",
+          "x": 570,
+          "y": 600,
+          "nets": {
+            "1": "PGND_L",
+            "2": "SYSTEM_GND"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SYSTEM_GND_A",
+          "value": "0R STAR_INTENT",
+          "x": 920,
+          "y": 600,
+          "nets": {
+            "1": "PGND_A",
+            "2": "SYSTEM_GND"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SHT45-AD1B-R2",
+          "ref": "U_ENV",
+          "value": "SHT45-AD1B-R2",
+          "x": 400,
+          "y": 350,
+          "nets": {
+            "1": "I2C_ENV_SDA",
+            "2": "I2C_ENV_SCL",
+            "3": "3V3_A",
+            "4": "DGND_A",
+            "5": null
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ENV",
+          "value": "100nF X7R",
+          "x": 180,
+          "y": 470,
+          "nets": {
+            "1": "3V3_A",
+            "2": "DGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ENV_PULL0",
+          "value": "4.7k",
+          "x": 850,
+          "y": 410,
+          "nets": {
+            "1": "3V3_A",
+            "2": "I2C_ENV_SDA"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ENV_PULL1",
+          "value": "4.7k",
+          "x": 850,
+          "y": 290,
+          "nets": {
+            "1": "3V3_A",
+            "2": "I2C_ENV_SCL"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "FPGA_CORE_INTERFACE_0",
+      "notes": [
+        "FPGA_CORE_INTERFACE_0 | DRAFT - NOT FOR FABRICATION",
+        "LOGICAL INTERFACE ONLY: every physical FPGA/connector pin and VCCO remains TBD (B01/B03).",
+        "TP symbols identify logical endpoints; they are NOT a proposed core-board pinout.",
+        "Native net labels use UPPERCASE; explicit case-sensitive RTL mapping is in channel-map report.",
+        "hardware_enable/rst_n policy and independent KILL/watchdog remain OPEN."
+      ],
+      "parts": [
+        {
+          "key": "TP",
+          "ref": "TP_CORE_00",
+          "value": "serial_data[0] / PIN_TBD",
+          "x": 180,
+          "y": 600,
+          "nets": {
+            "1": "SERIAL_DATA[0]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_01",
+          "value": "serial_data[1] / PIN_TBD",
+          "x": 450,
+          "y": 600,
+          "nets": {
+            "1": "SERIAL_DATA[1]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_02",
+          "value": "serial_data[2] / PIN_TBD",
+          "x": 720,
+          "y": 600,
+          "nets": {
+            "1": "SERIAL_DATA[2]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_03",
+          "value": "serial_data[3] / PIN_TBD",
+          "x": 990,
+          "y": 600,
+          "nets": {
+            "1": "SERIAL_DATA[3]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_04",
+          "value": "serial_data[4] / PIN_TBD",
+          "x": 180,
+          "y": 460,
+          "nets": {
+            "1": "SERIAL_DATA[4]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_05",
+          "value": "serial_data[5] / PIN_TBD",
+          "x": 450,
+          "y": 460,
+          "nets": {
+            "1": "SERIAL_DATA[5]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_06",
+          "value": "serial_data[6] / PIN_TBD",
+          "x": 720,
+          "y": 460,
+          "nets": {
+            "1": "SERIAL_DATA[6]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_07",
+          "value": "serial_data[7] / PIN_TBD",
+          "x": 990,
+          "y": 460,
+          "nets": {
+            "1": "SERIAL_DATA[7]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_08",
+          "value": "serial_data[8] / PIN_TBD",
+          "x": 180,
+          "y": 320,
+          "nets": {
+            "1": "SERIAL_DATA[8]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_09",
+          "value": "serial_data[9] / PIN_TBD",
+          "x": 450,
+          "y": 320,
+          "nets": {
+            "1": "SERIAL_DATA[9]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_10",
+          "value": "serial_data[10] / PIN_TBD",
+          "x": 720,
+          "y": 320,
+          "nets": {
+            "1": "SERIAL_DATA[10]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_11",
+          "value": "serial_data[11] / PIN_TBD",
+          "x": 990,
+          "y": 320,
+          "nets": {
+            "1": "SERIAL_DATA[11]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_12",
+          "value": "serial_data[12] / PIN_TBD",
+          "x": 180,
+          "y": 180,
+          "nets": {
+            "1": "SERIAL_DATA[12]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_13",
+          "value": "serial_data[13] / PIN_TBD",
+          "x": 450,
+          "y": 180,
+          "nets": {
+            "1": "SERIAL_DATA[13]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_14",
+          "value": "serial_data[14] / PIN_TBD",
+          "x": 720,
+          "y": 180,
+          "nets": {
+            "1": "SERIAL_DATA[14]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_15",
+          "value": "serial_data[15] / PIN_TBD",
+          "x": 990,
+          "y": 180,
+          "nets": {
+            "1": "SERIAL_DATA[15]"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "FPGA_CORE_INTERFACE_1",
+      "notes": [
+        "FPGA_CORE_INTERFACE_1 | DRAFT - NOT FOR FABRICATION",
+        "LOGICAL INTERFACE ONLY: every physical FPGA/connector pin and VCCO remains TBD (B01/B03).",
+        "TP symbols identify logical endpoints; they are NOT a proposed core-board pinout.",
+        "Native net labels use UPPERCASE; explicit case-sensitive RTL mapping is in channel-map report.",
+        "hardware_enable/rst_n policy and independent KILL/watchdog remain OPEN."
+      ],
+      "parts": [
+        {
+          "key": "TP",
+          "ref": "TP_CORE_16",
+          "value": "serial_data[16] / PIN_TBD",
+          "x": 180,
+          "y": 600,
+          "nets": {
+            "1": "SERIAL_DATA[16]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_17",
+          "value": "serial_data[17] / PIN_TBD",
+          "x": 450,
+          "y": 600,
+          "nets": {
+            "1": "SERIAL_DATA[17]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_18",
+          "value": "serial_data[18] / PIN_TBD",
+          "x": 720,
+          "y": 600,
+          "nets": {
+            "1": "SERIAL_DATA[18]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_19",
+          "value": "serial_data[19] / PIN_TBD",
+          "x": 990,
+          "y": 600,
+          "nets": {
+            "1": "SERIAL_DATA[19]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_20",
+          "value": "serial_data[20] / PIN_TBD",
+          "x": 180,
+          "y": 460,
+          "nets": {
+            "1": "SERIAL_DATA[20]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_21",
+          "value": "serial_data[21] / PIN_TBD",
+          "x": 450,
+          "y": 460,
+          "nets": {
+            "1": "SERIAL_DATA[21]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_22",
+          "value": "serial_data[22] / PIN_TBD",
+          "x": 720,
+          "y": 460,
+          "nets": {
+            "1": "SERIAL_DATA[22]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_23",
+          "value": "serial_data[23] / PIN_TBD",
+          "x": 990,
+          "y": 460,
+          "nets": {
+            "1": "SERIAL_DATA[23]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_24",
+          "value": "serial_data[24] / PIN_TBD",
+          "x": 180,
+          "y": 320,
+          "nets": {
+            "1": "SERIAL_DATA[24]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_25",
+          "value": "serial_data[25] / PIN_TBD",
+          "x": 450,
+          "y": 320,
+          "nets": {
+            "1": "SERIAL_DATA[25]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_26",
+          "value": "serial_data[26] / PIN_TBD",
+          "x": 720,
+          "y": 320,
+          "nets": {
+            "1": "SERIAL_DATA[26]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_27",
+          "value": "serial_data[27] / PIN_TBD",
+          "x": 990,
+          "y": 320,
+          "nets": {
+            "1": "SERIAL_DATA[27]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_28",
+          "value": "serial_data[28] / PIN_TBD",
+          "x": 180,
+          "y": 180,
+          "nets": {
+            "1": "SERIAL_DATA[28]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_29",
+          "value": "serial_data[29] / PIN_TBD",
+          "x": 450,
+          "y": 180,
+          "nets": {
+            "1": "SERIAL_DATA[29]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_30",
+          "value": "serial_data[30] / PIN_TBD",
+          "x": 720,
+          "y": 180,
+          "nets": {
+            "1": "SERIAL_DATA[30]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_31",
+          "value": "serial_data[31] / PIN_TBD",
+          "x": 990,
+          "y": 180,
+          "nets": {
+            "1": "SERIAL_DATA[31]"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "FPGA_CORE_INTERFACE_2",
+      "notes": [
+        "FPGA_CORE_INTERFACE_2 | DRAFT - NOT FOR FABRICATION",
+        "LOGICAL INTERFACE ONLY: every physical FPGA/connector pin and VCCO remains TBD (B01/B03).",
+        "TP symbols identify logical endpoints; they are NOT a proposed core-board pinout.",
+        "Native net labels use UPPERCASE; explicit case-sensitive RTL mapping is in channel-map report.",
+        "hardware_enable/rst_n policy and independent KILL/watchdog remain OPEN."
+      ],
+      "parts": [
+        {
+          "key": "TP",
+          "ref": "TP_CORE_32",
+          "value": "shift_clock / PIN_TBD",
+          "x": 180,
+          "y": 600,
+          "nets": {
+            "1": "SHIFT_CLOCK"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_33",
+          "value": "latch_clock / PIN_TBD",
+          "x": 450,
+          "y": 600,
+          "nets": {
+            "1": "LATCH_CLOCK"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_34",
+          "value": "output_disable / PIN_TBD",
+          "x": 720,
+          "y": 600,
+          "nets": {
+            "1": "OUTPUT_DISABLE"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_35",
+          "value": "adc_reset / PIN_TBD",
+          "x": 990,
+          "y": 600,
+          "nets": {
+            "1": "ADC_RESET"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_36",
+          "value": "adc_convst / PIN_TBD",
+          "x": 180,
+          "y": 460,
+          "nets": {
+            "1": "ADC_CONVST"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_37",
+          "value": "adc_cs_n / PIN_TBD",
+          "x": 450,
+          "y": 460,
+          "nets": {
+            "1": "ADC_CS_N"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_38",
+          "value": "adc_sclk / PIN_TBD",
+          "x": 720,
+          "y": 460,
+          "nets": {
+            "1": "ADC_SCLK"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_39",
+          "value": "adc_sdi / PIN_TBD",
+          "x": 990,
+          "y": 460,
+          "nets": {
+            "1": "ADC_SDI"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_40",
+          "value": "adc_busy / PIN_TBD",
+          "x": 180,
+          "y": 320,
+          "nets": {
+            "1": "ADC_BUSY"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_41",
+          "value": "adc_dout[0] / PIN_TBD",
+          "x": 450,
+          "y": 320,
+          "nets": {
+            "1": "ADC_DOUT[0]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_42",
+          "value": "adc_dout[1] / PIN_TBD",
+          "x": 720,
+          "y": 320,
+          "nets": {
+            "1": "ADC_DOUT[1]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_43",
+          "value": "adc_dout[2] / PIN_TBD",
+          "x": 990,
+          "y": 320,
+          "nets": {
+            "1": "ADC_DOUT[2]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_44",
+          "value": "adc_dout[3] / PIN_TBD",
+          "x": 180,
+          "y": 180,
+          "nets": {
+            "1": "ADC_DOUT[3]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_45",
+          "value": "rx_blank[0] / PIN_TBD",
+          "x": 450,
+          "y": 180,
+          "nets": {
+            "1": "RX_BLANK[0]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_46",
+          "value": "rx_blank[1] / PIN_TBD",
+          "x": 720,
+          "y": 180,
+          "nets": {
+            "1": "RX_BLANK[1]"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_47",
+          "value": "hardware_enable / PIN_TBD",
+          "x": 990,
+          "y": 180,
+          "nets": {
+            "1": "HARDWARE_ENABLE"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "FPGA_CORE_INTERFACE_3",
+      "notes": [
+        "FPGA_CORE_INTERFACE_3 | DRAFT - NOT FOR FABRICATION",
+        "LOGICAL INTERFACE ONLY: every physical FPGA/connector pin and VCCO remains TBD (B01/B03).",
+        "TP symbols identify logical endpoints; they are NOT a proposed core-board pinout.",
+        "Native net labels use UPPERCASE; explicit case-sensitive RTL mapping is in channel-map report.",
+        "hardware_enable/rst_n policy and independent KILL/watchdog remain OPEN."
+      ],
+      "parts": [
+        {
+          "key": "TP",
+          "ref": "TP_CORE_48",
+          "value": "rst_n / PIN_TBD",
+          "x": 180,
+          "y": 600,
+          "nets": {
+            "1": "RST_N"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_49",
+          "value": "LEVEL_OE_N / PIN_TBD",
+          "x": 450,
+          "y": 600,
+          "nets": {
+            "1": "LEVEL_OE_N"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_50",
+          "value": "VCCO_FPGA / PIN_TBD",
+          "x": 720,
+          "y": 600,
+          "nets": {
+            "1": "VCCO_FPGA"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_CORE_51",
+          "value": "SYSTEM_GND / PIN_TBD",
+          "x": 990,
+          "y": 600,
+          "nets": {
+            "1": "SYSTEM_GND"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    }
+  ],
+  "rtl_to_native_net": {
+    "serial_data[0]": "SERIAL_DATA[0]",
+    "serial_data[1]": "SERIAL_DATA[1]",
+    "serial_data[2]": "SERIAL_DATA[2]",
+    "serial_data[3]": "SERIAL_DATA[3]",
+    "serial_data[4]": "SERIAL_DATA[4]",
+    "serial_data[5]": "SERIAL_DATA[5]",
+    "serial_data[6]": "SERIAL_DATA[6]",
+    "serial_data[7]": "SERIAL_DATA[7]",
+    "serial_data[8]": "SERIAL_DATA[8]",
+    "serial_data[9]": "SERIAL_DATA[9]",
+    "serial_data[10]": "SERIAL_DATA[10]",
+    "serial_data[11]": "SERIAL_DATA[11]",
+    "serial_data[12]": "SERIAL_DATA[12]",
+    "serial_data[13]": "SERIAL_DATA[13]",
+    "serial_data[14]": "SERIAL_DATA[14]",
+    "serial_data[15]": "SERIAL_DATA[15]",
+    "serial_data[16]": "SERIAL_DATA[16]",
+    "serial_data[17]": "SERIAL_DATA[17]",
+    "serial_data[18]": "SERIAL_DATA[18]",
+    "serial_data[19]": "SERIAL_DATA[19]",
+    "serial_data[20]": "SERIAL_DATA[20]",
+    "serial_data[21]": "SERIAL_DATA[21]",
+    "serial_data[22]": "SERIAL_DATA[22]",
+    "serial_data[23]": "SERIAL_DATA[23]",
+    "serial_data[24]": "SERIAL_DATA[24]",
+    "serial_data[25]": "SERIAL_DATA[25]",
+    "serial_data[26]": "SERIAL_DATA[26]",
+    "serial_data[27]": "SERIAL_DATA[27]",
+    "serial_data[28]": "SERIAL_DATA[28]",
+    "serial_data[29]": "SERIAL_DATA[29]",
+    "serial_data[30]": "SERIAL_DATA[30]",
+    "serial_data[31]": "SERIAL_DATA[31]",
+    "shift_clock": "SHIFT_CLOCK",
+    "latch_clock": "LATCH_CLOCK",
+    "output_disable": "OUTPUT_DISABLE",
+    "adc_reset": "ADC_RESET",
+    "adc_convst": "ADC_CONVST",
+    "adc_cs_n": "ADC_CS_N",
+    "adc_sclk": "ADC_SCLK",
+    "adc_sdi": "ADC_SDI",
+    "adc_busy": "ADC_BUSY",
+    "adc_dout[0]": "ADC_DOUT[0]",
+    "adc_dout[1]": "ADC_DOUT[1]",
+    "adc_dout[2]": "ADC_DOUT[2]",
+    "adc_dout[3]": "ADC_DOUT[3]",
+    "rx_blank[0]": "RX_BLANK[0]",
+    "rx_blank[1]": "RX_BLANK[1]",
+    "hardware_enable": "HARDWARE_ENABLE",
+    "rst_n": "RST_N",
+    "LEVEL_OE_N": "LEVEL_OE_N",
+    "VCCO_FPGA": "VCCO_FPGA",
+    "SYSTEM_GND": "SYSTEM_GND"
+  },
+  "physical_pin_assignment": "BLOCKED_B01_B03"
+}

@@ -19,3 +19,7 @@ tmp/
 # Preserve user originals locally; canonical project import lives in v2.
 BOM/*.xlsx
 v2/hardware/transducers/references/
+
+# Raw desktop captures can contain account and unrelated local workspace information.
+PCB/V1/log/screenshots/*.png
+PCB/V1/log/datasheet/vendor_files/

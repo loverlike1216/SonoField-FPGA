@@ -45,3 +45,9 @@ ADC roundtrip and deterministic/noise evidence. Frozen v1 unchanged. No PCB or h
 - Preserved initial newline-hash audit failure; source evidence now uses explicit canonical LF text.
 - Verified renamed workspace, updated operational paths and session-scoped transcript relocation check.
 - Source 9c058fe3b02469a6d36a08e3a7cbedd19076e67b pushed; no frozen v1/PCB/hardware-result changes.
+
+## 2026-09-26 — v2 schematic V1 draft
+- Captured128TX/8RX, serializer/level translation, ADC/AFE and three power domains in native EasyEDA.
+- Consolidated83modules into one named, partitioned sheet; exported vector PDF/SVG and corrected ADC label alignment.
+- Native3992-pin and independent1338-pin mapping audits pass;212 frozen v1 files unchanged. ERC45warnings retained and classified.
+- Electrical release remains REVISE; no PCB or hardware result. Persisted pwsh preference and observable interaction checkpoint.

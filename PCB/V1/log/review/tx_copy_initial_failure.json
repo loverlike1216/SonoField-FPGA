@@ -1,0 +1,292 @@
+{
+  "status": "FAIL",
+  "scope": "Native TX connectivity and template metadata; not full ERC or hardware qualification",
+  "sheet_count": 2,
+  "components": 69,
+  "pins_checked": 138,
+  "errors": [
+    {
+      "ref": "U_DRV_U04",
+      "pin": "4",
+      "expected": "U_TX05_IN",
+      "actual": "U_TX01_IN"
+    },
+    {
+      "ref": "U_DRV_U04",
+      "pin": "5",
+      "expected": "U_TX05_DRV",
+      "actual": "U_TX01_DRV"
+    },
+    {
+      "ref": "U_DRV_U04",
+      "pin": "7",
+      "expected": "U_TX04_DRV",
+      "actual": "U_TX00_DRV"
+    },
+    {
+      "assembly": "U_DRV_U04"
+    },
+    {
+      "assembly": "C_HF_U04"
+    },
+    {
+      "assembly": "C_LOCAL_U04"
+    },
+    {
+      "ref": "R_PD_U04",
+      "pin": "1",
+      "expected": "U_TX04_IN",
+      "actual": "U_TX00_IN"
+    },
+    {
+      "assembly": "R_PD_U04"
+    },
+    {
+      "ref": "R_OUT_U04",
+      "pin": "1",
+      "expected": "U_TX04_DRV",
+      "actual": "U_TX00_DRV"
+    },
+    {
+      "assembly": "R_OUT_U04"
+    },
+    {
+      "ref": "UPPER_TX_04",
+      "pin": "2",
+      "expected": "U_TX04_FACE",
+      "actual": "U_TX00_FACE"
+    },
+    {
+      "assembly": "UPPER_TX_04"
+    },
+    {
+      "ref": "R_DAMP_U04",
+      "pin": "1",
+      "expected": "U_TX04_FACE",
+      "actual": "U_TX00_FACE"
+    },
+    {
+      "assembly": "R_DAMP_U04"
+    },
+    {
+      "ref": "TP_IN_U04",
+      "pin": "1",
+      "expected": "U_TX04_IN",
+      "actual": "U_TX00_IN"
+    },
+    {
+      "assembly": "TP_IN_U04"
+    },
+    {
+      "ref": "TP_OUT_U04",
+      "pin": "1",
+      "expected": "U_TX04_DRV",
+      "actual": "U_TX00_DRV"
+    },
+    {
+      "assembly": "TP_OUT_U04"
+    },
+    {
+      "assembly": "TP_TX_U04"
+    },
+    {
+      "ref": "R_PD_U05",
+      "pin": "1",
+      "expected": "U_TX05_IN",
+      "actual": "U_TX01_IN"
+    },
+    {
+      "assembly": "R_PD_U05"
+    },
+    {
+      "ref": "R_OUT_U05",
+      "pin": "2",
+      "expected": "U_TX05_FACE",
+      "actual": "U_TX01_FACE"
+    },
+    {
+      "assembly": "R_OUT_U05"
+    },
+    {
+      "ref": "UPPER_TX_05",
+      "pin": "2",
+      "expected": "U_TX05_FACE",
+      "actual": "U_TX01_FACE"
+    },
+    {
+      "assembly": "UPPER_TX_05"
+    },
+    {
+      "assembly": "R_DAMP_U05"
+    },
+    {
+      "ref": "TP_IN_U05",
+      "pin": "1",
+      "expected": "U_TX05_IN",
+      "actual": "U_TX01_IN"
+    },
+    {
+      "assembly": "TP_IN_U05"
+    },
+    {
+      "ref": "TP_OUT_U05",
+      "pin": "1",
+      "expected": "U_TX05_DRV",
+      "actual": "U_TX01_DRV"
+    },
+    {
+      "assembly": "TP_OUT_U05"
+    },
+    {
+      "ref": "TP_TX_U05",
+      "pin": "1",
+      "expected": "U_TX05_FACE",
+      "actual": "U_TX01_FACE"
+    },
+    {
+      "assembly": "TP_TX_U05"
+    },
+    {
+      "ref": "U_DRV_U06",
+      "pin": "4",
+      "expected": "U_TX07_IN",
+      "actual": "U_TX03_IN"
+    },
+    {
+      "ref": "U_DRV_U06",
+      "pin": "5",
+      "expected": "U_TX07_DRV",
+      "actual": "U_TX03_DRV"
+    },
+    {
+      "ref": "U_DRV_U06",
+      "pin": "7",
+      "expected": "U_TX06_DRV",
+      "actual": "U_TX02_DRV"
+    },
+    {
+      "assembly": "U_DRV_U06"
+    },
+    {
+      "assembly": "C_HF_U06"
+    },
+    {
+      "assembly": "C_LOCAL_U06"
+    },
+    {
+      "ref": "R_PD_U06",
+      "pin": "1",
+      "expected": "U_TX06_IN",
+      "actual": "U_TX02_IN"
+    },
+    {
+      "assembly": "R_PD_U06"
+    },
+    {
+      "ref": "R_OUT_U06",
+      "pin": "1",
+      "expected": "U_TX06_DRV",
+      "actual": "U_TX02_DRV"
+    },
+    {
+      "assembly": "R_OUT_U06"
+    },
+    {
+      "ref": "UPPER_TX_06",
+      "pin": "2",
+      "expected": "U_TX06_FACE",
+      "actual": "U_TX02_FACE"
+    },
+    {
+      "assembly": "UPPER_TX_06"
+    },
+    {
+      "ref": "R_DAMP_U06",
+      "pin": "1",
+      "expected": "U_TX06_FACE",
+      "actual": "U_TX02_FACE"
+    },
+    {
+      "assembly": "R_DAMP_U06"
+    },
+    {
+      "ref": "TP_IN_U06",
+      "pin": "1",
+      "expected": "U_TX06_IN",
+      "actual": "U_TX02_IN"
+    },
+    {
+      "assembly": "TP_IN_U06"
+    },
+    {
+      "ref": "TP_OUT_U06",
+      "pin": "1",
+      "expected": "U_TX06_DRV",
+      "actual": "U_TX02_DRV"
+    },
+    {
+      "assembly": "TP_OUT_U06"
+    },
+    {
+      "assembly": "TP_TX_U06"
+    },
+    {
+      "ref": "R_PD_U07",
+      "pin": "1",
+      "expected": "U_TX07_IN",
+      "actual": "U_TX03_IN"
+    },
+    {
+      "assembly": "R_PD_U07"
+    },
+    {
+      "ref": "R_OUT_U07",
+      "pin": "2",
+      "expected": "U_TX07_FACE",
+      "actual": "U_TX03_FACE"
+    },
+    {
+      "assembly": "R_OUT_U07"
+    },
+    {
+      "ref": "UPPER_TX_07",
+      "pin": "2",
+      "expected": "U_TX07_FACE",
+      "actual": "U_TX03_FACE"
+    },
+    {
+      "assembly": "UPPER_TX_07"
+    },
+    {
+      "assembly": "R_DAMP_U07"
+    },
+    {
+      "ref": "TP_IN_U07",
+      "pin": "1",
+      "expected": "U_TX07_IN",
+      "actual": "U_TX03_IN"
+    },
+    {
+      "assembly": "TP_IN_U07"
+    },
+    {
+      "ref": "TP_OUT_U07",
+      "pin": "1",
+      "expected": "U_TX07_DRV",
+      "actual": "U_TX03_DRV"
+    },
+    {
+      "assembly": "TP_OUT_U07"
+    },
+    {
+      "ref": "TP_TX_U07",
+      "pin": "1",
+      "expected": "U_TX07_FACE",
+      "actual": "U_TX03_FACE"
+    },
+    {
+      "assembly": "TP_TX_U07"
+    }
+  ],
+  "netlist_sha256": "ee95b497f211e47a3a54ec160c55db04f3565cfb9b03cfafcf1aefb385d7d45e"
+}

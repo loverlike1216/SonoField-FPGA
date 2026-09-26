@@ -170,6 +170,8 @@ def index(root):
         text += "\n[User v2 instruction and approval](codex/instructions/v2_formal_development.md) · [v2 bootstrap flow](tool-flow/T-20260921-001__v2-bootstrap.md)\n"
     if (root/"codex/instructions/v2_self_calibration.md").exists():
         text += "\n[User software/digital instruction](codex/instructions/v2_self_calibration.md) · [Calibration stage flow](tool-flow/T-20260921-002__self-calibration.md)\n"
+    if (root/"codex/instructions/v2_schematic_revision_V1.md").exists():
+        text += "\n[User schematic instruction](codex/instructions/v2_schematic_revision_V1.md) · [Schematic tool flow](tool-flow/T-20260926-001__schematic.md)\n"
     write_changed(root / "INDEX.md", text)
 
 

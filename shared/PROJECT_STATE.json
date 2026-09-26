@@ -5,15 +5,15 @@
   "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
   "current_branch": "main",
   "current_version": "v2",
-  "current_stage": "SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM",
+  "current_stage": "SCHEMATIC_DESIGN_JLCEDA_PRO",
   "execution": "PROJECT_ACTIVE",
   "status": "PROJECT_ACTIVE",
-  "scope_of_block": "Board-target synthesis, implementation and physical hardware",
+  "scope_of_block": "Electrical schematic release, target FPGA implementation and physical hardware",
   "digital_validation": "PASS",
   "digital_evidence": "v2/evidence/self_calibration_stage/validation_frequency/summary.json",
   "model_evidence": "v2/evidence/model",
   "reproducibility": "PASS",
-  "overall_iteration_result": "ACCEPT WITH LIMITATIONS",
+  "overall_iteration_result": "REVISE",
   "board_synthesis": "BLOCKED_BY_BOARD_FACT",
   "implementation": "NOT_RUN",
   "external_acceptance": "PENDING",
@@ -21,7 +21,7 @@
   "exact_part": null,
   "documented_clock_hz": 33000000,
   "reproducibility_evidence": "v2/evidence/self_calibration_stage/reproducibility_review/summary.json",
-  "next_stage": "USER_CHATGPT_INDEPENDENT_REVIEW",
+  "next_stage": "SCHEMATIC_ELECTRICAL_REVIEW",
   "blocking_ids": [
     "B01",
     "B03",
@@ -31,7 +31,7 @@
     "B07"
   ],
   "coordinate_evidence": "v2/hardware/mechanical/geometry_10mm",
-  "current_report": "shared/report_v2.md",
+  "current_report": "shared/report_schematic_v2_V1.md",
   "geometry": {
     "transducer_body_diameter_mm": 10,
     "pitch_mm": 12,
@@ -45,7 +45,7 @@
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
   },
-  "review_scope": "Current software/digital stage; hardware separately blocked",
+  "review_scope": "One-sheet native schematic capture and presentation; electrical release remains blocked",
   "active_version": "v2",
   "branch": "main",
   "chat_source_name": "SonoField-FPGA",
@@ -54,7 +54,8 @@
   "open_ai_problems": [
     "P-20260919-001",
     "P-20260919-002",
-    "P-20260919-003"
+    "P-20260919-003",
+    "P-20260925-001"
   ],
   "blocking_issues": [
     "B01",
@@ -66,7 +67,7 @@
     "B07"
   ],
   "critical_issues": [],
-  "next_action": "STOP: user/ChatGPT independent review of software/digital report; no PCB implementation",
+  "next_action": "Review P-20260925-001, resolve board pins/VCCO and watchdog/timing, qualify MPN/analog hardware; no PCB authorization",
   "validated_source_commit": "9c058fe3b02469a6d36a08e3a7cbedd19076e67b",
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "organization_limitations": [
@@ -77,8 +78,8 @@
   "codex_thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
   "interaction_memory_status": "PARTIAL",
   "interaction_capture_mode": "CHECKPOINT_COMMAND; no background hook",
-  "interaction_memory_cutoff": "2026-09-24T08:23:58.255Z",
-  "interaction_message_count": 84,
+  "interaction_memory_cutoff": "2026-09-26T02:20:20.842Z",
+  "interaction_message_count": 132,
   "interaction_memory_result": "ACCEPT WITH LIMITATIONS",
   "bom": "v2/hardware/bom/BOM_MASTER.xlsx",
   "bom_status": "PCB_PROPOSED; imported input, not fabrication release",
@@ -114,5 +115,24 @@
   ],
   "software_stage_blocking_issues": [],
   "software_stage_critical_issues": [],
-  "software_stage_completed_at": "2026-09-24"
+  "software_stage_completed_at": "2026-09-24",
+  "schematic_revision": "V1",
+  "schematic_status": "DRAFT_NATIVE_CAPTURE_VALIDATED",
+  "schematic_artifact": "PCB/V1/project/SonoField-FPGA-v2-Schematic-V1-SingleSheet.eprj2",
+  "schematic_pdf": "PCB/V1/project/SonoField-SingleSheet.pdf",
+  "schematic_erc": {
+    "fatal": 0,
+    "error": 0,
+    "warning": 45
+  },
+  "schematic_evidence": "PCB/V1/log/review",
+  "terminal_preference": "pwsh (PowerShell 7)",
+  "schematic_blocking_issues": [
+    "B01",
+    "B03",
+    "B04",
+    "INDEPENDENT_WATCHDOG_POWER_QUALIFICATION",
+    "MPN_PACKAGE_QUALIFICATION",
+    "ANALOG_BATCH_QUALIFICATION"
+  ]
 }

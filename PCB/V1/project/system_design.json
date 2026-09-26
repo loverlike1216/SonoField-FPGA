@@ -1,0 +1,4736 @@
+{
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "sheets": [
+    {
+      "name": "SERIALIZER_U_0",
+      "notes": [
+        "SERIALIZER_U_0 | DRAFT - NOT FOR FABRICATION",
+        "Four outputs per lane: QA/QB/QC/QD = channel 4L + 0/1/2/3.",
+        "Shift bit3 first, bit0 last. 66 MHz physical timing remains B04 OPEN.",
+        "Clock/latch branch serves four 595 devices; /OE default disable upstream."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER00",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 590,
+          "nets": {
+            "1": "U_TX01_IN",
+            "2": "U_TX02_IN",
+            "3": "U_TX03_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK0",
+            "12": "U_LATCH0",
+            "13": "U_OE_N",
+            "14": "U_SER00",
+            "15": "U_TX00_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER00",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 700,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER01",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 590,
+          "nets": {
+            "1": "U_TX05_IN",
+            "2": "U_TX06_IN",
+            "3": "U_TX07_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK0",
+            "12": "U_LATCH0",
+            "13": "U_OE_N",
+            "14": "U_SER01",
+            "15": "U_TX04_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER01",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 700,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER02",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 290,
+          "nets": {
+            "1": "U_TX09_IN",
+            "2": "U_TX10_IN",
+            "3": "U_TX11_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK0",
+            "12": "U_LATCH0",
+            "13": "U_OE_N",
+            "14": "U_SER02",
+            "15": "U_TX08_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER02",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 400,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER03",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 290,
+          "nets": {
+            "1": "U_TX13_IN",
+            "2": "U_TX14_IN",
+            "3": "U_TX15_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK0",
+            "12": "U_LATCH0",
+            "13": "U_OE_N",
+            "14": "U_SER03",
+            "15": "U_TX12_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER03",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 400,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "SERIALIZER_U_1",
+      "notes": [
+        "SERIALIZER_U_1 | DRAFT - NOT FOR FABRICATION",
+        "Four outputs per lane: QA/QB/QC/QD = channel 4L + 0/1/2/3.",
+        "Shift bit3 first, bit0 last. 66 MHz physical timing remains B04 OPEN.",
+        "Clock/latch branch serves four 595 devices; /OE default disable upstream."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER04",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 590,
+          "nets": {
+            "1": "U_TX17_IN",
+            "2": "U_TX18_IN",
+            "3": "U_TX19_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK1",
+            "12": "U_LATCH1",
+            "13": "U_OE_N",
+            "14": "U_SER04",
+            "15": "U_TX16_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER04",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 700,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER05",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 590,
+          "nets": {
+            "1": "U_TX21_IN",
+            "2": "U_TX22_IN",
+            "3": "U_TX23_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK1",
+            "12": "U_LATCH1",
+            "13": "U_OE_N",
+            "14": "U_SER05",
+            "15": "U_TX20_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER05",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 700,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER06",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 290,
+          "nets": {
+            "1": "U_TX25_IN",
+            "2": "U_TX26_IN",
+            "3": "U_TX27_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK1",
+            "12": "U_LATCH1",
+            "13": "U_OE_N",
+            "14": "U_SER06",
+            "15": "U_TX24_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER06",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 400,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER07",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 290,
+          "nets": {
+            "1": "U_TX29_IN",
+            "2": "U_TX30_IN",
+            "3": "U_TX31_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK1",
+            "12": "U_LATCH1",
+            "13": "U_OE_N",
+            "14": "U_SER07",
+            "15": "U_TX28_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER07",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 400,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "SERIALIZER_U_2",
+      "notes": [
+        "SERIALIZER_U_2 | DRAFT - NOT FOR FABRICATION",
+        "Four outputs per lane: QA/QB/QC/QD = channel 4L + 0/1/2/3.",
+        "Shift bit3 first, bit0 last. 66 MHz physical timing remains B04 OPEN.",
+        "Clock/latch branch serves four 595 devices; /OE default disable upstream."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER08",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 590,
+          "nets": {
+            "1": "U_TX33_IN",
+            "2": "U_TX34_IN",
+            "3": "U_TX35_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK2",
+            "12": "U_LATCH2",
+            "13": "U_OE_N",
+            "14": "U_SER08",
+            "15": "U_TX32_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER08",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 700,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER09",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 590,
+          "nets": {
+            "1": "U_TX37_IN",
+            "2": "U_TX38_IN",
+            "3": "U_TX39_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK2",
+            "12": "U_LATCH2",
+            "13": "U_OE_N",
+            "14": "U_SER09",
+            "15": "U_TX36_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER09",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 700,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER10",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 290,
+          "nets": {
+            "1": "U_TX41_IN",
+            "2": "U_TX42_IN",
+            "3": "U_TX43_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK2",
+            "12": "U_LATCH2",
+            "13": "U_OE_N",
+            "14": "U_SER10",
+            "15": "U_TX40_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER10",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 400,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER11",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 290,
+          "nets": {
+            "1": "U_TX45_IN",
+            "2": "U_TX46_IN",
+            "3": "U_TX47_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK2",
+            "12": "U_LATCH2",
+            "13": "U_OE_N",
+            "14": "U_SER11",
+            "15": "U_TX44_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER11",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 400,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "SERIALIZER_U_3",
+      "notes": [
+        "SERIALIZER_U_3 | DRAFT - NOT FOR FABRICATION",
+        "Four outputs per lane: QA/QB/QC/QD = channel 4L + 0/1/2/3.",
+        "Shift bit3 first, bit0 last. 66 MHz physical timing remains B04 OPEN.",
+        "Clock/latch branch serves four 595 devices; /OE default disable upstream."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER12",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 590,
+          "nets": {
+            "1": "U_TX49_IN",
+            "2": "U_TX50_IN",
+            "3": "U_TX51_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK3",
+            "12": "U_LATCH3",
+            "13": "U_OE_N",
+            "14": "U_SER12",
+            "15": "U_TX48_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER12",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 700,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER13",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 590,
+          "nets": {
+            "1": "U_TX53_IN",
+            "2": "U_TX54_IN",
+            "3": "U_TX55_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK3",
+            "12": "U_LATCH3",
+            "13": "U_OE_N",
+            "14": "U_SER13",
+            "15": "U_TX52_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER13",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 700,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER14",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 290,
+          "nets": {
+            "1": "U_TX57_IN",
+            "2": "U_TX58_IN",
+            "3": "U_TX59_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK3",
+            "12": "U_LATCH3",
+            "13": "U_OE_N",
+            "14": "U_SER14",
+            "15": "U_TX56_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER14",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 400,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER15",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 290,
+          "nets": {
+            "1": "U_TX61_IN",
+            "2": "U_TX62_IN",
+            "3": "U_TX63_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_U",
+            "9": null,
+            "10": "3V3_U",
+            "11": "U_SCLK3",
+            "12": "U_LATCH3",
+            "13": "U_OE_N",
+            "14": "U_SER15",
+            "15": "U_TX60_IN",
+            "16": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER15",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 400,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "CLOCK_ENABLE_U",
+      "notes": [
+        "CLOCK_ENABLE_U | DRAFT - NOT FOR FABRICATION",
+        "Clock-only LVC244 delay has unclosed hold timing; do not freeze B04.",
+        "KILL is pulled high. Independent watchdog/power qualification is OPEN.",
+        "33R series clock resistors are tuning candidates, not measured termination."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC244APWR",
+          "ref": "U_CLK_U",
+          "value": "SN74LVC244APWR",
+          "x": 270,
+          "y": 530,
+          "nets": {
+            "1": "DGND_U",
+            "10": "DGND_U",
+            "19": "DGND_U",
+            "20": "3V3_U",
+            "2": "U_SHIFT_CLOCK",
+            "18": "U_CLK_RAW0",
+            "4": "U_SHIFT_CLOCK",
+            "16": "U_CLK_RAW1",
+            "6": "U_SHIFT_CLOCK",
+            "14": "U_CLK_RAW2",
+            "8": "U_SHIFT_CLOCK",
+            "12": "U_CLK_RAW3",
+            "11": "U_LATCH_CLOCK",
+            "9": "U_CLK_RAW4",
+            "13": "U_LATCH_CLOCK",
+            "7": "U_CLK_RAW5",
+            "15": "U_LATCH_CLOCK",
+            "5": "U_CLK_RAW6",
+            "17": "U_LATCH_CLOCK",
+            "3": "U_CLK_RAW7"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC1G32DBVR",
+          "ref": "U_DISABLE_U",
+          "value": "SN74LVC1G32DBVR",
+          "x": 780,
+          "y": 600,
+          "nets": {
+            "1": "U_OUTPUT_DISABLE",
+            "2": "U_KILL",
+            "3": "DGND_U",
+            "4": "U_OE_N",
+            "5": "3V3_U"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_CLK_U",
+          "value": "100nF X7R",
+          "x": 240,
+          "y": 690,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_DISABLE_U",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_KILL_U",
+          "value": "10k",
+          "x": 780,
+          "y": 480,
+          "nets": {
+            "1": "3V3_U",
+            "2": "U_KILL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_DISABLE_U",
+          "value": "10k",
+          "x": 780,
+          "y": 410,
+          "nets": {
+            "1": "3V3_U",
+            "2": "U_OUTPUT_DISABLE"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_U0",
+          "value": "33R TUNE",
+          "x": 240,
+          "y": 300,
+          "nets": {
+            "1": "U_CLK_RAW0",
+            "2": "U_SCLK0"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_U1",
+          "value": "33R TUNE",
+          "x": 510,
+          "y": 300,
+          "nets": {
+            "1": "U_CLK_RAW1",
+            "2": "U_SCLK1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_U2",
+          "value": "33R TUNE",
+          "x": 780,
+          "y": 300,
+          "nets": {
+            "1": "U_CLK_RAW2",
+            "2": "U_SCLK2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_U3",
+          "value": "33R TUNE",
+          "x": 240,
+          "y": 235,
+          "nets": {
+            "1": "U_CLK_RAW3",
+            "2": "U_SCLK3"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_U4",
+          "value": "33R TUNE",
+          "x": 510,
+          "y": 235,
+          "nets": {
+            "1": "U_CLK_RAW4",
+            "2": "U_LATCH0"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_U5",
+          "value": "33R TUNE",
+          "x": 780,
+          "y": 235,
+          "nets": {
+            "1": "U_CLK_RAW5",
+            "2": "U_LATCH1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_U6",
+          "value": "33R TUNE",
+          "x": 240,
+          "y": 170,
+          "nets": {
+            "1": "U_CLK_RAW6",
+            "2": "U_LATCH2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_U7",
+          "value": "33R TUNE",
+          "x": 510,
+          "y": 170,
+          "nets": {
+            "1": "U_CLK_RAW7",
+            "2": "U_LATCH3"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_TX_U_0",
+      "notes": [
+        "LEVEL_TX_U_0 | DRAFT - NOT FOR FABRICATION",
+        "VCCA = verified FPGA bank VCCO (TBD); VCCB = local 3.3 V.",
+        "Both DIR pins high for A-to-B. LEVEL_OE_N pulled high: default disconnected.",
+        "LEVEL_OE_N must be qualified by board configuration/power policy (OPEN)."
+      ],
+      "parts": [
+        {
+          "key": "SN74AXC8T245PWR",
+          "ref": "U_LEVEL_U0",
+          "value": "SN74AXC8T245PWR",
+          "x": 430,
+          "y": 510,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "VCCO_FPGA",
+            "11": "VCCO_FPGA",
+            "12": "DGND_U",
+            "13": "DGND_U",
+            "22": "LEVEL_OE_N",
+            "23": "3V3_U",
+            "24": "3V3_U",
+            "3": "SERIAL_DATA[0]",
+            "21": "U_SER00",
+            "4": "SERIAL_DATA[1]",
+            "20": "U_SER01",
+            "5": "SERIAL_DATA[2]",
+            "19": "U_SER02",
+            "6": "SERIAL_DATA[3]",
+            "18": "U_SER03",
+            "7": "SERIAL_DATA[4]",
+            "17": "U_SER04",
+            "8": "SERIAL_DATA[5]",
+            "16": "U_SER05",
+            "9": "SERIAL_DATA[6]",
+            "15": "U_SER06",
+            "10": "SERIAL_DATA[7]",
+            "14": "U_SER07"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_A_U0",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_B_U0",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_LEVEL_OE",
+          "value": "100k",
+          "x": 750,
+          "y": 350,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "LEVEL_OE_N"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_TX_U_1",
+      "notes": [
+        "LEVEL_TX_U_1 | DRAFT - NOT FOR FABRICATION",
+        "VCCA = verified FPGA bank VCCO (TBD); VCCB = local 3.3 V.",
+        "Both DIR pins high for A-to-B. LEVEL_OE_N pulled high: default disconnected.",
+        "LEVEL_OE_N must be qualified by board configuration/power policy (OPEN)."
+      ],
+      "parts": [
+        {
+          "key": "SN74AXC8T245PWR",
+          "ref": "U_LEVEL_U1",
+          "value": "SN74AXC8T245PWR",
+          "x": 430,
+          "y": 510,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "VCCO_FPGA",
+            "11": "VCCO_FPGA",
+            "12": "DGND_U",
+            "13": "DGND_U",
+            "22": "LEVEL_OE_N",
+            "23": "3V3_U",
+            "24": "3V3_U",
+            "3": "SERIAL_DATA[8]",
+            "21": "U_SER08",
+            "4": "SERIAL_DATA[9]",
+            "20": "U_SER09",
+            "5": "SERIAL_DATA[10]",
+            "19": "U_SER10",
+            "6": "SERIAL_DATA[11]",
+            "18": "U_SER11",
+            "7": "SERIAL_DATA[12]",
+            "17": "U_SER12",
+            "8": "SERIAL_DATA[13]",
+            "16": "U_SER13",
+            "9": "SERIAL_DATA[14]",
+            "15": "U_SER14",
+            "10": "SERIAL_DATA[15]",
+            "14": "U_SER15"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_A_U1",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_B_U1",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_TX_U_2",
+      "notes": [
+        "LEVEL_TX_U_2 | DRAFT - NOT FOR FABRICATION",
+        "VCCA = verified FPGA bank VCCO (TBD); VCCB = local 3.3 V.",
+        "Both DIR pins high for A-to-B. LEVEL_OE_N pulled high: default disconnected.",
+        "LEVEL_OE_N must be qualified by board configuration/power policy (OPEN)."
+      ],
+      "parts": [
+        {
+          "key": "SN74AXC8T245PWR",
+          "ref": "U_LEVEL_U2",
+          "value": "SN74AXC8T245PWR",
+          "x": 430,
+          "y": 510,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "VCCO_FPGA",
+            "11": "VCCO_FPGA",
+            "12": "DGND_U",
+            "13": "DGND_U",
+            "22": "LEVEL_OE_N",
+            "23": "3V3_U",
+            "24": "3V3_U",
+            "3": "SHIFT_CLOCK",
+            "21": "U_SHIFT_CLOCK",
+            "4": "LATCH_CLOCK",
+            "20": "U_LATCH_CLOCK",
+            "5": "OUTPUT_DISABLE",
+            "19": "U_OUTPUT_DISABLE",
+            "6": "RX_BLANK[0]",
+            "18": "U_RX_BLANK",
+            "7": "DGND_U",
+            "17": null,
+            "8": "DGND_U",
+            "16": null,
+            "9": "DGND_U",
+            "15": null,
+            "10": "DGND_U",
+            "14": null
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_A_U2",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_B_U2",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_U",
+            "2": "DGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "SERIALIZER_L_0",
+      "notes": [
+        "SERIALIZER_L_0 | DRAFT - NOT FOR FABRICATION",
+        "Four outputs per lane: QA/QB/QC/QD = channel 4L + 0/1/2/3.",
+        "Shift bit3 first, bit0 last. 66 MHz physical timing remains B04 OPEN.",
+        "Clock/latch branch serves four 595 devices; /OE default disable upstream."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER16",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 590,
+          "nets": {
+            "1": "L_TX01_IN",
+            "2": "L_TX02_IN",
+            "3": "L_TX03_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK0",
+            "12": "L_LATCH0",
+            "13": "L_OE_N",
+            "14": "L_SER00",
+            "15": "L_TX00_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER16",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 700,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER17",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 590,
+          "nets": {
+            "1": "L_TX05_IN",
+            "2": "L_TX06_IN",
+            "3": "L_TX07_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK0",
+            "12": "L_LATCH0",
+            "13": "L_OE_N",
+            "14": "L_SER01",
+            "15": "L_TX04_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER17",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 700,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER18",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 290,
+          "nets": {
+            "1": "L_TX09_IN",
+            "2": "L_TX10_IN",
+            "3": "L_TX11_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK0",
+            "12": "L_LATCH0",
+            "13": "L_OE_N",
+            "14": "L_SER02",
+            "15": "L_TX08_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER18",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 400,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER19",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 290,
+          "nets": {
+            "1": "L_TX13_IN",
+            "2": "L_TX14_IN",
+            "3": "L_TX15_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK0",
+            "12": "L_LATCH0",
+            "13": "L_OE_N",
+            "14": "L_SER03",
+            "15": "L_TX12_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER19",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 400,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "SERIALIZER_L_1",
+      "notes": [
+        "SERIALIZER_L_1 | DRAFT - NOT FOR FABRICATION",
+        "Four outputs per lane: QA/QB/QC/QD = channel 4L + 0/1/2/3.",
+        "Shift bit3 first, bit0 last. 66 MHz physical timing remains B04 OPEN.",
+        "Clock/latch branch serves four 595 devices; /OE default disable upstream."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER20",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 590,
+          "nets": {
+            "1": "L_TX17_IN",
+            "2": "L_TX18_IN",
+            "3": "L_TX19_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK1",
+            "12": "L_LATCH1",
+            "13": "L_OE_N",
+            "14": "L_SER04",
+            "15": "L_TX16_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER20",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 700,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER21",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 590,
+          "nets": {
+            "1": "L_TX21_IN",
+            "2": "L_TX22_IN",
+            "3": "L_TX23_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK1",
+            "12": "L_LATCH1",
+            "13": "L_OE_N",
+            "14": "L_SER05",
+            "15": "L_TX20_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER21",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 700,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER22",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 290,
+          "nets": {
+            "1": "L_TX25_IN",
+            "2": "L_TX26_IN",
+            "3": "L_TX27_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK1",
+            "12": "L_LATCH1",
+            "13": "L_OE_N",
+            "14": "L_SER06",
+            "15": "L_TX24_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER22",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 400,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER23",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 290,
+          "nets": {
+            "1": "L_TX29_IN",
+            "2": "L_TX30_IN",
+            "3": "L_TX31_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK1",
+            "12": "L_LATCH1",
+            "13": "L_OE_N",
+            "14": "L_SER07",
+            "15": "L_TX28_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER23",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 400,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "SERIALIZER_L_2",
+      "notes": [
+        "SERIALIZER_L_2 | DRAFT - NOT FOR FABRICATION",
+        "Four outputs per lane: QA/QB/QC/QD = channel 4L + 0/1/2/3.",
+        "Shift bit3 first, bit0 last. 66 MHz physical timing remains B04 OPEN.",
+        "Clock/latch branch serves four 595 devices; /OE default disable upstream."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER24",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 590,
+          "nets": {
+            "1": "L_TX33_IN",
+            "2": "L_TX34_IN",
+            "3": "L_TX35_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK2",
+            "12": "L_LATCH2",
+            "13": "L_OE_N",
+            "14": "L_SER08",
+            "15": "L_TX32_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER24",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 700,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER25",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 590,
+          "nets": {
+            "1": "L_TX37_IN",
+            "2": "L_TX38_IN",
+            "3": "L_TX39_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK2",
+            "12": "L_LATCH2",
+            "13": "L_OE_N",
+            "14": "L_SER09",
+            "15": "L_TX36_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER25",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 700,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER26",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 290,
+          "nets": {
+            "1": "L_TX41_IN",
+            "2": "L_TX42_IN",
+            "3": "L_TX43_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK2",
+            "12": "L_LATCH2",
+            "13": "L_OE_N",
+            "14": "L_SER10",
+            "15": "L_TX40_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER26",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 400,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER27",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 290,
+          "nets": {
+            "1": "L_TX45_IN",
+            "2": "L_TX46_IN",
+            "3": "L_TX47_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK2",
+            "12": "L_LATCH2",
+            "13": "L_OE_N",
+            "14": "L_SER11",
+            "15": "L_TX44_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER27",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 400,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "SERIALIZER_L_3",
+      "notes": [
+        "SERIALIZER_L_3 | DRAFT - NOT FOR FABRICATION",
+        "Four outputs per lane: QA/QB/QC/QD = channel 4L + 0/1/2/3.",
+        "Shift bit3 first, bit0 last. 66 MHz physical timing remains B04 OPEN.",
+        "Clock/latch branch serves four 595 devices; /OE default disable upstream."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER28",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 590,
+          "nets": {
+            "1": "L_TX49_IN",
+            "2": "L_TX50_IN",
+            "3": "L_TX51_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK3",
+            "12": "L_LATCH3",
+            "13": "L_OE_N",
+            "14": "L_SER12",
+            "15": "L_TX48_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER28",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 700,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER29",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 590,
+          "nets": {
+            "1": "L_TX53_IN",
+            "2": "L_TX54_IN",
+            "3": "L_TX55_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK3",
+            "12": "L_LATCH3",
+            "13": "L_OE_N",
+            "14": "L_SER13",
+            "15": "L_TX52_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER29",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 700,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER30",
+          "value": "SN74LVC595APWR",
+          "x": 260,
+          "y": 290,
+          "nets": {
+            "1": "L_TX57_IN",
+            "2": "L_TX58_IN",
+            "3": "L_TX59_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK3",
+            "12": "L_LATCH3",
+            "13": "L_OE_N",
+            "14": "L_SER14",
+            "15": "L_TX56_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER30",
+          "value": "100nF X7R",
+          "x": 280,
+          "y": 400,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC595APWR",
+          "ref": "U_SER31",
+          "value": "SN74LVC595APWR",
+          "x": 760,
+          "y": 290,
+          "nets": {
+            "1": "L_TX61_IN",
+            "2": "L_TX62_IN",
+            "3": "L_TX63_IN",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "DGND_L",
+            "9": null,
+            "10": "3V3_L",
+            "11": "L_SCLK3",
+            "12": "L_LATCH3",
+            "13": "L_OE_N",
+            "14": "L_SER15",
+            "15": "L_TX60_IN",
+            "16": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_SER31",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 400,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "CLOCK_ENABLE_L",
+      "notes": [
+        "CLOCK_ENABLE_L | DRAFT - NOT FOR FABRICATION",
+        "Clock-only LVC244 delay has unclosed hold timing; do not freeze B04.",
+        "KILL is pulled high. Independent watchdog/power qualification is OPEN.",
+        "33R series clock resistors are tuning candidates, not measured termination."
+      ],
+      "parts": [
+        {
+          "key": "SN74LVC244APWR",
+          "ref": "U_CLK_L",
+          "value": "SN74LVC244APWR",
+          "x": 270,
+          "y": 530,
+          "nets": {
+            "1": "DGND_L",
+            "10": "DGND_L",
+            "19": "DGND_L",
+            "20": "3V3_L",
+            "2": "L_SHIFT_CLOCK",
+            "18": "L_CLK_RAW0",
+            "4": "L_SHIFT_CLOCK",
+            "16": "L_CLK_RAW1",
+            "6": "L_SHIFT_CLOCK",
+            "14": "L_CLK_RAW2",
+            "8": "L_SHIFT_CLOCK",
+            "12": "L_CLK_RAW3",
+            "11": "L_LATCH_CLOCK",
+            "9": "L_CLK_RAW4",
+            "13": "L_LATCH_CLOCK",
+            "7": "L_CLK_RAW5",
+            "15": "L_LATCH_CLOCK",
+            "5": "L_CLK_RAW6",
+            "17": "L_LATCH_CLOCK",
+            "3": "L_CLK_RAW7"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "SN74LVC1G32DBVR",
+          "ref": "U_DISABLE_L",
+          "value": "SN74LVC1G32DBVR",
+          "x": 780,
+          "y": 600,
+          "nets": {
+            "1": "L_OUTPUT_DISABLE",
+            "2": "L_KILL",
+            "3": "DGND_L",
+            "4": "L_OE_N",
+            "5": "3V3_L"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_CLK_L",
+          "value": "100nF X7R",
+          "x": 240,
+          "y": 690,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_DISABLE_L",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_KILL_L",
+          "value": "10k",
+          "x": 780,
+          "y": 480,
+          "nets": {
+            "1": "3V3_L",
+            "2": "L_KILL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_DISABLE_L",
+          "value": "10k",
+          "x": 780,
+          "y": 410,
+          "nets": {
+            "1": "3V3_L",
+            "2": "L_OUTPUT_DISABLE"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_L0",
+          "value": "33R TUNE",
+          "x": 240,
+          "y": 300,
+          "nets": {
+            "1": "L_CLK_RAW0",
+            "2": "L_SCLK0"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_L1",
+          "value": "33R TUNE",
+          "x": 510,
+          "y": 300,
+          "nets": {
+            "1": "L_CLK_RAW1",
+            "2": "L_SCLK1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_L2",
+          "value": "33R TUNE",
+          "x": 780,
+          "y": 300,
+          "nets": {
+            "1": "L_CLK_RAW2",
+            "2": "L_SCLK2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_L3",
+          "value": "33R TUNE",
+          "x": 240,
+          "y": 235,
+          "nets": {
+            "1": "L_CLK_RAW3",
+            "2": "L_SCLK3"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_L4",
+          "value": "33R TUNE",
+          "x": 510,
+          "y": 235,
+          "nets": {
+            "1": "L_CLK_RAW4",
+            "2": "L_LATCH0"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_L5",
+          "value": "33R TUNE",
+          "x": 780,
+          "y": 235,
+          "nets": {
+            "1": "L_CLK_RAW5",
+            "2": "L_LATCH1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_L6",
+          "value": "33R TUNE",
+          "x": 240,
+          "y": 170,
+          "nets": {
+            "1": "L_CLK_RAW6",
+            "2": "L_LATCH2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_CLK_L7",
+          "value": "33R TUNE",
+          "x": 510,
+          "y": 170,
+          "nets": {
+            "1": "L_CLK_RAW7",
+            "2": "L_LATCH3"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_TX_L_0",
+      "notes": [
+        "LEVEL_TX_L_0 | DRAFT - NOT FOR FABRICATION",
+        "VCCA = verified FPGA bank VCCO (TBD); VCCB = local 3.3 V.",
+        "Both DIR pins high for A-to-B. LEVEL_OE_N pulled high: default disconnected.",
+        "LEVEL_OE_N must be qualified by board configuration/power policy (OPEN)."
+      ],
+      "parts": [
+        {
+          "key": "SN74AXC8T245PWR",
+          "ref": "U_LEVEL_L0",
+          "value": "SN74AXC8T245PWR",
+          "x": 430,
+          "y": 510,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "VCCO_FPGA",
+            "11": "VCCO_FPGA",
+            "12": "DGND_L",
+            "13": "DGND_L",
+            "22": "LEVEL_OE_N",
+            "23": "3V3_L",
+            "24": "3V3_L",
+            "3": "SERIAL_DATA[16]",
+            "21": "L_SER00",
+            "4": "SERIAL_DATA[17]",
+            "20": "L_SER01",
+            "5": "SERIAL_DATA[18]",
+            "19": "L_SER02",
+            "6": "SERIAL_DATA[19]",
+            "18": "L_SER03",
+            "7": "SERIAL_DATA[20]",
+            "17": "L_SER04",
+            "8": "SERIAL_DATA[21]",
+            "16": "L_SER05",
+            "9": "SERIAL_DATA[22]",
+            "15": "L_SER06",
+            "10": "SERIAL_DATA[23]",
+            "14": "L_SER07"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_A_L0",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_B_L0",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_TX_L_1",
+      "notes": [
+        "LEVEL_TX_L_1 | DRAFT - NOT FOR FABRICATION",
+        "VCCA = verified FPGA bank VCCO (TBD); VCCB = local 3.3 V.",
+        "Both DIR pins high for A-to-B. LEVEL_OE_N pulled high: default disconnected.",
+        "LEVEL_OE_N must be qualified by board configuration/power policy (OPEN)."
+      ],
+      "parts": [
+        {
+          "key": "SN74AXC8T245PWR",
+          "ref": "U_LEVEL_L1",
+          "value": "SN74AXC8T245PWR",
+          "x": 430,
+          "y": 510,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "VCCO_FPGA",
+            "11": "VCCO_FPGA",
+            "12": "DGND_L",
+            "13": "DGND_L",
+            "22": "LEVEL_OE_N",
+            "23": "3V3_L",
+            "24": "3V3_L",
+            "3": "SERIAL_DATA[24]",
+            "21": "L_SER08",
+            "4": "SERIAL_DATA[25]",
+            "20": "L_SER09",
+            "5": "SERIAL_DATA[26]",
+            "19": "L_SER10",
+            "6": "SERIAL_DATA[27]",
+            "18": "L_SER11",
+            "7": "SERIAL_DATA[28]",
+            "17": "L_SER12",
+            "8": "SERIAL_DATA[29]",
+            "16": "L_SER13",
+            "9": "SERIAL_DATA[30]",
+            "15": "L_SER14",
+            "10": "SERIAL_DATA[31]",
+            "14": "L_SER15"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_A_L1",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_B_L1",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_TX_L_2",
+      "notes": [
+        "LEVEL_TX_L_2 | DRAFT - NOT FOR FABRICATION",
+        "VCCA = verified FPGA bank VCCO (TBD); VCCB = local 3.3 V.",
+        "Both DIR pins high for A-to-B. LEVEL_OE_N pulled high: default disconnected.",
+        "LEVEL_OE_N must be qualified by board configuration/power policy (OPEN)."
+      ],
+      "parts": [
+        {
+          "key": "SN74AXC8T245PWR",
+          "ref": "U_LEVEL_L2",
+          "value": "SN74AXC8T245PWR",
+          "x": 430,
+          "y": 510,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "VCCO_FPGA",
+            "11": "VCCO_FPGA",
+            "12": "DGND_L",
+            "13": "DGND_L",
+            "22": "LEVEL_OE_N",
+            "23": "3V3_L",
+            "24": "3V3_L",
+            "3": "SHIFT_CLOCK",
+            "21": "L_SHIFT_CLOCK",
+            "4": "LATCH_CLOCK",
+            "20": "L_LATCH_CLOCK",
+            "5": "OUTPUT_DISABLE",
+            "19": "L_OUTPUT_DISABLE",
+            "6": "RX_BLANK[1]",
+            "18": "L_RX_BLANK",
+            "7": "DGND_L",
+            "17": null,
+            "8": "DGND_L",
+            "16": null,
+            "9": "DGND_L",
+            "15": null,
+            "10": "DGND_L",
+            "14": null
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_A_L2",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_B_L2",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_L",
+            "2": "DGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_ADC_CONTROL",
+      "notes": [
+        "LEVEL_ADC_CONTROL | DRAFT - NOT FOR FABRICATION",
+        "FPGA-side voltage remains B03 TBD. ADC-side logic is 3.3 V.",
+        "Preserve source-synchronous DOUT timing; no independent bit synchronizers."
+      ],
+      "parts": [
+        {
+          "key": "SN74AXC8T245PWR",
+          "ref": "U_LEVEL_ADC_CONTROL",
+          "value": "SN74AXC8T245PWR",
+          "x": 430,
+          "y": 510,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "VCCO_FPGA",
+            "11": "VCCO_FPGA",
+            "12": "DGND_A",
+            "13": "DGND_A",
+            "22": "LEVEL_OE_N",
+            "23": "3V3_A",
+            "24": "3V3_A",
+            "3": "ADC_RESET",
+            "21": "ADC_ADC_RESET",
+            "4": "ADC_CONVST",
+            "20": "ADC_ADC_CONVST",
+            "5": "ADC_CS_N",
+            "19": "ADC_ADC_CS_N",
+            "6": "ADC_SCLK",
+            "18": "ADC_ADC_SCLK",
+            "7": "ADC_SDI",
+            "17": "ADC_ADC_SDI",
+            "8": "DGND_A",
+            "16": null,
+            "9": "DGND_A",
+            "15": null,
+            "10": "DGND_A",
+            "14": null
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_ADC_CONTROL_A",
+          "value": "100nF X7R",
+          "x": 200,
+          "y": 690,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_ADC_CONTROL_B",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_A",
+            "2": "DGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_ADC_RETURN",
+      "notes": [
+        "LEVEL_ADC_RETURN | DRAFT - NOT FOR FABRICATION",
+        "FPGA-side voltage remains B03 TBD. ADC-side logic is 3.3 V.",
+        "Preserve source-synchronous DOUT timing; no independent bit synchronizers."
+      ],
+      "parts": [
+        {
+          "key": "SN74AXC8T245PWR",
+          "ref": "U_LEVEL_ADC_RETURN",
+          "value": "SN74AXC8T245PWR",
+          "x": 430,
+          "y": 510,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_A",
+            "11": "DGND_A",
+            "12": "DGND_A",
+            "13": "DGND_A",
+            "22": "LEVEL_OE_N",
+            "23": "3V3_A",
+            "24": "3V3_A",
+            "3": "ADC_BUSY",
+            "21": "ADC_ADC_BUSY",
+            "4": "ADC_DOUT[0]",
+            "20": "ADC_ADC_DOUT[0]",
+            "5": "ADC_DOUT[1]",
+            "19": "ADC_ADC_DOUT[1]",
+            "6": "ADC_DOUT[2]",
+            "18": "ADC_ADC_DOUT[2]",
+            "7": "ADC_DOUT[3]",
+            "17": "ADC_ADC_DOUT[3]",
+            "8": null,
+            "16": "DGND_A",
+            "9": null,
+            "15": "DGND_A",
+            "10": null,
+            "14": "DGND_A"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_ADC_RETURN_A",
+          "value": "100nF X7R",
+          "x": 200,
+          "y": 690,
+          "nets": {
+            "1": "VCCO_FPGA",
+            "2": "DGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LEVEL_ADC_RETURN_B",
+          "value": "100nF X7R",
+          "x": 780,
+          "y": 690,
+          "nets": {
+            "1": "3V3_A",
+            "2": "DGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "ADC_AD7606B",
+      "notes": [
+        "ADC_AD7606B | DRAFT - NOT FOR FABRICATION",
+        "OS=111, PAR/SER=1: software serial mode; internal reference enabled.",
+        "4 DOUT lanes; 32 SCLK/frame. Source/return timing and startup power-good OPEN.",
+        "REFCAP A+B share 10uF; REGCAP nodes remain separate. Unused parallel inputs tied low."
+      ],
+      "parts": [
+        {
+          "key": "AD7606BBSTZ",
+          "ref": "U_ADC",
+          "value": "AD7606BBSTZ",
+          "x": 530,
+          "y": 465,
+          "nets": {
+            "1": "5VA_A",
+            "2": "AGND_A",
+            "3": "3V3_A",
+            "4": "3V3_A",
+            "5": "3V3_A",
+            "6": "3V3_A",
+            "7": "3V3_A",
+            "8": "AGND_A",
+            "9": "ADC_ADC_CONVST",
+            "10": "3V3_A",
+            "11": "ADC_ADC_RESET",
+            "12": "ADC_ADC_SCLK",
+            "13": "ADC_ADC_CS_N",
+            "14": "ADC_ADC_BUSY",
+            "15": "ADC_FRSTDATA",
+            "23": "3V3_A",
+            "24": "ADC_ADC_DOUT[0]",
+            "25": "ADC_ADC_DOUT[1]",
+            "26": "AGND_A",
+            "27": "ADC_ADC_DOUT[2]",
+            "28": "ADC_ADC_DOUT[3]",
+            "29": "ADC_ADC_SDI",
+            "34": "3V3_A",
+            "35": "AGND_A",
+            "36": "ADC_REGCAP1",
+            "37": "5VA_A",
+            "38": "5VA_A",
+            "39": "ADC_REGCAP2",
+            "40": "AGND_A",
+            "41": "AGND_A",
+            "42": "ADC_REFOUT",
+            "43": "AGND_A",
+            "44": "ADC_REFCAP",
+            "45": "ADC_REFCAP",
+            "46": "AGND_A",
+            "47": "AGND_A",
+            "48": "5VA_A",
+            "16": "AGND_A",
+            "17": "AGND_A",
+            "18": "AGND_A",
+            "19": "AGND_A",
+            "20": "AGND_A",
+            "21": "AGND_A",
+            "22": "AGND_A",
+            "30": "AGND_A",
+            "31": "AGND_A",
+            "32": "AGND_A",
+            "33": "AGND_A",
+            "49": "ADC_IN0",
+            "50": "AGND_A",
+            "51": "ADC_IN1",
+            "52": "AGND_A",
+            "53": "ADC_IN2",
+            "54": "AGND_A",
+            "55": "ADC_IN3",
+            "56": "AGND_A",
+            "57": "ADC_IN4",
+            "58": "AGND_A",
+            "59": "ADC_IN5",
+            "60": "AGND_A",
+            "61": "ADC_IN6",
+            "62": "AGND_A",
+            "63": "ADC_IN7",
+            "64": "AGND_A"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_REF0",
+          "value": "1uF",
+          "x": 180,
+          "y": 610,
+          "nets": {
+            "1": "ADC_REGCAP1",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_REF1",
+          "value": "1uF",
+          "x": 180,
+          "y": 510,
+          "nets": {
+            "1": "ADC_REGCAP2",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_REF2",
+          "value": "10uF",
+          "x": 180,
+          "y": 410,
+          "nets": {
+            "1": "ADC_REFCAP",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_REF3",
+          "value": "100nF",
+          "x": 180,
+          "y": 310,
+          "nets": {
+            "1": "ADC_REFOUT",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_AV1",
+          "value": "100nF X7R",
+          "x": 920,
+          "y": 630,
+          "nets": {
+            "1": "5VA_A",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_AV37",
+          "value": "100nF X7R",
+          "x": 920,
+          "y": 540,
+          "nets": {
+            "1": "5VA_A",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_AV38",
+          "value": "100nF X7R",
+          "x": 920,
+          "y": 450,
+          "nets": {
+            "1": "5VA_A",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_AV48",
+          "value": "100nF X7R",
+          "x": 920,
+          "y": 360,
+          "nets": {
+            "1": "5VA_A",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_DV",
+          "value": "100nF X7R",
+          "x": 920,
+          "y": 230,
+          "nets": {
+            "1": "3V3_A",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_BULK",
+          "value": "10uF",
+          "x": 530,
+          "y": 120,
+          "nets": {
+            "1": "5VA_A",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "TP",
+          "ref": "TP_ADC_FRSTDATA",
+          "value": "FRSTDATA",
+          "x": 180,
+          "y": 170,
+          "nets": {
+            "1": "ADC_FRSTDATA"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "REFERENCE_U",
+      "notes": [
+        "REFERENCE_U | DRAFT - NOT FOR FABRICATION",
+        "REF5025 external AFE bias; ADC retains its own internal reference.",
+        "DNC pins unconnected. Reference noise, buffering/load and bypass require review."
+      ],
+      "parts": [
+        {
+          "key": "REF5025AIDR",
+          "ref": "U_REF_U",
+          "value": "REF5025AIDR",
+          "x": 450,
+          "y": 540,
+          "nets": {
+            "1": null,
+            "2": "5VA_U",
+            "3": null,
+            "4": "AGND_U",
+            "5": "REF_NR_U",
+            "6": "VREF_U",
+            "7": null,
+            "8": null
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_REF_IN_U",
+          "value": "1uF",
+          "x": 200,
+          "y": 690,
+          "nets": {
+            "1": "5VA_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_REF_OUT_U",
+          "value": "10uF",
+          "x": 800,
+          "y": 690,
+          "nets": {
+            "1": "VREF_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_REF_NR_U",
+          "value": "1uF",
+          "x": 450,
+          "y": 300,
+          "nets": {
+            "1": "REF_NR_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "RX_BLANK_U",
+      "notes": [
+        "RX_BLANK_U | DRAFT - NOT FOR FABRICATION",
+        "SEL low = AFE, high = 2.5 V bias. 100k pull-up defaults to blank.",
+        "Switch is downstream of AFE; amplifier overload/recovery NOT protected by this switch.",
+        "47R + 1nF ADC input filters; actual settling and phase must be measured."
+      ],
+      "parts": [
+        {
+          "key": "TMUX1574PWR",
+          "ref": "U_BLANK_U",
+          "value": "TMUX1574PWR",
+          "x": 350,
+          "y": 570,
+          "nets": {
+            "1": "U_RX_BLANK",
+            "8": "AGND_U",
+            "15": "AGND_U",
+            "16": "5VA_U",
+            "2": "U_RX0_FILT",
+            "3": "VREF_U",
+            "4": "U_RX0_MUX",
+            "5": "U_RX1_FILT",
+            "6": "VREF_U",
+            "7": "U_RX1_MUX",
+            "11": "U_RX2_FILT",
+            "10": "VREF_U",
+            "9": "U_RX2_MUX",
+            "14": "U_RX3_FILT",
+            "13": "VREF_U",
+            "12": "U_RX3_MUX"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BLANK_U",
+          "value": "100nF X7R",
+          "x": 250,
+          "y": 690,
+          "nets": {
+            "1": "5VA_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BLANK_U",
+          "value": "100k",
+          "x": 750,
+          "y": 660,
+          "nets": {
+            "1": "3V3_U",
+            "2": "U_RX_BLANK"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ADC_U0",
+          "value": "47R",
+          "x": 270,
+          "y": 330,
+          "nets": {
+            "1": "U_RX0_MUX",
+            "2": "ADC_IN0"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_IN0",
+          "value": "1nF C0G",
+          "x": 400,
+          "y": 280,
+          "nets": {
+            "1": "ADC_IN0",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ADC_U1",
+          "value": "47R",
+          "x": 770,
+          "y": 330,
+          "nets": {
+            "1": "U_RX1_MUX",
+            "2": "ADC_IN1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_IN1",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 280,
+          "nets": {
+            "1": "ADC_IN1",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ADC_U2",
+          "value": "47R",
+          "x": 270,
+          "y": 190,
+          "nets": {
+            "1": "U_RX2_MUX",
+            "2": "ADC_IN2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_IN2",
+          "value": "1nF C0G",
+          "x": 400,
+          "y": 140,
+          "nets": {
+            "1": "ADC_IN2",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ADC_U3",
+          "value": "47R",
+          "x": 770,
+          "y": 190,
+          "nets": {
+            "1": "U_RX3_MUX",
+            "2": "ADC_IN3"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_IN3",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 140,
+          "nets": {
+            "1": "ADC_IN3",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "AFE_U_0",
+      "notes": [
+        "AFE_U_0 | DRAFT - NOT FOR FABRICATION",
+        "OPA4192 two stages per RX: G1=11, G2=2, total nominal22.",
+        "10nF coupling / 100k bias. DNP bypass mutually exclusive with stage2 selection.",
+        "BAT54S substitution/protection capacitance, overload and complex gain require qualification."
+      ],
+      "parts": [
+        {
+          "key": "RX",
+          "ref": "UPPER_RX0",
+          "value": "TCT40-10R1 / MPN_TBD",
+          "x": 150,
+          "y": 610,
+          "nets": {
+            "1": "AGND_U",
+            "2": "U_RX0_RAW"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_PROT_U0",
+          "value": "1k",
+          "x": 350,
+          "y": 610,
+          "nets": {
+            "1": "U_RX0_RAW",
+            "2": "U_RX0_PROT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "BAT54S",
+          "ref": "D_PROT_U0",
+          "value": "BAT54S / SUBSTITUTE_REVIEW",
+          "x": 600,
+          "y": 610,
+          "nets": {
+            "1": "AGND_U",
+            "2": "5VA_U",
+            "3": "U_RX0_PROT"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AC_U0",
+          "value": "10nF C0G",
+          "x": 880,
+          "y": 610,
+          "nets": {
+            "1": "U_RX0_PROT",
+            "2": "U_RX0_BIAS"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BIAS_U0",
+          "value": "100k",
+          "x": 900,
+          "y": 540,
+          "nets": {
+            "1": "U_RX0_BIAS",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U0_0",
+          "value": "100k 0.1%",
+          "x": 150,
+          "y": 470,
+          "nets": {
+            "1": "U_RX0_G1",
+            "2": "U_RX0_N1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U0_1",
+          "value": "10k 0.1%",
+          "x": 380,
+          "y": 470,
+          "nets": {
+            "1": "U_RX0_N1",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U0_2",
+          "value": "10k 0.1%",
+          "x": 610,
+          "y": 470,
+          "nets": {
+            "1": "U_RX0_G2",
+            "2": "U_RX0_N2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U0_3",
+          "value": "10k 0.1%",
+          "x": 840,
+          "y": 470,
+          "nets": {
+            "1": "U_RX0_N2",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SEL_U0",
+          "value": "0R FIT G22",
+          "x": 150,
+          "y": 400,
+          "nets": {
+            "1": "U_RX0_G2",
+            "2": "U_RX0_SEL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BYPASS_U0",
+          "value": "0R DNP G11",
+          "x": 390,
+          "y": 400,
+          "nets": {
+            "1": "U_RX0_G1",
+            "2": "U_RX0_SEL"
+          },
+          "generic": true,
+          "dnp": true
+        },
+        {
+          "key": "R",
+          "ref": "R_LP_U0",
+          "value": "1k",
+          "x": 650,
+          "y": 400,
+          "nets": {
+            "1": "U_RX0_SEL",
+            "2": "U_RX0_FILT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LP_U0",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 400,
+          "nets": {
+            "1": "U_RX0_FILT",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "RX",
+          "ref": "UPPER_RX1",
+          "value": "TCT40-10R1 / MPN_TBD",
+          "x": 150,
+          "y": 325,
+          "nets": {
+            "1": "AGND_U",
+            "2": "U_RX1_RAW"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_PROT_U1",
+          "value": "1k",
+          "x": 350,
+          "y": 325,
+          "nets": {
+            "1": "U_RX1_RAW",
+            "2": "U_RX1_PROT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "BAT54S",
+          "ref": "D_PROT_U1",
+          "value": "BAT54S / SUBSTITUTE_REVIEW",
+          "x": 600,
+          "y": 325,
+          "nets": {
+            "1": "AGND_U",
+            "2": "5VA_U",
+            "3": "U_RX1_PROT"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AC_U1",
+          "value": "10nF C0G",
+          "x": 880,
+          "y": 325,
+          "nets": {
+            "1": "U_RX1_PROT",
+            "2": "U_RX1_BIAS"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BIAS_U1",
+          "value": "100k",
+          "x": 900,
+          "y": 255,
+          "nets": {
+            "1": "U_RX1_BIAS",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U1_0",
+          "value": "100k 0.1%",
+          "x": 150,
+          "y": 185,
+          "nets": {
+            "1": "U_RX1_G1",
+            "2": "U_RX1_N1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U1_1",
+          "value": "10k 0.1%",
+          "x": 380,
+          "y": 185,
+          "nets": {
+            "1": "U_RX1_N1",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U1_2",
+          "value": "10k 0.1%",
+          "x": 610,
+          "y": 185,
+          "nets": {
+            "1": "U_RX1_G2",
+            "2": "U_RX1_N2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U1_3",
+          "value": "10k 0.1%",
+          "x": 840,
+          "y": 185,
+          "nets": {
+            "1": "U_RX1_N2",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SEL_U1",
+          "value": "0R FIT G22",
+          "x": 150,
+          "y": 115,
+          "nets": {
+            "1": "U_RX1_G2",
+            "2": "U_RX1_SEL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BYPASS_U1",
+          "value": "0R DNP G11",
+          "x": 390,
+          "y": 115,
+          "nets": {
+            "1": "U_RX1_G1",
+            "2": "U_RX1_SEL"
+          },
+          "generic": true,
+          "dnp": true
+        },
+        {
+          "key": "R",
+          "ref": "R_LP_U1",
+          "value": "1k",
+          "x": 650,
+          "y": 115,
+          "nets": {
+            "1": "U_RX1_SEL",
+            "2": "U_RX1_FILT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LP_U1",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 115,
+          "nets": {
+            "1": "U_RX1_FILT",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "AFE_AMP_U_0",
+      "notes": [
+        "AFE_AMP_U_0 | DRAFT - NOT FOR FABRICATION",
+        "One OPA4192 quad serves two RX channels; feedback/bias networks on matching AFE sheet.",
+        "5 V single supply; V- is AGND. No guaranteed overload recovery."
+      ],
+      "parts": [
+        {
+          "key": "OPA4192IPWR",
+          "ref": "U_AFE_U0",
+          "value": "OPA4192IPWR",
+          "x": 500,
+          "y": 500,
+          "nets": {
+            "4": "5VA_U",
+            "11": "AGND_U",
+            "1": "U_RX0_G1",
+            "2": "U_RX0_N1",
+            "3": "U_RX0_BIAS",
+            "7": "U_RX0_G2",
+            "6": "U_RX0_N2",
+            "5": "U_RX0_G1",
+            "8": "U_RX1_G1",
+            "9": "U_RX1_N1",
+            "10": "U_RX1_BIAS",
+            "14": "U_RX1_G2",
+            "13": "U_RX1_N2",
+            "12": "U_RX1_G1"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AFE_U0",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "5VA_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AFE_BULK_U0",
+          "value": "1uF",
+          "x": 820,
+          "y": 690,
+          "nets": {
+            "1": "5VA_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "AFE_U_1",
+      "notes": [
+        "AFE_U_1 | DRAFT - NOT FOR FABRICATION",
+        "OPA4192 two stages per RX: G1=11, G2=2, total nominal22.",
+        "10nF coupling / 100k bias. DNP bypass mutually exclusive with stage2 selection.",
+        "BAT54S substitution/protection capacitance, overload and complex gain require qualification."
+      ],
+      "parts": [
+        {
+          "key": "RX",
+          "ref": "UPPER_RX2",
+          "value": "TCT40-10R1 / MPN_TBD",
+          "x": 150,
+          "y": 610,
+          "nets": {
+            "1": "AGND_U",
+            "2": "U_RX2_RAW"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_PROT_U2",
+          "value": "1k",
+          "x": 350,
+          "y": 610,
+          "nets": {
+            "1": "U_RX2_RAW",
+            "2": "U_RX2_PROT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "BAT54S",
+          "ref": "D_PROT_U2",
+          "value": "BAT54S / SUBSTITUTE_REVIEW",
+          "x": 600,
+          "y": 610,
+          "nets": {
+            "1": "AGND_U",
+            "2": "5VA_U",
+            "3": "U_RX2_PROT"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AC_U2",
+          "value": "10nF C0G",
+          "x": 880,
+          "y": 610,
+          "nets": {
+            "1": "U_RX2_PROT",
+            "2": "U_RX2_BIAS"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BIAS_U2",
+          "value": "100k",
+          "x": 900,
+          "y": 540,
+          "nets": {
+            "1": "U_RX2_BIAS",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U2_0",
+          "value": "100k 0.1%",
+          "x": 150,
+          "y": 470,
+          "nets": {
+            "1": "U_RX2_G1",
+            "2": "U_RX2_N1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U2_1",
+          "value": "10k 0.1%",
+          "x": 380,
+          "y": 470,
+          "nets": {
+            "1": "U_RX2_N1",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U2_2",
+          "value": "10k 0.1%",
+          "x": 610,
+          "y": 470,
+          "nets": {
+            "1": "U_RX2_G2",
+            "2": "U_RX2_N2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U2_3",
+          "value": "10k 0.1%",
+          "x": 840,
+          "y": 470,
+          "nets": {
+            "1": "U_RX2_N2",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SEL_U2",
+          "value": "0R FIT G22",
+          "x": 150,
+          "y": 400,
+          "nets": {
+            "1": "U_RX2_G2",
+            "2": "U_RX2_SEL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BYPASS_U2",
+          "value": "0R DNP G11",
+          "x": 390,
+          "y": 400,
+          "nets": {
+            "1": "U_RX2_G1",
+            "2": "U_RX2_SEL"
+          },
+          "generic": true,
+          "dnp": true
+        },
+        {
+          "key": "R",
+          "ref": "R_LP_U2",
+          "value": "1k",
+          "x": 650,
+          "y": 400,
+          "nets": {
+            "1": "U_RX2_SEL",
+            "2": "U_RX2_FILT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LP_U2",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 400,
+          "nets": {
+            "1": "U_RX2_FILT",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "RX",
+          "ref": "UPPER_RX3",
+          "value": "TCT40-10R1 / MPN_TBD",
+          "x": 150,
+          "y": 325,
+          "nets": {
+            "1": "AGND_U",
+            "2": "U_RX3_RAW"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_PROT_U3",
+          "value": "1k",
+          "x": 350,
+          "y": 325,
+          "nets": {
+            "1": "U_RX3_RAW",
+            "2": "U_RX3_PROT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "BAT54S",
+          "ref": "D_PROT_U3",
+          "value": "BAT54S / SUBSTITUTE_REVIEW",
+          "x": 600,
+          "y": 325,
+          "nets": {
+            "1": "AGND_U",
+            "2": "5VA_U",
+            "3": "U_RX3_PROT"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AC_U3",
+          "value": "10nF C0G",
+          "x": 880,
+          "y": 325,
+          "nets": {
+            "1": "U_RX3_PROT",
+            "2": "U_RX3_BIAS"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BIAS_U3",
+          "value": "100k",
+          "x": 900,
+          "y": 255,
+          "nets": {
+            "1": "U_RX3_BIAS",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U3_0",
+          "value": "100k 0.1%",
+          "x": 150,
+          "y": 185,
+          "nets": {
+            "1": "U_RX3_G1",
+            "2": "U_RX3_N1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U3_1",
+          "value": "10k 0.1%",
+          "x": 380,
+          "y": 185,
+          "nets": {
+            "1": "U_RX3_N1",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U3_2",
+          "value": "10k 0.1%",
+          "x": 610,
+          "y": 185,
+          "nets": {
+            "1": "U_RX3_G2",
+            "2": "U_RX3_N2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_U3_3",
+          "value": "10k 0.1%",
+          "x": 840,
+          "y": 185,
+          "nets": {
+            "1": "U_RX3_N2",
+            "2": "VREF_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SEL_U3",
+          "value": "0R FIT G22",
+          "x": 150,
+          "y": 115,
+          "nets": {
+            "1": "U_RX3_G2",
+            "2": "U_RX3_SEL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BYPASS_U3",
+          "value": "0R DNP G11",
+          "x": 390,
+          "y": 115,
+          "nets": {
+            "1": "U_RX3_G1",
+            "2": "U_RX3_SEL"
+          },
+          "generic": true,
+          "dnp": true
+        },
+        {
+          "key": "R",
+          "ref": "R_LP_U3",
+          "value": "1k",
+          "x": 650,
+          "y": 115,
+          "nets": {
+            "1": "U_RX3_SEL",
+            "2": "U_RX3_FILT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LP_U3",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 115,
+          "nets": {
+            "1": "U_RX3_FILT",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "AFE_AMP_U_1",
+      "notes": [
+        "AFE_AMP_U_1 | DRAFT - NOT FOR FABRICATION",
+        "One OPA4192 quad serves two RX channels; feedback/bias networks on matching AFE sheet.",
+        "5 V single supply; V- is AGND. No guaranteed overload recovery."
+      ],
+      "parts": [
+        {
+          "key": "OPA4192IPWR",
+          "ref": "U_AFE_U1",
+          "value": "OPA4192IPWR",
+          "x": 500,
+          "y": 500,
+          "nets": {
+            "4": "5VA_U",
+            "11": "AGND_U",
+            "1": "U_RX2_G1",
+            "2": "U_RX2_N1",
+            "3": "U_RX2_BIAS",
+            "7": "U_RX2_G2",
+            "6": "U_RX2_N2",
+            "5": "U_RX2_G1",
+            "8": "U_RX3_G1",
+            "9": "U_RX3_N1",
+            "10": "U_RX3_BIAS",
+            "14": "U_RX3_G2",
+            "13": "U_RX3_N2",
+            "12": "U_RX3_G1"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AFE_U1",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "5VA_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AFE_BULK_U1",
+          "value": "1uF",
+          "x": 820,
+          "y": 690,
+          "nets": {
+            "1": "5VA_U",
+            "2": "AGND_U"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "REFERENCE_L",
+      "notes": [
+        "REFERENCE_L | DRAFT - NOT FOR FABRICATION",
+        "REF5025 external AFE bias; ADC retains its own internal reference.",
+        "DNC pins unconnected. Reference noise, buffering/load and bypass require review."
+      ],
+      "parts": [
+        {
+          "key": "REF5025AIDR",
+          "ref": "U_REF_L",
+          "value": "REF5025AIDR",
+          "x": 450,
+          "y": 540,
+          "nets": {
+            "1": null,
+            "2": "5VA_L",
+            "3": null,
+            "4": "AGND_L",
+            "5": "REF_NR_L",
+            "6": "VREF_L",
+            "7": null,
+            "8": null
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_REF_IN_L",
+          "value": "1uF",
+          "x": 200,
+          "y": 690,
+          "nets": {
+            "1": "5VA_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_REF_OUT_L",
+          "value": "10uF",
+          "x": 800,
+          "y": 690,
+          "nets": {
+            "1": "VREF_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_REF_NR_L",
+          "value": "1uF",
+          "x": 450,
+          "y": 300,
+          "nets": {
+            "1": "REF_NR_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "RX_BLANK_L",
+      "notes": [
+        "RX_BLANK_L | DRAFT - NOT FOR FABRICATION",
+        "SEL low = AFE, high = 2.5 V bias. 100k pull-up defaults to blank.",
+        "Switch is downstream of AFE; amplifier overload/recovery NOT protected by this switch.",
+        "47R + 1nF ADC input filters; actual settling and phase must be measured."
+      ],
+      "parts": [
+        {
+          "key": "TMUX1574PWR",
+          "ref": "U_BLANK_L",
+          "value": "TMUX1574PWR",
+          "x": 350,
+          "y": 570,
+          "nets": {
+            "1": "L_RX_BLANK",
+            "8": "AGND_L",
+            "15": "AGND_L",
+            "16": "5VA_L",
+            "2": "L_RX0_FILT",
+            "3": "VREF_L",
+            "4": "L_RX0_MUX",
+            "5": "L_RX1_FILT",
+            "6": "VREF_L",
+            "7": "L_RX1_MUX",
+            "11": "L_RX2_FILT",
+            "10": "VREF_L",
+            "9": "L_RX2_MUX",
+            "14": "L_RX3_FILT",
+            "13": "VREF_L",
+            "12": "L_RX3_MUX"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_BLANK_L",
+          "value": "100nF X7R",
+          "x": 250,
+          "y": 690,
+          "nets": {
+            "1": "5VA_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BLANK_L",
+          "value": "100k",
+          "x": 750,
+          "y": 660,
+          "nets": {
+            "1": "3V3_L",
+            "2": "L_RX_BLANK"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ADC_L0",
+          "value": "47R",
+          "x": 270,
+          "y": 330,
+          "nets": {
+            "1": "L_RX0_MUX",
+            "2": "ADC_IN4"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_IN4",
+          "value": "1nF C0G",
+          "x": 400,
+          "y": 280,
+          "nets": {
+            "1": "ADC_IN4",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ADC_L1",
+          "value": "47R",
+          "x": 770,
+          "y": 330,
+          "nets": {
+            "1": "L_RX1_MUX",
+            "2": "ADC_IN5"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_IN5",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 280,
+          "nets": {
+            "1": "ADC_IN5",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ADC_L2",
+          "value": "47R",
+          "x": 270,
+          "y": 190,
+          "nets": {
+            "1": "L_RX2_MUX",
+            "2": "ADC_IN6"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_IN6",
+          "value": "1nF C0G",
+          "x": 400,
+          "y": 140,
+          "nets": {
+            "1": "ADC_IN6",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_ADC_L3",
+          "value": "47R",
+          "x": 770,
+          "y": 190,
+          "nets": {
+            "1": "L_RX3_MUX",
+            "2": "ADC_IN7"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_ADC_IN7",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 140,
+          "nets": {
+            "1": "ADC_IN7",
+            "2": "AGND_A"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "AFE_L_0",
+      "notes": [
+        "AFE_L_0 | DRAFT - NOT FOR FABRICATION",
+        "OPA4192 two stages per RX: G1=11, G2=2, total nominal22.",
+        "10nF coupling / 100k bias. DNP bypass mutually exclusive with stage2 selection.",
+        "BAT54S substitution/protection capacitance, overload and complex gain require qualification."
+      ],
+      "parts": [
+        {
+          "key": "RX",
+          "ref": "LOWER_RX0",
+          "value": "TCT40-10R1 / MPN_TBD",
+          "x": 150,
+          "y": 610,
+          "nets": {
+            "1": "AGND_L",
+            "2": "L_RX0_RAW"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_PROT_L0",
+          "value": "1k",
+          "x": 350,
+          "y": 610,
+          "nets": {
+            "1": "L_RX0_RAW",
+            "2": "L_RX0_PROT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "BAT54S",
+          "ref": "D_PROT_L0",
+          "value": "BAT54S / SUBSTITUTE_REVIEW",
+          "x": 600,
+          "y": 610,
+          "nets": {
+            "1": "AGND_L",
+            "2": "5VA_L",
+            "3": "L_RX0_PROT"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AC_L0",
+          "value": "10nF C0G",
+          "x": 880,
+          "y": 610,
+          "nets": {
+            "1": "L_RX0_PROT",
+            "2": "L_RX0_BIAS"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BIAS_L0",
+          "value": "100k",
+          "x": 900,
+          "y": 540,
+          "nets": {
+            "1": "L_RX0_BIAS",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L0_0",
+          "value": "100k 0.1%",
+          "x": 150,
+          "y": 470,
+          "nets": {
+            "1": "L_RX0_G1",
+            "2": "L_RX0_N1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L0_1",
+          "value": "10k 0.1%",
+          "x": 380,
+          "y": 470,
+          "nets": {
+            "1": "L_RX0_N1",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L0_2",
+          "value": "10k 0.1%",
+          "x": 610,
+          "y": 470,
+          "nets": {
+            "1": "L_RX0_G2",
+            "2": "L_RX0_N2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L0_3",
+          "value": "10k 0.1%",
+          "x": 840,
+          "y": 470,
+          "nets": {
+            "1": "L_RX0_N2",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SEL_L0",
+          "value": "0R FIT G22",
+          "x": 150,
+          "y": 400,
+          "nets": {
+            "1": "L_RX0_G2",
+            "2": "L_RX0_SEL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BYPASS_L0",
+          "value": "0R DNP G11",
+          "x": 390,
+          "y": 400,
+          "nets": {
+            "1": "L_RX0_G1",
+            "2": "L_RX0_SEL"
+          },
+          "generic": true,
+          "dnp": true
+        },
+        {
+          "key": "R",
+          "ref": "R_LP_L0",
+          "value": "1k",
+          "x": 650,
+          "y": 400,
+          "nets": {
+            "1": "L_RX0_SEL",
+            "2": "L_RX0_FILT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LP_L0",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 400,
+          "nets": {
+            "1": "L_RX0_FILT",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "RX",
+          "ref": "LOWER_RX1",
+          "value": "TCT40-10R1 / MPN_TBD",
+          "x": 150,
+          "y": 325,
+          "nets": {
+            "1": "AGND_L",
+            "2": "L_RX1_RAW"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_PROT_L1",
+          "value": "1k",
+          "x": 350,
+          "y": 325,
+          "nets": {
+            "1": "L_RX1_RAW",
+            "2": "L_RX1_PROT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "BAT54S",
+          "ref": "D_PROT_L1",
+          "value": "BAT54S / SUBSTITUTE_REVIEW",
+          "x": 600,
+          "y": 325,
+          "nets": {
+            "1": "AGND_L",
+            "2": "5VA_L",
+            "3": "L_RX1_PROT"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AC_L1",
+          "value": "10nF C0G",
+          "x": 880,
+          "y": 325,
+          "nets": {
+            "1": "L_RX1_PROT",
+            "2": "L_RX1_BIAS"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BIAS_L1",
+          "value": "100k",
+          "x": 900,
+          "y": 255,
+          "nets": {
+            "1": "L_RX1_BIAS",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L1_0",
+          "value": "100k 0.1%",
+          "x": 150,
+          "y": 185,
+          "nets": {
+            "1": "L_RX1_G1",
+            "2": "L_RX1_N1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L1_1",
+          "value": "10k 0.1%",
+          "x": 380,
+          "y": 185,
+          "nets": {
+            "1": "L_RX1_N1",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L1_2",
+          "value": "10k 0.1%",
+          "x": 610,
+          "y": 185,
+          "nets": {
+            "1": "L_RX1_G2",
+            "2": "L_RX1_N2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L1_3",
+          "value": "10k 0.1%",
+          "x": 840,
+          "y": 185,
+          "nets": {
+            "1": "L_RX1_N2",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SEL_L1",
+          "value": "0R FIT G22",
+          "x": 150,
+          "y": 115,
+          "nets": {
+            "1": "L_RX1_G2",
+            "2": "L_RX1_SEL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BYPASS_L1",
+          "value": "0R DNP G11",
+          "x": 390,
+          "y": 115,
+          "nets": {
+            "1": "L_RX1_G1",
+            "2": "L_RX1_SEL"
+          },
+          "generic": true,
+          "dnp": true
+        },
+        {
+          "key": "R",
+          "ref": "R_LP_L1",
+          "value": "1k",
+          "x": 650,
+          "y": 115,
+          "nets": {
+            "1": "L_RX1_SEL",
+            "2": "L_RX1_FILT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LP_L1",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 115,
+          "nets": {
+            "1": "L_RX1_FILT",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "AFE_AMP_L_0",
+      "notes": [
+        "AFE_AMP_L_0 | DRAFT - NOT FOR FABRICATION",
+        "One OPA4192 quad serves two RX channels; feedback/bias networks on matching AFE sheet.",
+        "5 V single supply; V- is AGND. No guaranteed overload recovery."
+      ],
+      "parts": [
+        {
+          "key": "OPA4192IPWR",
+          "ref": "U_AFE_L0",
+          "value": "OPA4192IPWR",
+          "x": 500,
+          "y": 500,
+          "nets": {
+            "4": "5VA_L",
+            "11": "AGND_L",
+            "1": "L_RX0_G1",
+            "2": "L_RX0_N1",
+            "3": "L_RX0_BIAS",
+            "7": "L_RX0_G2",
+            "6": "L_RX0_N2",
+            "5": "L_RX0_G1",
+            "8": "L_RX1_G1",
+            "9": "L_RX1_N1",
+            "10": "L_RX1_BIAS",
+            "14": "L_RX1_G2",
+            "13": "L_RX1_N2",
+            "12": "L_RX1_G1"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AFE_L0",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "5VA_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AFE_BULK_L0",
+          "value": "1uF",
+          "x": 820,
+          "y": 690,
+          "nets": {
+            "1": "5VA_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "AFE_L_1",
+      "notes": [
+        "AFE_L_1 | DRAFT - NOT FOR FABRICATION",
+        "OPA4192 two stages per RX: G1=11, G2=2, total nominal22.",
+        "10nF coupling / 100k bias. DNP bypass mutually exclusive with stage2 selection.",
+        "BAT54S substitution/protection capacitance, overload and complex gain require qualification."
+      ],
+      "parts": [
+        {
+          "key": "RX",
+          "ref": "LOWER_RX2",
+          "value": "TCT40-10R1 / MPN_TBD",
+          "x": 150,
+          "y": 610,
+          "nets": {
+            "1": "AGND_L",
+            "2": "L_RX2_RAW"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_PROT_L2",
+          "value": "1k",
+          "x": 350,
+          "y": 610,
+          "nets": {
+            "1": "L_RX2_RAW",
+            "2": "L_RX2_PROT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "BAT54S",
+          "ref": "D_PROT_L2",
+          "value": "BAT54S / SUBSTITUTE_REVIEW",
+          "x": 600,
+          "y": 610,
+          "nets": {
+            "1": "AGND_L",
+            "2": "5VA_L",
+            "3": "L_RX2_PROT"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AC_L2",
+          "value": "10nF C0G",
+          "x": 880,
+          "y": 610,
+          "nets": {
+            "1": "L_RX2_PROT",
+            "2": "L_RX2_BIAS"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BIAS_L2",
+          "value": "100k",
+          "x": 900,
+          "y": 540,
+          "nets": {
+            "1": "L_RX2_BIAS",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L2_0",
+          "value": "100k 0.1%",
+          "x": 150,
+          "y": 470,
+          "nets": {
+            "1": "L_RX2_G1",
+            "2": "L_RX2_N1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L2_1",
+          "value": "10k 0.1%",
+          "x": 380,
+          "y": 470,
+          "nets": {
+            "1": "L_RX2_N1",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L2_2",
+          "value": "10k 0.1%",
+          "x": 610,
+          "y": 470,
+          "nets": {
+            "1": "L_RX2_G2",
+            "2": "L_RX2_N2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L2_3",
+          "value": "10k 0.1%",
+          "x": 840,
+          "y": 470,
+          "nets": {
+            "1": "L_RX2_N2",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SEL_L2",
+          "value": "0R FIT G22",
+          "x": 150,
+          "y": 400,
+          "nets": {
+            "1": "L_RX2_G2",
+            "2": "L_RX2_SEL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BYPASS_L2",
+          "value": "0R DNP G11",
+          "x": 390,
+          "y": 400,
+          "nets": {
+            "1": "L_RX2_G1",
+            "2": "L_RX2_SEL"
+          },
+          "generic": true,
+          "dnp": true
+        },
+        {
+          "key": "R",
+          "ref": "R_LP_L2",
+          "value": "1k",
+          "x": 650,
+          "y": 400,
+          "nets": {
+            "1": "L_RX2_SEL",
+            "2": "L_RX2_FILT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LP_L2",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 400,
+          "nets": {
+            "1": "L_RX2_FILT",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "RX",
+          "ref": "LOWER_RX3",
+          "value": "TCT40-10R1 / MPN_TBD",
+          "x": 150,
+          "y": 325,
+          "nets": {
+            "1": "AGND_L",
+            "2": "L_RX3_RAW"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_PROT_L3",
+          "value": "1k",
+          "x": 350,
+          "y": 325,
+          "nets": {
+            "1": "L_RX3_RAW",
+            "2": "L_RX3_PROT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "BAT54S",
+          "ref": "D_PROT_L3",
+          "value": "BAT54S / SUBSTITUTE_REVIEW",
+          "x": 600,
+          "y": 325,
+          "nets": {
+            "1": "AGND_L",
+            "2": "5VA_L",
+            "3": "L_RX3_PROT"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AC_L3",
+          "value": "10nF C0G",
+          "x": 880,
+          "y": 325,
+          "nets": {
+            "1": "L_RX3_PROT",
+            "2": "L_RX3_BIAS"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BIAS_L3",
+          "value": "100k",
+          "x": 900,
+          "y": 255,
+          "nets": {
+            "1": "L_RX3_BIAS",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L3_0",
+          "value": "100k 0.1%",
+          "x": 150,
+          "y": 185,
+          "nets": {
+            "1": "L_RX3_G1",
+            "2": "L_RX3_N1"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L3_1",
+          "value": "10k 0.1%",
+          "x": 380,
+          "y": 185,
+          "nets": {
+            "1": "L_RX3_N1",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L3_2",
+          "value": "10k 0.1%",
+          "x": 610,
+          "y": 185,
+          "nets": {
+            "1": "L_RX3_G2",
+            "2": "L_RX3_N2"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_GAIN_L3_3",
+          "value": "10k 0.1%",
+          "x": 840,
+          "y": 185,
+          "nets": {
+            "1": "L_RX3_N2",
+            "2": "VREF_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_SEL_L3",
+          "value": "0R FIT G22",
+          "x": 150,
+          "y": 115,
+          "nets": {
+            "1": "L_RX3_G2",
+            "2": "L_RX3_SEL"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "R",
+          "ref": "R_BYPASS_L3",
+          "value": "0R DNP G11",
+          "x": 390,
+          "y": 115,
+          "nets": {
+            "1": "L_RX3_G1",
+            "2": "L_RX3_SEL"
+          },
+          "generic": true,
+          "dnp": true
+        },
+        {
+          "key": "R",
+          "ref": "R_LP_L3",
+          "value": "1k",
+          "x": 650,
+          "y": 115,
+          "nets": {
+            "1": "L_RX3_SEL",
+            "2": "L_RX3_FILT"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_LP_L3",
+          "value": "1nF C0G",
+          "x": 900,
+          "y": 115,
+          "nets": {
+            "1": "L_RX3_FILT",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    },
+    {
+      "name": "AFE_AMP_L_1",
+      "notes": [
+        "AFE_AMP_L_1 | DRAFT - NOT FOR FABRICATION",
+        "One OPA4192 quad serves two RX channels; feedback/bias networks on matching AFE sheet.",
+        "5 V single supply; V- is AGND. No guaranteed overload recovery."
+      ],
+      "parts": [
+        {
+          "key": "OPA4192IPWR",
+          "ref": "U_AFE_L1",
+          "value": "OPA4192IPWR",
+          "x": 500,
+          "y": 500,
+          "nets": {
+            "4": "5VA_L",
+            "11": "AGND_L",
+            "1": "L_RX2_G1",
+            "2": "L_RX2_N1",
+            "3": "L_RX2_BIAS",
+            "7": "L_RX2_G2",
+            "6": "L_RX2_N2",
+            "5": "L_RX2_G1",
+            "8": "L_RX3_G1",
+            "9": "L_RX3_N1",
+            "10": "L_RX3_BIAS",
+            "14": "L_RX3_G2",
+            "13": "L_RX3_N2",
+            "12": "L_RX3_G1"
+          },
+          "generic": false,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AFE_L1",
+          "value": "100nF X7R",
+          "x": 220,
+          "y": 690,
+          "nets": {
+            "1": "5VA_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        },
+        {
+          "key": "C",
+          "ref": "C_AFE_BULK_L1",
+          "value": "1uF",
+          "x": 820,
+          "y": 690,
+          "nets": {
+            "1": "5VA_L",
+            "2": "AGND_L"
+          },
+          "generic": true,
+          "dnp": false
+        }
+      ]
+    }
+  ]
+}

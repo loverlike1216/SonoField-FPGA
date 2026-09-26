@@ -1,3 +1,13 @@
+# Current execution contract — schematic revision V1
+
+Active project v2; user-authorized schematic-only stage. Full contract: PCB/V1/log/preflight/EXECUTION_CONTRACT.md.
+
+Completed: native128TX/8RX capture; one-page consolidation; solid module borders; horizontal net labels; ADC text alignment; vector PDF/SVG; save/reopen; connectivity and mapping audit; ERC classification; frozen v1 check.
+Remaining electrical gates: P-20260925-001 serializer timing and independent watchdog/power qualification; B01/B03 physical core facts; exact MPN/packages and analog/batch measurements. Do not invent pins or waive warnings.
+Next action: independent review of delivered draft; execute a sourced decision when available. No PCB layout, fabrication, version upgrade or physical claim authorized.
+
+## Previous software-stage contract (historical)
+
 # SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM execution contract
 
 Goal: complete the user-authorized v2 software and digital calibration chain; keep v1 frozen.

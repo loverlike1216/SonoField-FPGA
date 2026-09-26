@@ -1,0 +1,622 @@
+{
+  "status": "FAIL",
+  "scope": "Native per-pin connectivity against design manifests and template metadata; not independent circuit validation or ERC",
+  "sheet_count": 63,
+  "components": 1379,
+  "pins_checked": 3581,
+  "errors": [
+    {
+      "ref": "U_CLK_U",
+      "pin": "2",
+      "expected": "U_shift_clock",
+      "actual": "U_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_CLK_U",
+      "pin": "4",
+      "expected": "U_shift_clock",
+      "actual": "U_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_CLK_U",
+      "pin": "6",
+      "expected": "U_shift_clock",
+      "actual": "U_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_CLK_U",
+      "pin": "8",
+      "expected": "U_shift_clock",
+      "actual": "U_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_CLK_U",
+      "pin": "11",
+      "expected": "U_latch_clock",
+      "actual": "U_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_CLK_U",
+      "pin": "13",
+      "expected": "U_latch_clock",
+      "actual": "U_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_CLK_U",
+      "pin": "15",
+      "expected": "U_latch_clock",
+      "actual": "U_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_CLK_U",
+      "pin": "17",
+      "expected": "U_latch_clock",
+      "actual": "U_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_DISABLE_U",
+      "pin": "1",
+      "expected": "U_output_disable",
+      "actual": "U_OUTPUT_DISABLE"
+    },
+    {
+      "ref": "R_DISABLE_U",
+      "pin": "2",
+      "expected": "U_output_disable",
+      "actual": "U_OUTPUT_DISABLE"
+    },
+    {
+      "ref": "U_LEVEL_U0",
+      "pin": "3",
+      "expected": "serial_data[0]",
+      "actual": "SERIAL_DATA[0]"
+    },
+    {
+      "ref": "U_LEVEL_U0",
+      "pin": "4",
+      "expected": "serial_data[1]",
+      "actual": "SERIAL_DATA[1]"
+    },
+    {
+      "ref": "U_LEVEL_U0",
+      "pin": "5",
+      "expected": "serial_data[2]",
+      "actual": "SERIAL_DATA[2]"
+    },
+    {
+      "ref": "U_LEVEL_U0",
+      "pin": "6",
+      "expected": "serial_data[3]",
+      "actual": "SERIAL_DATA[3]"
+    },
+    {
+      "ref": "U_LEVEL_U0",
+      "pin": "7",
+      "expected": "serial_data[4]",
+      "actual": "SERIAL_DATA[4]"
+    },
+    {
+      "ref": "U_LEVEL_U0",
+      "pin": "8",
+      "expected": "serial_data[5]",
+      "actual": "SERIAL_DATA[5]"
+    },
+    {
+      "ref": "U_LEVEL_U0",
+      "pin": "9",
+      "expected": "serial_data[6]",
+      "actual": "SERIAL_DATA[6]"
+    },
+    {
+      "ref": "U_LEVEL_U0",
+      "pin": "10",
+      "expected": "serial_data[7]",
+      "actual": "SERIAL_DATA[7]"
+    },
+    {
+      "ref": "U_LEVEL_U1",
+      "pin": "3",
+      "expected": "serial_data[8]",
+      "actual": "SERIAL_DATA[8]"
+    },
+    {
+      "ref": "U_LEVEL_U1",
+      "pin": "4",
+      "expected": "serial_data[9]",
+      "actual": "SERIAL_DATA[9]"
+    },
+    {
+      "ref": "U_LEVEL_U1",
+      "pin": "5",
+      "expected": "serial_data[10]",
+      "actual": "SERIAL_DATA[10]"
+    },
+    {
+      "ref": "U_LEVEL_U1",
+      "pin": "6",
+      "expected": "serial_data[11]",
+      "actual": "SERIAL_DATA[11]"
+    },
+    {
+      "ref": "U_LEVEL_U1",
+      "pin": "7",
+      "expected": "serial_data[12]",
+      "actual": "SERIAL_DATA[12]"
+    },
+    {
+      "ref": "U_LEVEL_U1",
+      "pin": "8",
+      "expected": "serial_data[13]",
+      "actual": "SERIAL_DATA[13]"
+    },
+    {
+      "ref": "U_LEVEL_U1",
+      "pin": "9",
+      "expected": "serial_data[14]",
+      "actual": "SERIAL_DATA[14]"
+    },
+    {
+      "ref": "U_LEVEL_U1",
+      "pin": "10",
+      "expected": "serial_data[15]",
+      "actual": "SERIAL_DATA[15]"
+    },
+    {
+      "ref": "U_LEVEL_U2",
+      "pin": "3",
+      "expected": "shift_clock",
+      "actual": "SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_LEVEL_U2",
+      "pin": "21",
+      "expected": "U_shift_clock",
+      "actual": "U_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_LEVEL_U2",
+      "pin": "4",
+      "expected": "latch_clock",
+      "actual": "LATCH_CLOCK"
+    },
+    {
+      "ref": "U_LEVEL_U2",
+      "pin": "20",
+      "expected": "U_latch_clock",
+      "actual": "U_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_LEVEL_U2",
+      "pin": "5",
+      "expected": "output_disable",
+      "actual": "OUTPUT_DISABLE"
+    },
+    {
+      "ref": "U_LEVEL_U2",
+      "pin": "19",
+      "expected": "U_output_disable",
+      "actual": "U_OUTPUT_DISABLE"
+    },
+    {
+      "ref": "U_LEVEL_U2",
+      "pin": "6",
+      "expected": "rx_blank[0]",
+      "actual": "RX_BLANK[0]"
+    },
+    {
+      "ref": "U_LEVEL_U2",
+      "pin": "18",
+      "expected": "U_rx_blank",
+      "actual": "U_RX_BLANK"
+    },
+    {
+      "ref": "U_CLK_L",
+      "pin": "2",
+      "expected": "L_shift_clock",
+      "actual": "L_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_CLK_L",
+      "pin": "4",
+      "expected": "L_shift_clock",
+      "actual": "L_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_CLK_L",
+      "pin": "6",
+      "expected": "L_shift_clock",
+      "actual": "L_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_CLK_L",
+      "pin": "8",
+      "expected": "L_shift_clock",
+      "actual": "L_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_CLK_L",
+      "pin": "11",
+      "expected": "L_latch_clock",
+      "actual": "L_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_CLK_L",
+      "pin": "13",
+      "expected": "L_latch_clock",
+      "actual": "L_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_CLK_L",
+      "pin": "15",
+      "expected": "L_latch_clock",
+      "actual": "L_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_CLK_L",
+      "pin": "17",
+      "expected": "L_latch_clock",
+      "actual": "L_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_DISABLE_L",
+      "pin": "1",
+      "expected": "L_output_disable",
+      "actual": "L_OUTPUT_DISABLE"
+    },
+    {
+      "ref": "R_DISABLE_L",
+      "pin": "2",
+      "expected": "L_output_disable",
+      "actual": "L_OUTPUT_DISABLE"
+    },
+    {
+      "ref": "U_LEVEL_L0",
+      "pin": "3",
+      "expected": "serial_data[16]",
+      "actual": "SERIAL_DATA[16]"
+    },
+    {
+      "ref": "U_LEVEL_L0",
+      "pin": "4",
+      "expected": "serial_data[17]",
+      "actual": "SERIAL_DATA[17]"
+    },
+    {
+      "ref": "U_LEVEL_L0",
+      "pin": "5",
+      "expected": "serial_data[18]",
+      "actual": "SERIAL_DATA[18]"
+    },
+    {
+      "ref": "U_LEVEL_L0",
+      "pin": "6",
+      "expected": "serial_data[19]",
+      "actual": "SERIAL_DATA[19]"
+    },
+    {
+      "ref": "U_LEVEL_L0",
+      "pin": "7",
+      "expected": "serial_data[20]",
+      "actual": "SERIAL_DATA[20]"
+    },
+    {
+      "ref": "U_LEVEL_L0",
+      "pin": "8",
+      "expected": "serial_data[21]",
+      "actual": "SERIAL_DATA[21]"
+    },
+    {
+      "ref": "U_LEVEL_L0",
+      "pin": "9",
+      "expected": "serial_data[22]",
+      "actual": "SERIAL_DATA[22]"
+    },
+    {
+      "ref": "U_LEVEL_L0",
+      "pin": "10",
+      "expected": "serial_data[23]",
+      "actual": "SERIAL_DATA[23]"
+    },
+    {
+      "ref": "U_LEVEL_L1",
+      "pin": "3",
+      "expected": "serial_data[24]",
+      "actual": "SERIAL_DATA[24]"
+    },
+    {
+      "ref": "U_LEVEL_L1",
+      "pin": "4",
+      "expected": "serial_data[25]",
+      "actual": "SERIAL_DATA[25]"
+    },
+    {
+      "ref": "U_LEVEL_L1",
+      "pin": "5",
+      "expected": "serial_data[26]",
+      "actual": "SERIAL_DATA[26]"
+    },
+    {
+      "ref": "U_LEVEL_L1",
+      "pin": "6",
+      "expected": "serial_data[27]",
+      "actual": "SERIAL_DATA[27]"
+    },
+    {
+      "ref": "U_LEVEL_L1",
+      "pin": "7",
+      "expected": "serial_data[28]",
+      "actual": "SERIAL_DATA[28]"
+    },
+    {
+      "ref": "U_LEVEL_L1",
+      "pin": "8",
+      "expected": "serial_data[29]",
+      "actual": "SERIAL_DATA[29]"
+    },
+    {
+      "ref": "U_LEVEL_L1",
+      "pin": "9",
+      "expected": "serial_data[30]",
+      "actual": "SERIAL_DATA[30]"
+    },
+    {
+      "ref": "U_LEVEL_L1",
+      "pin": "10",
+      "expected": "serial_data[31]",
+      "actual": "SERIAL_DATA[31]"
+    },
+    {
+      "ref": "U_LEVEL_L2",
+      "pin": "3",
+      "expected": "shift_clock",
+      "actual": "SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_LEVEL_L2",
+      "pin": "21",
+      "expected": "L_shift_clock",
+      "actual": "L_SHIFT_CLOCK"
+    },
+    {
+      "ref": "U_LEVEL_L2",
+      "pin": "4",
+      "expected": "latch_clock",
+      "actual": "LATCH_CLOCK"
+    },
+    {
+      "ref": "U_LEVEL_L2",
+      "pin": "20",
+      "expected": "L_latch_clock",
+      "actual": "L_LATCH_CLOCK"
+    },
+    {
+      "ref": "U_LEVEL_L2",
+      "pin": "5",
+      "expected": "output_disable",
+      "actual": "OUTPUT_DISABLE"
+    },
+    {
+      "ref": "U_LEVEL_L2",
+      "pin": "19",
+      "expected": "L_output_disable",
+      "actual": "L_OUTPUT_DISABLE"
+    },
+    {
+      "ref": "U_LEVEL_L2",
+      "pin": "6",
+      "expected": "rx_blank[1]",
+      "actual": "RX_BLANK[1]"
+    },
+    {
+      "ref": "U_LEVEL_L2",
+      "pin": "18",
+      "expected": "L_rx_blank",
+      "actual": "L_RX_BLANK"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "3",
+      "expected": "adc_reset",
+      "actual": "ADC_RESET"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "21",
+      "expected": "ADC_adc_reset",
+      "actual": "ADC_ADC_RESET"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "4",
+      "expected": "adc_convst",
+      "actual": "ADC_CONVST"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "20",
+      "expected": "ADC_adc_convst",
+      "actual": "ADC_ADC_CONVST"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "5",
+      "expected": "adc_cs_n",
+      "actual": "ADC_CS_N"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "19",
+      "expected": "ADC_adc_cs_n",
+      "actual": "ADC_ADC_CS_N"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "6",
+      "expected": "adc_sclk",
+      "actual": "ADC_SCLK"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "18",
+      "expected": "ADC_adc_sclk",
+      "actual": "ADC_ADC_SCLK"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "7",
+      "expected": "adc_sdi",
+      "actual": "ADC_SDI"
+    },
+    {
+      "ref": "U_LEVEL_ADC_CONTROL",
+      "pin": "17",
+      "expected": "ADC_adc_sdi",
+      "actual": "ADC_ADC_SDI"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "3",
+      "expected": "adc_busy",
+      "actual": "ADC_BUSY"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "21",
+      "expected": "ADC_adc_busy",
+      "actual": "ADC_ADC_BUSY"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "4",
+      "expected": "adc_dout[0]",
+      "actual": "ADC_DOUT[0]"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "20",
+      "expected": "ADC_adc_dout[0]",
+      "actual": "ADC_ADC_DOUT[0]"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "5",
+      "expected": "adc_dout[1]",
+      "actual": "ADC_DOUT[1]"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "19",
+      "expected": "ADC_adc_dout[1]",
+      "actual": "ADC_ADC_DOUT[1]"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "6",
+      "expected": "adc_dout[2]",
+      "actual": "ADC_DOUT[2]"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "18",
+      "expected": "ADC_adc_dout[2]",
+      "actual": "ADC_ADC_DOUT[2]"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "7",
+      "expected": "adc_dout[3]",
+      "actual": "ADC_DOUT[3]"
+    },
+    {
+      "ref": "U_LEVEL_ADC_RETURN",
+      "pin": "17",
+      "expected": "ADC_adc_dout[3]",
+      "actual": "ADC_ADC_DOUT[3]"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "9",
+      "expected": "ADC_adc_convst",
+      "actual": "ADC_ADC_CONVST"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "11",
+      "expected": "ADC_adc_reset",
+      "actual": "ADC_ADC_RESET"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "12",
+      "expected": "ADC_adc_sclk",
+      "actual": "ADC_ADC_SCLK"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "13",
+      "expected": "ADC_adc_cs_n",
+      "actual": "ADC_ADC_CS_N"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "14",
+      "expected": "ADC_adc_busy",
+      "actual": "ADC_ADC_BUSY"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "24",
+      "expected": "ADC_adc_dout[0]",
+      "actual": "ADC_ADC_DOUT[0]"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "25",
+      "expected": "ADC_adc_dout[1]",
+      "actual": "ADC_ADC_DOUT[1]"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "27",
+      "expected": "ADC_adc_dout[2]",
+      "actual": "ADC_ADC_DOUT[2]"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "28",
+      "expected": "ADC_adc_dout[3]",
+      "actual": "ADC_ADC_DOUT[3]"
+    },
+    {
+      "ref": "U_ADC",
+      "pin": "29",
+      "expected": "ADC_adc_sdi",
+      "actual": "ADC_ADC_SDI"
+    },
+    {
+      "ref": "U_BLANK_U",
+      "pin": "1",
+      "expected": "U_rx_blank",
+      "actual": "U_RX_BLANK"
+    },
+    {
+      "ref": "R_BLANK_U",
+      "pin": "2",
+      "expected": "U_rx_blank",
+      "actual": "U_RX_BLANK"
+    },
+    {
+      "ref": "U_BLANK_L",
+      "pin": "1",
+      "expected": "L_rx_blank",
+      "actual": "L_RX_BLANK"
+    },
+    {
+      "ref": "R_BLANK_L",
+      "pin": "2",
+      "expected": "L_rx_blank",
+      "actual": "L_RX_BLANK"
+    }
+  ],
+  "netlist_sha256": "a5ff72790ad1fb10bd08d60180329bae591efa5ef1ac2dc397441097bc74d137"
+}

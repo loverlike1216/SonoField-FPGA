@@ -43,3 +43,12 @@ The user-provided personalized rules govern execution. This file is their projec
 User attachment explicitly authorized v2. v1 is frozen and must remain byte-identical to shared/versions/v1_freeze.json.
 Current user attachment v2_self_calibration.md authorizes the complete self-calibration software/digital stage in v2. Stop before PCB implementation.
 No v2 execution may import sources/tests/config from v1. Root governance is shared. BOM source metadata does not override current user approval.
+
+## Schematic stage authorization (2026-09-25)
+User instruction v2_schematic_revision_V1.md supersedes the earlier stop boundary for
+schematic capture only. Active project remains v2; schematic revision V1 lives in
+the explicitly requested root PCB/V1/{project,log,device}. No PCB layout or fabrication.
+Contract: PCB/V1/log/preflight/EXECUTION_CONTRACT.md. Native EDA results must be real.
+
+## Windows terminal preference
+Default to PowerShell 7 (`pwsh`) for all Windows commands. Do not use Windows PowerShell 5.1 unless the user explicitly requests another terminal or a documented dependency requires 5.1. Long-term preference explicitly requested 2026-09-26.

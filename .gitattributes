@@ -8,6 +8,12 @@
 *.txt text eol=lf
 *.log text eol=lf -whitespace
 *.png binary
+*.pdf binary
+*.epro2 binary
+*.eprj2 binary
+*.zip binary
+# Native exported SVG is a large generated artifact; retain exact bytes.
+PCB/V1/project/*.svg binary
 
 # Verbatim public transcript whitespace is source evidence, not source-code style.
 AI-interaction-memory/codex/*.md text eol=lf -whitespace

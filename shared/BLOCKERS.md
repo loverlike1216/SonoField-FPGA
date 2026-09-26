@@ -76,3 +76,8 @@ in each bank, receiver group delay and TX onset/ringup relative to captured cloc
 return timing through actual translator/cable and provide the PS transport wrapper. Software rejects
 a real record paired with simulated reference provenance. This blocks physical deployment, not
 the explicitly authorized synthetic/digital stage.
+
+## Schematic V1 findings — 2026-09-26
+P-20260925-001 documents the B04 clock-only buffer hold risk and missing independent watchdog/power qualification. No external ChatGPT decision is available. Native ERC has2single-pin logical endpoints (HARDWARE_ENABLE,RST_N) and43supplier-attribute warning groups; do not suppress them. Generic templates are not final procurement parts.
+B06 baseline is now user-supplied TCT40-10T/R1 design input; manufacturer provenance and purchased-batch qualification remain open. No 16 mm ratings are transferred.
+Read PCB/V1/log/review/electrical_findings.md and ERC_DISPOSITION.md. Native capture is complete as a draft; electrical release is not accepted.

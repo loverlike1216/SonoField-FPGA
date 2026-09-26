@@ -3,10 +3,10 @@
 128-channel ultrasonic phased-array project on Robei Zynq-7020, with nominal 10 mm transmitters,
 12 mm radiating-center pitch and adjustable 90–115 mm face gap (100 mm nominal).
 
-Current version **v2**, stage **SELF_CALIBRATION_SOFTWARE_AND_DIGITAL_SYSTEM**. v1 is frozen intact.
+Current version **v2**, stage **SCHEMATIC_DESIGN_JLCEDA_PRO**, schematic revision **V1**. v1 is frozen intact.
 User explicitly approved v2 and this software/digital stage. The complete inherited baseline is retained.
 Self-calibration and ADC acquisition have automated synthetic/RTL validation. Physical acquisition,
-PCB manufacture and levitation remain unverified. No v3 or PCB implementation is started.
+PCB manufacture and levitation remain unverified. Native schematic draft is available; no v3, PCB layout or fabrication is started.
 
 | Directory | Purpose |
 |---|---|
@@ -24,3 +24,5 @@ Run commands from v2. No bitstream, measured calibration or levitation result is
 
 Current architecture: [self-calibration](v2/docs/architecture/SELF_CALIBRATION.md).
 Future board boundary: [hardware/software contract](v2/docs/hardware/PCB_SOFTWARE_INTERFACE.md).
+
+Read the [single-sheet schematic package](PCB/V1/project/README.md), [vector PDF](PCB/V1/project/SonoField-SingleSheet.pdf), [channel mapping](v2/docs/hardware/SCHEMATIC_CHANNEL_MAP.md) and [current review report](shared/report_schematic_v2_V1.md). Electrical release is **REVISE**, with45classified ERC warnings and unresolved hardware gates. Windows commands default to PowerShell7 (`pwsh`).

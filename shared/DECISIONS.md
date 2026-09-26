@@ -77,3 +77,15 @@ Keep per-bank phase gauge explicit: two simulated RX anchors enable a synthetic 
 real RX reference measurement remains required. Reject active invalid channels or unreferenced
 whole-array LUTs. Coarse/fine refinement records its fitted-chain dependence and coarse baseline.
 Evidence: v2/evidence/self_calibration_stage/validation. No hardware freeze authorized.
+
+## ADR-033 — authorized schematic-only stage (2026-09-25)
+
+Source: direct user instruction v2_schematic_revision_V1.md. Project stays v2;
+schematic revision V1 uses root PCB/V1 as an explicit layout exception. Native
+JLCEDA Pro capture and electrical review are authorized; PCB layout, manufacturing,
+hardware freeze and physical acceptance are not. Prior software results stay historical.
+Start: bad4f665889b12f8b75245d9513ae3919fa0cca3. B01/B03/B04/B05/B06/B07 remain open.
+No external ChatGPT decision is claimed. Execute the preflight contract; preserve v1.
+
+## ADR-034 — Single-sheet presentation and pwsh preference (2026-09-26)
+Source: user's actual Codex instructions requesting a single schematic with solid named partitions and Windows PowerShell7 by default. Project remains v2; schematic remains V1. Preserve all128TX and8RX circuits; re-layout only into one native sheet. All3992 native pins unchanged after presentation adjustments. PDF/SVG are vector reading artifacts. No scope expansion to PCB or safety-gate waiver. Long-term shell preference saved separately in the authorized memory update note.
