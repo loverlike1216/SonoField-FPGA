@@ -42,7 +42,7 @@ First obtain revision-matched core-board documentation and measured10mm samples;
 Current next stage: independent schematic electrical review, followed by an approved, source-backed correction. No PCB stage is authorized.
 
 ## Git and interaction evidence
-Start commit bad4f665889b12f8b75245d9513ae3919fa0cca3. Delivery commit is discoverable with `git log -1 -- PCB/V1/project/SonoField-SingleSheet.pdf`; later sync verification records it explicitly. Public repository receives only reviewed engineering records and observable sanitized Codex messages. External ChatGPT BLOCKED; current open Codex turn PARTIAL.
+Start commit bad4f665889b12f8b75245d9513ae3919fa0cca3. Delivery commit 71f17b63a5b5ffcb5bfe5868a9498f5f919e0ce8 pushed and matched remote main; see PCB/V1/log/review/delivery_sync.json. Public repository receives only reviewed engineering records and observable sanitized Codex messages. External ChatGPT BLOCKED; current open Codex turn PARTIAL.
 
 Final Codex Status: REVISE_REQUIRED
 Final result: REVISE
