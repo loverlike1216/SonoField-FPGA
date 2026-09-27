@@ -1,8 +1,8 @@
 {
   "project_id": "SONOFIELD_FPGA",
   "active_version": "v2",
-  "current_stage": "BOARD_ONLY_IDENTIFICATION_AND_TRANSPORT_PREFLIGHT",
-  "status": "IDENTIFICATION_COMPLETE_WITH_LIMITATIONS",
+  "current_stage": "BOARD_TRANSPORT_AND_PS_PL_INTEGRATION_PREFLIGHT",
+  "status": "OFFLINE_TESTS_PASS_REPRO_PENDING",
   "starting_commit": "1784d7bc0481c3dd8b9b4b639918d43667cb1749",
   "motion_python_tests": 90,
   "motion_python_result": "PASS",
@@ -19,27 +19,40 @@
     "README.md",
     "v2/README.md"
   ],
-  "evidence": "v2/evidence/board_bringup/summary.json",
+  "evidence": "v2/evidence/board_transport/summary.json",
   "icarus": "PASS",
   "vivado_xsim": "PASS",
   "determinism": "PASS: three Icarus plus one XSim, 3696 frames",
   "final_regression": "PASS",
-  "source_reproduction": "PASS",
+  "source_reproduction": "PENDING_CURRENT_SOURCE_CHECKPOINT",
   "independent_review": "PENDING",
-  "final_source_regression": "evidence/engineering/motion/regression/summary.json",
+  "final_source_regression": "v2/evidence/board_transport/regression_complete/summary.json",
   "presentation": "evidence/engineering/motion/presentation/gui_simulation.png",
   "last_verified_engineering_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
   "source_reproduction_evidence": "evidence/engineering/motion/standalone/summary.json",
-  "execution_window": "CODEX_CHECKPOINT",
+  "execution_window": "CODEX_WRITE_WINDOW",
   "next_owner": "Chat/user review",
-  "next_action": "Resolve B01/B03 physical facts; design BoardTransport/PS-PL integration before separately authorized download",
+  "next_action": "Fresh standalone reproduction then checkpoint; Chat/user review of B01/B03 and timing problem before physical smoke test",
   "board_identification_evidence": "v2/evidence/board_bringup/summary.json",
   "board_jtag": "IDENTIFIED_TWO_SCANS",
-  "board_transport": "NOT_VERIFIED",
+  "board_transport": "OFFLINE_TESTED; REAL_TRANSPORT_BLOCKED_BY_BOARD_FACT",
   "board_part_gate_tests": 7,
   "board_part_gate_result": "PASS",
   "last_verified_engineering_scope": "Board identification + part gate only; prior motion regression commit retained separately",
   "board_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
   "previous_motion_evidence": "evidence/engineering/motion/validation/summary.json",
-  "board_vivado_gate_tests": 4
+  "board_vivado_gate_tests": 4,
+  "candidate_core_timing": "FAIL",
+  "open_ai_problems": [
+    "P-20260927-001"
+  ],
+  "state_conflicts": [
+    {
+      "status": "STATE_CONFLICT_DETECTED",
+      "scope": "Historical narrative stage/board facts differ from current engineering evidence",
+      "resolution": "Current engineering state and board_identity.json prevail; frozen/historical board_facts.json remains unchanged; Work narrative update required"
+    }
+  ],
+  "python_tests": 112,
+  "protocol_tests": 15
 }

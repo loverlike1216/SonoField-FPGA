@@ -5,6 +5,7 @@ import threading
 from pathlib import Path
 from ..control import registers as r
 from .trap_solver import digest
+from ..board.serial_transport import SerialBoardTransport
 
 ROOT=Path(__file__).resolve().parents[2]
 

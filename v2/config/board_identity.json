@@ -7,7 +7,7 @@
     "arm_dap_idcode": "0x4BA00477",
     "tool": "Vivado 2025.2",
     "evidence": "evidence/board_bringup/summary.json",
-    "scope": "Silicon only; package, speed grade and physical clock unknown"
+    "scope": "JTAG confirms silicon; user photograph confirms CLG400; speed/temperature/full ordering code unknown"
   },
   "observed_transport": {
     "bridge": "FT2232H",
@@ -19,9 +19,11 @@
     "ethernet_verified": false
   },
   "exact_part": null,
-  "package": null,
+  "package": "CLG400",
   "speed_grade": null,
   "pins_verified": false,
   "historical_documented_facts": "board_facts.json",
-  "status": "IDENTIFICATION_ONLY"
+  "status": "PARTIALLY_RESOLVED_STILL_BLOCKING",
+  "temperature_grade": null,
+  "physical_marking_evidence": "evidence/board_transport/chip_marking_fact.json"
 }

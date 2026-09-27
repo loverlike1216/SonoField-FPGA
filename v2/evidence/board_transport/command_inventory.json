@@ -1,0 +1,37 @@
+{
+  "shell": "PowerShell 7 (pwsh)",
+  "working_directory": "v2",
+  "entries": [
+    {
+      "purpose": "Package database",
+      "command": "Vivado 2025.2 -mode batch -source scripts/audit_clg400_parts.tcl",
+      "evidence": "parts_audit.log"
+    },
+    {
+      "purpose": "Pin audit",
+      "command": "python scripts/build_clg400_audit.py",
+      "evidence": "clg400_pin_audit.json"
+    },
+    {
+      "purpose": "Protocol/AXI",
+      "command": "python scripts/board_transport_gate.py",
+      "evidence": "axi_bridge_tests.json"
+    },
+    {
+      "purpose": "Host C",
+      "command": "gcc -std=c99 -Wall -Wextra -Werror -shared -O2 service.c ps_service_harness.c",
+      "evidence": "python_tests.log"
+    },
+    {
+      "purpose": "Candidate OOC",
+      "command": "Vivado 2025.2 -mode batch -source scripts/candidate_board_synthesis.tcl",
+      "evidence": "candidate_synthesis.log"
+    },
+    {
+      "purpose": "Full motion/calibration",
+      "command": "python scripts/motion_gate.py --output evidence/board_transport/regression_complete",
+      "evidence": "regression_complete/summary.json"
+    }
+  ],
+  "note": "Commands above summarize invocations; full argv where available is in gate JSON. No hardware download commands were run."
+}

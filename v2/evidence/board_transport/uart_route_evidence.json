@@ -1,0 +1,22 @@
+{
+  "status": "NOT_VERIFIED",
+  "candidate": "FT2232H B / MI_01 / COM4",
+  "enumeration": "uart_pnp_snapshot.json",
+  "previous_identification": "../board_bringup/summary.json",
+  "evidence_reviewed": "Zynq7020 constrain files, connector images and existing board evidence; no revision-matched FTDI B to PS MIO net proof found",
+  "serial_port_opened": false,
+  "bytes_transmitted": 0,
+  "driver_changed": false,
+  "eeprom_changed": false,
+  "ps_registers_written": false,
+  "ps_jtag_readback": "NOT_RUN; register configuration would not establish copper routing",
+  "required_evidence": [
+    "Revision-matched schematic or continuity evidence naming FTDI B TX/RX and Zynq MIO pins",
+    "DTR/RTS physical routes and inactive levels",
+    "Reviewed PS UART instance, baud and clock/reset platform"
+  ],
+  "ethernet": "PC Realtek Ethernet disconnected at resume; WLAN up; no board network identified",
+  "route_recommendation": "Verified UART first if board routing supports it; JTAG remains confirmed identification/debug path only",
+  "resume_enumeration": "uart_pnp_resume_snapshot.json",
+  "network_evidence": "pc_network_resume_snapshot.json"
+}

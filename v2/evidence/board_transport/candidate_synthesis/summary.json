@@ -1,0 +1,51 @@
+{
+  "classification": "CANDIDATE_ANALYSIS_ONLY",
+  "physical_target_selected": false,
+  "implementation_run": false,
+  "bitstream_generated": false,
+  "rows": [
+    {
+      "part": "xc7z020clg400-1",
+      "classification": "CANDIDATE_ANALYSIS_ONLY",
+      "synthesis": "SYNTHESIZED",
+      "clock_wns_ns": 6.585,
+      "core_wns_ns": -8.128,
+      "core_timing": "FAIL",
+      "slice_luts": 8681,
+      "slice_registers": 17996,
+      "bram_tiles": 4,
+      "worst_source": "native_system/digital/carrier_acc_reg[7]/C",
+      "worst_destination": "native_system/digital/serial/bit_index_reg[0]/CE",
+      "reports": "v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-1"
+    },
+    {
+      "part": "xc7z020clg400-2",
+      "classification": "CANDIDATE_ANALYSIS_ONLY",
+      "synthesis": "SYNTHESIZED",
+      "clock_wns_ns": 6.731,
+      "core_wns_ns": -4.995,
+      "core_timing": "FAIL",
+      "slice_luts": 8681,
+      "slice_registers": 17996,
+      "bram_tiles": 4,
+      "worst_source": "native_system/digital/burst/accumulator_reg[11]/C",
+      "worst_destination": "native_system/digital/serial/serial_data_reg[0]/D",
+      "reports": "v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-2"
+    },
+    {
+      "part": "xc7z020clg400-3",
+      "classification": "CANDIDATE_ANALYSIS_ONLY",
+      "synthesis": "SYNTHESIZED",
+      "clock_wns_ns": 6.8,
+      "core_wns_ns": -3.609,
+      "core_timing": "FAIL",
+      "slice_luts": 8681,
+      "slice_registers": 17996,
+      "bram_tiles": 4,
+      "worst_source": "native_system/digital/burst/accumulator_reg[11]/C",
+      "worst_destination": "native_system/digital/serial/serial_data_reg[0]/D",
+      "reports": "v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-3"
+    }
+  ],
+  "resource_provenance": "Parsed actual utilization.rpt; original results.tsv zero LUT/FF fields are invalid due to unmatched PRIMITIVE_TYPE filter. Tcl corrected for future runs, raw evidence retained."
+}

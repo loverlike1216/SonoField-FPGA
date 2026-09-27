@@ -1,0 +1,34 @@
+test_backend_handshake_read_stop_reconnect (tests.test_board_transport.BoardTransportTests) ... ok
+test_bad_magic_version_length_and_crc (tests.test_board_transport.BoardTransportTests) ... FAIL
+test_bus_error_fails_closed (tests.test_board_transport.BoardTransportTests) ... ok
+test_corruption_every_byte_never_writes (tests.test_board_transport.BoardTransportTests) ... FAIL
+test_crc_known_vector_and_golden_c_interop (tests.test_board_transport.BoardTransportTests) ... ok
+test_dangerous_writes_and_invalid_addresses_denied (tests.test_board_transport.BoardTransportTests) ... ok
+test_duplicate_sequence_is_not_reexecuted (tests.test_board_transport.BoardTransportTests) ... ok
+test_fragmented_requests_and_responses (tests.test_board_transport.BoardTransportTests) ... ok
+test_protocol_parser_bounds (tests.test_board_transport.BoardTransportTests) ... ok
+test_real_profile_stays_blocked_without_port_open (tests.test_board_transport.BoardTransportTests) ... ok
+test_timeout_does_not_claim_remote_disable (tests.test_board_transport.BoardTransportTests) ... ok
+test_unknown_and_later_map_commands_rejected (tests.test_board_transport.BoardTransportTests) ... ok
+test_watchdog_partial_frame_and_session (tests.test_board_transport.BoardTransportTests) ... ok
+
+======================================================================
+FAIL: test_bad_magic_version_length_and_crc (tests.test_board_transport.BoardTransportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD-SonoField-FPGA\v2\tests\test_board_transport.py", line 76, in test_bad_magic_version_length_and_crc
+    self.link.write(frame);self.assertEqual(self.lib.fixture_connected(),0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_corruption_every_byte_never_writes (tests.test_board_transport.BoardTransportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD-SonoField-FPGA\v2\tests\test_board_transport.py", line 72, in test_corruption_every_byte_never_writes
+    self.assertEqual(self.lib.fixture_connected(),0)
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.717s
+
+FAILED (failures=2)

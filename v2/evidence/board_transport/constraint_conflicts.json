@@ -1,0 +1,1129 @@
+{
+  "status": "OPEN",
+  "conflicts": [
+    {
+      "kind": "MISSING_CONNECTOR_PIN",
+      "record": {
+        "source_file": "Zynq7020/constrain/gpio.const",
+        "logical_signal": "J6 Pin",
+        "connector": "J6",
+        "connector_pin": null,
+        "fpga_package_pin": "V16",
+        "bank": "34",
+        "pin_func": "IO_L18P_T2_34",
+        "package_availability": true,
+        "pl_user_io": true,
+        "vivado_is_bonded": "1",
+        "confidence": "DOCUMENTED_CANDIDATE",
+        "precedence": "USER_SELECTED_CONST",
+        "board_route_verified": false,
+        "vcco": "UNKNOWN",
+        "accepted_xdc": false
+      }
+    },
+    {
+      "kind": "NOT_PL_USER_IO",
+      "record": {
+        "source_file": "Zynq7020/constrain/hardware.const",
+        "logical_signal": "HDMI CEC",
+        "connector": null,
+        "connector_pin": null,
+        "fpga_package_pin": "J5",
+        "bank": "502",
+        "pin_func": "PS_DDR_BA2_502",
+        "package_availability": true,
+        "pl_user_io": false,
+        "vivado_is_bonded": "1",
+        "confidence": "DOCUMENTED_CANDIDATE",
+        "precedence": "USER_SELECTED_CONST",
+        "board_route_verified": false,
+        "vcco": "UNKNOWN",
+        "accepted_xdc": false
+      }
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 2,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "U20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "U15",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 1,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "T20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "U14",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 3,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "N17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "T14",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 4,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "P18",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "T15",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 5,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "T17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "T16",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 6,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "R18",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "U17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 7,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "U18",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "V17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 8,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "U19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "V18",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 13,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "V17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "U18",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 14,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "V18",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "U19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 15,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "T16",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "T17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 16,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "U17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "R18",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 17,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "T14",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "N17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 18,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "T15",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "P18",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 19,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "U14",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "T20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J3",
+      "pin": 20,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "U15",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "U20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 1,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "H15",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "F19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 1,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "W16",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "T11",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 3,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "V15",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "U12",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 4,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "Y17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "T12",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 5,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "W15",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "W13",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 6,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "Y16",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "V12",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 7,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "Y14",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "V13",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 8,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "W14",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "U13",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 13,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "V13",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "Y14",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 14,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "U13",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "W14",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 15,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "W13",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "W15",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 16,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "V12",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "V16",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 17,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "U12",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "V15",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 18,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "T12",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "Y17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 19,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "T11",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "W16",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J6",
+      "pin": 20,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "T10",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "V16",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 2,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "G15",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "F20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 3,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "F16",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "D19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 4,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "F17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "D20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 5,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "E17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "C20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 6,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "D18",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "E18",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "B20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 8,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "E19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "A20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 13,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "B19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "E18",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 14,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "A20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "E19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 15,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "C20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "E17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 16,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "B20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "D18",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 17,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "D19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "F16",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 18,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "D20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "F17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 19,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "F19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "H15",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J4",
+      "pin": 20,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "F20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/1.png",
+          "fpga_pin": "G15",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 1,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "G19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "N20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 2,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "G20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "P20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 3,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "G17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "M17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 4,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "G18",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "M18",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 5,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "H16",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "M19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 6,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "H17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "M20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 7,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "K19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "L19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 8,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "J19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "L20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 13,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "L19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "K19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 15,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "M19",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "H16",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 16,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "M20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "H17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 17,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "M17",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "G17",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 18,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "M18",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "G18",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 19,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "N20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "G19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 20,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "P20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "G20",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "CONNECTOR_MAPPING_CONFLICT",
+      "connector": "J5",
+      "pin": 14,
+      "claims": [
+        {
+          "source": "Zynq7020/constrain/gpio.const",
+          "fpga_pin": "L20",
+          "precedence": "USER_SELECTED_CONST"
+        },
+        {
+          "source": "Zynq7020/2.png",
+          "fpga_pin": "J19",
+          "precedence": "SECONDARY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "kind": "HDMI_CEC",
+      "claims": [
+        "hardware.const / EDA image: J5 = PS_DDR_BA2_502",
+        "peripheral images: J15 = IO_25_35"
+      ],
+      "resolution": "OPEN; J5 forbidden as PL IO; no automatic substitution"
+    },
+    {
+      "kind": "Y16_V16",
+      "claims": [
+        "gpio.const: Y16 = J6 Pin6; V16 = J6 Pin without number",
+        "2.png: V16 used for both J6 Pin16 and Pin20",
+        "layout image: Y16 and V16 at separate positions"
+      ],
+      "resolution": "OPEN"
+    },
+    {
+      "kind": "CLOCK_VALUE",
+      "claims": [
+        "hardware.const/EDA: N18 33 MHz",
+        "peripheral table: N18 33.333 MHz"
+      ],
+      "resolution": "User-selected 33 MHz precedence, not measured frequency"
+    }
+  ]
+}

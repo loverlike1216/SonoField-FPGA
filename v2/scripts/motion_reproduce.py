@@ -34,6 +34,7 @@ def main():
         run('venv',[sys.executable,'-m','venv',target/'.venv'])
         python=target/'.venv/Scripts/python.exe';v2=target/'v2'
         run('dependencies',[python,'-m','pip','install','--cache-dir',REPO/'build/pip_cache','-r','requirements-lock.txt'],v2)
+        run('board_dependencies',[python,'-m','pip','install','--cache-dir',REPO/'build/pip_cache','-r','requirements-board.txt'],v2)
         run('dependency_check',[python,'-m','pip','check'],v2)
         run('python_tests',[python,'-m','unittest','discover','-s','tests','-v'],v2)
         run('gui_xsim',[python,'-m','software.ui.app','--automated-demo','--simulator','xsim','--output',v2/'build/motion_standalone'],v2)
@@ -45,7 +46,7 @@ def main():
                 if measured[key]!=expected[key]:raise AssertionError('Standalone hash mismatch '+key)
         if len(result['results'])!=2 or result['status']!='PASS':raise AssertionError('Incomplete GUI demo')
         summary.update(status='PASS',v1_worktree_present=False,environment='Fresh sparse clone and fresh venv; same Windows host',
-                       gui_result=result,scope='90 Python tests, complete 3696-frame GUI/XSim path and exact baseline hashes')
+                       gui_result=result,scope='All discovered Python tests, complete 3696-frame GUI/XSim path and exact baseline hashes')
         import shutil
         for name in ('gui_result.json','gui_simulation.png','commands.jsonl','commands.txt','01_motion_ack.txt','01_xsim.log'):
             shutil.copy2(v2/'build/motion_standalone'/name,out/name)

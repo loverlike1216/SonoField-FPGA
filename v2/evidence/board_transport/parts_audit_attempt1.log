@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Sep 27 14:40:09 2026
+# Process ID         : 53920
+# Current directory  : E:/Codex_project/AMD-SonoField-FPGA
+# Command line       : vivado.exe -mode batch -source v2/scripts/audit_clg400_parts.tcl -log v2/evidence/board_transport/parts_audit.log -nojournal
+# Log file           : E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/parts_audit.log
+# Journal file       : 
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 25769 MB
+# Total Virtual      : 42544 MB
+# Available Virtual  : 18219 MB
+#-----------------------------------------------------------
+source v2/scripts/audit_clg400_parts.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set out [file join $root evidence board_transport]
+# file mkdir $out
+# if {[version -short] ne "2025.2"} {error "Vivado 2025.2 required"}
+# set parts [lsort [get_parts -quiet -filter {DEVICE == xc7z020 && PACKAGE == clg400}]]
+# if {![llength $parts]} {error "No installed XC7Z020 CLG400 candidates"}
+# set f [open [file join $out clg400_parts.tsv] w]
+# puts $f "part\tdevice\tpackage\tspeed\ttemperature"
+# foreach p $parts {
+#     puts $f "$p\t[get_property DEVICE $p]\t[get_property PACKAGE $p]\t[get_property SPEED $p]\t[get_property TEMPERATURE_GRADE $p]"
+# }
+ERROR: [Common 17-54] The object 'part' does not have a property 'TEMPERATURE_GRADE'.
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 14:40:12 2026...

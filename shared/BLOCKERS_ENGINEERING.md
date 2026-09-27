@@ -1,24 +1,19 @@
 # Engineering blockers — v2
 
-Current stage: BOARD_ONLY_IDENTIFICATION_AND_TRANSPORT_PREFLIGHT.
-Canonical machine state: PROJECT_STATE.json and ENGINEERING_STATE.json.
-Owner: Codex. No hardware acceptance is granted by this file.
+Stage: BOARD_TRANSPORT_AND_PS_PL_INTEGRATION_PREFLIGHT. Owner: Codex; independent review pending.
 
-| Gate | Engineering fact | Required next evidence |
+| Gate | Current engineering fact | Evidence required |
 |---|---|---|
-| B01 | PARTIALLY RESOLVED: Vivado JTAG twice identifies xc7z020 / 0x23727093. Exact package/speed/ordering code remains unknown | Legible chip marking or revision-matched manufacturer documentation |
-| B03 | OPEN: VCCO, IO standards, connector errors and PS UART wiring remain unverified | Electrical documentation/physical confirmation; JTAG does not prove these |
-| B04 | Serializer/driver physical setup/hold and independent watchdog remain unresolved | Timing budget, circuit review and measured waveforms |
-| B05/B06 | No physical levitation/batch qualification | Characterized 10 mm transmitters, conservative voltage/current/temperature records and measured particles |
-| B07 | Real receive phase reference and analog acquisition timing unverified | Calibrated cross-bank reference and hardware acquisition traces |
-| PS_TRANSPORT | Motion execution is a host reference model with RTL simulation | Real PS firmware, verified bus/transport and hardware interlock |
-| EXTERNAL_REVIEW | Codex self-check is not independent acceptance | Chat/user review of the final commit and engineering evidence |
+| B01 | PARTIALLY_RESOLVED_STILL_BLOCKING: JTAG confirms xc7z020; user photo confirms CLG400. Speed, temperature and full ordering code UNKNOWN | Independent speed/temperature/ordering evidence; do not infer ABX22 |
+| B03 | OPEN: package audit complete; routing/VCCO remain unverified. CEC=J5 is PS DDR, not PL. Connector numbering, J4 pin1/duplicate pin6, V16/Y16 conflicts retained | Revision-matched schematic/continuity, VCCO and clock evidence, UART MIO routing |
+| B04 | OPEN: 66 MHz serializer external setup/hold, independent watchdog and power qualification unverified | Physical timing budget and measured waveforms; no PCB freeze |
+| CORE_TIMING | All three candidates synthesize; 132 MHz OOC WNS -8.128/-4.995/-3.609 ns | P-20260927-001 decision and timing revalidation; no guessed-target deployment |
+| PS_TRANSPORT | PC/C and AXI/native segments tested offline; COM4 route and real PS readback unverified | Exact target, PS platform/XSA/BSP, safe smoke top, UART route, real PING/PONG and PL STATUS |
+| B05/B06 | No physical levitation/batch qualification | Characterized 10 mm emitters and measured particles |
+| B07 | Real receive reference and analog timing unverified | Calibrated reference and hardware acquisition traces |
+| EXTERNAL_REVIEW | Codex checkpoint is not Chat acceptance | Independent review of final commit/evidence |
 
-These gates block physical deployment, not the completed board-only identification. Evidence: v2/evidence/board_bringup/RESULT.md. FT2232H A JTAG works directly in Vivado 2025.2; B COM4 exists but has not been opened. No driver change or download performed.
-No new physical pin or PCB requirement has been introduced by the motion wrapper.
+Evidence: v2/evidence/board_transport/. Prior identification evidence remains in board_bringup/.
+No port opened, no driver/EEPROM/boot change, no program download, no unknown GPIO, no external PCB operation.
 
-DOCUMENTATION_UPDATE_REQUIRED: general shared/CURRENT_PLAN.md, HANDOFF.md,
-PROJECT_STATE.md, DECISIONS.md and ACCEPTANCE.md still describe earlier stages.
-Work is OFF. The current user instruction explicitly authorizes the six motion
-stage documents; it does not imply that Work ran or that Chat approved a new decision.
-External ChatGPT history access remains BLOCKED; observable Codex records are PARTIAL.
+DOCUMENTATION_UPDATE_REQUIRED: general README, v2/README, CURRENT_PLAN, HANDOFF, PROJECT_STATE.md, DECISIONS and ACCEPTANCE remain historical. Work is OFF; no narrative or memory update is attributed to Work. Task-specific technical evidence is explicitly authorized by current instruction sections22/26. External Chat history remains BLOCKED; observable interaction memory remains PARTIAL at its existing cutoff.

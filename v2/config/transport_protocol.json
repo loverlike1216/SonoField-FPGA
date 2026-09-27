@@ -1,0 +1,7 @@
+{
+  "magic": "SFP2", "version": 1, "max_payload": 256,
+  "commands": {"PING": 1, "GET_VERSION": 2, "GET_CAPABILITIES": 3, "GET_STATUS": 4, "SAFE_DISABLE": 5, "READ_REGISTER": 6, "WRITE_REGISTER": 7, "BEGIN_MAP": 16, "MAP_CHUNK": 17, "COMMIT_MAP": 18, "GET_MAP_STATUS": 19},
+  "status": {"OK": 0, "BAD_FRAME": 1, "BAD_SEQUENCE": 2, "NOT_CONNECTED": 3, "UNSUPPORTED": 4, "DENIED": 5, "BUS_ERROR": 6},
+  "capabilities": {"BASIC": 1, "MAP": 2},
+  "watchdog_ms": 1000
+}

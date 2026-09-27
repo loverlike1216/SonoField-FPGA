@@ -1,0 +1,19 @@
+# Offline PC / PS / PL integration contract
+
+Canonical protocol: v2/config/transport_protocol.json; functional registers remain v2/config/register_map.json. Generate Python/C/RTL constants with scripts/generate_transport.py --check. Wire frame is little-endian <4sBBIH>, payload <=256 bytes, followed by CRC32/ISO-HDLC over header+payload. Magic SFP2, version1, nonzero uint32 sequence. Reply command sets bit7 and begins with status byte. See generated constants for numeric commands/errors.
+
+SerialBoardTransport connects only with an explicitly VERIFIED route/part/PS-PL/safe-disable profile. Current profile is UNVERIFIED, so no real COM4 open occurs. DTR/RTS are requested inactive before opening; OS/driver glitches still require a verified wiring review. APIs are single-caller, synchronous and bounded; not a thread-safe multi-client service. Connect performs random-nonce PING, version/capability check, SAFE_DISABLE and status. It does not arm motion. Stop/disconnect requests disable, closes locally; lost link clears remote_disable_confirmed and relies on the service watchdog. Local SAFE_DISABLED is not proof of physical disable.
+
+C service implements bounded framing, CRC, sequence checks, MMIO callbacks, whitelisted reads and safe-disable writes only, responses and a 1000 ms timeout. Bad frames never dispatch writes. Corrupted length can remain incomplete until timeout; rejection need not be immediate. A new 8-byte nonce handshake resets the session safely; CRC/nonce provide integrity/session ordering, not cryptographic authentication. Maximum valid response payload sizes are checked at the PC.
+
+Initial firmware advertises BASIC only. BEGIN_MAP/MAP_CHUNK/COMMIT_MAP/GET_MAP_STATUS have client wire methods but the service deliberately rejects them as UNSUPPORTED; motion_authorized=false and CAP_MAP absent block their use. Later motion support requires a separately reviewed stage. Existing SimulationTransport/RegisterTranscriptTransport and intentionally blocked legacy BoardTransport remain intact.
+
+service.c is compiled and exercised as actual host C through Python byte-stream tests. ps_service_harness.c models MMIO and is explicitly a test fixture. zynq_service_main.c supplies XUartPs/Xil_In32/Out32 integration source requiring SF_UART_DEVICE_ID, SF_UART_BAUD and SF_PL_BASE; no guessed defaults. It has NOT been ARM-linked with a verified XSA/BSP or downloaded. MMIO bus fault handling and an independent hardware watchdog remain deployment gates; a stalled CPU cannot guarantee a software timeout.
+
+AXI bridge separately buffers AW/W/AR, holds responses under backpressure, rejects invalid/unaligned addresses with DECERR, partial WSTRB with SLVERR, treats zero WSTRB as no-op, and propagates registered native errors after acceptance. Native timeout is 64 cycles. IRQ is synchronous pass-through. sono_axi_system is an offline integration wrapper, not a board smoke-test top. Tests exercise the real motion native bus including queue ownership, reset and disabled waveform outputs.
+
+The PC-to-C and AXI-to-real-native segments are independently exercised, not a full C-to-RTL co-simulation or physical PS-to-PL readback. Remaining physical integration requires a verified PS platform, reviewed clock/reset/address map and a minimal smoke-test top with external outputs tied disabled/unconnected.
+
+Reproduce from v2 in pwsh: ../.venv/Scripts/python.exe scripts/board_transport_gate.py. GCC path can be configured as documented in tests/test_board_transport.py; IVERILOG_BIN and VIVADO_BIN select installed tools. Optional live backend dependency is requirements-board.txt (pyserial3.5). Offline test factory does not open serial hardware.
+
+References: [pyserial API](https://pyserial.readthedocs.io/en/latest/pyserial_api.html), [AMD XUartPs](https://xilinx.github.io/embeddedsw.github.io/uartps/doc/html/api/index.html).

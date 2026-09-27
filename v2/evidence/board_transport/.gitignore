@@ -1,0 +1,17 @@
+local_raw/
+*.jou
+*.backup.log
+dfx_runtime.txt
+/regression/
+regression_complete/faults/
+regression_complete/gui_*/rtl/
+regression_complete/gui_*/trajectory_*.json
+regression_complete/gui_*/phase_maps*.json
+regression_complete/regression/work/
+regression_complete/regression/self_calibration/work/
+regression_complete/regression/self_calibration/run*/
+regression_complete/regression/self_calibration/pipeline*/
+regression_complete/gui_icarus_[12]/01_motion_ack.txt
+*.vvp
+xsim.dir/
+*.pb

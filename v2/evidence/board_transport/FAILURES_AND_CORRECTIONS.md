@@ -1,0 +1,10 @@
+# Preserved failures and corrections
+
+- parts_audit_attempt1.log: TEMPERATURE_GRADE was not an available Vivado part property. Query removed; temperature stays unknown. No device fact inferred.
+- protocol_first_run.log: host GCC -Werror found misleading indentation. Braces/newlines corrected; warnings-as-errors retained.
+- Initial protocol test expected instant rejection after corrupting a frame length. The frame can be syntactically incomplete until the documented watchdog deadline. Test now advances the deadline and asserts no write plus disabled session. The corruption test still flips every byte. Acceptance was not weakened.
+- Initial wrapper TB expected ADC idle immediately after reset. Actual existing RTL waits through power initialization, so STATUS=0 was the correct initial expectation. The test now uses that documented state while continuing to assert disabled outputs.
+- candidate_synthesis_attempt1.log: calibration RAM in the asynchronous-reset process failed Vivado inference (Synth8-3391). Memory write moved to a dedicated synchronous process with identical reset/abort/error/state/count enables. Valid counts still guard stale data; memory contents were not reset before either. All three candidates now infer four RAMB36 tiles. Full calibration/motion regression verifies behavior.
+- Raw candidate_synthesis/results.tsv incorrectly reports zero LUT/FF counts because PRIMITIVE_TYPE filters matched no cells. Actual utilization.rpt reports 8681 LUTs and 17996 registers for all candidates. summary.json parses those original reports. Tcl now uses REF_NAME patterns for future primitive counts; it was not rerun merely to hide the first reporting defect. Slice-utilization and primitive counts may differ after LUT combining.
+- Previous regression/ execution was interrupted before summary.json; it is incomplete, not PASS. Final run is regression_complete/. Raw generated files are retained locally; curated logs/hashes identify final evidence.
+- Candidate core setup timing remains FAIL. This was not fixed by lowering frequency, adding false paths or changing acceptance. P-20260927-001 records the unresolved design decision.

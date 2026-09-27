@@ -1,0 +1,333 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Sep 27 14:58:52 2026
+# Process ID         : 53848
+# Current directory  : E:/Codex_project/AMD-SonoField-FPGA/v2
+# Command line       : vivado.exe -mode batch -source scripts/candidate_board_synthesis.tcl -log evidence/board_transport/candidate_synthesis.log -nojournal
+# Log file           : E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis.log
+# Journal file       : 
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 25769 MB
+# Total Virtual      : 42544 MB
+# Available Virtual  : 18243 MB
+#-----------------------------------------------------------
+source scripts/candidate_board_synthesis.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set out [file join $root evidence board_transport candidate_synthesis]
+# file mkdir $out
+# set_param general.maxThreads 4
+# set candidates [lsort [get_parts -quiet -filter {DEVICE == xc7z020 && PACKAGE == clg400}]]
+# set summary [open [file join $out results.tsv] w]
+# puts $summary "part\tclassification\tclock_wns\tcore_wns\tcore_luts\tcore_ffs"
+# foreach part $candidates {
+#  set dest [file join $out $part];file mkdir $dest
+#  create_project -in_memory -part $part
+#  read_verilog [file join $root vivado clock_candidate.sv]
+#  synth_design -top clock_candidate -part $part -mode out_of_context
+#  create_clock -period 30.303030 -name clk33 [get_ports clk33]
+#  set_input_jitter [get_clocks clk33] 0.100
+#  # 100 ps is an ANALYSIS ASSUMPTION, not an oscillator measurement.
+#  report_clocks -file [file join $dest clocks.rpt]
+#  report_clock_networks -file [file join $dest clock_networks.rpt]
+#  report_timing_summary -file [file join $dest clock_timing.rpt]
+#  report_drc -file [file join $dest clock_drc.rpt]
+#  set cp [get_timing_paths -quiet -max_paths 1];set cw "NO_PATH";if {[llength $cp]} {set cw [get_property SLACK $cp]}
+#  close_project
+#  create_project -in_memory -part $part
+#  foreach dir {rtl rtl/timing rtl/phase rtl/output rtl/control rtl/acquisition rtl/calibration rtl/motion} {
+#   foreach f [glob -nocomplain [file join $root $dir *.sv]] {read_verilog -sv $f}
+#  }
+#  set_property include_dirs [list [file join $root rtl generated]] [current_fileset]
+#  synth_design -top sono_axi_system -part $part -mode out_of_context
+#  create_clock -period 7.575758 -name core132 [get_ports clk]
+#  report_utilization -file [file join $dest utilization.rpt]
+#  report_timing_summary -file [file join $dest timing.rpt]
+#  report_cdc -details -file [file join $dest cdc.rpt]
+#  set tp [get_timing_paths -quiet -max_paths 1];set tw "NO_PATH";if {[llength $tp]} {set tw [get_property SLACK $tp]}
+#  puts $summary "$part\tCANDIDATE_ANALYSIS_ONLY\t$cw\t$tw\t[llength [get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.LUT.*}]]\t[llength [get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.FLOP.*}]]"
+#  flush $summary
+#  close_project
+# }
+Command: synth_design -top clock_candidate -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 53816
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1078.242 ; gain = 535.660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'clock_candidate' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 2.400000e+01 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 3.030303e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 6.000000e+00 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 12 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 1.000000e-02 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7023] instance 'mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 8 given [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'clock_candidate' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:4]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.883 ; gain = 654.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.883 ; gain = 654.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.883 ; gain = 654.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.883 ; gain = 654.301
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1402.691 ; gain = 860.109
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1417.516 ; gain = 874.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1417.516 ; gain = 874.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     3|
+|2     |LUT2        |     1|
+|3     |MMCME2_BASE |     1|
+|4     |FDCE        |     6|
++------+------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    11|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1652.582 ; gain = 1110.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1670.617 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1785.934 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: b08d7245
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1785.934 ; gain = 1247.340
+WARNING: [Vivado 12-2489] -period contains time 30.303030 which will be rounded to 30.303 to ensure it is an integer multiple of 1 picosecond
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk33" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: report_drc -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-1/clock_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2025.2/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-1/clock_drc.rpt.
+report_drc completed successfully
+Command: synth_design -top sono_axi_system -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1785.934 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sono_axi_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_axi_system.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_native_bridge' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_native_bridge' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'sono_motion_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_motion_system.sv:4]
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'motion_queue' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:4]
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter INTERVAL_CYCLES bound to: 2640000 - type: integer 
+	Parameter ACK_TIMEOUT_CYCLES bound to: 6600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'motion_queue' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'sono_digital_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_digital_system.sv:3]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ad7606b_if' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/ad7606b_if.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adc_serial' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'adc_serial' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'ad7606b_if' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/ad7606b_if.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'calibration_scheduler' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:3]
+	Parameter DEPTH bound to: 1024 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'calibration_scheduler' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'burst_generator' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/burst_generator.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'burst_generator' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/burst_generator.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'phase_bank' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'phase_bank' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'channel_waveform' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'channel_waveform' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'serializer' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:2]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'serializer' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'sono_digital_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_digital_system.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'sono_motion_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_motion_system.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'sono_axi_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_axi_system.sv:4]
+WARNING: [Synth 8-7137] Register queue_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register seq_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register last_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'last_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:58]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-4767] Trying to implement RAM 'queue_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:66]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-13159] Potential Runtime issue for RAM 'queue_reg' since this is dissolved into (8704) registers bits. Consider modifying RTL as per supported RAM templates
+WARNING: [Synth 8-4767] Trying to implement RAM 'seq_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:66]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-7137] Register memory_reg in module calibration_scheduler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'memory_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:24]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+ERROR: [Synth 8-3391] Unable to infer a block/distributed RAM for 'memory_reg' because the memory pattern used is not supported. Failed to dissolve the memory into bits because the number of bits (131072) is too large. Use 'set_param synth.elaboration.rodinMoreOptions {rt::set_parameter dissolveMemorySizeLimit 131072}' to allow the memory to be dissolved into individual bits
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1785.934 ; gain = 0.000
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 10 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1785.934 ; gain = 0.000
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 14:59:27 2026...

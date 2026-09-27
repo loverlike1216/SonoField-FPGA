@@ -25,6 +25,13 @@ module calibration_scheduler #(parameter integer DEPTH=1024)(
   read_valid<=read_address[11:2]<frame_count;
  end
  assign read_data=read_valid?read_frame[read_word*32+:32]:0;
+ // Keep the RAM write port free of asynchronous reset sensitivity. Only control
+ // state/frame_count reset; the valid-count mask prevents stale RAM publication.
+ // Same acceptance condition as the CAPTURE/DRAIN control branch below.
+ always @(posedge clk)begin
+  if(rst_n&&!abort&&!adc_error&&(state==CAPTURE||state==DRAIN)&&frame_valid&&frame_count<DEPTH)
+   memory[frame_count]<=frame;
+ end
  always @(posedge clk or negedge rst_n)begin
   if(!rst_n)begin
    state<=IDLE;sample_request<=0;burst_start<=0;capture_ready<=0;done<=0;error<=0;
@@ -53,7 +60,7 @@ module calibration_scheduler #(parameter integer DEPTH=1024)(
      if(frame_valid)begin
       if(frame_count>=DEPTH)begin error<=1;state<=FAULT;end
       else begin
-       memory[frame_count]<=frame;frame_count<=frame_count+1;
+       frame_count<=frame_count+1;
        if(frame_count==0)first_timestamp<=frame_timestamp;
        if(frame_count+1==total)begin
         if(burst_active)begin error<=1;state<=FAULT;end

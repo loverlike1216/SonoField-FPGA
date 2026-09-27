@@ -1,0 +1,28 @@
+ERROR
+
+======================================================================
+ERROR: setUpClass (tests.test_board_transport.BoardTransportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD-SonoField-FPGA\v2\tests\test_board_transport.py", line 42, in setUpClass
+    if result.returncode:raise RuntimeError(result.stderr)
+RuntimeError: E:\Codex_project\AMD-SonoField-FPGA\v2\firmware\ps_service\service.c: In function 'dispatch':
+E:\Codex_project\AMD-SonoField-FPGA\v2\firmware\ps_service\service.c:54:9: error: this 'else' clause does not guard... [-Werror=misleading-indentation]
+   54 |         else if(s->io.disable(s->io.context))status=SF_ERR_BUS_ERROR;break;
+      |         ^~~~
+E:\Codex_project\AMD-SonoField-FPGA\v2\firmware\ps_service\service.c:54:70: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'else'
+   54 |         else if(s->io.disable(s->io.context))status=SF_ERR_BUS_ERROR;break;
+      |                                                                      ^~~~~
+E:\Codex_project\AMD-SonoField-FPGA\v2\firmware\ps_service\service.c:65:9: error: this 'else' clause does not guard... [-Werror=misleading-indentation]
+   65 |         else if(s->io.write32(s->io.context,address,value))status=SF_ERR_BUS_ERROR;break;
+      |         ^~~~
+E:\Codex_project\AMD-SonoField-FPGA\v2\firmware\ps_service\service.c:65:84: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'else'
+   65 |         else if(s->io.write32(s->io.context,address,value))status=SF_ERR_BUS_ERROR;break;
+      |                                                                                    ^~~~~
+cc1.exe: all warnings being treated as errors
+
+
+----------------------------------------------------------------------
+Ran 0 tests in 1.404s
+
+FAILED (errors=1)

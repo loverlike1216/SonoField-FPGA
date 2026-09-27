@@ -1,0 +1,87 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Sep 27 14:40:39 2026
+# Process ID         : 52176
+# Current directory  : E:/Codex_project/AMD-SonoField-FPGA
+# Command line       : vivado.exe -mode batch -source v2/scripts/audit_clg400_parts.tcl -log v2/evidence/board_transport/parts_audit.log -nojournal
+# Log file           : E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/parts_audit.log
+# Journal file       : 
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 25769 MB
+# Total Virtual      : 42544 MB
+# Available Virtual  : 18217 MB
+#-----------------------------------------------------------
+source v2/scripts/audit_clg400_parts.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set out [file join $root evidence board_transport]
+# file mkdir $out
+# if {[version -short] ne "2025.2"} {error "Vivado 2025.2 required"}
+# set parts [lsort [get_parts -quiet -filter {DEVICE == xc7z020 && PACKAGE == clg400}]]
+# if {![llength $parts]} {error "No installed XC7Z020 CLG400 candidates"}
+# set f [open [file join $out clg400_parts.tsv] w]
+# puts $f "part\tdevice\tpackage\tspeed"
+# foreach p $parts {
+#     puts $f "$p\t[get_property DEVICE $p]\t[get_property PACKAGE $p]\t[get_property SPEED $p]"
+# }
+# close $f
+# puts "CANDIDATE_ANALYSIS_ONLY parts=$parts"
+CANDIDATE_ANALYSIS_ONLY parts=xc7z020clg400-1 xc7z020clg400-2 xc7z020clg400-3
+# create_project -in_memory -part [lindex $parts 0]
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 531.977 ; gain = 219.129
+# link_design -part [lindex $parts 0]
+Command: link_design -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.703 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 908.680 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+# report_property -all [get_package_pins N18]
+Property                Type    Read-only  Value
+BANK                    string  true       34
+BUFIO_2_REGION          string  true       BR
+CLASS                   string  true       package_pin
+DIFF_PAIR_PIN           string  true       P19
+IS_BONDED               bool    true       1
+IS_CLK_CAPABLE          bool    true       1
+IS_DIFFERENTIAL         bool    true       1
+IS_GENERAL_PURPOSE      bool    true       1
+IS_GLOBAL_CLK           bool    true       0
+IS_LOW_CAP              bool    true       0
+IS_MASTER               bool    true       1
+IS_USED                 bool    true       0
+IS_VREF                 bool    true       0
+IS_VRN                  bool    true       0
+IS_VRP                  bool    true       0
+MAX_DELAY               int     true       57347
+MIN_DELAY               int     true       56776
+NAME                    string  true       N18
+PIN_FUNC                enum    true       IO_L13P_T2_MRCC_34
+PIN_FUNC_COUNT          int     true       2
+PKGPIN_BYTEGROUP_INDEX  int     true       0
+PKGPIN_NIBBLE_INDEX     int     true       0
+# set f [open [file join $out clg400_package_pins.tsv] w]
+# puts $f "pin\tpin_func\tbank\tis_bonded\tis_general_purpose\tis_clk_capable"
+# foreach p [lsort [get_package_pins]] {
+#     puts $f "$p\t[get_property PIN_FUNC $p]\t[get_property BANK $p]\t[get_property IS_BONDED $p]\t[get_property IS_GENERAL_PURPOSE $p]\t[get_property IS_CLK_CAPABLE $p]"
+# }
+# close $f
+# close_project
+# exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 14:40:51 2026...

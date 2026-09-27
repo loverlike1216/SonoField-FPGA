@@ -1,0 +1,14 @@
+{
+  "marker_scan": [],
+  "review": "Self-review, not independent acceptance",
+  "core_segments": [
+    "Python packets <-> actual GCC service, MMIO fixture",
+    "AXI bridge <-> real sono_motion_system native bus, Icarus and XSim"
+  ],
+  "deliberate_gates": [
+    "Current physical transport profile UNVERIFIED",
+    "Map/motion service capability not advertised; later-stage commands return UNSUPPORTED",
+    "ARM BSP build and board smoke test NOT_VERIFIED"
+  ],
+  "physical_actions": "NONE"
+}

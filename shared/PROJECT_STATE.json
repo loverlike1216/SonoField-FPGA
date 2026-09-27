@@ -5,16 +5,16 @@
   "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
   "current_branch": "main",
   "current_version": "v2",
-  "current_stage": "BOARD_ONLY_IDENTIFICATION_AND_TRANSPORT_PREFLIGHT",
+  "current_stage": "BOARD_TRANSPORT_AND_PS_PL_INTEGRATION_PREFLIGHT",
   "execution": "PROJECT_ACTIVE",
   "status": "PROJECT_ACTIVE",
-  "scope_of_block": "Exact ordering code, target clock/IO constraints, PS transport, electrical release and functional hardware",
+  "scope_of_block": "Speed/temperature/ordering code, VCCO/connector/UART route, candidate core timing and physical smoke test",
   "digital_validation": "PASS",
-  "digital_evidence": "evidence/engineering/motion/regression/summary.json",
+  "digital_evidence": "v2/evidence/board_transport/regression_complete/summary.json",
   "model_evidence": "v2/evidence/model",
-  "reproducibility": "PASS",
+  "reproducibility": "PENDING_CURRENT_SOURCE_CHECKPOINT",
   "overall_iteration_result": "REVISE",
-  "board_synthesis": "BLOCKED_BY_BOARD_FACT",
+  "board_synthesis": "CANDIDATE_ANALYSIS_ONLY; SYNTHESIZED; 132 MHz TIMING FAIL",
   "implementation": "NOT_RUN",
   "external_acceptance": "PENDING",
   "hardware_verified": false,
@@ -28,10 +28,11 @@
     "B04",
     "B05",
     "B06",
-    "B07"
+    "B07",
+    "CORE_TIMING"
   ],
   "coordinate_evidence": "v2/hardware/mechanical/geometry_10mm",
-  "current_report": "v2/evidence/board_bringup/RESULT.md",
+  "current_report": "v2/evidence/board_transport/RESULT.md",
   "geometry": {
     "transducer_body_diameter_mm": 10,
     "pitch_mm": 12,
@@ -45,7 +46,7 @@
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
   },
-  "review_scope": "Board-only identification and offline part gate; no functional hardware acceptance",
+  "review_scope": "Offline board transport and PS-PL preflight only",
   "active_version": "v2",
   "branch": "main",
   "chat_source_name": "SonoField-FPGA",
@@ -55,7 +56,8 @@
     "P-20260919-001",
     "P-20260919-002",
     "P-20260919-003",
-    "P-20260925-001"
+    "P-20260925-001",
+    "P-20260927-001"
   ],
   "blocking_issues": [
     "B01",
@@ -64,10 +66,11 @@
     "B05",
     "B06",
     "CHAT_MEMORY_ACCESS_BLOCKED",
-    "B07"
+    "B07",
+    "CORE_TIMING"
   ],
   "critical_issues": [],
-  "next_action": "Review identification; obtain exact part/package/speed and PS UART/VCCO facts before BoardTransport integration; no download authorized",
+  "next_action": "Fresh standalone reproduction then checkpoint; Chat/user review of B01/B03 and timing problem before physical smoke test",
   "validated_source_commit": "995e643d5056d7229ff78fa3ef40e39affeb0093",
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "organization_limitations": [
@@ -102,7 +105,7 @@
   },
   "bom_evidence": "v2/evidence/bootstrap/bom_audit.log",
   "self_calibration_validation": "PASS",
-  "self_calibration_evidence": "v2/evidence/self_calibration_stage/validation_frequency/self_calibration/summary.json",
+  "self_calibration_evidence": "v2/evidence/board_transport/regression_complete/regression/self_calibration/summary.json",
   "software_stage_result": "ACCEPT WITH LIMITATIONS",
   "verified_previous_workspaces": [
     {
@@ -141,7 +144,7 @@
   "codex_status": "ACTIVE",
   "work_status": "OFF",
   "motion_validation": "PASS",
-  "motion_evidence": "evidence/engineering/motion/validation/summary.json",
+  "motion_evidence": "v2/evidence/board_transport/regression_complete/summary.json",
   "motion_stage_result": "SIMULATION_VALIDATED",
   "motion_hardware_verified": false,
   "engineering_state": "shared/ENGINEERING_STATE.json",
@@ -149,7 +152,7 @@
   "last_verified_engineering_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
   "motion_reproducibility": "PASS",
   "motion_reproducibility_evidence": "evidence/engineering/motion/standalone/summary.json",
-  "execution_window": "CODEX_CHECKPOINT",
+  "execution_window": "CODEX_WRITE_WINDOW",
   "motion_stage_self_check": "ACCEPT WITH LIMITATIONS",
   "board_identification_evidence": "v2/evidence/board_bringup/summary.json",
   "board_identification": "JTAG_IDENTIFIED",
@@ -157,5 +160,17 @@
   "detected_jtag_idcode": "0x23727093",
   "board_only_self_check": "ACCEPT WITH LIMITATIONS",
   "last_verified_engineering_scope": "Board identification + part gate only; prior motion regression commit retained separately",
-  "board_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba"
+  "board_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
+  "package": "CLG400",
+  "speed_grade": null,
+  "temperature_grade": null,
+  "state_conflicts": [
+    {
+      "status": "STATE_CONFLICT_DETECTED",
+      "scope": "Historical narrative stage/board facts differ from current engineering evidence",
+      "resolution": "Current engineering state and board_identity.json prevail; frozen/historical board_facts.json remains unchanged; Work narrative update required"
+    }
+  ],
+  "board_transport_validation": "OFFLINE_TESTS_PASS_REPRO_PENDING",
+  "real_transport": "BLOCKED_BY_BOARD_FACT"
 }

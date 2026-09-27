@@ -1,0 +1,2211 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Sep 27 15:00:29 2026
+# Process ID         : 35356
+# Current directory  : E:/Codex_project/AMD-SonoField-FPGA/v2
+# Command line       : vivado.exe -mode batch -source scripts/candidate_board_synthesis.tcl -log evidence/board_transport/candidate_synthesis.log -nojournal
+# Log file           : E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis.log
+# Journal file       : 
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 25769 MB
+# Total Virtual      : 42544 MB
+# Available Virtual  : 18243 MB
+#-----------------------------------------------------------
+source scripts/candidate_board_synthesis.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set out [file join $root evidence board_transport candidate_synthesis]
+# file mkdir $out
+# set_param general.maxThreads 4
+# set candidates [lsort [get_parts -quiet -filter {DEVICE == xc7z020 && PACKAGE == clg400}]]
+# set summary [open [file join $out results.tsv] w]
+# puts $summary "part\tclassification\tclock_wns\tcore_wns\tcore_luts\tcore_ffs"
+# foreach part $candidates {
+#  set dest [file join $out $part];file mkdir $dest
+#  create_project -in_memory -part $part
+#  read_verilog [file join $root vivado clock_candidate.sv]
+#  synth_design -top clock_candidate -part $part -mode out_of_context
+#  create_clock -period 30.303030 -name clk33 [get_ports clk33]
+#  set_input_jitter [get_clocks clk33] 0.100
+#  # 100 ps is an ANALYSIS ASSUMPTION, not an oscillator measurement.
+#  report_clocks -file [file join $dest clocks.rpt]
+#  report_clock_networks -file [file join $dest clock_networks.rpt]
+#  report_timing_summary -file [file join $dest clock_timing.rpt]
+#  report_drc -file [file join $dest clock_drc.rpt]
+#  set cp [get_timing_paths -quiet -max_paths 1];set cw "NO_PATH";if {[llength $cp]} {set cw [get_property SLACK $cp]}
+#  close_project
+#  create_project -in_memory -part $part
+#  foreach dir {rtl rtl/timing rtl/phase rtl/output rtl/control rtl/acquisition rtl/calibration rtl/motion} {
+#   foreach f [glob -nocomplain [file join $root $dir *.sv]] {read_verilog -sv $f}
+#  }
+#  set_property include_dirs [list [file join $root rtl generated]] [current_fileset]
+#  synth_design -top sono_axi_system -part $part -mode out_of_context
+#  create_clock -period 7.575758 -name core132 [get_ports clk]
+#  report_utilization -file [file join $dest utilization.rpt]
+#  report_timing_summary -file [file join $dest timing.rpt]
+#  report_cdc -details -file [file join $dest cdc.rpt]
+#  set tp [get_timing_paths -quiet -max_paths 1];set tw "NO_PATH";if {[llength $tp]} {set tw [get_property SLACK $tp]}
+#  puts $summary "$part\tCANDIDATE_ANALYSIS_ONLY\t$cw\t$tw\t[llength [get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.LUT.*}]]\t[llength [get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.FLOP.*}]]"
+#  flush $summary
+#  close_project
+# }
+Command: synth_design -top clock_candidate -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 55816
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1075.965 ; gain = 532.758
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'clock_candidate' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 2.400000e+01 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 3.030303e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 6.000000e+00 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 12 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 1.000000e-02 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7023] instance 'mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 8 given [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'clock_candidate' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:4]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1195.148 ; gain = 651.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1195.148 ; gain = 651.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1195.148 ; gain = 651.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1195.148 ; gain = 651.941
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1396.766 ; gain = 853.559
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1411.594 ; gain = 868.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1411.594 ; gain = 868.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     3|
+|2     |LUT2        |     1|
+|3     |MMCME2_BASE |     1|
+|4     |FDCE        |     6|
++------+------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    11|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1647.234 ; gain = 1104.027
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1666.227 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1782.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: b08d7245
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1782.195 ; gain = 1240.945
+WARNING: [Vivado 12-2489] -period contains time 30.303030 which will be rounded to 30.303 to ensure it is an integer multiple of 1 picosecond
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk33" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: report_drc -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-1/clock_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2025.2/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-1/clock_drc.rpt.
+report_drc completed successfully
+Command: synth_design -top sono_axi_system -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1782.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sono_axi_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_axi_system.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_native_bridge' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_native_bridge' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'sono_motion_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_motion_system.sv:4]
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'motion_queue' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:4]
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter INTERVAL_CYCLES bound to: 2640000 - type: integer 
+	Parameter ACK_TIMEOUT_CYCLES bound to: 6600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'motion_queue' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'sono_digital_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_digital_system.sv:3]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ad7606b_if' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/ad7606b_if.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adc_serial' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'adc_serial' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'ad7606b_if' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/ad7606b_if.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'calibration_scheduler' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:3]
+	Parameter DEPTH bound to: 1024 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'calibration_scheduler' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'burst_generator' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/burst_generator.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'burst_generator' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/burst_generator.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'phase_bank' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'phase_bank' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'channel_waveform' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'channel_waveform' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'serializer' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:2]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'serializer' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'sono_digital_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_digital_system.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'sono_motion_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_motion_system.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'sono_axi_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_axi_system.sv:4]
+WARNING: [Synth 8-7137] Register queue_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register seq_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register last_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'last_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:58]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-4767] Trying to implement RAM 'queue_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:66]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-13159] Potential Runtime issue for RAM 'queue_reg' since this is dissolved into (8704) registers bits. Consider modifying RTL as per supported RAM templates
+WARNING: [Synth 8-4767] Trying to implement RAM 'seq_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:66]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-7129] Port burst_done in module calibration_scheduler is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1782.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1782.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1782.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_native_bridge'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ad7606b_if'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'serializer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   ISSUE |                               01 |                               01
+                 CAPTURE |                               10 |                               10
+                 RESPOND |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_native_bridge'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   POWER |                              000 |                              000
+                   RESET |                              001 |                              001
+                   SETUP |                              010 |                              010
+                    INIT |                              011 |                              011
+                WAIT_SPI |                              100 |                              100
+                     RUN |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ad7606b_if'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                               00
+                   SHIFT |                             0010 |                               01
+                   LATCH |                             0100 |                               10
+                  FINISH |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'serializer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1782.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   33 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 21    
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 130   
+	   3 Input    8 Bit       Adders := 128   
+	   2 Input    7 Bit       Adders := 33    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	             2176 Bit    Registers := 5     
+	              128 Bit    Registers := 7     
+	               64 Bit    Registers := 6     
+	               32 Bit    Registers := 63    
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 517   
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 67    
++---RAMs : 
+	             128K Bit	(1024 X 128 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input 2176 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 6     
+	   2 Input   32 Bit        Muxes := 32    
+	   9 Input   32 Bit        Muxes := 3     
+	   7 Input   32 Bit        Muxes := 3     
+	   6 Input   32 Bit        Muxes := 1     
+	   6 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   7 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   9 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   5 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 7     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 202   
+	   4 Input    1 Bit        Muxes := 28    
+	   9 Input    1 Bit        Muxes := 10    
+	   7 Input    1 Bit        Muxes := 11    
+	   8 Input    1 Bit        Muxes := 5     
+	   6 Input    1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP bus_wdata1, operation Mode is: A*(B:0x11).
+DSP Report: operator bus_wdata1 is absorbed into DSP bus_wdata1.
+INFO: [Synth 8-3886] merging instance 'bus_address_reg[0]' (FDCE) to 'bus_address_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bus_address_reg[1]' (FDCE) to 'bus_address_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bus_address_reg[7] )
+INFO: [Synth 8-3886] merging instance 'state_reg[24]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[25]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[26]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[27]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[28]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[29]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[30]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[31]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[4]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[5]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[6]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[7]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[8]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[9]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[10]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[11]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[12]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[13]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[14]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[15]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[16]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[17]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[18]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[19]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[20]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[21]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[22]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (bus_write_reg)
+INFO: [Synth 8-5544] ROM "init_command" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "map_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_commit" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_commit" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port burst_done in module calibration_scheduler is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[13]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[13]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[12]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[12]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[11]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[11]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[7]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[7]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[6]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[6]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[5]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[5]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[3]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[3]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[2]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[2]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[1]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[1]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[3]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[3]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[0]' (FDCE) to 'adc/spi_bits_reg[1]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[0]' (FDCE) to 'adc/spi/length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[1]' (FDCE) to 'adc/spi_bits_reg[2]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[1]' (FDCE) to 'adc/spi/length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[2]' (FDCE) to 'adc/spi_command_reg[15]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[2]' (FDCE) to 'adc/spi/tx_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (adc/\spi_command_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (scheduler/\state_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (adc/\spi/tx_reg[15] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][0]' (FDCE) to 'cfg_reg[26][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][0]' (FDCE) to 'cfg_reg[24][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][0]' (FDCE) to 'cfg_reg[24][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[20][0]' (FDCE) to 'cfg_reg[18][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][0]' (FDCE) to 'cfg_reg[18][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][0]' (FDCE) to 'cfg_reg[16][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][0]' (FDCE) to 'cfg_reg[16][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][0] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][1]' (FDCE) to 'cfg_reg[24][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][1]' (FDCE) to 'cfg_reg[24][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[16][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][1] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][2]' (FDCE) to 'cfg_reg[24][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][2]' (FDCE) to 'cfg_reg[24][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][2]' (FDCE) to 'cfg_reg[20][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][2]' (FDCE) to 'cfg_reg[20][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[20][2]' (FDCE) to 'cfg_reg[18][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][2]' (FDCE) to 'cfg_reg[18][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][2]' (FDCE) to 'cfg_reg[16][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][2]' (FDCE) to 'cfg_reg[16][2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][2] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][3]' (FDCE) to 'cfg_reg[24][3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][4] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[18][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[18][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][31] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1782.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+ Sort Area is motion_queue__GB4 bus_wdata1_0 : 0 0 : 186 186 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scheduler   | memory_reg | 1 K x 128(READ_FIRST)  | W |   | 1 K x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 4      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|motion_queue | A*(B:0x11)  | 12     | 6      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 1782.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scheduler   | memory_reg | 1 K x 128(READ_FIRST)  | W |   | 1 K x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 4      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:46 . Memory (MB): peak = 1782.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:50 . Memory (MB): peak = 1836.477 ; gain = 54.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:50 . Memory (MB): peak = 1836.477 ; gain = 54.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 1836.477 ; gain = 54.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 1836.477 ; gain = 54.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 1848.797 ; gain = 66.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 1848.797 ; gain = 66.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|motion_queue | A*B         | 30     | 5      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   827|
+|2     |DSP48E1  |     1|
+|3     |LUT1     |   153|
+|4     |LUT2     |  2802|
+|5     |LUT3     |   409|
+|6     |LUT4     |   696|
+|7     |LUT5     |   810|
+|8     |LUT6     |  4422|
+|9     |MUXF7    |    10|
+|10    |RAMB36E1 |     4|
+|11    |FDCE     |  9091|
+|12    |FDPE     |    66|
+|13    |FDRE     |  8839|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 1848.797 ; gain = 66.602
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 1848.797 ; gain = 66.602
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 1848.797 ; gain = 66.602
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.193 . Memory (MB): peak = 1849.223 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 842 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1971.074 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: cf0b170d
+INFO: [Common 17-83] Releasing license: Synthesis
+192 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:58 . Memory (MB): peak = 1971.074 ; gain = 188.879
+WARNING: [Vivado 12-2489] -period contains time 7.575758 which will be rounded to 7.576 to ensure it is an integer multiple of 1 picosecond
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.074 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-314] The report_cdc command only analyzes and reports clock domain crossing paths where clocks have been defined on both source and destination sides. Ports with no input delay constraint are skipped. Please run check_timing to verify there are no missing clock definitions in your design, nor any unconstrained input port.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.LUT.*}'.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.FLOP.*}'.
+Command: synth_design -top clock_candidate -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'clock_candidate' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 2.400000e+01 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 3.030303e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 6.000000e+00 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 12 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 1.000000e-02 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7023] instance 'mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 8 given [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'clock_candidate' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:4]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     3|
+|2     |LUT2        |     1|
+|3     |MMCME2_BASE |     1|
+|4     |FDCE        |     6|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.074 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1971.074 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1971.074 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: b08d7245
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1971.074 ; gain = 0.000
+WARNING: [Vivado 12-2489] -period contains time 30.303030 which will be rounded to 30.303 to ensure it is an integer multiple of 1 picosecond
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk33" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: report_drc -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-2/clock_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2025.2/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-2/clock_drc.rpt.
+report_drc completed successfully
+Command: synth_design -top sono_axi_system -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sono_axi_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_axi_system.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_native_bridge' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_native_bridge' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'sono_motion_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_motion_system.sv:4]
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'motion_queue' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:4]
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter INTERVAL_CYCLES bound to: 2640000 - type: integer 
+	Parameter ACK_TIMEOUT_CYCLES bound to: 6600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'motion_queue' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'sono_digital_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_digital_system.sv:3]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ad7606b_if' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/ad7606b_if.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adc_serial' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'adc_serial' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'ad7606b_if' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/ad7606b_if.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'calibration_scheduler' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:3]
+	Parameter DEPTH bound to: 1024 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'calibration_scheduler' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'burst_generator' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/burst_generator.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'burst_generator' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/burst_generator.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'phase_bank' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'phase_bank' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'channel_waveform' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'channel_waveform' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'serializer' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:2]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'serializer' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'sono_digital_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_digital_system.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'sono_motion_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_motion_system.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'sono_axi_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_axi_system.sv:4]
+WARNING: [Synth 8-7137] Register queue_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register seq_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register last_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'last_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:58]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-4767] Trying to implement RAM 'queue_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:66]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-13159] Potential Runtime issue for RAM 'queue_reg' since this is dissolved into (8704) registers bits. Consider modifying RTL as per supported RAM templates
+WARNING: [Synth 8-4767] Trying to implement RAM 'seq_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:66]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-7129] Port burst_done in module calibration_scheduler is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_native_bridge'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ad7606b_if'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'serializer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   ISSUE |                               01 |                               01
+                 CAPTURE |                               10 |                               10
+                 RESPOND |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_native_bridge'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   POWER |                              000 |                              000
+                   RESET |                              001 |                              001
+                   SETUP |                              010 |                              010
+                    INIT |                              011 |                              011
+                WAIT_SPI |                              100 |                              100
+                     RUN |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ad7606b_if'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                               00
+                   SHIFT |                             0010 |                               01
+                   LATCH |                             0100 |                               10
+                  FINISH |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'serializer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   33 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 21    
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 130   
+	   3 Input    8 Bit       Adders := 128   
+	   2 Input    7 Bit       Adders := 33    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	             2176 Bit    Registers := 5     
+	              128 Bit    Registers := 7     
+	               64 Bit    Registers := 6     
+	               32 Bit    Registers := 63    
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 517   
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 67    
++---RAMs : 
+	             128K Bit	(1024 X 128 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input 2176 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 6     
+	   2 Input   32 Bit        Muxes := 32    
+	   9 Input   32 Bit        Muxes := 3     
+	   7 Input   32 Bit        Muxes := 3     
+	   6 Input   32 Bit        Muxes := 1     
+	   6 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   7 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   9 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   5 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 7     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 202   
+	   4 Input    1 Bit        Muxes := 28    
+	   9 Input    1 Bit        Muxes := 10    
+	   7 Input    1 Bit        Muxes := 11    
+	   8 Input    1 Bit        Muxes := 5     
+	   6 Input    1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP bus_wdata1, operation Mode is: A*(B:0x11).
+DSP Report: operator bus_wdata1 is absorbed into DSP bus_wdata1.
+INFO: [Synth 8-3886] merging instance 'bus_address_reg[0]' (FDCE) to 'bus_address_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bus_address_reg[1]' (FDCE) to 'bus_address_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bus_address_reg[7] )
+INFO: [Synth 8-3886] merging instance 'state_reg[24]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[25]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[26]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[27]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[28]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[29]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[30]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[31]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[4]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[5]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[6]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[7]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[8]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[9]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[10]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[11]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[12]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[13]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[14]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[15]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[16]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[17]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[18]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[19]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[20]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[21]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[22]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (bus_write_reg)
+INFO: [Synth 8-5544] ROM "init_command" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "map_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_commit" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_commit" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port burst_done in module calibration_scheduler is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[13]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[13]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[12]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[12]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[11]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[11]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[7]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[7]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[6]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[6]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[5]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[5]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[3]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[3]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[2]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[2]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[1]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[1]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[3]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[3]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[0]' (FDCE) to 'adc/spi_bits_reg[1]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[0]' (FDCE) to 'adc/spi/length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[1]' (FDCE) to 'adc/spi_bits_reg[2]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[1]' (FDCE) to 'adc/spi/length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[2]' (FDCE) to 'adc/spi_command_reg[15]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[2]' (FDCE) to 'adc/spi/tx_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (adc/\spi_command_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (scheduler/\state_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (adc/\spi/tx_reg[15] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][0]' (FDCE) to 'cfg_reg[26][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][0]' (FDCE) to 'cfg_reg[24][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][0]' (FDCE) to 'cfg_reg[24][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[20][0]' (FDCE) to 'cfg_reg[18][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][0]' (FDCE) to 'cfg_reg[18][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][0]' (FDCE) to 'cfg_reg[16][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][0]' (FDCE) to 'cfg_reg[16][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][0] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][1]' (FDCE) to 'cfg_reg[24][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][1]' (FDCE) to 'cfg_reg[24][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[16][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][1] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][2]' (FDCE) to 'cfg_reg[24][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][2]' (FDCE) to 'cfg_reg[24][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][2]' (FDCE) to 'cfg_reg[20][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][2]' (FDCE) to 'cfg_reg[20][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[20][2]' (FDCE) to 'cfg_reg[18][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][2]' (FDCE) to 'cfg_reg[18][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][2]' (FDCE) to 'cfg_reg[16][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][2]' (FDCE) to 'cfg_reg[16][2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][2] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][3]' (FDCE) to 'cfg_reg[24][3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][4] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[18][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[18][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][31] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+ Sort Area is motion_queue__GB4 bus_wdata1_0 : 0 0 : 186 186 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scheduler   | memory_reg | 1 K x 128(READ_FIRST)  | W |   | 1 K x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 4      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|motion_queue | A*(B:0x11)  | 12     | 6      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scheduler   | memory_reg | 1 K x 128(READ_FIRST)  | W |   | 1 K x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 4      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:50 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|motion_queue | A*B         | 30     | 5      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   827|
+|2     |DSP48E1  |     1|
+|3     |LUT1     |   153|
+|4     |LUT2     |  2802|
+|5     |LUT3     |   409|
+|6     |LUT4     |   696|
+|7     |LUT5     |   810|
+|8     |LUT6     |  4422|
+|9     |MUXF7    |    10|
+|10    |RAMB36E1 |     4|
+|11    |FDCE     |  9091|
+|12    |FDPE     |    66|
+|13    |FDRE     |  8839|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 1971.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 1971.074 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 1971.074 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.195 . Memory (MB): peak = 1971.074 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 842 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2037.961 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: cf0b170d
+INFO: [Common 17-83] Releasing license: Synthesis
+192 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:57 . Memory (MB): peak = 2037.961 ; gain = 66.887
+WARNING: [Vivado 12-2489] -period contains time 7.575758 which will be rounded to 7.576 to ensure it is an integer multiple of 1 picosecond
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2037.961 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-314] The report_cdc command only analyzes and reports clock domain crossing paths where clocks have been defined on both source and destination sides. Ports with no input delay constraint are skipped. Please run check_timing to verify there are no missing clock definitions in your design, nor any unconstrained input port.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.LUT.*}'.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.FLOP.*}'.
+Command: synth_design -top clock_candidate -part xc7z020clg400-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'clock_candidate' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 2.400000e+01 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 3.030303e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 6.000000e+00 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 12 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 1.000000e-02 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'mmcm' [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+WARNING: [Synth 8-7023] instance 'mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 8 given [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/Vivado/2025.2/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'clock_candidate' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/vivado/clock_candidate.sv:4]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-3
+INFO: [Device 21-403] Loading part xc7z020clg400-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     3|
+|2     |LUT2        |     1|
+|3     |MMCME2_BASE |     1|
+|4     |FDCE        |     6|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2037.961 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2037.961 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2037.961 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete | Checksum: b08d7245
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2037.961 ; gain = 0.000
+WARNING: [Vivado 12-2489] -period contains time 30.303030 which will be rounded to 30.303 to ensure it is an integer multiple of 1 picosecond
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk33" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: report_drc -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-3/clock_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2025.2/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_transport/candidate_synthesis/xc7z020clg400-3/clock_drc.rpt.
+report_drc completed successfully
+Command: synth_design -top sono_axi_system -part xc7z020clg400-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sono_axi_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_axi_system.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_native_bridge' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_native_bridge' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'sono_motion_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_motion_system.sv:4]
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'motion_queue' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:4]
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter INTERVAL_CYCLES bound to: 2640000 - type: integer 
+	Parameter ACK_TIMEOUT_CYCLES bound to: 6600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'motion_queue' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'sono_digital_system' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_digital_system.sv:3]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ad7606b_if' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/ad7606b_if.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adc_serial' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'adc_serial' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'ad7606b_if' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/acquisition/ad7606b_if.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'calibration_scheduler' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:3]
+	Parameter DEPTH bound to: 1024 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'calibration_scheduler' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/calibration_scheduler.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'burst_generator' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/burst_generator.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'burst_generator' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/calibration/burst_generator.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'phase_bank' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'phase_bank' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'channel_waveform' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'channel_waveform' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'serializer' [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:2]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'serializer' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/output/serializer.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'sono_digital_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_digital_system.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'sono_motion_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_motion_system.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'sono_axi_system' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/sono_axi_system.sv:4]
+WARNING: [Synth 8-7137] Register queue_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register seq_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register last_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'last_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:58]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-4767] Trying to implement RAM 'queue_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:66]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-13159] Potential Runtime issue for RAM 'queue_reg' since this is dissolved into (8704) registers bits. Consider modifying RTL as per supported RAM templates
+WARNING: [Synth 8-4767] Trying to implement RAM 'seq_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD-SonoField-FPGA/v2/rtl/motion/motion_queue.sv:66]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-7129] Port burst_done in module calibration_scheduler is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_native_bridge'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ad7606b_if'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'serializer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   ISSUE |                               01 |                               01
+                 CAPTURE |                               10 |                               10
+                 RESPOND |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_native_bridge'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   POWER |                              000 |                              000
+                   RESET |                              001 |                              001
+                   SETUP |                              010 |                              010
+                    INIT |                              011 |                              011
+                WAIT_SPI |                              100 |                              100
+                     RUN |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ad7606b_if'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                               00
+                   SHIFT |                             0010 |                               01
+                   LATCH |                             0100 |                               10
+                  FINISH |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'serializer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   33 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 21    
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 130   
+	   3 Input    8 Bit       Adders := 128   
+	   2 Input    7 Bit       Adders := 33    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	             2176 Bit    Registers := 5     
+	              128 Bit    Registers := 7     
+	               64 Bit    Registers := 6     
+	               32 Bit    Registers := 63    
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 517   
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 67    
++---RAMs : 
+	             128K Bit	(1024 X 128 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input 2176 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 6     
+	   2 Input   32 Bit        Muxes := 32    
+	   9 Input   32 Bit        Muxes := 3     
+	   7 Input   32 Bit        Muxes := 3     
+	   6 Input   32 Bit        Muxes := 1     
+	   6 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   7 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   9 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   5 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 7     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 202   
+	   4 Input    1 Bit        Muxes := 28    
+	   9 Input    1 Bit        Muxes := 10    
+	   7 Input    1 Bit        Muxes := 11    
+	   8 Input    1 Bit        Muxes := 5     
+	   6 Input    1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP bus_wdata1, operation Mode is: A*(B:0x11).
+DSP Report: operator bus_wdata1 is absorbed into DSP bus_wdata1.
+INFO: [Synth 8-3886] merging instance 'bus_address_reg[0]' (FDCE) to 'bus_address_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bus_address_reg[1]' (FDCE) to 'bus_address_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bus_address_reg[7] )
+INFO: [Synth 8-3886] merging instance 'state_reg[24]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[25]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[26]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[27]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[28]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[29]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[30]' (FDCE) to 'state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'state_reg[31]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[4]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[5]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[6]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[7]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[8]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[9]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[10]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[11]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[12]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[13]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[14]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[15]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[16]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[17]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[18]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[19]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[20]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[21]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'state_reg[22]' (FDCE) to 'state_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (bus_write_reg)
+INFO: [Synth 8-5544] ROM "init_command" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "map_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_commit" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "map_commit" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port burst_done in module calibration_scheduler is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[13]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[13]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[12]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[12]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[11]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[11]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[7]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[7]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[6]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[6]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[5]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[5]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[3]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[3]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[2]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[2]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_command_reg[1]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/tx_reg[1]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[3]' (FDCE) to 'adc/spi_bits_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[3]' (FDCE) to 'adc/spi/length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[0]' (FDCE) to 'adc/spi_bits_reg[1]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[0]' (FDCE) to 'adc/spi/length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[1]' (FDCE) to 'adc/spi_bits_reg[2]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[1]' (FDCE) to 'adc/spi/length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'adc/spi_bits_reg[2]' (FDCE) to 'adc/spi_command_reg[15]'
+INFO: [Synth 8-3886] merging instance 'adc/spi/length_reg[2]' (FDCE) to 'adc/spi/tx_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (adc/\spi_command_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (scheduler/\state_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (adc/\spi/tx_reg[15] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][0]' (FDCE) to 'cfg_reg[26][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][0]' (FDCE) to 'cfg_reg[24][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][0]' (FDCE) to 'cfg_reg[24][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][0]' (FDCE) to 'cfg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[20][0]' (FDCE) to 'cfg_reg[18][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][0]' (FDCE) to 'cfg_reg[18][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][0]' (FDCE) to 'cfg_reg[16][0]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][0]' (FDCE) to 'cfg_reg[16][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][0] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][1]' (FDCE) to 'cfg_reg[26][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][1]' (FDCE) to 'cfg_reg[24][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][1]' (FDCE) to 'cfg_reg[24][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[16][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][1]' (FDCE) to 'cfg_reg[20][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][1] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][2]' (FDCE) to 'cfg_reg[26][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][2]' (FDCE) to 'cfg_reg[24][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[25][2]' (FDCE) to 'cfg_reg[24][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[24][2]' (FDCE) to 'cfg_reg[20][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[23][2]' (FDCE) to 'cfg_reg[20][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[20][2]' (FDCE) to 'cfg_reg[18][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[19][2]' (FDCE) to 'cfg_reg[18][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[18][2]' (FDCE) to 'cfg_reg[16][2]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[17][2]' (FDCE) to 'cfg_reg[16][2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][2] )
+INFO: [Synth 8-3886] merging instance 'cfg_reg[15][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[2][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[1][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[0][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[27][3]' (FDCE) to 'cfg_reg[26][3]'
+INFO: [Synth 8-3886] merging instance 'cfg_reg[26][3]' (FDCE) to 'cfg_reg[24][3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][4] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[18][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[18][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[16][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cfg_reg[20][31] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+ Sort Area is motion_queue__GB4 bus_wdata1_0 : 0 0 : 186 186 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scheduler   | memory_reg | 1 K x 128(READ_FIRST)  | W |   | 1 K x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 4      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|motion_queue | A*(B:0x11)  | 12     | 6      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:37 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scheduler   | memory_reg | 1 K x 128(READ_FIRST)  | W |   | 1 K x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 4      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance digitali_7/scheduler/memory_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:47 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance native_system/digital/scheduler/memory_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|motion_queue | A*B         | 30     | 5      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   827|
+|2     |DSP48E1  |     1|
+|3     |LUT1     |   153|
+|4     |LUT2     |  2802|
+|5     |LUT3     |   409|
+|6     |LUT4     |   696|
+|7     |LUT5     |   810|
+|8     |LUT6     |  4422|
+|9     |MUXF7    |    10|
+|10    |RAMB36E1 |     4|
+|11    |FDCE     |  9091|
+|12    |FDPE     |    66|
+|13    |FDRE     |  8839|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 2095.086 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 2095.086 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 2095.086 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.196 . Memory (MB): peak = 2095.086 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 842 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2132.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: cf0b170d
+INFO: [Common 17-83] Releasing license: Synthesis
+192 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.984 ; gain = 37.898
+WARNING: [Vivado 12-2489] -period contains time 7.575758 which will be rounded to 7.576 to ensure it is an integer multiple of 1 picosecond
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2132.984 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-314] The report_cdc command only analyzes and reports clock domain crossing paths where clocks have been defined on both source and destination sides. Ports with no input delay constraint are skipped. Please run check_timing to verify there are no missing clock definitions in your design, nor any unconstrained input port.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.LUT.*}'.
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_TYPE =~ CLB.FLOP.*}'.
+# close $summary
+# exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 15:04:55 2026...

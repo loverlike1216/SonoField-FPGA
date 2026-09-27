@@ -1,0 +1,33 @@
+{
+  "classification": "CANDIDATE_ANALYSIS_ONLY",
+  "input": {
+    "pin": "N18",
+    "frequency_hz": 33000000,
+    "source": "Zynq7020/constrain/hardware.const user precedence",
+    "pin_function": "IO_L13P_T2_MRCC_34",
+    "measured": false
+  },
+  "mmcm": {
+    "multiply": 24,
+    "divide": 1,
+    "vco_hz": 792000000,
+    "output_divides": [
+      6,
+      12
+    ],
+    "outputs_hz": [
+      132000000,
+      66000000
+    ],
+    "sta_input_jitter_ns": 0.1,
+    "simulation_ref_jitter_fraction": 0.01
+  },
+  "serializer": "Existing serializer runs in core clock domain and toggles SCLK at 66 MHz; generated clk66 is a diagnostic candidate, not wired into production RTL",
+  "adc_sclk_hz": 33000000,
+  "adc_timing": "External IO delays/board waveform not verified",
+  "core_timing": "FAIL for all three candidates",
+  "physical_clock_verified": false,
+  "physical_timing_closed": false,
+  "reset": "Candidate asynchronous assertion on reset or loss of LOCKED; three-cycle synchronous release per clock",
+  "cdc": "OOC core one-clock report only; PS FCLK/AXI bridge domain must be reviewed before physical integration"
+}

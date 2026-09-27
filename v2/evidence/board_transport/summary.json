@@ -1,0 +1,52 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "version": "v2",
+  "branch": "main",
+  "stage": "BOARD_TRANSPORT_AND_PS_PL_INTEGRATION_PREFLIGHT",
+  "starting_commit": "d25e1d857334c061493459ce49a24debba222432",
+  "status": "OFFLINE_TESTS_PASS_REPRO_PENDING",
+  "python_tests": 112,
+  "protocol_tests": 15,
+  "axi_checks": 24,
+  "axi_wrapper": "PASS",
+  "icarus": "PASS",
+  "xsim": "PASS",
+  "motion_regression": "PASS",
+  "motion_frames": 3696,
+  "determinism": {
+    "status": "PASS",
+    "runs": 4,
+    "independent_simulators": [
+      "Icarus",
+      "Vivado 2025.2 XSim"
+    ],
+    "comparison": "exact canonical JSON and ACK hashes; wall timestamps excluded",
+    "hashes": [
+      [
+        "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+        "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+        "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917",
+        "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1"
+      ],
+      [
+        "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+        "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+        "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694",
+        "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef"
+      ]
+    ]
+  },
+  "self_calibration": "PASS",
+  "standalone": "PENDING_CURRENT_SOURCE_CHECKPOINT",
+  "candidate_synthesis": "SYNTHESIZED; CANDIDATE_ANALYSIS_ONLY",
+  "candidate_timing": "FAIL",
+  "real_transport": "BLOCKED_BY_BOARD_FACT",
+  "hardware_programmed": false,
+  "physical_gpio_driven": false,
+  "PCB_changed": false,
+  "frozen_v1": "PASS",
+  "independent_review": "PENDING",
+  "work_status": "OFF",
+  "release": "NOT_RELEASED",
+  "deployment": "NOT_DEPLOYED"
+}

@@ -1,5 +1,19 @@
 # Changelog
 
+## v2 — board transport and PS/PL offline preflight (2026-09-27)
+
+- Persisted photo-confirmed XC7Z020/CLG400 while keeping speed/temperature/full ordering code unknown.
+- Audited 101 primary constraints and 346 total claims against Vivado CLG400 balls and AMD UG865;
+  retained connector conflicts and found CEC=J5 is PS DDR. No production XDC or PCB change.
+- Added gated SerialBoardTransport, generated binary protocol constants, host-tested C PS service,
+  and AXI4-Lite/native bridge with real-system tests under Icarus and Vivado 2025.2 XSim.
+- Python suite:112 tests passed. Live COM4 remains unopened and map/motion capability stays disabled.
+- Fixed calibration buffer RAM inference with an equivalent synchronous write process. All three
+  CLG400 candidates synthesize to 8681 LUT,17996 registers,4 BRAM; 132 MHz core timing fails
+  (-8.128/-4.995/-3.609 ns). P-20260927-001 requests a timing-closure decision.
+- Evidence and final regression/reproduction status: v2/evidence/board_transport/RESULT.md.
+  No download, external output, release, deployment or v3; independent review remains pending.
+
 ## v2 — board-only identification (2026-09-27)
 
 - Windows/D2XX confirmed FT2232H 0403:6010 with interfaces A/B and COM4 on B.
