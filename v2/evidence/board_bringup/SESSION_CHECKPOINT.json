@@ -1,0 +1,34 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace": "E:/Codex_project/AMD-SonoField-FPGA",
+  "branch": "main",
+  "active_version": "v2",
+  "current_stage": "BOARD_ONLY_IDENTIFICATION_AND_TRANSPORT_PREFLIGHT",
+  "starting_commit": "1784d7bc0481c3dd8b9b4b639918d43667cb1749",
+  "verified_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
+  "verified_remote_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
+  "codex": "CHECKPOINT_COMPLETE; hardware operations STOPPED",
+  "work": "OFF",
+  "independent_acceptance": "PENDING",
+  "blocking": [
+    "B01 full package/speed unknown",
+    "B03 VCCO/connectors/PS UART routing unknown",
+    "Remaining hardware gates unchanged"
+  ],
+  "next_owner": "Chat/user review",
+  "next_action": "Confirm physical part/PS wiring before BoardTransport and PS-PL integration",
+  "working_tree_exception": "Preexisting untracked schematic backup preserved",
+  "privacy": "Raw device serial/IP/MAC local-only; filtered evidence pushed",
+  "not_executed": [
+    "driver changes",
+    "boot/jumper changes",
+    "bitstream generation",
+    "program download",
+    "system reset",
+    "unknown GPIO",
+    "external PCB operations",
+    "synthesis",
+    "functional transport"
+  ]
+}

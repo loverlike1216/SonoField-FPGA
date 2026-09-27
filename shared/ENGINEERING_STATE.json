@@ -19,7 +19,7 @@
     "README.md",
     "v2/README.md"
   ],
-  "evidence": "evidence/engineering/motion/validation/summary.json",
+  "evidence": "v2/evidence/board_bringup/summary.json",
   "icarus": "PASS",
   "vivado_xsim": "PASS",
   "determinism": "PASS: three Icarus plus one XSim, 3696 frames",
@@ -28,7 +28,7 @@
   "independent_review": "PENDING",
   "final_source_regression": "evidence/engineering/motion/regression/summary.json",
   "presentation": "evidence/engineering/motion/presentation/gui_simulation.png",
-  "last_verified_engineering_commit": "995e643d5056d7229ff78fa3ef40e39affeb0093",
+  "last_verified_engineering_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
   "source_reproduction_evidence": "evidence/engineering/motion/standalone/summary.json",
   "execution_window": "CODEX_CHECKPOINT",
   "next_owner": "Chat/user review",
@@ -37,5 +37,9 @@
   "board_jtag": "IDENTIFIED_TWO_SCANS",
   "board_transport": "NOT_VERIFIED",
   "board_part_gate_tests": 7,
-  "board_part_gate_result": "PASS"
+  "board_part_gate_result": "PASS",
+  "last_verified_engineering_scope": "Board identification + part gate only; prior motion regression commit retained separately",
+  "board_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
+  "previous_motion_evidence": "evidence/engineering/motion/validation/summary.json",
+  "board_vivado_gate_tests": 4
 }

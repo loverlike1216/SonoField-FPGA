@@ -93,7 +93,7 @@
   "whole_platform_result": "REVISE",
   "bootstrap_blocking_issues": [],
   "bootstrap_critical_issues": [],
-  "last_remote_verified_source_commit": "995e643d5056d7229ff78fa3ef40e39affeb0093",
+  "last_remote_verified_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
   "hardware_status": {
     "TX_RX": "NOT_RUN",
     "ADC_capture": "NOT_RUN",
@@ -146,7 +146,7 @@
   "motion_hardware_verified": false,
   "engineering_state": "shared/ENGINEERING_STATE.json",
   "governance_revision": "2026-09-27-r1",
-  "last_verified_engineering_commit": "995e643d5056d7229ff78fa3ef40e39affeb0093",
+  "last_verified_engineering_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
   "motion_reproducibility": "PASS",
   "motion_reproducibility_evidence": "evidence/engineering/motion/standalone/summary.json",
   "execution_window": "CODEX_CHECKPOINT",
@@ -155,5 +155,7 @@
   "board_identification": "JTAG_IDENTIFIED",
   "detected_silicon": "xc7z020",
   "detected_jtag_idcode": "0x23727093",
-  "board_only_self_check": "ACCEPT WITH LIMITATIONS"
+  "board_only_self_check": "ACCEPT WITH LIMITATIONS",
+  "last_verified_engineering_scope": "Board identification + part gate only; prior motion regression commit retained separately",
+  "board_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba"
 }
