@@ -1,0 +1,9 @@
+{
+  "status": "FAIL",
+  "errors": [
+    "Unexpected inherited functional/evidence change: v2/config/board_facts.json",
+    "Stale model/control evidence config/board_facts.json"
+  ],
+  "cause": "First update mixed new live identity into hash-locked historical model input.",
+  "fix": "Restore historical input unchanged and add board_identity.json for new observed metadata. No tests/thresholds modified."
+}

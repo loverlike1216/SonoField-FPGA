@@ -1,5 +1,14 @@
 # Changelog
 
+## v2 — board-only identification (2026-09-27)
+
+- Windows/D2XX confirmed FT2232H 0403:6010 with interfaces A/B and COM4 on B.
+- Vivado 2025.2 read ARM DAP 0x4BA00477 and xc7z020 0x23727093 twice.
+- Archived filtered evidence and local-only raw device inventory; no programming or driver changes.
+- Added exact-part/silicon validation before target project creation and seven offline gate tests.
+- B01 remains blocked on package/speed; B03 remains blocked on VCCO/connectors/PS wiring.
+  No PCB/RTL or frozen v1 changes; BoardTransport hardware execution remains disabled.
+
 ## v2 — interactive motion digital stage (2026-09-27)
 
 - Added a local simulation UI, bounded quintic/planar trajectory planning, calibrated

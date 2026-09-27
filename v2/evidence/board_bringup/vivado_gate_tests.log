@@ -1,0 +1,123 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Sep 27 14:13:28 2026
+# Process ID         : 48752
+# Current directory  : E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_bringup
+# Command line       : vivado.exe -mode batch -source test_gate_vivado.tcl -log vivado_gate_tests.log -journal local_raw/vivado_gate_tests.jou
+# Log file           : E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_bringup/vivado_gate_tests.log
+# Journal file       : E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/board_bringup\local_raw/vivado_gate_tests.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 25769 MB
+# Total Virtual      : 42544 MB
+# Available Virtual  : 19483 MB
+#-----------------------------------------------------------
+source test_gate_vivado.tcl
+# set here [file dirname [file normalize [info script]]]
+# set script [file normalize [file join $here ../../scripts/create_project.tcl]]
+# file mkdir [file join $here local_raw]
+# foreach {candidate expected} {
+#     xc7z020 {full documented}
+#     xc7z010clg400-1 {full documented}
+#     xc7z020clg400-* {full documented}
+#     xc7z020unknown-1 {Unknown or non-exact}
+# } {
+#     set config [file join $here local_raw invalid_test_fixture.tcl]
+#     set f [open $config w]
+#     puts $f [list set PART $candidate]
+#     puts $f {set PART_SOURCE {negative test fixture, not board facts}}
+#     puts $f {set CORE_CLOCK_HZ 132000000}
+#     puts $f {set CLOCK_SOURCE {negative test fixture}}
+#     close $f
+#     set argv [list $config]
+#     set code [catch {source $script} result]
+#     if {$code != 1 || [string first $expected $result] < 0} {
+#         error "FAIL: $candidate unexpected outcome: $result"
+#     }
+#     puts "PASS REJECT $candidate : $result"
+# }
+## if {[llength $argv] != 1 || ![file exists [lindex $argv 0]]} {
+##     error "BLOCKING: supply verified board Tcl with PART, PART_SOURCE, CORE_CLOCK_HZ and CLOCK_SOURCE; no guessed defaults"
+## }
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## source [lindex $argv 0]
+### set PART xc7z020
+### set PART_SOURCE {negative test fixture, not board facts}
+### set CORE_CLOCK_HZ 132000000
+### set CLOCK_SOURCE {negative test fixture}
+## foreach required {PART PART_SOURCE CORE_CLOCK_HZ CLOCK_SOURCE} {
+##     if {![info exists $required] || [set $required] eq ""} { error "BLOCKING: missing $required" }
+## }
+## if {![string match "*2025.2*" [version -short]]} {error "Authoritative tool must be Vivado 2025.2"}
+## if {![regexp {^xc7z020[a-z0-9]+-[123][a-z0-9]*$} $PART]} {
+##     error "BLOCKING: full documented xc7z020 package/speed part required; JTAG family alone is insufficient"
+## }
+PASS REJECT xc7z020 : BLOCKING: full documented xc7z020 package/speed part required; JTAG family alone is insufficient
+## if {[llength $argv] != 1 || ![file exists [lindex $argv 0]]} {
+##     error "BLOCKING: supply verified board Tcl with PART, PART_SOURCE, CORE_CLOCK_HZ and CLOCK_SOURCE; no guessed defaults"
+## }
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## source [lindex $argv 0]
+### set PART xc7z010clg400-1
+### set PART_SOURCE {negative test fixture, not board facts}
+### set CORE_CLOCK_HZ 132000000
+### set CLOCK_SOURCE {negative test fixture}
+## foreach required {PART PART_SOURCE CORE_CLOCK_HZ CLOCK_SOURCE} {
+##     if {![info exists $required] || [set $required] eq ""} { error "BLOCKING: missing $required" }
+## }
+## if {![string match "*2025.2*" [version -short]]} {error "Authoritative tool must be Vivado 2025.2"}
+## if {![regexp {^xc7z020[a-z0-9]+-[123][a-z0-9]*$} $PART]} {
+##     error "BLOCKING: full documented xc7z020 package/speed part required; JTAG family alone is insufficient"
+## }
+PASS REJECT xc7z010clg400-1 : BLOCKING: full documented xc7z020 package/speed part required; JTAG family alone is insufficient
+## if {[llength $argv] != 1 || ![file exists [lindex $argv 0]]} {
+##     error "BLOCKING: supply verified board Tcl with PART, PART_SOURCE, CORE_CLOCK_HZ and CLOCK_SOURCE; no guessed defaults"
+## }
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## source [lindex $argv 0]
+### set PART xc7z020clg400-*
+### set PART_SOURCE {negative test fixture, not board facts}
+### set CORE_CLOCK_HZ 132000000
+### set CLOCK_SOURCE {negative test fixture}
+## foreach required {PART PART_SOURCE CORE_CLOCK_HZ CLOCK_SOURCE} {
+##     if {![info exists $required] || [set $required] eq ""} { error "BLOCKING: missing $required" }
+## }
+## if {![string match "*2025.2*" [version -short]]} {error "Authoritative tool must be Vivado 2025.2"}
+## if {![regexp {^xc7z020[a-z0-9]+-[123][a-z0-9]*$} $PART]} {
+##     error "BLOCKING: full documented xc7z020 package/speed part required; JTAG family alone is insufficient"
+## }
+PASS REJECT xc7z020clg400-* : BLOCKING: full documented xc7z020 package/speed part required; JTAG family alone is insufficient
+## if {[llength $argv] != 1 || ![file exists [lindex $argv 0]]} {
+##     error "BLOCKING: supply verified board Tcl with PART, PART_SOURCE, CORE_CLOCK_HZ and CLOCK_SOURCE; no guessed defaults"
+## }
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## source [lindex $argv 0]
+### set PART xc7z020unknown-1
+### set PART_SOURCE {negative test fixture, not board facts}
+### set CORE_CLOCK_HZ 132000000
+### set CLOCK_SOURCE {negative test fixture}
+## foreach required {PART PART_SOURCE CORE_CLOCK_HZ CLOCK_SOURCE} {
+##     if {![info exists $required] || [set $required] eq ""} { error "BLOCKING: missing $required" }
+## }
+## if {![string match "*2025.2*" [version -short]]} {error "Authoritative tool must be Vivado 2025.2"}
+## if {![regexp {^xc7z020[a-z0-9]+-[123][a-z0-9]*$} $PART]} {
+##     error "BLOCKING: full documented xc7z020 package/speed part required; JTAG family alone is insufficient"
+## }
+## set resolved_parts [get_parts -quiet $PART]
+## if {[llength $resolved_parts] != 1 || [lindex $resolved_parts 0] ne $PART} {
+##     error "Unknown or non-exact documented FPGA part"
+## }
+PASS REJECT xc7z020unknown-1 : Unknown or non-exact documented FPGA part
+# puts "PASS VIVADO_BOARD_GATE 4 cases; no project created"
+PASS VIVADO_BOARD_GATE 4 cases; no project created
+# exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 14:13:31 2026...

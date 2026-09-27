@@ -1,0 +1,64 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "version": "v2",
+  "stage": "BOARD_ONLY_IDENTIFICATION_AND_TRANSPORT_PREFLIGHT",
+  "evidence_date": "2026-09-27",
+  "base_commit": "1784d7bc0481c3dd8b9b4b639918d43667cb1749",
+  "usb_device_records": 24,
+  "ftdi": {
+    "vid": "0403",
+    "pid": "6010",
+    "interfaces": [
+      "MI_00/A",
+      "MI_01/B"
+    ],
+    "chip": "FT2232H",
+    "confirmation": "D2XX type=6; FTDI Programmer Guide 1.6 Appendix A",
+    "driver": "2.12.28.0"
+  },
+  "jtag": {
+    "status": "IDENTIFIED",
+    "tool": "Vivado 2025.2",
+    "repeated_scans": 2,
+    "devices": [
+      {
+        "name": "arm_dap_0",
+        "idcode": "0x4BA00477"
+      },
+      {
+        "name": "xc7z020_1",
+        "idcode": "0x23727093"
+      }
+    ],
+    "family": "Zynq-7000",
+    "silicon": "xc7z020",
+    "exact_part": null,
+    "package": null,
+    "speed_grade": null
+  },
+  "uart": {
+    "port": "COM4",
+    "interface": "B / MI_01",
+    "opened": false,
+    "ps_wiring": "NOT_VERIFIED",
+    "data_exchange": "NOT_RUN"
+  },
+  "ethernet": {
+    "pc_controller": "Realtek PCIe GbE Family Controller",
+    "pc_link": "Disconnected",
+    "board_usb_network_interface": "NOT_OBSERVED",
+    "board_phy_connector": "NOT_VERIFIED"
+  },
+  "b01": "PARTIALLY_RESOLVED_STILL_BLOCKING: silicon confirmed; package/speed/full ordering code missing",
+  "b03": "OPEN: VCCO/connector errors/IO standards/PS UART wiring remain unverified",
+  "recommended_transport": "Candidate: FTDI B UART for initial PS control, A JTAG for debug; no runtime link verified",
+  "alternative": {
+    "openfpgaloader": "0.13.1 --scan-usb error -5; no detect/program command executed",
+    "openocd": "NOT_FOUND in PATH or Robei installation; no install/driver change attempted"
+  },
+  "programmed": false,
+  "driver_modified": false,
+  "external_pcb_touched": false,
+  "target_synthesis": "BLOCKED_BY_BOARD_FACT",
+  "system_hardware_verified": false
+}

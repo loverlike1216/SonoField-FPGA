@@ -1,0 +1,27 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "version": "v2",
+  "observed_identity": {
+    "silicon": "xc7z020",
+    "jtag_idcode": "0x23727093",
+    "arm_dap_idcode": "0x4BA00477",
+    "tool": "Vivado 2025.2",
+    "evidence": "evidence/board_bringup/summary.json",
+    "scope": "Silicon only; package, speed grade and physical clock unknown"
+  },
+  "observed_transport": {
+    "bridge": "FT2232H",
+    "vid": "0403",
+    "pid": "6010",
+    "jtag_interface": "A / MI_00",
+    "uart_candidate": "B / MI_01 / COM4",
+    "uart_data_verified": false,
+    "ethernet_verified": false
+  },
+  "exact_part": null,
+  "package": null,
+  "speed_grade": null,
+  "pins_verified": false,
+  "historical_documented_facts": "board_facts.json",
+  "status": "IDENTIFICATION_ONLY"
+}

@@ -1,14 +1,14 @@
 {
   "project_id": "SONOFIELD_FPGA",
   "active_version": "v2",
-  "current_stage": "INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL",
-  "status": "SIMULATION_VALIDATED",
-  "starting_commit": "78f2be1678fbbb65e039bc9054ee0fef9653f647",
+  "current_stage": "BOARD_ONLY_IDENTIFICATION_AND_TRANSPORT_PREFLIGHT",
+  "status": "IDENTIFICATION_COMPLETE_WITH_LIMITATIONS",
+  "starting_commit": "1784d7bc0481c3dd8b9b4b639918d43667cb1749",
   "motion_python_tests": 90,
   "motion_python_result": "PASS",
   "motion_rtl_smoke": "PASS",
   "motion_full_gate": "PASS",
-  "hardware": "NOT_VERIFIED",
+  "hardware": "IDENTIFICATION_ONLY; functional hardware NOT_VERIFIED",
   "work_status": "OFF",
   "documentation_update_required": [
     "shared/CURRENT_PLAN.md",
@@ -31,6 +31,11 @@
   "last_verified_engineering_commit": "995e643d5056d7229ff78fa3ef40e39affeb0093",
   "source_reproduction_evidence": "evidence/engineering/motion/standalone/summary.json",
   "execution_window": "CODEX_CHECKPOINT",
-  "next_owner": "Chat/user independent review",
-  "next_action": "Review source checkpoint and archived digital evidence; hardware remains gated"
+  "next_owner": "Chat/user review",
+  "next_action": "Resolve B01/B03 physical facts; design BoardTransport/PS-PL integration before separately authorized download",
+  "board_identification_evidence": "v2/evidence/board_bringup/summary.json",
+  "board_jtag": "IDENTIFIED_TWO_SCANS",
+  "board_transport": "NOT_VERIFIED",
+  "board_part_gate_tests": 7,
+  "board_part_gate_result": "PASS"
 }

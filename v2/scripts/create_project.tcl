@@ -9,7 +9,16 @@ foreach required {PART PART_SOURCE CORE_CLOCK_HZ CLOCK_SOURCE} {
     if {![info exists $required] || [set $required] eq ""} { error "BLOCKING: missing $required" }
 }
 if {![string match "*2025.2*" [version -short]]} {error "Authoritative tool must be Vivado 2025.2"}
-if {[llength [get_parts -quiet $PART]] != 1} {error "Unknown documented FPGA part"}
+# Board-only JTAG evidence (2026-09-27): xc7z020, IDCODE 0x23727093.
+# JTAG does NOT establish package or speed. Reject family-only names, wildcards,
+# and a configuration for different silicon before any project is created.
+if {![regexp {^xc7z020[a-z0-9]+-[123][a-z0-9]*$} $PART]} {
+    error "BLOCKING: full documented xc7z020 package/speed part required; JTAG family alone is insufficient"
+}
+set resolved_parts [get_parts -quiet $PART]
+if {[llength $resolved_parts] != 1 || [lindex $resolved_parts 0] ne $PART} {
+    error "Unknown or non-exact documented FPGA part"
+}
 create_project sonofield_v2 [file join $root build vivado] -part $PART -force
 foreach dir {rtl rtl/timing rtl/phase rtl/output rtl/control rtl/acquisition rtl/calibration} {
     foreach source_file [glob -nocomplain [file join $root $dir *.sv]] {add_files $source_file}
