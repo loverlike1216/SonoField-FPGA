@@ -1,9 +1,11 @@
 {
   "status": "PASS",
-  "files_scanned": 135,
+  "files_scanned": 257,
   "findings": [],
-  "limitations": "Pattern scan plus scoped review, not proof of absence of every possible secret",
-  "privacy": "No raw device instance IDs/serials, original chip photo or downloaded PDFs staged; existing public repository/workspace identity retained",
+  "scope": "All staged differences from starting commit d25e1d8, including source commit and final checkpoint",
+  "privacy": "Original photograph/PDF/device raw identifiers remain local-only. Standalone screenshot visually checked: application simulation window only.",
   "v1_or_PCB_changes": [],
-  "interaction_memory_written": false
+  "interaction_memory_written": false,
+  "raw_report_whitespace": "Preserved; source-only git diff --check passes",
+  "limitations": "Pattern scan and scoped review cannot prove absence of every possible secret"
 }

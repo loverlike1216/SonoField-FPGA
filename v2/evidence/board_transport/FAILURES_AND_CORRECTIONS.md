@@ -8,3 +8,5 @@
 - Raw candidate_synthesis/results.tsv incorrectly reports zero LUT/FF counts because PRIMITIVE_TYPE filters matched no cells. Actual utilization.rpt reports 8681 LUTs and 17996 registers for all candidates. summary.json parses those original reports. Tcl now uses REF_NAME patterns for future primitive counts; it was not rerun merely to hide the first reporting defect. Slice-utilization and primitive counts may differ after LUT combining.
 - Previous regression/ execution was interrupted before summary.json; it is incomplete, not PASS. Final run is regression_complete/. Raw generated files are retained locally; curated logs/hashes identify final evidence.
 - Candidate core setup timing remains FAIL. This was not fixed by lowering frequency, adding false paths or changing acceptance. P-20260927-001 records the unresolved design decision.
+
+- Final report assembly initially used the Windows default GBK reader for a UTF-8 Markdown file and stopped with UnicodeDecodeError. Explicit UTF-8 reading fixed the assembly; engineering source/tests were unchanged. Repository audit was rerun.

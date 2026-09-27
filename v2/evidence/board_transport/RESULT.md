@@ -7,7 +7,7 @@ Workspace: E:\Codex_project\AMD-SonoField-FPGA
 Version/branch: v2 / main  
 Stage: BOARD_TRANSPORT_AND_PS_PL_INTEGRATION_PREFLIGHT  
 Starting HEAD: d25e1d857334c061493459ce49a24debba222432  
-Engineering source checkpoint: pending local commit; reproduction follows.
+Ending engineering source HEAD: b7f285896f78334d66091328f46aa4f657504430. Final evidence-only checkpoint follows this source commit; the containing Git commit identifies the delivered report.
 
 This is a Codex engineering self-check. Independent Chat/user acceptance is PENDING. Work remains OFF.
 
@@ -30,7 +30,7 @@ This is a Codex engineering self-check. Independent Chat/user acceptance is PEND
 - AXI24 checks plus real wrapper test PASS in both Icarus and XSim: independent AW/W, read/write, backpressure, partial/zero strobes, illegal address, delayed error, timeout, reset, motion ownership, IRQ and safe outputs.
 - Full3696-frame GUI/RTL motion path PASS in three Icarus runs plus XSim; exact trajectory/map/trap/ACK hashes match. Production cadence and fault injection pass both tools.
 - Inherited phase/waveform/model-map/serializer and self-calibration gates PASS, including exact1024x8 ADC roundtrip and128 short RTL captures. Synthetic noise robustness retains failures outside fixed baseline limits; no physical calibration claim.
-- Frozen v1 integrity PASS (212 files). Source manifests use canonical LF UTF-8. Standalone fresh-clone proof is pending the source checkpoint.
+- Frozen v1 integrity PASS (212 files). Source manifests use canonical LF UTF-8. Fresh sparse clone (v1 worktree absent) and fresh venv PASS:112 Python tests, complete GUI/XSim path with exact baseline hashes, repository audit and both AXI simulator tests. The source manifest, including C firmware, matches the clone.
 - Candidate-only OOC synthesis completes for xc7z020clg400-1/-2/-3: each8681 LUT,17996 registers,4 BRAM. This is not TARGET_SYNTHESIS_PASS.
 - 132 MHz core setup WNS: -8.128/-4.995/-3.609 ns: FAIL. No place/route, external timing closure or bitstream. Worst -1 path runs from carrier_acc_reg[7] to serializer bit_index_reg[0]/CE. P-20260927-001 requests a decision before architectural timing changes.
 - Diagnostic 33 MHz -> MMCM792 MHz VCO ->132/66 MHz reports exist. Explicit jitter assumptions and reset/CDC limits are in CLOCK_ARCHITECTURE.md. Clock-only PS7 DRC warning and missing external delay/skew constraints remain disclosed.
@@ -64,4 +64,13 @@ Before a physical smoke test: obtain independent speed/temperature/ordering and 
 
 General plans/README/decisions/interaction memory remain historical and are marked DOCUMENTATION_UPDATE_REQUIRED / STATE_CONFLICT_DETECTED in canonical engineering state. Current instruction explicitly authorizes this stage's technical evidence; Work did not run. Existing untracked schematic backup is preserved, not committed.
 
-Stage evidence: summary.json, protocol_tests.json, axi_bridge_tests.json, source_manifest.json, regression_complete/summary.json, candidate_synthesis/summary.json and source reports. Preflight/tests are complete; fresh-source reproduction and final repository checkpoint are still pending in this source commit.
+Stage evidence: summary.json, protocol_tests.json, axi_bridge_tests.json, source_manifest.json, regression_complete/summary.json, candidate_synthesis/summary.json and source reports. Preflight/tests and fresh-source reproduction are complete. Code/RTL are unchanged since the source commit above; the remaining commit records evidence/state only. Remote equality is checked after the final push and reported in the final Codex response; no remote result is inferred from this file.
+
+## Session checkpoint / result
+
+CODEX_CHECKPOINT: OFFLINE_INTEGRATION_PASS; REAL_TRANSPORT_BLOCKED_BY_BOARD_FACT.
+Next owner: Chat/user independent review. Work OFF. No formal architecture decision or final platform acceptance is fabricated.
+Tracked engineering tree is checkpointed; the preexisting untracked schematic backup remains preserved.
+Scope: this offline preflight/software integration stage only; target synthesis/timing, PS deployment, UART hardware and acoustic operation remain blocked.
+
+ACCEPT WITH LIMITATIONS

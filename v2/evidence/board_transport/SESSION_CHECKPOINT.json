@@ -1,0 +1,28 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace": "E:\\Codex_project\\AMD-SonoField-FPGA",
+  "branch": "main",
+  "active_version": "v2",
+  "stage": "BOARD_TRANSPORT_AND_PS_PL_INTEGRATION_PREFLIGHT",
+  "starting_commit": "d25e1d857334c061493459ce49a24debba222432",
+  "verified_engineering_commit": "b7f285896f78334d66091328f46aa4f657504430",
+  "chat_status": "REVIEW_PENDING",
+  "codex_status": "CODEX_CHECKPOINT",
+  "work_status": "OFF",
+  "result": "OFFLINE_INTEGRATION_PASS",
+  "physical_transport": "BLOCKED",
+  "self_check": "ACCEPT WITH LIMITATIONS",
+  "independent_acceptance": "PENDING",
+  "next_owner": "Chat/user",
+  "open_problem": "P-20260927-001",
+  "limitations": [
+    "Exact speed/temperature/ordering unresolved",
+    "Connector/VCCO/UART route unresolved",
+    "132 MHz candidate core timing fails",
+    "PS BSP/ARM target not built or deployed",
+    "Preexisting untracked schematic backup preserved"
+  ],
+  "final_delivery_commit": "The commit containing this checkpoint; remote equality checked after push",
+  "delivery_reviewed_at": "2026-09-27T16:25:34.561195+00:00"
+}
