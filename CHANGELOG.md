@@ -1,5 +1,20 @@
 # Changelog
 
+## v2 — interactive motion digital stage (2026-09-27)
+
+- Added a local simulation UI, bounded quintic/planar trajectory planning, calibrated
+  LEVITATION_TRAP_V1 inspection and explicit operator-confirmation/STOP states.
+- Reused the existing Controller, calibrated model and phase engine; added a complete-map
+  stream API, clocked ring buffer and integrated motion wrapper with atomic ACK validation.
+- Full 3696-frame GUI demonstration matched across three Icarus runs and Vivado 2025.2 XSim.
+  Production 50 Hz cadence and failure injection passed both tools; final Python suite has 90 tests.
+- Preserved failed tool evidence and fixed XSim declaration/launcher compatibility, latched
+  STOP recovery, Windows DPI screenshot bounds and existing adjacent problem-digest auditing.
+- Frozen v1 and all PCB source files remain unchanged. No physical motion, board deployment,
+  independent acceptance, release or v3 is claimed. Engineering evidence is under evidence/engineering/motion.
+- Applied 2026-09-27-r1 ownership rules; Work remains OFF. The current user explicitly authorized
+  the six stage docs and observable interaction checkpoint as task-specific exceptions.
+
 ## v1 — observable interaction memory
 
 - Added real local Codex transcript capture, session/tool register, index and checkpoint instructions.

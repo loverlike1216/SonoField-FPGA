@@ -1,0 +1,36 @@
+{
+  "status": "PROJECT_READY",
+  "project_id": "SONOFIELD_FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace": "E:\\Codex_project\\AMD-SonoField-FPGA",
+  "branch": "main",
+  "starting_commit": "78f2be1678fbbb65e039bc9054ee0fef9653f647",
+  "remote_head": "78f2be1678fbbb65e039bc9054ee0fef9653f647",
+  "active_version": "v2",
+  "highest_version": "v2",
+  "version_status": "ACTIVE",
+  "current_stage": "INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL",
+  "chat_source": "SonoField-FPGA",
+  "codex_status": "ACTIVE",
+  "work_status": "OFF",
+  "shell": "pwsh 7.6.5",
+  "worktree_preexisting": [
+    "PCB/V1/project/SonoField-FPGA-v2-Schematic-V1-SingleSheet_backup/"
+  ],
+  "state_conflict_detected": "Prior machine stage SCHEMATIC_DESIGN_JLCEDA_PRO superseded by explicit current user instruction; no new version.",
+  "external_chat_access": "BLOCKED",
+  "pending_approvals": [],
+  "blocking_for_simulation": [],
+  "blocking_for_board": [
+    "B01",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "PS_TRANSPORT_NOT_DEPLOYED"
+  ],
+  "policy_revision": "2026-09-27-r1",
+  "documentation_authority": "User stage instruction sections 64 and 67 explicitly authorize v2/docs stage artifacts; Work stays OFF.",
+  "instruction_sha256": "1861be5e4fdc6ec30db96cc0a9e1adf2552d848bab1e12f1dfc0e86d8a839e8d"
+}

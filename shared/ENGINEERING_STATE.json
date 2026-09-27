@@ -1,0 +1,29 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v2",
+  "current_stage": "INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL",
+  "status": "SIMULATION_VALIDATED",
+  "starting_commit": "78f2be1678fbbb65e039bc9054ee0fef9653f647",
+  "motion_python_tests": 90,
+  "motion_python_result": "PASS",
+  "motion_rtl_smoke": "PASS",
+  "motion_full_gate": "PASS",
+  "hardware": "NOT_VERIFIED",
+  "work_status": "OFF",
+  "documentation_update_required": [
+    "shared/CURRENT_PLAN.md",
+    "shared/HANDOFF.md",
+    "shared/PROJECT_STATE.md",
+    "shared/DECISIONS.md",
+    "shared/ACCEPTANCE.md"
+  ],
+  "evidence": "evidence/engineering/motion/validation/summary.json",
+  "icarus": "PASS",
+  "vivado_xsim": "PASS",
+  "determinism": "PASS: three Icarus plus one XSim, 3696 frames",
+  "final_regression": "PASS",
+  "source_reproduction": "PENDING",
+  "independent_review": "PENDING",
+  "final_source_regression": "evidence/engineering/motion/regression/summary.json",
+  "presentation": "evidence/engineering/motion/presentation/gui_simulation.png"
+}

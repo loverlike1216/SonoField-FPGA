@@ -5,12 +5,12 @@
   "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
   "current_branch": "main",
   "current_version": "v2",
-  "current_stage": "SCHEMATIC_DESIGN_JLCEDA_PRO",
+  "current_stage": "INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL",
   "execution": "PROJECT_ACTIVE",
   "status": "PROJECT_ACTIVE",
   "scope_of_block": "Electrical schematic release, target FPGA implementation and physical hardware",
   "digital_validation": "PASS",
-  "digital_evidence": "v2/evidence/self_calibration_stage/validation_frequency/summary.json",
+  "digital_evidence": "evidence/engineering/motion/regression/summary.json",
   "model_evidence": "v2/evidence/model",
   "reproducibility": "PASS",
   "overall_iteration_result": "REVISE",
@@ -21,7 +21,7 @@
   "exact_part": null,
   "documented_clock_hz": 33000000,
   "reproducibility_evidence": "v2/evidence/self_calibration_stage/reproducibility_review/summary.json",
-  "next_stage": "SCHEMATIC_ELECTRICAL_REVIEW",
+  "next_stage": "INDEPENDENT_MOTION_DIGITAL_REVIEW",
   "blocking_ids": [
     "B01",
     "B03",
@@ -31,7 +31,7 @@
     "B07"
   ],
   "coordinate_evidence": "v2/hardware/mechanical/geometry_10mm",
-  "current_report": "shared/report_schematic_v2_V1.md",
+  "current_report": "evidence/engineering/motion/EXECUTION_CONTRACT.md",
   "geometry": {
     "transducer_body_diameter_mm": 10,
     "pitch_mm": 12,
@@ -45,7 +45,7 @@
     "coordinate_reference": "RADIATING_SURFACE_CENTER",
     "origin": "GEOMETRIC_CENTER"
   },
-  "review_scope": "One-sheet native schematic capture and presentation; electrical release remains blocked",
+  "review_scope": "v2 interactive motion digital stage; no board or physical acceptance",
   "active_version": "v2",
   "branch": "main",
   "chat_source_name": "SonoField-FPGA",
@@ -67,7 +67,7 @@
     "B07"
   ],
   "critical_issues": [],
-  "next_action": "Review P-20260925-001, resolve board pins/VCCO and watchdog/timing, qualify MPN/analog hardware; no PCB authorization",
+  "next_action": "Fresh sparse-clone v2 motion reproduction, then independent Chat/user review",
   "validated_source_commit": "9c058fe3b02469a6d36a08e3a7cbedd19076e67b",
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "organization_limitations": [
@@ -78,8 +78,8 @@
   "codex_thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
   "interaction_memory_status": "PARTIAL",
   "interaction_capture_mode": "CHECKPOINT_COMMAND; no background hook",
-  "interaction_memory_cutoff": "2026-09-26T02:28:53.922Z",
-  "interaction_message_count": 133,
+  "interaction_memory_cutoff": "2026-09-27T01:02:10.184Z",
+  "interaction_message_count": 146,
   "interaction_memory_result": "ACCEPT WITH LIMITATIONS",
   "bom": "v2/hardware/bom/BOM_MASTER.xlsx",
   "bom_status": "PCB_PROPOSED; imported input, not fabrication release",
@@ -137,5 +137,13 @@
   ],
   "schematic_delivery_commit": "71f17b63a5b5ffcb5bfe5868a9498f5f919e0ce8",
   "schematic_github_sync": "VERIFIED",
-  "schematic_sync_evidence": "PCB/V1/log/review/delivery_sync.json"
+  "schematic_sync_evidence": "PCB/V1/log/review/delivery_sync.json",
+  "codex_status": "ACTIVE",
+  "work_status": "OFF",
+  "motion_validation": "PASS",
+  "motion_evidence": "evidence/engineering/motion/validation/summary.json",
+  "motion_stage_result": "SIMULATION_VALIDATED",
+  "motion_hardware_verified": false,
+  "engineering_state": "shared/ENGINEERING_STATE.json",
+  "governance_revision": "2026-09-27-r1"
 }

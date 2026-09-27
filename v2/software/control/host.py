@@ -79,3 +79,22 @@ class Controller:
         self.write32(r.MAP_COMMIT,1)
         self.wait(lambda s:not(self.read32(r.MAP_STATUS)&2) and bool(s&64))
         self.write32(r.MODE,mode);self.write32(r.CONTROL,1)
+
+    def stream_map(self, rows):
+        """Load the next complete map without disabling the currently active field.
+
+        The execution transport owns bounded buffering, sequence ACK and cadence.
+        This method deliberately does not enable outputs or change field mode.
+        """
+        if len(rows)!=128 or sorted(x['channel'] for x in rows)!=list(range(128)):
+            raise ValueError('Complete unique map required')
+        for x in rows:
+            if (type(x['requested_phase']) is not int or type(x['calibration_phase']) is not int or
+                not 0<=x['requested_phase']<256 or not 0<=x['calibration_phase']<256 or
+                x['enabled'] not in (0,1,False,True)):
+                raise ValueError('Invalid motion phase map')
+        for x in rows:
+            self.write32(r.MAP_CHANNEL,x['channel'])
+            self.write32(r.MAP_DATA,(int(x['enabled'])<<16)|(x['calibration_phase']<<8)|x['requested_phase'])
+            self.write32(r.MAP_WRITE,1)
+        self.write32(r.MAP_COMMIT,1)

@@ -10,6 +10,25 @@ ROOT=Path(__file__).resolve().parents[1]
 REPO=ROOT.parent
 
 
+def verify_problem(path):
+    """Verify either canonical-body SHA256 or the existing adjacent whole-file digest.
+
+    Schematic-stage problems already use an adjacent .sha256 file. Supporting
+    that format preserves their original record instead of rewriting its hash.
+    """
+    text=path.read_text(encoding='utf-8');_,front,body=text.split('---\n',2)
+    metadata=dict(line.split(': ',1) for line in front.strip().splitlines())
+    expected=metadata['problem_hash']
+    if expected=='SEE_ADJACENT_SHA256_FILE':
+        parts=path.with_suffix('.sha256').read_text(encoding='utf-8').strip().split()
+        if len(parts)!=2 or parts[1]!=path.name or not re.fullmatch('[0-9a-f]{64}',parts[0]):
+            raise ValueError('Invalid adjacent problem digest')
+        valid=hashlib.sha256(text.encode('utf-8')).hexdigest()==parts[0]
+    else:
+        valid=bool(re.fullmatch('[0-9a-f]{64}',expected)) and hashlib.sha256(body.encode('utf-8')).hexdigest()==expected
+    return metadata,valid
+
+
 def main():
     errors=[]
     required=["README.md","AGENTS.md","CHANGELOG.md","shared/CURRENT_PLAN.md",
@@ -65,9 +84,8 @@ def main():
     if state.get("hardware_verified"):errors.append("Unexpected hardware PASS")
     problem_ids=[]
     for p in (REPO/"AI-problem/problem").glob("P-*.md"):
-        text=p.read_text(encoding="utf-8");_,front,body=text.split("---\n",2)
-        metadata=dict(line.split(": ",1) for line in front.strip().splitlines())
-        if hashlib.sha256(body.encode("utf-8")).hexdigest()!=metadata["problem_hash"]:errors.append("Problem hash mismatch "+p.name)
+        metadata,valid=verify_problem(p)
+        if not valid:errors.append("Problem hash mismatch "+p.name)
         expected=state.get("inherited_problem_versions",{}).get(metadata["problem_id"],state["active_version"])
         if metadata["active_version"]!=expected:errors.append("Problem provenance/version mismatch "+p.name)
         problem_ids.append(metadata["problem_id"])

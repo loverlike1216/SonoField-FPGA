@@ -4,6 +4,20 @@ Project SONOFIELD_FPGA; repository loverlike1216/SonoField-FPGA; branch main.
 Workspace E:\Codex_project\AMD-SonoField-FPGA. Active version v2; engineering root v2/.
 The user-provided personalized rules govern execution. This file is their project-specific application.
 
+## Current governance — 2026-09-27-r1
+
+- The user's latest Chat/Codex/Work policy supersedes older workflow text below.
+- Codex owns engineering sources, tests, configuration, Git, engineering evidence and machine state.
+- Work owns general narrative docs, formal decision persistence and AI memories. Work is OFF unless
+  the user explicitly starts it. Do not spawn auxiliary agents or claim independent Chat acceptance.
+- The current user instruction authorizes continuing v2 at INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL.
+  Its sections 64 and 67 explicitly authorize the six v2/docs/motion documents and interaction records
+  as a task-specific exception. This does not authorize broad edits to Work-owned plans or memories.
+- Engineering checkpoint authority: evidence/engineering/motion/EXECUTION_CONTRACT.md.
+- Keep PCB files and frozen v1 untouched. No v3, deployment, release or fabricated board constraints.
+- Default all Windows orchestration to pwsh (PowerShell 7). No automatic PowerShell 5.1 fallback.
+- Mark stale general narratives DOCUMENTATION_UPDATE_REQUIRED; use canonical engineering state.
+
 - Preflight local/remote Git, shared/PROJECT_STATE.json, VERSION_STATE.json, plan, decisions, blockers,
   acceptance, AI-chat-memory/INDEX.md, AI-interaction-memory/INDEX.md and open AI-problem records before changes.
 - Continue means the current version. Stages do not create versions. No v3 without explicit user approval.
@@ -11,8 +25,9 @@ The user-provided personalized rules govern execution. This file is their projec
   dependencies, technical docs, hardware and evidence. Run engineering commands from v2.
 - User approved same-version layout cleanup and removal of obsolete records from current tree.
   Keep Git history. Future version upgrades copy reusable content and freeze the old version intact.
-- Update execution contract before major changes; baseline, implement, run, cross-check, save evidence,
-  update shared/handoff, commit/push and verify remote. Never weaken tests for PASS.
+- Update execution contract before major changes; baseline, implement, run, cross-check, save engineering
+  evidence/state, commit/push and verify remote. Work updates shared/HANDOFF when authorized.
+  Never weaken tests for PASS.
 - Stable module names stay stable. Directory changes require full path/build/EDA/test regression.
 - Chat source is SonoField-FPGA. Verify real reader capability before importing history. BLOCKED means
   no fabricated transcript or decision. Current Codex messages are not external ChatGPT history.
@@ -28,8 +43,8 @@ The user-provided personalized rules govern execution. This file is their projec
   Whole-platform acceptance is external; hardware blockers prohibit claiming full project ACCEPT.
 
 ## Observable interaction checkpoints
-- Persist user/Codex project instructions, corrections, approvals and visible responses in AI-interaction-memory.
-- Read its INDEX at preflight. Use tools/sync_codex.py with the verified local rollout at task start and before
+- Interaction memory is Work-owned by default; only use a current explicit user exception to persist it as Codex.
+- Read its INDEX at preflight. If authorized, use AI-interaction-memory/tools/sync_codex.py with the verified rollout before
   stage/session commit; capture the previous final response at the next checkpoint. No background hook is installed.
 - Keep only actual observable messages. Never export reasoning, analysis, compaction summaries, system/developer
   prompts or raw source-log/tool payloads that might echo them. Preserve PARTIAL/BLOCKED truthfully.

@@ -3,12 +3,12 @@
 Canonical ChatGPT history: [SonoField-FPGA](../AI-chat-memory/SonoField-FPGA.md), BLOCKED.
 Codex records below are distinct from external ChatGPT history. Provider: OpenAI.
 Work, other AI and cross-agent consultations: none captured; no participation invented.
-Source timestamps are UTC. Active version v2. Stage: SCHEMATIC_DESIGN_JLCEDA_PRO.
+Source timestamps are UTC. Active version v2. Stage: INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL.
 
 | Thread / Session | Role / Impact | First used | Last captured | Record | Status | Content SHA256 |
 |---|---|---|---|---|---|---|
-| 01a0b538-9430-7561-9ba4-623f57501f43 | codex / IMPLEMENTATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-26T02:28:53.922Z | [codex](codex/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | e0f36b3bf88f8589ea09eb9c0b996cd1bff93e3f48a25430195d910c8aff0b72 |
-| 01a0b538-9430-7561-9ba4-623f57501f43 | tool-flow / VALIDATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-26T02:28:53.922Z | [tool-flow](tool-flow/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | 76738627c6dbe445c988c3eaf9add083d84fe5961eef2f67ba122b9ee0ca05c9 |
+| 01a0b538-9430-7561-9ba4-623f57501f43 | codex / IMPLEMENTATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-27T01:04:11.035Z | [codex](codex/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | 2d98b0ac8a9687753a6678f01f3b46d7809feeec43eb87645315dcba86444671 |
+| 01a0b538-9430-7561-9ba4-623f57501f43 | tool-flow / VALIDATION_INPUT | 2026-09-18T15:52:59.185Z | 2026-09-27T01:04:11.035Z | [tool-flow](tool-flow/01a0b538-9430-7561-9ba4-623f57501f43.md) | PARTIAL | f326d51108a707c3e11bf630cfaa12f61abf330697aecc0c64e5a68e388baf0e |
 
 [Capture policy and commands](README.md) · [Current tool flow](tool-flow/T-20260920-001__interaction-memory.md)
 

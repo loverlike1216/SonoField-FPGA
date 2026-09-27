@@ -1,0 +1,108 @@
+{
+  "status": "FAIL",
+  "classification": "SIMULATION_VALIDATED_PENDING",
+  "commands": [
+    {
+      "label": "python_tests",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 5.156
+    },
+    {
+      "label": "compile_faults_1200",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_motion_faults",
+        "-Ptb_motion_faults.INTERVAL_CYCLES=1200",
+        "-o",
+        "faults_1200.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.047
+    },
+    {
+      "label": "icarus_faults_1200",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "faults_1200.vvp"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.031
+    },
+    {
+      "label": "compile_faults_2640000",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_motion_faults",
+        "-Ptb_motion_faults.INTERVAL_CYCLES=2640000",
+        "-o",
+        "faults_2640000.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.047
+    },
+    {
+      "label": "icarus_faults_2640000",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "faults_2640000.vvp"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 18.985
+    },
+    {
+      "label": "faults_xvlog",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.578
+    },
+    {
+      "label": "faults_xelab_1200",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_motion_faults",
+        "--generic_top",
+        "INTERVAL_CYCLES=1200",
+        "--snapshot",
+        "faults_1200",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 1,
+      "elapsed_s": 1.187
+    }
+  ],
+  "limits": "PROVISIONAL_UNTIL_HARDWARE_VALIDATED",
+  "gui": "Tk 8.6; PySide6 absent in pinned environment",
+  "timing": "GUI controls no field clock. RTL queue is clocked at 132 MHz, 2,640,000 cycles production cadence; full waveform demo shortens interval to 8192 cycles.",
+  "not_verified": [
+    "physical particle movement",
+    "absolute force / mass support",
+    "PS transport deployment",
+    "board synthesis / pin constraints / timing closure",
+    "hardware enable and watchdog circuit"
+  ],
+  "started_utc": "2026-09-26T18:30:29Z",
+  "error": "faults_xelab_1200 failed: The system cannot find the path specified.\nVivado Simulator v2025.2\nCopyright 1986-2022 Xilinx, Inc. All Rights Reserved.\nCopyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.\nRunning: D:/Vivado/2025.2/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_motion_faults --generic_top INTERVAL_CYCLES 1200 --snapshot faults_1200 --debug typical \nMulti-threading is on. Using 30 slave threads.\nERROR: [XSIM 43-3225] Cannot find design unit work.1200 in library work located at xsim.dir/work.\n"
+}

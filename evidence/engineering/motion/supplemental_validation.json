@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Presentation-only fix and strict input/integrity checks after full motion gate",
+  "changes": [
+    {
+      "file": "software/ui/app.py",
+      "reason": "DPI-correct physical window capture; planning/dispatch unchanged",
+      "evidence": "presentation/presentation_result.json"
+    },
+    {
+      "file": "software/motion/motion_controller.py",
+      "reason": "RETURN_CENTER ignores conflicting target payload; default demo unchanged",
+      "evidence": "final_python_tests.log"
+    },
+    {
+      "file": "software/motion/trajectory.py",
+      "reason": "Reject custom segments shorter than 0.1 mm; default demo unchanged",
+      "evidence": "final_python_tests.log"
+    },
+    {
+      "file": "scripts/check_repository.py",
+      "reason": "Support existing whole-file adjacent digest, while rejecting mutations; no acceptance weakened",
+      "evidence": "final_python_tests.log"
+    }
+  ],
+  "full_demo_prior_status": "PASS",
+  "fresh_clone_final_source_reproduction": "PENDING"
+}

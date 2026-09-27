@@ -9,7 +9,8 @@ module sono_digital_system #(
  output wire adc_reset,adc_convst,adc_cs_n,adc_sclk,adc_sdi,
  output wire[1:0] rx_blank,output wire[31:0] serial_data,
  output wire shift_clock,latch_clock,output wire output_disable,
- output wire[127:0] commanded_waveform,output wire irq);
+ output wire[127:0] commanded_waveform,output wire irq,
+ output wire motion_map_ack);
  `include "registers.svh"
  initial if(CLOCK_HZ!=SYS_CLOCK_HZ)$fatal(1,"Regenerate and validate ADC timing profile for a different system clock");
  reg[31:0] cfg[0:27];reg[2:0] mode;reg software_enable;
@@ -71,6 +72,7 @@ module sono_digital_system #(
    if(next_acc>=CLOCK_HZ)carrier_acc<=next_acc-CLOCK_HZ;else carrier_acc<=next_acc;
   end
  wire write_ready,pending,commit_ack,map_valid;
+ assign motion_map_ack=commit_ack;
  wire[1023:0] effective;wire[127:0] mask,normal_wave;
  phase_bank bank(.clk(clk),.rst_n(core_rst),.period_boundary(boundary),
   .write_valid(map_write),.channel_enable(cfg[REG_MAP_DATA/4][16]),

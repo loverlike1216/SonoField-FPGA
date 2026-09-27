@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "secret_files": [],
+  "placeholder_findings": [
+    {
+      "path": "evidence\\engineering\\motion\\user_execution_instruction.md",
+      "line": 1295,
+      "text": "Do not fake a real PS deployment."
+    }
+  ],
+  "review": "No hidden source implementation bypass; BoardTransport deliberately rejects deployment, MeasuredPositionProvider is an explicitly undeployed interface, test doubles are confined to unit tests. Screenshots manually inspected as app-only.",
+  "scope": "New motion sources/docs/evidence and governance; interaction exporter has separate integrity/privacy gate."
+}

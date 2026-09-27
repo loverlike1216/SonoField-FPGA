@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "scope": "DPI-correct full-window capture after real center RTL acknowledgement",
+  "state": {
+    "state": "ARMED",
+    "connected": true,
+    "commanded_trap_position_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "actual_particle_position": "NOT_MEASURED",
+    "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+    "f_work": 40300.0,
+    "workspace_profile": "PROVISIONAL_DEMO_V1",
+    "mode": "SIMULATION",
+    "busy": false,
+    "board_status": "NOT_CONNECTED",
+    "hardware_enable": "NOT_VERIFIED"
+  },
+  "center_rtl": {
+    "classification": "SIMULATED",
+    "simulator": "icarus",
+    "frames_acknowledged": 6,
+    "map_words_sha256": "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+    "ack_sha256": "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1",
+    "interval_cycles": 8192,
+    "production_interval_cycles": 2640000,
+    "clock_hz": 132000000,
+    "bus_writes": 2310,
+    "trajectory_sha256": "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+    "frames": 6,
+    "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+    "trap_reports_sha256": "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917"
+  }
+}
