@@ -21,8 +21,15 @@
       "file": "scripts/check_repository.py",
       "reason": "Support existing whole-file adjacent digest, while rejecting mutations; no acceptance weakened",
       "evidence": "final_python_tests.log"
+    },
+    {
+      "file": "software/motion/motion_controller.py",
+      "reason": "Command logs record effective default horizontal/vertical speed, avoiding a misleading zero for RETURN_CENTER",
+      "evidence": "standalone/commands.jsonl"
     }
   ],
   "full_demo_prior_status": "PASS",
-  "fresh_clone_final_source_reproduction": "PENDING"
+  "fresh_clone_final_source_reproduction": "PASS",
+  "final_source_commit": "995e643d5056d7229ff78fa3ef40e39affeb0093",
+  "standalone_evidence": "standalone/summary.json"
 }

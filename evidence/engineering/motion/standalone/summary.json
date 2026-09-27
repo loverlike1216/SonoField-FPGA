@@ -1,0 +1,200 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "label": "source_status",
+      "command": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=no"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "source_commit",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "clone",
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "E:\\Codex_project\\AMD-SonoField-FPGA",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\motion_standalone"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "sparse_init",
+      "command": [
+        "git",
+        "sparse-checkout",
+        "init",
+        "--cone"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "sparse_scope",
+      "command": [
+        "git",
+        "sparse-checkout",
+        "set",
+        "v2",
+        "shared",
+        "evidence",
+        "PCB",
+        "AI-chat-memory",
+        "AI-interaction-memory",
+        "AI-problem"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "checkout",
+      "command": [
+        "git",
+        "checkout",
+        "main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "venv",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "venv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\motion_standalone\\.venv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "dependencies",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\motion_standalone\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--cache-dir",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\pip_cache",
+        "-r",
+        "requirements-lock.txt"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "dependency_check",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\motion_standalone\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "python_tests",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\motion_standalone\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "gui_xsim",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\motion_standalone\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "xsim",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\motion_standalone\\v2\\build\\motion_standalone"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "repository_audit",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\motion_standalone\\.venv\\Scripts\\python.exe",
+        "scripts/check_repository.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_commit": "995e643d5056d7229ff78fa3ef40e39affeb0093",
+  "v1_worktree_present": false,
+  "environment": "Fresh sparse clone and fresh venv; same Windows host",
+  "gui_result": {
+    "status": "PASS",
+    "mode": "SIMULATION",
+    "confirmation": "SIMULATION_AUTOMATION_ONLY",
+    "results": [
+      {
+        "command": "APPLY_CENTER",
+        "classification": "SIMULATED",
+        "simulator": "xsim",
+        "frames_acknowledged": 6,
+        "map_words_sha256": "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+        "ack_sha256": "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1",
+        "interval_cycles": 8192,
+        "production_interval_cycles": 2640000,
+        "clock_hz": 132000000,
+        "bus_writes": 2310,
+        "trajectory_sha256": "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+        "frames": 6,
+        "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+        "trap_reports_sha256": "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917"
+      },
+      {
+        "command": "RUN_DEMO",
+        "classification": "SIMULATED",
+        "simulator": "xsim",
+        "frames_acknowledged": 3696,
+        "map_words_sha256": "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+        "ack_sha256": "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef",
+        "interval_cycles": 8192,
+        "production_interval_cycles": 2640000,
+        "clock_hz": 132000000,
+        "bus_writes": 1422960,
+        "trajectory_sha256": "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+        "frames": 3696,
+        "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+        "trap_reports_sha256": "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694"
+      }
+    ],
+    "final_status": {
+      "state": "ARMED",
+      "connected": true,
+      "commanded_trap_position_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_particle_position": "NOT_MEASURED",
+      "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+      "f_work": 40300.0,
+      "workspace_profile": "PROVISIONAL_DEMO_V1",
+      "mode": "SIMULATION",
+      "busy": false,
+      "board_status": "NOT_CONNECTED",
+      "hardware_enable": "NOT_VERIFIED"
+    }
+  },
+  "scope": "90 Python tests, complete 3696-frame GUI/XSim path and exact baseline hashes"
+}

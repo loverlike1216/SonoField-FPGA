@@ -8,8 +8,8 @@ branch: main
 active_version: v2
 stage: INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL
 Starting commit: 78f2be1678fbbb65e039bc9054ee0fef9653f647
-Engineering source checkpoint: PENDING_COMMIT
-Fresh-clone reproduction: PENDING
+Engineering source checkpoint: 995e643d5056d7229ff78fa3ef40e39affeb0093
+Fresh-clone reproduction: PASS — sparse clone, fresh venv, v1 absent, 90 tests and full GUI/XSim demo
 Codex: ACTIVE; Work: OFF. No v3, release or deployment.
 
 ## Implemented / reused
@@ -52,6 +52,8 @@ All physical limits remain PROVISIONAL_UNTIL_HARDWARE_VALIDATED.
   window screenshot was visually inspected. Actual particle position is NOT_MEASURED.
 - Frozen v1 and native PCB sources unchanged; repository integrity and secret scan passed.
 
+Fresh environment evidence: standalone/summary.json. Its full demo hashes match the earlier four runs exactly.
+
 Evidence: validation/summary.json, regression/summary.json, final_python_tests.log,
 presentation/, failures/, supplemental_validation.json. Large working simulator
 files remain under ignored v2/build; curated evidence is archived here.
@@ -93,6 +95,9 @@ observable interaction checkpoint. Work was not started. Chat history stays BLOC
 Codex transcript is PARTIAL and privacy-filtered. General shared narrative plans,
 acceptance and handoff need a future authorized Work update; canonical engineering
 state is current. This is not independent Chat acceptance.
+
+Repository: engineering source checkpoint is pushed and verified. Final evidence commit is identified by repository HEAD and the final delivery response.
+Tracked engineering files are clean after commit. The pre-existing local EDA backup directory remains untracked and preserved.
 
 Next owner: Chat/user independent review of this checkpoint. Stop before physical
 bring-up, PCB changes, CV or v3. NOT RELEASED. NOT DEPLOYED.

@@ -15,15 +15,22 @@
     "shared/HANDOFF.md",
     "shared/PROJECT_STATE.md",
     "shared/DECISIONS.md",
-    "shared/ACCEPTANCE.md"
+    "shared/ACCEPTANCE.md",
+    "README.md",
+    "v2/README.md"
   ],
   "evidence": "evidence/engineering/motion/validation/summary.json",
   "icarus": "PASS",
   "vivado_xsim": "PASS",
   "determinism": "PASS: three Icarus plus one XSim, 3696 frames",
   "final_regression": "PASS",
-  "source_reproduction": "PENDING",
+  "source_reproduction": "PASS",
   "independent_review": "PENDING",
   "final_source_regression": "evidence/engineering/motion/regression/summary.json",
-  "presentation": "evidence/engineering/motion/presentation/gui_simulation.png"
+  "presentation": "evidence/engineering/motion/presentation/gui_simulation.png",
+  "last_verified_engineering_commit": "995e643d5056d7229ff78fa3ef40e39affeb0093",
+  "source_reproduction_evidence": "evidence/engineering/motion/standalone/summary.json",
+  "execution_window": "CODEX_CHECKPOINT",
+  "next_owner": "Chat/user independent review",
+  "next_action": "Review source checkpoint and archived digital evidence; hardware remains gated"
 }
