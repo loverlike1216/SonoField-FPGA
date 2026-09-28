@@ -6,6 +6,11 @@ The user-provided personalized rules govern execution. This file is their projec
 
 ## Current governance — 2026-09-27-r1
 
+- Current handoff (2026-09-29): user explicitly authorizes root 指南.md, matching entry/state updates,
+  an annotated progress tag and normal GitHub sync. This is a documentation handoff, not new RTL scope,
+  Work startup, v3, Release or hardware programming. Current engineering facts: shared/PROJECT_STATE.json
+  and v2/evidence/board_transport/RESULT.md. Earlier stage authorizations below are historical.
+
 - The user's latest Chat/Codex/Work policy supersedes older workflow text below.
 - Codex owns engineering sources, tests, configuration, Git, engineering evidence and machine state.
 - Work owns general narrative docs, formal decision persistence and AI memories. Work is OFF unless

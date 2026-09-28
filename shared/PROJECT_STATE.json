@@ -96,7 +96,7 @@
   "whole_platform_result": "REVISE",
   "bootstrap_blocking_issues": [],
   "bootstrap_critical_issues": [],
-  "last_remote_verified_source_commit": "a6ba80b793eae53f24de32b86020683875eed7ba",
+  "last_remote_verified_source_commit": "b7f285896f78334d66091328f46aa4f657504430",
   "hardware_status": {
     "TX_RX": "NOT_RUN",
     "ADC_capture": "NOT_RUN",
@@ -175,5 +175,20 @@
   "real_transport": "REAL_TRANSPORT_BLOCKED_BY_BOARD_FACT",
   "next_owner": "Chat/user independent review",
   "board_transport_stage_self_check": "ACCEPT WITH LIMITATIONS",
-  "board_transport_evidence": "v2/evidence/board_transport/summary.json"
+  "board_transport_evidence": "v2/evidence/board_transport/summary.json",
+  "team_handoff": {
+    "guide": "指南.md",
+    "tag": "v2-board-transport-offline-20260929",
+    "date": "2026-09-29",
+    "base_checkpoint": "b2aed93d89cc833ae8a32e9045ec56040f1de678",
+    "verified_source_commit": "b7f285896f78334d66091328f46aa4f657504430",
+    "evidence": "evidence/engineering/handoff_20260929",
+    "scope": "Documentation and progress checkpoint; engineering stage unchanged",
+    "authorization": "Direct user request: tag current progress, detail solved/open issues and next steps, write colleague guide and synchronize local/GitHub",
+    "setup_validation": "PASS_SUPPORTED_SPARSE_CHECKOUT",
+    "validation_source_commit": "b2aed93d89cc833ae8a32e9045ec56040f1de678",
+    "full_checkout_audit": "KNOWN_LIMITATION: 135 frozen v1 raw-byte hashes differ solely by CRLF/LF checkout normalization",
+    "supported_setup": "Full Git history with v2 sparse worktree; v1 Git objects retained",
+    "independent_machine": "NOT_VERIFIED"
+  }
 }

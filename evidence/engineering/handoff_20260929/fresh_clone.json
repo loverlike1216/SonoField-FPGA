@@ -1,0 +1,90 @@
+{
+  "status": "FAIL",
+  "classification": "Guide setup execution on fresh full GitHub clone and fresh venv; same Windows host",
+  "source_commit": "b2aed93d89cc833ae8a32e9045ec56040f1de678",
+  "commands": [
+    {
+      "name": "github_clone",
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "clone",
+        "https://github.com/loverlike1216/SonoField-FPGA.git",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\guide_validation_20260929"
+      ],
+      "exit_code": 0,
+      "seconds": 24.98
+    },
+    {
+      "name": "checkout",
+      "argv": [
+        "git",
+        "checkout",
+        "--detach",
+        "b2aed93d89cc833ae8a32e9045ec56040f1de678"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11
+    },
+    {
+      "name": "venv",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "venv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\guide_validation_20260929\\.venv"
+      ],
+      "exit_code": 0,
+      "seconds": 6.78
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\guide_validation_20260929\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--cache-dir",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\pip_cache",
+        "-r",
+        "requirements-lock.txt",
+        "-r",
+        "requirements-board.txt"
+      ],
+      "exit_code": 0,
+      "seconds": 28.06
+    },
+    {
+      "name": "pip_check",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\guide_validation_20260929\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.55
+    },
+    {
+      "name": "tk_python",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\guide_validation_20260929\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,struct,tkinter; print(sys.version); assert struct.calcsize(\"P\")==8; print(tkinter.Tcl().eval(\"info patchlevel\"))"
+      ],
+      "exit_code": 0,
+      "seconds": 0.11
+    },
+    {
+      "name": "repository_audit",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\guide_validation_20260929\\.venv\\Scripts\\python.exe",
+        "scripts/check_repository.py"
+      ],
+      "exit_code": 1,
+      "seconds": 8.05
+    }
+  ],
+  "error": "repository_audit failed; see retained log"
+}

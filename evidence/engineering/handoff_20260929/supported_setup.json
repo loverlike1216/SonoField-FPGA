@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "scope": "Supported full-history v2 sparse worktree; fresh GitHub clone and venv; same Windows host",
+  "commands": [
+    {
+      "name": "clone_clean",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "clone_eol_setting",
+      "argv": [
+        "git",
+        "config",
+        "core.autocrlf",
+        "false"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "sparse_init",
+      "argv": [
+        "git",
+        "sparse-checkout",
+        "init",
+        "--cone"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "sparse_scope",
+      "argv": [
+        "git",
+        "sparse-checkout",
+        "set",
+        "v2",
+        "shared",
+        "evidence",
+        "PCB",
+        "AI-chat-memory",
+        "AI-interaction-memory",
+        "AI-problem"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "frozen_git_available",
+      "argv": [
+        "git",
+        "cat-file",
+        "-e",
+        "HEAD:v1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "repository_audit_sparse",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\guide_validation_20260929\\.venv\\Scripts\\python.exe",
+        "scripts/check_repository.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "board_transport_gate",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\build\\guide_validation_20260929\\.venv\\Scripts\\python.exe",
+        "scripts/board_transport_gate.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "verified_commit",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_commit": "b2aed93d89cc833ae8a32e9045ec56040f1de678",
+  "v1_worktree_present": false,
+  "frozen_git_objects_verified": true,
+  "python_tests": 112,
+  "axi_simulators": [
+    "Icarus",
+    "Vivado 2025.2 XSim"
+  ],
+  "full_checkout_limitation": "135 original CRLF hashes differ after normalized checkout; retained as failure evidence, not corrected by changing old hashes",
+  "full_motion_regression": "NOT_RERUN_FOR_DOCS; unchanged engineering source retains previous full evidence"
+}

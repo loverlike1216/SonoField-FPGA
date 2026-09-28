@@ -1,5 +1,16 @@
 # Changelog
 
+## v2 — team handoff checkpoint (2026-09-29)
+
+- Fresh GitHub clone + independent venv: supported full-history v2 sparse setup passes 112 Python tests and AXI Icarus/XSim checks. Full-checkout frozen-v1 audit has 135 CRLF/LF-only mismatches; failure evidence is retained and the guide documents the supported route.
+- Added root 指南.md with progress, resolved/open issues, ownership proposals, portable Windows setup,
+  exact-commit validation copies, evidence interpretation and gated next development steps.
+- Linked the guide from README and clarified current stage/authorization in AGENTS.
+- Annotated progress checkpoint tag `v2-board-transport-offline-20260929`; no Release or version upgrade.
+- Functional source/RTL and frozen v1 remain unchanged; handoff checks are recorded under
+  evidence/engineering/handoff_20260929. Local-only board originals and existing schematic backup
+  remain explicitly outside the Git delivery.
+
 ## v2 — board transport and PS/PL offline preflight (2026-09-27)
 
 - Persisted photo-confirmed XC7Z020/CLG400 while keeping speed/temperature/full ordering code unknown.

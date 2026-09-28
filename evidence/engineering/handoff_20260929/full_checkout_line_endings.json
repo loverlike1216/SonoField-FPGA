@@ -1,0 +1,818 @@
+{
+  "status": "KNOWN_LIMITATION",
+  "mismatch_count": 135,
+  "records": [
+    {
+      "path": "v1/config/board_facts.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/docs/hardware/interface.md",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/docs/theory/model_and_results.md",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/board_inventory/board_manifest.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/board_inventory/documented_pin_candidates.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/integrity/baseline_python.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/integrity/chat_capability.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/integrity/current_tree_scan.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/integrity/repository_audit.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/integrity/summary.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/integrity/supplier_source.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/interaction_memory/capture_check.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/interaction_memory/privacy_review.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/interaction_memory/repository_audit.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/interaction_memory/unit_tests.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/interaction_memory/validation.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/model/assumptions.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/model/channel_mapping.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/model/emitter_scaling.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/model/gap_response.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/model/geometry_comparison.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/model/particle_scenarios.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/model/reference_phase_map.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/clone.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/coordinates.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/dependency_check.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/full_validation.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/install.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/model.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/repository_audit.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/source_commit.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/summary.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/bandwidth_guard.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/iverilog_version.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_128_focus_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_128_focus_115mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_128_focus_90mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_128_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_128_standing_wave_115mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_128_standing_wave_90mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_2_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_32_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/model_map_72_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/python_tests.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_core_128_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_core_128_1.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_core_128_2.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_core_1_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_core_2_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_core_32_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_core_72_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_core_7_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_tb_serializer_fault.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/run_tb_system.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/summary.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xelab_tb_core.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xelab_tb_phase_map.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xelab_tb_serializer_fault.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xelab_tb_system.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_model_map_128_focus_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_model_map_128_focus_115mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_model_map_128_focus_90mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_model_map_128_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_model_map_128_standing_wave_115mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_model_map_128_standing_wave_90mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_tb_core_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_tb_core_1.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_tb_core_2.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_tb_serializer_fault_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xsim_tb_system_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/reproducibility/validation/xvlog.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/synthesis_gate/board_gate.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/synthesis_gate/summary.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/bandwidth_guard.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/iverilog_version.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_128_focus_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_128_focus_115mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_128_focus_90mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_128_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_128_standing_wave_115mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_128_standing_wave_90mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_2_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_32_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/model_map_72_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/python_tests.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_core_128_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_core_128_1.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_core_128_2.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_core_1_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_core_2_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_core_32_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_core_72_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_core_7_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_tb_serializer_fault.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/run_tb_system.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/summary.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xelab_tb_core.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xelab_tb_phase_map.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xelab_tb_serializer_fault.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xelab_tb_system.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_model_map_128_focus_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_model_map_128_focus_115mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_model_map_128_focus_90mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_model_map_128_standing_wave_100mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_model_map_128_standing_wave_115mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_model_map_128_standing_wave_90mm.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_tb_core_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_tb_core_1.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_tb_core_2.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_tb_serializer_fault_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xsim_tb_system_0.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/evidence/validation/xvlog.log",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": false,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/coordinates_100mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/coordinates_105mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/coordinates_110mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/coordinates_115mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/coordinates_90mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/coordinates_95mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/coordinates_nominal.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/coordinates_nominal.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/geometry_summary.json",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_100mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_105mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_110mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_115mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_90mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_focus_95mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_100mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_105mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_110mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_115mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_90mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/hardware/mechanical/geometry_10mm/phase_map_standing_wave_95mm.csv",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    },
+    {
+      "path": "v1/requirements-lock.txt",
+      "author_matches_original_hash": true,
+      "checkout_matches_frozen_git_blob": true,
+      "normalized_text_matches": true
+    }
+  ],
+  "fix_applied": false,
+  "supported_route": "Full Git history and v2 sparse worktree; existing check_migration supports immutable parent Git object verification"
+}

@@ -16,7 +16,6 @@
     "shared/PROJECT_STATE.md",
     "shared/DECISIONS.md",
     "shared/ACCEPTANCE.md",
-    "README.md",
     "v2/README.md"
   ],
   "evidence": "v2/evidence/board_transport/summary.json",
@@ -55,5 +54,16 @@
   ],
   "python_tests": 112,
   "protocol_tests": 15,
-  "stage_self_check": "ACCEPT WITH LIMITATIONS"
+  "stage_self_check": "ACCEPT WITH LIMITATIONS",
+  "team_handoff": {
+    "guide": "指南.md",
+    "tag": "v2-board-transport-offline-20260929",
+    "engineering_source_unchanged": true,
+    "evidence": "evidence/engineering/handoff_20260929",
+    "setup_validation": "PASS_SUPPORTED_SPARSE_CHECKOUT",
+    "validation_source_commit": "b2aed93d89cc833ae8a32e9045ec56040f1de678",
+    "full_checkout_audit": "KNOWN_LIMITATION: 135 frozen v1 raw-byte hashes differ solely by CRLF/LF checkout normalization",
+    "supported_setup": "Full Git history with v2 sparse worktree; v1 Git objects retained",
+    "independent_machine": "NOT_VERIFIED"
+  }
 }

@@ -1,0 +1,63 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "version": "v2",
+  "stage": "BOARD_TRANSPORT_AND_PS_PL_INTEGRATION_PREFLIGHT",
+  "task": "TEAM_HANDOFF_PROGRESS_TAG",
+  "date": "2026-09-29",
+  "starting_commit": "b2aed93d89cc833ae8a32e9045ec56040f1de678",
+  "last_verified_engineering_source": "b7f285896f78334d66091328f46aa4f657504430",
+  "checkpoint_tag": "v2-board-transport-offline-20260929",
+  "ending_commit_resolution": "git rev-parse v2-board-transport-offline-20260929^{commit}",
+  "scope": "Root guide, navigation, engineering state metadata and handoff evidence; no functional source/RTL/PCB edits",
+  "changed_paths": [
+    "指南.md",
+    "README.md",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "shared/PROJECT_STATE.json",
+    "shared/ENGINEERING_STATE.json",
+    "evidence/engineering/handoff_20260929/"
+  ],
+  "supported_onboarding": "PASS: fresh GitHub full-history clone, v2 sparse worktree, new venv, same Windows host",
+  "full_checkout_audit": "FAIL: 135 frozen original CRLF byte hashes differ after LF-normalized checkout; all 135 verified line-ending-only",
+  "failure_evidence": [
+    "fresh_clone.json",
+    "repository_audit.log",
+    "full_checkout_line_endings.json"
+  ],
+  "pass_evidence": [
+    "supported_setup.json",
+    "repository_audit_sparse.log",
+    "python_tests.log",
+    "axi_bridge_tests.json",
+    "icarus.log",
+    "xsim.log"
+  ],
+  "python_tests": 112,
+  "protocol_tests": 15,
+  "rtl_simulators": [
+    "Icarus",
+    "Vivado 2025.2 XSim"
+  ],
+  "full_motion_regression": "NOT_RERUN; unchanged source retains preceding full regression and determinism evidence",
+  "synthesis_implementation": "NOT_RERUN; inherited candidate 132 MHz timing FAIL",
+  "hardware": "NOT_ACCESSED; identification history only, transport/target firmware/acoustics NOT_VERIFIED",
+  "source_changes": false,
+  "frozen_v1_changes": false,
+  "pcb_changes": false,
+  "open_issues": [
+    "B01 exact speed/temperature/full part",
+    "B03 board routing/VCCO/UART",
+    "P-20260927-001 core timing",
+    "B04 serializer/watchdog",
+    "B05/B06/B07 physical characterization",
+    "Full-checkout frozen-hash line-ending portability",
+    "Independent machine and independent review pending"
+  ],
+  "next_action": "Colleague reproduces supported offline setup; hardware owner resolves B01/B03; Chat/user reviews timing problem before architecture change",
+  "work_status": "OFF",
+  "release": "NOT_RELEASED",
+  "deployment": "NOT_DEPLOYED",
+  "self_check": "ACCEPT WITH LIMITATIONS",
+  "preexisting_untracked_preserved": "PCB/V1/project/SonoField-FPGA-v2-Schematic-V1-SingleSheet_backup/"
+}

@@ -1,0 +1,11 @@
+SonoField-FPGA v2 — board transport offline checkpoint / 团队交接
+
+Progress: OFFLINE_INTEGRATION_PASS. Active v2; frozen v1 intact.
+Verified engineering source: b7f285896f78334d66091328f46aa4f657504430.
+112 Python tests; C protocol core; AXI bridge in Icarus/XSim; full motion/calibration regression and standalone reproduction PASS.
+Resolved: XC7Z020/CLG400 photo identity, FT2232H/JTAG identification, package audit, gated transport/AXI implementation, calibration BRAM inference.
+Open: speed/temperature/full part; VCCO/connectors/UART routing; 132 MHz WNS -8.128/-4.995/-3.609 ns; serializer/watchdog and physical acoustic validation.
+Next: follow 根目录 指南.md, reproduce offline, review P-20260927-001, resolve board facts before separately gated smoke testing.
+This annotated tag is a progress snapshot, NOT a Release, deployment or hardware acceptance. No v3 or PCB changes.
+
+Onboarding: fresh GitHub clone + venv + full-history v2 sparse checkout PASS; full-checkout v1 raw-byte audit has 135 CRLF/LF-only mismatches, retained as a known limitation.
