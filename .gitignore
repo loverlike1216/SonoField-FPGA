@@ -23,3 +23,17 @@ v2/hardware/transducers/references/
 # Raw desktop captures can contain account and unrelated local workspace information.
 PCB/V1/log/screenshots/*.png
 PCB/V1/log/datasheet/vendor_files/
+
+# Reproducible local simulation products; retain summaries, logs, canonical gzip traces.
+v2/evidence/core_timing_real_loop/*regression/gui_*/rtl/
+v2/evidence/core_timing_real_loop/*regression/gui_*/trajectory_*.json
+v2/evidence/core_timing_real_loop/*regression/gui_*/*_motion_ack.txt
+v2/evidence/core_timing_real_loop/*regression/faults/*.vvp
+v2/evidence/core_timing_real_loop/*regression/faults/xsim.dir/
+
+# Model-continuity recovery run: retain real summaries/logs and compressed canonical traces.
+v2/evidence/core_timing_real_loop/recovery_*/regression*/gui_*/rtl/
+v2/evidence/core_timing_real_loop/recovery_*/regression*/gui_*/trajectory_*.json
+v2/evidence/core_timing_real_loop/recovery_*/regression*/gui_*/*_motion_ack.txt
+v2/evidence/core_timing_real_loop/recovery_*/regression*/faults/*.vvp
+v2/evidence/core_timing_real_loop/recovery_*/regression*/faults/xsim.dir/

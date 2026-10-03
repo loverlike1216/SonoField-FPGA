@@ -1,0 +1,8 @@
+Exception: E:\Codex_project\AMD-SonoField-FPGA\v2\scripts\board_smoke_test.ps1:20
+Line |
+  20 |  if($blockers.Count){throw ($blockers -join '; ')}
+     |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | REAL_UART_ROUTE_BLOCKED_BY_MISSING_EVIDENCE; MISSING_ps_preset_tcl; MISSING_ps_platform_xsa; MISSING_target_bsp;
+     | GATE_A_NOT_PASSED
+
+

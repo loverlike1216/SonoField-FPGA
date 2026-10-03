@@ -1,0 +1,21 @@
+{
+  "current_model": "GPT-6.1 Sol High",
+  "record_date": "2026-10-03",
+  "status": "PASS",
+  "reviewed_paths": 583,
+  "credential_findings": [],
+  "large_files": [],
+  "generated_binaries": [],
+  "interaction_redaction_findings": [],
+  "protected_files": 410,
+  "unexpected_protected_changes": [],
+  "evidence_justified_changes": {
+    "v2/software/ui/app.py": {
+      "before_sha256": "aa8d2df1e9dfa32801046d007e5fc1b76773a50f4159e6cf48d744f93b6d7db8",
+      "after_sha256": "3d240417e31d5657538ee504546bb9c980e39f55e2ac3867f16ea26b6836165d",
+      "reason": "GUI persisted current preview instead of the exact dispatched evaluated trajectory; new failure evidence and two provenance tests justify reversible local fix"
+    }
+  },
+  "privacy_scope": "Only project content and sanitized observable interactions; unrelated account/desktop content excluded. Reviewed own application screenshot.",
+  "limitations": "Pattern scan and manual project-content review cannot guarantee detection of every unknown credential."
+}

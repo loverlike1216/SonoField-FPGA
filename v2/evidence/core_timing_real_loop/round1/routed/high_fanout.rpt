@@ -1,0 +1,42 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Sep 29 13:30:21 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_high_fanout_nets -max_nets 20 -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/core_timing_real_loop/round1/routed/high_fanout.rpt
+| Design       : sono_axi_system
+| Device       : xc7z020
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+High Fan-out Nets Information
+
+1. Summary
+----------
+
++---------------------------------------------------+--------+-------------+
+| Net Name                                          | Fanout | Driver Type |
++---------------------------------------------------+--------+-------------+
+| native_system/digital/bank/reset_sync_reg[1]      |   6445 | LUT1        |
+| native_system/queue/rst_n_1                       |   2722 | LUT1        |
+| native_system/queue/request_pulse_i_1_n_0         |   2209 | LUT2        |
+| native_system/queue/queue[0][2175]_i_1_n_0        |   2208 | LUT3        |
+| native_system/queue/queue[1][2175]_i_1_n_0        |   2208 | LUT3        |
+| native_system/queue/queue[2][2175]_i_1_n_0        |   2208 | LUT3        |
+| native_system/queue/queue[3][2175]_i_1_n_0        |   2208 | LUT3        |
+| native_system/digital/bank/written1               |   2178 | LUT2        |
+| native_system/queue/bus_wdata1_n_98               |    724 | DSP48E1     |
+| native_system/queue/bus_wdata1_n_99               |    724 | DSP48E1     |
+| native_system/queue/bus_wdata1_n_100              |    308 | DSP48E1     |
+| native_system/queue/bus_wdata1_n_101              |    292 | DSP48E1     |
+| native_system/queue/bus_wdata1_n_102              |    202 | DSP48E1     |
+| native_system/queue/bus_wdata1_n_103              |    201 | DSP48E1     |
+| native_system/queue/bus_address_reg[2]_0          |    194 | LUT4        |
+| native_system/digital/adc/spi/reading_reg_0[0]    |    194 | LUT5        |
+| native_system/digital/master_phase_reg[0]_rep_n_0 |    178 | FDCE        |
+| native_system/digital/master_phase_reg[2]_rep_n_0 |    178 | FDCE        |
+| native_system/digital/master_phase_reg[1]_rep_n_0 |    178 | FDCE        |
+| native_system/digital/master_phase_reg[3]         |    177 | FDCE        |
++---------------------------------------------------+--------+-------------+
+
+

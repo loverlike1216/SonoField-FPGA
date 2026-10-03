@@ -1,0 +1,30 @@
+The system cannot find the path specified.
+
+Error: Unsupported option -help
+Please provide a valid option to continue.
+
+
+****** Xilinx Vitis Development Environment
+****** Vitis v2025.2 (64-bit)
+The system cannot find the path specified.
+****** SW Build 6295257 on 2025-11-13-08:29:30
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Syntax: vitis [-w | -i | -s | -h | -v]
+
+Options:
+  Launches New Vitis IDE (default option).  
+  -w/--workspace <workspace_location>
+         Launches Vitis IDE with the given workspace location.
+             Usage: $ vitis -w <workspace_location>
+  -i/--interactive
+         Launches Vitis python interactive shell.
+  -s/--source <python_script>
+         Runs the given python script.
+             Usage: $ vitis -s <python_script>
+  -h/--help
+         Display help message.
+  -v/--version
+         Display version message.

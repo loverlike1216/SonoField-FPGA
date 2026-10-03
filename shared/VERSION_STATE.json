@@ -1,6 +1,6 @@
 {
   "active_version": "v2",
-  "highest_version": "v2",
+  "highest_version": "v3",
   "status": "ACTIVE",
   "upgrade_pending": false,
   "pending_target": null,
@@ -9,5 +9,9 @@
   ],
   "legacy_versions": [],
   "version_directory": "v2",
-  "approval_source": "User attachment v2_formal_development.md sections 1 and 75; approval already granted"
+  "approval_source": "Latest user instruction pauses v3 and explicitly reactivates v2; v1 remains frozen",
+  "paused_versions": [
+    "v3"
+  ],
+  "v3_baseline": "INCOMPLETE_USER_PAUSED"
 }

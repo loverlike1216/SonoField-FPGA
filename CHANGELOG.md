@@ -100,3 +100,17 @@ ADC roundtrip and deterministic/noise evidence. Frozen v1 unchanged. No PCB or h
 - Consolidated83modules into one named, partitioned sheet; exported vector PDF/SVG and corrected ADC label alignment.
 - Native3992-pin and independent1338-pin mapping audits pass;212 frozen v1 files unchanged. ERC45warnings retained and classified.
 - Electrical release remains REVISE; no PCB or hardware result. Persisted pwsh preference and observable interaction checkpoint.
+
+## 2026-10-03 — v2 engineering continuity checkpoint
+
+Current model provenance: GPT-6.1 Sol High, selected manually by the user. Persisted MODEL_TRANSITION while preserving old transcripts, decisions, model provenance and all frozen v1/PCB/paused-v3 content. No version or architecture change follows from the transition.
+
+Continued the pending v2 bounded timing checkpoint: original phase and burst formulas replaced with exact rational accumulation, zero external cycle-latency change; independent Icarus/XSim equivalence PASS. Two Vivado2025.2 placement/routing rounds remain FAIL; latest WNS -4.515ns,TNS -6007.936ns. Clock/throughput screens reject an arbitrary reduction; production remains132/66MHz. Safe internal AXI leaf passed both simulators; physical PS build/UART/deployment remain blocked. P-20260929-001 records the next selector/control timing decision.
+
+Kept the interrupted final GUI retry and original successful regression unchanged; recovery validation is a new run under v2/evidence/core_timing_real_loop/recovery_20261003. No bitstream download, external output, release or physical levitation claim.
+
+- New recovery gate retained a real GUI artifact FAIL despite matching motion execution hashes. Fixed evidence persistence to save the dispatched evaluated trajectory and reject digest mismatches; added two provenance tests. This is a new-evidence-based local correction, not a model-driven architecture or timing refactor.
+- Applied user replacement collaboration rules and explicit CONTEXT_CHECKPOINT recovery protocol; active memory/next work covers v2 single-board control only.
+
+
+Current validation update — 2026-10-03, GPT-6.1 Sol High: fixed-source recovery PASS,114Python tests,3696TRAP_VALID frames,threeIcarus/oneVivadoXSim matching canonical hashes,calibration/ADC and frozen-parent gates. Saved-preview defect fixed and failure retained. Routed Gate A remains FAIL; physical PS/PL and acoustic operation NOT_RUN. Acceptance thresholds unchanged.

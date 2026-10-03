@@ -60,16 +60,22 @@ module sono_digital_system #(
  burst_generator #(.CLOCK_HZ(CLOCK_HZ)) burst(.clk(clk),.rst_n(core_rst),.start(burst_start),
   .abort(cal_abort),.frequency(cfg[REG_FREQUENCY/4]),.cycles(cfg[REG_BURST_CYCLES/4]),
   .start_phase(cfg[REG_START_PHASE/4][7:0]),.active(burst_active),.done(burst_done),.waveform(burst_wave));
- reg[31:0] carrier_acc;reg[7:0] previous_phase;reg boundary;
- wire[32:0] next_acc={1'b0,carrier_acc}+cfg[REG_FREQUENCY/4];
- wire[39:0] phase_scaled={carrier_acc,8'b0};
- wire[7:0] master_phase=phase_scaled/CLOCK_HZ;
+ // Exact rational phase: phase + remainder/CLOCK_HZ advances by
+ // 256*frequency/CLOCK_HZ. This equals floor(256*carrier_acc/CLOCK_HZ)
+ // on every cycle, including legal live frequency changes; no pipeline delay.
+ localparam integer PHASE_ACC_BITS=$clog2(CLOCK_HZ);
+ reg[PHASE_ACC_BITS-1:0] phase_remainder;
+ reg[7:0] master_phase,previous_phase;reg boundary;
+ // REG_FREQUENCY is range-checked to 38500..41500 before publication.
+ wire[PHASE_ACC_BITS:0] phase_sum={1'b0,phase_remainder}+{cfg[REG_FREQUENCY/4][15:0],8'b0};
+ wire phase_advance=phase_sum>=CLOCK_HZ;
  wire tick=master_phase!=previous_phase;
  always @(posedge clk or negedge core_rst)
-  if(!core_rst)begin carrier_acc<=0;previous_phase<=0;boundary<=0;end
+  if(!core_rst)begin phase_remainder<=0;master_phase<=0;previous_phase<=0;boundary<=0;end
   else begin
-   previous_phase<=master_phase;boundary<=next_acc>=CLOCK_HZ;
-   if(next_acc>=CLOCK_HZ)carrier_acc<=next_acc-CLOCK_HZ;else carrier_acc<=next_acc;
+   previous_phase<=master_phase;boundary<=phase_advance&&(&master_phase);
+   if(phase_advance)begin phase_remainder<=phase_sum-CLOCK_HZ;master_phase<=master_phase+1'b1;end
+   else phase_remainder<=phase_sum;
   end
  wire write_ready,pending,commit_ack,map_valid;
  assign motion_map_ack=commit_ack;

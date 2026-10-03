@@ -1,0 +1,143 @@
+{
+  "profiles": [
+    {
+      "core_mhz": 132.0,
+      "shift_mhz": 66.0,
+      "minimum_phase_interval_cycles": 12,
+      "serializer_required_cycles": 11,
+      "throughput_pass": true,
+      "throughput_margin_percent": 12.95180722891567,
+      "mmcm_drc_errors": false,
+      "mmcm_scope": "Synthesized primitive ratios checked; ZPS7-1 warning; NOT board clock qualification",
+      "fixed_route_screen": {
+        "wns_ns": -4.515,
+        "tns_ns": -6007.936,
+        "setup_failing_endpoints": 9921.0,
+        "total_endpoints": 33361.0,
+        "whs_ns": 0.07,
+        "ths_ns": 0.0,
+        "report": "timing_refactor/trade/screen_132.0MHz.rpt"
+      }
+    },
+    {
+      "core_mhz": 123.75,
+      "shift_mhz": 61.875,
+      "minimum_phase_interval_cycles": 11,
+      "serializer_required_cycles": 11,
+      "throughput_pass": true,
+      "throughput_margin_percent": 5.8923192771084265,
+      "mmcm_drc_errors": false,
+      "mmcm_scope": "Synthesized primitive ratios checked; ZPS7-1 warning; NOT board clock qualification",
+      "fixed_route_screen": {
+        "wns_ns": -4.01,
+        "tns_ns": -2394.848,
+        "setup_failing_endpoints": 4565.0,
+        "total_endpoints": 33361.0,
+        "whs_ns": 0.07,
+        "ths_ns": 0.0,
+        "report": "timing_refactor/trade/screen_123.75MHz.rpt"
+      }
+    },
+    {
+      "core_mhz": 121.0,
+      "shift_mhz": 60.5,
+      "minimum_phase_interval_cycles": 11,
+      "serializer_required_cycles": 11,
+      "throughput_pass": true,
+      "throughput_margin_percent": 3.539156626506035,
+      "mmcm_drc_errors": false,
+      "mmcm_scope": "Synthesized primitive ratios checked; ZPS7-1 warning; NOT board clock qualification",
+      "fixed_route_screen": {
+        "wns_ns": -3.827,
+        "tns_ns": -1691.737,
+        "setup_failing_endpoints": 3174.0,
+        "total_endpoints": 33361.0,
+        "whs_ns": 0.07,
+        "ths_ns": 0.0,
+        "report": "timing_refactor/trade/screen_121.0MHz.rpt"
+      }
+    },
+    {
+      "core_mhz": 118.8,
+      "shift_mhz": 59.4,
+      "minimum_phase_interval_cycles": 11,
+      "serializer_required_cycles": 11,
+      "throughput_pass": true,
+      "throughput_margin_percent": 1.6566265060240948,
+      "mmcm_drc_errors": false,
+      "mmcm_scope": "Synthesized primitive ratios checked; ZPS7-1 warning; NOT board clock qualification",
+      "fixed_route_screen": {
+        "wns_ns": -3.673,
+        "tns_ns": -1266.988,
+        "setup_failing_endpoints": 2337.0,
+        "total_endpoints": 33361.0,
+        "whs_ns": 0.07,
+        "ths_ns": 0.0,
+        "report": "timing_refactor/trade/screen_118.8MHz.rpt"
+      }
+    },
+    {
+      "core_mhz": 115.5,
+      "shift_mhz": 57.75,
+      "minimum_phase_interval_cycles": 10,
+      "serializer_required_cycles": 11,
+      "throughput_pass": false,
+      "throughput_margin_percent": -1.167168674698793,
+      "mmcm_drc_errors": false,
+      "mmcm_scope": "Synthesized primitive ratios checked; ZPS7-1 warning; NOT board clock qualification",
+      "fixed_route_screen": {
+        "wns_ns": -3.433,
+        "tns_ns": -831.974,
+        "setup_failing_endpoints": 1400.0,
+        "total_endpoints": 33361.0,
+        "whs_ns": 0.07,
+        "ths_ns": 0.0,
+        "report": "timing_refactor/trade/screen_115.5MHz.rpt"
+      }
+    },
+    {
+      "core_mhz": 99.0,
+      "shift_mhz": 49.5,
+      "minimum_phase_interval_cycles": 9,
+      "serializer_required_cycles": 11,
+      "throughput_pass": false,
+      "throughput_margin_percent": -15.286144578313255,
+      "mmcm_drc_errors": false,
+      "mmcm_scope": "Synthesized primitive ratios checked; ZPS7-1 warning; NOT board clock qualification",
+      "fixed_route_screen": {
+        "wns_ns": -1.99,
+        "tns_ns": -30.337,
+        "setup_failing_endpoints": 23.0,
+        "total_endpoints": 33361.0,
+        "whs_ns": 0.07,
+        "ths_ns": 0.0,
+        "report": "timing_refactor/trade/screen_99.0MHz.rpt"
+      }
+    },
+    {
+      "core_mhz": 82.5,
+      "shift_mhz": 41.25,
+      "minimum_phase_interval_cycles": 7,
+      "serializer_required_cycles": 11,
+      "throughput_pass": false,
+      "throughput_margin_percent": -29.405120481927717,
+      "mmcm_drc_errors": false,
+      "mmcm_scope": "Synthesized primitive ratios checked; ZPS7-1 warning; NOT board clock qualification",
+      "fixed_route_screen": {
+        "wns_ns": 0.03,
+        "tns_ns": 0.0,
+        "setup_failing_endpoints": 0.0,
+        "total_endpoints": 33361.0,
+        "whs_ns": 0.07,
+        "ths_ns": 0.0,
+        "report": "timing_refactor/trade/screen_82.5MHz.rpt"
+      }
+    }
+  ],
+  "minimum_core_hz": 116864000,
+  "formula": "41500 Hz * 256 phase states * (2*4 shift edges + LATCH + FINISH + new IDLE capture)",
+  "scope": "Fixed-route STA diagnostic only, no fresh implementation at alternate frequencies",
+  "official_clock_profile_changed": false,
+  "selected_core_hz": 132000000,
+  "selected_shift_hz": 66000000
+}

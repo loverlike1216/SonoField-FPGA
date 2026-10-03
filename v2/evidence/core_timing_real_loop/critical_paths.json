@@ -1,0 +1,162 @@
+{
+  "round2_worst_paths": [
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[15]/D",
+      "slack": "-4.515",
+      "delay": "12.039",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[7]/D",
+      "slack": "-4.511",
+      "delay": "12.078",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[0]/D",
+      "slack": "-4.385",
+      "delay": "11.952",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[5]/D",
+      "slack": "-4.381",
+      "delay": "11.948",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[10]/D",
+      "slack": "-4.376",
+      "delay": "11.945",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[12]/D",
+      "slack": "-4.372",
+      "delay": "11.943",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[9]/D",
+      "slack": "-4.372",
+      "delay": "11.939",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[6]/D",
+      "slack": "-4.365",
+      "delay": "11.932",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[2]/D",
+      "slack": "-4.357",
+      "delay": "11.880",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[4]/D",
+      "slack": "-4.357",
+      "delay": "11.924",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[13]/D",
+      "slack": "-4.324",
+      "delay": "11.848",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[8]/D",
+      "slack": "-4.314",
+      "delay": "11.881",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[1]/D",
+      "slack": "-4.256",
+      "delay": "11.779",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[14]/D",
+      "slack": "-4.206",
+      "delay": "11.777",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[11]/D",
+      "slack": "-4.203",
+      "delay": "11.774",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[3]/D",
+      "slack": "-4.014",
+      "delay": "11.581",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/queue/channel_reg[11]_replica/C",
+      "endpoint": "native_system/queue/bus_wdata_reg[16]/D",
+      "slack": "-3.929",
+      "delay": "11.500",
+      "logic_levels": "8"
+    },
+    {
+      "startpoint": "native_system/digital/reset_sync_reg[1]/C",
+      "endpoint": "native_system/digital/bank/active_calibration_reg[65][5]/CLR",
+      "slack": "-2.530",
+      "delay": "9.703",
+      "logic_levels": "1"
+    },
+    {
+      "startpoint": "native_system/digital/reset_sync_reg[1]/C",
+      "endpoint": "native_system/digital/bank/active_calibration_reg[65][6]/CLR",
+      "slack": "-2.530",
+      "delay": "9.703",
+      "logic_levels": "1"
+    },
+    {
+      "startpoint": "native_system/digital/reset_sync_reg[1]/C",
+      "endpoint": "native_system/digital/bank/active_requested_reg[65][5]/CLR",
+      "slack": "-2.530",
+      "delay": "9.703",
+      "logic_levels": "1"
+    }
+  ],
+  "failing_path_count": 9921,
+  "endpoint_pin_classes": {
+    "D": 418,
+    "CLR": 1502,
+    "PRE": 8,
+    "CE": 7993
+  },
+  "original_synthesis": {
+    "wns_ns": -8.128,
+    "tns_ns": -2868.007,
+    "setup_failing_endpoints": 491.0,
+    "total_endpoints": 33396.0,
+    "whs_ns": 0.164,
+    "ths_ns": 0.0,
+    "report": "baseline/synthesis/timing_summary.rpt"
+  },
+  "critical_source": "rtl/motion/motion_queue.sv: active[channel*17+:17], integer channel",
+  "hypothesis": "Overwide variable index and selection; remaining CE fanout and internal async reset recovery paths need separate review"
+}

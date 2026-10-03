@@ -41,10 +41,22 @@ def main():
     for name in required:
         if not (REPO/name).is_file():errors.append("Missing "+name)
     versions=json.loads((REPO/"shared/VERSION_STATE.json").read_text(encoding="utf-8"))
-    if versions["active_version"]!="v2" or versions["highest_version"]!="v2":errors.append("Unexpected version")
+    paused_v3 = versions.get("paused_versions") == ["v3"] and versions.get("v3_baseline") == "INCOMPLETE_USER_PAUSED"
+    expected_highest = "v3" if paused_v3 else "v2"
+    if versions["active_version"]!="v2" or versions["highest_version"]!=expected_highest:errors.append("Unexpected version")
     if versions["upgrade_pending"] or versions["legacy_versions"]:errors.append("Unexpected version migration state")
     actual_versions=sorted(p.name for p in REPO.iterdir() if p.is_dir() and re.fullmatch(r"v[0-9]+",p.name))
-    if actual_versions not in (["v1","v2"],["v2"]):errors.append("Only frozen v1 and active v2 are allowed")
+    allowed={"v1","v2"} | ({"v3"} if paused_v3 else set())
+    if "v2" not in actual_versions or not set(actual_versions)<=allowed:errors.append("Unexpected version directory")
+    if paused_v3:
+        pause=json.loads((REPO/"shared/versions/v3_pause.json").read_text(encoding="utf-8"))
+        if pause["status"]!="USER_PAUSED":errors.append("Missing user pause checkpoint")
+        if (REPO/"v3").is_dir():
+            for name,digest in pause["files"].items():
+                p=REPO/name
+                # Git LF normalization is allowed for the preserved draft, not content changes.
+                raw=p.read_text(encoding="utf-8").encode("utf-8") if p.is_file() else b""
+                if hashlib.sha256(raw).hexdigest()!=digest:errors.append("Paused v3 changed: "+name)
     if versions["frozen_versions"] != ["v1"]:errors.append("Parent freeze missing")
     migration=audit_migration(); errors.extend(migration["errors"])
     for base in (ROOT,REPO):

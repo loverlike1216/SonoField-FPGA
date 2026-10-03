@@ -1,0 +1,17 @@
+{
+  "current_model": "GPT-6.1 Sol High",
+  "status": "REVIEWED_WITH_KNOWN_BLOCKERS",
+  "markers": "rg production RTL/software/tests inspected",
+  "implemented_core": "Real PL phase/calibration/ADC/motion, Python solver and actual simulator execution",
+  "test_doubles": "Explicit UNIT_TEST_DOUBLE confined to unit safety/queue tests; full core regression uses real RTL tools",
+  "safe_leaf": "Actual sono_axi_system with external enables disabled, not a deployed complete PS block design",
+  "missing_production_path": [
+    "reviewed PS platform and ARM firmware deployment",
+    "verified UART physical route",
+    "routed timing closure",
+    "external driver/electrical/acoustic hardware qualification"
+  ],
+  "core_tests_not_skipped": true,
+  "timing_or_test_thresholds_weakened": false,
+  "review_acceptance": "PENDING_INDEPENDENT_REVIEW"
+}

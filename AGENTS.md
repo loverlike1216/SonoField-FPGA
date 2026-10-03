@@ -4,51 +4,24 @@ Project SONOFIELD_FPGA; repository loverlike1216/SonoField-FPGA; branch main.
 Workspace E:\Codex_project\AMD-SonoField-FPGA. Active version v2; engineering root v2/.
 The user-provided personalized rules govern execution. This file is their project-specific application.
 
-## Current governance — 2026-09-27-r1
+## Current governance — replacement rules 2026-10-03
 
-- Current handoff (2026-09-29): user explicitly authorizes root 指南.md, matching entry/state updates,
-  an annotated progress tag and normal GitHub sync. This is a documentation handoff, not new RTL scope,
-  Work startup, v3, Release or hardware programming. Current engineering facts: shared/PROJECT_STATE.json
-  and v2/evidence/board_transport/RESULT.md. Earlier stage authorizations below are historical.
+The user's latest replacement policy supersedes prior AGENTS instructions. Source: AI-interaction-memory/codex/instructions/codex_engineering_rules_20261003.md. Codex maintains engineering facts, current plans, decisions, checkpoints and observable interaction records. No separate documentation agent is needed. Do not fabricate external ChatGPT history or decisions.
 
-- The user's latest Chat/Codex/Work policy supersedes older workflow text below.
-- Codex owns engineering sources, tests, configuration, Git, engineering evidence and machine state.
-- Work owns general narrative docs, formal decision persistence and AI memories. Work is OFF unless
-  the user explicitly starts it. Do not spawn auxiliary agents or claim independent Chat acceptance.
-- The current user instruction authorizes continuing v2 at INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL.
-  Its sections 64 and 67 explicitly authorize the six v2/docs/motion documents and interaction records
-  as a task-specific exception. This does not authorize broad edits to Work-owned plans or memories.
-- Engineering checkpoint authority: evidence/engineering/motion/EXECUTION_CONTRACT.md.
-- Keep PCB files and frozen v1 untouched. No v3, deployment, release or fabricated board constraints.
-- Default all Windows orchestration to pwsh (PowerShell 7). No automatic PowerShell 5.1 fallback.
-- Mark stale general narratives DOCUMENTATION_UPDATE_REQUIRED; use canonical engineering state.
+Primary scope is v2 single Robei octagonal Zynq-7020 acoustic control; stage CORE_TIMING_CLOSURE_AND_REAL_PS_PL_SMOKE_TEST. Latest formal execution contract and user approval remain in v2/evidence/core_timing_real_loop/EXECUTION_CONTRACT.md and decision P-20260927-001. Two timing rounds are exhausted; Gate A FAIL. P-20260929-001 is the next bounded timing proposal, not an approved third round. No PCB changes, unknown GPIO, UART transmission or failing-design deployment.
 
-- Preflight local/remote Git, shared/PROJECT_STATE.json, VERSION_STATE.json, plan, decisions, blockers,
-  acceptance, AI-chat-memory/INDEX.md, AI-interaction-memory/INDEX.md and open AI-problem records before changes.
-- Continue means the current version. Stages do not create versions. No v3 without explicit user approval.
-- Root holds cross-version state and AI coordination. v2 holds runnable sources, tests, scripts,
-  dependencies, technical docs, hardware and evidence. Run engineering commands from v2.
-- User approved same-version layout cleanup and removal of obsolete records from current tree.
-  Keep Git history. Future version upgrades copy reusable content and freeze the old version intact.
-- Update execution contract before major changes; baseline, implement, run, cross-check, save engineering
-  evidence/state, commit/push and verify remote. Work updates shared/HANDOFF when authorized.
-  Never weaken tests for PASS.
-- Stable module names stay stable. Directory changes require full path/build/EDA/test regression.
-- Chat source is SonoField-FPGA. Verify real reader capability before importing history. BLOCKED means
-  no fabricated transcript or decision. Current Codex messages are not external ChatGPT history.
-- Major unresolved decisions use AI-problem/problem; decisions require actual source, matching ID,
-  body SHA256 and active version. User remains authority for versions/cost/publication/major scope.
-- Preserve root Zynq7020 user references; constrain files have user-selected precedence.
-  Do not guess device ordering code, pins, clock, bank VCCO or IO standards. No invented XDC/bitstream.
-- Vivado 2025.2 is authoritative. Keep simulation, synthesis, implementation and hardware distinct.
-- Never directly drive transducers from FPGA. No physical levitation claim without measurements.
-- Requested and calibration phase stay separate; complete maps commit atomically.
-- Inspect sensitive/licensed/private files before push. No release/deploy/visibility change without approval.
-- Final review result: ACCEPT / ACCEPT WITH LIMITATIONS / REVISE, scoped to the reviewed work.
-  Whole-platform acceptance is external; hardware blockers prohibit claiming full project ACCEPT.
+On recovery, read README/AGENTS, PROJECT_STATE, VERSION_STATE, CONTEXT_CHECKPOINT, CURRENT_PLAN, DECISIONS, BLOCKERS, ACCEPTANCE, latest evidence, open problems and Git status/diff/HEAD/origin. Read interaction indexes only as needed. Real facts prevail over stale plans or model inference.
+
+Create reconciled CONTEXT_CHECKPOINT.md/json and historical context-checkpoints after substantial validation, decisions, handoff or pause. Record identity, source commit, architecture, completed/verified states, next actions, blockers, limits, Do Not Change, invariants and evidence. Checkpoints never change versions or acceptance.
+
+Continue means current v2. Preserve frozen v1 and historical artifacts. No new version, repository, core architecture/interface/hardware change, important data deletion, force push, history rewrite, release, deployment, visibility change or significant costs without required user approval. Ordinary reversible fixes within current contract are autonomous. No sub-agent work is requested.
+
+Preserve 128-channel/8-bit capability, requested/calibration separation, atomic maps, common clock, register/packet/channel formats, safety behavior, motion cadence and zero added latency of the current refactors. Production remains132MHz core/66MHz shift pending valid quantitative decision. Conservative-1 is an engineering assumption, physical grade UNKNOWN. Gate B needs Gate A plus actual UART/PS facts. No guessed board constraints.
+
+Use pwsh7 for Windows orchestration, Tcl inside Vivado2025.2. Preserve failures and thresholds; keep generated products separate. Diff/secret/privacy review, commit, push, verify remote and publish checkpoint after significant work. Final acceptance is independent; simulation is not hardware.
 
 ## Observable interaction checkpoints
-- Interaction memory is Work-owned by default; only use a current explicit user exception to persist it as Codex.
+- Codex persists observable interaction memory under the latest replacement rules.
 - Read its INDEX at preflight. If authorized, use AI-interaction-memory/tools/sync_codex.py with the verified rollout before
   stage/session commit; capture the previous final response at the next checkpoint. No background hook is installed.
 - Keep only actual observable messages. Never export reasoning, analysis, compaction summaries, system/developer
@@ -72,3 +45,13 @@ Contract: PCB/V1/log/preflight/EXECUTION_CONTRACT.md. Native EDA results must be
 
 ## Windows terminal preference
 Default to PowerShell 7 (`pwsh`) for all Windows commands. Do not use Windows PowerShell 5.1 unless the user explicitly requests another terminal or a documented dependency requires 5.1. Long-term preference explicitly requested 2026-09-26.
+
+## Model continuity — 2026-10-03
+
+User manually selected **GPT-6.1 Sol High**, replacing GPT-6 Astra High for subsequent work. Record this user-declared current model in new orchestration evidence, analyses, interaction events and state metadata. Preserve historical model provenance and native tool logs; use sidecars for generated outputs. Source: AI-interaction-memory/codex/I-20261003-0001__model-transition.md; metadata: shared/MODEL_ENVIRONMENT.json.
+
+A model switch never authorizes version, stage, architecture, interface, parameter or Acceptance changes. Continue existing v2 single-board engineering state. New code/tool evidence or an explicit requirement change is needed to revise a valid technical decision. Follow the latest replacement ownership and checkpoint policy. The user explicitly authorizes Codex to persist this MODEL_TRANSITION event and its matching configuration/index.
+
+## Active recovery context — 2026-10-03
+
+Current model: GPT-6.1 Sol High. Active project memory and next actions cover **v2 single Robei octagonal Zynq-7020 acoustic control only**. User requested removal of inactive-project reminders from recovery memory. Do not load inactive source directories or propose their continuation. Preserve original historical evidence and user quotations. Focus event: AI-interaction-memory/codex/I-20261003-0002__v2-focus.md.

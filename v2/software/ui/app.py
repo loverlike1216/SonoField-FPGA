@@ -1,5 +1,6 @@
 """Run with python -m software.ui.app from v2. Built-in Tk avoids a new GUI dependency."""
 import argparse
+import copy
 import json
 import queue
 import threading
@@ -99,7 +100,11 @@ class App:
         def work():
             try:
                 result=self.model.dispatch(packet,prepared_path=path)
-                self.events.put(('done',(command,result,callback)))
+                # A later preview may replace self.preview_path before the UI polls.
+                # Persist the exact path handed to dispatch, after its evaluation.
+                executed_path=copy.deepcopy(path) if path is not None else None
+                execution=copy.deepcopy(self.model.last_result)
+                self.events.put(('done',(command,result,callback,execution,executed_path)))
             except Exception as exc:self.events.put(('error',str(exc)))
         self.worker=threading.Thread(target=work,daemon=True);self.worker.start();self.refresh()
 
@@ -176,6 +181,20 @@ class App:
         self.confirm.configure(state='normal' if s['state']=='WAIT_OPERATOR' else 'disabled')
         self.send.configure(state='normal' if self.model.confirmed and self.preview_path and not self.model.busy else 'disabled')
 
+    def record_execution(self,command,execution,executed_path):
+        if not execution or command in ('CONNECT','LOAD_CALIBRATION','GET_STATUS','BALL_AT_CENTER_CONFIRMED'):
+            return
+        if executed_path is not None and digest(executed_path)!=execution['trajectory_sha256']:
+            raise RuntimeError('EXECUTED_TRAJECTORY_HASH_MISMATCH')
+        index=len(self.results);self.results.append({'command':command,**execution})
+        if executed_path is not None:
+            (self.output/f'trajectory_{index:02d}.json').write_text(json.dumps(executed_path,separators=(',',':')))
+        # Preserve actual per-command RTL ACKs before the next execution replaces them.
+        import shutil
+        for name in ('motion_ack.txt','run.log','xsim.log'):
+            src=self.output/'rtl'/name
+            if src.exists():shutil.copy2(src,self.output/f'{index:02d}_{name}')
+
     def poll(self):
         try:
             while True:
@@ -185,16 +204,8 @@ class App:
                     if self.automated:
                         (self.output/'gui_failure.json').write_text(json.dumps({'error':value}));self.root.after(500,self.close)
                 else:
-                    command,result,callback=value;self.note(command+' PASS');self.refresh()
-                    if self.model.last_result and command not in ('CONNECT','LOAD_CALIBRATION','GET_STATUS','BALL_AT_CENTER_CONFIRMED'):
-                        index=len(self.results);self.results.append({'command':command,**self.model.last_result})
-                        if self.preview_path:
-                            (self.output/f'trajectory_{index:02d}.json').write_text(json.dumps(self.preview_path,separators=(',',':')))
-                        # Preserve actual per-command RTL ACKs before the next execution replaces them.
-                        import shutil
-                        for name in ('motion_ack.txt','run.log','xsim.log'):
-                            src=self.output/'rtl'/name
-                            if src.exists():shutil.copy2(src,self.output/f'{index:02d}_{name}')
+                    command,result,callback,execution,executed_path=value;self.note(command+' PASS');self.refresh()
+                    self.record_execution(command,execution,executed_path)
                     if callback:self.root.after(50,callback)
         except queue.Empty:pass
         self.refresh();self.root.after(150,self.poll)

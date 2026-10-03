@@ -53,3 +53,14 @@ must not be interpreted as physical levitation, absolute force, board timing or 
 ## Current schematic V1 gate — 2026-09-26
 Native single sheet,1561components/381texts; PDF and SVG: PASS.3992-pin intent audit and1338 independent channel/return checks: PASS. Save/reopen: PASS. Frozen v1:212/212unchanged. Native strict ERC:0fatal/0error/45warnings, classified and retained.
 Electrical release: REVISE. B01/B03/B04, independent watchdog/power qualification, MPN/package and physical AFE/batch gates remain OPEN. No FPGA synthesis, PCB implementation or hardware test executed in this schematic iteration. Earlier software acceptance is a different scope.
+
+## Current v2 gate — CORE_TIMING_CLOSURE_AND_REAL_PS_PL_SMOKE_TEST
+
+Recorded 2026-10-03 by GPT-6.1 Sol High; criteria are the user's existing formal instruction, not a model-driven revision.
+
+Gate A requires real post-route WNS/WHS >=0 and TNS/THS=0 plus full functional regression, preserving all existing semantics and throughput. Round2 real routed results: WNS -4.515 ns,TNS -6007.936 ns,WHS +0.070 ns,THS0.000 ns. Gate A FAIL. Gate B additionally requires verified physical UART route, real PS firmware, PC↔PS↔AXI↔PL exchange,1000PING/PONG, version/status/read/safe-write/disconnect evidence and no external acoustic output. Gate B NOT_RUN.
+
+Scope result remains REVISE pending timing closure and real transport evidence. Model-transition continuity is a separate administrative check and never accepts the physical platform. Current recovery result: v2/evidence/core_timing_real_loop/recovery_20261003/summary.json.
+
+
+Current validation update — 2026-10-03, GPT-6.1 Sol High: fixed-source recovery PASS,114Python tests,3696TRAP_VALID frames,threeIcarus/oneVivadoXSim matching canonical hashes,calibration/ADC and frozen-parent gates. Saved-preview defect fixed and failure retained. Routed Gate A remains FAIL; physical PS/PL and acoustic operation NOT_RUN. Acceptance thresholds unchanged.

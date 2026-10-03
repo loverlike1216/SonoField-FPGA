@@ -1,0 +1,1405 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Sep 29 13:34:59 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 20 -nworst 1 -path_type full_clock_expanded -input_pins -nets -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/core_timing_real_loop/round2/placed/critical_paths.rpt
+| Design       : sono_axi_system
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Fully Placed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -4.219ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.786ns  (logic 5.255ns (44.587%)  route 6.531ns (55.413%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.260     7.223    native_system/queue/bus_wdata1_n_99
+    SLICE_X35Y128                                                     r  native_system/queue/bus_wdata[16]_i_341/I2
+    SLICE_X35Y128        LUT6 (Prop_lut6_I2_O)        0.124     7.347 r  native_system/queue/bus_wdata[16]_i_341/O
+                         net (fo=2, estimated)        0.936     8.283    native_system/queue/bus_wdata[16]_i_341_n_0
+    SLICE_X39Y127                                                     r  native_system/queue/bus_wdata[9]_i_29/I0
+    SLICE_X39Y127        LUT6 (Prop_lut6_I0_O)        0.124     8.407 r  native_system/queue/bus_wdata[9]_i_29/O
+                         net (fo=3, estimated)        0.790     9.197    native_system/queue/bus_wdata[9]_i_29_n_0
+    SLICE_X49Y128                                                     r  native_system/queue/bus_wdata[5]_i_19/I1
+    SLICE_X49Y128        LUT6 (Prop_lut6_I1_O)        0.124     9.321 r  native_system/queue/bus_wdata[5]_i_19/O
+                         net (fo=4, estimated)        0.877    10.198    native_system/queue/bus_wdata[5]_i_19_n_0
+    SLICE_X53Y127                                                     r  native_system/queue/bus_wdata[4]_i_9/I1
+    SLICE_X53Y127        LUT6 (Prop_lut6_I1_O)        0.124    10.322 r  native_system/queue/bus_wdata[4]_i_9/O
+                         net (fo=1, estimated)        0.835    11.157    native_system/queue/data6[4]
+    SLICE_X58Y127                                                     r  native_system/queue/bus_wdata[4]_i_4/I1
+    SLICE_X58Y127        LUT6 (Prop_lut6_I1_O)        0.124    11.281 r  native_system/queue/bus_wdata[4]_i_4/O
+                         net (fo=1, estimated)        0.405    11.686    native_system/queue/bus_wdata[4]_i_4_n_0
+    SLICE_X59Y127                                                     r  native_system/queue/bus_wdata[4]_i_2/I2
+    SLICE_X59Y127        LUT5 (Prop_lut5_I2_O)        0.124    11.810 r  native_system/queue/bus_wdata[4]_i_2/O
+                         net (fo=1, estimated)        0.797    12.607    native_system/queue/bus_wdata[4]_i_2_n_0
+    SLICE_X59Y128                                                     r  native_system/queue/bus_wdata[4]_i_1/I2
+    SLICE_X59Y128        LUT4 (Prop_lut4_I2_O)        0.152    12.759 r  native_system/queue/bus_wdata[4]_i_1/O
+                         net (fo=1, routed)           0.000    12.759    native_system/queue/p_2_out[4]
+    SLICE_X59Y128        FDCE                                         r  native_system/queue/bus_wdata_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X59Y128        FDCE                                         r  native_system/queue/bus_wdata_reg[4]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X59Y128        FDCE (Setup_fdce_C_D)        0.075     8.540    native_system/queue/bus_wdata_reg[4]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                         -12.759    
+  -------------------------------------------------------------------
+                         slack                                 -4.219    
+
+Slack (VIOLATED) :        -4.217ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.784ns  (logic 5.255ns (44.594%)  route 6.529ns (55.406%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.450     7.413    native_system/queue/bus_wdata1_n_99
+    SLICE_X44Y128                                                     r  native_system/queue/bus_wdata[16]_i_358/I2
+    SLICE_X44Y128        LUT6 (Prop_lut6_I2_O)        0.124     7.537 r  native_system/queue/bus_wdata[16]_i_358/O
+                         net (fo=2, estimated)        0.724     8.261    native_system/queue/bus_wdata[16]_i_358_n_0
+    SLICE_X41Y129                                                     r  native_system/queue/bus_wdata[10]_i_30/I1
+    SLICE_X41Y129        LUT6 (Prop_lut6_I1_O)        0.124     8.385 r  native_system/queue/bus_wdata[10]_i_30/O
+                         net (fo=3, estimated)        0.892     9.277    native_system/queue/bus_wdata[10]_i_30_n_0
+    SLICE_X46Y128                                                     r  native_system/queue/bus_wdata[6]_i_19/I1
+    SLICE_X46Y128        LUT6 (Prop_lut6_I1_O)        0.124     9.401 r  native_system/queue/bus_wdata[6]_i_19/O
+                         net (fo=4, estimated)        1.039    10.440    native_system/queue/bus_wdata[6]_i_19_n_0
+    SLICE_X56Y129                                                     r  native_system/queue/bus_wdata[5]_i_9/I1
+    SLICE_X56Y129        LUT6 (Prop_lut6_I1_O)        0.124    10.564 r  native_system/queue/bus_wdata[5]_i_9/O
+                         net (fo=1, estimated)        0.587    11.151    native_system/queue/data6[5]
+    SLICE_X58Y129                                                     r  native_system/queue/bus_wdata[5]_i_4/I1
+    SLICE_X58Y129        LUT6 (Prop_lut6_I1_O)        0.124    11.275 r  native_system/queue/bus_wdata[5]_i_4/O
+                         net (fo=1, estimated)        0.416    11.691    native_system/queue/bus_wdata[5]_i_4_n_0
+    SLICE_X63Y129                                                     r  native_system/queue/bus_wdata[5]_i_2/I2
+    SLICE_X63Y129        LUT5 (Prop_lut5_I2_O)        0.124    11.815 r  native_system/queue/bus_wdata[5]_i_2/O
+                         net (fo=1, estimated)        0.790    12.605    native_system/queue/bus_wdata[5]_i_2_n_0
+    SLICE_X60Y129                                                     r  native_system/queue/bus_wdata[5]_i_1/I2
+    SLICE_X60Y129        LUT4 (Prop_lut4_I2_O)        0.152    12.757 r  native_system/queue/bus_wdata[5]_i_1/O
+                         net (fo=1, routed)           0.000    12.757    native_system/queue/p_2_out[5]
+    SLICE_X60Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X60Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[5]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X60Y129        FDCE (Setup_fdce_C_D)        0.075     8.540    native_system/queue/bus_wdata_reg[5]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                         -12.757    
+  -------------------------------------------------------------------
+                         slack                                 -4.217    
+
+Slack (VIOLATED) :        -4.216ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.783ns  (logic 5.255ns (44.598%)  route 6.528ns (55.402%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.462     7.425    native_system/queue/bus_wdata1_n_99
+    SLICE_X47Y129                                                     r  native_system/queue/bus_wdata[16]_i_313/I2
+    SLICE_X47Y129        LUT6 (Prop_lut6_I2_O)        0.124     7.549 r  native_system/queue/bus_wdata[16]_i_313/O
+                         net (fo=2, estimated)        0.772     8.321    native_system/queue/bus_wdata[16]_i_313_n_0
+    SLICE_X52Y129                                                     r  native_system/queue/bus_wdata[16]_i_90/I3
+    SLICE_X52Y129        LUT6 (Prop_lut6_I3_O)        0.124     8.445 r  native_system/queue/bus_wdata[16]_i_90/O
+                         net (fo=4, estimated)        0.974     9.419    native_system/queue/bus_wdata[16]_i_90_n_0
+    SLICE_X57Y127                                                     r  native_system/queue/bus_wdata[12]_i_18/I1
+    SLICE_X57Y127        LUT6 (Prop_lut6_I1_O)        0.124     9.543 r  native_system/queue/bus_wdata[12]_i_18/O
+                         net (fo=4, estimated)        0.841    10.384    native_system/queue/bus_wdata[12]_i_18_n_0
+    SLICE_X62Y126                                                     r  native_system/queue/bus_wdata[9]_i_8/I0
+    SLICE_X62Y126        LUT6 (Prop_lut6_I0_O)        0.124    10.508 r  native_system/queue/bus_wdata[9]_i_8/O
+                         net (fo=1, estimated)        0.639    11.147    native_system/queue/data7[9]
+    SLICE_X65Y126                                                     r  native_system/queue/bus_wdata[9]_i_4/I0
+    SLICE_X65Y126        LUT6 (Prop_lut6_I0_O)        0.124    11.271 r  native_system/queue/bus_wdata[9]_i_4/O
+                         net (fo=1, estimated)        0.410    11.681    native_system/queue/bus_wdata[9]_i_4_n_0
+    SLICE_X65Y124                                                     r  native_system/queue/bus_wdata[9]_i_2/I2
+    SLICE_X65Y124        LUT5 (Prop_lut5_I2_O)        0.124    11.805 r  native_system/queue/bus_wdata[9]_i_2/O
+                         net (fo=1, estimated)        0.799    12.604    native_system/queue/bus_wdata[9]_i_2_n_0
+    SLICE_X64Y125                                                     r  native_system/queue/bus_wdata[9]_i_1/I2
+    SLICE_X64Y125        LUT4 (Prop_lut4_I2_O)        0.152    12.756 r  native_system/queue/bus_wdata[9]_i_1/O
+                         net (fo=1, routed)           0.000    12.756    native_system/queue/p_2_out[9]
+    SLICE_X64Y125        FDCE                                         r  native_system/queue/bus_wdata_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X64Y125        FDCE                                         r  native_system/queue/bus_wdata_reg[9]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X64Y125        FDCE (Setup_fdce_C_D)        0.075     8.540    native_system/queue/bus_wdata_reg[9]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                         -12.756    
+  -------------------------------------------------------------------
+                         slack                                 -4.216    
+
+Slack (VIOLATED) :        -4.211ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.778ns  (logic 5.255ns (44.617%)  route 6.523ns (55.383%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.457     7.420    native_system/queue/bus_wdata1_n_99
+    SLICE_X49Y133                                                     r  native_system/queue/bus_wdata[16]_i_656/I2
+    SLICE_X49Y133        LUT6 (Prop_lut6_I2_O)        0.124     7.544 r  native_system/queue/bus_wdata[16]_i_656/O
+                         net (fo=2, estimated)        0.995     8.539    native_system/queue/bus_wdata[16]_i_656_n_0
+    SLICE_X54Y134                                                     r  native_system/queue/bus_wdata[16]_i_176/I1
+    SLICE_X54Y134        LUT6 (Prop_lut6_I1_O)        0.124     8.663 r  native_system/queue/bus_wdata[16]_i_176/O
+                         net (fo=3, estimated)        0.982     9.645    native_system/queue/bus_wdata[16]_i_176_n_0
+    SLICE_X62Y133                                                     r  native_system/queue/bus_wdata[9]_i_24/I0
+    SLICE_X62Y133        LUT6 (Prop_lut6_I0_O)        0.124     9.769 r  native_system/queue/bus_wdata[9]_i_24/O
+                         net (fo=4, estimated)        0.592    10.361    native_system/queue/bus_wdata[9]_i_24_n_0
+    SLICE_X61Y133                                                     r  native_system/queue/bus_wdata[8]_i_14/I1
+    SLICE_X61Y133        LUT6 (Prop_lut6_I1_O)        0.124    10.485 r  native_system/queue/bus_wdata[8]_i_14/O
+                         net (fo=1, estimated)        0.624    11.109    native_system/queue/bus_wdata[8]_i_14_n_0
+    SLICE_X60Y126                                                     r  native_system/queue/bus_wdata[8]_i_5/I3
+    SLICE_X60Y126        LUT6 (Prop_lut6_I3_O)        0.124    11.233 r  native_system/queue/bus_wdata[8]_i_5/O
+                         net (fo=1, estimated)        0.444    11.677    native_system/queue/bus_wdata[8]_i_5_n_0
+    SLICE_X60Y125                                                     r  native_system/queue/bus_wdata[8]_i_2/I4
+    SLICE_X60Y125        LUT5 (Prop_lut5_I4_O)        0.124    11.801 r  native_system/queue/bus_wdata[8]_i_2/O
+                         net (fo=1, estimated)        0.798    12.599    native_system/queue/bus_wdata[8]_i_2_n_0
+    SLICE_X61Y126                                                     r  native_system/queue/bus_wdata[8]_i_1/I2
+    SLICE_X61Y126        LUT4 (Prop_lut4_I2_O)        0.152    12.751 r  native_system/queue/bus_wdata[8]_i_1/O
+                         net (fo=1, routed)           0.000    12.751    native_system/queue/p_2_out[8]
+    SLICE_X61Y126        FDCE                                         r  native_system/queue/bus_wdata_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X61Y126        FDCE                                         r  native_system/queue/bus_wdata_reg[8]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X61Y126        FDCE (Setup_fdce_C_D)        0.075     8.540    native_system/queue/bus_wdata_reg[8]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                         -12.751    
+  -------------------------------------------------------------------
+                         slack                                 -4.211    
+
+Slack (VIOLATED) :        -4.207ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[6]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.774ns  (logic 5.257ns (44.649%)  route 6.517ns (55.351%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.397     7.360    native_system/queue/bus_wdata1_n_99
+    SLICE_X38Y128                                                     r  native_system/queue/bus_wdata[16]_i_326/I2
+    SLICE_X38Y128        LUT6 (Prop_lut6_I2_O)        0.124     7.484 r  native_system/queue/bus_wdata[16]_i_326/O
+                         net (fo=2, estimated)        0.893     8.377    native_system/queue/bus_wdata[16]_i_326_n_0
+    SLICE_X42Y125                                                     r  native_system/queue/bus_wdata[11]_i_29/I1
+    SLICE_X42Y125        LUT6 (Prop_lut6_I1_O)        0.124     8.501 r  native_system/queue/bus_wdata[11]_i_29/O
+                         net (fo=3, estimated)        0.612     9.113    native_system/queue/bus_wdata[11]_i_29_n_0
+    SLICE_X44Y126                                                     r  native_system/queue/bus_wdata[7]_i_19/I1
+    SLICE_X44Y126        LUT6 (Prop_lut6_I1_O)        0.124     9.237 r  native_system/queue/bus_wdata[7]_i_19/O
+                         net (fo=4, estimated)        1.158    10.395    native_system/queue/bus_wdata[7]_i_19_n_0
+    SLICE_X54Y128                                                     r  native_system/queue/bus_wdata[6]_i_9/I1
+    SLICE_X54Y128        LUT6 (Prop_lut6_I1_O)        0.124    10.519 r  native_system/queue/bus_wdata[6]_i_9/O
+                         net (fo=1, estimated)        0.755    11.274    native_system/queue/data6[6]
+    SLICE_X64Y128                                                     r  native_system/queue/bus_wdata[6]_i_4/I1
+    SLICE_X64Y128        LUT6 (Prop_lut6_I1_O)        0.124    11.398 r  native_system/queue/bus_wdata[6]_i_4/O
+                         net (fo=1, estimated)        0.405    11.803    native_system/queue/bus_wdata[6]_i_4_n_0
+    SLICE_X65Y129                                                     r  native_system/queue/bus_wdata[6]_i_2/I2
+    SLICE_X65Y129        LUT5 (Prop_lut5_I2_O)        0.124    11.927 r  native_system/queue/bus_wdata[6]_i_2/O
+                         net (fo=1, estimated)        0.666    12.593    native_system/queue/bus_wdata[6]_i_2_n_0
+    SLICE_X64Y129                                                     r  native_system/queue/bus_wdata[6]_i_1/I2
+    SLICE_X64Y129        LUT4 (Prop_lut4_I2_O)        0.154    12.747 r  native_system/queue/bus_wdata[6]_i_1/O
+                         net (fo=1, routed)           0.000    12.747    native_system/queue/p_2_out[6]
+    SLICE_X64Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X64Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[6]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X64Y129        FDCE (Setup_fdce_C_D)        0.075     8.540    native_system/queue/bus_wdata_reg[6]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                         -12.747    
+  -------------------------------------------------------------------
+                         slack                                 -4.207    
+
+Slack (VIOLATED) :        -4.203ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.772ns  (logic 5.227ns (44.402%)  route 6.545ns (55.598%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.282     7.245    native_system/queue/bus_wdata1_n_99
+    SLICE_X34Y127                                                     r  native_system/queue/bus_wdata[16]_i_339/I2
+    SLICE_X34Y127        LUT6 (Prop_lut6_I2_O)        0.124     7.369 r  native_system/queue/bus_wdata[16]_i_339/O
+                         net (fo=1, estimated)        0.830     8.199    native_system/queue/bus_wdata[16]_i_339_n_0
+    SLICE_X35Y127                                                     r  native_system/queue/bus_wdata[16]_i_97/I0
+    SLICE_X35Y127        LUT6 (Prop_lut6_I0_O)        0.124     8.323 r  native_system/queue/bus_wdata[16]_i_97/O
+                         net (fo=2, estimated)        1.130     9.453    native_system/queue/bus_wdata[16]_i_97_n_0
+    SLICE_X49Y127                                                     r  native_system/queue/bus_wdata[13]_i_19/I0
+    SLICE_X49Y127        LUT6 (Prop_lut6_I0_O)        0.124     9.577 r  native_system/queue/bus_wdata[13]_i_19/O
+                         net (fo=4, estimated)        1.076    10.653    native_system/queue/bus_wdata[13]_i_19_n_0
+    SLICE_X57Y126                                                     r  native_system/queue/bus_wdata[10]_i_9/I0
+    SLICE_X57Y126        LUT6 (Prop_lut6_I0_O)        0.124    10.777 r  native_system/queue/bus_wdata[10]_i_9/O
+                         net (fo=1, estimated)        0.743    11.520    native_system/queue/data6[10]
+    SLICE_X64Y126                                                     r  native_system/queue/bus_wdata[10]_i_4/I1
+    SLICE_X64Y126        LUT6 (Prop_lut6_I1_O)        0.124    11.644 r  native_system/queue/bus_wdata[10]_i_4/O
+                         net (fo=1, estimated)        0.427    12.071    native_system/queue/bus_wdata[10]_i_4_n_0
+    SLICE_X66Y126                                                     r  native_system/queue/bus_wdata[10]_i_2/I2
+    SLICE_X66Y126        LUT5 (Prop_lut5_I2_O)        0.124    12.195 r  native_system/queue/bus_wdata[10]_i_2/O
+                         net (fo=1, estimated)        0.426    12.621    native_system/queue/bus_wdata[10]_i_2_n_0
+    SLICE_X66Y126                                                     r  native_system/queue/bus_wdata[10]_i_1/I2
+    SLICE_X66Y126        LUT4 (Prop_lut4_I2_O)        0.124    12.745 r  native_system/queue/bus_wdata[10]_i_1/O
+                         net (fo=1, routed)           0.000    12.745    native_system/queue/p_2_out[10]
+    SLICE_X66Y126        FDCE                                         r  native_system/queue/bus_wdata_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X66Y126        FDCE                                         r  native_system/queue/bus_wdata_reg[10]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X66Y126        FDCE (Setup_fdce_C_D)        0.077     8.542    native_system/queue/bus_wdata_reg[10]
+  -------------------------------------------------------------------
+                         required time                          8.542    
+                         arrival time                         -12.745    
+  -------------------------------------------------------------------
+                         slack                                 -4.203    
+
+Slack (VIOLATED) :        -4.201ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.768ns  (logic 5.257ns (44.672%)  route 6.511ns (55.328%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.459     7.422    native_system/queue/bus_wdata1_n_99
+    SLICE_X49Y132                                                     r  native_system/queue/bus_wdata[16]_i_623/I2
+    SLICE_X49Y132        LUT6 (Prop_lut6_I2_O)        0.124     7.546 r  native_system/queue/bus_wdata[16]_i_623/O
+                         net (fo=1, estimated)        1.195     8.741    native_system/queue/bus_wdata[16]_i_623_n_0
+    SLICE_X58Y133                                                     r  native_system/queue/bus_wdata[16]_i_168/I0
+    SLICE_X58Y133        LUT6 (Prop_lut6_I0_O)        0.124     8.865 r  native_system/queue/bus_wdata[16]_i_168/O
+                         net (fo=3, estimated)        0.735     9.600    native_system/queue/bus_wdata[16]_i_168_n_0
+    SLICE_X58Y133                                                     r  native_system/queue/bus_wdata[8]_i_23/I0
+    SLICE_X58Y133        LUT6 (Prop_lut6_I0_O)        0.124     9.724 r  native_system/queue/bus_wdata[8]_i_23/O
+                         net (fo=4, estimated)        0.737    10.461    native_system/queue/bus_wdata[8]_i_23_n_0
+    SLICE_X56Y131                                                     r  native_system/queue/bus_wdata[7]_i_13/I1
+    SLICE_X56Y131        LUT6 (Prop_lut6_I1_O)        0.124    10.585 r  native_system/queue/bus_wdata[7]_i_13/O
+                         net (fo=1, estimated)        0.793    11.378    native_system/queue/bus_wdata[7]_i_13_n_0
+    SLICE_X62Y128                                                     r  native_system/queue/bus_wdata[7]_i_5/I1
+    SLICE_X62Y128        LUT6 (Prop_lut6_I1_O)        0.124    11.502 r  native_system/queue/bus_wdata[7]_i_5/O
+                         net (fo=1, estimated)        0.303    11.805    native_system/queue/bus_wdata[7]_i_5_n_0
+    SLICE_X62Y127                                                     r  native_system/queue/bus_wdata[7]_i_2/I4
+    SLICE_X62Y127        LUT5 (Prop_lut5_I4_O)        0.124    11.929 r  native_system/queue/bus_wdata[7]_i_2/O
+                         net (fo=1, estimated)        0.658    12.587    native_system/queue/bus_wdata[7]_i_2_n_0
+    SLICE_X63Y127                                                     r  native_system/queue/bus_wdata[7]_i_1/I2
+    SLICE_X63Y127        LUT4 (Prop_lut4_I2_O)        0.154    12.741 r  native_system/queue/bus_wdata[7]_i_1/O
+                         net (fo=1, routed)           0.000    12.741    native_system/queue/p_2_out[7]
+    SLICE_X63Y127        FDCE                                         r  native_system/queue/bus_wdata_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X63Y127        FDCE                                         r  native_system/queue/bus_wdata_reg[7]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X63Y127        FDCE (Setup_fdce_C_D)        0.075     8.540    native_system/queue/bus_wdata_reg[7]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                         -12.741    
+  -------------------------------------------------------------------
+                         slack                                 -4.201    
+
+Slack (VIOLATED) :        -4.192ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.763ns  (logic 5.227ns (44.436%)  route 6.536ns (55.564%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.165     7.128    native_system/queue/bus_wdata1_n_99
+    SLICE_X38Y132                                                     r  native_system/queue/bus_wdata[16]_i_524/I2
+    SLICE_X38Y132        LUT6 (Prop_lut6_I2_O)        0.124     7.252 r  native_system/queue/bus_wdata[16]_i_524/O
+                         net (fo=2, estimated)        0.867     8.119    native_system/queue/bus_wdata[16]_i_524_n_0
+    SLICE_X39Y129                                                     r  native_system/queue/bus_wdata[16]_i_143/I1
+    SLICE_X39Y129        LUT6 (Prop_lut6_I1_O)        0.124     8.243 r  native_system/queue/bus_wdata[16]_i_143/O
+                         net (fo=1, estimated)        0.776     9.019    native_system/queue/bus_wdata[16]_i_143_n_0
+    SLICE_X43Y129                                                     r  native_system/queue/bus_wdata[16]_i_40/I0
+    SLICE_X43Y129        LUT6 (Prop_lut6_I0_O)        0.124     9.143 r  native_system/queue/bus_wdata[16]_i_40/O
+                         net (fo=3, estimated)        1.414    10.557    native_system/queue/bus_wdata[16]_i_40_n_0
+    SLICE_X67Y129                                                     r  native_system/queue/bus_wdata[14]_i_12/I0
+    SLICE_X67Y129        LUT6 (Prop_lut6_I0_O)        0.124    10.681 r  native_system/queue/bus_wdata[14]_i_12/O
+                         net (fo=1, estimated)        0.958    11.639    native_system/queue/bus_wdata[14]_i_12_n_0
+    SLICE_X62Y126                                                     r  native_system/queue/bus_wdata[14]_i_5/I0
+    SLICE_X62Y126        LUT6 (Prop_lut6_I0_O)        0.124    11.763 r  native_system/queue/bus_wdata[14]_i_5/O
+                         net (fo=1, estimated)        0.305    12.068    native_system/queue/bus_wdata[14]_i_5_n_0
+    SLICE_X64Y126                                                     r  native_system/queue/bus_wdata[14]_i_2/I4
+    SLICE_X64Y126        LUT5 (Prop_lut5_I4_O)        0.124    12.192 r  native_system/queue/bus_wdata[14]_i_2/O
+                         net (fo=1, estimated)        0.420    12.612    native_system/queue/bus_wdata[14]_i_2_n_0
+    SLICE_X66Y126                                                     r  native_system/queue/bus_wdata[14]_i_1/I2
+    SLICE_X66Y126        LUT4 (Prop_lut4_I2_O)        0.124    12.736 r  native_system/queue/bus_wdata[14]_i_1/O
+                         net (fo=1, routed)           0.000    12.736    native_system/queue/p_2_out[14]
+    SLICE_X66Y126        FDCE                                         r  native_system/queue/bus_wdata_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X66Y126        FDCE                                         r  native_system/queue/bus_wdata_reg[14]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X66Y126        FDCE (Setup_fdce_C_D)        0.079     8.544    native_system/queue/bus_wdata_reg[14]
+  -------------------------------------------------------------------
+                         required time                          8.544    
+                         arrival time                         -12.736    
+  -------------------------------------------------------------------
+                         slack                                 -4.192    
+
+Slack (VIOLATED) :        -4.180ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[15]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.704ns  (logic 5.227ns (44.660%)  route 6.477ns (55.340%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.280     7.243    native_system/queue/bus_wdata1_n_99
+    SLICE_X39Y133                                                     r  native_system/queue/bus_wdata[16]_i_412/I2
+    SLICE_X39Y133        LUT6 (Prop_lut6_I2_O)        0.124     7.367 r  native_system/queue/bus_wdata[16]_i_412/O
+                         net (fo=2, estimated)        0.936     8.303    native_system/queue/bus_wdata[16]_i_412_n_0
+    SLICE_X38Y129                                                     r  native_system/queue/bus_wdata[16]_i_115/I1
+    SLICE_X38Y129        LUT6 (Prop_lut6_I1_O)        0.124     8.427 r  native_system/queue/bus_wdata[16]_i_115/O
+                         net (fo=1, estimated)        0.796     9.223    native_system/queue/bus_wdata[16]_i_115_n_0
+    SLICE_X41Y129                                                     r  native_system/queue/bus_wdata[16]_i_33/I0
+    SLICE_X41Y129        LUT6 (Prop_lut6_I0_O)        0.124     9.347 r  native_system/queue/bus_wdata[16]_i_33/O
+                         net (fo=2, estimated)        1.574    10.921    native_system/queue/bus_wdata[16]_i_33_n_0
+    SLICE_X66Y127                                                     r  native_system/queue/bus_wdata[15]_i_10/I0
+    SLICE_X66Y127        LUT6 (Prop_lut6_I0_O)        0.124    11.045 r  native_system/queue/bus_wdata[15]_i_10/O
+                         net (fo=1, estimated)        0.452    11.497    native_system/queue/data5[15]
+    SLICE_X67Y127                                                     r  native_system/queue/bus_wdata[15]_i_4/I3
+    SLICE_X67Y127        LUT6 (Prop_lut6_I3_O)        0.124    11.621 r  native_system/queue/bus_wdata[15]_i_4/O
+                         net (fo=1, estimated)        0.404    12.025    native_system/queue/bus_wdata[15]_i_4_n_0
+    SLICE_X67Y127                                                     r  native_system/queue/bus_wdata[15]_i_2/I2
+    SLICE_X67Y127        LUT5 (Prop_lut5_I2_O)        0.124    12.149 r  native_system/queue/bus_wdata[15]_i_2/O
+                         net (fo=1, estimated)        0.404    12.553    native_system/queue/bus_wdata[15]_i_2_n_0
+    SLICE_X67Y128                                                     r  native_system/queue/bus_wdata[15]_i_1/I2
+    SLICE_X67Y128        LUT4 (Prop_lut4_I2_O)        0.124    12.677 r  native_system/queue/bus_wdata[15]_i_1/O
+                         net (fo=1, routed)           0.000    12.677    native_system/queue/p_2_out[15]
+    SLICE_X67Y128        FDCE                                         r  native_system/queue/bus_wdata_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X67Y128        FDCE                                         r  native_system/queue/bus_wdata_reg[15]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X67Y128        FDCE (Setup_fdce_C_D)        0.032     8.497    native_system/queue/bus_wdata_reg[15]
+  -------------------------------------------------------------------
+                         required time                          8.497    
+                         arrival time                         -12.677    
+  -------------------------------------------------------------------
+                         slack                                 -4.180    
+
+Slack (VIOLATED) :        -4.176ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.699ns  (logic 5.227ns (44.679%)  route 6.472ns (55.321%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.512     7.475    native_system/queue/bus_wdata1_n_99
+    SLICE_X49Y136                                                     r  native_system/queue/bus_wdata[16]_i_408/I2
+    SLICE_X49Y136        LUT6 (Prop_lut6_I2_O)        0.124     7.599 r  native_system/queue/bus_wdata[16]_i_408/O
+                         net (fo=2, estimated)        0.778     8.377    native_system/queue/bus_wdata[16]_i_408_n_0
+    SLICE_X51Y136                                                     r  native_system/queue/bus_wdata[16]_i_114/I1
+    SLICE_X51Y136        LUT6 (Prop_lut6_I1_O)        0.124     8.501 r  native_system/queue/bus_wdata[16]_i_114/O
+                         net (fo=4, estimated)        0.862     9.363    native_system/queue/bus_wdata[16]_i_114_n_0
+    SLICE_X53Y134                                                     r  native_system/queue/bus_wdata[5]_i_20/I0
+    SLICE_X53Y134        LUT6 (Prop_lut6_I0_O)        0.124     9.487 r  native_system/queue/bus_wdata[5]_i_20/O
+                         net (fo=4, estimated)        1.265    10.752    native_system/queue/bus_wdata[5]_i_20_n_0
+    SLICE_X63Y128                                                     r  native_system/queue/bus_wdata[2]_i_10/I0
+    SLICE_X63Y128        LUT6 (Prop_lut6_I0_O)        0.124    10.876 r  native_system/queue/bus_wdata[2]_i_10/O
+                         net (fo=1, estimated)        0.599    11.475    native_system/queue/data5[2]
+    SLICE_X67Y129                                                     r  native_system/queue/bus_wdata[2]_i_4/I3
+    SLICE_X67Y129        LUT6 (Prop_lut6_I3_O)        0.124    11.599 r  native_system/queue/bus_wdata[2]_i_4/O
+                         net (fo=1, estimated)        0.558    12.157    native_system/queue/bus_wdata[2]_i_4_n_0
+    SLICE_X67Y128                                                     r  native_system/queue/bus_wdata[2]_i_2/I2
+    SLICE_X67Y128        LUT5 (Prop_lut5_I2_O)        0.124    12.281 r  native_system/queue/bus_wdata[2]_i_2/O
+                         net (fo=1, estimated)        0.267    12.548    native_system/queue/bus_wdata[2]_i_2_n_0
+    SLICE_X67Y128                                                     r  native_system/queue/bus_wdata[2]_i_1/I2
+    SLICE_X67Y128        LUT4 (Prop_lut4_I2_O)        0.124    12.672 r  native_system/queue/bus_wdata[2]_i_1/O
+                         net (fo=1, routed)           0.000    12.672    native_system/queue/p_2_out[2]
+    SLICE_X67Y128        FDCE                                         r  native_system/queue/bus_wdata_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X67Y128        FDCE                                         r  native_system/queue/bus_wdata_reg[2]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X67Y128        FDCE (Setup_fdce_C_D)        0.031     8.496    native_system/queue/bus_wdata_reg[2]
+  -------------------------------------------------------------------
+                         required time                          8.496    
+                         arrival time                         -12.672    
+  -------------------------------------------------------------------
+                         slack                                 -4.176    
+
+Slack (VIOLATED) :        -4.172ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.739ns  (logic 5.253ns (44.748%)  route 6.486ns (55.252%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.467     7.430    native_system/queue/bus_wdata1_n_99
+    SLICE_X46Y130                                                     r  native_system/queue/bus_wdata[16]_i_549/I2
+    SLICE_X46Y130        LUT6 (Prop_lut6_I2_O)        0.124     7.554 r  native_system/queue/bus_wdata[16]_i_549/O
+                         net (fo=2, estimated)        0.844     8.398    native_system/queue/bus_wdata[16]_i_549_n_0
+    SLICE_X47Y130                                                     r  native_system/queue/bus_wdata[10]_i_33/I0
+    SLICE_X47Y130        LUT6 (Prop_lut6_I0_O)        0.124     8.522 r  native_system/queue/bus_wdata[10]_i_33/O
+                         net (fo=3, estimated)        0.876     9.398    native_system/queue/bus_wdata[10]_i_33_n_0
+    SLICE_X53Y130                                                     r  native_system/queue/bus_wdata[6]_i_22/I1
+    SLICE_X53Y130        LUT6 (Prop_lut6_I1_O)        0.124     9.522 r  native_system/queue/bus_wdata[6]_i_22/O
+                         net (fo=4, estimated)        0.652    10.174    native_system/queue/bus_wdata[6]_i_22_n_0
+    SLICE_X51Y131                                                     r  native_system/queue/bus_wdata[3]_i_12/I0
+    SLICE_X51Y131        LUT6 (Prop_lut6_I0_O)        0.124    10.298 r  native_system/queue/bus_wdata[3]_i_12/O
+                         net (fo=1, estimated)        1.050    11.348    native_system/queue/bus_wdata[3]_i_12_n_0
+    SLICE_X61Y129                                                     r  native_system/queue/bus_wdata[3]_i_5/I0
+    SLICE_X61Y129        LUT6 (Prop_lut6_I0_O)        0.124    11.472 r  native_system/queue/bus_wdata[3]_i_5/O
+                         net (fo=1, estimated)        0.306    11.778    native_system/queue/bus_wdata[3]_i_5_n_0
+    SLICE_X58Y129                                                     r  native_system/queue/bus_wdata[3]_i_2/I4
+    SLICE_X58Y129        LUT5 (Prop_lut5_I4_O)        0.124    11.902 r  native_system/queue/bus_wdata[3]_i_2/O
+                         net (fo=1, estimated)        0.660    12.562    native_system/queue/bus_wdata[3]_i_2_n_0
+    SLICE_X59Y129                                                     r  native_system/queue/bus_wdata[3]_i_1/I2
+    SLICE_X59Y129        LUT4 (Prop_lut4_I2_O)        0.150    12.712 r  native_system/queue/bus_wdata[3]_i_1/O
+                         net (fo=1, routed)           0.000    12.712    native_system/queue/p_2_out[3]
+    SLICE_X59Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X59Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[3]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X59Y129        FDCE (Setup_fdce_C_D)        0.075     8.540    native_system/queue/bus_wdata_reg[3]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                         -12.712    
+  -------------------------------------------------------------------
+                         slack                                 -4.172    
+
+Slack (VIOLATED) :        -4.172ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.696ns  (logic 5.227ns (44.690%)  route 6.469ns (55.309%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.489     7.452    native_system/queue/bus_wdata1_n_99
+    SLICE_X46Y135                                                     r  native_system/queue/bus_wdata[16]_i_484/I2
+    SLICE_X46Y135        LUT6 (Prop_lut6_I2_O)        0.124     7.576 r  native_system/queue/bus_wdata[16]_i_484/O
+                         net (fo=2, estimated)        0.934     8.510    native_system/queue/bus_wdata[16]_i_484_n_0
+    SLICE_X52Y135                                                     r  native_system/queue/bus_wdata[16]_i_133/I1
+    SLICE_X52Y135        LUT6 (Prop_lut6_I1_O)        0.124     8.634 r  native_system/queue/bus_wdata[16]_i_133/O
+                         net (fo=2, estimated)        0.845     9.479    native_system/queue/bus_wdata[16]_i_133_n_0
+    SLICE_X52Y135                                                     r  native_system/queue/bus_wdata[14]_i_21/I0
+    SLICE_X52Y135        LUT6 (Prop_lut6_I0_O)        0.124     9.603 r  native_system/queue/bus_wdata[14]_i_21/O
+                         net (fo=4, estimated)        0.981    10.584    native_system/queue/bus_wdata[14]_i_21_n_0
+    SLICE_X56Y134                                                     r  native_system/queue/bus_wdata[13]_i_11/I1
+    SLICE_X56Y134        LUT6 (Prop_lut6_I1_O)        0.124    10.708 r  native_system/queue/bus_wdata[13]_i_11/O
+                         net (fo=1, estimated)        0.627    11.335    native_system/queue/bus_wdata[13]_i_11_n_0
+    SLICE_X59Y126                                                     r  native_system/queue/bus_wdata[13]_i_4/I5
+    SLICE_X59Y126        LUT6 (Prop_lut6_I5_O)        0.124    11.459 r  native_system/queue/bus_wdata[13]_i_4/O
+                         net (fo=1, estimated)        0.542    12.001    native_system/queue/bus_wdata[13]_i_4_n_0
+    SLICE_X63Y125                                                     r  native_system/queue/bus_wdata[13]_i_2/I2
+    SLICE_X63Y125        LUT5 (Prop_lut5_I2_O)        0.124    12.125 r  native_system/queue/bus_wdata[13]_i_2/O
+                         net (fo=1, estimated)        0.420    12.545    native_system/queue/bus_wdata[13]_i_2_n_0
+    SLICE_X64Y125                                                     r  native_system/queue/bus_wdata[13]_i_1/I2
+    SLICE_X64Y125        LUT4 (Prop_lut4_I2_O)        0.124    12.669 r  native_system/queue/bus_wdata[13]_i_1/O
+                         net (fo=1, routed)           0.000    12.669    native_system/queue/p_2_out[13]
+    SLICE_X64Y125        FDCE                                         r  native_system/queue/bus_wdata_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X64Y125        FDCE                                         r  native_system/queue/bus_wdata_reg[13]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X64Y125        FDCE (Setup_fdce_C_D)        0.032     8.497    native_system/queue/bus_wdata_reg[13]
+  -------------------------------------------------------------------
+                         required time                          8.497    
+                         arrival time                         -12.669    
+  -------------------------------------------------------------------
+                         slack                                 -4.172    
+
+Slack (VIOLATED) :        -4.128ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.699ns  (logic 5.227ns (44.679%)  route 6.472ns (55.321%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.472     7.435    native_system/queue/bus_wdata1_n_99
+    SLICE_X47Y128                                                     r  native_system/queue/bus_wdata[16]_i_260/I2
+    SLICE_X47Y128        LUT6 (Prop_lut6_I2_O)        0.124     7.559 r  native_system/queue/bus_wdata[16]_i_260/O
+                         net (fo=2, estimated)        0.774     8.333    native_system/queue/bus_wdata[16]_i_260_n_0
+    SLICE_X47Y128                                                     r  native_system/queue/bus_wdata[16]_i_77/I1
+    SLICE_X47Y128        LUT6 (Prop_lut6_I1_O)        0.124     8.457 r  native_system/queue/bus_wdata[16]_i_77/O
+                         net (fo=2, estimated)        0.954     9.411    native_system/queue/bus_wdata[16]_i_77_n_0
+    SLICE_X50Y128                                                     r  native_system/queue/bus_wdata[15]_i_18/I0
+    SLICE_X50Y128        LUT6 (Prop_lut6_I0_O)        0.124     9.535 r  native_system/queue/bus_wdata[15]_i_18/O
+                         net (fo=4, estimated)        1.267    10.802    native_system/queue/bus_wdata[15]_i_18_n_0
+    SLICE_X66Y128                                                     r  native_system/queue/bus_wdata[12]_i_8/I0
+    SLICE_X66Y128        LUT6 (Prop_lut6_I0_O)        0.124    10.926 r  native_system/queue/bus_wdata[12]_i_8/O
+                         net (fo=1, estimated)        0.663    11.589    native_system/queue/data7[12]
+    SLICE_X66Y129                                                     r  native_system/queue/bus_wdata[12]_i_4/I0
+    SLICE_X66Y129        LUT6 (Prop_lut6_I0_O)        0.124    11.713 r  native_system/queue/bus_wdata[12]_i_4/O
+                         net (fo=1, estimated)        0.427    12.140    native_system/queue/bus_wdata[12]_i_4_n_0
+    SLICE_X66Y129                                                     r  native_system/queue/bus_wdata[12]_i_2/I2
+    SLICE_X66Y129        LUT5 (Prop_lut5_I2_O)        0.124    12.264 r  native_system/queue/bus_wdata[12]_i_2/O
+                         net (fo=1, estimated)        0.284    12.548    native_system/queue/bus_wdata[12]_i_2_n_0
+    SLICE_X66Y129                                                     r  native_system/queue/bus_wdata[12]_i_1/I2
+    SLICE_X66Y129        LUT4 (Prop_lut4_I2_O)        0.124    12.672 r  native_system/queue/bus_wdata[12]_i_1/O
+                         net (fo=1, routed)           0.000    12.672    native_system/queue/p_2_out[12]
+    SLICE_X66Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X66Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[12]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X66Y129        FDCE (Setup_fdce_C_D)        0.079     8.544    native_system/queue/bus_wdata_reg[12]
+  -------------------------------------------------------------------
+                         required time                          8.544    
+                         arrival time                         -12.672    
+  -------------------------------------------------------------------
+                         slack                                 -4.128    
+
+Slack (VIOLATED) :        -4.127ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.698ns  (logic 5.227ns (44.683%)  route 6.471ns (55.317%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.340     7.303    native_system/queue/bus_wdata1_n_99
+    SLICE_X36Y128                                                     r  native_system/queue/bus_wdata[16]_i_355/I2
+    SLICE_X36Y128        LUT6 (Prop_lut6_I2_O)        0.124     7.427 r  native_system/queue/bus_wdata[16]_i_355/O
+                         net (fo=1, estimated)        0.949     8.376    native_system/queue/bus_wdata[16]_i_355_n_0
+    SLICE_X44Y127                                                     r  native_system/queue/bus_wdata[16]_i_101/I0
+    SLICE_X44Y127        LUT6 (Prop_lut6_I0_O)        0.124     8.500 r  native_system/queue/bus_wdata[16]_i_101/O
+                         net (fo=2, estimated)        0.681     9.181    native_system/queue/bus_wdata[16]_i_101_n_0
+    SLICE_X46Y126                                                     r  native_system/queue/bus_wdata[14]_i_19/I0
+    SLICE_X46Y126        LUT6 (Prop_lut6_I0_O)        0.124     9.305 r  native_system/queue/bus_wdata[14]_i_19/O
+                         net (fo=4, estimated)        1.442    10.747    native_system/queue/bus_wdata[14]_i_19_n_0
+    SLICE_X66Y127                                                     r  native_system/queue/bus_wdata[11]_i_9/I0
+    SLICE_X66Y127        LUT6 (Prop_lut6_I0_O)        0.124    10.871 r  native_system/queue/bus_wdata[11]_i_9/O
+                         net (fo=1, estimated)        0.716    11.587    native_system/queue/data6[11]
+    SLICE_X67Y129                                                     r  native_system/queue/bus_wdata[11]_i_4/I1
+    SLICE_X67Y129        LUT6 (Prop_lut6_I1_O)        0.124    11.711 r  native_system/queue/bus_wdata[11]_i_4/O
+                         net (fo=1, estimated)        0.428    12.139    native_system/queue/bus_wdata[11]_i_4_n_0
+    SLICE_X66Y128                                                     r  native_system/queue/bus_wdata[11]_i_2/I2
+    SLICE_X66Y128        LUT5 (Prop_lut5_I2_O)        0.124    12.263 r  native_system/queue/bus_wdata[11]_i_2/O
+                         net (fo=1, estimated)        0.284    12.547    native_system/queue/bus_wdata[11]_i_2_n_0
+    SLICE_X66Y128                                                     r  native_system/queue/bus_wdata[11]_i_1/I2
+    SLICE_X66Y128        LUT4 (Prop_lut4_I2_O)        0.124    12.671 r  native_system/queue/bus_wdata[11]_i_1/O
+                         net (fo=1, routed)           0.000    12.671    native_system/queue/p_2_out[11]
+    SLICE_X66Y128        FDCE                                         r  native_system/queue/bus_wdata_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X66Y128        FDCE                                         r  native_system/queue/bus_wdata_reg[11]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X66Y128        FDCE (Setup_fdce_C_D)        0.079     8.544    native_system/queue/bus_wdata_reg[11]
+  -------------------------------------------------------------------
+                         required time                          8.544    
+                         arrival time                         -12.671    
+  -------------------------------------------------------------------
+                         slack                                 -4.127    
+
+Slack (VIOLATED) :        -4.117ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.684ns  (logic 5.252ns (44.950%)  route 6.432ns (55.050%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.311     7.274    native_system/queue/bus_wdata1_n_99
+    SLICE_X35Y127                                                     r  native_system/queue/bus_wdata[16]_i_289/I2
+    SLICE_X35Y127        LUT6 (Prop_lut6_I2_O)        0.124     7.398 r  native_system/queue/bus_wdata[16]_i_289/O
+                         net (fo=2, estimated)        0.937     8.335    native_system/queue/bus_wdata[16]_i_289_n_0
+    SLICE_X40Y127                                                     r  native_system/queue/bus_wdata[6]_i_27/I0
+    SLICE_X40Y127        LUT6 (Prop_lut6_I0_O)        0.124     8.459 r  native_system/queue/bus_wdata[6]_i_27/O
+                         net (fo=2, estimated)        0.880     9.339    native_system/queue/bus_wdata[6]_i_27_n_0
+    SLICE_X48Y127                                                     r  native_system/queue/bus_wdata[2]_i_19/I1
+    SLICE_X48Y127        LUT6 (Prop_lut6_I1_O)        0.124     9.463 r  native_system/queue/bus_wdata[2]_i_19/O
+                         net (fo=3, estimated)        0.824    10.287    native_system/queue/bus_wdata[2]_i_19_n_0
+    SLICE_X55Y129                                                     r  native_system/queue/bus_wdata[0]_i_7/I3
+    SLICE_X55Y129        LUT6 (Prop_lut6_I3_O)        0.124    10.411 r  native_system/queue/bus_wdata[0]_i_7/O
+                         net (fo=1, estimated)        0.932    11.343    native_system/queue/data7[0]
+    SLICE_X59Y130                                                     r  native_system/queue/bus_wdata[0]_i_4/I0
+    SLICE_X59Y130        LUT6 (Prop_lut6_I0_O)        0.124    11.467 r  native_system/queue/bus_wdata[0]_i_4/O
+                         net (fo=1, estimated)        0.420    11.887    native_system/queue/bus_wdata[0]_i_4_n_0
+    SLICE_X60Y130                                                     r  native_system/queue/bus_wdata[0]_i_2/I2
+    SLICE_X60Y130        LUT5 (Prop_lut5_I2_O)        0.124    12.011 r  native_system/queue/bus_wdata[0]_i_2/O
+                         net (fo=1, estimated)        0.497    12.508    native_system/queue/bus_wdata[0]_i_2_n_0
+    SLICE_X61Y130                                                     r  native_system/queue/bus_wdata[0]_i_1/I3
+    SLICE_X61Y130        LUT4 (Prop_lut4_I3_O)        0.149    12.657 r  native_system/queue/bus_wdata[0]_i_1/O
+                         net (fo=1, routed)           0.000    12.657    native_system/queue/p_2_out[0]
+    SLICE_X61Y130        FDCE                                         r  native_system/queue/bus_wdata_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X61Y130        FDCE                                         r  native_system/queue/bus_wdata_reg[0]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X61Y130        FDCE (Setup_fdce_C_D)        0.075     8.540    native_system/queue/bus_wdata_reg[0]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                         -12.657    
+  -------------------------------------------------------------------
+                         slack                                 -4.117    
+
+Slack (VIOLATED) :        -3.953ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.476ns  (logic 5.227ns (45.547%)  route 6.249ns (54.453%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.173     7.136    native_system/queue/bus_wdata1_n_99
+    SLICE_X36Y129                                                     r  native_system/queue/bus_wdata[16]_i_413/I2
+    SLICE_X36Y129        LUT6 (Prop_lut6_I2_O)        0.124     7.260 r  native_system/queue/bus_wdata[16]_i_413/O
+                         net (fo=2, estimated)        0.948     8.208    native_system/queue/bus_wdata[16]_i_413_n_0
+    SLICE_X45Y130                                                     r  native_system/queue/bus_wdata[14]_i_30/I0
+    SLICE_X45Y130        LUT6 (Prop_lut6_I0_O)        0.124     8.332 r  native_system/queue/bus_wdata[14]_i_30/O
+                         net (fo=4, estimated)        0.989     9.321    native_system/queue/bus_wdata[14]_i_30_n_0
+    SLICE_X37Y128                                                     r  native_system/queue/bus_wdata[2]_i_21/I0
+    SLICE_X37Y128        LUT6 (Prop_lut6_I0_O)        0.124     9.445 r  native_system/queue/bus_wdata[2]_i_21/O
+                         net (fo=3, estimated)        1.427    10.872    native_system/queue/bus_wdata[2]_i_21_n_0
+    SLICE_X55Y124                                                     r  native_system/queue/bus_wdata[1]_i_10/I1
+    SLICE_X55Y124        LUT6 (Prop_lut6_I1_O)        0.124    10.996 r  native_system/queue/bus_wdata[1]_i_10/O
+                         net (fo=1, estimated)        0.409    11.405    native_system/queue/data5[1]
+    SLICE_X57Y124                                                     r  native_system/queue/bus_wdata[1]_i_4/I3
+    SLICE_X57Y124        LUT6 (Prop_lut6_I3_O)        0.124    11.529 r  native_system/queue/bus_wdata[1]_i_4/O
+                         net (fo=1, estimated)        0.407    11.936    native_system/queue/bus_wdata[1]_i_4_n_0
+    SLICE_X61Y124                                                     r  native_system/queue/bus_wdata[1]_i_2/I2
+    SLICE_X61Y124        LUT5 (Prop_lut5_I2_O)        0.124    12.060 r  native_system/queue/bus_wdata[1]_i_2/O
+                         net (fo=1, estimated)        0.265    12.325    native_system/queue/bus_wdata[1]_i_2_n_0
+    SLICE_X61Y124                                                     r  native_system/queue/bus_wdata[1]_i_1/I2
+    SLICE_X61Y124        LUT4 (Prop_lut4_I2_O)        0.124    12.449 r  native_system/queue/bus_wdata[1]_i_1/O
+                         net (fo=1, routed)           0.000    12.449    native_system/queue/p_2_out[1]
+    SLICE_X61Y124        FDCE                                         r  native_system/queue/bus_wdata_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X61Y124        FDCE                                         r  native_system/queue/bus_wdata_reg[1]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X61Y124        FDCE (Setup_fdce_C_D)        0.031     8.496    native_system/queue/bus_wdata_reg[1]
+  -------------------------------------------------------------------
+                         required time                          8.496    
+                         arrival time                         -12.449    
+  -------------------------------------------------------------------
+                         slack                                 -3.953    
+
+Slack (VIOLATED) :        -3.932ns  (required time - arrival time)
+  Source:                 native_system/queue/channel_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/bus_wdata_reg[16]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        11.503ns  (logic 5.227ns (45.440%)  route 6.276ns (54.560%))
+  Logic Levels:           8  (DSP48E1=1 LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X36Y132        FDCE                                         r  native_system/queue/channel_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y132        FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/channel_reg[11]/Q
+                         net (fo=23, estimated)       0.631     2.122    native_system/queue/channel_reg_n_0_[11]
+    DSP48_X2Y52                                                       r  native_system/queue/bus_wdata1/A[29]
+    DSP48_X2Y52          DSP48E1 (Prop_dsp48e1_A[29]_P[6])
+                                                      3.841     5.963 r  native_system/queue/bus_wdata1/P[6]
+                         net (fo=724, estimated)      1.305     7.268    native_system/queue/bus_wdata1_n_99
+    SLICE_X38Y129                                                     r  native_system/queue/bus_wdata[16]_i_255/I2
+    SLICE_X38Y129        LUT6 (Prop_lut6_I2_O)        0.124     7.392 r  native_system/queue/bus_wdata[16]_i_255/O
+                         net (fo=1, estimated)        0.937     8.329    native_system/queue/bus_wdata[16]_i_255_n_0
+    SLICE_X44Y128                                                     r  native_system/queue/bus_wdata[16]_i_76/I0
+    SLICE_X44Y128        LUT6 (Prop_lut6_I0_O)        0.124     8.453 r  native_system/queue/bus_wdata[16]_i_76/O
+                         net (fo=3, estimated)        0.749     9.202    native_system/queue/bus_wdata[16]_i_76_n_0
+    SLICE_X47Y128                                                     r  native_system/queue/bus_wdata[16]_i_23/I1
+    SLICE_X47Y128        LUT6 (Prop_lut6_I1_O)        0.124     9.326 r  native_system/queue/bus_wdata[16]_i_23/O
+                         net (fo=1, estimated)        0.940    10.266    native_system/queue/bus_wdata[16]_i_23_n_0
+    SLICE_X53Y126                                                     r  native_system/queue/bus_wdata[16]_i_8/I0
+    SLICE_X53Y126        LUT6 (Prop_lut6_I0_O)        0.124    10.390 r  native_system/queue/bus_wdata[16]_i_8/O
+                         net (fo=1, estimated)        1.010    11.400    native_system/queue/data7[16]
+    SLICE_X57Y125                                                     r  native_system/queue/bus_wdata[16]_i_4/I0
+    SLICE_X57Y125        LUT6 (Prop_lut6_I0_O)        0.124    11.524 r  native_system/queue/bus_wdata[16]_i_4/O
+                         net (fo=1, estimated)        0.420    11.944    native_system/queue/bus_wdata[16]_i_4_n_0
+    SLICE_X58Y125                                                     r  native_system/queue/bus_wdata[16]_i_2/I2
+    SLICE_X58Y125        LUT5 (Prop_lut5_I2_O)        0.124    12.068 r  native_system/queue/bus_wdata[16]_i_2/O
+                         net (fo=1, estimated)        0.284    12.352    native_system/queue/bus_wdata[16]_i_2_n_0
+    SLICE_X58Y125                                                     r  native_system/queue/bus_wdata[16]_i_1/I2
+    SLICE_X58Y125        LUT4 (Prop_lut4_I2_O)        0.124    12.476 r  native_system/queue/bus_wdata[16]_i_1/O
+                         net (fo=1, routed)           0.000    12.476    native_system/queue/p_2_out[16]
+    SLICE_X58Y125        FDCE                                         r  native_system/queue/bus_wdata_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/queue/clk
+    SLICE_X58Y125        FDCE                                         r  native_system/queue/bus_wdata_reg[16]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X58Y125        FDCE (Setup_fdce_C_D)        0.079     8.544    native_system/queue/bus_wdata_reg[16]
+  -------------------------------------------------------------------
+                         required time                          8.544    
+                         arrival time                         -12.476    
+  -------------------------------------------------------------------
+                         slack                                 -3.932    
+
+Slack (VIOLATED) :        -1.552ns  (required time - arrival time)
+  Source:                 native_system/queue/bus_wdata_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/cfg_reg[10][3]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.839ns  (logic 1.462ns (16.540%)  route 7.377ns (83.460%))
+  Logic Levels:           7  (LUT3=1 LUT4=2 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X59Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y129        FDCE (Prop_fdce_C_Q)         0.419     1.392 f  native_system/queue/bus_wdata_reg[3]/Q
+                         net (fo=1, estimated)        2.067     3.459    native_system/queue/qdata[3]
+    SLICE_X90Y105                                                     f  native_system/queue/cfg[3][3]_i_1/I0
+    SLICE_X90Y105        LUT4 (Prop_lut4_I0_O)        0.299     3.758 f  native_system/queue/cfg[3][3]_i_1/O
+                         net (fo=20, estimated)       0.912     4.670    native_system/queue/bus_wdata_reg[31]_0[3]
+    SLICE_X90Y105                                                     f  native_system/queue/cfg[4][31]_i_12/I0
+    SLICE_X90Y105        LUT4 (Prop_lut4_I0_O)        0.124     4.794 f  native_system/queue/cfg[4][31]_i_12/O
+                         net (fo=1, estimated)        0.615     5.409    native_system/queue/cfg[4][31]_i_12_n_0
+    SLICE_X90Y104                                                     f  native_system/queue/cfg[4][31]_i_11/I4
+    SLICE_X90Y104        LUT6 (Prop_lut6_I4_O)        0.124     5.533 r  native_system/queue/cfg[4][31]_i_11/O
+                         net (fo=1, estimated)        1.101     6.634    native_system/queue/cfg[4][31]_i_11_n_0
+    SLICE_X89Y101                                                     r  native_system/queue/cfg[4][31]_i_8/I0
+    SLICE_X89Y101        LUT5 (Prop_lut5_I0_O)        0.124     6.758 f  native_system/queue/cfg[4][31]_i_8/O
+                         net (fo=3, estimated)        0.466     7.224    native_system/queue/cfg[4][31]_i_8_n_0
+    SLICE_X88Y98                                                      f  native_system/queue/cfg[9][31]_i_2/I0
+    SLICE_X88Y98         LUT6 (Prop_lut6_I0_O)        0.124     7.348 r  native_system/queue/cfg[9][31]_i_2/O
+                         net (fo=3, estimated)        0.646     7.994    native_system/queue/cfg[9][31]_i_2_n_0
+    SLICE_X87Y98                                                      r  native_system/queue/cfg[10][31]_i_2/I0
+    SLICE_X87Y98         LUT3 (Prop_lut3_I0_O)        0.124     8.118 r  native_system/queue/cfg[10][31]_i_2/O
+                         net (fo=1, estimated)        0.799     8.917    native_system/queue/cfg[10][31]_i_2_n_0
+    SLICE_X87Y97                                                      r  native_system/queue/cfg[10][31]_i_1/I0
+    SLICE_X87Y97         LUT5 (Prop_lut5_I0_O)        0.124     9.041 r  native_system/queue/cfg[10][31]_i_1/O
+                         net (fo=32, estimated)       0.771     9.812    native_system/digital/cfg_reg[10][31]_0[0]
+    SLICE_X91Y98         FDCE                                         r  native_system/digital/cfg_reg[10][3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/digital/clk
+    SLICE_X91Y98         FDCE                                         r  native_system/digital/cfg_reg[10][3]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X91Y98         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/cfg_reg[10][3]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -9.812    
+  -------------------------------------------------------------------
+                         slack                                 -1.552    
+
+Slack (VIOLATED) :        -1.552ns  (required time - arrival time)
+  Source:                 native_system/queue/bus_wdata_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/cfg_reg[10][5]/CE
+                            (rising edge-triggered cell FDPE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.839ns  (logic 1.462ns (16.540%)  route 7.377ns (83.460%))
+  Logic Levels:           7  (LUT3=1 LUT4=2 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X59Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y129        FDCE (Prop_fdce_C_Q)         0.419     1.392 f  native_system/queue/bus_wdata_reg[3]/Q
+                         net (fo=1, estimated)        2.067     3.459    native_system/queue/qdata[3]
+    SLICE_X90Y105                                                     f  native_system/queue/cfg[3][3]_i_1/I0
+    SLICE_X90Y105        LUT4 (Prop_lut4_I0_O)        0.299     3.758 f  native_system/queue/cfg[3][3]_i_1/O
+                         net (fo=20, estimated)       0.912     4.670    native_system/queue/bus_wdata_reg[31]_0[3]
+    SLICE_X90Y105                                                     f  native_system/queue/cfg[4][31]_i_12/I0
+    SLICE_X90Y105        LUT4 (Prop_lut4_I0_O)        0.124     4.794 f  native_system/queue/cfg[4][31]_i_12/O
+                         net (fo=1, estimated)        0.615     5.409    native_system/queue/cfg[4][31]_i_12_n_0
+    SLICE_X90Y104                                                     f  native_system/queue/cfg[4][31]_i_11/I4
+    SLICE_X90Y104        LUT6 (Prop_lut6_I4_O)        0.124     5.533 r  native_system/queue/cfg[4][31]_i_11/O
+                         net (fo=1, estimated)        1.101     6.634    native_system/queue/cfg[4][31]_i_11_n_0
+    SLICE_X89Y101                                                     r  native_system/queue/cfg[4][31]_i_8/I0
+    SLICE_X89Y101        LUT5 (Prop_lut5_I0_O)        0.124     6.758 f  native_system/queue/cfg[4][31]_i_8/O
+                         net (fo=3, estimated)        0.466     7.224    native_system/queue/cfg[4][31]_i_8_n_0
+    SLICE_X88Y98                                                      f  native_system/queue/cfg[9][31]_i_2/I0
+    SLICE_X88Y98         LUT6 (Prop_lut6_I0_O)        0.124     7.348 r  native_system/queue/cfg[9][31]_i_2/O
+                         net (fo=3, estimated)        0.646     7.994    native_system/queue/cfg[9][31]_i_2_n_0
+    SLICE_X87Y98                                                      r  native_system/queue/cfg[10][31]_i_2/I0
+    SLICE_X87Y98         LUT3 (Prop_lut3_I0_O)        0.124     8.118 r  native_system/queue/cfg[10][31]_i_2/O
+                         net (fo=1, estimated)        0.799     8.917    native_system/queue/cfg[10][31]_i_2_n_0
+    SLICE_X87Y97                                                      r  native_system/queue/cfg[10][31]_i_1/I0
+    SLICE_X87Y97         LUT5 (Prop_lut5_I0_O)        0.124     9.041 r  native_system/queue/cfg[10][31]_i_1/O
+                         net (fo=32, estimated)       0.771     9.812    native_system/digital/cfg_reg[10][31]_0[0]
+    SLICE_X91Y98         FDPE                                         r  native_system/digital/cfg_reg[10][5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/digital/clk
+    SLICE_X91Y98         FDPE                                         r  native_system/digital/cfg_reg[10][5]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X91Y98         FDPE (Setup_fdpe_C_CE)      -0.205     8.260    native_system/digital/cfg_reg[10][5]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -9.812    
+  -------------------------------------------------------------------
+                         slack                                 -1.552    
+
+Slack (VIOLATED) :        -1.517ns  (required time - arrival time)
+  Source:                 native_system/queue/bus_wdata_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/cfg_reg[10][21]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.840ns  (logic 1.462ns (16.538%)  route 7.378ns (83.462%))
+  Logic Levels:           7  (LUT3=1 LUT4=2 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17985, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X59Y129        FDCE                                         r  native_system/queue/bus_wdata_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y129        FDCE (Prop_fdce_C_Q)         0.419     1.392 f  native_system/queue/bus_wdata_reg[3]/Q
+                         net (fo=1, estimated)        2.067     3.459    native_system/queue/qdata[3]
+    SLICE_X90Y105                                                     f  native_system/queue/cfg[3][3]_i_1/I0
+    SLICE_X90Y105        LUT4 (Prop_lut4_I0_O)        0.299     3.758 f  native_system/queue/cfg[3][3]_i_1/O
+                         net (fo=20, estimated)       0.912     4.670    native_system/queue/bus_wdata_reg[31]_0[3]
+    SLICE_X90Y105                                                     f  native_system/queue/cfg[4][31]_i_12/I0
+    SLICE_X90Y105        LUT4 (Prop_lut4_I0_O)        0.124     4.794 f  native_system/queue/cfg[4][31]_i_12/O
+                         net (fo=1, estimated)        0.615     5.409    native_system/queue/cfg[4][31]_i_12_n_0
+    SLICE_X90Y104                                                     f  native_system/queue/cfg[4][31]_i_11/I4
+    SLICE_X90Y104        LUT6 (Prop_lut6_I4_O)        0.124     5.533 r  native_system/queue/cfg[4][31]_i_11/O
+                         net (fo=1, estimated)        1.101     6.634    native_system/queue/cfg[4][31]_i_11_n_0
+    SLICE_X89Y101                                                     r  native_system/queue/cfg[4][31]_i_8/I0
+    SLICE_X89Y101        LUT5 (Prop_lut5_I0_O)        0.124     6.758 f  native_system/queue/cfg[4][31]_i_8/O
+                         net (fo=3, estimated)        0.466     7.224    native_system/queue/cfg[4][31]_i_8_n_0
+    SLICE_X88Y98                                                      f  native_system/queue/cfg[9][31]_i_2/I0
+    SLICE_X88Y98         LUT6 (Prop_lut6_I0_O)        0.124     7.348 r  native_system/queue/cfg[9][31]_i_2/O
+                         net (fo=3, estimated)        0.646     7.994    native_system/queue/cfg[9][31]_i_2_n_0
+    SLICE_X87Y98                                                      r  native_system/queue/cfg[10][31]_i_2/I0
+    SLICE_X87Y98         LUT3 (Prop_lut3_I0_O)        0.124     8.118 r  native_system/queue/cfg[10][31]_i_2/O
+                         net (fo=1, estimated)        0.799     8.917    native_system/queue/cfg[10][31]_i_2_n_0
+    SLICE_X87Y97                                                      r  native_system/queue/cfg[10][31]_i_1/I0
+    SLICE_X87Y97         LUT5 (Prop_lut5_I0_O)        0.124     9.041 r  native_system/queue/cfg[10][31]_i_1/O
+                         net (fo=32, estimated)       0.772     9.813    native_system/digital/cfg_reg[10][31]_0[0]
+    SLICE_X90Y95         FDCE                                         r  native_system/digital/cfg_reg[10][21]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17985, unset)        0.924     8.500    native_system/digital/clk
+    SLICE_X90Y95         FDCE                                         r  native_system/digital/cfg_reg[10][21]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X90Y95         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/cfg_reg[10][21]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.813    
+  -------------------------------------------------------------------
+                         slack                                 -1.517    
+
+
+
+

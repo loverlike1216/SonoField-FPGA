@@ -1,0 +1,68 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Sep 29 13:42:16 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_clocks -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/core_timing_real_loop/timing_refactor/trade/mmcm_123.75MHz_clocks.rpt
+| Design       : clock_trade
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock    Period(ns)  Waveform(ns)    Attributes  Sources
+input33  30.303      {0.000 15.151}  P           {clk33}
+c        8.081       {0.000 4.040}   P,G,A       {mmcm/CLKOUT0}
+fb       30.303      {0.000 15.151}  P,G,A       {mmcm/CLKFBOUT}
+s        16.162      {0.000 8.081}   P,G,A       {mmcm/CLKOUT1}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : c
+Master Source       : mmcm/CLKIN1
+Master Clock        : input33
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -11.111 -22.222}
+Generated Sources   : {mmcm/CLKOUT0}
+
+Generated Clock     : fb
+Master Source       : mmcm/CLKIN1
+Master Clock        : input33
+Multiply By         : 1
+Generated Sources   : {mmcm/CLKFBOUT}
+
+Generated Clock     : s
+Master Source       : mmcm/CLKIN1
+Master Clock        : input33
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -7.071 -14.141}
+Generated Sources   : {mmcm/CLKOUT1}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+

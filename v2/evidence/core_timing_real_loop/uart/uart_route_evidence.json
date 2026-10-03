@@ -1,0 +1,98 @@
+{
+  "status": "REAL_UART_ROUTE_BLOCKED_BY_MISSING_EVIDENCE",
+  "scope": "Local authoritative board directory and existing reviewed board-transport evidence",
+  "inventory": [
+    {
+      "path": "Zynq7020/075c1b752e612dda8d314e4415b73c13.png",
+      "sha256": "02fd033bcd1cd588f86d3d1df0643eca277e9de069e65055ec859fd897f9a611",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/1.png",
+      "sha256": "fcd88c3dceefa6babd2d56a8e0560a593f8d1e059de7ba378ac5ddc7a10fc12f",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/1ec52b807edd6cf0dddcf8ffc4109a82.png",
+      "sha256": "558febe51cc53edaeaeb56bfa83c63a59f511dad1a6eaeac3ee0d0d00e1fd923",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/2.png",
+      "sha256": "5bf00ef9027a7aa543234b5c888c74e8f8316461c70567005434c9c03bb109dd",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/3.png",
+      "sha256": "491cc9853db4d65047d298da5f663cb26db53af5f712c47b467197859fde9cab",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/396993c30e2d447db53dcf3b509222a1.png",
+      "sha256": "c54498d6aa5440e0a88c2f5eba29e26e50a93a8b2887b747e5bf855d16b4849c",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/4cb7b508670dc325da8448dbf51cb117 (1).png",
+      "sha256": "7950ce84014f9aa2d7975a29648c3afbcc406a221bf4a91cdd6e8232198cc403",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/4cb7b508670dc325da8448dbf51cb117.png",
+      "sha256": "7950ce84014f9aa2d7975a29648c3afbcc406a221bf4a91cdd6e8232198cc403",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/9268ababf01f495387fe9e2705411573.png",
+      "sha256": "963c9ff7533f419313276c8d8e6f56c00a4fea88444742db6168250cdeb85e82",
+      "type": ".png"
+    },
+    {
+      "path": "Zynq7020/constrain/gpio.const",
+      "sha256": "9c4ed524a66176fe89304896e0a1705d14f9f6587ad96f96edb2ca2c5757ae98",
+      "type": ".const"
+    },
+    {
+      "path": "Zynq7020/constrain/hardware.const",
+      "sha256": "65fefb95996297e6b53ab7e9e4ab976835d6e9de1429a8181bc4ed40fb18fa87",
+      "type": ".const"
+    },
+    {
+      "path": "Zynq7020/屏幕截图 2026-09-18 232246.png",
+      "sha256": "4f00ebd79ce4b04bd241c1657ef2e97e45aaf4b7599458026f5e6d0a0cc7ef86",
+      "type": ".png"
+    }
+  ],
+  "documentation_present": "Two Robei constraint files and screenshots; no revision-matched core schematic/PS preset/XSA/BSP in board directory",
+  "constraint_uart_matches": [],
+  "previous_evidence": {
+    "status": "NOT_VERIFIED",
+    "candidate": "FT2232H B / MI_01 / COM4",
+    "enumeration": "uart_pnp_snapshot.json",
+    "previous_identification": "../board_bringup/summary.json",
+    "evidence_reviewed": "Zynq7020 constrain files, connector images and existing board evidence; no revision-matched FTDI B to PS MIO net proof found",
+    "serial_port_opened": false,
+    "bytes_transmitted": 0,
+    "driver_changed": false,
+    "eeprom_changed": false,
+    "ps_registers_written": false,
+    "ps_jtag_readback": "NOT_RUN; register configuration would not establish copper routing",
+    "required_evidence": [
+      "Revision-matched schematic or continuity evidence naming FTDI B TX/RX and Zynq MIO pins",
+      "DTR/RTS physical routes and inactive levels",
+      "Reviewed PS UART instance, baud and clock/reset platform"
+    ],
+    "ethernet": "PC Realtek Ethernet disconnected at resume; WLAN up; no board network identified",
+    "route_recommendation": "Verified UART first if board routing supports it; JTAG remains confirmed identification/debug path only",
+    "resume_enumeration": "uart_pnp_resume_snapshot.json",
+    "network_evidence": "pc_network_resume_snapshot.json"
+  },
+  "conclusion": "FT2232 B COM existence does not establish PS UART instance/MIO pair. No UART bytes transmitted. No physical deployment allowed.",
+  "ps_required": [
+    "PS UART instance/MIO routing",
+    "PS reference clock and reset configuration",
+    "OCM or DDR reviewed memory platform",
+    "verified XSA/BSP"
+  ],
+  "physical_speed_grade": "UNKNOWN"
+}

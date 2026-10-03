@@ -1,0 +1,83 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v2",
+  "stage": "CORE_TIMING_CLOSURE_AND_REAL_PS_PL_SMOKE_TEST",
+  "status": "CORE_TIMING_REVISE",
+  "gate_a": "FAIL",
+  "gate_b": "NOT_RUN_GATE_A_FAILED",
+  "timing": {
+    "original_synthesis": {
+      "wns_ns": -8.128,
+      "tns_ns": -2868.007,
+      "setup_failing_endpoints": 491.0,
+      "total_endpoints": 33396.0,
+      "whs_ns": 0.164,
+      "ths_ns": 0.0,
+      "report": "baseline/synthesis/timing_summary.rpt"
+    },
+    "round1_synthesis": {
+      "wns_ns": -7.911,
+      "tns_ns": -1304.552,
+      "setup_failing_endpoints": 284.0,
+      "total_endpoints": 33418.0,
+      "whs_ns": 0.164,
+      "ths_ns": 0.0,
+      "report": "round1/synthesis/timing_summary.rpt"
+    },
+    "round1_postroute": {
+      "wns_ns": -7.16,
+      "tns_ns": -11281.662,
+      "setup_failing_endpoints": 12261.0,
+      "total_endpoints": 33449.0,
+      "whs_ns": 0.093,
+      "ths_ns": 0.0,
+      "report": "round1/routed/timing_summary.rpt"
+    },
+    "round2_synthesis": {
+      "wns_ns": -3.997,
+      "tns_ns": -107.126,
+      "setup_failing_endpoints": 92.0,
+      "total_endpoints": 33355.0,
+      "whs_ns": 0.164,
+      "ths_ns": 0.0,
+      "report": "round2/synthesis/timing_summary.rpt"
+    },
+    "round2_postroute": {
+      "wns_ns": -4.515,
+      "tns_ns": -6007.936,
+      "setup_failing_endpoints": 9921.0,
+      "total_endpoints": 33361.0,
+      "whs_ns": 0.07,
+      "ths_ns": 0.0,
+      "report": "round2/routed/timing_summary.rpt"
+    }
+  },
+  "physical_speed_grade": "UNKNOWN",
+  "engineering_timing_target": "xc7z020clg400-1",
+  "engineering_part_classification": "CONSERVATIVE_ENGINEERING_ASSUMPTION",
+  "internal_latency_change_cycles": 0,
+  "bounded_refactor_rounds": 2,
+  "functional_regression": "PASS",
+  "regression_evidence": "recovery_20261003/regression_fixed/summary.json",
+  "equivalence": "PASS",
+  "axi_offline": "PASS",
+  "real_uart": "BLOCKED_BY_MISSING_ROUTE_EVIDENCE",
+  "real_ps_pl_loop": "NOT_RUN",
+  "hardware_programmed": false,
+  "external_gpio_driven": false,
+  "implementation_scope": "Routed OOC sono_axi_system internal paths; ideal primary clock; external input/output delays absent",
+  "starting_commit": "b11c80ca3e7fc7745241c32f8f80d95329ca4ddf",
+  "result": "REVISE",
+  "independent_acceptance": "PENDING",
+  "current_model": "GPT-6.1 Sol High",
+  "model_provenance_basis": "USER_DECLARED_MANUAL_SELECTION",
+  "record_date": "2026-10-03",
+  "source_of_timing": "Historical preserved real Vivado 2025.2 reports, 2026-09-29; not rerun because of model switch",
+  "historical_latest_retry": "final_regression/summary.json: FAIL; cause unconfirmed",
+  "preserved_recovery_failure": "recovery_20261003/regression/summary.json",
+  "ui_evidence_fix": "Save dispatched evaluated path snapshot; reject digest mismatch instead of saving mutable preview",
+  "python_tests": 114,
+  "trajectory_frames": 3696,
+  "deterministic_runs": 4,
+  "gui_evidence_fix_validation": "PASS: exact dispatched snapshot, digest rejection, full unchanged gate"
+}

@@ -81,3 +81,16 @@ the explicitly authorized synthetic/digital stage.
 P-20260925-001 documents the B04 clock-only buffer hold risk and missing independent watchdog/power qualification. No external ChatGPT decision is available. Native ERC has2single-pin logical endpoints (HARDWARE_ENABLE,RST_N) and43supplier-attribute warning groups; do not suppress them. Generic templates are not final procurement parts.
 B06 baseline is now user-supplied TCT40-10T/R1 design input; manufacturer provenance and purchased-batch qualification remain open. No 16 mm ratings are transferred.
 Read PCB/V1/log/review/electrical_findings.md and ERC_DISPOSITION.md. Native capture is complete as a draft; electrical release is not accepted.
+
+## Current engineering update — 2026-10-03
+
+Recording model: GPT-6.1 Sol High; previous sections retain their historical scope. Real earlier JTAG identified XC7Z020, IDCODE0x23727093; user chip photograph established CLG400. B01 is PARTIALLY_RESOLVED: physical speed/temperature/full ordering code still UNKNOWN. Explicit conservative -1 engineering authorization permits bounded timing analysis; it does not identify the physical grade.
+
+CORE_TIMING: two real route rounds failed. Latest WNS -4.515 ns,TNS -6007.936 ns; required throughput minimum116.864MHz excludes the only tested fixed-route positive-slack profile82.5MHz. P-20260929-001 records the selector/enable/reset RCA and next decision.
+
+B03 remains OPEN: FT2232H B/COM4 was enumerated historically, but no verified bridge-to-PS UART MIO route, VCCO/connector facts or reviewed PS preset/XSA/BSP. Target ARM firmware compilation and real UART transmission are blocked. B04 remains OPEN: serializer physical clock/data/latch timing and watchdog/power qualification are unmeasured. B05/B06/B07 retain physical batch/calibration/levitation limitations.
+
+STATE_CONFLICT_DETECTED: prior shared narratives and machine-state evidence pointers describe older stages; current real evidence and recovery summary prevail. Previous GUI retry FAIL is retained separately from the earlier PASS and the new recovery run. No hardware result is promoted by the model switch. Work OFF; CURRENT_PLAN/HANDOFF/general narrative refresh remains DOCUMENTATION_UPDATE_REQUIRED.
+
+
+Current validation update — 2026-10-03, GPT-6.1 Sol High: fixed-source recovery PASS,114Python tests,3696TRAP_VALID frames,threeIcarus/oneVivadoXSim matching canonical hashes,calibration/ADC and frozen-parent gates. Saved-preview defect fixed and failure retained. Routed Gate A remains FAIL; physical PS/PL and acoustic operation NOT_RUN. Acceptance thresholds unchanged.

@@ -89,3 +89,9 @@ No external ChatGPT decision is claimed. Execute the preflight contract; preserv
 
 ## ADR-034 — Single-sheet presentation and pwsh preference (2026-09-26)
 Source: user's actual Codex instructions requesting a single schematic with solid named partitions and Windows PowerShell7 by default. Project remains v2; schematic remains V1. Preserve all128TX and8RX circuits; re-layout only into one native sheet. All3992 native pins unchanged after presentation adjustments. PDF/SVG are vector reading artifacts. No scope expansion to PCB or safety-gate waiver. Long-term shell preference saved separately in the authorized memory update note.
+
+## 2026-10-03 — current v2 timing contract and model continuity
+
+Current recording model: GPT-6.1 Sol High (user-declared manual selection). Preserve all prior entries as history. User attachment deb51e17-1b72-4eab-ac76-9695ca9bda77 approved P-20260927-001 with body hash 0bf40cdd79faaf5fd4aca4af6e1f7cf85eab8662128f4633ea1acb3b4ef61916, a conservative xc7z020clg400-1 engineering target and two bounded timing-refactor rounds followed by clock/throughput analysis. Physical speed/temperature/full ordering code remain UNKNOWN. Approval is user-originated, not fabricated Chat or Work review.
+
+User explicitly prioritized the single Robei octagonal Zynq-7020 v2 sound-field controller. Model switching changes no version, architecture, interface, parameter or Acceptance. Formal MODEL_TRANSITION: AI-interaction-memory/codex/I-20261003-0001__model-transition.md. Timing remains CORE_TIMING_REVISE; next technical decision is OPEN in P-20260929-001, with no third round approved by this model record.

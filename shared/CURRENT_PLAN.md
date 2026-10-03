@@ -1,3 +1,23 @@
+# Current v2 execution position — 2026-10-03
+
+Current model: GPT-6.1 Sol High. Active v2; stage CORE_TIMING_CLOSURE_AND_REAL_PS_PL_SMOKE_TEST. Primary objective: single Robei octagonal Zynq-7020 acoustic control. Latest user rules authorize Codex to maintain plan and CONTEXT_CHECKPOINT.
+
+Two timing rounds and clock/throughput analysis are complete. Gate A FAIL: routed WNS-4.515ns,TNS-6007.936ns. Exact-cycle phase/burst and safe offline AXI checks PASS. Previous complete regression PASS; failed retry preserved; recovery exposed a GUI evidence mismatch; the reversible snapshot/hash fix and complete 114-test/3696-frame dual-simulator regression PASS.
+
+Next priorities:
+
+1. Recovery regression is PASS. Complete source/hash reconciliation and traceable GitHub checkpoint.
+2. Independent review of P-20260929-001 for the next bounded queue/enable/reset timing stage. Existing two-round contract is exhausted.
+3. Establish verified UART-to-PS route, PS preset/XSA/BSP and target ARM toolchain.
+4. After real routed Gate A and prerequisites pass, execute bare-board PC↔PS↔AXI↔PL safe transport.
+5. Qualify digital-driver electrical timing/load and opposing-pair acoustics before measured array/particle milestones.
+
+Do Not Change: interfaces/register/packet/channel maps,requested/calibration split,atomic maps,128-channel/8-bit capability,38.5–41.5kHz operating range,132/66MHz production clocks,safety,current geometry and historical evidence. No failing-design deployment.
+
+Previous plan content below is historical and does not override current real evidence.
+
+---
+
 # Current execution contract — schematic revision V1
 
 Active project v2; user-authorized schematic-only stage. Full contract: PCB/V1/log/preflight/EXECUTION_CONTRACT.md.
