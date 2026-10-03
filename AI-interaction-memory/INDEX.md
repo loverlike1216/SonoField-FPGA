@@ -3,7 +3,7 @@
 Canonical ChatGPT history: [SonoField-FPGA](../AI-chat-memory/SonoField-FPGA.md), BLOCKED.
 Codex records below are distinct from external ChatGPT history. Provider: OpenAI.
 Work, other AI and cross-agent consultations: none captured; no participation invented.
-Source timestamps are UTC. Current recovery: v2 / CORE_TIMING_CLOSURE_AND_REAL_PS_PL_SMOKE_TEST / GPT-6.1 Sol High. Older rows retain their historical capture scope.
+Source timestamps are UTC. Current recovery: v2 / TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE / GPT-6.1 Sol High. Older rows retain their historical capture scope.
 
 | Thread / Session | Role / Impact | First used | Last captured | Record | Status | Content SHA256 |
 |---|---|---|---|---|---|---|
@@ -30,3 +30,9 @@ Active recovery scope: **v2 single-board acoustic control only**. [Focus event I
 
 
 Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual visible messages from the manual transition through 2026-10-03T04:05:02.653Z. Sanitized canonical transcript SHA256 f66a4b2a8cdfef95401f88c75660c21a59da63bc9f17aaa1e66354c03cfa5639. Coverage PARTIAL; final response after capture is included at the next checkpoint.
+
+
+## Current pre-PCB stage capture
+
+[S-20261003-codex-002](codex/S-20261003-codex-002.md) · [manifest](sessions/S-20261003-codex-002.json): 18 actual visible messages; cutoff 2026-10-03T08:54:34.081Z; PARTIAL; sanitized canonical SHA256 24be554647e238675c862c1524b5e8b38df41da73b03668967843e94ec602ba8. IMPLEMENTATION_INPUT.
+[Tool flow T-20261003-002](tool-flow/T-20261003-002__pre-pcb.md): VALIDATION_INPUT; actual stage evidence and failures; PARTIAL.

@@ -1,0 +1,206 @@
+{
+  "current_model": "GPT-6.1 Sol High",
+  "timestamp_utc": "2026-10-03T08:53:20.1186955Z",
+  "shell": "7.6.5",
+  "usb_device_count": 12,
+  "ftdi": [
+    {
+      "Name": "USB Serial Converter B",
+      "Status": "OK",
+      "Class": "USB",
+      "VID": "0403",
+      "PID": "6010",
+      "Interface": "01"
+    },
+    {
+      "Name": "USB Serial Converter A",
+      "Status": "OK",
+      "Class": "USB",
+      "VID": "0403",
+      "PID": "6010",
+      "Interface": "00"
+    },
+    {
+      "Name": "USB Serial Port (COM4)",
+      "Status": "OK",
+      "Class": "Ports",
+      "VID": "0403",
+      "PID": "6010",
+      "Interface": ""
+    },
+    {
+      "Name": "USB Composite Device",
+      "Status": "OK",
+      "Class": "USB",
+      "VID": "0403",
+      "PID": "6010",
+      "Interface": ""
+    }
+  ],
+  "com_ports": [],
+  "ftdi_drivers": [
+    {
+      "DeviceName": "USB Serial Port",
+      "DriverProviderName": "FTDI",
+      "DriverVersion": "2.12.28.0",
+      "InfName": "oem104.inf",
+      "IsSigned": true
+    },
+    {
+      "DeviceName": "USB Serial Converter B",
+      "DriverProviderName": "FTDI",
+      "DriverVersion": "2.12.28.0",
+      "InfName": "oem99.inf",
+      "IsSigned": true
+    },
+    {
+      "DeviceName": "USB Serial Converter A",
+      "DriverProviderName": "FTDI",
+      "DriverVersion": "2.12.28.0",
+      "InfName": "oem99.inf",
+      "IsSigned": true
+    },
+    {
+      "DeviceName": "USB Composite Device",
+      "DriverProviderName": "Microsoft",
+      "DriverVersion": "10.0.26100.9444",
+      "InfName": "usb.inf",
+      "IsSigned": true
+    }
+  ],
+  "network": [
+    {
+      "InterfaceDescription": "Microsoft Wi-Fi Direct Virtual Adapter",
+      "Status": "Disconnected",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "Rust Wintun Tunnel Tunnel",
+      "Status": "Up",
+      "LinkSpeed": "100 Gbps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "WAN Miniport (Network Monitor)",
+      "Status": "Up",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "WAN Miniport (SSTP)",
+      "Status": "Disconnected",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "WAN Miniport (PPTP)",
+      "Status": "Disconnected",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "WAN Miniport (IPv6)",
+      "Status": "Up",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "",
+      "Status": "Not Present",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "WAN Miniport (PPPOE)",
+      "Status": "Disconnected",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "Bluetooth Device (Personal Area Network)",
+      "Status": "Disconnected",
+      "LinkSpeed": "3 Mbps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "Intel(R) Wi-Fi 6 AX201 160MHz",
+      "Status": "Up",
+      "LinkSpeed": "721 Mbps",
+      "HardwareInterface": true,
+      "Virtual": false
+    },
+    {
+      "InterfaceDescription": "Realtek PCIe GbE Family Controller",
+      "Status": "Disconnected",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": true,
+      "Virtual": false
+    },
+    {
+      "InterfaceDescription": "WAN Miniport (L2TP)",
+      "Status": "Disconnected",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "",
+      "Status": "Not Present",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "WAN Miniport (IKEv2)",
+      "Status": "Disconnected",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "WAN Miniport (IP)",
+      "Status": "Up",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "Microsoft Wi-Fi Direct Virtual Adapter #3",
+      "Status": "Disconnected",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "Microsoft Kernel Debug Network Adapter",
+      "Status": "Not Present",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    },
+    {
+      "InterfaceDescription": "",
+      "Status": "Not Present",
+      "LinkSpeed": "0 bps",
+      "HardwareInterface": false,
+      "Virtual": true
+    }
+  ],
+  "serial_opened": false,
+  "drivers_changed": false,
+  "hardware_programmed": false,
+  "ethernet_board_identity": "NOT_ESTABLISHED_BY_HOST_ADAPTER_ENUMERATION",
+  "managed_port_names": [
+    "COM4"
+  ]
+}

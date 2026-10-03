@@ -6,8 +6,8 @@
     "jtag_idcode": "0x23727093",
     "arm_dap_idcode": "0x4BA00477",
     "tool": "Vivado 2025.2",
-    "evidence": "evidence/board_bringup/summary.json",
-    "scope": "JTAG confirms silicon; user photograph confirms CLG400; speed/temperature/full ordering code unknown"
+    "evidence": "evidence/pre_pcb_board_ready/board_identity/jtag_identity.json",
+    "scope": "JTAG confirms XC7Z020 silicon; full part/package/speed/temperature supplied by explicit user contract"
   },
   "observed_transport": {
     "bridge": "FT2232H",
@@ -16,14 +16,22 @@
     "jtag_interface": "A / MI_00",
     "uart_candidate": "B / MI_01 / COM4",
     "uart_data_verified": false,
-    "ethernet_verified": false
+    "ethernet_verified": false,
+    "bridge_scope": "USB descriptors VID0403/PID6010/REV0700; official FTDI descriptor mapping",
+    "evidence": "evidence/pre_pcb_board_ready/board_identity/usb_descriptors.json"
   },
-  "exact_part": null,
+  "exact_part": "xc7z020clg400-1",
   "package": "CLG400",
-  "speed_grade": null,
+  "speed_grade": "-1",
   "pins_verified": false,
   "historical_documented_facts": "board_facts.json",
-  "status": "PARTIALLY_RESOLVED_STILL_BLOCKING",
-  "temperature_grade": null,
-  "physical_marking_evidence": "evidence/board_transport/chip_marking_fact.json"
+  "status": "PART_CONFIRMED_ELECTRICAL_INTEGRATION_BLOCKED",
+  "temperature_grade": "C",
+  "physical_marking_evidence": "evidence/board_transport/chip_marking_fact.json",
+  "physical_order_code": "XC7Z020-1CLG400C",
+  "part_provenance": "USER_CONFIRMED_PHYSICAL_FACT",
+  "current_model": "GPT-6.1 Sol High",
+  "current_documented_input_clock_hz": 33333000,
+  "current_documented_input_clock_pin": "N18",
+  "input_clock_classification": "USER_APPROVED_DOCUMENT_FALLBACK_NOT_MEASURED"
 }

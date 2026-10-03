@@ -1,0 +1,140 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "project_name": "SonoField-FPGA",
+  "active_version": "v2",
+  "branch": "main",
+  "current_stage": "TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE",
+  "current_model": "GPT-6.1 Sol High",
+  "model_provenance": "USER_DECLARED_MANUAL_SELECTION",
+  "starting_head": "bd9e79f622ee58ea970870071702eb24596cd753",
+  "reconciled_head": "bd9e79f622ee58ea970870071702eb24596cd753",
+  "exact_part": "xc7z020clg400-1",
+  "physical_order_code": "XC7Z020-1CLG400C",
+  "part_provenance": "USER_CONFIRMED_PHYSICAL_FACT",
+  "board_jtag": "HARDWARE_VERIFIED_IDENTITY_ONLY",
+  "idcode": "0x23727093",
+  "arm_dap_idcode": "0x4BA00477",
+  "ftdi_reported_variant": "FT2232H",
+  "usb_descriptor": "VID0403/PID6010/REV0700",
+  "uart": "COM4_ENUMERATED_ROUTE_NOT_VERIFIED",
+  "ethernet": "HOST_REALTEK_DISCONNECTED; BOARD_ROUTE_NOT_VERIFIED",
+  "documented_input_clock_hz": 33333000,
+  "input_clock_pin": "N18",
+  "input_clock_provenance": "USER_APPROVED_DOCUMENT_FALLBACK_NOT_MEASURED",
+  "core_timing": {
+    "wns_ns": 0.082,
+    "tns_ns": 0.0,
+    "setup_failing_endpoints": 0,
+    "setup_endpoints": 33175,
+    "whs_ns": 0.072,
+    "ths_ns": 0.0,
+    "hold_failing_endpoints": 0,
+    "status": "PASS",
+    "classification": "REAL_VIVADO_ROUTED_INTERNAL_OOC_TIMING",
+    "part": "xc7z020clg400-1",
+    "design": "sono_axi_system",
+    "design_clock_hz": 132000000,
+    "internal_unconstrained_endpoints": 0,
+    "routing_errors": 0,
+    "fully_routed_nets": 21475,
+    "full_board_timing": "NOT_VERIFIED",
+    "external_io_delays": "NOT_ASSIGNED_PENDING_PHYSICAL_FACTS",
+    "constraint_exceptions_added": false,
+    "hardware_programmed": false
+  },
+  "serializer_acceptance_cycles": 11,
+  "maximum_phase_update_hz": 10624000,
+  "minimum_core_hz": 116864000,
+  "core_design_target_hz": 132000000,
+  "fallback_mmcm_core_hz": 131998680,
+  "final_board_clock": "NOT_FROZEN_PENDING_PLATFORM_INTEGRATION",
+  "digital_regression": "PASS",
+  "python_tests": 115,
+  "motion_frames_per_run": 3696,
+  "motion_runs": 4,
+  "determinism": {
+    "status": "PASS",
+    "runs": 4,
+    "independent_simulators": [
+      "Icarus",
+      "Vivado 2025.2 XSim"
+    ],
+    "comparison": "exact canonical JSON and ACK hashes; wall timestamps excluded",
+    "hashes": [
+      [
+        "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+        "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+        "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917",
+        "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1"
+      ],
+      [
+        "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+        "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+        "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694",
+        "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef"
+      ]
+    ]
+  },
+  "independent_queue_scheduler_array_checks": "PASS_ICARUS_AND_XSIM",
+  "offline_axi_protocol": "PASS",
+  "ps_target_elf": "NOT_BUILT_MISSING_VERIFIED_XSA_BSP_AND_ARM_TOOLCHAIN",
+  "real_ping_pong_1000": "NOT_RUN",
+  "real_axi_readback": "NOT_RUN",
+  "real_phase_map_ack": "NOT_RUN",
+  "gui_real_board_transport": "NOT_RUN",
+  "native_gui_evidence": "SIMULATION_ONLY",
+  "array_adapter": "IMPLEMENTED_DUAL_SIMULATOR_TESTED_NOT_BOARD_INTEGRATED",
+  "j3_j4_j5_j6": "CANDIDATE_DOCUMENT_AND_PACKAGE_VERIFIED_NOT_ELECTRICALLY_FROZEN",
+  "vcco": "UNKNOWN_BANK34_BANK35",
+  "iostandard": "UNASSIGNED",
+  "external_timing": "NOT_QUALIFIED",
+  "drc_warnings": {
+    "REQP-1839": "RAMB36 async control;20 reported,report limit reached",
+    "ZPS7-1": "PS7 absent in OOC block",
+    "CHECK-3": "Rule limit reached"
+  },
+  "methodology_warnings": [
+    "LUTAR-1",
+    "SYNTH-6",
+    "TIMING-18"
+  ],
+  "timing_margin_risk": "WNS+0.082ns is small; new board clock/reset/IO integration requires renewed implementation",
+  "pre_pcb_board_ready": "NO",
+  "overall_result": "REVISE",
+  "blocking": [
+    "B03_VCCO_AND_CONTINUITY",
+    "PS_UART_MIO_ROUTE",
+    "PS_REFERENCE_CLOCK_RESET_PRESET",
+    "VERIFIED_PS_PLATFORM_AND_TARGET_BUILD",
+    "REAL_TRANSPORT_AND_MAP_COMPLETION",
+    "BOARD_WRAPPER_ARRAY_DISABLE_INTEGRATION",
+    "EXTERNAL_IO_TIMING_AND_HARDWARE_QUALIFICATION"
+  ],
+  "not_validated": [
+    "bitstream",
+    "PS execution",
+    "1000 real packets",
+    "external PCB/ADC/TCT40 operation",
+    "physical levitation"
+  ],
+  "safety": {
+    "programmed": false,
+    "serial_opened": false,
+    "drivers_changed": false,
+    "boot_changed": false,
+    "gpio_driven": false,
+    "pcb_modified": false,
+    "external_loads_operated": false
+  },
+  "evidence_refs": [
+    "timing/strategy3/routed/timing_summary.rpt",
+    "timing/strategy3/route_status.rpt",
+    "regression_release/summary.json",
+    "independent_checks_complete/summary.json",
+    "axi_offline_release/axi_bridge_tests.json",
+    "board_identity/jtag_identity.json",
+    "board_identity/windows_inventory.json",
+    "connector_reference/connector_audit.json"
+  ],
+  "created_at": "2026-10-03T08:53:29.974929+00:00"
+}

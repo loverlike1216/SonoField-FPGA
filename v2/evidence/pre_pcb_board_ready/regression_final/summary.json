@@ -1,0 +1,200 @@
+{
+  "status": "FAIL",
+  "classification": "SIMULATION_VALIDATED_PENDING",
+  "commands": [
+    {
+      "label": "python_tests",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 6.953
+    },
+    {
+      "label": "compile_faults_1200",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_motion_faults",
+        "-Ptb_motion_faults.INTERVAL_CYCLES=1200",
+        "-o",
+        "faults_1200.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.109
+    },
+    {
+      "label": "icarus_faults_1200",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "faults_1200.vvp"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.047
+    },
+    {
+      "label": "compile_faults_2640000",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_motion_faults",
+        "-Ptb_motion_faults.INTERVAL_CYCLES=2640000",
+        "-o",
+        "faults_2640000.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.094
+    },
+    {
+      "label": "icarus_faults_2640000",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "faults_2640000.vvp"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 23.64
+    },
+    {
+      "label": "faults_xvlog",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.75
+    },
+    {
+      "label": "faults_xelab_1200",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_motion_faults",
+        "--snapshot",
+        "faults_1200",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 2.11
+    },
+    {
+      "label": "faults_xsim_1200",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "faults_1200",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 2.625
+    },
+    {
+      "label": "faults_xelab_2640000",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_motion_cadence",
+        "--snapshot",
+        "faults_2640000",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 2.125
+    },
+    {
+      "label": "faults_xsim_2640000",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "faults_2640000",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 5.265
+    },
+    {
+      "label": "gui_xsim",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "xsim",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression_final\\gui_xsim"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 155.922
+    },
+    {
+      "label": "gui_icarus_0",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "icarus",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression_final\\gui_icarus_0"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 745.938
+    },
+    {
+      "label": "gui_icarus_2",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "icarus",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression_final\\gui_icarus_2"
+      ],
+      "exit_code": 1,
+      "elapsed_s": 942.5
+    },
+    {
+      "label": "gui_icarus_1",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "icarus",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression_final\\gui_icarus_1"
+      ],
+      "exit_code": 1,
+      "elapsed_s": 944.719
+    }
+  ],
+  "limits": "PROVISIONAL_UNTIL_HARDWARE_VALIDATED",
+  "gui": "Tk 8.6; PySide6 absent in pinned environment",
+  "timing": "GUI controls no field clock. RTL queue is clocked at 132 MHz, 2,640,000 cycles production cadence; full waveform demo shortens interval to 8192 cycles.",
+  "not_verified": [
+    "physical particle movement",
+    "absolute force / mass support",
+    "PS transport deployment",
+    "board synthesis / pin constraints / timing closure",
+    "hardware enable and watchdog circuit"
+  ],
+  "started_utc": "2026-10-03T08:04:50Z",
+  "fault_injection": "PASS: all 10 required cases plus ACK timeout; 1200 and production 2640000 cycles, both tools",
+  "error": "gui_icarus_1 failed: "
+}

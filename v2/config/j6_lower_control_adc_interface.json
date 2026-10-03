@@ -1,0 +1,322 @@
+{
+  "status": "CANDIDATE_NOT_FROZEN",
+  "connector": "J6",
+  "side": "lower",
+  "capacity": 16,
+  "used": 6,
+  "reserved": 10,
+  "central_adc_count": 1,
+  "central_adc_rx_channels": 8,
+  "adc_topology": "ONE_SHARED_ADC_CONTROL_BUS_ON_J5; LOWER_ANALOG_RX_REACHES_SAME_ADC",
+  "hardware_fault_inputs": "PROPOSED_NOT_IMPLEMENTED_OR_QUALIFIED",
+  "independent_bank_disable": "IMPLEMENTED_AND_DUAL_SIMULATOR_TESTED_PIN_INDEPENDENT_ADAPTER; NOT_INTEGRATED_IN_BOARD_WRAPPER",
+  "pins": [
+    {
+      "connector_pin": 1,
+      "source_cell": "E25",
+      "fpga_package_pin": "T11",
+      "source_value": "T11",
+      "package_properties": {
+        "pin": "T11",
+        "pin_func": "IO_L1P_T0_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "LOWER_SHIFT_CLK",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 2,
+      "source_cell": "E26",
+      "fpga_package_pin": "T10",
+      "source_value": "T10",
+      "package_properties": {
+        "pin": "T10",
+        "pin_func": "IO_L1N_T0_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "LOWER_LATCH_CLK",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 3,
+      "source_cell": "E27",
+      "fpga_package_pin": "U12",
+      "source_value": "U12",
+      "package_properties": {
+        "pin": "U12",
+        "pin_func": "IO_L2N_T0_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "LOWER_OE_N",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 4,
+      "source_cell": "E28",
+      "fpga_package_pin": "T12",
+      "source_value": "T12",
+      "package_properties": {
+        "pin": "T12",
+        "pin_func": "IO_L2P_T0_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "LOWER_BOARD_ENABLE",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 5,
+      "source_cell": "E29",
+      "fpga_package_pin": "W13",
+      "source_value": "W13",
+      "package_properties": {
+        "pin": "W13",
+        "pin_func": "IO_L4N_T0_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "LOWER_RX_BLANK",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 6,
+      "source_cell": "E30",
+      "fpga_package_pin": "V12",
+      "source_value": "V12",
+      "package_properties": {
+        "pin": "V12",
+        "pin_func": "IO_L4P_T0_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "LOWER_FAULT_N",
+      "direction": "ADC_OR_FAULT_TO_FPGA"
+    },
+    {
+      "connector_pin": 7,
+      "source_cell": "E31",
+      "fpga_package_pin": "V13",
+      "source_value": "V13",
+      "package_properties": {
+        "pin": "V13",
+        "pin_func": "IO_L3N_T0_DQS_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_00",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 8,
+      "source_cell": "E32",
+      "fpga_package_pin": "U13",
+      "source_value": "U13",
+      "package_properties": {
+        "pin": "U13",
+        "pin_func": "IO_L3P_T0_DQS_PUDC_B_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_01",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 13,
+      "source_cell": "E37",
+      "fpga_package_pin": "Y14",
+      "source_value": "Y14",
+      "package_properties": {
+        "pin": "Y14",
+        "pin_func": "IO_L8N_T1_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_02",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 14,
+      "source_cell": "E38",
+      "fpga_package_pin": "W14",
+      "source_value": "W14",
+      "package_properties": {
+        "pin": "W14",
+        "pin_func": "IO_L8P_T1_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_03",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 15,
+      "source_cell": "E39",
+      "fpga_package_pin": "W15",
+      "source_value": "W15",
+      "package_properties": {
+        "pin": "W15",
+        "pin_func": "IO_L10N_T1_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_04",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 16,
+      "source_cell": "E40",
+      "fpga_package_pin": "Y16",
+      "source_value": "Y16",
+      "package_properties": {
+        "pin": "Y16",
+        "pin_func": "IO_L7P_T1_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_05",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 17,
+      "source_cell": "E41",
+      "fpga_package_pin": "V15",
+      "source_value": "V15",
+      "package_properties": {
+        "pin": "V15",
+        "pin_func": "IO_L10P_T1_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_06",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 18,
+      "source_cell": "E42",
+      "fpga_package_pin": "Y17",
+      "source_value": "Y17",
+      "package_properties": {
+        "pin": "Y17",
+        "pin_func": "IO_L7N_T1_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_07",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 19,
+      "source_cell": "E43",
+      "fpga_package_pin": "W16",
+      "source_value": "W16",
+      "package_properties": {
+        "pin": "W16",
+        "pin_func": "IO_L18N_T2_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_08",
+      "direction": "UNASSIGNED"
+    },
+    {
+      "connector_pin": 20,
+      "source_cell": "E44",
+      "fpga_package_pin": "V16",
+      "source_value": "V16",
+      "package_properties": {
+        "pin": "V16",
+        "pin_func": "IO_L18P_T2_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "RESERVED_09",
+      "direction": "UNASSIGNED"
+    }
+  ],
+  "vcco_v": null,
+  "iostandard": null,
+  "adapter": "rtl/output/sono_array_interface.sv"
+}

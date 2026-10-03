@@ -1,0 +1,14 @@
+{
+  "scope": "Installed target-build capability and required platform facts; no board access",
+  "vitis_python_available": false,
+  "arm_gcc_on_path": null,
+  "xsa": null,
+  "bsp": null,
+  "uart_route": "UNVERIFIED",
+  "target_compile": "NOT_RUN_MISSING_VERIFIED_PLATFORM",
+  "host_c": "Verified independently by board_transport_gate.py against real GCC DLL"
+}
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD-SonoField-FPGA\v2\scripts\ps_platform_preflight.py", line 13, in <module>
+    raise RuntimeError('PS_TARGET_BUILD_BLOCKED: no reviewed XSA/BSP; do not substitute a guessed board preset')
+RuntimeError: PS_TARGET_BUILD_BLOCKED: no reviewed XSA/BSP; do not substitute a guessed board preset

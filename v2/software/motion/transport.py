@@ -60,7 +60,9 @@ class SimulationTransport:
                                           stderr=subprocess.STDOUT,text=True,errors='replace')
         try:output,_=self.process.communicate(timeout=timeout)
         except subprocess.TimeoutExpired:
-            self.stop();output,_=self.process.communicate();raise TimeoutError('RTL_ACK_TIMEOUT')
+            self.stop();output,_=self.process.communicate()
+            (self.output/(label+'.log')).write_text(output,encoding='utf-8')
+            raise TimeoutError(f'SIMULATOR_PROCESS_TIMEOUT: {label} exceeded {timeout}s wall time; RTL cycle timeout is separate')
         (self.output/(label+'.log')).write_text(output,encoding='utf-8')
         if self.cancelled.is_set():raise RuntimeError('STOPPED')
         if self.process.returncode or 'FATAL:' in output or 'Fatal:' in output:

@@ -1,0 +1,1517 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct  3 15:42:49 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 20 -nworst 1 -path_type full_clock_expanded -input_pins -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/pre_pcb_board_ready/timing/strategy1/synthesis/critical_paths.rpt
+| Design       : sono_axi_system
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[0]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[0]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[10]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[10]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[10]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[10]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[11]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[11]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[11]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[11]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[12]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[12]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[12]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[12]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[13]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[13]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[13]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[13]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[14]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[14]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[14]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[14]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[15]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[15]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[15]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[15]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[16]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[16]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[16]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[16]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[17]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[17]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[17]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[17]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[18]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[18]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[18]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[18]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[19]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[19]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[19]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[19]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[1]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[1]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[20]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[20]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[20]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[20]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[21]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[21]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[21]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[21]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[22]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[22]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[22]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[22]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[23]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[23]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[23]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[23]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[24]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[24]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[24]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[24]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[25]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[25]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[25]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[25]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[26]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[26]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[26]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[26]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+Slack (VIOLATED) :        -0.723ns  (required time - arrival time)
+  Source:                 native_system/queue/count_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/queue/count_reg[27]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        8.046ns  (logic 1.953ns (24.273%)  route 6.093ns (75.727%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT6=8)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/queue/count_reg[27]/Q
+                         net (fo=6, unplaced)         0.773     2.264    native_system/queue/count_reg[31]_0[27]
+                                                                      f  native_system/queue/frame_ready_INST_0_i_14/I1
+                         LUT4 (Prop_lut4_I1_O)        0.319     2.583 f  native_system/queue/frame_ready_INST_0_i_14/O
+                         net (fo=1, unplaced)         0.665     3.248    native_system/queue/frame_ready_INST_0_i_14_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_5/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.372 f  native_system/queue/frame_ready_INST_0_i_5/O
+                         net (fo=2, unplaced)         0.430     3.802    native_system/queue/frame_ready_INST_0_i_5_n_0
+                                                                      f  native_system/queue/frame_ready_INST_0_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     3.926 f  native_system/queue/frame_ready_INST_0_i_1/O
+                         net (fo=34, unplaced)        0.975     4.901    native_system/queue/pop0
+                                                                      f  native_system/queue/invalid_frame_i_3/I1
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.025 r  native_system/queue/invalid_frame_i_3/O
+                         net (fo=3, unplaced)         0.437     5.462    native_system/queue/push
+                                                                      r  native_system/queue/count[31]_i_5__0/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.586 r  native_system/queue/count[31]_i_5__0/O
+                         net (fo=4, unplaced)         0.473     6.059    native_system/queue/count[31]_i_5__0_n_0
+                                                                      r  native_system/queue/count[31]_i_21/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.183 r  native_system/queue/count[31]_i_21/O
+                         net (fo=1, unplaced)         0.449     6.632    native_system/queue/count[31]_i_21_n_0
+                                                                      r  native_system/queue/count[31]_i_17/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     6.756 r  native_system/queue/count[31]_i_17/O
+                         net (fo=1, unplaced)         0.449     7.205    native_system/queue/count[31]_i_17_n_0
+                                                                      r  native_system/queue/count[31]_i_9__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.329 r  native_system/queue/count[31]_i_9__0/O
+                         net (fo=1, unplaced)         0.449     7.778    native_system/queue/count[31]_i_9__0_n_0
+                                                                      r  native_system/queue/count[31]_i_6__0/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.902 r  native_system/queue/count[31]_i_6__0/O
+                         net (fo=1, unplaced)         0.449     8.351    native_system/queue/count[31]_i_6__0_n_0
+                                                                      r  native_system/queue/count[31]_i_1__0/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.475 r  native_system/queue/count[31]_i_1__0/O
+                         net (fo=32, unplaced)        0.544     9.019    native_system/queue/count[31]_i_1__0_n_0
+                         FDCE                                         r  native_system/queue/count_reg[27]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/queue/clk
+                         FDCE                                         r  native_system/queue/count_reg[27]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/queue/count_reg[27]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -9.019    
+  -------------------------------------------------------------------
+                         slack                                 -0.723    
+
+
+
+

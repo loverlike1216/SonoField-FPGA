@@ -55,3 +55,11 @@ A model switch never authorizes version, stage, architecture, interface, paramet
 ## Active recovery context — 2026-10-03
 
 Current model: GPT-6.1 Sol High. Active project memory and next actions cover **v2 single Robei octagonal Zynq-7020 acoustic control only**. User requested removal of inactive-project reminders from recovery memory. Do not load inactive source directories or propose their continuation. Preserve original historical evidence and user quotations. Focus event: AI-interaction-memory/codex/I-20261003-0002__v2-focus.md.
+
+## Latest execution contract — 2026-10-03 pre-PCB integration
+
+The direct user attachment `AI-interaction-memory/codex/instructions/v2_final_pre_pcb_board_integration.md` supersedes the previous exhausted timing-window restriction for the new current-v2 stage `TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE`. It explicitly approves P-20260929-001 queue/control/reset timing work and classifies XC7Z020-1CLG400C as USER_CONFIRMED_PHYSICAL_FACT. Preserve prior uncertainty reports.
+
+New evidence precedence: real detection, current user Excel/image, revision-matched manufacturer data, existing constraints, converted XDC, secondary history. N18/33.333 MHz is the approved fallback if no measurement can resolve the old33MHz conflict. Production clock is selected only when both routed timing and actual serializer throughput pass;132/66MHz is preferred, not immutable. No guessed VCCO/UART/PS preset. J3/J4 have16upper/lower DATA lanes each;J5/J6 control timing shares one master and supports independent safe disable. Connector5V remains unused for array power. Existing central eight-channel ADC topology governs budgeting; do not invent a second ADC.
+
+Fresh read-only board detection is authorized. Real safe bare-board programming/PS/transport tests are authorized only after Timing PASS and verified physical prerequisites; no external PCB/ultrasonic outputs, driver changes, EEPROM/boot changes or PCB layout edits. End with actual result view and categorized uploaded sources, state/checkpoint/interaction/Git sync. Stop when ready or all automatic work is complete with exact physical blockers documented. No repeated route retries without a materially new implementation strategy.

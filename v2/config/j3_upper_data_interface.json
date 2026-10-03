@@ -1,0 +1,530 @@
+{
+  "status": "CANDIDATE_NOT_ELECTRICALLY_FROZEN",
+  "connector": "J3",
+  "side": "upper",
+  "channels": 64,
+  "lanes": 16,
+  "used_bits_per_lane": 4,
+  "pins": [
+    {
+      "connector_pin": 1,
+      "source_cell": "B3",
+      "fpga_package_pin": "U14",
+      "source_value": "U14",
+      "package_properties": {
+        "pin": "U14",
+        "pin_func": "IO_L11P_T1_SRCC_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "1"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_00",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 0,
+      "channels": [
+        "UPPER_TX_00",
+        "UPPER_TX_01",
+        "UPPER_TX_02",
+        "UPPER_TX_03"
+      ],
+      "shift_order_local_channels": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "connector_pin": 2,
+      "source_cell": "B4",
+      "fpga_package_pin": "U15",
+      "source_value": "U15",
+      "package_properties": {
+        "pin": "U15",
+        "pin_func": "IO_L11N_T1_SRCC_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "1"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_01",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 1,
+      "channels": [
+        "UPPER_TX_04",
+        "UPPER_TX_05",
+        "UPPER_TX_06",
+        "UPPER_TX_07"
+      ],
+      "shift_order_local_channels": [
+        7,
+        6,
+        5,
+        4
+      ]
+    },
+    {
+      "connector_pin": 3,
+      "source_cell": "B5",
+      "fpga_package_pin": "T14",
+      "source_value": "T14",
+      "package_properties": {
+        "pin": "T14",
+        "pin_func": "IO_L5P_T0_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_02",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 2,
+      "channels": [
+        "UPPER_TX_08",
+        "UPPER_TX_09",
+        "UPPER_TX_10",
+        "UPPER_TX_11"
+      ],
+      "shift_order_local_channels": [
+        11,
+        10,
+        9,
+        8
+      ]
+    },
+    {
+      "connector_pin": 4,
+      "source_cell": "B6",
+      "fpga_package_pin": "T15",
+      "source_value": "T15",
+      "package_properties": {
+        "pin": "T15",
+        "pin_func": "IO_L5N_T0_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_03",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 3,
+      "channels": [
+        "UPPER_TX_12",
+        "UPPER_TX_13",
+        "UPPER_TX_14",
+        "UPPER_TX_15"
+      ],
+      "shift_order_local_channels": [
+        15,
+        14,
+        13,
+        12
+      ]
+    },
+    {
+      "connector_pin": 5,
+      "source_cell": "B7",
+      "fpga_package_pin": "T16",
+      "source_value": "T16",
+      "package_properties": {
+        "pin": "T16",
+        "pin_func": "IO_L9P_T1_DQS_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_04",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 4,
+      "channels": [
+        "UPPER_TX_16",
+        "UPPER_TX_17",
+        "UPPER_TX_18",
+        "UPPER_TX_19"
+      ],
+      "shift_order_local_channels": [
+        19,
+        18,
+        17,
+        16
+      ]
+    },
+    {
+      "connector_pin": 6,
+      "source_cell": "B8",
+      "fpga_package_pin": "U17",
+      "source_value": "U17",
+      "package_properties": {
+        "pin": "U17",
+        "pin_func": "IO_L9N_T1_DQS_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_05",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 5,
+      "channels": [
+        "UPPER_TX_20",
+        "UPPER_TX_21",
+        "UPPER_TX_22",
+        "UPPER_TX_23"
+      ],
+      "shift_order_local_channels": [
+        23,
+        22,
+        21,
+        20
+      ]
+    },
+    {
+      "connector_pin": 7,
+      "source_cell": "B9",
+      "fpga_package_pin": "V17",
+      "source_value": "V17",
+      "package_properties": {
+        "pin": "V17",
+        "pin_func": "IO_L21P_T3_DQS_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_06",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 6,
+      "channels": [
+        "UPPER_TX_24",
+        "UPPER_TX_25",
+        "UPPER_TX_26",
+        "UPPER_TX_27"
+      ],
+      "shift_order_local_channels": [
+        27,
+        26,
+        25,
+        24
+      ]
+    },
+    {
+      "connector_pin": 8,
+      "source_cell": "B10",
+      "fpga_package_pin": "V18",
+      "source_value": "V18",
+      "package_properties": {
+        "pin": "V18",
+        "pin_func": "IO_L21N_T3_DQS_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_07",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 7,
+      "channels": [
+        "UPPER_TX_28",
+        "UPPER_TX_29",
+        "UPPER_TX_30",
+        "UPPER_TX_31"
+      ],
+      "shift_order_local_channels": [
+        31,
+        30,
+        29,
+        28
+      ]
+    },
+    {
+      "connector_pin": 13,
+      "source_cell": "B15",
+      "fpga_package_pin": "U18",
+      "source_value": "U18",
+      "package_properties": {
+        "pin": "U18",
+        "pin_func": "IO_L12P_T1_MRCC_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "1"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_08",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 8,
+      "channels": [
+        "UPPER_TX_32",
+        "UPPER_TX_33",
+        "UPPER_TX_34",
+        "UPPER_TX_35"
+      ],
+      "shift_order_local_channels": [
+        35,
+        34,
+        33,
+        32
+      ]
+    },
+    {
+      "connector_pin": 14,
+      "source_cell": "B16",
+      "fpga_package_pin": "U19",
+      "source_value": "U19",
+      "package_properties": {
+        "pin": "U19",
+        "pin_func": "IO_L12N_T1_MRCC_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "1"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_09",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 9,
+      "channels": [
+        "UPPER_TX_36",
+        "UPPER_TX_37",
+        "UPPER_TX_38",
+        "UPPER_TX_39"
+      ],
+      "shift_order_local_channels": [
+        39,
+        38,
+        37,
+        36
+      ]
+    },
+    {
+      "connector_pin": 15,
+      "source_cell": "B17",
+      "fpga_package_pin": "T17",
+      "source_value": "T17",
+      "package_properties": {
+        "pin": "T17",
+        "pin_func": "IO_L20P_T3_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_10",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 10,
+      "channels": [
+        "UPPER_TX_40",
+        "UPPER_TX_41",
+        "UPPER_TX_42",
+        "UPPER_TX_43"
+      ],
+      "shift_order_local_channels": [
+        43,
+        42,
+        41,
+        40
+      ]
+    },
+    {
+      "connector_pin": 16,
+      "source_cell": "B18",
+      "fpga_package_pin": "R18",
+      "source_value": "R18",
+      "package_properties": {
+        "pin": "R18",
+        "pin_func": "IO_L20N_T3_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_11",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 11,
+      "channels": [
+        "UPPER_TX_44",
+        "UPPER_TX_45",
+        "UPPER_TX_46",
+        "UPPER_TX_47"
+      ],
+      "shift_order_local_channels": [
+        47,
+        46,
+        45,
+        44
+      ]
+    },
+    {
+      "connector_pin": 17,
+      "source_cell": "B19",
+      "fpga_package_pin": "N17",
+      "source_value": "N17",
+      "package_properties": {
+        "pin": "N17",
+        "pin_func": "IO_L23P_T3_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_12",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 12,
+      "channels": [
+        "UPPER_TX_48",
+        "UPPER_TX_49",
+        "UPPER_TX_50",
+        "UPPER_TX_51"
+      ],
+      "shift_order_local_channels": [
+        51,
+        50,
+        49,
+        48
+      ]
+    },
+    {
+      "connector_pin": 18,
+      "source_cell": "B20",
+      "fpga_package_pin": "P18",
+      "source_value": "P18",
+      "package_properties": {
+        "pin": "P18",
+        "pin_func": "IO_L23N_T3_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_13",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 13,
+      "channels": [
+        "UPPER_TX_52",
+        "UPPER_TX_53",
+        "UPPER_TX_54",
+        "UPPER_TX_55"
+      ],
+      "shift_order_local_channels": [
+        55,
+        54,
+        53,
+        52
+      ]
+    },
+    {
+      "connector_pin": 19,
+      "source_cell": "B21",
+      "fpga_package_pin": "T20",
+      "source_value": "T20",
+      "package_properties": {
+        "pin": "T20",
+        "pin_func": "IO_L15P_T2_DQS_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_14",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 14,
+      "channels": [
+        "UPPER_TX_56",
+        "UPPER_TX_57",
+        "UPPER_TX_58",
+        "UPPER_TX_59"
+      ],
+      "shift_order_local_channels": [
+        59,
+        58,
+        57,
+        56
+      ]
+    },
+    {
+      "connector_pin": 20,
+      "source_cell": "B22",
+      "fpga_package_pin": "U20",
+      "source_value": "U20",
+      "package_properties": {
+        "pin": "U20",
+        "pin_func": "IO_L15N_T2_DQS_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_TX_DATA_15",
+      "direction": "FPGA_TO_DRIVER",
+      "serializer_lane": 15,
+      "channels": [
+        "UPPER_TX_60",
+        "UPPER_TX_61",
+        "UPPER_TX_62",
+        "UPPER_TX_63"
+      ],
+      "shift_order_local_channels": [
+        63,
+        62,
+        61,
+        60
+      ]
+    }
+  ],
+  "supply_pins": {
+    "9": "UNUSED_AUX_5V",
+    "10": "GND",
+    "11": "GND",
+    "12": "UNUSED_AUX_5V"
+  },
+  "external_power_required": true,
+  "full_board_xdc_emitted": false
+}

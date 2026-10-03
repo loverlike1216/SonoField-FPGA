@@ -1,0 +1,42 @@
+{
+  "classification": "ACTUAL_WINDOWS_PNP_USB_DESCRIPTORS",
+  "devices": [
+    {
+      "name": "USB Serial Converter B",
+      "hardware_ids": [
+        "USB\\VID_0403&PID_6010&REV_0700&MI_01",
+        "USB\\VID_0403&PID_6010&MI_01"
+      ],
+      "bus_descriptor": "JTAG+Serial"
+    },
+    {
+      "name": "USB Serial Converter A",
+      "hardware_ids": [
+        "USB\\VID_0403&PID_6010&REV_0700&MI_00",
+        "USB\\VID_0403&PID_6010&MI_00"
+      ],
+      "bus_descriptor": "JTAG+Serial"
+    },
+    {
+      "name": "USB Serial Port (COM4)",
+      "hardware_ids": [
+        "FTDIBUS\\COMPORT&VID_0403&PID_6010",
+        "FTDIBUS\\COMPORT&VID_0403&PID_6010&MI_01"
+      ],
+      "bus_descriptor": "USB Serial Port"
+    },
+    {
+      "name": "USB Composite Device",
+      "hardware_ids": [
+        "USB\\VID_0403&PID_6010&REV_0700",
+        "USB\\VID_0403&PID_6010"
+      ],
+      "bus_descriptor": "JTAG+Serial"
+    }
+  ],
+  "bcd_device": "0x0700",
+  "reported_variant": "FT2232H",
+  "variant_basis": "actual REV_0700 + official FTDI DS/TN104 bcdDevice table",
+  "reference": "https://www.ftdichip.cn/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf",
+  "uart_route_verified": false
+}

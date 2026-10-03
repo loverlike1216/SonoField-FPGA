@@ -1,0 +1,1394 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct  3 16:08:31 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 20 -nworst 1 -path_type full_clock_expanded -input_pins -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/pre_pcb_board_ready/timing/strategy2/placed/critical_paths.rpt
+| Design       : sono_axi_system
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Fully Placed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.118ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.169ns  (logic 2.218ns (30.939%)  route 4.951ns (69.061%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.547     8.142    native_system/digital/scheduler/wait_count[0]
+    SLICE_X60Y91         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X60Y91         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[1]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X60Y91         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/scheduler/wait_count_reg[1]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.142    
+  -------------------------------------------------------------------
+                         slack                                  0.118    
+
+Slack (MET) :             0.118ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[2]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.169ns  (logic 2.218ns (30.939%)  route 4.951ns (69.061%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.547     8.142    native_system/digital/scheduler/wait_count[0]
+    SLICE_X60Y91         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X60Y91         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[2]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X60Y91         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/scheduler/wait_count_reg[2]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.142    
+  -------------------------------------------------------------------
+                         slack                                  0.118    
+
+Slack (MET) :             0.118ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[3]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.169ns  (logic 2.218ns (30.939%)  route 4.951ns (69.061%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.547     8.142    native_system/digital/scheduler/wait_count[0]
+    SLICE_X60Y91         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X60Y91         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[3]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X60Y91         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/scheduler/wait_count_reg[3]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.142    
+  -------------------------------------------------------------------
+                         slack                                  0.118    
+
+Slack (MET) :             0.121ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.166ns  (logic 2.218ns (30.952%)  route 4.948ns (69.048%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.544     8.139    native_system/digital/scheduler/wait_count[0]
+    SLICE_X56Y88         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X56Y88         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[0]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X56Y88         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/scheduler/wait_count_reg[0]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.139    
+  -------------------------------------------------------------------
+                         slack                                  0.121    
+
+Slack (MET) :             0.121ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[13]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.166ns  (logic 2.218ns (30.952%)  route 4.948ns (69.048%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.544     8.139    native_system/digital/scheduler/wait_count[0]
+    SLICE_X56Y88         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[13]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X56Y88         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[13]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X56Y88         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/scheduler/wait_count_reg[13]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.139    
+  -------------------------------------------------------------------
+                         slack                                  0.121    
+
+Slack (MET) :             0.121ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[5]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.166ns  (logic 2.218ns (30.952%)  route 4.948ns (69.048%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.544     8.139    native_system/digital/scheduler/wait_count[0]
+    SLICE_X56Y88         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X56Y88         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[5]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X56Y88         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/scheduler/wait_count_reg[5]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.139    
+  -------------------------------------------------------------------
+                         slack                                  0.121    
+
+Slack (MET) :             0.138ns  (required time - arrival time)
+  Source:                 native_system/queue/bus_valid_reg/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/cfg_reg[4][11]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.149ns  (logic 1.262ns (17.653%)  route 5.887ns (82.347%))
+  Logic Levels:           6  (LUT3=2 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X54Y99         FDCE                                         r  native_system/queue/bus_valid_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y99         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/bus_valid_reg/Q
+                         net (fo=45, estimated)       1.013     2.504    native_system/queue/qvalid
+    SLICE_X39Y99                                                      r  native_system/queue/cfg[3][10]_i_1/I3
+    SLICE_X39Y99         LUT4 (Prop_lut4_I3_O)        0.124     2.628 r  native_system/queue/cfg[3][10]_i_1/O
+                         net (fo=18, estimated)       1.006     3.634    native_system/queue/bus_wdata_reg[31][10]
+    SLICE_X48Y98                                                      r  native_system/queue/cfg[3][31]_i_15/I0
+    SLICE_X48Y98         LUT3 (Prop_lut3_I0_O)        0.124     3.758 r  native_system/queue/cfg[3][31]_i_15/O
+                         net (fo=3, estimated)        0.734     4.492    native_system/queue/cfg[3][31]_i_15_n_0
+    SLICE_X54Y98                                                      r  native_system/queue/cfg[4][31]_i_10/I4
+    SLICE_X54Y98         LUT6 (Prop_lut6_I4_O)        0.124     4.616 f  native_system/queue/cfg[4][31]_i_10/O
+                         net (fo=2, estimated)        0.535     5.151    native_system/queue/cfg[4][31]_i_10_n_0
+    SLICE_X52Y98                                                      f  native_system/queue/cfg[4][31]_i_7/I5
+    SLICE_X52Y98         LUT6 (Prop_lut6_I5_O)        0.124     5.275 r  native_system/queue/cfg[4][31]_i_7/O
+                         net (fo=2, estimated)        0.852     6.127    native_system/queue/cfg[4][31]_i_7_n_0
+    SLICE_X49Y98                                                      r  native_system/queue/cfg[4][31]_i_2/I0
+    SLICE_X49Y98         LUT3 (Prop_lut3_I0_O)        0.124     6.251 r  native_system/queue/cfg[4][31]_i_2/O
+                         net (fo=2, estimated)        0.951     7.202    native_system/queue/cfg[4][31]_i_2_n_0
+    SLICE_X49Y96                                                      r  native_system/queue/cfg[4][31]_i_1/I0
+    SLICE_X49Y96         LUT5 (Prop_lut5_I0_O)        0.124     7.326 r  native_system/queue/cfg[4][31]_i_1/O
+                         net (fo=32, estimated)       0.796     8.122    native_system/digital/cfg_reg[4][31]_0[0]
+    SLICE_X44Y92         FDCE                                         r  native_system/digital/cfg_reg[4][11]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/clk
+    SLICE_X44Y92         FDCE                                         r  native_system/digital/cfg_reg[4][11]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X44Y92         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/cfg_reg[4][11]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.122    
+  -------------------------------------------------------------------
+                         slack                                  0.138    
+
+Slack (MET) :             0.138ns  (required time - arrival time)
+  Source:                 native_system/queue/bus_valid_reg/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/cfg_reg[4][13]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.149ns  (logic 1.262ns (17.653%)  route 5.887ns (82.347%))
+  Logic Levels:           6  (LUT3=2 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X54Y99         FDCE                                         r  native_system/queue/bus_valid_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y99         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/bus_valid_reg/Q
+                         net (fo=45, estimated)       1.013     2.504    native_system/queue/qvalid
+    SLICE_X39Y99                                                      r  native_system/queue/cfg[3][10]_i_1/I3
+    SLICE_X39Y99         LUT4 (Prop_lut4_I3_O)        0.124     2.628 r  native_system/queue/cfg[3][10]_i_1/O
+                         net (fo=18, estimated)       1.006     3.634    native_system/queue/bus_wdata_reg[31][10]
+    SLICE_X48Y98                                                      r  native_system/queue/cfg[3][31]_i_15/I0
+    SLICE_X48Y98         LUT3 (Prop_lut3_I0_O)        0.124     3.758 r  native_system/queue/cfg[3][31]_i_15/O
+                         net (fo=3, estimated)        0.734     4.492    native_system/queue/cfg[3][31]_i_15_n_0
+    SLICE_X54Y98                                                      r  native_system/queue/cfg[4][31]_i_10/I4
+    SLICE_X54Y98         LUT6 (Prop_lut6_I4_O)        0.124     4.616 f  native_system/queue/cfg[4][31]_i_10/O
+                         net (fo=2, estimated)        0.535     5.151    native_system/queue/cfg[4][31]_i_10_n_0
+    SLICE_X52Y98                                                      f  native_system/queue/cfg[4][31]_i_7/I5
+    SLICE_X52Y98         LUT6 (Prop_lut6_I5_O)        0.124     5.275 r  native_system/queue/cfg[4][31]_i_7/O
+                         net (fo=2, estimated)        0.852     6.127    native_system/queue/cfg[4][31]_i_7_n_0
+    SLICE_X49Y98                                                      r  native_system/queue/cfg[4][31]_i_2/I0
+    SLICE_X49Y98         LUT3 (Prop_lut3_I0_O)        0.124     6.251 r  native_system/queue/cfg[4][31]_i_2/O
+                         net (fo=2, estimated)        0.951     7.202    native_system/queue/cfg[4][31]_i_2_n_0
+    SLICE_X49Y96                                                      r  native_system/queue/cfg[4][31]_i_1/I0
+    SLICE_X49Y96         LUT5 (Prop_lut5_I0_O)        0.124     7.326 r  native_system/queue/cfg[4][31]_i_1/O
+                         net (fo=32, estimated)       0.796     8.122    native_system/digital/cfg_reg[4][31]_0[0]
+    SLICE_X44Y92         FDCE                                         r  native_system/digital/cfg_reg[4][13]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/clk
+    SLICE_X44Y92         FDCE                                         r  native_system/digital/cfg_reg[4][13]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X44Y92         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/cfg_reg[4][13]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.122    
+  -------------------------------------------------------------------
+                         slack                                  0.138    
+
+Slack (MET) :             0.138ns  (required time - arrival time)
+  Source:                 native_system/queue/bus_valid_reg/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/cfg_reg[4][7]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.149ns  (logic 1.262ns (17.653%)  route 5.887ns (82.347%))
+  Logic Levels:           6  (LUT3=2 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/queue/clk
+    SLICE_X54Y99         FDCE                                         r  native_system/queue/bus_valid_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y99         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/queue/bus_valid_reg/Q
+                         net (fo=45, estimated)       1.013     2.504    native_system/queue/qvalid
+    SLICE_X39Y99                                                      r  native_system/queue/cfg[3][10]_i_1/I3
+    SLICE_X39Y99         LUT4 (Prop_lut4_I3_O)        0.124     2.628 r  native_system/queue/cfg[3][10]_i_1/O
+                         net (fo=18, estimated)       1.006     3.634    native_system/queue/bus_wdata_reg[31][10]
+    SLICE_X48Y98                                                      r  native_system/queue/cfg[3][31]_i_15/I0
+    SLICE_X48Y98         LUT3 (Prop_lut3_I0_O)        0.124     3.758 r  native_system/queue/cfg[3][31]_i_15/O
+                         net (fo=3, estimated)        0.734     4.492    native_system/queue/cfg[3][31]_i_15_n_0
+    SLICE_X54Y98                                                      r  native_system/queue/cfg[4][31]_i_10/I4
+    SLICE_X54Y98         LUT6 (Prop_lut6_I4_O)        0.124     4.616 f  native_system/queue/cfg[4][31]_i_10/O
+                         net (fo=2, estimated)        0.535     5.151    native_system/queue/cfg[4][31]_i_10_n_0
+    SLICE_X52Y98                                                      f  native_system/queue/cfg[4][31]_i_7/I5
+    SLICE_X52Y98         LUT6 (Prop_lut6_I5_O)        0.124     5.275 r  native_system/queue/cfg[4][31]_i_7/O
+                         net (fo=2, estimated)        0.852     6.127    native_system/queue/cfg[4][31]_i_7_n_0
+    SLICE_X49Y98                                                      r  native_system/queue/cfg[4][31]_i_2/I0
+    SLICE_X49Y98         LUT3 (Prop_lut3_I0_O)        0.124     6.251 r  native_system/queue/cfg[4][31]_i_2/O
+                         net (fo=2, estimated)        0.951     7.202    native_system/queue/cfg[4][31]_i_2_n_0
+    SLICE_X49Y96                                                      r  native_system/queue/cfg[4][31]_i_1/I0
+    SLICE_X49Y96         LUT5 (Prop_lut5_I0_O)        0.124     7.326 r  native_system/queue/cfg[4][31]_i_1/O
+                         net (fo=32, estimated)       0.796     8.122    native_system/digital/cfg_reg[4][31]_0[0]
+    SLICE_X44Y92         FDCE                                         r  native_system/digital/cfg_reg[4][7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/clk
+    SLICE_X44Y92         FDCE                                         r  native_system/digital/cfg_reg[4][7]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X44Y92         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/cfg_reg[4][7]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.122    
+  -------------------------------------------------------------------
+                         slack                                  0.138    
+
+Slack (MET) :             0.144ns  (required time - arrival time)
+  Source:                 native_system/digital/scheduler/frame_count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/state_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.377ns  (logic 2.315ns (31.381%)  route 5.062ns (68.619%))
+  Logic Levels:           10  (CARRY4=3 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/scheduler/clk
+    SLICE_X54Y91         FDCE                                         r  native_system/digital/scheduler/frame_count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y91         FDCE (Prop_fdce_C_Q)         0.518     1.491 f  native_system/digital/scheduler/frame_count_reg[0]/Q
+                         net (fo=17, estimated)       0.997     2.488    native_system/digital/scheduler/frame_count[0]
+    SLICE_X53Y88                                                      f  native_system/digital/scheduler/frame_count[7]_i_2/I1
+    SLICE_X53Y88         LUT4 (Prop_lut4_I1_O)        0.124     2.612 r  native_system/digital/scheduler/frame_count[7]_i_2/O
+                         net (fo=8, estimated)        0.844     3.456    native_system/digital/scheduler/frame_count[7]_i_2_n_0
+    SLICE_X48Y89                                                      r  native_system/digital/scheduler/capture_ready_i_20/I1
+    SLICE_X48Y89         LUT4 (Prop_lut4_I1_O)        0.124     3.580 r  native_system/digital/scheduler/capture_ready_i_20/O
+                         net (fo=1, estimated)        0.580     4.160    native_system/digital/scheduler/state2[6]
+    SLICE_X48Y90                                                      r  native_system/digital/scheduler/capture_ready_i_17/I0
+    SLICE_X48Y90         LUT6 (Prop_lut6_I0_O)        0.124     4.284 r  native_system/digital/scheduler/capture_ready_i_17/O
+                         net (fo=1, routed)           0.000     4.284    native_system/digital/scheduler/capture_ready_i_17_n_0
+    SLICE_X48Y90                                                      r  native_system/digital/scheduler/capture_ready_reg_i_11/S[2]
+    SLICE_X48Y90         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     4.682 r  native_system/digital/scheduler/capture_ready_reg_i_11/CO[3]
+                         net (fo=1, estimated)        0.000     4.682    native_system/digital/scheduler/capture_ready_reg_i_11_n_0
+    SLICE_X48Y91                                                      r  native_system/digital/scheduler/capture_ready_reg_i_6/CI
+    SLICE_X48Y91         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.796 r  native_system/digital/scheduler/capture_ready_reg_i_6/CO[3]
+                         net (fo=1, estimated)        0.000     4.796    native_system/digital/scheduler/capture_ready_reg_i_6_n_0
+    SLICE_X48Y92                                                      r  native_system/digital/scheduler/capture_ready_reg_i_2/CI
+    SLICE_X48Y92         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.228     5.024 r  native_system/digital/scheduler/capture_ready_reg_i_2/CO[2]
+                         net (fo=6, estimated)        1.046     6.070    native_system/digital/scheduler/state10_out
+    SLICE_X61Y91                                                      r  native_system/digital/scheduler/state[2]_i_9/I1
+    SLICE_X61Y91         LUT3 (Prop_lut3_I1_O)        0.313     6.383 r  native_system/digital/scheduler/state[2]_i_9/O
+                         net (fo=1, estimated)        0.490     6.873    native_system/digital/scheduler/state[2]_i_9_n_0
+    SLICE_X60Y89                                                      r  native_system/digital/scheduler/state[2]_i_7/I0
+    SLICE_X60Y89         LUT6 (Prop_lut6_I0_O)        0.124     6.997 r  native_system/digital/scheduler/state[2]_i_7/O
+                         net (fo=1, estimated)        0.627     7.624    native_system/digital/scheduler/state[2]_i_7_n_0
+    SLICE_X63Y90                                                      r  native_system/digital/scheduler/state[2]_i_5/I1
+    SLICE_X63Y90         LUT5 (Prop_lut5_I1_O)        0.124     7.748 r  native_system/digital/scheduler/state[2]_i_5/O
+                         net (fo=3, estimated)        0.478     8.226    native_system/digital/scheduler/state[2]_i_5_n_0
+    SLICE_X60Y90                                                      r  native_system/digital/scheduler/state[0]_i_1/I1
+    SLICE_X60Y90         LUT3 (Prop_lut3_I1_O)        0.124     8.350 r  native_system/digital/scheduler/state[0]_i_1/O
+                         net (fo=1, routed)           0.000     8.350    native_system/digital/scheduler/state[0]_i_1_n_0
+    SLICE_X60Y90         FDCE                                         r  native_system/digital/scheduler/state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X60Y90         FDCE                                         r  native_system/digital/scheduler/state_reg[0]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X60Y90         FDCE (Setup_fdce_C_D)        0.029     8.494    native_system/digital/scheduler/state_reg[0]
+  -------------------------------------------------------------------
+                         required time                          8.494    
+                         arrival time                          -8.350    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+Slack (MET) :             0.145ns  (required time - arrival time)
+  Source:                 native_system/digital/scheduler/memory_reg_1/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            bridge/s_rdata_reg[20]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.424ns  (logic 2.950ns (39.736%)  route 4.474ns (60.264%))
+  Logic Levels:           4  (LUT3=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/scheduler/clk
+    RAMB36_X3Y14         RAMB36E1                                     r  native_system/digital/scheduler/memory_reg_1/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X3Y14         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[16])
+                                                      2.454     3.427 r  native_system/digital/scheduler/memory_reg_1/DOBDO[16]
+                         net (fo=1, estimated)        1.432     4.859    native_system/digital/scheduler/read_frame[52]
+    SLICE_X54Y81                                                      r  native_system/digital/scheduler/s_rdata[20]_i_6/I0
+    SLICE_X54Y81         LUT6 (Prop_lut6_I0_O)        0.124     4.983 r  native_system/digital/scheduler/s_rdata[20]_i_6/O
+                         net (fo=1, estimated)        1.383     6.366    native_system/queue/s_rdata[20]_i_2_0
+    SLICE_X54Y91                                                      r  native_system/queue/s_rdata[20]_i_3/I5
+    SLICE_X54Y91         LUT6 (Prop_lut6_I5_O)        0.124     6.490 f  native_system/queue/s_rdata[20]_i_3/O
+                         net (fo=1, estimated)        1.096     7.586    native_system/queue/s_rdata[20]_i_3_n_0
+    SLICE_X80Y91                                                      f  native_system/queue/s_rdata[20]_i_2/I3
+    SLICE_X80Y91         LUT6 (Prop_lut6_I3_O)        0.124     7.710 r  native_system/queue/s_rdata[20]_i_2/O
+                         net (fo=1, estimated)        0.563     8.273    bridge/bus_rdata[20]
+    SLICE_X82Y92                                                      r  bridge/s_rdata[20]_i_1/I0
+    SLICE_X82Y92         LUT3 (Prop_lut3_I0_O)        0.124     8.397 r  bridge/s_rdata[20]_i_1/O
+                         net (fo=1, routed)           0.000     8.397    bridge/s_rdata0_in[20]
+    SLICE_X82Y92         FDCE                                         r  bridge/s_rdata_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    bridge/clk
+    SLICE_X82Y92         FDCE                                         r  bridge/s_rdata_reg[20]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X82Y92         FDCE (Setup_fdce_C_D)        0.077     8.542    bridge/s_rdata_reg[20]
+  -------------------------------------------------------------------
+                         required time                          8.542    
+                         arrival time                          -8.397    
+  -------------------------------------------------------------------
+                         slack                                  0.145    
+
+Slack (MET) :             0.147ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[15]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.176ns  (logic 2.218ns (30.909%)  route 4.958ns (69.091%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.554     8.149    native_system/digital/scheduler/wait_count[0]
+    SLICE_X58Y93         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[15]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X58Y93         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[15]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X58Y93         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/wait_count_reg[15]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.149    
+  -------------------------------------------------------------------
+                         slack                                  0.147    
+
+Slack (MET) :             0.147ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[6]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.176ns  (logic 2.218ns (30.909%)  route 4.958ns (69.091%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.554     8.149    native_system/digital/scheduler/wait_count[0]
+    SLICE_X58Y93         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X58Y93         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[6]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X58Y93         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/wait_count_reg[6]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.149    
+  -------------------------------------------------------------------
+                         slack                                  0.147    
+
+Slack (MET) :             0.150ns  (required time - arrival time)
+  Source:                 native_system/digital/scheduler/memory_reg_1/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            bridge/s_rdata_reg[23]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.417ns  (logic 2.978ns (40.151%)  route 4.439ns (59.849%))
+  Logic Levels:           4  (LUT3=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/scheduler/clk
+    RAMB36_X3Y14         RAMB36E1                                     r  native_system/digital/scheduler/memory_reg_1/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X3Y14         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_DOBDO[19])
+                                                      2.454     3.427 r  native_system/digital/scheduler/memory_reg_1/DOBDO[19]
+                         net (fo=1, estimated)        1.544     4.971    native_system/digital/scheduler/read_frame[55]
+    SLICE_X55Y83                                                      r  native_system/digital/scheduler/s_rdata[23]_i_6/I0
+    SLICE_X55Y83         LUT6 (Prop_lut6_I0_O)        0.124     5.095 r  native_system/digital/scheduler/s_rdata[23]_i_6/O
+                         net (fo=1, estimated)        1.510     6.605    native_system/queue/s_rdata[23]_i_2_0
+    SLICE_X55Y93                                                      r  native_system/queue/s_rdata[23]_i_3/I5
+    SLICE_X55Y93         LUT6 (Prop_lut6_I5_O)        0.124     6.729 r  native_system/queue/s_rdata[23]_i_3/O
+                         net (fo=1, estimated)        0.587     7.316    native_system/queue/s_rdata[23]_i_3_n_0
+    SLICE_X65Y93                                                      r  native_system/queue/s_rdata[23]_i_2/I1
+    SLICE_X65Y93         LUT6 (Prop_lut6_I1_O)        0.124     7.440 r  native_system/queue/s_rdata[23]_i_2/O
+                         net (fo=1, estimated)        0.798     8.238    bridge/bus_rdata[23]
+    SLICE_X65Y94                                                      r  bridge/s_rdata[23]_i_1/I0
+    SLICE_X65Y94         LUT3 (Prop_lut3_I0_O)        0.152     8.390 r  bridge/s_rdata[23]_i_1/O
+                         net (fo=1, routed)           0.000     8.390    bridge/s_rdata0_in[23]
+    SLICE_X65Y94         FDCE                                         r  bridge/s_rdata_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    bridge/clk
+    SLICE_X65Y94         FDCE                                         r  bridge/s_rdata_reg[23]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X65Y94         FDCE (Setup_fdce_C_D)        0.075     8.540    bridge/s_rdata_reg[23]
+  -------------------------------------------------------------------
+                         required time                          8.540    
+                         arrival time                          -8.390    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.150ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[10]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.173ns  (logic 2.218ns (30.922%)  route 4.955ns (69.078%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.551     8.146    native_system/digital/scheduler/wait_count[0]
+    SLICE_X58Y90         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[10]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X58Y90         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[10]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X58Y90         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/wait_count_reg[10]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.146    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.150ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[19]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.173ns  (logic 2.218ns (30.922%)  route 4.955ns (69.078%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.551     8.146    native_system/digital/scheduler/wait_count[0]
+    SLICE_X54Y92         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[19]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X54Y92         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[19]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X54Y92         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/wait_count_reg[19]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.146    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.150ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[23]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.173ns  (logic 2.218ns (30.922%)  route 4.955ns (69.078%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.551     8.146    native_system/digital/scheduler/wait_count[0]
+    SLICE_X54Y92         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[23]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X54Y92         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[23]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X54Y92         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/wait_count_reg[23]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.146    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.150ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[26]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.173ns  (logic 2.218ns (30.922%)  route 4.955ns (69.078%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.551     8.146    native_system/digital/scheduler/wait_count[0]
+    SLICE_X54Y92         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[26]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X54Y92         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[26]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X54Y92         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/wait_count_reg[26]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.146    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.150ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[27]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.173ns  (logic 2.218ns (30.922%)  route 4.955ns (69.078%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.551     8.146    native_system/digital/scheduler/wait_count[0]
+    SLICE_X54Y92         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[27]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X54Y92         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[27]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X54Y92         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/wait_count_reg[27]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.146    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.150ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[28]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.173ns  (logic 2.218ns (30.922%)  route 4.955ns (69.078%))
+  Logic Levels:           8  (CARRY4=2 LUT3=1 LUT4=1 LUT6=4)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X48Y89         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y89         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, estimated)        0.617     2.046    native_system/digital/scheduler/total_reg[31]_0[0]
+    SLICE_X47Y88                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+    SLICE_X47Y88         LUT3 (Prop_lut3_I0_O)        0.124     2.170 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, estimated)        0.484     2.654    native_system/digital/scheduler/total[3]_i_4_n_0
+    SLICE_X49Y88                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+    SLICE_X49Y88         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     3.161 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, estimated)        0.000     3.161    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+    SLICE_X49Y89                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+    SLICE_X49Y89         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     3.490 f  native_system/digital/scheduler/total_reg[7]_i_1/O[3]
+                         net (fo=2, estimated)        1.062     4.552    native_system/digital/scheduler/total_reg[7]_i_1_n_4
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_19/I1
+    SLICE_X50Y93         LUT4 (Prop_lut4_I1_O)        0.306     4.858 f  native_system/digital/scheduler/capture_sequence[7]_i_19/O
+                         net (fo=1, estimated)        0.796     5.654    native_system/digital/scheduler/capture_sequence[7]_i_19_n_0
+    SLICE_X50Y93                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_8/I3
+    SLICE_X50Y93         LUT6 (Prop_lut6_I3_O)        0.124     5.778 f  native_system/digital/scheduler/capture_sequence[7]_i_8/O
+                         net (fo=1, estimated)        0.411     6.189    native_system/digital/adc/spi/selected_tx_reg[0]
+    SLICE_X52Y93                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I1
+    SLICE_X52Y93         LUT6 (Prop_lut6_I1_O)        0.124     6.313 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, estimated)        0.729     7.042    native_system/digital/scheduler/state1
+    SLICE_X54Y90                                                      f  native_system/digital/scheduler/wait_count[31]_i_3/I3
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.166 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, estimated)        0.305     7.471    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90                                                      r  native_system/digital/scheduler/wait_count[31]_i_1/I0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.595 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, estimated)       0.551     8.146    native_system/digital/scheduler/wait_count[0]
+    SLICE_X58Y90         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[28]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X58Y90         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[28]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X58Y90         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/wait_count_reg[28]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.146    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+
+
+

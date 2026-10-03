@@ -1,19 +1,14 @@
-# Engineering blockers — v2
+# Current v2 blockers — 2026-10-03
 
-Stage: BOARD_TRANSPORT_AND_PS_PL_INTEGRATION_PREFLIGHT. Owner: Codex; independent review pending.
+Current model: GPT-6.1 Sol High. B01 RESOLVED: XC7Z020-1CLG400C user-confirmed. Internal CORE_TIMING RESOLVED in strategy3: routed132MHz WNS+0.082,TNS0,WHS+0.072,THS0,zero routing errors. B02 current source priority superseded by explicit N18/33.333MHz fallback; measurement is not required to proceed with that documented fallback.
 
-| Gate | Current engineering fact | Evidence required |
+| Gate | Current status | Required next evidence |
 |---|---|---|
-| B01 | PARTIALLY_RESOLVED_STILL_BLOCKING: JTAG confirms xc7z020; user photo confirms CLG400. Speed, temperature and full ordering code UNKNOWN | Independent speed/temperature/ordering evidence; do not infer ABX22 |
-| B03 | OPEN: package audit complete; routing/VCCO remain unverified. CEC=J5 is PS DDR, not PL. Connector numbering, J4 pin1/duplicate pin6, V16/Y16 conflicts retained | Revision-matched schematic/continuity, VCCO and clock evidence, UART MIO routing |
-| B04 | OPEN: 66 MHz serializer external setup/hold, independent watchdog and power qualification unverified | Physical timing budget and measured waveforms; no PCB freeze |
-| CORE_TIMING | All three candidates synthesize; 132 MHz OOC WNS -8.128/-4.995/-3.609 ns | P-20260927-001 decision and timing revalidation; no guessed-target deployment |
-| PS_TRANSPORT | PC/C and AXI/native segments tested offline; COM4 route and real PS readback unverified | Exact target, PS platform/XSA/BSP, safe smoke top, UART route, real PING/PONG and PL STATUS |
-| B05/B06 | No physical levitation/batch qualification | Characterized 10 mm emitters and measured particles |
-| B07 | Real receive reference and analog timing unverified | Calibrated reference and hardware acquisition traces |
-| EXTERNAL_REVIEW | Codex checkpoint is not Chat acceptance | Independent review of final commit/evidence |
+| B03 | DOCUMENT_MAPPING_RESOLVED; ELECTRICAL_ROUTE_OPEN | Bank34/35 VCCO,actual connector orientation/continuity,matched IO standard and translator voltage |
+| PS/UART | BLOCKED | FTDI-B TX/RX/DTR/RTS to UART instance/MIO; PS reference clock/reset; reviewed preset/XSA/BSP/ARM build |
+| Real transport | NOT_RUN |100/1000 packets,safe MMIO,atomic map/ACK generation,real GUI/ILA after verified platform |
+| B04 | OPEN | Off-chip min/max timing,loading,watchdog,power and ADC/driver qualification; review retained DRC/methodology warnings |
+| B05/B06/B07 | OPEN_PHYSICAL | Actual10mm batch load/polarity/phase/amplitude,receiver/ADC reference and measured levitation |
+| Independent Review | PENDING | External review of actual source,warning scope and hardware evidence; no fabricated ChatGPT approval |
 
-Evidence: v2/evidence/board_transport/. Prior identification evidence remains in board_bringup/.
-No port opened, no driver/EEPROM/boot change, no program download, no unknown GPIO, no external PCB operation.
-
-DOCUMENTATION_UPDATE_REQUIRED: general README, v2/README, CURRENT_PLAN, HANDOFF, PROJECT_STATE.md, DECISIONS and ACCEPTANCE remain historical. Work is OFF; no narrative or memory update is attributed to Work. Task-specific technical evidence is explicitly authorized by current instruction sections22/26. External Chat history remains BLOCKED; observable interaction memory remains PARTIAL at its existing cutoff.
+Detailed acquisition list: v2/evidence/pre_pcb_board_ready/MISSING_PHYSICAL_FACTS.md. No unknown-pin XDC,driver replacement,boot change,serial opening,bitstream download or PCB operation occurred. External ChatGPT history is BLOCKED and observable Codex transcript PARTIAL; these do not prevent sourced digital work.

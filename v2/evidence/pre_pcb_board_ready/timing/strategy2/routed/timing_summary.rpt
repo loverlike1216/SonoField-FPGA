@@ -1,0 +1,712 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct  3 16:18:12 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -report_unconstrained -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/pre_pcb_board_ready/timing/strategy2/routed/timing_summary.rpt
+| Design       : sono_axi_system
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                                 Violations  
+---------  --------  ------------------------------------------  ----------  
+LUTAR-1    Warning   LUT drives async reset alert                1           
+SYNTH-6    Warning   Timing of a RAM block might be sub-optimal  4           
+TIMING-18  Warning   Missing input or output delay               1000        
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (2324)
+6. checking no_output_delay (256)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (2324)
+---------------------------------
+ There are 2324 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (256)
+---------------------------------
+ There are 256 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -0.284       -8.751                     84                33175        0.070        0.000                      0                33175        3.288        0.000                       0                 17926  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)         Period(ns)      Frequency(MHz)
+-----    ------------         ----------      --------------
+core132  {0.000 3.788}        7.576           131.996         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+core132            -0.284       -8.751                     84                26750        0.070        0.000                      0                26750        3.288        0.000                       0                 17926  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  core132            core132                  0.755        0.000                      0                 6425        1.081        0.000                      0                 6425  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+(none)        core132                     
+(none)                      core132       
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  core132
+  To Clock:  core132
+
+Setup :           84  Failing Endpoints,  Worst Slack       -0.284ns,  Total Violation       -8.751ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.070ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.288ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.284ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[10][3]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/wait_count_reg[11]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.571ns  (logic 2.755ns (36.389%)  route 4.816ns (63.611%))
+  Logic Levels:           12  (CARRY4=6 LUT3=1 LUT4=2 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X50Y92         FDCE                                         r  native_system/digital/cfg_reg[10][3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y92         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[10][3]/Q
+                         net (fo=4, routed)           0.819     2.310    native_system/digital/scheduler/total_reg[31]_1[3]
+    SLICE_X50Y89         LUT3 (Prop_lut3_I1_O)        0.124     2.434 r  native_system/digital/scheduler/total[7]_i_5/O
+                         net (fo=2, routed)           0.506     2.940    native_system/digital/scheduler/total[7]_i_5_n_0
+    SLICE_X49Y89         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     3.466 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.466    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+    SLICE_X49Y90         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.580 r  native_system/digital/scheduler/total_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.580    native_system/digital/scheduler/total_reg[11]_i_1_n_0
+    SLICE_X49Y91         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.694 r  native_system/digital/scheduler/total_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.694    native_system/digital/scheduler/total_reg[15]_i_1_n_0
+    SLICE_X49Y92         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.808 r  native_system/digital/scheduler/total_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.808    native_system/digital/scheduler/total_reg[19]_i_1_n_0
+    SLICE_X49Y93         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.922 r  native_system/digital/scheduler/total_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     3.922    native_system/digital/scheduler/total_reg[23]_i_1_n_0
+    SLICE_X49Y94         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     4.251 f  native_system/digital/scheduler/total_reg[27]_i_1/O[3]
+                         net (fo=2, routed)           0.789     5.040    native_system/digital/scheduler/total_reg[27]_i_1_n_4
+    SLICE_X51Y95         LUT4 (Prop_lut4_I3_O)        0.306     5.346 f  native_system/digital/scheduler/capture_sequence[7]_i_22/O
+                         net (fo=1, routed)           0.446     5.793    native_system/digital/scheduler/capture_sequence[7]_i_22_n_0
+    SLICE_X53Y92         LUT4 (Prop_lut4_I0_O)        0.124     5.917 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, routed)           0.585     6.502    native_system/digital/adc/spi/selected_tx_reg[0]_0
+    SLICE_X52Y93         LUT6 (Prop_lut6_I2_O)        0.124     6.626 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=7, routed)           0.735     7.360    native_system/digital/scheduler/state1
+    SLICE_X54Y90         LUT6 (Prop_lut6_I3_O)        0.124     7.484 r  native_system/digital/scheduler/wait_count[31]_i_3/O
+                         net (fo=1, routed)           0.305     7.790    native_system/digital/scheduler/wait_count[31]_i_3_n_0
+    SLICE_X56Y90         LUT6 (Prop_lut6_I0_O)        0.124     7.914 r  native_system/digital/scheduler/wait_count[31]_i_1/O
+                         net (fo=32, routed)          0.631     8.544    native_system/digital/scheduler/wait_count[0]
+    SLICE_X57Y90         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[11]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+    SLICE_X57Y90         FDCE                                         r  native_system/digital/scheduler/wait_count_reg[11]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X57Y90         FDCE (Setup_fdce_C_CE)      -0.205     8.260    native_system/digital/scheduler/wait_count_reg[11]
+  -------------------------------------------------------------------
+                         required time                          8.260    
+                         arrival time                          -8.544    
+  -------------------------------------------------------------------
+                         slack                                 -0.284    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.070ns  (arrival time - required time)
+  Source:                 native_system/digital/adc/frame_reg[17]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/memory_reg_0/DIADI[17]
+                            (rising edge-triggered cell RAMB36E1 clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (core132 rise@0.000ns - core132 rise@0.000ns)
+  Data Path Delay:        0.247ns  (logic 0.141ns (57.072%)  route 0.106ns (42.928%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.410     0.410    native_system/digital/adc/clk
+    SLICE_X55Y82         FDCE                                         r  native_system/digital/adc/frame_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y82         FDCE (Prop_fdce_C_Q)         0.141     0.551 r  native_system/digital/adc/frame_reg[17]/Q
+                         net (fo=1, routed)           0.106     0.657    native_system/digital/scheduler/frame[17]
+    RAMB36_X3Y16         RAMB36E1                                     r  native_system/digital/scheduler/memory_reg_0/DIADI[17]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.432     0.432    native_system/digital/scheduler/clk
+    RAMB36_X3Y16         RAMB36E1                                     r  native_system/digital/scheduler/memory_reg_0/CLKARDCLK
+                         clock pessimism              0.000     0.432    
+    RAMB36_X3Y16         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[17])
+                                                      0.155     0.587    native_system/digital/scheduler/memory_reg_0
+  -------------------------------------------------------------------
+                         required time                         -0.587    
+                         arrival time                           0.657    
+  -------------------------------------------------------------------
+                         slack                                  0.070    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         core132
+Waveform(ns):       { 0.000 3.788 }
+Period(ns):         7.576
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.944         7.576       4.632      RAMB36_X3Y16  native_system/digital/scheduler/memory_reg_0/CLKARDCLK
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         3.788       3.288      SLICE_X85Y99  bridge/FSM_sequential_state_reg[0]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         3.788       3.288      SLICE_X85Y99  bridge/FSM_sequential_state_reg[0]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  core132
+  To Clock:  core132
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.755ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        1.081ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.755ns  (required time - arrival time)
+  Source:                 native_system/digital/reset_sync_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/bank/shadow_calibration_reg[25][6]/CLR
+                            (recovery check against rising-edge clock core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        6.332ns  (logic 0.718ns (11.340%)  route 5.614ns (88.660%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+    SLICE_X80Y86         FDCE                                         r  native_system/digital/reset_sync_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X80Y86         FDCE (Prop_fdce_C_Q)         0.419     1.392 r  native_system/digital/reset_sync_reg[1]/Q
+                         net (fo=3, routed)           1.411     2.803    native_system/digital/bank/out[0]
+    SLICE_X57Y83         LUT1 (Prop_lut1_I0_O)        0.299     3.102 f  native_system/digital/bank/adc_reset_i_2/O
+                         net (fo=6423, routed)        4.203     7.305    native_system/digital/bank/reset_sync_reg[1]
+    SLICE_X91Y55         FDCE                                         f  native_system/digital/bank/shadow_calibration_reg[25][6]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/bank/clk
+    SLICE_X91Y55         FDCE                                         r  native_system/digital/bank/shadow_calibration_reg[25][6]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+    SLICE_X91Y55         FDCE (Recov_fdce_C_CLR)     -0.405     8.060    native_system/digital/bank/shadow_calibration_reg[25][6]
+  -------------------------------------------------------------------
+                         required time                          8.060    
+                         arrival time                          -7.305    
+  -------------------------------------------------------------------
+                         slack                                  0.755    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.081ns  (arrival time - required time)
+  Source:                 native_system/digital/reset_sync_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/adc/spi/received_reg[20]/CLR
+                            (removal check against rising-edge clock core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (core132 rise@0.000ns - core132 rise@0.000ns)
+  Data Path Delay:        1.011ns  (logic 0.227ns (22.455%)  route 0.784ns (77.545%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.410     0.410    native_system/digital/clk
+    SLICE_X80Y86         FDCE                                         r  native_system/digital/reset_sync_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X80Y86         FDCE (Prop_fdce_C_Q)         0.128     0.538 r  native_system/digital/reset_sync_reg[1]/Q
+                         net (fo=3, routed)           0.592     1.130    native_system/digital/bank/out[0]
+    SLICE_X57Y83         LUT1 (Prop_lut1_I0_O)        0.099     1.229 f  native_system/digital/bank/adc_reset_i_2/O
+                         net (fo=6423, routed)        0.192     1.421    native_system/digital/adc/spi/index_reg[0]_0
+    SLICE_X57Y83         FDCE                                         f  native_system/digital/adc/spi/received_reg[20]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.432     0.432    native_system/digital/adc/spi/clk
+    SLICE_X57Y83         FDCE                                         r  native_system/digital/adc/spi/received_reg[20]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X57Y83         FDCE (Remov_fdce_C_CLR)     -0.092     0.340    native_system/digital/adc/spi/received_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -0.340    
+                         arrival time                           1.421    
+  -------------------------------------------------------------------
+                         slack                                  1.081    
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay             5 Endpoints
+Min Delay             5 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 motion_stop
+                            (input port)
+  Destination:            output_disable
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.212ns  (logic 0.248ns (5.888%)  route 3.964ns (94.112%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  motion_stop (IN)
+                         net (fo=3, unset)            0.973     0.973    native_system/queue/motion_stop
+    SLICE_X41Y102        LUT5 (Prop_lut5_I4_O)        0.124     1.097 f  native_system/queue/output_disable_INST_0_i_2/O
+                         net (fo=2, routed)           2.018     3.115    native_system/digital/bank/hardware_enable0
+    SLICE_X57Y85         LUT6 (Prop_lut6_I2_O)        0.124     3.239 r  native_system/digital/bank/output_disable_INST_0/O
+                         net (fo=0)                   0.973     4.212    output_disable
+                                                                      r  output_disable (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rst_n
+                            (input port)
+  Destination:            s_arready
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.862ns  (logic 0.042ns (4.871%)  route 0.820ns (95.129%))
+  Logic Levels:           1  (LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  rst_n (IN)
+                         net (fo=21, unset)           0.410     0.410    bridge/rst_n
+    SLICE_X83Y99         LUT4 (Prop_lut4_I3_O)        0.042     0.452 r  bridge/s_arready_INST_0/O
+                         net (fo=0)                   0.410     0.862    s_arready
+                                                                      r  s_arready (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  core132
+  To Clock:  
+
+Max Delay           256 Endpoints
+Min Delay           256 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 native_system/digital/burst/base_phase_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            commanded_waveform[38]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.325ns  (logic 2.159ns (29.476%)  route 5.166ns (70.524%))
+  Logic Levels:           6  (CARRY4=2 LUT2=1 LUT5=2 LUT6=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/burst/clk
+    SLICE_X47Y85         FDCE                                         r  native_system/digital/burst/base_phase_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y85         FDCE (Prop_fdce_C_Q)         0.456     1.429 r  native_system/digital/burst/base_phase_reg[0]/Q
+                         net (fo=10, routed)          0.716     2.145    native_system/digital/burst/base_phase[0]
+    SLICE_X46Y85         LUT2 (Prop_lut2_I0_O)        0.124     2.269 r  native_system/digital/burst/commanded_waveform[127]_INST_0_i_35/O
+                         net (fo=1, routed)           0.000     2.269    native_system/digital/burst/commanded_waveform[127]_INST_0_i_35_n_0
+    SLICE_X46Y85         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     2.782 r  native_system/digital/burst/commanded_waveform[127]_INST_0_i_23/CO[3]
+                         net (fo=1, routed)           0.000     2.782    native_system/digital/burst/commanded_waveform[127]_INST_0_i_23_n_0
+    SLICE_X46Y86         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     3.097 f  native_system/digital/burst/commanded_waveform[127]_INST_0_i_17/O[3]
+                         net (fo=1, routed)           0.714     3.810    native_system/digital/burst/phase[7]
+    SLICE_X50Y87         LUT5 (Prop_lut5_I0_O)        0.299     4.109 r  native_system/digital/burst/commanded_waveform[127]_INST_0_i_11/O
+                         net (fo=8, routed)           1.085     5.194    native_system/digital/scheduler/commanded_waveform3
+    SLICE_X51Y73         LUT6 (Prop_lut6_I4_O)        0.328     5.522 r  native_system/digital/scheduler/commanded_waveform[62]_INST_0_i_2/O
+                         net (fo=16, routed)          1.679     7.201    native_system/digital/bank/captured_reg[32]_0
+    SLICE_X80Y57         LUT5 (Prop_lut5_I3_O)        0.124     7.325 r  native_system/digital/bank/commanded_waveform[38]_INST_0/O
+                         net (fo=1, unset)            0.973     8.298    commanded_waveform[38]
+                                                                      r  commanded_waveform[38] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 native_system/queue/ack_pulse_reg/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            motion_ack_pulse
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.538ns  (logic 0.128ns (23.786%)  route 0.410ns (76.214%))
+  Logic Levels:           0  
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.410     0.410    native_system/queue/clk
+    SLICE_X81Y111        FDCE                                         r  native_system/queue/ack_pulse_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X81Y111        FDCE (Prop_fdce_C_Q)         0.128     0.538 r  native_system/queue/ack_pulse_reg/Q
+                         net (fo=0)                   0.410     0.948    motion_ack_pulse
+                                                                      r  motion_ack_pulse (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  core132
+
+Max Delay         23549 Endpoints
+Min Delay         23549 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rst_n
+                            (input port)
+  Destination:            native_system/queue/active_reg[386]/CLR
+                            (recovery check against rising-edge clock core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        12.085ns  (logic 0.124ns (1.026%)  route 11.961ns (98.974%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.924ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  rst_n (IN)
+                         net (fo=21, unset)           0.973     0.973    native_system/queue/rst_n
+    SLICE_X84Y100        LUT1 (Prop_lut1_I0_O)        0.124     1.097 f  native_system/queue/occupancy[2]_i_2/O
+                         net (fo=2654, routed)       10.988    12.085    native_system/queue/rst_n_0
+    SLICE_X28Y133        FDCE                                         f  native_system/queue/active_reg[386]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.924     0.924    native_system/queue/clk
+    SLICE_X28Y133        FDCE                                         r  native_system/queue/active_reg[386]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 s_araddr[0]
+                            (input port)
+  Destination:            bridge/araddr_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.410ns  (logic 0.000ns (0.000%)  route 0.410ns (100.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.432ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  s_araddr[0] (IN)
+                         net (fo=0)                   0.410     0.410    bridge/s_araddr[0]
+    SLICE_X91Y100        FDCE                                         r  bridge/araddr_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.432     0.432    bridge/clk
+    SLICE_X91Y100        FDCE                                         r  bridge/araddr_reg[0]/C
+
+
+
+
+

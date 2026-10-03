@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "classification": "SIMULATED",
+  "source_sha256": {
+    "rtl\\motion\\motion_queue.sv": "9bc0d8962b7fb2fab65c66e49b1638cc46b53bb0770fb7a1e24ed939bb6aceca",
+    "rtl\\output\\serializer.sv": "5d20788a6428cdfd46a7ba9b4163444e1c426dede85f046e86fe6836cd43e174",
+    "tb\\tb_serializer_throughput.sv": "6a7f8a8979e439cfc322dc76360afa4aeb60750d97cd8ac2662522d5d80d482b",
+    "build\\pre_pcb\\independent_checks\\motion_queue_golden.sv": "87ba0b5eee96c7e415678d3f8b622cd04b9ba2ba77ab311753fb69fa1a48d1f4",
+    "tb\\tb_motion_queue_equivalence.sv": "42f46aa39939ff9652eef112c3248f849efd00847012674e67f548125f421a6b"
+  },
+  "commands": [
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 0,
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_motion_queue_equivalence",
+        "-o",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\independent_checks\\tb_motion_queue_equivalence.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\independent_checks\\motion_queue_golden.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_queue_equivalence.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_0.log"
+    },
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 1,
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\independent_checks\\tb_motion_queue_equivalence.vvp"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_1.log"
+    },
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 2,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\independent_checks\\motion_queue_golden.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_queue_equivalence.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_2.log"
+    },
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 3,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_motion_queue_equivalence",
+        "--snapshot",
+        "tb_motion_queue_equivalence",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_3.log"
+    },
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 4,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_motion_queue_equivalence",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_4.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 0,
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_serializer_throughput",
+        "-o",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\independent_checks\\tb_serializer_throughput.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_serializer_throughput.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_0.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 1,
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\independent_checks\\tb_serializer_throughput.vvp"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_1.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 2,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_serializer_throughput.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_2.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 3,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_serializer_throughput",
+        "--snapshot",
+        "tb_serializer_throughput",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_3.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 4,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_serializer_throughput",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_4.log"
+    }
+  ],
+  "hardware_programmed": false,
+  "core_clock_design_target_hz": 132000000
+}

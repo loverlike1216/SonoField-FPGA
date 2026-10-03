@@ -3,13 +3,13 @@
 128-channel ultrasonic phased-array project on Robei Zynq-7020, with nominal 10 mm transmitters,
 12 mm radiating-center pitch and adjustable 90–115 mm face gap (100 mm nominal).
 
-Current version **v2**, stage **CORE_TIMING_CLOSURE_AND_REAL_PS_PL_SMOKE_TEST**. v1 is frozen intact; schematic revision remains **V1**.
+Current version **v2**, stage **TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE**. v1 is frozen intact; schematic revision remains **V1**.
 
 **团队接手入口：[指南.md](指南.md)** — 当前进度、已解决/未解决问题、Windows环境、离线复现和后续开发。
 当前 main 的恢复入口：[当前 v2 接手补充](v2/docs/CONTINUE_CURRENT_V2.md) 和 [CONTEXT_CHECKPOINT](shared/CONTEXT_CHECKPOINT.md)；下列标签保留其历史交接范围。
 阶段标签：`v2-board-transport-offline-20260929`（离线工程检查点，非正式Release或硬件验收）。
 2026-10-03 当前回归：114项Python测试、协议/AXI双模拟器、完整运动/校准回归通过；历史独立环境复现保留其原验证范围。
-XC7Z020/CLG400已确认；速度等级、UART路由、VCCO/连接器和132 MHz核心时序仍阻塞上板。
+完整料号 XC7Z020-1CLG400C 已由用户确认；UART/PS平台、VCCO和最终布线时序仍需完成。[当前证据与接口候选](v2/evidence/pre_pcb_board_ready/)。
 User explicitly approved v2 and this software/digital stage. The complete inherited baseline is retained.
 Self-calibration and ADC acquisition have automated synthetic/RTL validation. Physical acquisition,
 PCB manufacture and levitation remain unverified. Native schematic draft is available; execution remains focused on the active single-board v2 project; PCB layout and fabrication remain unstarted.

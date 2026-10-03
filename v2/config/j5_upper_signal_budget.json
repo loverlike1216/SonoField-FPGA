@@ -1,0 +1,322 @@
+{
+  "status": "CANDIDATE_NOT_FROZEN",
+  "connector": "J5",
+  "side": "upper",
+  "capacity": 16,
+  "used": 16,
+  "reserved": 0,
+  "central_adc_count": 1,
+  "central_adc_rx_channels": 8,
+  "adc_topology": "ONE_SHARED_ADC_CONTROL_BUS_ON_J5; LOWER_ANALOG_RX_REACHES_SAME_ADC",
+  "hardware_fault_inputs": "PROPOSED_NOT_IMPLEMENTED_OR_QUALIFIED",
+  "independent_bank_disable": "IMPLEMENTED_AND_DUAL_SIMULATOR_TESTED_PIN_INDEPENDENT_ADAPTER; NOT_INTEGRATED_IN_BOARD_WRAPPER",
+  "pins": [
+    {
+      "connector_pin": 1,
+      "source_cell": "B25",
+      "fpga_package_pin": "N20",
+      "source_value": "N20",
+      "package_properties": {
+        "pin": "N20",
+        "pin_func": "IO_L14P_T2_SRCC_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "1"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_SHIFT_CLK",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 2,
+      "source_cell": "B26",
+      "fpga_package_pin": "P20",
+      "source_value": "P20",
+      "package_properties": {
+        "pin": "P20",
+        "pin_func": "IO_L14N_T2_SRCC_34",
+        "bank": "34",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "1"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_LATCH_CLK",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 3,
+      "source_cell": "B27",
+      "fpga_package_pin": "M17",
+      "source_value": "M17",
+      "package_properties": {
+        "pin": "M17",
+        "pin_func": "IO_L8P_T1_AD10P_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_OE_N",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 4,
+      "source_cell": "B28",
+      "fpga_package_pin": "M18",
+      "source_value": "M18",
+      "package_properties": {
+        "pin": "M18",
+        "pin_func": "IO_L8N_T1_AD10N_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_BOARD_ENABLE",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 5,
+      "source_cell": "B29",
+      "fpga_package_pin": "M19",
+      "source_value": "M19",
+      "package_properties": {
+        "pin": "M19",
+        "pin_func": "IO_L7P_T1_AD2P_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_RX_BLANK",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 6,
+      "source_cell": "B30",
+      "fpga_package_pin": "M20",
+      "source_value": "M20",
+      "package_properties": {
+        "pin": "M20",
+        "pin_func": "IO_L7N_T1_AD2N_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_RESET",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 7,
+      "source_cell": "B31",
+      "fpga_package_pin": "L19",
+      "source_value": "L19",
+      "package_properties": {
+        "pin": "L19",
+        "pin_func": "IO_L9P_T1_DQS_AD3P_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_CONVST",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 8,
+      "source_cell": "B32",
+      "fpga_package_pin": "L20",
+      "source_value": "L20",
+      "package_properties": {
+        "pin": "L20",
+        "pin_func": "IO_L9N_T1_DQS_AD3N_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_CS_N",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 13,
+      "source_cell": "B37",
+      "fpga_package_pin": "K19",
+      "source_value": "K19",
+      "package_properties": {
+        "pin": "K19",
+        "pin_func": "IO_L10P_T1_AD11P_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_SCLK",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 14,
+      "source_cell": "B38",
+      "fpga_package_pin": "J19",
+      "source_value": "J19",
+      "package_properties": {
+        "pin": "J19",
+        "pin_func": "IO_L10N_T1_AD11N_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_SDI",
+      "direction": "FPGA_TO_BOARD"
+    },
+    {
+      "connector_pin": 15,
+      "source_cell": "B39",
+      "fpga_package_pin": "H16",
+      "source_value": "H16",
+      "package_properties": {
+        "pin": "H16",
+        "pin_func": "IO_L13P_T2_MRCC_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "1"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_BUSY",
+      "direction": "ADC_OR_FAULT_TO_FPGA"
+    },
+    {
+      "connector_pin": 16,
+      "source_cell": "B40",
+      "fpga_package_pin": "H17",
+      "source_value": "H17",
+      "package_properties": {
+        "pin": "H17",
+        "pin_func": "IO_L13N_T2_MRCC_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "1"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_DOUT_A",
+      "direction": "ADC_OR_FAULT_TO_FPGA"
+    },
+    {
+      "connector_pin": 17,
+      "source_cell": "B41",
+      "fpga_package_pin": "G17",
+      "source_value": "G17",
+      "package_properties": {
+        "pin": "G17",
+        "pin_func": "IO_L16P_T2_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_DOUT_B",
+      "direction": "ADC_OR_FAULT_TO_FPGA"
+    },
+    {
+      "connector_pin": 18,
+      "source_cell": "B42",
+      "fpga_package_pin": "G18",
+      "source_value": "G18",
+      "package_properties": {
+        "pin": "G18",
+        "pin_func": "IO_L16N_T2_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_DOUT_C",
+      "direction": "ADC_OR_FAULT_TO_FPGA"
+    },
+    {
+      "connector_pin": 19,
+      "source_cell": "B43",
+      "fpga_package_pin": "G19",
+      "source_value": "G19",
+      "package_properties": {
+        "pin": "G19",
+        "pin_func": "IO_L18P_T2_AD13P_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "ADC_DOUT_D",
+      "direction": "ADC_OR_FAULT_TO_FPGA"
+    },
+    {
+      "connector_pin": 20,
+      "source_cell": "B44",
+      "fpga_package_pin": "G20",
+      "source_value": "G20",
+      "package_properties": {
+        "pin": "G20",
+        "pin_func": "IO_L18N_T2_AD13N_35",
+        "bank": "35",
+        "is_bonded": "1",
+        "is_general_purpose": "1",
+        "is_clk_capable": "0"
+      },
+      "board_route": "USER_PROVIDED_DOCUMENT_NOT_CONTINUITY_TESTED",
+      "vcco_v": null,
+      "iostandard": null,
+      "signal": "UPPER_FAULT_N",
+      "direction": "ADC_OR_FAULT_TO_FPGA"
+    }
+  ],
+  "vcco_v": null,
+  "iostandard": null,
+  "adapter": "rtl/output/sono_array_interface.sv"
+}

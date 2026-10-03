@@ -1,0 +1,11 @@
+# Current PS/PL integration boundary
+
+Current model: GPT-6.1 Sol High. Board identity is verified, PS execution is NOT_RUN.
+
+Existing service.c is a compiled and cross-tested BASIC read/status/safe-disable protocol core. zynq_service_main.c is BSP integration source, not an ARM-linked ELF. No XSA/BSP, reviewed PS reference clock/reset or PS UART/MIO route is available. The .venv preflight reports no Vitis Python module in that interpreter; this does not mean Vitis is uninstalled. No ARM target compiler was located on PATH or the searched installed/common tool paths. Installed generic Zed/zc702/zc706 PS7 templates are not this Robei board's preset.
+
+The protocol already reserves BEGIN_MAP/MAP_CHUNK/COMMIT_MAP/GET_MAP_STATUS. The current C service rejects them and advertises BASIC only. Full real-map support is not claimed. After the verified platform is constructed, implement these existing commands with bounded complete128-word staging, validation, safe-disabled shadow writes and atomic PL commit; no new packet IDs or register layout is needed. Define a latched completion/sequence observation so GET_MAP_STATUS reports the acknowledged map generation. Raw PL MAP_STATUS bit0 is write_ready, bit1 pending, bit2 a one-cycle commit_ack, bit3 active_valid; do not mistake write_ready or an old active_valid for a fresh map ACK. No register semantics are changed here.
+
+Hardware tests after gates pass: read-only version/status/caps;100 then1000 framed PING/PONG; safe write/readback; full128channel map and per-channel calibration; atomic commit and observed ACK/sequence; packet corruption, lost packet/timeout, queue failures and disconnect-safe disable; ILA confirmation; real GUI using BoardTransport. Bare-board wrapper must expose no external acoustic pins and fix hardware_enable low. Add separate array enable adapter only to a reviewed physical wrapper later. Do not open COM4 or initialize arbitrary MIO without verified UART and DTR/RTS routing.
+
+Required external timing review: routed DRC reports RAMB36 asynchronous-address/control warnings and absence of PS7 in the OOC block. Methodology reports LUT-derived asynchronous reset and missing external delays. These warnings are retained and must be reviewed in the verified board/PS wrapper; internal timing PASS does not waive them.

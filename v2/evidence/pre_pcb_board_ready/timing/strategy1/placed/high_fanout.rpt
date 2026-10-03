@@ -1,0 +1,42 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct  3 15:45:15 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_high_fanout_nets -max_nets 20 -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/pre_pcb_board_ready/timing/strategy1/placed/high_fanout.rpt
+| Design       : sono_axi_system
+| Device       : xc7z020
+| Design State : Fully Placed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+High Fan-out Nets Information
+
+1. Summary
+----------
+
++----------------------------------------------------+--------+-------------+
+| Net Name                                           | Fanout | Driver Type |
++----------------------------------------------------+--------+-------------+
+| native_system/digital/bank/reset_sync_reg[1]       |   6392 | LUT1        |
+| native_system/queue/rst_n_0                        |   2685 | LUT1        |
+| native_system/queue/request_pulse_i_1_n_0          |   2210 | LUT2        |
+| native_system/queue/seq[0][31]_i_1_n_0             |   2208 | LUT3        |
+| native_system/queue/seq[1][31]_i_1_n_0             |   2208 | LUT3        |
+| native_system/queue/seq[2][31]_i_1_n_0             |   2208 | LUT3        |
+| native_system/queue/seq[3][31]_i_1_n_0             |   2208 | LUT3        |
+| native_system/digital/bank/written1                |   2178 | LUT2        |
+| native_system/queue/channel_reg_n_0_[2]            |    282 | FDCE        |
+| native_system/digital/adc/spi/reading_reg_0[0]     |    194 | LUT5        |
+| native_system/queue/bus_address_reg[3]_1           |    193 | LUT3        |
+| native_system/queue/bus_address_reg[2]_0           |    190 | LUT3        |
+| native_system/queue/rd1                            |    158 | LUT4        |
+| native_system/digital/adc/spi/cs_n1                |    152 | LUT2        |
+| native_system/queue/sel0[0]                        |    144 | FDCE        |
+| native_system/digital/bank/pending                 |    142 | FDCE        |
+| native_system/queue/channel_reg_n_0_[0]            |    134 | FDCE        |
+| native_system/digital/master_phase_reg[7]          |    132 | FDCE        |
+| native_system/digital/serial/captured[126]_i_1_n_0 |    130 | LUT2        |
+| native_system/digital/boundary                     |    130 | FDCE        |
++----------------------------------------------------+--------+-------------+
+
+

@@ -64,3 +64,8 @@ Scope result remains REVISE pending timing closure and real transport evidence. 
 
 
 Current validation update — 2026-10-03, GPT-6.1 Sol High: fixed-source recovery PASS,114Python tests,3696TRAP_VALID frames,threeIcarus/oneVivadoXSim matching canonical hashes,calibration/ADC and frozen-parent gates. Saved-preview defect fixed and failure retained. Routed Gate A remains FAIL; physical PS/PL and acoustic operation NOT_RUN. Acceptance thresholds unchanged.
+
+
+## Current pre-PCB contract — 2026-10-03
+
+Current model: GPT-6.1 Sol High. Original Acceptance thresholds unchanged. Actual internal timing/complete simulation gates PASS as recorded in v2/evidence/pre_pcb_board_ready/summary.json. Full PRE_PCB_BOARD_READY remains NO because electrical/PS/real transport/map/GUI conditions are unverified. External review PENDING; no full-project ACCEPT.

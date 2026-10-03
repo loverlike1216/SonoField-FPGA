@@ -1,0 +1,41 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct  3 16:18:01 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_drc -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/pre_pcb_board_ready/clock/vendor_candidate_drc.rpt
+| Design       : board_clock_candidate
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: board_clock_candidate
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 1
++--------+----------+--------------------+--------+
+| Rule   | Severity | Description        | Checks |
++--------+----------+--------------------+--------+
+| ZPS7-1 | Warning  | PS7 block required | 1      |
++--------+----------+--------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

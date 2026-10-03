@@ -114,3 +114,6 @@ Kept the interrupted final GUI retry and original successful regression unchange
 
 
 Current validation update — 2026-10-03, GPT-6.1 Sol High: fixed-source recovery PASS,114Python tests,3696TRAP_VALID frames,threeIcarus/oneVivadoXSim matching canonical hashes,calibration/ADC and frozen-parent gates. Saved-preview defect fixed and failure retained. Routed Gate A remains FAIL; physical PS/PL and acoustic operation NOT_RUN. Acceptance thresholds unchanged.
+
+
+2026-10-03 /v2 /GPT-6.1 Sol High: reviewed new rules and sourced board facts,classified uploads,closed internal132MHz routed core timing with proven-equivalent queue/scheduler control changes,complete115-test/four-run motion regression PASS. Preserved failures and inherited/frozen sources. Pre-PCB electrical/PS/real transport readiness remains NO. No hardware programming or PCB edits.

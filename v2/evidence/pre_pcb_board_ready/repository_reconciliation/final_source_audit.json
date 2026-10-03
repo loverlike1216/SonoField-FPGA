@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "model": "GPT-6.1 Sol High",
+  "source_hashes": {
+    "motion": {
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "files": 144,
+      "changes": [],
+      "missing": []
+    },
+    "independent": {
+      "hash_policy": "RAW_BYTES",
+      "files": 11,
+      "changes": [],
+      "missing": []
+    }
+  },
+  "timing_exact_source_snapshots": "PASS",
+  "protected_tracked_v1_pcb_diff": "NONE",
+  "post_gate_scope": "Only documentation/metadata/finalizer-script edits; tested motion/RTL/config hashes unchanged",
+  "created_at": "2026-10-03T08:57:11.554306+00:00"
+}

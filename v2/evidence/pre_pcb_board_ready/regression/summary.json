@@ -1,0 +1,472 @@
+{
+  "status": "FAIL",
+  "classification": "SIMULATION_VALIDATED_PENDING",
+  "commands": [
+    {
+      "label": "python_tests",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 5.656
+    },
+    {
+      "label": "compile_faults_1200",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_motion_faults",
+        "-Ptb_motion_faults.INTERVAL_CYCLES=1200",
+        "-o",
+        "faults_1200.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.078
+    },
+    {
+      "label": "icarus_faults_1200",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "faults_1200.vvp"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.047
+    },
+    {
+      "label": "compile_faults_2640000",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_motion_faults",
+        "-Ptb_motion_faults.INTERVAL_CYCLES=2640000",
+        "-o",
+        "faults_2640000.vvp",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.078
+    },
+    {
+      "label": "icarus_faults_2640000",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "faults_2640000.vvp"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 19.531
+    },
+    {
+      "label": "faults_xvlog",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\tb\\tb_motion_faults.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.719
+    },
+    {
+      "label": "faults_xelab_1200",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_motion_faults",
+        "--snapshot",
+        "faults_1200",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 1.906
+    },
+    {
+      "label": "faults_xsim_1200",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "faults_1200",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 2.75
+    },
+    {
+      "label": "faults_xelab_2640000",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_motion_cadence",
+        "--snapshot",
+        "faults_2640000",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 1.782
+    },
+    {
+      "label": "faults_xsim_2640000",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "faults_2640000",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 4.609
+    },
+    {
+      "label": "gui_xsim",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "xsim",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression\\gui_xsim"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 130.015
+    },
+    {
+      "label": "gui_icarus_1",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "icarus",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression\\gui_icarus_1"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 713.969
+    },
+    {
+      "label": "gui_icarus_2",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "icarus",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression\\gui_icarus_2"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 852.015
+    },
+    {
+      "label": "gui_icarus_0",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "software.ui.app",
+        "--automated-demo",
+        "--simulator",
+        "icarus",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression\\gui_icarus_0"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 877.25
+    },
+    {
+      "label": "regression",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\scripts\\validate.py",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\evidence\\pre_pcb_board_ready\\regression\\regression"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 172.625
+    },
+    {
+      "label": "frozen_parent",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\scripts\\check_migration.py"
+      ],
+      "exit_code": 1,
+      "elapsed_s": 12.094
+    }
+  ],
+  "limits": "PROVISIONAL_UNTIL_HARDWARE_VALIDATED",
+  "gui": "Tk 8.6; PySide6 absent in pinned environment",
+  "timing": "GUI controls no field clock. RTL queue is clocked at 132 MHz, 2,640,000 cycles production cadence; full waveform demo shortens interval to 8192 cycles.",
+  "not_verified": [
+    "physical particle movement",
+    "absolute force / mass support",
+    "PS transport deployment",
+    "board synthesis / pin constraints / timing closure",
+    "hardware enable and watchdog circuit"
+  ],
+  "started_utc": "2026-10-03T07:41:28Z",
+  "fault_injection": "PASS: all 10 required cases plus ACK timeout; 1200 and production 2640000 cycles, both tools",
+  "gui_results": {
+    "gui_icarus_0": {
+      "status": "PASS",
+      "mode": "SIMULATION",
+      "confirmation": "SIMULATION_AUTOMATION_ONLY",
+      "results": [
+        {
+          "command": "APPLY_CENTER",
+          "classification": "SIMULATED",
+          "simulator": "icarus",
+          "frames_acknowledged": 6,
+          "map_words_sha256": "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+          "ack_sha256": "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1",
+          "interval_cycles": 8192,
+          "production_interval_cycles": 2640000,
+          "clock_hz": 132000000,
+          "bus_writes": 2310,
+          "trajectory_sha256": "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+          "frames": 6,
+          "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+          "trap_reports_sha256": "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917"
+        },
+        {
+          "command": "RUN_DEMO",
+          "classification": "SIMULATED",
+          "simulator": "icarus",
+          "frames_acknowledged": 3696,
+          "map_words_sha256": "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+          "ack_sha256": "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef",
+          "interval_cycles": 8192,
+          "production_interval_cycles": 2640000,
+          "clock_hz": 132000000,
+          "bus_writes": 1422960,
+          "trajectory_sha256": "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+          "frames": 3696,
+          "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+          "trap_reports_sha256": "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694"
+        }
+      ],
+      "final_status": {
+        "state": "ARMED",
+        "connected": true,
+        "commanded_trap_position_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual_particle_position": "NOT_MEASURED",
+        "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+        "f_work": 40300.0,
+        "workspace_profile": "PROVISIONAL_DEMO_V1",
+        "mode": "SIMULATION",
+        "busy": false,
+        "board_status": "NOT_CONNECTED",
+        "hardware_enable": "NOT_VERIFIED"
+      }
+    },
+    "gui_icarus_1": {
+      "status": "PASS",
+      "mode": "SIMULATION",
+      "confirmation": "SIMULATION_AUTOMATION_ONLY",
+      "results": [
+        {
+          "command": "APPLY_CENTER",
+          "classification": "SIMULATED",
+          "simulator": "icarus",
+          "frames_acknowledged": 6,
+          "map_words_sha256": "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+          "ack_sha256": "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1",
+          "interval_cycles": 8192,
+          "production_interval_cycles": 2640000,
+          "clock_hz": 132000000,
+          "bus_writes": 2310,
+          "trajectory_sha256": "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+          "frames": 6,
+          "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+          "trap_reports_sha256": "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917"
+        },
+        {
+          "command": "RUN_DEMO",
+          "classification": "SIMULATED",
+          "simulator": "icarus",
+          "frames_acknowledged": 3696,
+          "map_words_sha256": "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+          "ack_sha256": "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef",
+          "interval_cycles": 8192,
+          "production_interval_cycles": 2640000,
+          "clock_hz": 132000000,
+          "bus_writes": 1422960,
+          "trajectory_sha256": "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+          "frames": 3696,
+          "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+          "trap_reports_sha256": "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694"
+        }
+      ],
+      "final_status": {
+        "state": "ARMED",
+        "connected": true,
+        "commanded_trap_position_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual_particle_position": "NOT_MEASURED",
+        "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+        "f_work": 40300.0,
+        "workspace_profile": "PROVISIONAL_DEMO_V1",
+        "mode": "SIMULATION",
+        "busy": false,
+        "board_status": "NOT_CONNECTED",
+        "hardware_enable": "NOT_VERIFIED"
+      }
+    },
+    "gui_icarus_2": {
+      "status": "PASS",
+      "mode": "SIMULATION",
+      "confirmation": "SIMULATION_AUTOMATION_ONLY",
+      "results": [
+        {
+          "command": "APPLY_CENTER",
+          "classification": "SIMULATED",
+          "simulator": "icarus",
+          "frames_acknowledged": 6,
+          "map_words_sha256": "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+          "ack_sha256": "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1",
+          "interval_cycles": 8192,
+          "production_interval_cycles": 2640000,
+          "clock_hz": 132000000,
+          "bus_writes": 2310,
+          "trajectory_sha256": "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+          "frames": 6,
+          "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+          "trap_reports_sha256": "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917"
+        },
+        {
+          "command": "RUN_DEMO",
+          "classification": "SIMULATED",
+          "simulator": "icarus",
+          "frames_acknowledged": 3696,
+          "map_words_sha256": "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+          "ack_sha256": "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef",
+          "interval_cycles": 8192,
+          "production_interval_cycles": 2640000,
+          "clock_hz": 132000000,
+          "bus_writes": 1422960,
+          "trajectory_sha256": "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+          "frames": 3696,
+          "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+          "trap_reports_sha256": "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694"
+        }
+      ],
+      "final_status": {
+        "state": "ARMED",
+        "connected": true,
+        "commanded_trap_position_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual_particle_position": "NOT_MEASURED",
+        "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+        "f_work": 40300.0,
+        "workspace_profile": "PROVISIONAL_DEMO_V1",
+        "mode": "SIMULATION",
+        "busy": false,
+        "board_status": "NOT_CONNECTED",
+        "hardware_enable": "NOT_VERIFIED"
+      }
+    },
+    "gui_xsim": {
+      "status": "PASS",
+      "mode": "SIMULATION",
+      "confirmation": "SIMULATION_AUTOMATION_ONLY",
+      "results": [
+        {
+          "command": "APPLY_CENTER",
+          "classification": "SIMULATED",
+          "simulator": "xsim",
+          "frames_acknowledged": 6,
+          "map_words_sha256": "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+          "ack_sha256": "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1",
+          "interval_cycles": 8192,
+          "production_interval_cycles": 2640000,
+          "clock_hz": 132000000,
+          "bus_writes": 2310,
+          "trajectory_sha256": "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+          "frames": 6,
+          "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+          "trap_reports_sha256": "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917"
+        },
+        {
+          "command": "RUN_DEMO",
+          "classification": "SIMULATED",
+          "simulator": "xsim",
+          "frames_acknowledged": 3696,
+          "map_words_sha256": "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+          "ack_sha256": "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef",
+          "interval_cycles": 8192,
+          "production_interval_cycles": 2640000,
+          "clock_hz": 132000000,
+          "bus_writes": 1422960,
+          "trajectory_sha256": "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+          "frames": 3696,
+          "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+          "trap_reports_sha256": "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694"
+        }
+      ],
+      "final_status": {
+        "state": "ARMED",
+        "connected": true,
+        "commanded_trap_position_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual_particle_position": "NOT_MEASURED",
+        "calibration_id": "f6452577fc612a3c92b76e72f2b17a0e1febaf6c881d24827b7a612fa9207439",
+        "f_work": 40300.0,
+        "workspace_profile": "PROVISIONAL_DEMO_V1",
+        "mode": "SIMULATION",
+        "busy": false,
+        "board_status": "NOT_CONNECTED",
+        "hardware_enable": "NOT_VERIFIED"
+      }
+    }
+  },
+  "determinism": {
+    "status": "PASS",
+    "runs": 4,
+    "independent_simulators": [
+      "Icarus",
+      "Vivado 2025.2 XSim"
+    ],
+    "comparison": "exact canonical JSON and ACK hashes; wall timestamps excluded",
+    "hashes": [
+      [
+        "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+        "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+        "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917",
+        "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1"
+      ],
+      [
+        "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+        "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+        "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694",
+        "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef"
+      ]
+    ]
+  },
+  "frame_count": 3696,
+  "trap_score_min": 0.1302589796354131,
+  "regression": "PASS",
+  "error": "frozen_parent failed: init__.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/__init__.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/array_geometry.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/export_geometry.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/field_solver.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/particle_model.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/phase_lut_generator.py\",\n      \"classification\": \"COPY_AND_EXTEND\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/phase_solver.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/standing_wave.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/transducer.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/software/acoustic_model/visualize_field.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/tb/tb_bad_bandwidth.sv\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/tb/tb_core.sv\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/tb/tb_phase_map.sv\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/tb/tb_serializer_fault.sv\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/tb/tb_system.sv\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/tests/test_acoustic_model.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/tests/test_potential_proxy.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    },\n    {\n      \"path\": \"v2/tests/test_radiating_geometry.py\",\n      \"classification\": \"COPY_UNCHANGED\"\n    }\n  ]\n}\n"
+}

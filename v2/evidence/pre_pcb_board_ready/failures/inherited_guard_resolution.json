@@ -1,0 +1,7 @@
+{
+  "failure_summary": "regression/summary.json",
+  "root_cause": "Modified inherited v2 serializer triggered strict migration source guard; all functional/GUI tests passed",
+  "resolution": "Restored serializer exactly from pre-stage source; no test/threshold weakening",
+  "historical_failure_preserved": true,
+  "frozen_v1_changed": false
+}

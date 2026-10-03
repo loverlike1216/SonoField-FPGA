@@ -95,3 +95,8 @@ Source: user's actual Codex instructions requesting a single schematic with soli
 Current recording model: GPT-6.1 Sol High (user-declared manual selection). Preserve all prior entries as history. User attachment deb51e17-1b72-4eab-ac76-9695ca9bda77 approved P-20260927-001 with body hash 0bf40cdd79faaf5fd4aca4af6e1f7cf85eab8662128f4633ea1acb3b4ef61916, a conservative xc7z020clg400-1 engineering target and two bounded timing-refactor rounds followed by clock/throughput analysis. Physical speed/temperature/full ordering code remain UNKNOWN. Approval is user-originated, not fabricated Chat or Work review.
 
 User explicitly prioritized the single Robei octagonal Zynq-7020 v2 sound-field controller. Model switching changes no version, architecture, interface, parameter or Acceptance. Formal MODEL_TRANSITION: AI-interaction-memory/codex/I-20261003-0001__model-transition.md. Timing remains CORE_TIMING_REVISE; next technical decision is OPEN in P-20260929-001, with no third round approved by this model record.
+
+
+## 2026-10-03 — direct final pre-PCB integration contract
+
+Current model: GPT-6.1 Sol High. Direct user attachment6126fbc9 explicitly approves P-20260929-001 next bounded timing work; [decision](../AI-problem/decision/P-20260929-001__queue-control-timing.md), verified Problem hash a84242c69d945dc5989c8b708623657e61fe8eeb4af0782f4474531cfff9972b. Active version remainsv2. User confirms XC7Z020-1CLG400C and new Excel/image source precedence; N18/33.333MHz fallback replaces former33MHz document priority. Physical VCCO/PS UART and real PS platform still require evidence. Existing registers/packets/phases/atomics/geometry/BOM are retained. Earlier UNKNOWN ordering-code reports remain historical. No ChatGPT review is fabricated.

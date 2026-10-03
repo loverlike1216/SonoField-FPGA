@@ -1,0 +1,1517 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct  3 16:30:15 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing -max_paths 20 -nworst 1 -path_type full_clock_expanded -input_pins -file E:/Codex_project/AMD-SonoField-FPGA/v2/evidence/pre_pcb_board_ready/timing/strategy3/synthesis/critical_paths.rpt
+| Design       : sono_axi_system
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[0]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[0]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[10]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[10]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[10]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[10]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[11]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[11]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[11]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[11]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[12]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[12]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[12]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[12]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[13]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[13]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[13]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[13]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[14]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[14]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[14]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[14]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[15]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[15]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[15]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[15]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[16]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[16]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[16]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[16]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[17]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[17]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[17]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[17]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[18]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[18]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[18]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[18]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[19]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[19]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[19]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[19]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[1]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[1]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[20]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[20]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[20]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[20]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[21]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[21]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[21]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[21]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[22]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[22]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[22]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[22]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[23]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[23]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[23]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[23]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[24]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[24]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[24]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[24]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[25]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[25]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[25]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[25]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[26]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[26]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[26]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[26]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+Slack (VIOLATED) :        -0.549ns  (required time - arrival time)
+  Source:                 native_system/digital/cfg_reg[9][0]/C
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Destination:            native_system/digital/scheduler/issued_reg[27]/CE
+                            (rising edge-triggered cell FDCE clocked by core132  {rise@0.000ns fall@3.788ns period=7.576ns})
+  Path Group:             core132
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.576ns  (core132 rise@7.576ns - core132 rise@0.000ns)
+  Data Path Delay:        7.872ns  (logic 2.584ns (32.825%)  route 5.288ns (67.175%))
+  Logic Levels:           9  (CARRY4=3 LUT2=1 LUT3=1 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 8.500 - 7.576 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock core132 rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=17925, unset)        0.973     0.973    native_system/digital/clk
+                         FDCE                                         r  native_system/digital/cfg_reg[9][0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDCE (Prop_fdce_C_Q)         0.518     1.491 r  native_system/digital/cfg_reg[9][0]/Q
+                         net (fo=5, unplaced)         0.769     2.260    native_system/digital/scheduler/total_reg[31]_0[0]
+                                                                      r  native_system/digital/scheduler/total[3]_i_4/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.555 r  native_system/digital/scheduler/total[3]_i_4/O
+                         net (fo=2, unplaced)         0.650     3.205    native_system/digital/scheduler/total[3]_i_4_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[3]_i_1/DI[1]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     3.725 r  native_system/digital/scheduler/total_reg[3]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.009     3.734    native_system/digital/scheduler/total_reg[3]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[7]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.851 r  native_system/digital/scheduler/total_reg[7]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.851    native_system/digital/scheduler/total_reg[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/total_reg[11]_i_1/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331     4.182 f  native_system/digital/scheduler/total_reg[11]_i_1/O[3]
+                         net (fo=2, unplaced)         0.979     5.161    native_system/digital/scheduler/total_reg[11]_i_1_n_4
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_23/I0
+                         LUT6 (Prop_lut6_I0_O)        0.307     5.468 f  native_system/digital/scheduler/capture_sequence[7]_i_23/O
+                         net (fo=1, unplaced)         0.902     6.370    native_system/digital/scheduler/capture_sequence[7]_i_23_n_0
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_9/I1
+                         LUT4 (Prop_lut4_I1_O)        0.124     6.494 f  native_system/digital/scheduler/capture_sequence[7]_i_9/O
+                         net (fo=1, unplaced)         0.449     6.943    native_system/digital/adc/spi/selected_tx_reg[0]_0
+                                                                      f  native_system/digital/adc/spi/capture_sequence[7]_i_5/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.067 f  native_system/digital/adc/spi/capture_sequence[7]_i_5/O
+                         net (fo=6, unplaced)         0.481     7.548    native_system/digital/scheduler/state1
+                                                                      f  native_system/digital/scheduler/capture_sequence[7]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.124     7.672 r  native_system/digital/scheduler/capture_sequence[7]_i_1/O
+                         net (fo=17, unplaced)        0.505     8.177    native_system/digital/scheduler/capture_sequence[7]_i_1_n_0
+                                                                      r  native_system/digital/scheduler/issued[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.124     8.301 r  native_system/digital/scheduler/issued[31]_i_1/O
+                         net (fo=32, unplaced)        0.544     8.845    native_system/digital/scheduler/issued[0]
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[27]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock core132 rise edge)    7.576     7.576 r  
+                                                      0.000     7.576 r  clk (IN)
+                         net (fo=17925, unset)        0.924     8.500    native_system/digital/scheduler/clk
+                         FDCE                                         r  native_system/digital/scheduler/issued_reg[27]/C
+                         clock pessimism              0.000     8.500    
+                         clock uncertainty           -0.035     8.465    
+                         FDCE (Setup_fdce_C_CE)      -0.169     8.296    native_system/digital/scheduler/issued_reg[27]
+  -------------------------------------------------------------------
+                         required time                          8.296    
+                         arrival time                          -8.845    
+  -------------------------------------------------------------------
+                         slack                                 -0.549    
+
+
+
+

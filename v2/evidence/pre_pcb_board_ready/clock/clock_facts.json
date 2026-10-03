@@ -1,0 +1,22 @@
+{
+  "documented_input_pin": "N18",
+  "input_hz": 33333000,
+  "classification": "USER_APPROVED_DOCUMENT_FALLBACK_NOT_MEASURED",
+  "historical_input_hz": 33000000,
+  "precedence": "20261003 formal contract and Excel supersede old const priority",
+  "candidate_mmcm": {
+    "divclk": 2,
+    "feedback_multiplier": 49.5,
+    "clkout0_divide": 6.25,
+    "vco_hz": 824991750,
+    "core_hz": 131998680
+  },
+  "mmcm_candidate": "SYNTHESIZED_AND_AUTO_GENERATED_CLOCK_REPORTED_BY_VIVADO2025.2; NOT_BOARD_INTEGRATED",
+  "final_board_clock": "NOT_FROZEN_PENDING_PS_PL_PLATFORM_AND_PROFILE_INTEGRATION",
+  "pl_oscillator_measured": false,
+  "ps_reference_clock_hz": null,
+  "vendor_report": "clock/vendor_candidate_clocks.rpt",
+  "core_design_target_hz": 132000000,
+  "fallback_core_hz": 131998680,
+  "nominal_vs_fallback_ppm": -10
+}

@@ -1,27 +1,11 @@
-# Current v2 handoff — 2026-10-03
+# Current v2 continuation — 2026-10-03
 
-Current model: GPT-6.1 Sol High; manual model transition is provenance only. Current identity and recovery entry: PROJECT_STATE,VERSION_STATE,CONTEXT_CHECKPOINT. Active v2; CORE_TIMING_CLOSURE_AND_REAL_PS_PL_SMOKE_TEST; single Robei octagonal Zynq-7020 acoustic controller.
+Current model: GPT-6.1 Sol High. Stage: TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE.
 
-Real engineering: two phase/burst divider refactors,zero external latency,exact-cycle Icarus/XSim PASS; safe internal AXI leaf PASS; conservative-1 routed core FAIL(WNS-4.515ns,TNS-6007.936ns). Official132/66MHz retained because tested lower profiles cannot satisfy timing plus required serialization throughput. Real PS firmware/UART/AXI loop NOT_RUN.
+Completed: latest personalized-rule review; uploaded-file classification and hash audit; direct USB/JTAG identity; user-confirmed exact part and updated document precedence;64legal connector signals; proven-equivalent queue/scheduler timing changes; actual132MHz post-route internal timing PASS;115Python tests and complete four-run3696-frame motion/calibration/ADC regression; offline AXI/host-C; both-simulator queue/scheduler/throughput/independent-array-disable checks; vendor-synthesized clock candidate. Failures preserved.
 
-Historical full motion regression PASS and later failures remain preserved. Recovery exposed an execution-evidence producer defect; save the dispatched evaluated path snapshot and assert its hash. Two new tests PASS; complete fixed-source114-test/3696-frame/dual-simulator regression PASS; all saved trajectory points are TRAP_VALID. Current final result must come from recovery_20261003/summary.json and its actual regression summary.
+Next: exact physical VCCO and PS clock/reset/UART/MIO/connector facts; verified XSA/BSP/target build and safe bare-board wrapper; real transport/map completion/GUI/ILA; complete electrical/disable budgets and then PCB interface freeze. No new version. Follow MISSING_PHYSICAL_FACTS.md and PS_PLATFORM_AND_TRANSPORT_REMAINING.md. Do not repeat core optimization without a newly evidenced failure.
 
-Next owner: independent Chat/user review of P-20260929-001. No third timing round in the exhausted contract. Establish actual UART/PS platform facts before gated hardware transport; driver/acoustic measurements follow. No new version or architecture change from the model switch. Stage result remains REVISE until routed timing and real transport gates pass.
+Do Not Change: frozenv1/history/model provenance,packet/register interface,128channels/8bit,requested/calibration split,atomics,upper/lower mapping,38.5..41.5kHz and current radiating-center geometry. No failing-design or guessed-platform deployment.132MHz is a routed internal design target; final board clock and external constraints require reviewed integration. Do not waive DRC/warnings or declare PCB ready from OOC PASS.
 
-Previous handoff below is historical and does not override the current checkpoint.
-
----
-
-# Schematic V1 handoff
-
-Goal: editable one-sheet schematic and readable export; active v2, frozen v1 unchanged.
-Inputs: user schematic instruction,10mm geometry, existing RTL/interface and BOM, constrain precedence, selected library pins and manufacturer sources.
-Changes: PCB/V1 native project,83module consolidation, horizontal/right-aligned labels, vector exports, audits, open Problem and governance/interaction records.
-Validation:3992native pins and1338independent mapping checks pass;212frozen files intact; save/reopen and PDF visual QA pass. ERC0fatal/0error/45warnings.
-Failures retained: capture timeouts, cache refresh discrepancies, old TEXT fields, renderer disconnect on bulk styling, font unit mismatch, optional export API incompatibility. Final artifacts re-exported after corrections.
-Unresolved: core-board pins/VCCO/package, serializer hold timing, independent watchdog/power qualification, exact generic MPNs and analog/batch measurements. External ChatGPT inaccessible. No PCB/hardware PASS.
-Evidence: PCB/V1/log/review; report: shared/report_schematic_v2_V1.md.
-Next: review P-20260925-001 and electrical gates. Read PROJECT_STATE and VERSION_STATE; do not create v3 or alter frozen v1. Windows terminal defaults to pwsh7.
-
-
-2026-10-03 checkpoint: CP-20261003-001, source d6851070ca5aa98c95c2a6fd3f0344b78e799a9a. Fresh sparse checkout /114tests/structure/memory integrity PASS with the existing pinned venv. Final checkpoint-only push is verified separately. Current model GPT-6.1 Sol High.
+Current full result: v2/evidence/pre_pcb_board_ready/RESULT.md. Current source commit and sync evidence follow the checkpoint. Hardware status remains identification only.
