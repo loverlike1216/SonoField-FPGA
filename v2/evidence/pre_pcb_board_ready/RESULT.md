@@ -9,7 +9,9 @@ active_version: v2
 stage: TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE
 current_model: GPT-6.1 Sol High (user-declared; exact runtime variant not exposed)
 starting_HEAD: bd9e79f622ee58ea970870071702eb24596cd753
-ending_HEAD: see repository `git rev-parse HEAD` and delivery_sync.json; later checkpoint commits follow validated source
+validated_source: 9936a737c45bf61f1908863a94f6374c6b5c828c
+remote_verified_checkpoint: dea455f3f0e1c9e10d28b26559d01ba3f484e252
+ending_HEAD: see repository `git rev-parse HEAD`; later sync-record commit follows the already verified checkpoint
 
 ## Implemented / tested
 
@@ -50,3 +52,5 @@ Next: obtain exact physical facts, construct verified PS/clock/reset/AXI platfor
 PRE_PCB_BOARD_READY = NO
 
 REVISE
+
+Fresh source checkout:115tests,212frozenfile coverage and queue/scheduler/serializer/array safety both-simulator checks PASS. Same machine/pinnedvenv, not a second machine. Source and checkpoint pushed and verified as recorded in delivery_sync.json.
