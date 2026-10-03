@@ -1,0 +1,84 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v2",
+  "current_stage": "TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE",
+  "subtask": "DDR_PHOTO_AND_PS_CONFIGURATION_PREFLIGHT",
+  "model": "GPT-6.1 Sol High",
+  "starting_head": "86b56b20433fb3ddc2d35d4101b1bac6ab312cd8",
+  "inspection_date_local": "2026-10-04",
+  "status": "AUTOMATIC_READ_ONLY_INSPECTION_COMPLETED_CROSS_VALIDATION_BLOCKED",
+  "family": "Zynq-7000",
+  "jtag_idcode": "0x23727093",
+  "arm_dap_idcode": "0x4BA00477",
+  "vivado_direct_connection": true,
+  "official_part_decode": "MT41K128M16JT-125 IT:K",
+  "DDR_CHIP_COUNT": 2,
+  "DDR_TOTAL_CAPACITY": "512MiB_CANDIDATE",
+  "DDR_BUS_WIDTH": "32bit_CANDIDATE",
+  "confirmed_effective_memory_configuration": false,
+  "register_observation": {
+    "tool": "XSDB2025.2",
+    "access_path": "APU/DAP/AHB-AP AP0",
+    "registers": {
+      "DDRC_CTRL": {
+        "address": "0xF8006000",
+        "value_hex": "0x00000200",
+        "value": 512
+      },
+      "DDRC_CTRL_REG1": {
+        "address": "0xF8006060",
+        "value_hex": "0x0000003E",
+        "value": 62
+      }
+    },
+    "ddr_bus_width_field": 0,
+    "ddr_bus_width_decoded_bits": 32,
+    "controller_soft_reset_released": false,
+    "ddrc_ctrl_equals_documented_reset": true,
+    "ctrl_reg1_equals_documented_reset": true,
+    "configuration_evidence": "RESET_VALUES_NOT_VALIDATED_BOARD_CONFIGURATION",
+    "board_capacity_bytes": null,
+    "board_bus_width_confirmation": "CANDIDATE_NOT_CONFIRMED",
+    "cortex_state_before_after": "BOTH_RUNNING_IN_BOTH_TARGET_LISTS",
+    "safety": {
+      "cpu_halt": false,
+      "cpu_resume": false,
+      "processor_reset": false,
+      "ps7_init": false,
+      "writes_to_PS_MMIO": false,
+      "DDR_reads": false,
+      "DDR_writes": false,
+      "program_download": false,
+      "force_memory_access": false
+    },
+    "official_references": [
+      "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/Register-ddrc-ddrc_ctrl",
+      "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/Register-ddrc_ctrl-Details",
+      "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/Register-ddrc-ctrl_reg1"
+    ],
+    "captured_at": "2026-10-03T20:29:23.755691+00:00"
+  },
+  "matching_board_configuration_sources_found": 0,
+  "physical_measurements_performed": false,
+  "memory_test": "NOT_RUN",
+  "programming": "NOT_RUN",
+  "blocking": [
+    "BOARD_MATCHED_PS_DDR_CONFIGURATION_OR_MANUFACTURER_TOPOLOGY_MISSING",
+    "DDR_CONTROLLER_OBSERVED_IN_RESET_NO_EFFECTIVE_CONFIGURATION"
+  ],
+  "next_required_input": "Actual Robei board PSpreset/BD/XSA/HDF/ps7_init and reference project or revision-matched schematic. Place in parameter_detection/inputs; arbitrary newly-created candidate project is not verification.",
+  "evidence_refs": [
+    "micron_fbga_D9PSK.json",
+    "micron_part_spec.json",
+    "reference_search.json",
+    "gui_observation.json",
+    "ddrc_registers.json",
+    "xsdb_read_ddrc_sanitized.log",
+    "vivado_jtag_sanitized.log"
+  ],
+  "original_vivado_gui_pid": 53284,
+  "gui_state_modified": false,
+  "driver_boot_GPIO_PCB_changes": false,
+  "project_core_source_changes": false,
+  "whole_platform_result": "REVISE"
+}

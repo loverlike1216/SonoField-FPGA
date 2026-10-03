@@ -100,3 +100,11 @@ User explicitly prioritized the single Robei octagonal Zynq-7020 v2 sound-field 
 ## 2026-10-03 — direct final pre-PCB integration contract
 
 Current model: GPT-6.1 Sol High. Direct user attachment6126fbc9 explicitly approves P-20260929-001 next bounded timing work; [decision](../AI-problem/decision/P-20260929-001__queue-control-timing.md), verified Problem hash a84242c69d945dc5989c8b708623657e61fe8eeb4af0782f4474531cfff9972b. Active version remainsv2. User confirms XC7Z020-1CLG400C and new Excel/image source precedence; N18/33.333MHz fallback replaces former33MHz document priority. Physical VCCO/PS UART and real PS platform still require evidence. Existing registers/packets/phases/atomics/geometry/BOM are retained. Earlier UNKNOWN ordering-code reports remain historical. No ChatGPT review is fabricated.
+
+## DDR detection continuation — 2026-10-04
+
+Record type: EVIDENCE_CLASSIFICATION_AND_READ_ONLY_EXECUTION_BOUNDARY. Source: direct user DDR instruction plus actual Micron/Vivado/XSDB output, not ChatGPT Decision.
+
+Model: GPT-6.1 Sol High. Active v2 and existing Stage unchanged. Current read-only native Vivado2025.2 scan confirms XC7Z020 IDCODE0x23727093; Micron public decoder identifies D9PSK as MT41K128M16JT-125 IT:K. Photo shows two2Gb x16 devices, but512MiB/32bit remain CANDIDATE. XSDB/AP0 reads DDRC_CTRL0x00000200 andCTRL_REG1 0x0000003E, both documented reset values; controller reset not released, so32bit default field is not board topology proof. No CPU halt/reset/init,DDR memory access,download,COM,GPIO orPCB operation. Original Vivado GUI preserved. Report: parameter_detection/20261004_ddr/RESULT.md; candidate: v2/config/ddr_candidate.json. Existing core115tests/132MHz timing retain their2026-10-03 source/date; not rerun today.
+
+Capacity/width promotion requires actual matching PS/reference/topology evidence checked against physical component facts. Actual frequency/voltage and runtime memory verification remain separate gates. This subtask narrowly authorizes documented read-only DDRC MMIO via DAP; it does not authorize DDR RAM access, PS initialization, application MMIO writes or deployment. Historical Do Not Change restrictions on unverified application MMIO remain effective.

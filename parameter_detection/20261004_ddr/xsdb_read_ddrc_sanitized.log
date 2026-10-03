@@ -1,0 +1,15 @@
+The system cannot find the path specified.
+PROBE_XSDB_VERSION=2025.2
+PROBE_TARGETS_BEFORE
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+PROBE_READ DDRC_CTRL 0xF8006000 512
+PROBE_READ DDRC_CTRL_REG1 0xF8006060 62
+PROBE_TARGETS_AFTER
+  1* APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+PROBE_FINISHED_NO_RESET_INIT_HALT_DOWNLOAD_MWR_OR_DDR_TEST

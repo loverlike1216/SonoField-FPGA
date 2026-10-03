@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "scope": "Detection evidence classification, read-only script boundary, public sanitization, observable message integrity and unchanged protected source; not DDR runtime verification",
+  "date_local": "2026-10-04",
+  "recorded_at": "2026-10-03T20:42:27.456279+00:00",
+  "candidate_gate": "PASS_KEPT_CANDIDATE",
+  "public_decoder_part": "MT41K128M16JT-125 IT:K",
+  "register_gate": "RESET_DEFAULTS_NOT_CONFIGURATION_PROOF",
+  "cpu_target_state": "BOTH_RUNNING_BEFORE_AND_AFTER",
+  "safe_scripts": "NO_PROGRAM_RESET_HALT_INIT_WRITE_OR_DDR_TEST_COMMANDS",
+  "protected_source_delta": "NONE",
+  "interaction_integrity": {
+    "status": "PASS",
+    "sessions": 4,
+    "scope": "canonical hashes and public redaction rules"
+  },
+  "raw_photo_hash_matches": true,
+  "public_log_identifier_check": "PASS",
+  "canonical_file_sha256_lf": {
+    "ddrc_registers.json": "1eba6948928a3c487f91a5f2a2eae0c277036b8357eef815b9b67ef3c0e56055",
+    "gui_observation.json": "c098f871ba528bc7d714fc7e04c4aa99cc0c5bb2edf283214075168ae624283e",
+    "micron_fbga_D9PSK.json": "e0bea8781f6a6e7ffd69cf41c7d1802098828d2d9c4bb9b8cafcd3f00e8fbaf0",
+    "micron_part_spec.json": "1589ed46dec38f326b708eced62b96dd4558606ea6d323accb8c06035277e818",
+    "read_ddrc.tcl": "5bb5219c2d9fc507705dd26c2643a38d50d4c6e448e28fb021a93c282a4dc010",
+    "read_jtag.tcl": "f198e7ce2481e8baa6e85c0c2b98b0689a7d07b7c71e8854ba4cd4eef3a2d5d5",
+    "reference_search.json": "68d092fdb4550b39620d56e7f4dc735388f79d398f5318dffc99e88a8bcfb474",
+    "RESULT.md": "1ea06b184737deacb76185ecacf39d06f6775d14e1ff392a7666fb7e93bc06cf",
+    "results.html": "bb1d291eb6630d64fc26b511a3fcd2e0f988733b5f08157680399aea510ca73e",
+    "summary.json": "6b2324a29f5cccda1e7065ffd03b8953c4a8485de110d46b4b4955fd532cf3ea",
+    "vivado_jtag_sanitized.log": "272a9f463ab221fd94285703c66e3ea46be74b511fdb947603d0b82a71454a85",
+    "xsdb_help.log": "b7e31d4b95e4e6c0c8ffb6e96ead6b96740cb586623bf53ca5195eb4844ef3f6",
+    "xsdb_help.tcl": "19727e028a69d6b1a5b23fe727785f452a2bff47d621f0321f5b27b4b54d9c42",
+    "xsdb_help_verbose.log": "c99cb60b9c6b6836b0b0412606a85247eb0867a806324bced612e6d85f59b8d2",
+    "xsdb_help_verbose.tcl": "d2f3c5bfdaa115231d4224266cb787235cae6e1dc4ccea2a66eb39a966de64d2",
+    "xsdb_read_ddrc_sanitized.log": "f249c765da4b105704165075ad8d65dc6fc405f63a7e374cca02931be5a5c24e"
+  },
+  "hash_policy": "UTF8 decoded text with CRLF/CR normalized to LF, independent of Windows checkout",
+  "core_tests_rerun": false,
+  "DDR_memory_test": "NOT_RUN",
+  "full_platform_result": "REVISE",
+  "staged_privacy_secret_scan": "PASS",
+  "staged_text_files_reviewed": 37,
+  "audit_repairs": [
+    "Initial audit used wrong level in source-metadata-wrapped Micron JSON; corrected to response.details without changing evidence",
+    "Git UTF8 path output decoded explicitly after Windows locale mismatch for Chinese guide filename; privacy gate rerun passed"
+  ]
+}

@@ -113,3 +113,9 @@ STATE_CONFLICT_DETECTED: prior shared narratives and machine-state evidence poin
 
 
 Current validation update — 2026-10-03, GPT-6.1 Sol High: fixed-source recovery PASS,114Python tests,3696TRAP_VALID frames,threeIcarus/oneVivadoXSim matching canonical hashes,calibration/ADC and frozen-parent gates. Saved-preview defect fixed and failure retained. Routed Gate A remains FAIL; physical PS/PL and acoustic operation NOT_RUN. Acceptance thresholds unchanged.
+
+## DDR detection continuation — 2026-10-04
+
+Model: GPT-6.1 Sol High. Active v2 and existing Stage unchanged. Current read-only native Vivado2025.2 scan confirms XC7Z020 IDCODE0x23727093; Micron public decoder identifies D9PSK as MT41K128M16JT-125 IT:K. Photo shows two2Gb x16 devices, but512MiB/32bit remain CANDIDATE. XSDB/AP0 reads DDRC_CTRL0x00000200 andCTRL_REG1 0x0000003E, both documented reset values; controller reset not released, so32bit default field is not board topology proof. No CPU halt/reset/init,DDR memory access,download,COM,GPIO orPCB operation. Original Vivado GUI preserved. Report: parameter_detection/20261004_ddr/RESULT.md; candidate: v2/config/ddr_candidate.json. Existing core115tests/132MHz timing retain their2026-10-03 source/date; not rerun today.
+
+B01 remains resolved by prior user full-part confirmation and JTAG family; B03 remains PARTIALLY_RESOLVED, with actual PS/DDR configuration, PS clock/reset/UART and VCCO unknown. Missing manufacturer/reference configuration is BOARD_MATCHED_PS_DDR_CONFIGURATION_OR_MANUFACTURER_TOPOLOGY_MISSING. Observed reset-only state is DDR_CONTROLLER_OBSERVED_IN_RESET_NO_EFFECTIVE_CONFIGURATION. Neither means defective DDR. Generic ZedBoard/ZC702 presets and guessed capacity cannot close these gates.

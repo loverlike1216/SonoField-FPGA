@@ -1,0 +1,192 @@
+The system cannot find the path specified.
+VERSION=2025.2
+NAME
+    mrd - Memory read.
+
+SYNOPSIS
+    mrd [options] <address> [num]
+        Read <num> data values from the active target's memory address specified
+        by <address>.
+
+OPTIONS
+    -force
+        Overwrite access protection. By default accesses to reserved and invalid
+        address ranges are blocked.
+
+    -size <access-size>
+        <access-size> can be one of the values below:
+        b = Bytes accesses
+        h = Half-word accesses
+        w = Word accesses
+        d = Double-word accesses
+        Default access size is w.
+        Address is aligned to access-size before reading memory, if the
+        '-unaligned-access' option is not used.
+        For targets that do not support double-word access, the debugger uses
+        two word accesses. If the number of data values to be read is more than
+        1, the debugger selects the appropriate access size. For example,
+        1. mrd -size b 0x0 4
+           Debugger accesses one word from the memory, displays four bytes.
+        2. mrd -size b 0x0 3
+           Debugger accesses one half-word and one byte from the memory,
+           displays three bytes.
+        3. mrd 0x0 3
+           Debugger accesses three words from the memory and displays three
+           words.
+
+        To read more than 64 bits of data, specify the number of data words
+        along with the address. Data read is in multiples of access size. For
+        example, to read 128 bits of data, run "mrd -size d <addr> 2" or
+        "mrd -size w <addr> 4".
+
+    -value
+        Return a Tcl list of values, instead of displaying the result on the
+        console.
+
+    -bin
+        Return data read from the target in binary format.
+
+    -file <file-name>
+        Write binary data read from the target to <file-name>.
+
+    -address-space <name>
+        Access specified memory space instead default memory space of
+        current target.
+
+        For Arm DAP targets, address spaces DPR, APR and AP<n> can be
+        used to access DP registers, AP registers, and MEM-AP
+        addresses respectively.  For backwards compatibility, the -arm-dap
+        and -arm-ap options can be used as shorthand for
+        "-address-space APR" and "-address-space AP<n>" respectively.
+        The APR address range is 0x0 - 0xfffc, where the higher eight bits
+        select an AP and the lower eight bits are the register address for
+        that AP.
+
+    -unaligned-access
+        The memory address is not aligned to the access size before performing
+        a read operation. Support for unaligned accesses is target
+        architecture dependent. If this option is not specified, addresses
+        are automatically aligned to access size.
+
+NOTE
+    Select an APU target to access ARM DAP and MEM-AP address space.
+
+EXAMPLE
+    mrd 0x0
+        Read a word at 0x0.
+
+    mrd 0x0 10
+        Read 10 words at 0x0.
+
+    mrd -value 0x0 10
+        Read 10 words at 0x0 and return a Tcl list of values.
+
+    mrd -size b 0x1 3
+        Read three bytes at address 0x1.
+
+    mrd -size h 0x2 2
+        Read two half-words at address 0x2.
+
+    mrd -bin -file mem.bin 0 100
+        Read 100 words at address 0x0 and write the binary data to mem.bin.
+
+    mrd -address-space APR 0x100
+        Read APB-AP CSW on Zynq.
+        The higher eight bits (0x1) select the APB-AP and the lower eight bits
+        (0x0) are the address of CSW.
+
+    mrd -address-space APR 0x04
+        Read AHB-AP TAR on Zynq.
+        The higher eight bits (0x0) select the AHB-AP and the lower eight bits
+        (0x4) are the address of TAR.
+
+    mrd -address-space AP1 0x80090088
+        Read address 0x80090088 on DAP APB-AP.
+        AP 1 selects the APB-AP.
+        0x80090088 on APB-AP corresponds to DBGDSCR of Cortex-A9#0, on Zynq.
+
+    mrd -address-space AP0 0xe000d000
+        Read address 0xe000d000 on DAP AHB-AP.
+        AP 0 selects the AHB-AP.
+        0xe000d000 on AHB-AP corresponds to QSPI device on Zynq.
+
+RETURNS
+    Memory addresses and data in requested format, if successful.
+    Error string, if the target memory cannot be read.
+
+
+NAME
+    targets - List targets or switch between targets.
+
+SYNOPSIS
+    targets [options]
+        List available targets.
+
+    targets <target id>
+        Select <target id> as active target.
+
+OPTIONS
+    -set
+        Set current target to entry single entry in list.  This is
+        useful in combination with the -filter option.  An error is
+        generated if the list is empty or contains more than one entry.
+    -regexp
+        Use regexp for filter matching
+    -nocase
+        Use case insensitive filter matching
+    -filter <filter-expression>
+        Specify filter expression to control which targets are
+        included in list based on its properties.  Filter expressions
+        are similar to Tcl expr syntax.  Target properties are
+        referenced by name, while Tcl variables are accessed using the
+        $ syntax string must be quoted.  Operators ==, !=, <=, >=, <,
+        >, &&, and || are supported as well as ().  These operators
+        behave like Tcl expr operators.  String matching operators =~
+        and !~ match the LHS string with the RHS pattern using either regexp
+        or string match.
+    -target-properties
+        Returns a Tcl list of dicts containing target properties.
+    -index <index>
+        Include targets based on the JTAG scan chain position.  This is
+        identical to specifying -filter {jtag_device_index==<index>}.
+    -timeout <sec>
+        Poll until the targets specified by filter option are found
+        on the scan chain, or until timeout. This option is valid only
+        with filter option. This option is useful in case of soft processors
+        on PL, as their initialization and detection takes some time.
+        The timeout value is in seconds. Default timeout is three seconds.
+
+
+EXAMPLE
+    targets
+        List all targets.
+
+    targets -filter {name =~ "ARM*#1"}
+        List targets with name starting with "ARM" and ending with "#1".
+
+    targets 2
+        Set target with id 2 as the current target.
+
+    targets -set -filter {name =~ "ARM*#1"}
+        Set current target to target with name starting with "ARM" and
+        ending with "#1".
+
+    targets -set -filter {name =~ "MicroBlaze*"} -index 0
+        Set current target to target with name starting with "MicroBlaze"
+        and which is on the first JTAG device.
+
+RETURNS
+    The return value depends on the options used.
+
+    <none>
+        Targets list when no options are used.
+
+    -filter
+        Filtered targets list.
+
+    -target-properties
+        Tcl list consisting of target properties.
+
+    An error is returned when target selection fails.
+
+

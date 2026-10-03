@@ -50,3 +50,9 @@ Next: obtain exact physical facts, construct verified PS/clock/reset/AXI platfor
 PRE_PCB_BOARD_READY = NO
 
 REVISE
+
+## DDR detection continuation — 2026-10-04
+
+Model: GPT-6.1 Sol High. Active v2 and existing Stage unchanged. Current read-only native Vivado2025.2 scan confirms XC7Z020 IDCODE0x23727093; Micron public decoder identifies D9PSK as MT41K128M16JT-125 IT:K. Photo shows two2Gb x16 devices, but512MiB/32bit remain CANDIDATE. XSDB/AP0 reads DDRC_CTRL0x00000200 andCTRL_REG1 0x0000003E, both documented reset values; controller reset not released, so32bit default field is not board topology proof. No CPU halt/reset/init,DDR memory access,download,COM,GPIO orPCB operation. Original Vivado GUI preserved. Report: parameter_detection/20261004_ddr/RESULT.md; candidate: v2/config/ddr_candidate.json. Existing core115tests/132MHz timing retain their2026-10-03 source/date; not rerun today.
+
+Next: obtain actual board-matched PS configuration/topology under parameter_detection/inputs; review before initialization. Existing physical board integration blockers remain. Stop further hardware operation at this inspection boundary.

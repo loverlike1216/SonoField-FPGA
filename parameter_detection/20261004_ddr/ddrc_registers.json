@@ -1,0 +1,42 @@
+{
+  "tool": "XSDB2025.2",
+  "access_path": "APU/DAP/AHB-AP AP0",
+  "registers": {
+    "DDRC_CTRL": {
+      "address": "0xF8006000",
+      "value_hex": "0x00000200",
+      "value": 512
+    },
+    "DDRC_CTRL_REG1": {
+      "address": "0xF8006060",
+      "value_hex": "0x0000003E",
+      "value": 62
+    }
+  },
+  "ddr_bus_width_field": 0,
+  "ddr_bus_width_decoded_bits": 32,
+  "controller_soft_reset_released": false,
+  "ddrc_ctrl_equals_documented_reset": true,
+  "ctrl_reg1_equals_documented_reset": true,
+  "configuration_evidence": "RESET_VALUES_NOT_VALIDATED_BOARD_CONFIGURATION",
+  "board_capacity_bytes": null,
+  "board_bus_width_confirmation": "CANDIDATE_NOT_CONFIRMED",
+  "cortex_state_before_after": "BOTH_RUNNING_IN_BOTH_TARGET_LISTS",
+  "safety": {
+    "cpu_halt": false,
+    "cpu_resume": false,
+    "processor_reset": false,
+    "ps7_init": false,
+    "writes_to_PS_MMIO": false,
+    "DDR_reads": false,
+    "DDR_writes": false,
+    "program_download": false,
+    "force_memory_access": false
+  },
+  "official_references": [
+    "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/Register-ddrc-ddrc_ctrl",
+    "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/Register-ddrc_ctrl-Details",
+    "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/Register-ddrc-ctrl_reg1"
+  ],
+  "captured_at": "2026-10-03T20:29:23.755691+00:00"
+}

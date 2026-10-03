@@ -117,3 +117,9 @@ Current validation update — 2026-10-03, GPT-6.1 Sol High: fixed-source recover
 
 
 2026-10-03 /v2 /GPT-6.1 Sol High: reviewed new rules and sourced board facts,classified uploads,closed internal132MHz routed core timing with proven-equivalent queue/scheduler control changes,complete115-test/four-run motion regression PASS. Preserved failures and inherited/frozen sources. Pre-PCB electrical/PS/real transport readiness remains NO. No hardware programming or PCB edits.
+
+## DDR detection continuation — 2026-10-04
+
+Model: GPT-6.1 Sol High. Active v2 and existing Stage unchanged. Current read-only native Vivado2025.2 scan confirms XC7Z020 IDCODE0x23727093; Micron public decoder identifies D9PSK as MT41K128M16JT-125 IT:K. Photo shows two2Gb x16 devices, but512MiB/32bit remain CANDIDATE. XSDB/AP0 reads DDRC_CTRL0x00000200 andCTRL_REG1 0x0000003E, both documented reset values; controller reset not released, so32bit default field is not board topology proof. No CPU halt/reset/init,DDR memory access,download,COM,GPIO orPCB operation. Original Vivado GUI preserved. Report: parameter_detection/20261004_ddr/RESULT.md; candidate: v2/config/ddr_candidate.json. Existing core115tests/132MHz timing retain their2026-10-03 source/date; not rerun today.
+
+Added user-designated parameter_detection report/scripts/public query responses/sanitized logs, v2 DDR candidate config, observable interaction record and recovery checkpoint. Frozen sources/PCB remain unchanged. Exact public decoder query gives IT:K; evidence does not establish effective512MiB/32bit configuration.

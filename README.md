@@ -37,3 +37,7 @@ Current model environment: **GPT-6.1 Sol High**, user manual transition2026-10-0
 Current v2 checkpoint: [pre-PCB report](v2/evidence/pre_pcb_board_ready/RESULT.md), [actual routed timing](v2/evidence/pre_pcb_board_ready/timing/core_timing_pass.json) and [full regression](v2/evidence/pre_pcb_board_ready/regression_release/summary.json). Internal132MHz OOC Gate A PASS: WNS+0.082ns, WHS+0.072ns, zero routing errors. Real PS/PL transport NOT_RUN, PRE_PCB_BOARD_READY=NO. [Current user decision](AI-problem/decision/P-20260929-001__queue-control-timing.md) and [missing physical facts](v2/evidence/pre_pcb_board_ready/MISSING_PHYSICAL_FACTS.md) define continuation. Prior tagged guide and [older timing report](v2/evidence/core_timing_real_loop/RESULT.md) retain their historical scope.
 
 恢复工程优先读 [CONTEXT_CHECKPOINT.md](shared/CONTEXT_CHECKPOINT.md) / [机器检查点](shared/CONTEXT_CHECKPOINT.json)，再读当前计划、决策与证据；当前模型来源与最新规则不触发版本升级。
+
+## DDR detection continuation — 2026-10-04
+
+[DDR只读检测报告](parameter_detection/20261004_ddr/RESULT.md) · [检测操作入口](parameter_detection/README.md) · [候选配置](v2/config/ddr_candidate.json)。Micron官方实际查询确认 D9PSK = MT41K128M16JT-125 IT:K；本次真实 DDRC 两项寄存器仍为复位值，容量512MiB/总线32bit继续 CANDIDATE。缺少本板匹配 PS 配置，不能进入DDR初始化或真实传输。当前版本和Stage不变。

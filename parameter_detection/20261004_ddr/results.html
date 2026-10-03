@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SonoField-FPGA v2 — DDR 只读检测结果</title>
+<style>body{font:18px/1.65 'Microsoft YaHei',sans-serif;background:#eff3f8;color:#17233a;margin:0}main{max-width:1060px;margin:40px auto;padding:30px;background:white;border-radius:14px}h1{font-size:30px;line-height:1.4}h2{font-size:23px}.status{padding:16px;border-left:6px solid #c78000;background:#fff5dd}.ok{color:#176847}.pending{color:#905900}table{border-collapse:collapse;width:100%;margin:24px 0}td,th{text-align:left;padding:12px;border-bottom:1px solid #dce3ec}code{font-size:17px;background:#eef1f6;padding:3px 6px}a{color:#215da7}small{color:#596677}</style>
+<main><small>SONOFIELD_FPGA · main · v2 · 2026-10-04 · GPT-6.1 Sol High（用户声明）</small>
+<h1>芯片料号已确认，板级 DDR 配置仍需交叉验证</h1>
+<p class="status">自动只读检测已完成。本板 512 MiB / 32 bit 保持 <b>CANDIDATE</b>；当前控制器为复位值。未初始化 PS/DDR、未下载程序、未访问 DDR RAM。</p>
+<table><tr><th>对象</th><th>真实结果</th><th>状态</th></tr>
+<tr><td>Vivado 2025.2 JTAG</td><td>XC7Z020 · IDCODE 0x23727093<br>ARM DAP · 0x4BA00477</td><td class="ok">本次身份检测通过</td></tr>
+<tr><td>Micron 官方 FBGA 查询</td><td>D9PSK → MT41K128M16JT-125 IT:K</td><td class="ok">查询响应已保存</td></tr>
+<tr><td>照片 / 器件规格</td><td>两颗 · 每颗 2 Gb / x16</td><td>照片与目录规格；非电气测量</td></tr>
+<tr><td>总容量 / 位宽</td><td>512 MiB / 32 bit</td><td class="pending">CANDIDATE</td></tr>
+<tr><td>DDRC_CTRL</td><td><code>0xF8006000 = 0x00000200</code></td><td class="pending">复位值；bit0=0</td></tr>
+<tr><td>DDRC_CTRL_REG1</td><td><code>0xF8006060 = 0x0000003E</code></td><td class="pending">复位值</td></tr>
+<tr><td>实际 DDR 频率 / 电压</td><td>UNKNOWN / UNKNOWN</td><td>未测量；800 MHz / 1.35 V 为器件规格</td></tr></table>
+<h2>下一步所需资料</h2><p>本八角板、对应硬件版本的真实 PS preset、BD、XSA/HDF、ps7_init、此前可运行的 Robei 工程，或厂家 DDR 连线原理图。放入 <code>parameter_detection/inputs/</code>，先核对板型和来源，不执行导入的初始化脚本。通用 ZedBoard/ZC702 preset 或新填写候选值的工程不能验证这些参数。</p>
+<h2>当前工程边界</h2><p>既有 v2 架构、RTL、PCB、冻结版本不变。原有数字回归和内部 132 MHz 时序证据保持原日期；真实 PS/PL、UART、外部电路和悬浮没有在本次验证。控制器复位状态不代表 DDR 损坏。完整平台结论仍为 REVISE。</p>
+<p><a href="RESULT.md">详细报告</a> · <a href="summary.json">机器结果</a> · <a href="ddrc_registers.json">寄存器记录</a> · <a href="xsdb_read_ddrc_sanitized.log">XSDB 脱敏输出</a> · <a href="vivado_jtag_sanitized.log">Vivado 脱敏输出</a> · <a href="../../v2/config/ddr_candidate.json">候选配置</a></p>
+<small>原 Vivado GUI 保持运行；本页是离线检测报告，不是 Hardware Manager 或运行中的 PS 应用。</small></main></html>

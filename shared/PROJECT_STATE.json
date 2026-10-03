@@ -65,10 +65,12 @@
     "B07",
     "CHAT_MEMORY_ACCESS_BLOCKED",
     "PS_TARGET_BUILD",
-    "UART_ROUTE"
+    "UART_ROUTE",
+    "BOARD_MATCHED_PS_DDR_CONFIGURATION_OR_MANUFACTURER_TOPOLOGY_MISSING",
+    "DDR_CONTROLLER_OBSERVED_IN_RESET_NO_EFFECTIVE_CONFIGURATION"
   ],
   "critical_issues": [],
-  "next_action": "Acquire bank34/35 VCCO, physical UART/MIO/DTR route and PS clock/reset/preset; build verified bare-board PS/PL platform before real transport",
+  "next_action": "Obtain board-matched Robei PS preset/BD/XSA/HDF/ps7_init or revision-matched DDR topology in parameter_detection/inputs; keep512MiB/32bit candidate. Continue VCCO,PS clock/reset/UART gate before verified platform integration.",
   "validated_source_commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "organization_limitations": [
@@ -79,8 +81,8 @@
   "codex_thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
   "interaction_memory_status": "PARTIAL",
   "interaction_capture_mode": "CHECKPOINT_COMMAND; no background hook",
-  "interaction_memory_cutoff": "2026-10-03T09:07:13.408Z",
-  "interaction_message_count": 21,
+  "interaction_memory_cutoff": "2026-10-03T20:43:18.455Z",
+  "interaction_message_count": 10,
   "interaction_memory_result": "ACCEPT WITH LIMITATIONS",
   "bom": "v2/hardware/bom/BOM_MASTER.xlsx",
   "bom_status": "PCB_PROPOSED; imported input, not fabrication release",
@@ -221,7 +223,7 @@
   "checkpoint_commit_scope": "Validated source commit; checkpoint-only/doc commits follow",
   "source_reproduction": "PASS_FRESH_SPARSE_CHECKOUT_EXISTING_PINNED_VENV",
   "source_reproduction_evidence": "v2/evidence/pre_pcb_board_ready/repository_reconciliation/fresh_checkout.json",
-  "current_interaction_session": "S-20261003-codex-002",
+  "current_interaction_session": "S-20261004-codex-001",
   "last_remote_verified_checkpoint_commit": "dea455f3f0e1c9e10d28b26559d01ba3f484e252",
   "delivery_sync_evidence": "v2/evidence/pre_pcb_board_ready/delivery_sync.json",
   "physical_order_code": "XC7Z020-1CLG400C",
@@ -250,5 +252,17 @@
     "external_io_delays": "NOT_ASSIGNED_PENDING_PHYSICAL_FACTS",
     "constraint_exceptions_added": false,
     "hardware_programmed": false
-  }
+  },
+  "current_subtask": "DDR_PHOTO_AND_PS_CONFIGURATION_PREFLIGHT",
+  "parameter_detection_evidence": "parameter_detection/20261004_ddr/summary.json",
+  "parameter_detection_report": "parameter_detection/20261004_ddr/RESULT.md",
+  "parameter_detection_status": "AUTOMATIC_READ_ONLY_INSPECTION_COMPLETED_CROSS_VALIDATION_BLOCKED",
+  "ddr_candidate_config": "v2/config/ddr_candidate.json",
+  "ddr_component_part": "MT41K128M16JT-125 IT:K",
+  "ddr_component_decode": "CONFIRMED_BY_OFFICIAL_MICRON_PUBLIC_DECODER",
+  "ddr_capacity": "512MiB_CANDIDATE",
+  "ddr_bus_width": "32bit_CANDIDATE",
+  "ddr_controller_state": "RESET_VALUES_OBSERVED; NO_EFFECTIVE_CONFIGURATION",
+  "latest_board_observation_date": "2026-10-04",
+  "hardware_access_scope": "JTAG_IDENTITY_AND_TWO_READ_ONLY_DAP_DDRC_REGISTERS; NO_DDR_MEMORY_TEST_OR_PROGRAMMING"
 }
