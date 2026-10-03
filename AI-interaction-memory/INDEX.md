@@ -39,5 +39,5 @@ Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual vis
 
 ## DDR read-only preflight capture — 2026-10-04
 
-[S-20261004-codex-001](codex/S-20261004-codex-001.md) · [manifest](sessions/S-20261004-codex-001.json): 10 actual visible messages; cutoff 2026-10-03T20:43:18.455Z; PARTIAL; canonical sanitized SHA256 ea868df63d742f33437f75d77aeb1508084183c2abffcbbe3ed97c980ad6394a. Provider OpenAI; current model GPT-6.1 Sol High, user-declared; v2; IMPLEMENTATION_INPUT.
+[S-20261004-codex-001](codex/S-20261004-codex-001.md) · [manifest](sessions/S-20261004-codex-001.json): 11 actual visible messages; cutoff 2026-10-03T20:47:02.532Z; PARTIAL; canonical sanitized SHA256 d033eecc397ea304fbfda2787664ba9b3840a2bb7735bbfc484bbf1a3e12c11a. Provider OpenAI; current model GPT-6.1 Sol High, user-declared; v2; IMPLEMENTATION_INPUT.
 [Tool flow T-20261004-001](tool-flow/T-20261004-001__ddr-identification.md): VALIDATION_INPUT; PARTIAL; official public lookup/native JTAG/two read-only DDRC register outputs linked, no fabricated initialization or DDR result.

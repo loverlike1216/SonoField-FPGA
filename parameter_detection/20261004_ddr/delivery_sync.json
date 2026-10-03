@@ -1,11 +1,16 @@
 {
   "project_id": "SONOFIELD_FPGA",
   "active_version": "v2",
-  "status": "DETECTION_SOURCE_REMOTE_VERIFIED",
+  "status": "DETECTION_SOURCE_AND_CHECKPOINT_REMOTE_VERIFIED",
   "source_commit": "33ed95d159cf19902c8fbcc17dd89540df4fe3ea",
-  "remote_main_at_verification": "33ed95d159cf19902c8fbcc17dd89540df4fe3ea",
+  "remote_main_at_verification": "fb41717b521f141b3bc539d4271c61cab78e6b79",
   "checkpoint_id": "CP-20261004-001",
-  "checkpoint_commit": "PENDING_METADATA_COMMIT",
+  "checkpoint_commit": "fb41717b521f141b3bc539d4271c61cab78e6b79",
   "commit_semantics": "This receipt records earlier verified commits; a receipt cannot contain its own eventual commit hash.",
-  "verified_at": "2026-10-03T20:45:21.343865+00:00"
+  "verified_at": "2026-10-03T20:47:03.746628+00:00",
+  "checkpoint_reconciliation": "PASS",
+  "canonical_source_evidence_hashes": "PASS",
+  "final_receipt_commit": "See actual Git HEAD/remote; this receipt records the already verified source and checkpoint commits",
+  "original_vivado_gui_preserved": true,
+  "hardware_operation_after_inspection": "NONE"
 }

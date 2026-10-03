@@ -81,8 +81,8 @@
   "codex_thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
   "interaction_memory_status": "PARTIAL",
   "interaction_capture_mode": "CHECKPOINT_COMMAND; no background hook",
-  "interaction_memory_cutoff": "2026-10-03T20:43:18.455Z",
-  "interaction_message_count": 10,
+  "interaction_memory_cutoff": "2026-10-03T20:47:02.532Z",
+  "interaction_message_count": 11,
   "interaction_memory_result": "ACCEPT WITH LIMITATIONS",
   "bom": "v2/hardware/bom/BOM_MASTER.xlsx",
   "bom_status": "PCB_PROPOSED; imported input, not fabrication release",
@@ -224,7 +224,7 @@
   "source_reproduction": "PASS_FRESH_SPARSE_CHECKOUT_EXISTING_PINNED_VENV",
   "source_reproduction_evidence": "v2/evidence/pre_pcb_board_ready/repository_reconciliation/fresh_checkout.json",
   "current_interaction_session": "S-20261004-codex-001",
-  "last_remote_verified_checkpoint_commit": "dea455f3f0e1c9e10d28b26559d01ba3f484e252",
+  "last_remote_verified_checkpoint_commit": "fb41717b521f141b3bc539d4271c61cab78e6b79",
   "delivery_sync_evidence": "v2/evidence/pre_pcb_board_ready/delivery_sync.json",
   "physical_order_code": "XC7Z020-1CLG400C",
   "part_provenance": "USER_CONFIRMED_PHYSICAL_FACT",
@@ -267,5 +267,6 @@
   "hardware_access_scope": "JTAG_IDENTITY_AND_TWO_READ_ONLY_DAP_DDRC_REGISTERS; NO_DDR_MEMORY_TEST_OR_PROGRAMMING",
   "parameter_detection_source_commit": "33ed95d159cf19902c8fbcc17dd89540df4fe3ea",
   "parameter_detection_remote_verified_commit": "33ed95d159cf19902c8fbcc17dd89540df4fe3ea",
-  "parameter_detection_sync_evidence": "parameter_detection/20261004_ddr/delivery_sync.json"
+  "parameter_detection_sync_evidence": "parameter_detection/20261004_ddr/delivery_sync.json",
+  "parameter_detection_github_sync": "SOURCE_AND_CHECKPOINT_VERIFIED"
 }
