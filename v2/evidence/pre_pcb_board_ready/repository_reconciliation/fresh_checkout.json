@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "classification": "FRESH_SPARSE_CHECKOUT_EXISTING_PINNED_VENV",
+  "source_commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "clone",
+        "--no-hardlinks",
+        "--sparse",
+        "E:\\Codex_project\\AMD-SonoField-FPGA",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\fresh_checkout_9936a73"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "log": "fresh_checkout_step0.log"
+    },
+    {
+      "argv": [
+        "git",
+        "sparse-checkout",
+        "set",
+        "v2",
+        "shared",
+        "AI-interaction-memory",
+        "AI-chat-memory",
+        "AI-problem",
+        "PCB",
+        "Zynq7020"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\fresh_checkout_9936a73",
+      "exit_code": 0,
+      "log": "fresh_checkout_step1.log"
+    },
+    {
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\fresh_checkout_9936a73\\v2",
+      "exit_code": 0,
+      "log": "fresh_checkout_step2.log"
+    },
+    {
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "v2/scripts/check_migration.py"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\pre_pcb\\fresh_checkout_9936a73",
+      "exit_code": 0,
+      "log": "fresh_checkout_step3.log"
+    }
+  ],
+  "independent_machine": "NOT_VERIFIED",
+  "dependency_install": "Not repeated; existing pinned .venv reused",
+  "created_at": "2026-10-03T08:59:22.413459+00:00",
+  "independent_checks": {
+    "command": [
+      "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+      "v2/scripts/pre_pcb_checks.py",
+      "--output",
+      "evidence/pre_pcb_board_ready/fresh_checks"
+    ],
+    "exit_code": 0,
+    "log": "fresh_checkout_independent.log"
+  }
+}

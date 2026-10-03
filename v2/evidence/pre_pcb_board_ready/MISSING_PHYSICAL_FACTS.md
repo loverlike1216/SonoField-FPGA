@@ -12,4 +12,4 @@ Current model: GPT-6.1 Sol High. No physical step below has been performed.
 
 N18 nominal33.333MHz is an explicitly approved fallback, so physical oscillator measurement is not reintroduced as a blocking requirement. No need to reread full chip ordering code: XC7Z020-1CLG400C is already USER_CONFIRMED_PHYSICAL_FACT.
 
-Separate development prerequisites: install/locate a valid ARM Cortex-A9 baremetal target compiler/BSP; construct verified PS/AXI clock/reset platform; implement and test separate array-disable integration; obtain post-route timing closure and then run the real transport tests. These are engineering work, not claimed missing physical measurements.
+Separate development prerequisites: install/locate a valid ARM Cortex-A9 baremetal target compiler/BSP; construct verified PS/AXI clock/reset platform; implement and test separate array-disable integration; obtain full-board integrated post-route timing closure (internalOOC is now PASS) and then run the real transport tests. These are engineering work, not claimed missing physical measurements.

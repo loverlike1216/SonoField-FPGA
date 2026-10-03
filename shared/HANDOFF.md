@@ -9,3 +9,5 @@ Next: exact physical VCCO and PS clock/reset/UART/MIO/connector facts; verified 
 Do Not Change: frozenv1/history/model provenance,packet/register interface,128channels/8bit,requested/calibration split,atomics,upper/lower mapping,38.5..41.5kHz and current radiating-center geometry. No failing-design or guessed-platform deployment.132MHz is a routed internal design target; final board clock and external constraints require reviewed integration. Do not waive DRC/warnings or declare PCB ready from OOC PASS.
 
 Current full result: v2/evidence/pre_pcb_board_ready/RESULT.md. Current source commit and sync evidence follow the checkpoint. Hardware status remains identification only.
+
+Validated engineering source: 9936a737c45bf61f1908863a94f6374c6b5c828c. Checkpoint CP-20261003-002. Fresh sparse checkout115tests and212frozenfile coverage PASS on same machine using existingpinnedvenv. Later checkpoint/documentation commits preserve these source facts.

@@ -34,5 +34,5 @@ Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual vis
 
 ## Current pre-PCB stage capture
 
-[S-20261003-codex-002](codex/S-20261003-codex-002.md) · [manifest](sessions/S-20261003-codex-002.json): 18 actual visible messages; cutoff 2026-10-03T08:54:34.081Z; PARTIAL; sanitized canonical SHA256 24be554647e238675c862c1524b5e8b38df41da73b03668967843e94ec602ba8. IMPLEMENTATION_INPUT.
+[S-20261003-codex-002](codex/S-20261003-codex-002.md) · [manifest](sessions/S-20261003-codex-002.json): 20 actual visible messages; cutoff 2026-10-03T09:04:22.223Z; PARTIAL; sanitized canonical SHA256 5bee60a8fa383fae2d90dd294dd69bd149899ac7b7e21844bc0f1a0ada5254c1. IMPLEMENTATION_INPUT.
 [Tool flow T-20261003-002](tool-flow/T-20261003-002__pre-pcb.md): VALIDATION_INPUT; actual stage evidence and failures; PARTIAL.

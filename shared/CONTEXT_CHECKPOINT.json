@@ -1,194 +1,238 @@
 {
-  "checkpoint_id": "CP-20261003-001",
+  "checkpoint_id": "CP-20261003-002",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
   "branch": "main",
-  "base_commit": "b11c80ca3e7fc7745241c32f8f80d95329ca4ddf",
-  "head_commit": "d6851070ca5aa98c95c2a6fd3f0344b78e799a9a",
-  "commit_scope": "Validated engineering source commit; later checkpoint-only commits may follow",
+  "base_commit": "bd9e79f622ee58ea970870071702eb24596cd753",
+  "head_commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+  "commit_scope": "Validated source commit; subsequent checkpoint/documentation/sync commits may follow",
   "active_version": "v2",
   "version_status": "ACTIVE",
-  "current_stage": "CORE_TIMING_CLOSURE_AND_REAL_PS_PL_SMOKE_TEST",
+  "current_stage": "TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE",
   "current_model": "GPT-6.1 Sol High",
   "model_provenance_basis": "USER_DECLARED_MANUAL_SELECTION",
-  "created_at": "2026-10-03T04:03:32.318738+00:00",
+  "created_at": "2026-10-03T09:02:32.884969+00:00",
   "created_by": "Codex",
   "source_of_truth": "repository",
-  "checkpoint_reason": "Model continuity, user replacement policy, bounded timing RCA and recovery regression",
-  "current_goal": "Single Robei octagonal Zynq-7020 sound-field controller; measured levitation roadmap, 50 mg final target",
+  "checkpoint_reason": "Real internal routed timing closure and complete current-source regression; direct user confirmed part and reference precedence; classified uploads and colleague setup",
+  "current_goal": "Single Robei XC7Z020 controller for coherent acoustic field; physical staged levitation with50mg final measured target",
   "architecture_ref": "v2/docs/architecture/SELF_CALIBRATION.md",
-  "architecture": "Host solver/commands -> PS transport (not deployed) -> AXI bridge -> deterministic common PL phase/calibration/motion -> serializer -> qualified drivers/transducers (not deployed)",
+  "architecture": "Host acoustic solver/trajectory -> PS transport (not deployed) -> AXI/native control ->128common-phase channels with separate requested/calibration and atomic maps ->32lane serializer -> qualified drivers/TX. One central8RX AD7606B feedback path; current feedback validation synthetic/RTL only.",
   "completed": [
     {
-      "item": "128-channel common phase, calibration and atomic maps",
-      "status": "SIMULATED"
-    },
-    {
-      "item": "Exact rational phase and burst timing refactors",
-      "status": "SIMULATED",
-      "added_latency_cycles": 0
-    },
-    {
-      "item": "Offline protocol/host C/AXI/safe leaf",
-      "status": "TESTED"
-    },
-    {
-      "item": "Current motion/calibration/inherited regression",
-      "status": "SIMULATED"
-    },
-    {
-      "item": "Conservative -1 OOC core",
-      "status": "SYNTHESIZED",
-      "post_route_timing": "FAIL"
-    },
-    {
-      "item": "Historical board JTAG identity",
+      "item": "USB/FTDI interfaces,COM4 and native Vivado two-device JTAG identification",
       "status": "HARDWARE_VERIFIED",
-      "scope": "Identity only, not system function"
+      "scope": "Identity only; not PS/PL execution or UART transport"
+    },
+    {
+      "item": "Exact part XC7Z020-1CLG400C and N18/33.333MHz fallback",
+      "status": "EXPECTED",
+      "scope": "Part USER_CONFIRMED_PHYSICAL_FACT, clock USER_APPROVED_DOCUMENT_FALLBACK_NOT_MEASURED"
+    },
+    {
+      "item": "64connector signal pins legal/unique in confirmed part database and source Excel",
+      "status": "TESTED",
+      "scope": "Document/package only, physical routing/VCCO unknown"
+    },
+    {
+      "item": "Queue selector/width/occupancy and scheduler CE changes",
+      "status": "SIMULATED",
+      "scope": "Original/new cycle behavior equivalent in Icarus/XSim; serializer unchanged"
+    },
+    {
+      "item": "Current complete digital/motion/calibration/ADC regression",
+      "status": "SIMULATED",
+      "scope": "115Python tests;3Icarus+1XSim×3696frames,canonicalhashes equal"
+    },
+    {
+      "item": "sono_axi_system132MHz internalOOC",
+      "status": "SYNTHESIZED",
+      "scope": "Fully placed/routed; WNS+0.082,TNS0,WHS+0.072,THS0;21,475routednets/0errors"
+    },
+    {
+      "item": "Separate upper/lower disable adapter",
+      "status": "SIMULATED",
+      "scope": "Independent asynckill plus synchronized fresh-frame release; not integrated physically"
+    },
+    {
+      "item": "Clock MMCM candidate",
+      "status": "SYNTHESIZED",
+      "scope": "Vendor standalone,131.998680MHz; final board clock not frozen"
+    },
+    {
+      "item": "Offline AXI/host-C protocol",
+      "status": "TESTED",
+      "scope": "No ARM targetELF,real UART or MMIO"
+    },
+    {
+      "item": "New sparse checkout at validated source",
+      "status": "TESTED",
+      "scope": "115tests/frozen212files; same machine and existing pinnedvenv"
     }
   ],
-  "current_plan_position": "Two timing rounds exhausted; recovery regression complete; next bounded timing decision pending",
+  "current_plan_position": "Digital and internal timing gates complete; physical board integration blocked; stop additional core optimization without new failure",
   "next_actions": [
-    "Read P-20260929-001 and real routed path/throughput evidence; obtain independent bounded timing decision",
-    "Establish real UART-to-PS route and reviewed PS preset/XSA/BSP/ARM toolchain",
-    "After Gate A plus prerequisites pass, run temporary-JTAG bare-board safe transport",
-    "Qualify driver electrical timing and measured opposing-pair acoustics before array/particle scaling"
+    "Obtain bank34/35VCCO,actual connector orientation/continuity and voltage-qualified IO levels",
+    "Obtain PSUARTinstance/MIO/FTDI-BTXRX/DTRRTS and PS referenceclock/reset/matchedpreset",
+    "Construct reviewed XSA/BSP/Cortex-A9targetbuild and safe disabled-output PS/PL/AXI/clock-reset wrapper; reimplement timing",
+    "After platform facts/gates pass: real100→1000PING/PONG,registerreadback,atomicMAPcompletion generation,errors/linkloss/GUI/ILA",
+    "Qualify external min/max timing/load and independent disables; freeze PCB interface, then measured transducer bring-up"
   ],
   "active_decisions": [
     {
-      "problem_id": "P-20260927-001",
-      "decision": "APPROVE_LIMITED_TIMING_REFACTOR_IN_V2",
-      "source": "Direct user formal attachment, preserved approval file",
-      "scope": "Two rounds at 132/66 MHz and quantified trade; exhausted, no third round",
-      "problem_hash": "0bf40cdd79faaf5fd4aca4af6e1f7cf85eab8662128f4633ea1acb3b4ef61916"
+      "problem_id": "P-20260929-001",
+      "decision": "USER_APPROVED_FINAL_PRE_PCB_CONTRACT",
+      "source": "Direct user formal attachment6126fbc9",
+      "scope": "Current bounded queue/control timing, exactpart and newreferences; no electrical guess/deployment",
+      "problem_hash": "a84242c69d945dc5989c8b708623657e61fe8eeb4af0782f4474531cfff9972b",
+      "ref": "AI-problem/decision/P-20260929-001__queue-control-timing.md"
     },
     {
       "decision": "MODEL_TRANSITION",
-      "date": "2026-10-03",
       "source": "Direct user",
-      "scope": "Provenance only"
+      "scope": "Future GPT-6.1 Sol High provenance; architecture/version/history unchanged"
     },
     {
       "decision": "ACTIVE_V2_SINGLE_BOARD_ONLY",
-      "date": "2026-10-03",
       "source": "Direct user",
-      "scope": "Recovery focus"
+      "scope": "Current working scope"
     }
   ],
   "blockers": [
-    "CORE_TIMING",
-    "UART_ROUTE",
-    "PS_TARGET_BUILD",
-    "B01",
     "B03",
     "B04",
     "B05",
     "B06",
-    "B07"
+    "B07",
+    "CHAT_MEMORY_ACCESS_BLOCKED",
+    "PS_TARGET_BUILD",
+    "UART_ROUTE"
   ],
   "critical_issues": [],
   "latest_validation": [
     {
-      "type": "Functional regression",
+      "type": "Real Vivado2025.2 routed internalOOC132MHz",
       "result": "PASS",
-      "evidence": "v2/evidence/core_timing_real_loop/recovery_20261003/regression_fixed/summary.json",
-      "date": "2026-10-03",
-      "commit": "d6851070ca5aa98c95c2a6fd3f0344b78e799a9a",
-      "python_tests": 114,
-      "trajectory_frames": 3696,
-      "deterministic_runs": 4
-    },
-    {
-      "type": "Exact-cycle cross-tool equivalence",
-      "result": "PASS",
-      "date": "2026-09-29",
-      "phase_comparisons": 486026,
-      "burst_comparisons": 5066261,
-      "evidence": "v2/evidence/core_timing_real_loop/timing_refactor/equivalence.json"
-    },
-    {
-      "type": "Historical latest routed timing",
-      "result": "FAIL",
-      "date": "2026-09-29",
-      "wns_ns": -4.515,
-      "tns_ns": -6007.936,
-      "whs_ns": 0.07,
+      "evidence": "v2/evidence/pre_pcb_board_ready/timing/core_timing_pass.json",
+      "commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+      "wns_ns": 0.082,
+      "tns_ns": 0,
+      "whs_ns": 0.072,
       "ths_ns": 0,
-      "evidence": "v2/evidence/core_timing_real_loop/round2/routed/timing_summary.rpt"
+      "fully_routed_nets": 21475,
+      "routing_errors": 0,
+      "date": "2026-10-03"
     },
     {
-      "type": "Physical PS/PL transport",
-      "result": "NOT_VERIFIED",
-      "evidence": "v2/evidence/core_timing_real_loop/board_smoke/preflight.json"
-    },
-    {
-      "type": "Fresh sparse checkout / 114 tests / structure / interaction integrity",
+      "type": "Full current functional/motion/calibration/ADC dual-simulator gate",
       "result": "PASS",
-      "date": "2026-10-03",
-      "commit": "d6851070ca5aa98c95c2a6fd3f0344b78e799a9a",
-      "classification": "FRESH_CHECKOUT_EXISTING_PINNED_VENV",
-      "evidence": "v2/evidence/core_timing_real_loop/recovery_20261003/fresh_checkout.json",
-      "limitation": "Same machine, existing pinned venv; not a second physical machine"
+      "evidence": "v2/evidence/pre_pcb_board_ready/regression_release/summary.json",
+      "commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+      "python_tests": 115,
+      "frames": 3696,
+      "runs": 4,
+      "date": "2026-10-03"
+    },
+    {
+      "type": "Independent golden queue/scheduler,array safety and serializer throughput",
+      "result": "PASS",
+      "evidence": "v2/evidence/pre_pcb_board_ready/independent_checks_complete/summary.json",
+      "commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+      "date": "2026-10-03"
+    },
+    {
+      "type": "Offline AXI/host C",
+      "result": "PASS",
+      "evidence": "v2/evidence/pre_pcb_board_ready/axi_offline_release/axi_bridge_tests.json",
+      "commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+      "date": "2026-10-03"
+    },
+    {
+      "type": "Source hashes144motion+11independent/timing snapshot consistency",
+      "result": "PASS",
+      "evidence": "v2/evidence/pre_pcb_board_ready/repository_reconciliation/final_source_audit.json",
+      "commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+      "date": "2026-10-03"
+    },
+    {
+      "type": "Fresh sparse checkout115tests/frozen212files",
+      "result": "PASS",
+      "evidence": "v2/evidence/pre_pcb_board_ready/repository_reconciliation/fresh_checkout.json",
+      "commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+      "classification": "SAME_MACHINE_EXISTING_PINNED_VENV",
+      "date": "2026-10-03"
+    },
+    {
+      "type": "Real PS/PL transport / external acoustic operation",
+      "result": "NOT_VERIFIED",
+      "evidence": "v2/evidence/pre_pcb_board_ready/MISSING_PHYSICAL_FACTS.md",
+      "date": "2026-10-03"
     }
   ],
   "known_limitations": [
-    "Conservative engineering -1 target; physical speed/temperature/order UNKNOWN",
-    "OOC ideal primary clock, external I/O delays missing; full-board timing not qualified",
-    "No real PS firmware, UART loop, acoustic outputs, calibration or levitation",
-    "Failed previous GUI retry retained; new PASS does not rewrite its history",
-    "External ChatGPT history BLOCKED; local visible interaction coverage PARTIAL",
-    "Fresh clone follows documented sparse v2 workflow because frozen raw-byte hashes are sensitive to CRLF conversion"
+    "OOC ideal inputclock and missing externalIOdelays/PS7; fullboardtimingNOT_VERIFIED",
+    "WNS+0.082ns small margin; integrated clock/PS/IO must reimplement",
+    "Retained DRC/methodology: RAMB36asynccontrol,LUTreset,suboptimalRAM,externaldelays/PS7 andreportlimit; not waived",
+    "COM4 enumerated, PS UART/MIO route unverified; noCOMopen,targetELF,realPING/maps/GUI/ILA",
+    "FT2232H reported USBvariant; custom cable descriptor is not boardidentity",
+    "GPS photo and rawUSB/network identifiers local-only; publicsanitized records",
+    "External ChatGPT history BLOCKED; actual Codex transcripts PARTIAL, independentreviewPENDING",
+    "Fresh sourcecheckout same machine with existingvenv, not secondphysicalmachine"
   ],
   "do_not_change": [
-    "Frozen v1 and historical evidence",
-    "PCB files and unverified board constraints",
-    "Current register/packet/channel formats and motion ACK/cadence",
-    "Acceptance thresholds",
-    "Core architecture or next-version creation without applicable decision/user authorization"
+    "Frozenv1,historicalevidence/checkpoints/modelprovenance",
+    "NativePCB and unverified pins/IOstandards",
+    "Version/repository/corearchitecture without explicitapplicable userauthorization",
+    "Packet/register/128channel/8bit formats,requested/calibration split,atomics,channelordering/cadence/ACK",
+    "Acceptance thresholds; no testskips/falsepath waivers to claim PASS",
+    "No program/COM/MMIO/externalPCB operation without verified facts and actual platformgates"
   ],
   "invariants": [
-    "128-channel/8-bit phase",
-    "Separate requested/calibration modulo256",
-    "Common coherent PL timing",
-    "Complete-map atomic commit",
-    "Safe reset and disable",
-    "38.5-41.5 kHz contract; production132/66MHz until valid decision",
-    "10 mm body/12 mm radiating-center pitch/100 mm nominal face gap/90-115 mm range/geometric-center origin"
+    "128channels/8bit;commoncoherent PLphase",
+    "Requested+calibration modulo256 andatomiccomplete-mapcommit",
+    "Safe reset/globaldisable and independentarraydisable integration required",
+    "38.5..41.5kHz; core132MHz target/current132/66MHz design; inputfallback33.333MHz not measurement; finalboardclock notfrozen",
+    "10mm body/12mm radiating-center pitch/8×8upper+lower/100mm nominal facegap/90..115mm range/origin geometriccenter"
   ],
   "open_ai_problems": [
     "P-20260919-001",
     "P-20260919-002",
     "P-20260919-003",
     "P-20260925-001",
-    "P-20260927-001",
-    "P-20260929-001"
+    "P-20260927-001"
   ],
   "state_conflicts": [
     {
-      "old": "Older narrative plan and machine evidence pointers describe previous stage",
-      "current": "Preserved routed FAIL plus current recovery PASS govern the active checkpoint",
-      "resolution": "Current plan/state/evidence references reconciled; historical content retained"
-    },
-    {
-      "old": "Old summary said regression RUNNING although its final GUI retry failed",
-      "current": "Failed retry remains FAIL, separate recovery PASS is current",
-      "resolution": "No historical reports overwritten"
+      "status": "RESOLVED_CURRENT_STATE",
+      "scope": "Previous source/clock/part/timing/current-evidence summaries lag actual current work",
+      "resolution": "Direct user complete-part/new Excel fallback contract and current strategy3/full regression PASS govern; old timing/model evidence remains historical"
     }
   ],
-  "repository_delta": "Pending phase/burst/safe-leaf implementation and tests now checkpointed; current model/event/policy/state/plan restored from actual evidence",
+  "repository_delta": "User exactpart/newpinpriority and decision; verified USB/JTAG; current bounded timing fix closes core timing;115test/fourrunfullgate; referenced uploads classified; current guide and state corrected. P-20260929-001 now actionable user decision; old OPEN body kept historical.",
   "evidence_refs": [
-    "v2/evidence/core_timing_real_loop/RESULT.md",
-    "v2/evidence/core_timing_real_loop/recovery_20261003/summary.json",
-    "v2/evidence/core_timing_real_loop/critical_paths.json",
-    "v2/evidence/core_timing_real_loop/clock_trade.json",
-    "v2/evidence/core_timing_real_loop/axi/axi_bridge_tests.json",
-    "v2/evidence/core_timing_real_loop/uart/uart_route_evidence.json",
-    "AI-interaction-memory/codex/I-20261003-0001__model-transition.md"
+    "v2/evidence/pre_pcb_board_ready/RESULT.md",
+    "v2/evidence/pre_pcb_board_ready/summary.json",
+    "v2/evidence/pre_pcb_board_ready/MISSING_PHYSICAL_FACTS.md",
+    "v2/evidence/pre_pcb_board_ready/board_identity/jtag_identity.json",
+    "v2/evidence/pre_pcb_board_ready/board_identity/windows_inventory.json",
+    "v2/evidence/pre_pcb_board_ready/connector_reference/connector_audit.json",
+    "v2/evidence/pre_pcb_board_ready/timing/strategy3/routed/timing_summary.rpt",
+    "v2/evidence/pre_pcb_board_ready/regression_release/summary.json",
+    "v2/evidence/pre_pcb_board_ready/repository_reconciliation/fresh_checkout.json",
+    "AI-interaction-memory/codex/S-20261003-codex-002.md",
+    "AI-interaction-memory/tool-flow/T-20261003-002__pre-pcb.md",
+    "指南.md"
   ],
-  "resume_from": "Read this checkpoint, then current plan and P-20260929-001; remain in current v2 single-board scope",
+  "resume_from": "Read current state/version/checkpoint/plan/decision/latest realevidence. Stay currentv2singleboard. Acquire precise physicalfacts and build verified PSplatform; do not rerun old timing microfix loops or download guessedbitstream.",
+  "provenance": [
+    "Direct user current formalcontract and personalizedrules",
+    "Current Git source9936a73 and exacttests/timing/identity/sourceaudit above",
+    "shared state/version/decisions/blockers/acceptance"
+  ],
   "status": "VALID",
   "stage_acceptance": "REVISE",
+  "pre_pcb_board_ready": "NO",
   "independent_review": "PENDING"
 }

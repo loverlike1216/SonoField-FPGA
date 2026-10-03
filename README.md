@@ -8,8 +8,8 @@ Current version **v2**, stage **TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PC
 **团队接手入口：[指南.md](指南.md)** — 当前进度、已解决/未解决问题、Windows环境、离线复现和后续开发。
 当前 main 的恢复入口：[当前 v2 接手补充](v2/docs/CONTINUE_CURRENT_V2.md) 和 [CONTEXT_CHECKPOINT](shared/CONTEXT_CHECKPOINT.md)；下列标签保留其历史交接范围。
 阶段标签：`v2-board-transport-offline-20260929`（离线工程检查点，非正式Release或硬件验收）。
-2026-10-03 当前回归：114项Python测试、协议/AXI双模拟器、完整运动/校准回归通过；历史独立环境复现保留其原验证范围。
-完整料号 XC7Z020-1CLG400C 已由用户确认；UART/PS平台、VCCO和最终布线时序仍需完成。[当前证据与接口候选](v2/evidence/pre_pcb_board_ready/)。
+2026-10-03 当前回归：115项Python测试、协议/AXI双模拟器、完整运动/校准/ADC回归通过；3次Icarus＋1次XSim各3696帧结果一致，新稀疏检出115项测试和冻结核验通过（同机、既有venv）。
+完整料号 XC7Z020-1CLG400C 已由用户确认；内部132MHz布线时序已通过；UART/PS平台、VCCO、板级与外部接口时序仍需完成。[当前证据与接口候选](v2/evidence/pre_pcb_board_ready/)。
 User explicitly approved v2 and this software/digital stage. The complete inherited baseline is retained.
 Self-calibration and ADC acquisition have automated synthetic/RTL validation. Physical acquisition,
 PCB manufacture and levitation remain unverified. Native schematic draft is available; execution remains focused on the active single-board v2 project; PCB layout and fabrication remain unstarted.
@@ -34,6 +34,6 @@ Future board boundary: [hardware/software contract](v2/docs/hardware/PCB_SOFTWAR
 Read the [single-sheet schematic package](PCB/V1/project/README.md), [vector PDF](PCB/V1/project/SonoField-SingleSheet.pdf), [channel mapping](v2/docs/hardware/SCHEMATIC_CHANNEL_MAP.md) and [current review report](shared/report_schematic_v2_V1.md). Electrical release is **REVISE**, with45classified ERC warnings and unresolved hardware gates. Windows commands default to PowerShell7 (`pwsh`).
 
 Current model environment: **GPT-6.1 Sol High**, user manual transition2026-10-03; [MODEL_TRANSITION](AI-interaction-memory/codex/I-20261003-0001__model-transition.md). Historical model provenance stays intact.
-Current v2 checkpoint: [engineering report](v2/evidence/core_timing_real_loop/RESULT.md), [timing RCA](v2/evidence/core_timing_real_loop/timing_decision.md) and [recovery summary](v2/evidence/core_timing_real_loop/recovery_20261003/summary.json). Gate A FAIL: routed WNS -4.515ns; real PS/PL transport NOT_RUN. Next bounded timing proposal: [P-20260929-001](AI-problem/problem/P-20260929-001__queue-control-timing.md). Prior tagged guide remains a historical handoff.
+Current v2 checkpoint: [pre-PCB report](v2/evidence/pre_pcb_board_ready/RESULT.md), [actual routed timing](v2/evidence/pre_pcb_board_ready/timing/core_timing_pass.json) and [full regression](v2/evidence/pre_pcb_board_ready/regression_release/summary.json). Internal132MHz OOC Gate A PASS: WNS+0.082ns, WHS+0.072ns, zero routing errors. Real PS/PL transport NOT_RUN, PRE_PCB_BOARD_READY=NO. [Current user decision](AI-problem/decision/P-20260929-001__queue-control-timing.md) and [missing physical facts](v2/evidence/pre_pcb_board_ready/MISSING_PHYSICAL_FACTS.md) define continuation. Prior tagged guide and [older timing report](v2/evidence/core_timing_real_loop/RESULT.md) retain their historical scope.
 
 恢复工程优先读 [CONTEXT_CHECKPOINT.md](shared/CONTEXT_CHECKPOINT.md) / [机器检查点](shared/CONTEXT_CHECKPOINT.json)，再读当前计划、决策与证据；当前模型来源与最新规则不触发版本升级。
