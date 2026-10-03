@@ -88,10 +88,10 @@
   "motion_evidence": "v2/evidence/pre_pcb_board_ready/regression_release/summary.json",
   "current_validation_date": "2026-10-03",
   "current_validation_source": "9936a737c45bf61f1908863a94f6374c6b5c828c",
-  "latest_context_checkpoint": "CP-20261003-002",
-  "checkpoint_commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+  "latest_context_checkpoint": "CP-20261004-001",
+  "checkpoint_commit": "33ed95d159cf19902c8fbcc17dd89540df4fe3ea",
   "checkpoint_status": "VALID",
-  "checkpoint_commit_scope": "Validated source commit; checkpoint-only/doc commits follow",
+  "checkpoint_commit_scope": "Detection/source evidence commit; later checkpoint/sync commits follow. Core validation source remains unchanged.",
   "validated_source_commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
   "last_remote_verified_source_commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
   "reproducibility": "PASS_CROSS_SIMULATOR_AND_FRESH_SPARSE_CHECKOUT",
@@ -116,5 +116,8 @@
   "ddr_controller_state": "RESET_VALUES_OBSERVED; NO_EFFECTIVE_CONFIGURATION",
   "latest_board_observation_date": "2026-10-04",
   "hardware_access_scope": "JTAG_IDENTITY_AND_TWO_READ_ONLY_DAP_DDRC_REGISTERS; NO_DDR_MEMORY_TEST_OR_PROGRAMMING",
-  "interaction_memory_status": "PARTIAL"
+  "interaction_memory_status": "PARTIAL",
+  "parameter_detection_source_commit": "33ed95d159cf19902c8fbcc17dd89540df4fe3ea",
+  "parameter_detection_remote_verified_commit": "33ed95d159cf19902c8fbcc17dd89540df4fe3ea",
+  "parameter_detection_sync_evidence": "parameter_detection/20261004_ddr/delivery_sync.json"
 }
