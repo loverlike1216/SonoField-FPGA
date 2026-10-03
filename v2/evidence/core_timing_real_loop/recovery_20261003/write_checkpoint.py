@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 import subprocess
+from datetime import datetime, timezone
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[3]
@@ -38,7 +39,7 @@ def main():
         'commit_scope': 'Validated engineering source commit; later checkpoint-only commits may follow',
         'active_version': 'v2', 'version_status': 'ACTIVE', 'current_stage': state['current_stage'],
         'current_model': 'GPT-6.1 Sol High', 'model_provenance_basis': 'USER_DECLARED_MANUAL_SELECTION',
-        'created_at': '2026-10-03', 'created_by': 'Codex', 'source_of_truth': 'repository',
+        'created_at': datetime.now(timezone.utc).isoformat(), 'created_by': 'Codex', 'source_of_truth': 'repository',
         'checkpoint_reason': 'Model continuity, user replacement policy, bounded timing RCA and recovery regression',
         'current_goal': 'Single Robei octagonal Zynq-7020 sound-field controller; measured levitation roadmap, 50 mg final target',
         'architecture_ref': 'v2/docs/architecture/SELF_CALIBRATION.md',
@@ -104,9 +105,18 @@ def main():
             'AI-interaction-memory/codex/I-20261003-0001__model-transition.md'],
         'resume_from': 'Read this checkpoint, then current plan and P-20260929-001; remain in current v2 single-board scope',
         'status': 'VALID', 'stage_acceptance': 'REVISE', 'independent_review': 'PENDING'}
+    fresh = json.loads((HERE / 'fresh_checkout.json').read_text())
+    assert fresh['status'] == 'PASS' and fresh['source_commit'] == head
+    cp['latest_validation'].append({'type': 'Fresh sparse checkout / 114 tests / structure / interaction integrity',
+        'result': 'PASS', 'date': '2026-10-03', 'commit': head,
+        'classification': fresh['classification'],
+        'evidence': 'v2/evidence/core_timing_real_loop/recovery_20261003/fresh_checkout.json',
+        'limitation': 'Same machine, existing pinned venv; not a second physical machine'})
     lines = [f'---\ncheckpoint_id: {cp["checkpoint_id"]}\nproject_id: SONOFIELD_FPGA\nactive_version: v2\n'
              f'current_stage: {cp["current_stage"]}\nbase_commit: {cp["base_commit"]}\nhead_commit: {head}\n'
-             'created_at: 2026-10-03\ncreated_by: Codex\ncurrent_model: GPT-6.1 Sol High\nsource_of_truth: repository\nstatus: VALID\n---\n',
+             f'project_name: SonoField-FPGA\nrepository: {cp["repository"]}\nbranch: main\nversion_status: ACTIVE\n'
+             f'created_at: {cp["created_at"]}\ncreated_by: Codex\ncheckpoint_reason: {cp["checkpoint_reason"]}\n'
+             'current_model: GPT-6.1 Sol High\nsource_of_truth: repository\nstatus: VALID\n---\n',
              '# Context Checkpoint\n',
              'This is a recoverable engineering-state checkpoint, not a version change or platform acceptance. Stage result: REVISE.\n']
     sections = [('1. Current Identity', {k: cp[k] for k in ('project_id','repository','workspace_path','branch','head_commit','active_version','current_stage','current_model')}),

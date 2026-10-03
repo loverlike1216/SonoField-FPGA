@@ -27,3 +27,6 @@ Active recovery scope: **v2 single-board acoustic control only**. [Focus event I
 [Observed current-session transcript](codex/S-20261003-codex-001.md) · [source manifest](sessions/S-20261003-codex-001.json) · [user replacement rules](codex/instructions/codex_engineering_rules_20261003.md). Current model GPT-6.1 Sol High; actual visible message boundary only, PARTIAL.
 
 [Current observed tool flow T-20261003-001](tool-flow/T-20261003-001__v2-recovery.md): CLI/Git/verification/checkpoint actions; GPT-6.1 Sol High; PARTIAL, actual evidence referenced.
+
+
+Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual visible messages from the manual transition through 2026-10-03T04:05:02.653Z. Sanitized canonical transcript SHA256 f66a4b2a8cdfef95401f88c75660c21a59da63bc9f17aaa1e66354c03cfa5639. Coverage PARTIAL; final response after capture is included at the next checkpoint.

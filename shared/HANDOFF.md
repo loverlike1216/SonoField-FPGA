@@ -22,3 +22,6 @@ Failures retained: capture timeouts, cache refresh discrepancies, old TEXT field
 Unresolved: core-board pins/VCCO/package, serializer hold timing, independent watchdog/power qualification, exact generic MPNs and analog/batch measurements. External ChatGPT inaccessible. No PCB/hardware PASS.
 Evidence: PCB/V1/log/review; report: shared/report_schematic_v2_V1.md.
 Next: review P-20260925-001 and electrical gates. Read PROJECT_STATE and VERSION_STATE; do not create v3 or alter frozen v1. Windows terminal defaults to pwsh7.
+
+
+2026-10-03 checkpoint: CP-20261003-001, source d6851070ca5aa98c95c2a6fd3f0344b78e799a9a. Fresh sparse checkout /114tests/structure/memory integrity PASS with the existing pinned venv. Final checkpoint-only push is verified separately. Current model GPT-6.1 Sol High.

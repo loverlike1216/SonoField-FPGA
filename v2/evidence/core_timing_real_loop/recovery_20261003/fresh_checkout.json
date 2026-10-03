@@ -1,0 +1,107 @@
+{
+  "current_model": "GPT-6.1 Sol High",
+  "record_date": "2026-10-03",
+  "status": "PASS",
+  "source_commit": "d6851070ca5aa98c95c2a6fd3f0344b78e799a9a",
+  "classification": "FRESH_CHECKOUT_EXISTING_PINNED_VENV",
+  "python_tests": 114,
+  "frozen_parent_worktree_present": false,
+  "full_git_history_retained": true,
+  "commands": [
+    {
+      "label": "clone",
+      "command": [
+        "git",
+        "clone",
+        "--no-checkout",
+        "--no-hardlinks",
+        "E:\\Codex_project\\AMD-SonoField-FPGA",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA",
+      "exit_code": 0,
+      "elapsed_s": 0.688
+    },
+    {
+      "label": "sparse_init",
+      "command": [
+        "git",
+        "sparse-checkout",
+        "init",
+        "--cone"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003",
+      "exit_code": 0,
+      "elapsed_s": 0.047
+    },
+    {
+      "label": "sparse_set",
+      "command": [
+        "git",
+        "sparse-checkout",
+        "set",
+        "v2",
+        "shared",
+        "AI-chat-memory",
+        "AI-interaction-memory",
+        "AI-problem",
+        "PCB",
+        "evidence"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003",
+      "exit_code": 0,
+      "elapsed_s": 0.046
+    },
+    {
+      "label": "checkout",
+      "command": [
+        "git",
+        "checkout",
+        "d6851070ca5aa98c95c2a6fd3f0344b78e799a9a"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003",
+      "exit_code": 0,
+      "elapsed_s": 1.047
+    },
+    {
+      "label": "repository",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003\\v2\\scripts\\check_repository.py"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003",
+      "exit_code": 0,
+      "elapsed_s": 9.344
+    },
+    {
+      "label": "python",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003\\v2",
+      "exit_code": 0,
+      "elapsed_s": 5.406
+    },
+    {
+      "label": "memory",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003\\AI-interaction-memory\\tools\\sync_codex.py",
+        "--check"
+      ],
+      "cwd": "E:\\Codex_project\\AMD-SonoField-FPGA\\v2\\build\\recovery_clone_20261003",
+      "exit_code": 0,
+      "elapsed_s": 0.157
+    }
+  ],
+  "limitations": [
+    "Same computer and existing pinned venv; not an independent physical environment",
+    "No repeated full Vivado simulation or timing run; current full cross-tool evidence kept separately"
+  ]
+}

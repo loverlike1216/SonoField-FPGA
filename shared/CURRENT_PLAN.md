@@ -6,7 +6,7 @@ Two timing rounds and clock/throughput analysis are complete. Gate A FAIL: route
 
 Next priorities:
 
-1. Recovery regression is PASS. Complete source/hash reconciliation and traceable GitHub checkpoint.
+1. Recovery regression is PASS. Source/hash reconciliation and source push PASS; current checkpoint CP-20261003-001 records verified source commit.
 2. Independent review of P-20260929-001 for the next bounded queue/enable/reset timing stage. Existing two-round contract is exhausted.
 3. Establish verified UART-to-PS route, PS preset/XSA/BSP and target ARM toolchain.
 4. After real routed Gate A and prerequisites pass, execute bare-board PC↔PS↔AXI↔PL safe transport.
@@ -49,3 +49,6 @@ reports, interface contract and commit/push verification. Stop before physical P
 Implementation, full local and fresh-clone gates, source push/remote verification complete.
 Source 9c058fe3b02469a6d36a08e3a7cbedd19076e67b. Evidence: v2/evidence/self_calibration_stage/reproducibility_review.
 Final report and interaction/evidence checkpoint follows. STOP for independent review; no PCB stage.
+
+
+2026-10-03 checkpoint: CP-20261003-001, source d6851070ca5aa98c95c2a6fd3f0344b78e799a9a. Fresh sparse checkout /114tests/structure/memory integrity PASS with the existing pinned venv. Final checkpoint-only push is verified separately. Current model GPT-6.1 Sol High.
