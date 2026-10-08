@@ -22,3 +22,8 @@ FullAFTER_MIGRATION andv5-onlystandalone baselines PASS, same115tests/3696frames
 NativeVivado2025.2 project/checkpointreload initially failed an arbitrary20fileauditassumption. Exactmembershipchecks show18validownRTLsources (board-smokewrapperseparate); correctedauditchecks precisepaths andzero legacyMMCMinstances. Native reloadPASS source_files18/internalperiod7.576; actualfailed/successlogs retained. OOCsynthesis7219LUT/17918FF/4RAMB36, pre-routeslackonly; no physicalboard/PS/route/bitstreamclaim. Sources/manufacturerPDFhashes preserved locally; no vendorimplementation copied/executed.
 
 Currentv5 state/plan/decision/acceptance/blockers/rootREADME/AGENTS/guide reconciled. Priorversions/source unchanged. Three failurelogs' personalhomeprefixes sanitized in currentpublicfiles; rawlogs preservedprivately. Userprompt/currentvisibleCodexmessages sanitized, sourcedandhashed,PARTIAL. ExternalChatGPTreaderBLOCKED. No otherAIconsultation/review invented. FinalContextCheckpoint/currentGitcommit/push/remoteverification follow, with exactdeliveryreceipt.
+
+
+## Observed Git synchronization
+
+Recovery4cd42172, organization/evidencec84a0c3e, checkpoint39426ea96d2dd495474a7ec0db4e6b9ebc13b8cf are normal commits. Actual git push origin main succeeded; git ls-remote returned the same39426ea checkpoint HEAD. No remote divergence/history rewrite/forcepush. Current receipt/state/checkpoint-pointer update is a later normal delivery commit, verified again after its push. No user/untracked original staged or deleted. Public scan initial private-key marker match was scanner source text, not key material; corrected to require an actual structuredPEMbody, original failed review retained. Final stagedscope/credential/size scan PASS. Source and core validation unchanged.

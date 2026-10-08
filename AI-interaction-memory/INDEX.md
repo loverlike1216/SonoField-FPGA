@@ -49,9 +49,11 @@ Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual vis
 
 
 
+
+
 <!-- CURRENT_V5_CAPTURE -->
 ## Current AX7020 v5 capture — 2026-10-08
 
-[S-20261008-codex-001](codex/S-20261008-codex-001.md) · [manifest](sessions/S-20261008-codex-001.json) · [observable tool register](tool-flow/S-20261008-codex-001.md): 23 actual visible messages after previous cutoff, current cutoff 2026-10-08T09:06:45.787Z, PARTIAL. OpenAI; GPT-6.1 Sol High user-declared; IMPLEMENTATION_INPUT. Sanitized canonical transcript SHA256 6cea86e24ab869c3ea6200d5648f43c8ba99d981610342e8a905d2da8dad49fd.
+[S-20261008-codex-001](codex/S-20261008-codex-001.md) · [manifest](sessions/S-20261008-codex-001.json) · [observable tool register](tool-flow/S-20261008-codex-001.md): 23 actual visible messages after previous cutoff, current cutoff 2026-10-08T09:08:23.147Z, PARTIAL. OpenAI; GPT-6.1 Sol High user-declared; IMPLEMENTATION_INPUT. Sanitized canonical transcript SHA256 6cea86e24ab869c3ea6200d5648f43c8ba99d981610342e8a905d2da8dad49fd.
 
 [User-authorized v5 instruction](codex/instructions/ax7020_v5_safe_organization.md) · [actual tool flow T-20261008-001](tool-flow/T-20261008-001__v5-organization.md): VALIDATION_INPUT. Sole active version v5, AX7020; older index entries preserve original version/model provenance. External ChatGPT source SonoField-FPGA remains BLOCKED. No Work/other-agent consultation invented. Secret/privacy scan passed for this export; private raw logs/documents/backup remain local.

@@ -6,3 +6,6 @@ Cause: the old tests and GUI used a historical evidence/calibration.json as a ru
 
 
 Native project-reload audit correction: its new helper initially guessed a minimum20sourcefiles while the intended sono_axi_system source set contains18; the independent board smoke wrapper is a separate simulatedtop. The assertion was erroneous, not a missing core source. Replaced with exact filesystem-to-project membership equality for the intended synthesis source directories plus foreign-path checks and zero legacy-MMCM instances. No RTL or acceptance threshold was weakened. project_reopen_initial_failure.log retained; final project_reopen.log must have native completion marker.
+
+
+Final artifact reconciliation: calibration.json differs only in git_commit after the recovery commit. No numerical differences. The new cross-stage comparison initially treated provenance as data, so was corrected to validate the exact expected base/recovery SHAs and exact equality of every other field, while preserving raw file hashes. Evidence: v5/evidence/baseline/CALIBRATION_PROVENANCE_DIFF.json. No core acceptance or inherited test was altered.
