@@ -1,0 +1,120 @@
+{
+  "checkpoint_id": "CP-20261008-001",
+  "project_id": "SONOFIELD_FPGA",
+  "project_name": "SonoField-FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
+  "branch": "main",
+  "base_commit": "851d1ef747cd95da13e5eb0705b5a7885b68d83c",
+  "head_commit": "851d1ef747cd95da13e5eb0705b5a7885b68d83c",
+  "commit_scope": "Evidence-bearing source/recovery HEAD observed before this checkpoint commit; not a self-referential checkpoint commit",
+  "active_version": "v2",
+  "authorized_target_version": "v5",
+  "version_status": "ACTIVE",
+  "current_stage": "TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE",
+  "current_model": "GPT-6.1 Sol High",
+  "created_at": "2026-10-08T08:27:37.132790+00:00",
+  "created_by": "Codex",
+  "checkpoint_reason": "v5 baseline passes before archive; pending activation from historical v2",
+  "source_of_truth": "repository",
+  "status": "VALID",
+  "architecture_ref": "v5/docs/architecture/SELF_CALIBRATION.md",
+  "architecture": "Host solver/trajectory -> PS C/transport boundary -> AXI PL ->128 coherent 8bit phase channels with independent calibration and atomic commits ->serializer -> future qualified drivers/TX; central ADC/calibration feedback currently simulated",
+  "completed": [
+    {
+      "item": "186 selective source/reference copies and local fixture/path isolation",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "item": "115Python tests/full waveform/calibration/motion3696frames×4 and C/AXI/safety/equivalence",
+      "status": "SIMULATED"
+    },
+    {
+      "item": "Documented xc7z020clg400-2, native Vivado2025.2 own-source OOC project",
+      "status": "SYNTHESIZED"
+    },
+    {
+      "item": "Historical original byte preservation",
+      "status": "TESTED",
+      "files": 3343
+    }
+  ],
+  "next_actions": [
+    "Commit recovery point",
+    "Archive only snapshots/indexes, preserve old paths",
+    "Repeat full baseline after archival",
+    "Activate v5 per actual user approval"
+  ],
+  "active_decisions": [
+    "Explicit user v5 authorization e8213cac-ae60-4eee-bb3e-6461d16eaf66; no v4",
+    "Preserve core behavior/interfaces/acceptance; historical board decisions do not apply automatically"
+  ],
+  "blockers": [
+    "AX7020_PHYSICAL_REVISION",
+    "MATCHED_PS_DDR_XSA_BSP",
+    "PRODUCTION_IO_EXTERNAL_TIMING",
+    "REAL_TRANSPORT_AND_ACOUSTICS",
+    "CHAT_MEMORY_ACCESS_BLOCKED"
+  ],
+  "critical_issues": [],
+  "latest_validation": [
+    {
+      "evidence": "v5/evidence/baseline/before_migration_complete/summary.json",
+      "status": "PASS"
+    },
+    {
+      "evidence": "v5/evidence/synthesis/",
+      "status": "SYNTHESIZED",
+      "scope": "OOC; not routed board timing"
+    }
+  ],
+  "known_limitations": [
+    "No physical board/PS initialization/programming/UART/GPIO/PCB test this iteration",
+    "Full-board implementation/bitstream NOT_RUN",
+    "Standalone uses same installed dependencies, not another computer",
+    "External ChatGPT BLOCKED; observable Codex transcript PARTIAL",
+    "Untracked/private originals remain local; not all local data is published"
+  ],
+  "do_not_change": [
+    "Frozen original versions/byte hashes/history",
+    "Core algorithms/protocol/registers/calibration/atomic/safety/geometry/test thresholds",
+    "Do not import old Robei board constraints or historical PASS",
+    "No new version without explicit user approval",
+    "No board programming without reviewed integration facts"
+  ],
+  "invariants": [
+    "128channels;PHASE_BITS8;common master phase",
+    "Separate requested+calibration mod256;atomic map switch",
+    "10mm candidate;12mm radiating-center pitch;100mm face gap adjustable90..115mm;dual8x8;origin center",
+    "Default Windows shell pwsh7",
+    "All runtime inputs local to v5; tool binaries/interpreter may be external"
+  ],
+  "open_ai_problems": [],
+  "historical_ai_problems": "AI-problem (retained original version provenance, no automatic execution)",
+  "evidence_refs": [
+    "shared/organization/DIRECTORY_AUDIT.md",
+    "shared/organization/VERSION_MIGRATION_PLAN.json",
+    "v5/config/inheritance_manifest.json",
+    "shared/organization/HISTORICAL_INTEGRITY.json",
+    "v5/evidence/baseline/before_migration_complete/summary.json",
+    "v5/evidence/synthesis/loaded_sources.txt"
+  ],
+  "resume_from": "Read v5/README.md and current shared state/checkpoint/plan; verify current Git then actual AX7020 platform preflight; do not scan all history",
+  "repository_delta_since_previous_checkpoint": "User now explicitly authorizes AX7020 v5; no model-only change;186 copies and fresh current digital/OOC evidence, isolated old board state; prior records retain original provenance",
+  "state_conflicts": [
+    {
+      "old": "shared activev2 and pausedv3",
+      "new": "Direct user explicitly authorizes existingv5 for AX7020",
+      "resolution": "Retain prior governance snapshot, advance only after available gates; no fabricatedv4"
+    }
+  ],
+  "provenance": [
+    "actual formal user instruction",
+    "repository source/config reviewed hashes",
+    "fresh tool outputs",
+    "original historical byte inventory",
+    "Git observed HEAD"
+  ],
+  "organization_result": "PENDING_AFTER_ARCHIVE_REGRESSION",
+  "whole_platform_result": "REVISE"
+}

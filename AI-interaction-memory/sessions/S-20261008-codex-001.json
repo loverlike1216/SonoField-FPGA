@@ -1,0 +1,122 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
+  "session_id": "S-20261008-codex-001",
+  "sync_status": "PARTIAL",
+  "model": "GPT-6.1 Sol High",
+  "model_provenance": "USER_DECLARED",
+  "started_at": "2026-10-03T20:48:33.371Z",
+  "source_file": "rollout-2026-09-18T23-52-59-01a0b538-9430-7561-9ba4-623f57501f43.jsonl",
+  "previous_cutoff": "2026-10-03T20:47:02.532Z",
+  "cutoff": "2026-10-08T08:27:34.199Z",
+  "compaction_present": true,
+  "incomplete_tail": false,
+  "source_line_count": 9218,
+  "message_count": 14,
+  "tool_call_count": 54,
+  "messages": [
+    {
+      "id": "msg_0eb371c764fa1166016ac169eea1c087d0b843431318fe662a",
+      "role": "assistant",
+      "time": "2026-10-03T20:48:33.371Z",
+      "source_line": 8797,
+      "sha256": "6996367df2c1ffc7343f8c312562a77f3d3676e10a2f7bbdfbf2c490cd93f52b"
+    },
+    {
+      "id": "msg_01a11a80-9ac5-70c2-a541-6203f803ad10",
+      "role": "user",
+      "time": "2026-10-08T07:53:18.277Z",
+      "source_line": 8805,
+      "sha256": "00dfaa146bd5a0430dc5400a430e641fb3a35c823f01c9a09064d1e22f45d330"
+    },
+    {
+      "id": "msg_01a11a80-9acb-74f0-bc3a-1813b87ac31d",
+      "role": "user",
+      "time": "2026-10-08T07:53:18.283Z",
+      "source_line": 8809,
+      "sha256": "fd02e491279cf3f5e7a5cf100143825b838ad36806ebb221e657bdc3efe61ef7"
+    },
+    {
+      "id": "msg_01a11a80-9acf-7f53-95aa-fb10b3c53c22",
+      "role": "user",
+      "time": "2026-10-08T07:53:18.287Z",
+      "source_line": 8811,
+      "sha256": "d3998e1d4b979e3f7a6e032a56fadee15b4c5dfc3464ee8663fda53854383bca"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac74bfa061887d0a8feb1a04bbb33d5",
+      "role": "assistant",
+      "time": "2026-10-08T07:53:29.172Z",
+      "source_line": 8814,
+      "sha256": "3b114ff3f8cf6bfdc6d494af5bf4a31a2dc297d2800a7182e7861bf031f8e865"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac74c2d29e887d0b01133442969feb0",
+      "role": "assistant",
+      "time": "2026-10-08T07:54:21.403Z",
+      "source_line": 8843,
+      "sha256": "21b1e3df020ccbdc534913196a6f4bb836ab78f90817e45b1f1655da8e8ae72a"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac74d8ab73087d0af82dc30cc3385e6",
+      "role": "assistant",
+      "time": "2026-10-08T08:00:10.888Z",
+      "source_line": 8924,
+      "sha256": "d6d9c4357504c9226f58cb3a5e32cc05dc60c6529933d553aab527984b7289e7"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac74f69af6087d0b3e19a1bf0c075a5",
+      "role": "assistant",
+      "time": "2026-10-08T08:08:09.295Z",
+      "source_line": 8998,
+      "sha256": "eeda18581a21fcae23ec42b42386619fa77c01857e29a1bf3ba608f286765fa0"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac74fb6036087d0b1acc995e8714833",
+      "role": "assistant",
+      "time": "2026-10-08T08:09:26.611Z",
+      "source_line": 9037,
+      "sha256": "abdbaf052cbc9ccba9c289e2829b72e30092d3a1721c8f9a0597b8b93cc1b94e"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac75034738487d0a9ef707fb3eae886",
+      "role": "assistant",
+      "time": "2026-10-08T08:11:31.892Z",
+      "source_line": 9066,
+      "sha256": "4facc81756131ac4f16a868859df8250df0d4f79f544d932dd471043f389b32b"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac75120ff0887d095c885ff9c64934a",
+      "role": "assistant",
+      "time": "2026-10-08T08:15:28.427Z",
+      "source_line": 9104,
+      "sha256": "496c89a23bed02b46322821724906e7e97372cad395213684291034fa35d3188"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac752a0029c87d0977c42b95e43ff3f",
+      "role": "assistant",
+      "time": "2026-10-08T08:21:52.457Z",
+      "source_line": 9135,
+      "sha256": "a5018d794877b50c55c6c7f5ad33dee8f80ab59bde581a0d7796771b8c213efd"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac75335203887d0903ed57de160f3c6",
+      "role": "assistant",
+      "time": "2026-10-08T08:24:20.585Z",
+      "source_line": 9153,
+      "sha256": "be6b545695db68fe3df0ed3da08a542c6bdb81b8e225b305850ccee908e13ea4"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac753ee48f887d0a54c490c70cd9bdc",
+      "role": "assistant",
+      "time": "2026-10-08T08:27:24.807Z",
+      "source_line": 9216,
+      "sha256": "b14b4621bc9df547116b4361a6d4f177f3862bd14930845657b035397b634d92"
+    }
+  ],
+  "files": {
+    "codex/S-20261008-codex-001.md": "3a45f9e1a8ab33280e7d6d8f3c9caa56de62e516f94596c3ee6a63c4120cb5c7",
+    "tool-flow/S-20261008-codex-001.md": "8e1696854b34ad73dc096e3e2a078ccca13cb6ebc61712845710a1e17beb9b43"
+  }
+}

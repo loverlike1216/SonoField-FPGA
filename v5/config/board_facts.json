@@ -1,0 +1,29 @@
+{
+  "board": "ALINX AX7020",
+  "active_version": "v5",
+  "classification": "MANUFACTURER_DOCUMENTATION_NOT_PHYSICAL_VERIFICATION",
+  "documented_part": "XC7Z020-2CLG400I",
+  "engineering_ooc_part": "xc7z020clg400-2",
+  "physical_part": null,
+  "physical_board_revision": null,
+  "documented_pl_clock_hz": 50000000,
+  "documented_pl_clock_pin": "U18",
+  "documented_ps_clock_hz": 33333000,
+  "documented_ddr_capacity_bytes": 1073741824,
+  "actual_ddr_capacity_bytes": null,
+  "ps_preset_verified": false,
+  "pins_verified": false,
+  "actual_io_voltage": null,
+  "production_xdc": null,
+  "uart_com": null,
+  "hardware_access_authorized_this_task": false,
+  "source": "https://github.com/alinxalinx/AX7020_2023.1/tree/fcf1e4a239b0f47e8ee95dfde7c2eedc5685c327",
+  "manual": "https://ax7020-20231-v101.readthedocs.io/zh-cn/latest/AX7020UserManual_CN/AX7020UserManual.html",
+  "not_inherited": [
+    "Robei N18 clock",
+    "COM4/FTDI descriptors",
+    "512MiB D9PSK board candidate",
+    "J3-J6 connector assignments",
+    "old board XDC/preset"
+  ]
+}

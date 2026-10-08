@@ -1,0 +1,20 @@
+{
+  "profile_id": "PROVISIONAL_DEMO_V1",
+  "classification": "PROVISIONAL_UNTIL_HARDWARE_VALIDATED",
+  "workspace_mm": [10.0, 10.0, 6.0],
+  "model_workspace_mm": [15.0, 15.0, 10.0],
+  "horizontal_speed_mm_s": [0.5, 3.0, 10.0],
+  "vertical_speed_mm_s": [0.5, 2.0, 5.0],
+  "horizontal_acceleration_mm_s2": 20.0,
+  "vertical_acceleration_mm_s2": 10.0,
+  "update_rate_hz": 50,
+  "corner_radius_mm": 1.0,
+  "trap_neighborhood_mm": 1.0,
+  "trap_max_error_mm": 0.75,
+  "max_waypoints": 64,
+  "max_frames": 12000,
+  "max_repeats": 10,
+  "max_duration_s": 240.0,
+  "buffer_capacity": 4,
+  "underflow_policy": "SAFE_DISABLED"
+}

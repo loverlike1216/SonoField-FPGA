@@ -1,0 +1,37 @@
+python_tests: 1
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD-SonoField-FPGA\v5\scripts\motion_gate.py", line 107, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\AMD-SonoField-FPGA\v5\scripts\motion_gate.py", line 43, in main
+    run('python_tests',[sys.executable,'-m','unittest','discover','-s','tests','-v'])
+  File "E:\Codex_project\AMD-SonoField-FPGA\v5\scripts\motion_gate.py", line 39, in run
+    raise RuntimeError(label+' failed: '+p.stdout[-2000:])
+RuntimeError: python_tests failed: . ok
+test_SW20_control_errors_disable (test_self_calibration.CalibrationTests) ... ok
+test_SW21_rx_reference_is_explicit (test_self_calibration.CalibrationTests) ... ok
+test_SW22_fixed_seed (test_self_calibration.CalibrationTests) ... ok
+test_SW23_invalid_or_relative_lut_rejected (test_self_calibration.CalibrationTests) ... ok
+test_SW24_noisy_integer_tof (test_self_calibration.CalibrationTests) ... ok
+test_SW25_reject_synthetic_reference_for_real_capture (test_self_calibration.CalibrationTests) ... ok
+test_SW26_host_applies_common_frequency_before_field (test_self_calibration.CalibrationTests) ... ok
+test_environment_timeout_preserves_output_and_is_not_rtl_cycle_timeout (test_simulator_timeout.SimulatorTimeoutTests) ... ok
+test_mismatched_path_is_rejected_before_recording_success (test_ui_evidence.UIEvidenceTests) ... ok
+test_saved_path_is_executed_snapshot_not_new_preview (test_ui_evidence.UIEvidenceTests) ... ok
+
+======================================================================
+ERROR: setUpClass (test_motion.MotionTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD-SonoField-FPGA\v5\tests\test_motion.py", line 29, in setUpClass
+    cls.record=json.loads(RECORD.read_text());cls.solver=TrapSolver(load(),cls.record,cls.profile)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\evidence\\self_calibration_stage\\validation_frequency\\self_calibration\\calibration.json'
+
+----------------------------------------------------------------------
+Ran 72 tests in 5.937s
+
+FAILED (errors=1)
+

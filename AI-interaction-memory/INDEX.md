@@ -41,3 +41,11 @@ Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual vis
 
 [S-20261004-codex-001](codex/S-20261004-codex-001.md) · [manifest](sessions/S-20261004-codex-001.json): 11 actual visible messages; cutoff 2026-10-03T20:47:02.532Z; PARTIAL; canonical sanitized SHA256 d033eecc397ea304fbfda2787664ba9b3840a2bb7735bbfc484bbf1a3e12c11a. Provider OpenAI; current model GPT-6.1 Sol High, user-declared; v2; IMPLEMENTATION_INPUT.
 [Tool flow T-20261004-001](tool-flow/T-20261004-001__ddr-identification.md): VALIDATION_INPUT; PARTIAL; official public lookup/native JTAG/two read-only DDRC register outputs linked, no fabricated initialization or DDR result.
+
+
+<!-- CURRENT_V5_CAPTURE -->
+## Current AX7020 v5 capture — 2026-10-08
+
+[S-20261008-codex-001](codex/S-20261008-codex-001.md) · [manifest](sessions/S-20261008-codex-001.json) · [observable tool register](tool-flow/S-20261008-codex-001.md): 14 actual visible messages after previous cutoff, current cutoff 2026-10-08T08:27:34.199Z, PARTIAL. OpenAI; GPT-6.1 Sol High user-declared; IMPLEMENTATION_INPUT. Sanitized canonical transcript SHA256 3a45f9e1a8ab33280e7d6d8f3c9caa56de62e516f94596c3ee6a63c4120cb5c7.
+
+[User-authorized v5 instruction](codex/instructions/ax7020_v5_safe_organization.md) · [actual tool flow T-20261008-001](tool-flow/T-20261008-001__v5-organization.md): VALIDATION_INPUT. Sole active version v5, AX7020; older index entries preserve original version/model provenance. External ChatGPT source SonoField-FPGA remains BLOCKED. No Work/other-agent consultation invented. Secret/privacy scan passed for this export; private raw logs/documents/backup remain local.

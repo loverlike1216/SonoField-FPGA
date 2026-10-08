@@ -1,0 +1,9 @@
+# Scoped source and evidence review — 2026-10-08
+
+Actual keyword scan of current rtl/firmware/software/scripts inspected TODO/FIXME/placeholder/stub/mock/fake/not implemented/skip/disabled. No new fake implementation was added by migration. Existing BoardTransport raises BOARD_TRANSPORT_BLOCKED; serial map capability is intentionally disabled pending hardware qualification. Those are unresolved physical scope, not claimed implemented hardware. GUI disabled widget state and safe abort are normal controls. --skip-xsim/--skip-regression explicitly yield PARTIAL; full baseline does not invoke either. Calibration synthetic data is labeled and kept as explicit fixture.
+
+Closed digital chain tested: UI command -> actual trajectory/solver -> register packet/phase maps -> RTL FIFO/atomic application -> ACK -> UI state; separate raw synthetic ADC/RTL roundtrip -> estimator/calibration -> phase LUT -> RTL checks. Physical PS/UART/AFE/driver/transducer chain is not closed and is NOT_VERIFIED. Firmware C was compiled and exercised with MMIO fixture, never represented as PS executable validation. No threshold/assert or stable RTL/algorithm change from organization.
+
+Independent technical evidence uses Icarus and native Vivado XSim plus Python waveform/geometry references and golden RTL. Standalone source isolation is a separate copied working tree with the same external installed dependencies. No external ChatGPT/Work reviewer or another-computer result exists. Native OOC synthesis report has unconstrained IO boundary warnings and no place/route; internal synthesized slack cannot accept a board.
+
+Historical source byte integrity, copied-file reviewed hashes, source/behavior before-after comparison and full test counts are enforced by organization scripts and retained JSON evidence. Final scoped result depends on real completed gates and normal remote sync, not this self-review alone.

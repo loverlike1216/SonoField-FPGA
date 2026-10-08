@@ -1,0 +1,5 @@
+# Migration dependency RCA — 2026-10-08
+
+Two fresh baselines were retained as FAIL before any archive operation. before_migration failed because motion_gate.py was omitted from the selective copy inventory. before_migration_repaired found a FileNotFoundError in MotionTests.setUpClass; only72 tests ran because the motion class could not initialize. This was not accepted as a reduced test count.
+
+Cause: the old tests and GUI used a historical evidence/calibration.json as a runtime input. Static targeted search identified exactly two readers (test_motion.py and software/ui/app.py). Resolution: copy the original SYNTHETIC record unchanged into simulation/fixtures, update only those two paths; add motion_gate.py and this explicit fixture to the reuse inventory and reviewed hashes. Final copied count186. No test assertions, algorithm behavior, seeds or thresholds changed. Full115 tests, complete motion/waveform/calibration, two simulators and standalone isolation are required before archival. Ordinary dependency repair; no architecture/ChatGPT decision invented.

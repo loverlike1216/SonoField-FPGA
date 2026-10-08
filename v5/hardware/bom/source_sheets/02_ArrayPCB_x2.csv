@@ -1,0 +1,22 @@
+Array PCB ×2 — 每板 64TX + 4RX / 130×130 mm,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Ref/Group,Function,MPN,Qty / board,Qty system,Rail,Fit,Placement,Bring-up,Electrical note,Side,Status,Source,Review
+TX00–63,40k TX,TCT40-10T,64,128,Acoustic,FIT,"Front 8×8,12mm pitch",Stage4→7,Same lot; measure drill first,Front,PRIMARY,Domestic same-lot,Sweep/sort
+RX0–3,Calibration RX,TCT40-10R,4,8,Analog,FIT,Outer calibration points,RX stage,Opposite-side reception,Front,PRIMARY,Same family,Freeze coords
+UDRV0–31,Dual driver,TC4427AEOA713,32,64,VDRV,FIT,"Back, near TX pairs",Stage3→7,100nF+1uF each; input PD,Back,LOCK,C20551,No MOSFET V1
+USR0–15,Serializer,SN74LVC595APWR,16,32,3V3,FIT,Back groups,Stage2,Q0–Q3 used,Back,LOCK,C52287685,STA pre-Gerber
+ULS0–2,Level shift,SN74AXC8T245PWR,3,6,VIO/3V3,FIT,Near IDC,Stage2,FPGA→board,Back,LOCK,C882718,Keep until VCCO known
+UCLK,Clock fanout,SN74LVC244APWR,1,2,3V3,FIT,Balanced branch center,Stage2,"4+4 branches,33R source",Back,LOCK,C7668,Symmetric route
+USAFE,Hard OE,SN74LVC1G32DBVR,1,2,3V3,FIT,Near OE,Stage2,Default disabled,Back,LOCK,C10096,Hardware kill
+UMUX,RX blank,TMUX1574PWR,1,2,5V_A,FIT,Near AFE,RX,Signal/VREF select,Back,LOCK,C2673443,Same-side blank
+UOPA0–1,RX amp,OPA4192IPWR,2,4,5V_A,FIT,Near RX,RX,Gain11×2; bypass,Back,LOCK,TI/LCSC,C0G caps
+UREF,2.5V bias,REF5025AIDR,1,2,5V_A,FIT,AFE center,RX,Star VREF,Back,LOCK,C11341,Quiet route
+UEFUSE,Input eFuse,TPS259470LRPWR,1,2,15V,FIT,After XT30,Stage1,"ILIM~2A, OVLO~17.6",Back,LOCK,C3662793,Copper/thermal
+UMON,Current monitor,INA226AIDGSR,1,2,3V3,FIT,Kelvin shunt,Stage1,20mR,Back,LOCK,C49851,Kelvin
+UT,Board temp,TMP117MAIDRVR,1,2,3V3,FIT,Away from switch node,Stage1,Thermal diag,Back,PREFERRED,C2803242,Not air temp
+U3V3,Logic buck,AP63203WU-7,1,2,15V→3.3,FIT,Power corner,Stage1,Ref layout,Back,LOCK,C780769,Short loop
+U5P5,Analog pre-buck,AP63200WU-7,1,2,15V→5.5,FIT,Power corner,Stage1,590k/100k,Back,LOCK,C2071868,Short loop
+U5V,Clean LDO,ADP7118ACPZN5.0-R7,1,2,5.5→5,FIT,Near AFE,Stage1,2.2uF in/out,Back,LOCK,C659349,Quiet
+JDIG,FPGA digital,2×25 IDC,1,2,Signals,FIT,Edge,Stage2,Alt signal/GND,Back,PREFERRED,LCSC cable,<=200mm
+JCAL,Analog out,KH-5224-8P8C,1,2,Analog,FIT,Edge,RX,4 pair sig+GND,Back,LOCK,C2683357,NO Ethernet
+JPWR,15V input,XT30PW-M30.G.Y,1,2,15V,FIT,Power corner,Stage1,Star branch,Back,LOCK,C431092,Polarity
