@@ -119,3 +119,16 @@ Current validation update — 2026-10-03, GPT-6.1 Sol High: fixed-source recover
 Model: GPT-6.1 Sol High. Active v2 and existing Stage unchanged. Current read-only native Vivado2025.2 scan confirms XC7Z020 IDCODE0x23727093; Micron public decoder identifies D9PSK as MT41K128M16JT-125 IT:K. Photo shows two2Gb x16 devices, but512MiB/32bit remain CANDIDATE. XSDB/AP0 reads DDRC_CTRL0x00000200 andCTRL_REG1 0x0000003E, both documented reset values; controller reset not released, so32bit default field is not board topology proof. No CPU halt/reset/init,DDR memory access,download,COM,GPIO orPCB operation. Original Vivado GUI preserved. Report: parameter_detection/20261004_ddr/RESULT.md; candidate: v2/config/ddr_candidate.json. Existing core115tests/132MHz timing retain their2026-10-03 source/date; not rerun today.
 
 B01 remains resolved by prior user full-part confirmation and JTAG family; B03 remains PARTIALLY_RESOLVED, with actual PS/DDR configuration, PS clock/reset/UART and VCCO unknown. Missing manufacturer/reference configuration is BOARD_MATCHED_PS_DDR_CONFIGURATION_OR_MANUFACTURER_TOPOLOGY_MISSING. Observed reset-only state is DDR_CONTROLLER_OBSERVED_IN_RESET_NO_EFFECTIVE_CONFIGURATION. Neither means defective DDR. Generic ZedBoard/ZC702 presets and guessed capacity cannot close these gates.
+
+
+## Current AX7020 v5 blockers — 2026-10-08
+
+Prior B01/B03 etc above retain Robei/v2 historical scope; they are not reopened or closed as AX7020 facts. Current blockers:
+
+- V5-B01: Physical AX7020 board/revision/order code/VCCO and documented-pin match not verified
+- V5-B03: Revision-matched PS DDR/clock/preset, XSA/BSP and real host transport/PS-PL runtime absent
+- V5-B04: Production IO/XDC/external timing, actual serializer/driver/ADC/safety qualification not completed
+- V5-B05: 10mm emitter batch, RX phase reference, physical trap and measured particle milestones not tested
+- CHAT_MEMORY_ACCESS_BLOCKED: No supported tool to read external ChatGPT SonoField-FPGA history/review
+
+No organization/source-path blocker remains after real gates. These blockers prevent physical/full-platform acceptance, not continuation of current digital development. No board access/programming was performed this iteration.

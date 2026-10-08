@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "public_file": "v5/evidence/baseline/before_migration/motion_full.log",
+      "original_sha256_bytes": "36a613c97af541a4b696fd5752137e15935bab33232d58d4d2a6313ad2c37d41",
+      "public_canonical_sha256": "d2180d2f8c2014ff98543cace9cae332fc84a4badc76bdfc84eed0f858cd6d37",
+      "policy": "Redact personal user-home prefix; tool outcome unchanged; exact original kept locally"
+    },
+    {
+      "public_file": "v5/evidence/baseline/before_migration_repaired/motion_full.log",
+      "original_sha256_bytes": "add9b64cae0623638d0d42d2ccdf0ce227c134bee011bfea2838718cddbef860",
+      "public_canonical_sha256": "1b72d5ca6a6ac7d226c0ce47720dca4c6314a88cb9d50c0b3fcde76a43165897",
+      "policy": "Redact personal user-home prefix; tool outcome unchanged; exact original kept locally"
+    },
+    {
+      "public_file": "v5/evidence/baseline/before_migration_repaired/motion/python_tests.log",
+      "original_sha256_bytes": "ea76640e5cf0094d6454877217dd480e5a6f948c203704097b6050999ffbcb46",
+      "public_canonical_sha256": "237f6e1a360fb332d18827f9bd2778615cf47f579287f35d34de179ba480a7a8",
+      "policy": "Redact personal user-home prefix; tool outcome unchanged; exact original kept locally"
+    }
+  ]
+}

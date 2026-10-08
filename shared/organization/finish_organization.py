@@ -11,8 +11,36 @@ if __name__=='__main__':
         assert b['status']=='PASS' and b['python_tests']==115 and b['frame_count']==3696,(n,b.get('error'))
         assert b['determinism']['runs']==4 and b['determinism']['status']=='PASS'
     before=results[names[0]]
+    native=(V/'evidence/synthesis/project_reopen.log').read_text(encoding='utf-8')
+    assert 'V5_NATIVE_PROJECT_REOPEN_PASS source_files=18 internal_period_ns=7.576' in native
+    assert 'No legacy candidate MMCM exists in the synthesized design.' in native
     assert all(b['source_sha256']==before['source_sha256'] for b in results.values()),'Source delta during organization'
     assert all(b['determinism']['hashes']==before['determinism']['hashes'] for b in results.values()),'Behavior delta'
+    fixed=[];calibration_records=[];provenance=[]
+    for n in names:
+        rr=V/'evidence/baseline'/n/'motion/regression'
+        wave=json.loads((rr/'summary.json').read_text(encoding='utf-8'))
+        cal=json.loads((rr/'self_calibration/summary.json').read_text(encoding='utf-8'))
+        assert wave['status']==cal['status']=='PASS'
+        record=json.loads((rr/'self_calibration/calibration.json').read_text(encoding='utf-8'))
+        calibration_records.append(record)
+        provenance.append({'baseline':n,'git_commit':record['git_commit'],
+            'calibration_raw_artifact_sha256':cal['repeated_artifacts'][0]['calibration.json']})
+        fixed.append({'waveform_TB15':wave['TB15']['hashes'],
+            'ADC_roundtrip_sha256':[a['sha256'] for a in cal['adc_roundtrips']],
+            'calibration_repeated_numerical_artifacts':[{k:v for k,v in a.items() if k!='calibration.json'} for a in cal['repeated_artifacts']],
+            'calibration_all_fields_except_git_commit_sha256':hashlib.sha256(json.dumps(
+                {k:v for k,v in record.items() if k!='git_commit'},sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()})
+    assert all(x==fixed[0] for x in fixed),'Waveform/ADC/calibration fixed-input delta'
+    archive_record=json.loads((R/'archive/manifests/MIGRATION_MANIFEST.json').read_text(encoding='utf-8'))
+    expected_commits=['851d1ef747cd95da13e5eb0705b5a7885b68d83c',archive_record['recovery_commit'],'851d1ef747cd95da13e5eb0705b5a7885b68d83c']
+    assert [p['git_commit'] for p in provenance]==expected_commits,'Unexpected calibration provenance'
+    for record in calibration_records[1:]:
+        assert set(record)==set(calibration_records[0])
+        assert all(record[k]==calibration_records[0][k] for k in record if k!='git_commit'),'Additional calibration field difference'
+    dump(V/'evidence/baseline/CALIBRATION_PROVENANCE_DIFF.json',{'status':'EXPECTED_METADATA_DIFFERENCE',
+        'changed_fields_only':['git_commit'],'raw_records_preserved':True,'records':provenance,
+        'all_other_fields_exactly_equal':True,'comparison_rule':'Only the independently verified recovery Git provenance may differ; no numerical or arbitrary metadata normalization'})
     preserved=preservation()
     head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip()
     base='851d1ef747cd95da13e5eb0705b5a7885b68d83c'
@@ -25,6 +53,8 @@ if __name__=='__main__':
       'historical_files_preserved':len(preserved),'history_moves':0,'history_deletions':0,
       'hardware_verified':False,'full_board_timing':'NOT_RUN','classification':'ORGANIZATION_AND_DIGITAL_BASELINE_ONLY',
       'recovery_commit':archive['recovery_commit'],'checked_at':now}
+    comparison['independent_fixed_inputs']=fixed[0]
+    comparison['calibration_raw_json']='DIFFERENT_ONLY_EXPECTED_GIT_COMMIT; see CALIBRATION_PROVENANCE_DIFF.json'
     dump(V/'evidence/baseline/COMPARISON.json',comparison)
     write(V/'evidence/BASELINE_VALIDATION.md',f'''# AX7020 v5 baseline validation — 2026-10-08
 
@@ -42,7 +72,7 @@ Current model: GPT-6.1 Sol High (user-declared). Scope: directory integrity, ind
 | Phase/burst exact-cycle equivalence | PASS in both tools | PASS in both tools | PASS in both tools |
 | Source and inherited-copy hash integrity | PASS | Identical | Identical |
 
-Summaries/logs: baseline/before_migration_complete, baseline/after_migration, baseline/standalone; canonical COMPARISON.json. The standalone workspace contains only a v5 copy, no v1/v2/v3/shared/archive at its parent. It uses the declared external Python interpreter and tool binaries; this proves source/data path independence, not a fresh dependency installation or another computer.
+Summaries/logs: baseline/before_migration_complete, baseline/after_migration, baseline/standalone; canonical COMPARISON.json. Calibration raw JSON hashes differ only in git_commit(base vs recovery commit); CALIBRATION_PROVENANCE_DIFF.json preserves actual raw hashes/commits, checks those exact expected commits and exact equality of every other field. Numerical calibration/LUT/quality/ADC/waveform results remain identical; raw JSON byte identity is not claimed across different provenance commits. The standalone workspace contains only a v5 copy, no v1/v2/v3/shared/archive at its parent. It uses the declared external Python interpreter and tool binaries; this proves source/data path independence, not a fresh dependency installation or another computer.
 
 Earlier failures preserved: before_migration missing motion_gate.py; before_migration_repaired missing an implicit synthetic calibration input (72 tests ran, FAIL). Dependency RCA is shared/organization/DEPENDENCY_RCA.md. Repaired by explicit copies/local input paths, never dropping assertions/tests. No previous failed result overwritten.
 

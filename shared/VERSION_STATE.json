@@ -1,17 +1,23 @@
 {
-  "active_version": "v2",
-  "highest_version": "v3",
+  "active_version": "v5",
+  "highest_version": "v5",
   "status": "ACTIVE",
+  "version_status": "ACTIVE",
   "upgrade_pending": false,
   "pending_target": null,
+  "version_directory": "v5",
   "frozen_versions": [
-    "v1"
+    "v1",
+    "v2"
   ],
-  "legacy_versions": [],
-  "version_directory": "v2",
-  "approval_source": "Latest user instruction pauses v3 and explicitly reactivates v2; v1 remains frozen",
   "paused_versions": [
     "v3"
   ],
-  "v3_baseline": "INCOMPLETE_USER_PAUSED"
+  "legacy_versions": [],
+  "absent_versions": [
+    "v4"
+  ],
+  "approval_source": "User actual attachment e8213cac-ae60-4eee-bb3e-6461d16eaf66, explicit existing v5 AX7020 development authorization",
+  "v3_baseline": "INCOMPLETE_USER_PAUSED_UNTRACKED_LOCAL_HISTORY",
+  "updated_at": "2026-10-08T09:04:30.639280+00:00"
 }

@@ -78,9 +78,9 @@ ERROR: setUpClass (test_motion.MotionTests)
 Traceback (most recent call last):
   File "E:\Codex_project\AMD-SonoField-FPGA\v5\tests\test_motion.py", line 29, in setUpClass
     cls.record=json.loads(RECORD.read_text());cls.solver=TrapSolver(load(),cls.record,cls.profile)
-  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1134, in read_text
+  File "[USER_HOME]\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1134, in read_text
     with self.open(mode='r', encoding=encoding, errors=errors) as f:
-  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1119, in open
+  File "[USER_HOME]\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1119, in open
     return self._accessor.open(self, mode, buffering, encoding, errors,
 FileNotFoundError: [Errno 2] No such file or directory: 'E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\evidence\\self_calibration_stage\\validation_frequency\\self_calibration\\calibration.json'
 

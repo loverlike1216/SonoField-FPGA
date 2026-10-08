@@ -7,7 +7,7 @@ import sync_codex as sync
 from archive_after_baseline import write,dump
 
 if __name__=='__main__':
-    source=Path('C:/Users/loverlike/.codex/sessions/2026/09/18/rollout-2026-09-18T23-52-59-01a0b538-9430-7561-9ba4-623f57501f43.jsonl')
+    source=Path.home()/'.codex/sessions/2026/09/18/rollout-2026-09-18T23-52-59-01a0b538-9430-7561-9ba4-623f57501f43.jsonl'
     meta,messages,calls,boundary=sync.extract(source,R)
     after='2026-10-03T20:47:02.532Z'
     messages=[m for m in messages if m['time']>after]
@@ -36,7 +36,7 @@ Only actual observable user messages and assistant commentary/final are captured
         old=json.loads(target.read_text(encoding='utf-8'));current={m['id']:m['sha256'] for m in messages}
         assert all(current.get(m['id'])==m['sha256'] for m in old['messages']),'Never silently mutate captured source events'
     write(root/'codex'/f'{sid}.md',transcript);write(root/'tool-flow'/f'{sid}.md',flow);dump(target,manifest)
-    attachment=Path('C:/Users/loverlike/.codex/attachments/e8213cac-ae60-4eee-bb3e-6461d16eaf66/已粘贴的文本.txt')
+    attachment=Path.home()/'.codex/attachments/e8213cac-ae60-4eee-bb3e-6461d16eaf66/已粘贴的文本.txt'
     raw=attachment.read_text(encoding='utf-8-sig');sanitized=sync.sanitize(raw)
     write(root/'codex/instructions/ax7020_v5_safe_organization.md',sanitized)
     dump(root/'codex/instructions/ax7020_v5_safe_organization.provenance.json',{'source':'User actual attachment e8213cac-ae60-4eee-bb3e-6461d16eaf66',

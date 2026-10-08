@@ -3,7 +3,7 @@
 Canonical ChatGPT history: [SonoField-FPGA](../AI-chat-memory/SonoField-FPGA.md), BLOCKED.
 Codex records below are distinct from external ChatGPT history. Provider: OpenAI.
 Work, other AI and cross-agent consultations: none captured; no participation invented.
-Source timestamps are UTC. Current recovery: v2 / TIMING_CLOSURE_REAL_BOARD_INTEGRATION_AND_PRE_PCB_INTERFACE_FREEZE / GPT-6.1 Sol High. Older rows retain their historical capture scope.
+Source timestamps are UTC. Current recovery: v5 / AX7020_V5_SAFE_ORGANIZATION_AND_STANDALONE_BASELINE / GPT-6.1 Sol High. Older rows retain their historical capture scope.
 
 | Thread / Session | Role / Impact | First used | Last captured | Record | Status | Content SHA256 |
 |---|---|---|---|---|---|---|
@@ -43,9 +43,13 @@ Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual vis
 [Tool flow T-20261004-001](tool-flow/T-20261004-001__ddr-identification.md): VALIDATION_INPUT; PARTIAL; official public lookup/native JTAG/two read-only DDRC register outputs linked, no fabricated initialization or DDR result.
 
 
+
+
+
+
 <!-- CURRENT_V5_CAPTURE -->
 ## Current AX7020 v5 capture — 2026-10-08
 
-[S-20261008-codex-001](codex/S-20261008-codex-001.md) · [manifest](sessions/S-20261008-codex-001.json) · [observable tool register](tool-flow/S-20261008-codex-001.md): 14 actual visible messages after previous cutoff, current cutoff 2026-10-08T08:27:34.199Z, PARTIAL. OpenAI; GPT-6.1 Sol High user-declared; IMPLEMENTATION_INPUT. Sanitized canonical transcript SHA256 3a45f9e1a8ab33280e7d6d8f3c9caa56de62e516f94596c3ee6a63c4120cb5c7.
+[S-20261008-codex-001](codex/S-20261008-codex-001.md) · [manifest](sessions/S-20261008-codex-001.json) · [observable tool register](tool-flow/S-20261008-codex-001.md): 22 actual visible messages after previous cutoff, current cutoff 2026-10-08T09:05:15.238Z, PARTIAL. OpenAI; GPT-6.1 Sol High user-declared; IMPLEMENTATION_INPUT. Sanitized canonical transcript SHA256 04a33c8c83823e7341762cea442fa2e9e5f9d411cc6ed22607044ea8e68579f0.
 
 [User-authorized v5 instruction](codex/instructions/ax7020_v5_safe_organization.md) · [actual tool flow T-20261008-001](tool-flow/T-20261008-001__v5-organization.md): VALIDATION_INPUT. Sole active version v5, AX7020; older index entries preserve original version/model provenance. External ChatGPT source SonoField-FPGA remains BLOCKED. No Work/other-agent consultation invented. Secret/privacy scan passed for this export; private raw logs/documents/backup remain local.

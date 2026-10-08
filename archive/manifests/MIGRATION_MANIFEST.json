@@ -1,0 +1,204 @@
+{
+  "created_at": "2026-10-08T08:37:59.335033+00:00",
+  "recovery_commit": "4cd42172dbbb1b4a2fc45d8f0d33d28f2efcc0fe",
+  "baseline": "v5/evidence/baseline/before_migration_complete/summary.json",
+  "baseline_status": "PASS",
+  "moves": 0,
+  "deletions": 0,
+  "governance_snapshot_files": 15,
+  "operations": [
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": ".gitignore",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/.gitignore",
+      "sha256_bytes": "feec9389b317b9274990386e7e45433ca8df66d193998bf4dcd529d115449d16",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "AGENTS.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/AGENTS.md",
+      "sha256_bytes": "56be53e4dcda2eff94066739cf377be2f38237396cf4f95ae2ce1bed2934a3b4",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "CHANGELOG.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/CHANGELOG.md",
+      "sha256_bytes": "88d4a371bdd0d47d5c70bff501fb0df225af8d79c98d6fe4cb9e7981416131f5",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "README.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/README.md",
+      "sha256_bytes": "1cfa298ae2c2051cad811a05e7c874c20168cc44bae564db191e3fd7f4343429",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/ACCEPTANCE.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/ACCEPTANCE.md",
+      "sha256_bytes": "277c4a901b69ba6e0269a2c190749ccf7d3f7934181b52c60ce6cbb564f91f1e",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/BLOCKERS.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/BLOCKERS.md",
+      "sha256_bytes": "8d187b18ba13e8f66c7e641ddf0ef9e6ac8c536251bd0a800516105a37947e80",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/CHANGELOG.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/CHANGELOG.md",
+      "sha256_bytes": "e59f8e3531f69434e243d0add4693abde27c14346ad3118842c1bbbf7772f653",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/CONTEXT_CHECKPOINT.json",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/CONTEXT_CHECKPOINT.json",
+      "sha256_bytes": "19e7debc1ebbe59122b21c4a3999babf3d8e03b8ff22c088e3573d58575bab97",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/CONTEXT_CHECKPOINT.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/CONTEXT_CHECKPOINT.md",
+      "sha256_bytes": "5c6b36a5d526338af5408fac06a22910d72dd628ed8c4acd16cb4b33a80e3f00",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/CURRENT_PLAN.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/CURRENT_PLAN.md",
+      "sha256_bytes": "3e2ef9acd67bd779afcbfbb523f87110441e7744fab4e7b3288ed893a13504f6",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/DECISIONS.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/DECISIONS.md",
+      "sha256_bytes": "aaa57f1a242332ac45f9f2aea0e1ec71e71b7ec53a7d2959d44ee0f5e088ecd3",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/PROJECT_STATE.json",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/PROJECT_STATE.json",
+      "sha256_bytes": "45dd75ea98c6975f723ed70b9798d0ead3d287a95e75df2785d590658536496c",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/PROJECT_STATE.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/PROJECT_STATE.md",
+      "sha256_bytes": "a6d7f9bbcc9734fdfecf62dd16813591feb5153ad359a985e02336177c18281b",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "shared/VERSION_STATE.json",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/shared/VERSION_STATE.json",
+      "sha256_bytes": "02560a9272bf4a3a4154c6995f95d678400573383607be3706635fa5a333c111",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "COPY_SNAPSHOT",
+      "original_path": "指南.md",
+      "target_path": "archive/historical_evidence/pre_v5_20261008/指南.md",
+      "sha256_bytes": "84ae7c332e47e3fe2cfe017795422812ed8f2eff0c43ec8e168b94645ad9b345",
+      "reason": "Preserve pre-v5 governance before current state updates",
+      "restore": "Read this snapshot or git show recovery/base commit; restore only after review"
+    },
+    {
+      "operation": "INDEX_KEEP_IN_PLACE",
+      "original_path": "v1",
+      "target_path": "v1",
+      "index": "archive/legacy_versions/README.md",
+      "sha256_manifest": "shared/organization/HISTORICAL_HASHES_BEFORE.json",
+      "reason": "Existing historical source/reproduction links; no risky relocation needed",
+      "restore": "No restore necessary: original path/bytes unchanged; Git history and private backup retained"
+    },
+    {
+      "operation": "INDEX_KEEP_IN_PLACE",
+      "original_path": "v2",
+      "target_path": "v2",
+      "index": "archive/legacy_versions/README.md",
+      "sha256_manifest": "shared/organization/HISTORICAL_HASHES_BEFORE.json",
+      "reason": "Existing historical source/reproduction links; no risky relocation needed",
+      "restore": "No restore necessary: original path/bytes unchanged; Git history and private backup retained"
+    },
+    {
+      "operation": "INDEX_KEEP_IN_PLACE",
+      "original_path": "v3",
+      "target_path": "v3",
+      "index": "archive/legacy_versions/README.md",
+      "sha256_manifest": "shared/organization/HISTORICAL_HASHES_BEFORE.json",
+      "reason": "Existing historical source/reproduction links; no risky relocation needed",
+      "restore": "No restore necessary: original path/bytes unchanged; Git history and private backup retained"
+    },
+    {
+      "operation": "INDEX_KEEP_IN_PLACE",
+      "original_path": "Zynq7020",
+      "target_path": "Zynq7020",
+      "index": "archive/legacy_board/README.md",
+      "sha256_manifest": "shared/organization/HISTORICAL_HASHES_BEFORE.json",
+      "reason": "Existing historical source/reproduction links; no risky relocation needed",
+      "restore": "No restore necessary: original path/bytes unchanged; Git history and private backup retained"
+    },
+    {
+      "operation": "INDEX_KEEP_IN_PLACE",
+      "original_path": "parameter_detection",
+      "target_path": "parameter_detection",
+      "index": "archive/legacy_board/README.md",
+      "sha256_manifest": "shared/organization/HISTORICAL_HASHES_BEFORE.json",
+      "reason": "Existing historical source/reproduction links; no risky relocation needed",
+      "restore": "No restore necessary: original path/bytes unchanged; Git history and private backup retained"
+    },
+    {
+      "operation": "INDEX_KEEP_IN_PLACE",
+      "original_path": "PCB",
+      "target_path": "PCB",
+      "index": "archive/legacy_pcb/README.md",
+      "sha256_manifest": "shared/organization/HISTORICAL_HASHES_BEFORE.json",
+      "reason": "Existing historical source/reproduction links; no risky relocation needed",
+      "restore": "No restore necessary: original path/bytes unchanged; Git history and private backup retained"
+    },
+    {
+      "operation": "INDEX_KEEP_IN_PLACE",
+      "original_path": "BOM",
+      "target_path": "BOM",
+      "index": "archive/legacy_pcb/README.md",
+      "sha256_manifest": "shared/organization/HISTORICAL_HASHES_BEFORE.json",
+      "reason": "Existing historical source/reproduction links; no risky relocation needed",
+      "restore": "No restore necessary: original path/bytes unchanged; Git history and private backup retained"
+    },
+    {
+      "operation": "INDEX_KEEP_IN_PLACE",
+      "original_path": "evidence",
+      "target_path": "evidence",
+      "index": "archive/historical_evidence/README.md",
+      "sha256_manifest": "shared/organization/HISTORICAL_HASHES_BEFORE.json",
+      "reason": "Existing historical source/reproduction links; no risky relocation needed",
+      "restore": "No restore necessary: original path/bytes unchanged; Git history and private backup retained"
+    }
+  ],
+  "local_private_backup_receipt": "shared/organization/UNTRACKED_BACKUP_RECEIPT.json"
+}
