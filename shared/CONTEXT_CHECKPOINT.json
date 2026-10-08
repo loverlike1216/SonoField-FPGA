@@ -1,21 +1,21 @@
 {
-  "checkpoint_id": "CP-20261008-002",
+  "checkpoint_id": "CP-20261008-003",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
   "branch": "main",
-  "base_commit": "851d1ef747cd95da13e5eb0705b5a7885b68d83c",
-  "head_commit": "c84a0c3e2fc47672d65aff6c89aafa75220f12eb",
+  "base_commit": "0f42f49443bf001a147b2d58e2ae939bbcac38ce",
+  "head_commit": "0f42f49443bf001a147b2d58e2ae939bbcac38ce",
   "commit_scope": "Evidence-bearing source/recovery HEAD observed before this checkpoint commit; not a self-referential checkpoint commit",
   "active_version": "v5",
   "authorized_target_version": "v5",
   "version_status": "ACTIVE",
   "current_stage": "AX7020_V5_SAFE_ORGANIZATION_AND_STANDALONE_BASELINE",
   "current_model": "GPT-6.1 Sol High",
-  "created_at": "2026-10-08T09:06:47.976573+00:00",
+  "created_at": "2026-10-08T11:16:56.427509+00:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Complete organization/standalone evidence reconciled",
+  "checkpoint_reason": "BOM-only review produced sourced analog/package/protection findings; no stage/version/architecture change",
   "source_of_truth": "repository",
   "status": "VALID",
   "architecture_ref": "v5/docs/architecture/SELF_CALIBRATION.md",
@@ -37,10 +37,16 @@
       "item": "Historical original byte preservation",
       "status": "TESTED",
       "files": 3343
+    },
+    {
+      "item": "2026-10-08 new BOM72-row static quantity/formula checks and unchanged import",
+      "status": "TESTED",
+      "scope": "Static workbook checks only; electrical review REVISE"
     }
   ],
   "next_actions": [
-    "Commit/push/verify current scoped delivery",
+    "Finish scoped BOM normal GitHub sync and verify workbook bytes",
+    "Resolve reviewed BOM electrical/package/ADC issues in a separately authorized implementation task",
     "Verify actual AX7020 revision/PS DDR/clock/XSA/BSP/IO before board integration"
   ],
   "active_decisions": [
@@ -52,7 +58,8 @@
     "MATCHED_PS_DDR_XSA_BSP",
     "PRODUCTION_IO_EXTERNAL_TIMING",
     "REAL_TRANSPORT_AND_ACOUSTICS",
-    "CHAT_MEMORY_ACCESS_BLOCKED"
+    "CHAT_MEMORY_ACCESS_BLOCKED",
+    "V5-BOM_REVIEW"
   ],
   "critical_issues": [],
   "latest_validation": [
@@ -75,7 +82,9 @@
     "Full-board implementation/bitstream NOT_RUN",
     "Standalone uses same installed dependencies, not another computer",
     "External ChatGPT BLOCKED; observable Codex transcript PARTIAL",
-    "Untracked/private originals remain local; not all local data is published"
+    "Untracked/private originals remain local; not all local data is published",
+    "New candidate BOM not electrically released; inherited runtime hardware_parts unchanged",
+    "AD7606B analog bandwidth qualification and package/protection fixes pending; no new physical evidence"
   ],
   "do_not_change": [
     "Frozen original versions/byte hashes/history",
@@ -91,7 +100,9 @@
     "Default Windows shell pwsh7",
     "All runtime inputs local to v5; tool binaries/interpreter may be external"
   ],
-  "open_ai_problems": [],
+  "open_ai_problems": [
+    "P-20261008-001"
+  ],
   "historical_ai_problems": "AI-problem (retained original version provenance, no automatic execution)",
   "evidence_refs": [
     "shared/organization/DIRECTORY_AUDIT.md",
@@ -99,10 +110,12 @@
     "v5/config/inheritance_manifest.json",
     "shared/organization/HISTORICAL_INTEGRITY.json",
     "v5/evidence/baseline/before_migration_complete/summary.json",
-    "v5/evidence/synthesis/loaded_sources.txt"
+    "v5/evidence/synthesis/loaded_sources.txt",
+    "v5/hardware/bom/submissions/2026-10-08/submission.json",
+    "AI-problem/problem/P-20261008-001__adc-40khz-bandwidth.md"
   ],
   "resume_from": "Read v5/README.md and current shared state/checkpoint/plan; verify current Git then actual AX7020 platform preflight; do not scan all history",
-  "repository_delta_since_previous_checkpoint": "User now explicitly authorizes AX7020 v5; no model-only change;186 copies and fresh current digital/OOC evidence, isolated old board state; prior records retain original provenance",
+  "repository_delta_since_previous_checkpoint": "Unchanged new user BOM import;72-row arithmetic PASS; official ADC40kHz/package/protection findings; OPEN P-20261008-001; no source/PCB/board operation. Existing digital validation entries retained with their original evidence scope.",
   "state_conflicts": [
     {
       "old": "shared activev2 and pausedv3",
@@ -118,5 +131,6 @@
     "Git observed HEAD"
   ],
   "organization_result": "ACCEPT WITH LIMITATIONS",
-  "whole_platform_result": "REVISE"
+  "whole_platform_result": "REVISE",
+  "previous_checkpoint": "CP-20261008-002"
 }

@@ -9,3 +9,5 @@
 7. NEXT verify actual AX7020 revision/device/VCCO/clock and matching official PS/DDR/preset/XSA/BSP, allocate reviewed IO/transport and integration contract. No bitstream or unknown GPIO allowed before qualification.
 
 Do Not Change: stable core/protocol/registers/calibration separation/atomic update/safety/geometry/test criteria; frozen histories; no new version without explicit approval; do not import Robei board configurations or historical PASS. Stop if new facts require core architectural change. Default read scope v5/shared/current valid decisions only.
+
+2026-10-08 scoped side task: DONE review and import updated72-row AX7020/NU40C10T BOM without edits; GitHub sync follows. Resolve package/protection/safety/passive/interface findings and OPEN P-20261008-001 before electrical release. This does not authorize implementing the companion PCB proposal or changing the retained ADC. Prior board qualification next action stays applicable.

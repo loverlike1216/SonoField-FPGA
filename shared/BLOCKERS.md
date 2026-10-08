@@ -132,3 +132,7 @@ Prior B01/B03 etc above retain Robei/v2 historical scope; they are not reopened 
 - CHAT_MEMORY_ACCESS_BLOCKED: No supported tool to read external ChatGPT SonoField-FPGA history/review
 
 No organization/source-path blocker remains after real gates. These blockers prevent physical/full-platform acceptance, not continuation of current digital development. No board access/programming was performed this iteration.
+
+## Current v5 BOM review — 2026-10-08
+
+V5-BOM_REVIEW: REVISE / electrical release HOLD. Source and findings:v5/hardware/bom/submissions/2026-10-08/submission.json. ADP7118 wrong package; TVS/eFuse surge coordination; AD7606B40kHz bandwidth(P-20261008-001 OPEN); exactTX/RX specifications; external timing/pin map/powered-off safety and passive-net qualification. No new hardware/PCB test. Earlier v2 blockers above retain historical board scope.

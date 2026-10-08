@@ -1,3 +1,7 @@
 # AX7020 v5 organization handoff
 
 Goal: standalone current source with recoverable history. Inputs: direct user authorization, base851d1ef747cd95da13e5eb0705b5a7885b68d83c, validated parent core, official ALINX documents, real installed tools. Changes:186 copies/local fixtures/board gates,current v5 scripts/docs; frozen governance snapshots/index archive, no original moves/deletions. Tests: full115 and two-tool regression three complete baseline runs; native OOC synthesis/reopen. Evidence:v5/evidence/BASELINE_VALIDATION.md,baseline/COMPARISON.json,shared/organization/HISTORICAL_INTEGRITY.json. Failures: two omitted dependency attempts retained then repaired without relaxing tests. Unresolved: AX7020 actual revision/PS platform/production IO/timing/real transport/acoustics; external ChatGPT inaccessible. Next: current checkpoint and normal remote sync, then board-integration preflight contract. Current model GPT-6.1 Sol High. Recovery:4cd42172dbbb1b4a2fc45d8f0d33d28f2efcc0fe.
+
+## Subsequent BOM-only review — 2026-10-08
+
+User scope: compatibility/feasibility/stability review plus BOM GitHub sync. Latest workbook and sourced findings: v5/hardware/bom/submissions/2026-10-08/.72-row static arithmetic passed; not Excel recalculation/ERC/hardware evidence. Open ADC analog40kHz issue:P-20261008-001. Keep inherited hardware_parts/RTL unchanged until a later authorized decision. Existing digital evidence remains historical/current baseline, not a new analog validation. Unrelated user root BOM deletion, PCB backup and local historical draft untouched.

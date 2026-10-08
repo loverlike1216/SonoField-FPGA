@@ -16,7 +16,9 @@
   "chat_source_name": "SonoField-FPGA",
   "chat_access_status": "CHAT_MEMORY_ACCESS_BLOCKED",
   "chat_sync_status": "BLOCKED",
-  "open_ai_problems": [],
+  "open_ai_problems": [
+    "P-20261008-001"
+  ],
   "historical_problem_index": "AI-problem/",
   "problem_revalidation": "No historical board-specific decision automatically executed on AX7020",
   "blocking_issues": [
@@ -24,7 +26,8 @@
     "V5-B03",
     "V5-B04",
     "V5-B05",
-    "CHAT_MEMORY_ACCESS_BLOCKED"
+    "CHAT_MEMORY_ACCESS_BLOCKED",
+    "V5-BOM_REVIEW"
   ],
   "critical_issues": [],
   "organization_blockers": [],
@@ -70,13 +73,17 @@
       "evidence": "Same Git origin, HEAD and preserved staged changes found under renamed parent; original path absent"
     }
   ],
-  "latest_context_checkpoint": "CP-20261008-002",
-  "checkpoint_status": "VALID",
+  "latest_context_checkpoint": "CP-20261008-003",
+  "checkpoint_status": "VALID_PENDING_COMMIT",
   "next_action": "Verify actual AX7020 revision and official matching PS/DDR/clock/IO platform; define board integration contract before implementation or programming",
-  "updated_at": "2026-10-08T09:04:30.639280+00:00",
-  "checkpoint_commit": "39426ea96d2dd495474a7ec0db4e6b9ebc13b8cf",
-  "checkpoint_evidence_base_commit": "c84a0c3e2fc47672d65aff6c89aafa75220f12eb",
+  "updated_at": "2026-10-08T11:16:56.427509+00:00",
+  "checkpoint_commit": null,
+  "checkpoint_evidence_base_commit": "0f42f49443bf001a147b2d58e2ae939bbcac38ce",
   "last_remote_verified_source_commit": "39426ea96d2dd495474a7ec0db4e6b9ebc13b8cf",
   "last_remote_verified_at": "2026-10-08T09:08:24.328225+00:00",
-  "git_sync_receipt": "shared/organization/GIT_SYNC.json"
+  "git_sync_receipt": "shared/organization/GIT_SYNC.json",
+  "latest_bom_submission": "v5/hardware/bom/submissions/2026-10-08/BOM_AX7020_NU40C10T_2026-10-08.xlsx",
+  "latest_bom_review": "v5/hardware/bom/submissions/2026-10-08/submission.json",
+  "latest_bom_review_status": "REVISE",
+  "bom_electrical_release": "HOLD"
 }

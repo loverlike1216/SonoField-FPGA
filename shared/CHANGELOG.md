@@ -6,3 +6,5 @@
 ## 2026-10-08 — authorized AX7020 v5 safe organization
 
 Copied186 reviewed source/reference assets; isolated paths and explicit synthetic fixtures; full115 tests and dual-simulator digital gates pass before/after and standalone. Native documented-part OOC synthesis completed. Original3343 non-cache files unchanged; prior governance snapshots/indexes archived, no source move/deletion. v5 is active, v1/v2 frozen, v3 paused, v4 absent. Physical integration NOT_VERIFIED. Current model GPT-6.1 Sol High.
+
+2026-10-08 /v5 /GPT-6.1 Sol High: reviewed user-updated72-row AX7020/NU40C10T BOM, imported byte-identical workbook separately from inherited BOM, verified static quantity arithmetic, sourced official electrical/package/timing constraints; review REVISE/HOLD. Opened P-20261008-001 for analog40kHz ADC qualification; no architecture/code/PCB/hardware changes. Normal scoped GitHub sync.
