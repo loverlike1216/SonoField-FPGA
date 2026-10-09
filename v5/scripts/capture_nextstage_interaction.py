@@ -37,13 +37,14 @@ def main():
             continue
         kind = payload.get('type')
         if kind == 'message' and payload.get('role') in ('user', 'assistant'):
-            if payload.get('role') == 'assistant' and payload.get('channel') not in ('commentary', 'final'):
+            channel = payload.get('channel', payload.get('phase'))
+            if payload.get('role') == 'assistant' and channel not in ('commentary', 'final'):
                 continue
             chunks = [c.get('text', '') for c in payload.get('content', []) if isinstance(c, dict) and 'text' in c]
             body = '\n'.join(chunks)
             if body:
                 public = redact(body)
-                messages.append(dict(role=payload['role'], channel=payload.get('channel'), timestamp=timestamp,
+                messages.append(dict(role=payload['role'], channel=channel, message_id=payload.get('id', 'UNKNOWN'), timestamp=timestamp,
                     source_line=number, raw_text_sha256=digest(body.encode()), public_text_sha256=digest(public.encode()), text=public))
         elif kind in ('function_call', 'custom_tool_call', 'function_call_output', 'custom_tool_call_output'):
             observed = payload.get('arguments', payload.get('input', payload.get('output', '')))
