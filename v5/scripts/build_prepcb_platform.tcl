@@ -49,7 +49,7 @@ foreach {a b} {bram_clk clkb bram_rst rstb bram_en enb bram_we web bram_addr add
 }
 set concat [create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:* irq_concat]
 set_property CONFIG.NUM_PORTS 5 $concat
-set_property CONFIG.PCW_NUM_F2P_INTR_INPUTS 5 $ps
+# PCW_NUM_F2P_INTR_INPUTS is read-only and propagated from irq_concat.
 connect_bd_net [get_bd_pins pl_core/irq] [get_bd_pins irq_concat/In0]
 connect_bd_net [get_bd_pins service_io/ip2intc_irpt] [get_bd_pins irq_concat/In1]
 connect_bd_net [get_bd_pins irq_concat/dout] [get_bd_pins ps7/IRQ_F2P]
@@ -69,8 +69,31 @@ connect_bd_net [get_bd_pins ps7/FCLK_CLK0] [get_bd_pins pl_core/clk] [get_bd_pin
 connect_bd_net [get_bd_pins reset/peripheral_aresetn] [get_bd_pins pl_core/rst_n] [get_bd_pins interconnect/M02_ARESETN] [get_bd_pins interconnect/M03_ARESETN] [get_bd_pins interconnect/M04_ARESETN] [get_bd_pins interconnect/M05_ARESETN]
 make_bd_intf_pins_external [get_bd_intf_pins ps7/FIXED_IO]
 foreach p {health adc_busy adc_dout adc_reset adc_convst adc_cs_n adc_sclk adc_sdi rx_blank serial_data shift_clock latch_clock output_disable heartbeat efuse_up efuse_dn} {make_bd_pins_external [get_bd_pins pl_core/$p]}
-assign_bd_address
+# An inferred 32-bit AXI aperture otherwise consumes the entire GP0 window.
+# Assign every peripheral explicitly and fail when any required segment is absent.
+set address_file [open [file join $out ps_address_map.tsv] w]
+puts $address_file "slave\toffset\trange\tmaster_segment"
+foreach {slave offset} {
+ pl_core/S_AXI/reg0 0x40000000
+ task_bram/S_AXI/Mem0 0x42000000
+ service_io/S_AXI/Reg 0x41200000
+ i2c_center/S_AXI/Reg 0x41600000
+ i2c_upper/S_AXI/Reg 0x41610000
+ i2c_lower/S_AXI/Reg 0x41620000
+} {
+ assign_bd_address -offset $offset -range 0x00010000 -target_address_space [get_bd_addr_spaces ps7/Data] [get_bd_addr_segs $slave] -force
+ set mapped [get_bd_addr_segs -addressing -of_objects [get_bd_addr_segs $slave]]
+ if {[llength $mapped] != 1} {error "Required PS peripheral is not uniquely mapped: $slave ($mapped)"}
+ set actual_offset [get_property OFFSET $mapped]
+ set actual_range [get_property RANGE $mapped]
+ if {$actual_offset != $offset || $actual_range != 65536} {error "Incorrect PS address map: $slave $actual_offset $actual_range"}
+ puts $address_file "$slave\t$actual_offset\t$actual_range\t$mapped"
+}
+close $address_file
 validate_bd_design
+set irq_count [get_property CONFIG.PCW_NUM_F2P_INTR_INPUTS $ps]
+if {$irq_count != 5} {error "PS interrupt propagation failed: expected 5, got $irq_count"}
+set f [open [file join $out ps_irq_count.txt] w];puts $f $irq_count;close $f
 save_bd_design
 generate_target all [get_files prepcb_ps.bd]
 make_wrapper -files [get_files prepcb_ps.bd] -top -import
