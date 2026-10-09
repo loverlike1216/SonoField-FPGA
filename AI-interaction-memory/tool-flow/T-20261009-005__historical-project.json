@@ -2,7 +2,7 @@
   "project_id": "SONOFIELD_FPGA",
   "active_version": "v5",
   "sync_status": "PARTIAL",
-  "cutoff": "2026-10-09T16:14:43.269Z",
+  "cutoff": "2026-10-09T16:25:21.276Z",
   "scope": "Actual current task tool inputs/output excerpts and fullcontent hashes; hidden reasoning and bitmap content excluded",
   "events": [
     {
@@ -1004,6 +1004,182 @@
       "call_id": "call_d9fb6f141cd64cefba0f1043ea0385e5",
       "content_sha256": "fbb86fc55354000d9bd0c55adafbbecaffc877f98bbed86af2db705fd83f84fc",
       "observable_excerpt": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: E:/Codex_project/AMD_Sonofield/.migration-private/seal_historical_review.py\\n+from pathlib import Path\\n+import csv,hashlib,json,re,subprocess\\n+R=Path(__file__).resolve().parents[1];O=R/'v5/evidence/repository_cleanup/20261009'\\n+def git(*args):return subprocess.check_output(['git','-C',str(R),*args],stderr=subprocess.PIPE)\\n+def load(p):return json.loads(p.read_text(encoding='utf-8'))\\n+def save(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+final=load(O/'FINAL_VERIFICATION.json');assert final['status']=='PASS'\\n+final['native_ooc'].update(synthesis_warnings_each=28,critical_warnings=0,errors=0)\\n+final['evidence_refs']+=['NATIVE_WARNING_AUDIT.json','default_read_audit.json','historical_index_navigation.json','IMPLEMENTATION_REVIEW.json']\\n+save(O/'FINAL_VERIFICATION.json',final)\\n+report='''# SonoField-FPGA v5 历史隔离候选迁移报告\\n+\\n+迁移专项结论：**ACCEPT WITH LIMITATIONS**，可供用户和独立 Reviewer 审核。整机结论仍为 **REVISE**，PCB/制造保持 HOLD。当前没有合并 main，没有进行任何实板编程、复位、DDR RAM、UART/GPIO 或 PCB 制造操作。\\n+\\n+## 身份与 Repository Reconciliation\\n+\\n+| 项目 | 核验事实 |\\n+|---|---|\\n+| PROJECT_ID / 正式仓库 | SONOFIELD_FPGA / https://github.com/loverlike1216/SonoField-FPGA.git |\\n+| 活动版本 / 沙盒 | v5 / E:/Codex_project/AMD_Sonofield；不是版本升级 |\\n+| main 基准 | ecd32e76e9b6c08806eae30a3c75a9c3be5e7570 |\\n+| 迁移前完整 v5 | 7dda49f00983c57d06ac639ad70bdaff9696e900 |\\n+| 实际独立环境测试代码 | 3e788f4a2763c0354ca66d3836d0709dcf9f0107 |\\n+| 迁移分支 | codex/v5-historical-project-isolation-20261009 |\\n+| 新历史根 | Historical project/，大小写与空格完全一致 |\\n+\\n+指令中的 main 快照较旧：完整 v5 已位于未合并 PR #2，候选沙盒已有 history_old/，当前 BLOCKERS/ACCEPTANCE 已是 v5，测试已从 115 增至 171。本分支从最新 main 创建，再普通快进纳入完整 v5 候选；main 没有移动。新 PR 包含仍未合并的 #1/#2 祖先提交，审核时必须明确处理这些依赖。\\n+\\n+## 实际移动与完"
+    },
+    {
+      "time": "2026-10-09T16:14:45.979Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_d9fb6f141cd64cefba0f1043ea0385e5",
+      "content_sha256": "e90ce4225b1f25a19048c0d69d6743b7ce00bff9bd1d5680c86fdbf8c0ad87ce",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 2.8 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{}\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"6d6051\\\",\\\"wall_time_seconds\\\":2.5793003,\\\"exit_code\\\":0,\\\"original_token_count\\\":38,\\\"output\\\":\\\"{\\\\\\\"messages\\\\\\\": 15, \\\\\\\"tools\\\\\\\": 125, \\\\\\\"cutoff\\\\\\\": \\\\\\\"2026-10-09T16:14:43.269Z\\\\\\\"}\\\\r\\\\n{\\\\r\\\\n  \\\\\\\"status\\\\\\\": \\\\\\\"PASS_REVIEWED_STAGE\\\\\\\",\\\\r\\\\n  \\\\\\\"paths\\\\\\\": 578,\\\\r\\\\n  \\\\\\\"bytes\\\\\\\": 21347398\\\\r\\\\n}\\\\r\\\\n\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:15:48.045Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_20c184937bb24914b9f7e0a3652ed2c1",
+      "content_sha256": "1c2a3e7b5b41cdff91bca7ea4d72ada4ed36d449f1c5f16d41cb55e9c636ad35",
+      "observable_excerpt": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/.migration-private/historical_verify.py\\n@@\\n-save('VIVADO_COMPARISON.json',dict(status='PASS',before=b,after=a,equal_fields=list(b),scope='Exact current create_project native OOC synthesis/reopen, not prePCB routedtop or targetboard timing',limitations=['2324inputs/256outputs missing external delays','No current v5 physical PS/DDR/UART/pins qualification','No hardware operation, bitstream or board P&R']))\\n+native_result=dict(status='PASS',before=b,after=a,equal_fields=list(b),scope='Exact current create_project native OOC synthesis/reopen, not prePCB routedtop or targetboard timing',limitations=['2324inputs/256outputs missing external delays','No current v5 physical PS/DDR/UART/pins qualification','No hardware operation, bitstream or board P&R'])\\n+if (O/'VIVADO_COMPARISON.json').exists():\\n+    old_result=json.loads((O/'VIVADO_COMPARISON.json').read_text(encoding='utf-8'))\\n+    for name in ('clean_clone','three_native_runs_equal'):\\n+        if name in old_result:native_result[name]=old_result[name]\\n+save('VIVADO_COMPARISON.json',native_result)\\n*** End Patch\"));\ntext(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'; & .venv/Scripts/python.exe .migration-private/historical_verify.py\\n& .venv/Scripts/python.exe v5/scripts/check_workspace_migration.py --freeze-base 7dda49f00983c57d06ac639ad70bdaff9696e900 --output v5/evidence/repository_cleanup/20261009/final_integrity.json > v5/evidence/repository_cleanup/20261009/final_integrity.log\\nif ($LASTEXITCODE -ne 0) { throw 'Final current integrity failed' }\\ngit diff --cached --check\\nif ($LASTEXITCODE -ne 0) { throw 'Staged whitespace check failed' }\\ngit diff --check\\nif ($LASTEXITCODE -ne 0) { throw 'Working diff whitespace"
+    },
+    {
+      "time": "2026-10-09T16:15:51.188Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_20c184937bb24914b9f7e0a3652ed2c1",
+      "content_sha256": "2d94631d9d848e906663f5623902851395bc226295d6a4ba1605171102c7203d",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 3.1 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{}\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"6e64f4\\\",\\\"wall_time_seconds\\\":2.9535924,\\\"exit_code\\\":0,\\\"original_token_count\\\":125,\\\"output\\\":\\\"{\\\\r\\\\n  \\\\\\\"status\\\\\\\": \\\\\\\"PASS_STRUCTURAL_NATIVE\\\\\\\",\\\\r\\\\n  \\\\\\\"moved\\\\\\\": 3911,\\\\r\\\\n  \\\\\\\"kept\\\\\\\": 2759,\\\\r\\\\n  \\\\\\\"v5_same\\\\\\\": 2693,\\\\r\\\\n  \\\\\\\"native\\\\\\\": {\\\\r\\\\n    \\\\\\\"Slice LUTs\\\\\\\": 7219,\\\\r\\\\n    \\\\\\\"Slice Registers\\\\\\\": 17918,\\\\r\\\\n    \\\\\\\"Block RAM Tile\\\\\\\": 4\\\\r\\\\n  },\\\\r\\\\n  \\\\\\\"wns\\\\\\\": 0.994,\\\\r\\\\n  \\\\\\\"whs\\\\\\\": 0.157\\\\r\\\\n}\\\\r\\\\n .../20261009/search_exclusion.json                 |    10 +\\\\r\\\\n .../20261009/tracked_manifest_after.csv            |  6671 +++++++++\\\\r\\\\n .../20261009/tracked_manifest_before.csv           |  6671 +++++++++\\\\r\\\\n 579 files changed, 316432 insertions(+), 62 deletions(-)\\\\r\\\\n\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:17:05.625Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_ed0b597a04be4dbdafa74cbd6b8235be",
+      "content_sha256": "cad1007f03d20ceb6192e19409482baddc04f2b5c434279d39f2f92e4eeddc8d",
+      "observable_excerpt": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'; @'\\nfrom pathlib import Path\\nimport hashlib,json,subprocess\\nr=Path.cwd();o=r/'v5/evidence/repository_cleanup/20261009'\\ndef git(*a):return subprocess.check_output(['git',*a],stderr=subprocess.PIPE)\\ngit('add','--','v5/evidence/repository_cleanup/20261009')\\npaths=[p.decode() for p in git('ls-files','-z','--','v5/evidence/repository_cleanup/20261009').split(b'\\\\0') if p]\\nrows=[]\\nfor name in paths:\\n if name.endswith('/EVIDENCE_HASHES.json'):continue\\n b=(r/name).read_bytes();oid=hashlib.sha1(b'blob '+str(len(b)).encode()+b'\\\\0'+b).hexdigest()\\n cached=git('rev-parse',':'+name).decode().strip();assert oid==cached,('Raw artifact bytes were filtered',name)\\n rows.append(dict(path=name,size=len(b),sha256=hashlib.sha256(b).hexdigest(),git_blob=oid))\\n(o/'EVIDENCE_HASHES.json').write_text(json.dumps(dict(status='PASS',scope='Published evidence payload excluding this manifest itself; later publication receipt stored separately',source_before='7dda49f00983c57d06ac639ad70bdaff9696e900',tested_source_after='3e788f4a2763c0354ca66d3836d0709dcf9f0107',hash_policy='RAW_FILE_BYTES_EQUAL_STAGED_GIT_BLOB_NO_FILTERS',files=rows),ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\ngit('add','--','v5/evidence/repository_cleanup/20261009/EVIDENCE_HASHES.json')\\nassert git('diff','3e788f4a2763c0354ca66d3836d0709dcf9f0107','--','v5/rtl','v5/software','v5/firmware','v5/tests','v5/tb','v5/scripts','v5/simulation','v5/config','v5/hardware')==b''\\nprint(json.dumps(dict(status='PASS_RAW_EVIDENCE_SEAL',artifacts=len(rows),bytes=sum(x['size'] for x in rows),runtime_source_delta_after_tested_commit=0)))\\n'@ | & .venv/Scripts/python.exe -\\ngit diff --cached --check\\nif ($LASTEXITCODE -ne 0) { throw 'Final staged diff failed' }"
+    },
+    {
+      "time": "2026-10-09T16:17:15.822Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_ed0b597a04be4dbdafa74cbd6b8235be",
+      "content_sha256": "cb6ec334156c9874843d7c6a7e713f9c804522a36501612f186f352bb3e84f92",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 10.2 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"0035c3\\\",\\\"wall_time_seconds\\\":10.0131109,\\\"session_id\\\":49163,\\\"original_token_count\\\":0,\\\"output\\\":\\\"\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:17:54.637Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_e71aaf710fa749cda553f93485108c48",
+      "content_sha256": "5439780bbaf00f4308d97917d61a5e0353fe79fbeac56d9943d88164c2c4442a",
+      "observable_excerpt": "text(await tools.write_stdin({session_id:49163,chars:\"\",yield_time_ms:1000,max_output_tokens:1500}));\ntext(await tools.exec_command({cmd:\"git fetch origin; if ($LASTEXITCODE -ne 0) { throw 'Final remote refresh failed' }; $remoteMain=(git rev-parse origin/main).Trim(); if ($remoteMain -ne 'ecd32e76e9b6c08806eae30a3c75a9c3be5e7570') { throw 'main changed: reconcile before publication' }; git ls-remote --heads origin refs/heads/codex/v5-historical-project-isolation-20261009; git status --porcelain=v1; git rev-parse HEAD\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1200,\"yield_time_ms\":1000}));\n"
+    },
+    {
+      "time": "2026-10-09T16:17:57.900Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_e71aaf710fa749cda553f93485108c48",
+      "content_sha256": "6cf61a19465c0b783a394b34728ae7997e61ece0610785b87f7e0d2e0e944ffa",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 3.3 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"37a7c3\\\",\\\"wall_time_seconds\\\":0.0000082,\\\"exit_code\\\":0,\\\"original_token_count\\\":41,\\\"output\\\":\\\"{\\\\\\\"status\\\\\\\": \\\\\\\"PASS_RAW_EVIDENCE_SEAL\\\\\\\", \\\\\\\"artifacts\\\\\\\": 563, \\\\\\\"bytes\\\\\\\": 21788384, \\\\\\\"runtime_source_delta_after_tested_commit\\\\\\\": 0}\\\\r\\\\n939280960e6baddaf5d190b9c7f8534eb0b6fb16\\\\n\\\"}\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"5a54e5\\\",\\\"wall_time_seconds\\\":3.0728162,\\\"exit_code\\\":0,\\\"original_token_count\\\":11,\\\"output\\\":\\\"939280960e6baddaf5d190b9c7f8534eb0b6fb16\\\\n\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:18:12.294Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_680e8b37910f46d38d6a87ec5286d760",
+      "content_sha256": "8b68facb97783bbd4efff02228d448a645b57c0b9c242621bd3bd24db4f75c1c",
+      "observable_excerpt": "text(await tools.exec_command({cmd:\"git push --set-upstream origin codex/v5-historical-project-isolation-20261009\\nif ($LASTEXITCODE -ne 0) { throw 'Normal candidate push failed' }\\ngh pr create --repo loverlike1216/SonoField-FPGA --base main --head codex/v5-historical-project-isolation-20261009 --draft --title 'chore(v5): isolate frozen history in Historical project with full regression' --body-file .migration-private/historical_pr_body.md\\nif ($LASTEXITCODE -ne 0) { throw 'Draft PR creation failed' }\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":2000,\"yield_time_ms\":1000}));\n"
+    },
+    {
+      "time": "2026-10-09T16:18:22.489Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_680e8b37910f46d38d6a87ec5286d760",
+      "content_sha256": "17ad88470d8b9bc940ba6393b3826f689c6f44835620eca7f6afdcfd6b42d77d",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 10.2 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"58f860\\\",\\\"wall_time_seconds\\\":10.0081072,\\\"session_id\\\":93675,\\\"original_token_count\\\":0,\\\"output\\\":\\\"\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:19:31.952Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_6c12e38b1f984791893c011ef2cda4cf",
+      "content_sha256": "85a03e71b577ccda7295712ba1b5853760db36a6e44c0e2a4e10bb66da77ec6a",
+      "observable_excerpt": "text(await tools.write_stdin({session_id:93675,chars:\"\",yield_time_ms:1000,max_output_tokens:2300}));\ntext(await tools.exec_command({cmd:\"Get-Date -Format o; gh pr list --repo loverlike1216/SonoField-FPGA --head codex/v5-historical-project-isolation-20261009 --json number,url,headRefOid,state,isDraft,baseRefName; gh run list --repo loverlike1216/SonoField-FPGA --branch codex/v5-historical-project-isolation-20261009 --limit 4 --json databaseId,event,status,conclusion,headSha,url\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1500,\"yield_time_ms\":1000}));\n"
+    },
+    {
+      "time": "2026-10-09T16:19:40.245Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_6c12e38b1f984791893c011ef2cda4cf",
+      "content_sha256": "9866b2677bbe2947246b13aff06e2a63085f9bd3c6be29332a53de24fc6d1214",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 8.3 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"6a33a6\\\",\\\"wall_time_seconds\\\":5.0060703,\\\"session_id\\\":93675,\\\"original_token_count\\\":0,\\\"output\\\":\\\"\\\"}\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"961d44\\\",\\\"wall_time_seconds\\\":3.1052708,\\\"exit_code\\\":0,\\\"original_token_count\\\":11,\\\"output\\\":\\\"2026-10-10T00:19:37.2528457+08:00\\\\r\\\\n[]\\\\n[]\\\\n\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:20:10.717Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_5d2946b724624428b2a6b8058d308fed",
+      "content_sha256": "ef7ad3a7b2124fae21c4239f643b25a58bc18ddc4a0a04ed26cd00432e3a94c5",
+      "observable_excerpt": "text(await tools.exec_command({cmd:\"Get-Process git,git-remote-https,git-pack-objects,gh -ErrorAction SilentlyContinue | Select-Object Id,ProcessName,CPU,StartTime | ConvertTo-Json -Compress; Get-Date -Format o; git ls-remote --heads origin refs/heads/codex/v5-historical-project-isolation-20261009\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1200,\"yield_time_ms\":1000}));\n"
+    },
+    {
+      "time": "2026-10-09T16:20:16.446Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_5d2946b724624428b2a6b8058d308fed",
+      "content_sha256": "feacd4c623fd5f561ded7bcab2d821098f3c6f50d1c34ce19e28d325395bea70",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 5.7 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"860396\\\",\\\"wall_time_seconds\\\":5.5569136,\\\"exit_code\\\":0,\\\"original_token_count\\\":156,\\\"output\\\":\\\"[{\\\\\\\"Id\\\\\\\":17800,\\\\\\\"ProcessName\\\\\\\":\\\\\\\"git\\\\\\\",\\\\\\\"CPU\\\\\\\":0.03125,\\\\\\\"StartTime\\\\\\\":\\\\\\\"2026-10-10T00:18:12.6005528+08:00\\\\\\\"},{\\\\\\\"Id\\\\\\\":39232,\\\\\\\"ProcessName\\\\\\\":\\\\\\\"git\\\\\\\",\\\\\\\"CPU\\\\\\\":0.015625,\\\\\\\"StartTime\\\\\\\":\\\\\\\"2026-10-10T00:18:12.6250593+08:00\\\\\\\"},{\\\\\\\"Id\\\\\\\":48380,\\\\\\\"ProcessName\\\\\\\":\\\\\\\"git\\\\\\\",\\\\\\\"CPU\\\\\\\":0.03125,\\\\\\\"StartTime\\\\\\\":\\\\\\\"2026-10-10T00:18:14.7611419+08:00\\\\\\\"},{\\\\\\\"Id\\\\\\\":51552,\\\\\\\"ProcessName\\\\\\\":\\\\\\\"git\\\\\\\",\\\\\\\"CPU\\\\\\\":0.34375,\\\\\\\"StartTime\\\\\\\":\\\\\\\"2026-10-10T00:18:14.7889723+08:00\\\\\\\"},{\\\\\\\"Id\\\\\\\":51988,\\\\\\\"ProcessName\\\\\\\":\\\\\\\"git\\\\\\\",\\\\\\\"CPU\\\\\\\":0.03125,\\\\\\\"StartTime\\\\\\\":\\\\\\\"2026-10-10T00:18:12.654765+08:00\\\\\\\"},{\\\\\\\"Id\\\\\\\":12252,\\\\\\\"ProcessName\\\\\\\":\\\\\\\"git-remote-https\\\\\\\",\\\\\\\"CPU\\\\\\\":0.078125,\\\\\\\"StartTime\\\\\\\":\\\\\\\"2026-10-10T00:18:12.6821671+08:00\\\\\\\"}]\\\\r\\\\n2026-10-10T00:20:11.0368174+08:00\\\\r\\\\n\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:20:51.219Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_468bb36b68ba4329bc27408da7c13d18",
+      "content_sha256": "89aac526efe8ad158e69d38a17cf97938a179cdf6eb111f87f568c194753d734",
+      "observable_excerpt": "text(await tools.exec_command({cmd:\"Get-CimInstance Win32_Process | Where-Object {$_.Name -like 'git*' -or $_.Name -like '*credential*'} | ForEach-Object { $action='OTHER_GIT'; foreach ($word in @('pack-objects','send-pack','credential-manager','credential','push','remote-https','fetch')) { if ($_.CommandLine -match [regex]::Escape($word)) { $action=$word; break } }; [pscustomobject]@{PID=$_.ProcessId;ParentPID=$_.ParentProcessId;Name=$_.Name;Action=$action} } | ConvertTo-Json -Compress\\nGet-Date -Format o\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1200}));\ntext(await tools.write_stdin({session_id:93675,chars:\"\",yield_time_ms:1000,max_output_tokens:2000}));\n"
+    },
+    {
+      "time": "2026-10-09T16:20:51.900Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_468bb36b68ba4329bc27408da7c13d18",
+      "content_sha256": "4f31a13c6b332c1ab484d4c505dd4eeb655df17764441e7557178e4da7bc117e",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 0.7 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"cafa83\\\",\\\"wall_time_seconds\\\":0.4866807,\\\"exit_code\\\":0,\\\"original_token_count\\\":9,\\\"output\\\":\\\"2026-10-10T00:20:51.8468874+08:00\\\\r\\\\n\\\"}\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"3e788d\\\",\\\"wall_time_seconds\\\":0.0000066,\\\"exit_code\\\":0,\\\"original_token_count\\\":154,\\\"output\\\":\\\"remote: \\\\nremote: Create a pull request for 'codex/v5-historical-project-isolation-20261009' on GitHub by visiting:        \\\\nremote:      https://github.com/loverlike1216/SonoField-FPGA/pull/new/codex/v5-historical-project-isolation-20261009        \\\\nremote: \\\\nTo https://github.com/loverlike1216/SonoField-FPGA.git\\\\n * [new branch]      codex/v5-historical-project-isolation-20261009 -> codex/v5-historical-project-isolation-20261009\\\\nbranch 'codex/v5-historical-project-isolation-20261009' set up to track 'origin/codex/v5-historical-project-isolation-20261009'.\\\\nhttps://github.com/loverlike1216/SonoField-FPGA/pull/3\\\\n\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:21:03.136Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_d63600093fac4479bafd30aaed224f2e",
+      "content_sha256": "1a2029e9e9bb6342f5ed92db4f72e02d5e2f99166946178feab963d16631bb3d",
+      "observable_excerpt": "const r=await Promise.allSettled([\ntools.exec_command({cmd:\"gh pr view 3 --repo loverlike1216/SonoField-FPGA --json url,number,headRefOid,baseRefName,headRefName,isDraft,state,statusCheckRollup,mergeStateStatus; gh run list --repo loverlike1216/SonoField-FPGA --branch codex/v5-historical-project-isolation-20261009 --limit 4 --json databaseId,event,status,conclusion,headSha,url; git ls-remote origin refs/heads/main refs/heads/codex/v5-historical-project-isolation-20261009\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":2400,\"yield_time_ms\":1000}),\ntools.exec_command({cmd:\"$env:PYTHONUTF8='1'; @'\\nimport json,subprocess\\nj=json.loads(subprocess.check_output(['gh','api','repos/loverlike1216/SonoField-FPGA/git/trees/939280960e6baddaf5d190b9c7f8534eb0b6fb16']))\\nprint(json.dumps(dict(sha=j['sha'],root=[dict(path=x['path'],mode=x['mode'],type=x['type'],sha=x['sha']) for x in j['tree']]),indent=2))\\n'@ | & .venv/Scripts/python.exe -\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1800,\"yield_time_ms\":1000})\n]);r.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "time": "2026-10-09T16:21:10.421Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_d63600093fac4479bafd30aaed224f2e",
+      "content_sha256": "3043646ef148e1dcac581c13f6bcafa79b0cf9a4c642f7db2ee39be72563fd8d",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 7.3 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{\\\"i\\\":0,\\\"status\\\":\\\"fulfilled\\\",\\\"value\\\":{\\\"chunk_id\\\":\\\"5384f8\\\",\\\"wall_time_seconds\\\":7.0870237,\\\"exit_code\\\":0,\\\"original_token_count\\\":379,\\\"output\\\":\\\"{\\\\\\\"baseRefName\\\\\\\":\\\\\\\"main\\\\\\\",\\\\\\\"headRefName\\\\\\\":\\\\\\\"codex/v5-historical-project-isolation-20261009\\\\\\\",\\\\\\\"headRefOid\\\\\\\":\\\\\\\"939280960e6baddaf5d190b9c7f8534eb0b6fb16\\\\\\\",\\\\\\\"isDraft\\\\\\\":true,\\\\\\\"mergeStateStatus\\\\\\\":\\\\\\\"CLEAN\\\\\\\",\\\\\\\"number\\\\\\\":3,\\\\\\\"state\\\\\\\":\\\\\\\"OPEN\\\\\\\",\\\\\\\"statusCheckRollup\\\\\\\":[{\\\\\\\"__typename\\\\\\\":\\\\\\\"CheckRun\\\\\\\",\\\\\\\"completedAt\\\\\\\":\\\\\\\"2026-10-09T16:20:46Z\\\\\\\",\\\\\\\"conclusion\\\\\\\":\\\\\\\"SUCCESS\\\\\\\",\\\\\\\"detailsUrl\\\\\\\":\\\\\\\"https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37958420085/job/113914754837\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"integrity\\\\\\\",\\\\\\\"startedAt\\\\\\\":\\\\\\\"2026-10-09T16:20:39Z\\\\\\\",\\\\\\\"status\\\\\\\":\\\\\\\"COMPLETED\\\\\\\",\\\\\\\"workflowName\\\\\\\":\\\\\\\"v5 workspace integrity\\\\\\\"},{\\\\\\\"__typename\\\\\\\":\\\\\\\"CheckRun\\\\\\\",\\\\\\\"completedAt\\\\\\\":\\\\\\\"2026-10-09T16:20:44Z\\\\\\\",\\\\\\\"conclusion\\\\\\\":\\\\\\\"SUCCESS\\\\\\\",\\\\\\\"detailsUrl\\\\\\\":\\\\\\\"https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37958411424/job/113914723506\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"integrity\\\\\\\",\\\\\\\"startedAt\\\\\\\":\\\\\\\"2026-10-09T16:20:35Z\\\\\\\",\\\\\\\"status\\\\\\\":\\\\\\\"COMPLETED\\\\\\\",\\\\\\\"workflowName\\\\\\\":\\\\\\\"v5 workspace integrity\\\\\\\"}],\\\\\\\"url\\\\\\\":\\\\\\\"https://github.com/loverlike1216/SonoField-FPGA/pull/3\\\\\\\"}\\\\n[{\\\\\\\"conclusion\\\\\\\":\\\\\\\"success\\\\\\\",\\\\\\\"databaseId\\\\\\\":37958420085,\\\\\\\"event\\\\\\\":\\\\\\\"pull_request\\\\\\\",\\\\\\\"headSha\\\\\\\":\\\\\\\"939280960e6baddaf5d190b9c7f8534eb0b6fb16\\\\\\\",\\\\\\\"status\\\\\\\":\\\\\\\"completed\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37958420085\\\\\\\"},{\\\\\\\"conclusion\\\\\\\":\\\\\\\"success\\\\\\\","
+    },
+    {
+      "time": "2026-10-09T16:22:58.997Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_6d55a755a87a40669768077ad35eb79c",
+      "content_sha256": "676d6e988171511f31901d9441cc3b3b64d43deae67c616f5e562a3a501daa34",
+      "observable_excerpt": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: E:/Codex_project/AMD_Sonofield/.migration-private/historical_publication_receipt.py\\n+from pathlib import Path\\n+import datetime,hashlib,json,subprocess\\n+R=Path(__file__).resolve().parents[1];C=R/'.portability/historical_clean_20261009';D=R/'shared/repository_cleanup'\\n+EVIDENCE='939280960e6baddaf5d190b9c7f8534eb0b6fb16';SOURCE='3e788f4a2763c0354ca66d3836d0709dcf9f0107';MAIN='ecd32e76e9b6c08806eae30a3c75a9c3be5e7570';BRANCH='codex/v5-historical-project-isolation-20261009'\\n+def command(*args,cwd=R):return subprocess.check_output(list(args),cwd=cwd,stderr=subprocess.PIPE)\\n+def git(*args,cwd=R):return command('git',*args,cwd=cwd)\\n+def gh(*args):return json.loads(command('gh',*args))\\n+def write(p,s):p.write_text(s,encoding='utf-8',newline='\\\\n')\\n+def save(p,v):write(p,json.dumps(v,ensure_ascii=False,indent=2)+'\\\\n')\\n+pr=gh('pr','view','3','--repo','loverlike1216/SonoField-FPGA','--json','url,number,headRefOid,baseRefName,headRefName,isDraft,state,statusCheckRollup,mergeStateStatus')\\n+runs=gh('run','list','--repo','loverlike1216/SonoField-FPGA','--branch',BRANCH,'--limit','6','--json','databaseId,event,status,conclusion,headSha,url')\\n+selected=[x for x in runs if x['headSha']==EVIDENCE and x['event'] in ('push','pull_request')]\\n+assert {x['event'] for x in selected}=={'push','pull_request'} and all(x['conclusion']=='success' for x in selected)\\n+assert pr['headRefOid']==EVIDENCE and pr['isDraft'] and pr['state']=='OPEN' and pr['baseRefName']=='main'\\n+refs=dict((line.split()[1],line.split()[0]) for line in git('ls-remote','origin','refs/heads/main','refs/heads/'+BRANCH).decode().splitlines())\\n+assert refs['refs/heads/main']==MAIN and refs['refs/heads/'+BRANCH]==EVIDENCE\\n+root=gh('api','repos/loverlike12"
+    },
+    {
+      "time": "2026-10-09T16:23:09.193Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_6d55a755a87a40669768077ad35eb79c",
+      "content_sha256": "ba311d7d67e445569f5defdaff69dbe6eeb7248d48ec8e80773985e10d892c57",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 10.2 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{}\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"c029c4\\\",\\\"wall_time_seconds\\\":10.0071329,\\\"session_id\\\":22977,\\\"original_token_count\\\":0,\\\"output\\\":\\\"\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:24:14.182Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_7bd72e28a72e4d94903e1520137c3e95",
+      "content_sha256": "396c600bfd14301cb3686e5a76ee4657963d805cb19230a772484b5474d65561",
+      "observable_excerpt": "text(await tools.write_stdin({session_id:22977,chars:\"\",yield_time_ms:1000,max_output_tokens:1600}));\ntext(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'; & .venv/Scripts/python.exe .migration-private/sync_historical_observable.py\\nrg -n '停止并等待用户人工批准|Gate 7' AI-interaction-memory/codex/instructions/v5_historical_project_20261009.md\\nGet-Date -Format o; git status --short -uno\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1600}));\n"
+    },
+    {
+      "time": "2026-10-09T16:24:14.823Z",
+      "type": "custom_tool_call_output",
+      "tool": "RESULT",
+      "call_id": "call_7bd72e28a72e4d94903e1520137c3e95",
+      "content_sha256": "73fd409fe5b23aff25630b2887068d50b48726e2881b52d38d72d8de3d3f430e",
+      "observable_excerpt": "[{\"type\": \"input_text\", \"text\": \"Script completed\\nWall time 0.6 seconds\\nOutput:\\n\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"152c28\\\",\\\"wall_time_seconds\\\":0.0000097,\\\"exit_code\\\":0,\\\"original_token_count\\\":58,\\\"output\\\":\\\"{\\\\r\\\\n  \\\\\\\"status\\\\\\\": \\\\\\\"READY_FOR_USER_REVIEW\\\\\\\",\\\\r\\\\n  \\\\\\\"pr\\\\\\\": \\\\\\\"https://github.com/loverlike1216/SonoField-FPGA/pull/3\\\\\\\",\\\\r\\\\n  \\\\\\\"evidence_commit\\\\\\\": \\\\\\\"939280960e6baddaf5d190b9c7f8534eb0b6fb16\\\\\\\",\\\\r\\\\n  \\\\\\\"ci\\\\\\\": \\\\\\\"PUSH_AND_PR_PASS\\\\\\\",\\\\r\\\\n  \\\\\\\"main_merged\\\\\\\": false\\\\r\\\\n}\\\\r\\\\n\\\"}\"}, {\"type\": \"input_text\", \"text\": \"{\\\"chunk_id\\\":\\\"aec5f1\\\",\\\"wall_time_seconds\\\":0.4627701,\\\"exit_code\\\":0,\\\"original_token_count\\\":176,\\\"output\\\":\\\"{\\\\\\\"messages\\\\\\\": 18, \\\\\\\"tools\\\\\\\": 145, \\\\\\\"cutoff\\\\\\\": \\\\\\\"2026-10-09T16:24:14.243Z\\\\\\\"}\\\\r\\\\n222:5. **停止并等待用户人工批准合并 `main`**；用户已批准实施迁移，尚不等于批准在无证据下直接发布大规模目录变更。绝不 force push、reset/rewite 既有提交或删除 Git 历史。\\\\n229:## 11. Gate 7 — 用户批准合并后的只读核对（授权后执行）\\\\n2026-10-10T00:24:14.7013550+08:00\\\\r\\\\n M AI-interaction-memory/codex/S-20261009-historical-project.md\\\\n M AI-interaction-memory/sessions/S-20261009-historical-project.json\\\\n M AI-interaction-memory/tool-flow/T-20261009-005__historical-project.json\\\\n M shared/CURRENT_PLAN.md\\\\n M shared/PROJECT_STATE.json\\\\n M shared/PROJECT_STATE.md\\\\n\\\"}\"}]"
+    },
+    {
+      "time": "2026-10-09T16:25:21.219Z",
+      "type": "custom_tool_call",
+      "tool": "exec",
+      "call_id": "call_465cddefafe142268cb0764925739d3a",
+      "content_sha256": "fb5f1d3916196ceeb46d9efdf710e51ff489d789698fe9819b32aab4a958b082",
+      "observable_excerpt": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'; @'\\nfrom pathlib import Path\\np=Path('.migration-private/sync_historical_observable.py');s=p.read_text(encoding='utf-8')\\ns=s.replace(\\\"encoding='utf-8')\\\",\\\"encoding='utf-8',newline='\\\\\\\\n')\\\")\\n# Only write_text calls get newline; reads/open stay unchanged.\\ns=s.replace(\\\"source.open(encoding='utf-8',newline='\\\\\\\\n')\\\",\\\"source.open(encoding='utf-8')\\\")\\ns=s.replace(\\\"read_text(encoding='utf-8',newline='\\\\\\\\n')\\\",\\\"read_text(encoding='utf-8')\\\")\\ns=s.replace(\\\"index.write_text(s,encoding='utf-8',newline='\\\\\\\\n');print\\\", \\\"s+='\\\\\\\\nCurrent transcript SHA256: `'+hashlib.sha256(out.read_bytes()).hexdigest()+'`; tool-flow SHA256: `'+hashlib.sha256(flow.read_bytes()).hexdigest()+'`. Canonical files use UTF-8/LF; session cutoff above is PARTIAL.\\\\\\\\n'\\\\nindex.write_text(s,encoding='utf-8',newline='\\\\\\\\n');print\\\")\\np.write_text(s,encoding='utf-8',newline='\\\\n')\\ncompile(s,str(p),'exec')\\n'@ | & .venv/Scripts/python.exe -\\n& .venv/Scripts/python.exe .migration-private/sync_historical_observable.py\\nif ($LASTEXITCODE -ne 0) { throw 'Observable sync failed' }\\ngit add -- AI-interaction-memory/INDEX.md AI-interaction-memory/codex/S-20261009-historical-project.md AI-interaction-memory/sessions/S-20261009-historical-project.json AI-interaction-memory/tool-flow/T-20261009-005__historical-project.json shared/PROJECT_STATE.json shared/PROJECT_STATE.md shared/CURRENT_PLAN.md shared/repository_cleanup/PUBLICATION_RECEIPT.json shared/repository_cleanup/PUBLICATION_RECEIPT.md\\nif ($LASTEXITCODE -ne 0) { throw 'Receipt staging failed' }\\n& .venv/Scripts/python.exe v5/scripts/check_workspace_migration.py --freeze-base 939280960e6baddaf5d190b9c7f8534eb0b6fb16 > .migration-private/historical_receipt_integrity.log\\nif ($LASTEXITCODE -"
     }
   ]
 }

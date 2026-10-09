@@ -36,3 +36,5 @@ Same v5; actual current user Gate0–7 path-isolation instruction. Earlier compl
 | Current message/hash manifest | [session](sessions/S-20261009-historical-project.json) | PARTIAL | AUDIT |
 
 External ChatGPT remains BLOCKED; no subagent/Work/independent reviewer output claimed.
+
+Current transcript SHA256: `1d563e793287e58cbabc6b0eda0516e665e010e3a6b0bcbe93404395855942b2`; tool-flow SHA256: `c45d4a3775f66833c9c643d52dd5ceecac00098b7c5c847c12081a5f7abb355c`. Canonical files use UTF-8/LF; session cutoff above is PARTIAL.

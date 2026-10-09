@@ -4,7 +4,7 @@ source: codex
 thread_id: 01a11f01-ebbe-76f3-ac92-b3e04e67b27a
 active_version: v5
 sync_status: PARTIAL
-cutoff: 2026-10-09T16:14:43.269Z
+cutoff: 2026-10-09T16:25:21.276Z
 ---
 
 # Actual observable historical-isolation conversation
@@ -179,5 +179,33 @@ SourceID: msg_0e0ddf454b5d790a016ac91266eec8819a80f43f416d9d887e
 独立克隆的完整 v5 执行器已全部通过：基础回归、新 supervisor/mailbox、温度与稀疏校准、五组动态 GUI 输入，以及实际新顶层的双仿真器验证。五组 GUI 分别运行 37、40、113、111、74 帧，共 375 帧。
 
 我正在核对前后结果和源码 Hash、整理证据包并审查公开提交范围。随后会普通推送迁移分支、创建 Draft PR 并核验线上 CI；main 合并仍等待你的审核。
+
+
+## Message 0016
+Role: assistant
+Time: 2026-10-09T16:18:05.924Z
+SourceID: msg_0e0ddf454b5d790a016ac913bc7f98819aa7d0353d98382756
+
+候选证据已提交，当前工作树干净。563 份证据文件已核对原始字节与暂存 Git blob 一致；实际测试代码之后的运行源码差异为 0。最新远端 main 仍是原基准提交。
+
+现在开始普通推送迁移分支并创建 Draft PR。该 PR 会明确注明包含尚未合并的 PR #1/#2 祖先提交，供你审核整体候选及其依赖。
+
+
+## Message 0017
+Role: assistant
+Time: 2026-10-09T16:20:47.022Z
+SourceID: msg_0e0ddf454b5d790a016ac9145f0f00819a8a08459e92e45212
+
+验证证据已完成并提交；当前推送进程仍在运行，远端尚未出现新分支，Draft PR 也尚未创建。我会继续检查推送状态，并在远端 HEAD、PR 和 CI 均可核验后再交付。main 未改变。
+
+
+## Message 0018
+Role: assistant
+Time: 2026-10-09T16:22:06.128Z
+SourceID: msg_0e0ddf454b5d790a016ac914ac54e0819aaa13874a8711ac5b
+
+[Draft PR #3](https://github.com/loverlike1216/SonoField-FPGA/pull/3) 已创建，目标分支为 main。证据提交的 push 与 pull_request 两次 GitHub CI 均已通过；核验到的远端候选根目录是精确命名的 `Historical project/`，旧 `history_old/` 已不在该候选树中。
+
+我会补齐发布回执，记录远端 SHA、PR、CI 链接和未合并状态，再做最后一次读取核对。Gate 7 继续等待你批准具体候选合并。
 
 
