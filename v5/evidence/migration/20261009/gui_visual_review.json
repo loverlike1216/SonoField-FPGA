@@ -1,0 +1,24 @@
+{
+  "status": "PASS_SIMULATION_UI_ONLY",
+  "reviewer": "Codex visual inspection via view_image, not independent final review",
+  "reviewed_at": "2026-10-09T05:45:37.062651+00:00",
+  "files": [
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_xsim/gui_simulation.png",
+      "sha256": "f8b9339aff82d0fecb37773ed7aad58c732a9f3727c75a450a451b1a2fdd2f8b"
+    },
+    {
+      "path": ".portability/clean/v5/evidence/migration/20261009/clean_clone/motion/gui_xsim/gui_simulation.png",
+      "sha256": "0c35107781abb48d8b79e8dbdffe4d2c5b839485714c5eb32becb41c40f4cf3e"
+    }
+  ],
+  "observed": [
+    "SIMULATION label visible in both actual generated windows",
+    "Commanded trap returned to X/Y/Z=0.00mm",
+    "RUN_DEMO PASS visible",
+    "Actual particle position explicitly unmeasured",
+    "Hardware connection/enable not claimed verified"
+  ],
+  "hardware_verified": false,
+  "independent_review": "PENDING"
+}

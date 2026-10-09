@@ -1,0 +1,54 @@
+{
+  "status": "PASS_WITH_DECLARED_PHYSICAL_LIMITATIONS",
+  "command": [
+    "rg",
+    "-n",
+    "-i",
+    "TODO|FIXME|placeholder|stub|mock|fake|hard.?coded|not implemented|demo only|simulation only|skip|disabled",
+    "v5/rtl",
+    "v5/firmware",
+    "v5/software",
+    "v5/scripts",
+    "v5/tests",
+    "-g",
+    "*.sv",
+    "-g",
+    "*.py",
+    "-g",
+    "*.c",
+    "-g",
+    "*.h",
+    "-g",
+    "*.tcl"
+  ],
+  "actual_scan": "implementation_keyword_scan.log",
+  "classifications": [
+    {
+      "matches": "SAFE_DISABLED / disabled",
+      "role": "Actual safety transitions, UI enable state and regression assertions; not missing implementation"
+    },
+    {
+      "matches": "motion_gate --skip-regression; validate/self_calibration --skip-xsim",
+      "role": "Inherited optional flags explicitly yield PARTIAL; none used in full baseline or any nested command"
+    },
+    {
+      "matches": "package_review stub",
+      "role": "Historical package-metadata inspection helper; not instantiated production RTL, not executed by this migration, not hardware proof"
+    },
+    {
+      "matches": "check_board_integration review strings / curate historical recovery",
+      "role": "Audit/provenance descriptions, not functional shortcut"
+    },
+    {
+      "matches": "tests/ps_service_harness.c",
+      "role": "Deliberate offline C bus/UART fixture, classified host-test only; no real target ARM/PS-PL claim"
+    },
+    {
+      "matches": "serial_transport map capability disabled",
+      "role": "Known fail-closed first-stage transport limitation; not claimed physically functional"
+    }
+  ],
+  "production_fake_implementation_detected": false,
+  "core_files_changed": false,
+  "whole_platform_status": "REVISE"
+}

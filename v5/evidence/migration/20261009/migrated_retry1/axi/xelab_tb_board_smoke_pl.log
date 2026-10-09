@@ -1,0 +1,28 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/2025.2/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_board_smoke_pl --snapshot tb_board_smoke_pl --debug typical 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'frame_ready' remains unconnected for this instance [E:/Codex_project/AMD_Sonofield/v5/rtl/board/sono_board_smoke_pl.sv:12]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.axi_native_bridge
+Compiling module work.motion_queue_default
+Compiling module work.adc_serial
+Compiling module work.ad7606b_if(POWER_WAIT_CYCLES=264...
+Compiling module work.calibration_scheduler
+Compiling module work.burst_generator_default
+Compiling module work.phase_bank_default
+Compiling module work.channel_waveform_default
+Compiling module work.serializer_default
+Compiling module work.sono_digital_system(POWER_WAIT_C...
+Compiling module work.sono_motion_system(POWER_WAIT_CY...
+Compiling module work.sono_axi_system_default
+Compiling module work.sono_board_smoke_pl
+Compiling module work.tb_board_smoke_pl
+Built simulation snapshot tb_board_smoke_pl
+The system cannot find the path specified.

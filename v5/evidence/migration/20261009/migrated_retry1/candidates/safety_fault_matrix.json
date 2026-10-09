@@ -1,0 +1,55 @@
+{
+  "classification": "SIMULATION_ESTIMATE_FUNCTIONAL_NOT_ELECTRICAL",
+  "events": [
+    {
+      "fault": "logic_power",
+      "shutdown": "PASS",
+      "automatic_restart": "REJECTED",
+      "controlled_rearm": "PASS"
+    },
+    {
+      "fault": "upstream_power",
+      "shutdown": "PASS",
+      "automatic_restart": "REJECTED",
+      "controlled_rearm": "PASS"
+    },
+    {
+      "fault": "watchdog_ok",
+      "shutdown": "PASS",
+      "automatic_restart": "REJECTED",
+      "controlled_rearm": "PASS"
+    },
+    {
+      "fault": "estop_ok",
+      "shutdown": "PASS",
+      "automatic_restart": "REJECTED",
+      "controlled_rearm": "PASS"
+    },
+    {
+      "fault": "cable_present",
+      "shutdown": "PASS",
+      "automatic_restart": "REJECTED",
+      "controlled_rearm": "PASS"
+    },
+    {
+      "fault": "local_fault_clear",
+      "shutdown": "PASS",
+      "automatic_restart": "REJECTED",
+      "controlled_rearm": "PASS"
+    },
+    {
+      "fault": "fpga_configured",
+      "shutdown": "PASS",
+      "automatic_restart": "REJECTED",
+      "controlled_rearm": "PASS"
+    }
+  ],
+  "uncovered": [
+    "individual DATA wire interruption with heartbeat intact",
+    "analog power ramp/driver below4.5V",
+    "gate hazards and synchronizer/async clear pulse widths",
+    "watchdog oscillator/timing tolerance",
+    "component short circuit",
+    "discharge and physical rearm behavior"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "RESOLVED_WITH_ATOMIC_NEW_CLONE_WRITES",
+  "scope": "Current candidate documentation only, no frozen history or old sandbox changes",
+  "observations": [
+    {
+      "file": "shared/migration/RUNBOOK.md",
+      "tool": "apply_patch",
+      "error": "Failed to write file; no errno exposed by tool",
+      "observed_before_recovery": "Original3764byte content remained readable, archive attribute only; exact locking owner/root cause UNKNOWN",
+      "resolution": "Same-volume atomic replacement with reviewed text succeeded"
+    }
+  ],
+  "earlier_related_evidence": "preparation_failure.json",
+  "writer_policy": "Final candidate current documents use same-volume atomic replacement; original physical sandbox and frozen archive never targeted",
+  "runbook_sha256": "fcb5546eedbbe4b20237d94fc23be69e618932eca4b9c4cddd5fca68cbade50a"
+}

@@ -1,5 +1,5 @@
 {
-  "checkpoint_id": "CP-20261009-002",
+  "checkpoint_id": "CP-20261009-003",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
@@ -7,44 +7,47 @@
   "candidate_workspace_path": "E:\\Codex_project\\AMD_Sonofield",
   "branch": "chore/v5-ax7020-workspace-isolation",
   "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
-  "head_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
-  "commit_scope": "Observed HEAD before committing reviewed candidate migration tree; subsequent real source commit must be reconciled",
+  "head_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+  "commit_scope": "Actual committed source validated in primary and independent clone; this evidence/checkpoint is committed subsequently, resolve its commit through Git file history and publication receipt",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "AX7020_V5_WORKSPACE_MIGRATION_CANDIDATE",
-  "created_at": "2026-10-09T13:22:26.410020+08:00",
+  "current_stage": "AX7020_V5_MIGRATION_CANDIDATE_USER_REVIEW",
+  "created_at": "2026-10-09T13:49:28.901812+08:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Archive preparation/current state reconciliation before candidate and second-clone regression",
-  "source_of_truth": "repository plus current real BASE tool evidence",
+  "checkpoint_reason": "Completed candidate full regression and second-clone reproducibility; preserve state for user main-merge review",
+  "source_of_truth": "Current repository, real migration tool outputs and fixed Git-tree manifests",
   "status": "VALID",
-  "validation_stage": "MIGRATED_AND_CLEAN_CLONE_PENDING",
+  "validation_stage": "BASE_MIGRATED_CLEAN_CLONE_ALL_PASS_CANDIDATE_ONLY",
   "architecture_ref": "v5/docs/architecture/SELF_CALIBRATION.md",
   "completed": [
     {
-      "item": "Read-only old inventory, fixed BASE, independent new clone and locked venv",
+      "item": "All3907archiveoriginalpaths/modes/blobs/rawSHA256 plus2frozenmetadata",
       "status": "TESTED"
     },
     {
-      "item": "Fresh BASE full digital baseline115/3696×4 plus15candidate/256ADCtwo tools",
+      "item": "Oldphysical/untracked/ignored/Gitmetadata preservation fullrehash",
+      "status": "TESTED"
+    },
+    {
+      "item": "115Python and3696frames×4 in3fresh environments;exactcanonicalhashes/C+AXI/safety/calibration/equivalence",
       "status": "SIMULATED"
     },
     {
-      "item": "Fresh BASE documented-device OOC and18source reopen",
-      "status": "SYNTHESIZED",
-      "scope": "OOC_ONLY_NOT_ROUTED_NOT_BOARD"
+      "item": "15offlinecandidate and256ADCframes intwosimulators in3environments",
+      "status": "SIMULATED"
     },
     {
-      "item": "Candidate exact archive and isolated current tree",
-      "status": "IMPLEMENTED",
-      "scope": "PENDING_STAGED_HASH_AND_FUNCTIONAL_GATES"
+      "item": "Vivado2025.2 documented-deviceOOC/reopen18source in3environments",
+      "status": "SYNTHESIZED",
+      "scope": "OOC_PRE_ROUTE_ONLY"
+    },
+    {
+      "item": "No new physicalhardwareverification ordeviceoperation",
+      "status": "NOT_VERIFIED"
     }
   ],
   "next_actions": [
-    "Stage reviewed candidate; verify all archive blob/mode/rawSHA256 and root structure",
-    "Commit candidate snapshot and clone it independently with own locked venv",
-    "Run migrated and clean-clone full baseline/candidate/OOC/reopen, compare canonical hashes",
-    "Rehash old original and inspect privacy/source ownership; update checkpoint/results",
-    "Push only candidate branch, open Draft PR, wait for explicit user main approval"
+    "Push reviewed candidate commits, open Draft PR, then wait for explicit user approval before main merge and workspace promotion"
   ],
   "active_decisions": [
     "ADR-035 original v5 authorization",
@@ -52,8 +55,8 @@
     "ADR-037 current user migration authority; main merge pending"
   ],
   "blockers": [
-    "MIGRATED_AND_CLEAN_CLONE_VALIDATION_PENDING",
     "USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE",
+    "POST_MERGE_REMOTE_MAIN_COLD_START_PENDING",
     "V5-B01",
     "V5-B03",
     "V5-B04",
@@ -65,22 +68,32 @@
   "latest_validation": [
     {
       "status": "PASS",
-      "evidence": "v5/evidence/migration/20261009/base/summary.json"
+      "evidence": "v5/evidence/migration/20261009/base/summary.json",
+      "source_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+      "date": "2026-10-09"
     },
     {
-      "status": "PASS_OFFLINE_ONLY",
-      "evidence": "v5/evidence/migration/20261009/base/candidates/extra_summary.json"
+      "status": "PASS",
+      "evidence": "v5/evidence/migration/20261009/migrated_retry1/summary.json",
+      "source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+      "date": "2026-10-09"
     },
     {
-      "status": "PASS_OOC_REOPEN_18_SOURCES",
-      "evidence": "v5/evidence/migration/20261009/base/ooc_reopen/console.log"
+      "status": "PASS",
+      "evidence": "v5/evidence/migration/20261009/clean_clone/summary.json",
+      "source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+      "date": "2026-10-09"
     }
   ],
   "known_limitations": [
-    "Candidate only; main unchanged; permanent workspace path not promoted",
-    "Same-host tools; second environment not yet run",
-    "Full-board/PS-PL/DDR/UART/analog/safety/acoustic/nativeERC not verified",
-    "ExternalChatGPT history/independent review unavailable"
+    "Candidate only; main merge and post-merge fresh remote-main clone await explicit user approval",
+    "Permanent workspace_path is not promoted; candidate execution path is E:\\Codex_project\\AMD_Sonofield",
+    "Second Git clone and independently installed locked venv share the same host installed EDA/compiler versions; not a second machine or OS",
+    "No matched ARM BSP/compiler/target download, PS-PL/DDR/UART/ADC/AFE/driver/power/acoustic hardware verification",
+    "OOC pre-route only;2324inputs/256outputs lack board delay constraints;HD.CLK_SRC unset; do not infer board timing or complete CDC coverage",
+    "Native v5 schematic NOT_CREATED,ERC_NOT_RUN,MANUFACTURING_HOLD; C16 ADC not approved",
+    "BOM generator was not cold-started; original and working workbook bytes preserved and15read-only checks passed in all3environments",
+    "External ChatGPT full history reader BLOCKED and independent human/AI final review pending"
   ],
   "do_not_change": [
     "Original physical sandbox including private/untracked/ignored/Git metadata",
@@ -99,14 +112,21 @@
     "P-20261009-001"
   ],
   "repository_delta": [
-    "Fixed Git old tree duplicated into history_old; old roots removed only in new clone",
-    "Current root facts and protected output paths; source code semantics unchanged"
+    "Fixed old root Git tree frozen under history_old;soleactivev5 extracted;no102protectedfilechanges",
+    "Output/Tclpath adaptation initiallyfailed9assertions;fixedsameclonescratch andfullretryPASS",
+    "Currentsharedonlyv5;realAX7020historicalphysicalfacts/candidateADC/BOMboundariesretained",
+    "IndependentGit+freshlockedvenv/fulloffline/OOCchecksPASS;rawoldpreservationPASS"
   ],
   "evidence_refs": [
-    "shared/migration/PRE_MIGRATION_AUDIT.json",
     "shared/migration/OLD_TRACKED_MANIFEST.json",
-    "shared/migration/ADAPTED_FILES.json",
-    "v5/evidence/migration/20261009/base/summary.json"
+    "shared/migration/ARCHIVE_COVERAGE.json",
+    "shared/migration/QUALITY_GATE.json",
+    "shared/migration/PORTABILITY_AND_REGRESSION.json",
+    "v5/evidence/migration/20261009/digital_behavior_comparison.json",
+    "v5/evidence/migration/20261009/ooc_comparison.json",
+    "v5/evidence/migration/20261009/old_sandbox_preservation.json",
+    "v5/evidence/migration/20261009/active_reuse_hashes.json"
   ],
-  "resume_from": "Read root recovery files, compare Git status/actualHEAD with source snapshot, finish current v5 candidate validation; do not restart from old history or open v6."
+  "resume_from": "Review concrete DraftPR and current publication receipt. Wait for explicit user main merge/workspace promotion approval; then reconcile remote and merge ordinarily, fresh remote-main clone verification. Continue only currentv5; do not read frozenhistory/oldphysicalsandbox unless expressly authorized.",
+  "validated_source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4"
 }

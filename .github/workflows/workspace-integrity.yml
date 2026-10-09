@@ -22,4 +22,8 @@ jobs:
       - name: Frozen Git metadata and current scope (no historical source read)
         env:
           FREEZE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
-        run: python v5/scripts/check_workspace_migration.py --freeze-base "$FREEZE_BASE"
+        run: |
+          if [[ "$FREEZE_BASE" =~ ^0+$ ]]; then
+            FREEZE_BASE=$(python -c "import json; print(json.load(open('shared/migration/OLD_TRACKED_MANIFEST.json'))['base_commit'])")
+          fi
+          python v5/scripts/check_workspace_migration.py --freeze-base "$FREEZE_BASE"

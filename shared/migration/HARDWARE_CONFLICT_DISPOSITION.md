@@ -8,6 +8,6 @@
 | Formal AD7606BBSTZ-RL vs working BOM C-16 | Production versus recommendation | AD7606B remains formal; C-16 only isolated candidate | P-20261008-001 OPEN; independent review + user approval required |
 | ALINX V2.0 schematic/XSA vs actual AX701020.3.0 | Vendor reference versus observed revision | Candidate preset/pin/DDR only | P-20261009-001 OPEN; no PS init/unknown RAM access |
 | Previous shared v2 blockers/ENGINEERING_STATE | Old hardware stage | HISTORICAL_READ_ONLY | Current state rebuilt as v5; historical decisions retained verbatim |
-| board_clock_candidate.sv low-level old defaults | Inherited unused candidate | Not included in OOC production source list, not AX7020 clock fact |132MHz internal target preserved; physical clocks remain unqualified |
+| board_clock_candidate.sv low-level old defaults | Inherited unused candidate | Included in the original 18-file OOC allowlist, but not instantiated by sono_axi_system; no physical clock/pin authority |132MHz internal target preserved; physical clocks remain unqualified |
 
 The 128TX/8RX/32×4 architecture, formal ADC, protocol/registers/calibration/motion/safety/goldens and acceptance are unchanged. No new formal Problem is necessary for path organization: the two current hardware Problems already cover the substantive pending decisions.

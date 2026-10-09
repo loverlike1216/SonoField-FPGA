@@ -1,5 +1,7 @@
 # Current change log
 
-## 2026-10-09 — v5 candidate workspace migration
+## 2026-10-09 — v5 workspace migration candidate
 
-Independent clone at `E:\Codex_project\AMD_Sonofield`, BASE `ecd32e76e9b6c08806eae30a3c75a9c3be5e7570`. All3907tracked old-tree files preserved under history_old with rawSHA256/blob/mode proof. Old physical sandbox and private assets untouched. Current v5 extracted without core/interface/golden/test changes. Current state/blocked hardware authority reconciled; safe isolated evidence paths and metadata-only archive protection added. Fresh BASE, migrated and clean-clone outcomes are in migration evidence; main merge remains pending. Prior change log is frozen historical provenance, not today's current state.
+Independent new clone; fixedBASE `ecd32e76e9b6c08806eae30a3c75a9c3be5e7570`; testedsource `0ab574f9e2ad422106655f3c827e89d262d93bb4`. Freeze3907oldtrackedfiles under history_old with exactblob/mode/rawSHA256 andtwofrozenmetadatafiles. Original83480physicalfiles/17056additionalignoreddependencyfiles/858rootGitfiles rehashed unchanged;35untracked kept private. Retain1017currentv5files and102protectedcore/test/golden/BOM blobs unchanged.
+
+Reconcile currentAX7020/state/decisions/blockers; isolateall active loads/search andnewoutputs; add explicit18sourceOOC list andmetadata-onlyarchiveCI. ActualfreshBASE/migratedretry1/independentcleanclone115tests/3696frames×4/fullnestedgates/15offlinechecks/256ADCtwo tools/2025.2OOC+reopenPASS withsamecanonicalhashes. PreservefailedfirstcandidateTclfixturepathrun andpre-freezerestorationerror; repairpaths withouttest/corechanges. Documents/runbook/packageboundary/checkpointupdated. Mainmerge/userreview/workspacepromotion remainpending;nohardwareorversionupgrade.

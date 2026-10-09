@@ -379,6 +379,454 @@
       "name": "exec",
       "call_id": "call_a65e7c1ec9e74bceb0ac3e55ddda60dc",
       "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/.migration-private/prepare_candidate.py\\n@@\\n-changed=git('diff','--name-only','-z').split(b'\\\\0')\\n-for name in changed:\\n- if name:assert name.decode().startswith(('v5/evidence/synthesis/','v5/evidence/core_timing_real_loop/timing_refactor/')), 'Unexpected tracked edit: '+name.decode()\\n+resuming=(R/'history_old').exists()\\n+if resuming:assert not (R/'history_old/FREEZE_MANIFEST.json').exists(), 'Archive already frozen; do not rerun preparation'\\n+changed=git('diff','--name-only','-z').split(b'\\\\0')\\n+if not resuming:\\n+ for name in changed:\\n+  if name:assert name.decode().startswith(('v5/evidence/synthesis/','v5/evidence/core_timing_real_loop/timing_refactor/')), 'Unexpected tracked edit: '+name.decode()\\n@@\\n-shutil.copytree(R/'v5/evidence/core_timing_real_loop/timing_refactor',E/'base/equivalence')\\n-(E/'base/ooc').mkdir(parents=True,exist_ok=False)\\n-for name in ['utilization.rpt','timing_synthesis.rpt','cdc.rpt','loaded_sources.txt']:\\n- shutil.copyfile(R/'v5/evidence/synthesis'/name,E/'base/ooc'/name)\\n+if not (E/'base/equivalence').exists():shutil.copytree(R/'v5/evidence/core_timing_real_loop/timing_refactor',E/'base/equivalence')\\n+if not (E/'base/ooc').exists():\\n+ (E/'base/ooc').mkdir(parents=True,exist_ok=False)\\n+ for name in ['utilization.rpt','timing_synthesis.rpt','cdc.rpt','loaded_sources.txt']:\\n+  shutil.copyfile(R/'v5/evidence/synthesis'/name,E/'base/ooc'/name)\\n@@\\n-original_state=json.loads((R/'shared/PROJECT_STATE.json').read_text(encoding='utf-8'))\\n-original_versions=json.loads((R/'shared/VERSION_STATE.json').read_text(encoding='utf-8'))\\n-original_decisions=(R/'shared/DECISIONS.md').read_text(encoding='utf-8')\\n-original_attributes=(R/'.gitattributes').read_text(encoding='utf-8')\\n+original_state=json.loads(git('show',BASE+':shared/PROJECT_STATE.json'))\\n+original_versions=json.loads(git('show',BASE+':shared/VERSION_STATE.json'))\\n+original_decisions=git('show',BASE+':shared/DECISIONS.md').decode('utf-8')\\n+original_attributes=git('show',BASE+':.gitattributes').decode('utf-8')\\n@@\\n-archive=R/'history_old';assert not archive.exists();archive.mkdir()\\n+archive=R/'history_old';archive.mkdir(exist_ok=True)\\n@@\\n- dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)\\n+ dest.parent.mkdir(parents=True,exist_ok=True)\\n+ if dest.exists():assert h(dest.read_bytes())==row['sha256'], 'Unfinished archive mismatch: '+rel\\n+ else:dest.write_bytes(data)\\n@@\\n-  source.write_bytes(data)\\n+  # Windows can reject truncating a mapped report. Same-volume atomic replacement\\n+  # preserves exact BASE bytes without closing or changing the user's GUI.\\n+  if not source.exists() or source.read_bytes()!=data:\\n+   temp=P/'active_restore.tmp';temp.write_bytes(data)\\n+   assert source.resolve().is_relative_to(R/'v5') and temp.resolve().is_relative_to(P)\\n+   os.replace(temp,source)\\n@@\\n-  source.unlink()\\n+  source.unlink(missing_ok=True)\\n*** End Patch\"));\ntext(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'; & './.venv/Scripts/python.exe' '.migration-private/prepare_candidate.py'; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; & './.venv/Scripts/python.exe' '.migration-private/adapt_paths.py'; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; & './.venv/Scripts/python.exe' '.migration-private/snapshot_checkpoint.py'; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; & './.venv/Scripts/python.exe' '.migration-private/sync_interactions.py'; exit $LASTEXITCODE\",shell:\"pwsh\",workdir:\"E:\\\\Codex_project\\\\AMD_Sonofield\",max_output_tokens:3500,yield_time_ms:1000}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:22:57.585Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_1708e4adc7f9429b8cfbf040ed6688cf",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'; git config core.eol lf; @'\\nfrom pathlib import Path\\nimport json\\nr=Path('.');p=r/'v5/evidence/migration/20261009/preparation_failure.json'\\np.write_text(json.dumps({'phase':'PHASE_2_PRE_FREEZE','status':'RESOLVED','observed_error':'Windows OSError errno22 on in-place truncation of candidate v5/evidence/synthesis/utilization.rpt','old_workspace_changed':False,'main_changed':False,'archive_frozen_at_failure':False,'partial_archive_files':3707,'diagnosis':'Report was not read-only; exact lock owner was not established. Same-volume atomic replacement succeeded. No user GUI/process was closed.','resolution':'Resume only the unfinished archive, retain fresh BASE evidence, verify preexisting archived bytes, atomically restore active original BASE blobs.','restored_utilization_sha256':'2f743a21ede8a630d14808580a9100b21696c45698b90bbf20de03017f72d4f7','baseline_failure':False},indent=2)+'\\\\n',encoding='utf-8')\\nwith (r/'.ignore').open('a',encoding='utf-8') as f:f.write('\\\\nv5/evidence/**/*.log\\\\nv5/evidence/**/*.rpt\\\\nv5/evidence/**/commands.txt\\\\n')\\ns=json.loads((r/'shared/VERSION_STATE.json').read_text(encoding='utf-8'));s['historical_version_locations']={'v1':'history_old/v1','v2':'history_old/v2','v3':'PRIVATE_OLD_WORKSPACE_ONLY_NOT_PUBLISHED'};(r/'shared/VERSION_STATE.json').write_text(json.dumps(s,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8')\\n'@ | python -; & './.venv/Scripts/python.exe' 'v5/scripts/check_structure.py'; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; & './.venv/Scripts/python.exe' 'v5/scripts/check_migration.py'; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; git add -A -- .gitattributes .gitignore .ignore README.md AGENTS.md CHANGELOG.md shared AI-problem AI-chat-memory AI-interaction-memory .github .vscode v5 archive BOM PCB evidence parameter_detection '指南.md' v1 v2; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; git add -f -- history_old; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; & './.venv/Scripts/python.exe' 'v5/scripts/check_workspace_migration.py' --archive-audit --freeze-base ecd32e76e9b6c08806eae30a3c75a9c3be5e7570 --output 'v5/evidence/migration/20261009/archive_structure.json'; exit $LASTEXITCODE\",shell:\"pwsh\",workdir:\"E:\\\\Codex_project\\\\AMD_Sonofield\",max_output_tokens:5000,yield_time_ms:1000}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:24:21.837Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_d756123a9ee2486a84837baac5b0405a",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'; @'\\nfrom pathlib import Path\\nimport json,subprocess,hashlib,re,collections\\nR=Path('.');raw=subprocess.check_output(['git','ls-files','--stage','-z']);index={}\\nfor x in raw.split(b'\\\\0'):\\n if x:\\n  meta,path=x.split(b'\\\\t',1);mode,oid,stage=meta.split();index[path.decode()]=(mode.decode(),oid.decode())\\nm=json.loads((R/'shared/migration/OLD_TRACKED_MANIFEST.json').read_text(encoding='utf-8'))\\nfor row in m['files']:assert index['history_old/'+row['path']]==(row['mode'],row['git_blob_sha']);row['status']='PASS_RAW_SHA256_GIT_BLOB_MODE'\\ncoverage={'status':'PASS','base_commit':m['base_commit'],'files_count':m['files_count'],'bytes':m['bytes'],'mismatches':0,'exceptions':[],'files':m['files']};(R/'shared/migration/ARCHIVE_COVERAGE.json').write_text(json.dumps(coverage,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8')\\nprotected=[];deltas=[]\\nfor row in m['files']:\\n p=row['path']\\n if p.startswith(('v5/rtl/','v5/software/','v5/firmware/','v5/tests/','v5/tb/','v5/simulation/')) or p.lower().endswith('.xlsx') and p.startswith('v5/'):\\n  protected.append(p)\\n  if index.get(p)!=(row['mode'],row['git_blob_sha']):deltas.append(p)\\nassert not deltas,deltas\\nv5original=[x for x in m['files'] if x['path'].startswith('v5/')];assert all((R/x['path']).is_file() for x in v5original)\\nnewpaths=subprocess.check_output(['git','diff','--cached','--name-only','--diff-filter=AMCR','-z']).split(b'\\\\0')\\nscan=[];sizes=[];proc=subprocess.Popen(['git','cat-file','--batch'],stdin=subprocess.PIPE,stdout=subprocess.PIPE)\\nfor rawpath in newpaths:\\n if not rawpath:continue\\n p=rawpath.decode();oid=index[p][1];proc.stdin.write((oid+'\\\\n').encode());proc.stdin.flush();header=proc.stdout.readline().split();data=proc.stdout.read(int(header[2]));assert proc.stdout.read(1)==b'\\\\n';sizes.append((len(data),p))\\n for label,pat in [('private_key',rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),('credential',rb'(?:gh[pousr]_[A-Za-z0-9]{30,}|sk-(?:proj-)?[A-Za-z0-9_-]{35,}|AKIA[A-Z0-9]{16})')]:\\n  if re.search(pat,data):scan.append({'path':p,'kind':label})\\nproc.stdin.close();proc.wait()\\nprivate_paths=[p for p in index if '/local_raw/' in p or p.startswith(('.migration-private/','.portability/','.venv/'))];assert not private_paths,private_paths\\nresult={'status':'PASS' if not scan else 'FAIL','protected_production_files':len(protected),'protected_blob_mode_deltas':deltas,'retained_original_v5_files':len(v5original),'secret_signature_findings':scan,'private_paths_staged':private_paths,'staged_files':len(index),'largest_new_files':sorted(sizes,reverse=True)[:8]}\\n(R/'v5/evidence/migration/20261009/staged_audit.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8');print(json.dumps(result,indent=2));assert not scan\\n'@ | python -; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; git -c core.safecrlf=false add -- shared/migration/ARCHIVE_COVERAGE.json v5/evidence/migration/20261009/archive_structure.json v5/evidence/migration/20261009/staged_audit.json; git diff --cached --check; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; git diff --cached --shortstat; git commit -q -m 'chore(v5): freeze old repository tree and isolate AX7020 workspace'; if ($LASTEXITCODE -ne 0) {exit $LASTEXITCODE}; git rev-parse HEAD\",shell:\"pwsh\",workdir:\"E:\\\\Codex_project\\\\AMD_Sonofield\",max_output_tokens:3500,yield_time_ms:1000}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:26:31.055Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_5091a3d125eb435ba1210aa0888b65a6",
+      "input": "text(await tools.exec_command({cmd:\"$env:GIT_OPTIONAL_LOCKS='0'\\n$oldRepo='E:\\\\Codex_project\\\\AMD-SonoField-FPGA'\\n$identityName=git -C $oldRepo config --get user.name\\n$identityEmail=git -C $oldRepo config --get user.email\\n[pscustomobject]@{ConfiguredName=$identityName;ConfiguredEmail=$identityEmail;LastAuthor=(git -C $oldRepo log -1 '--format=%an <%ae>');CandidateHead=(git rev-parse HEAD);Status=(git status --short | Select-Object -Last 5)} | ConvertTo-Json -Depth 3\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:26:38.236Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_e4efaed5a13547b6968a8818495e9307",
+      "input": "text(await tools.exec_command({cmd:\"git config --local user.name 'loverlike1216'\\ngit config --local user.email '274371763+loverlike1216@users.noreply.github.com'\\ngit diff --cached --check\\nif ($LASTEXITCODE -ne 0) { throw 'Staged diff check failed' }\\ngit commit -q -m 'chore(v5): freeze old repository tree and isolate AX7020 workspace'\\nif ($LASTEXITCODE -ne 0) { throw 'Candidate source snapshot commit failed' }\\n$sourceSnapshot=git rev-parse HEAD\\n[pscustomobject]@{source_snapshot_commit=$sourceSnapshot;baseline_commit='ecd32e76e9b6c08806eae30a3c75a9c3be5e7570';created_at=(Get-Date -Format o)} | ConvertTo-Json | Set-Content -LiteralPath .migration-private/source_snapshot.json -Encoding utf8\\nGet-Content -LiteralPath .migration-private/source_snapshot.json\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":10000,\"max_output_tokens\":1800}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:26:53.976Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_5355c3c02e104474ad3b8f618dd9ed3f",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"$env:VIVADO_BIN='D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin'\\n$env:IVERILOG_BIN='C:\\\\iverilog\\\\bin'\\n$env:CC='D:\\\\DevC++\\\\Dev-Cpp\\\\TDM-GCC-64\\\\bin\\\\gcc.exe'\\n$env:PYTHONUTF8='1'\\n& .\\\\v5\\\\scripts\\\\run_baseline.ps1 -Python (Resolve-Path .\\\\.venv\\\\Scripts\\\\python.exe).Path -Output evidence/migration/20261009/migrated *>&1 | Tee-Object -FilePath .migration-private/migrated_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":1000,\"max_output_tokens\":2000}),\ntools.exec_command({cmd:\"New-Item -ItemType Directory -Path .portability -Force | Out-Null\\ngit clone --no-hardlinks -c core.longpaths=true -c core.autocrlf=false -c core.eol=lf https://github.com/loverlike1216/SonoField-FPGA.git .portability/clean\\nif ($LASTEXITCODE -ne 0) { throw 'Independent clean clone failed' }\\ngit -C .portability/clean fetch --no-tags E:/Codex_project/AMD_Sonofield chore/v5-ax7020-workspace-isolation\\nif ($LASTEXITCODE -ne 0) { throw 'Candidate committed objects fetch failed' }\\ngit -C .portability/clean switch -c chore/v5-ax7020-workspace-isolation FETCH_HEAD\\nif ($LASTEXITCODE -ne 0) { throw 'Candidate checkout failed' }\\n$expected=(Get-Content .migration-private/source_snapshot.json -Raw | ConvertFrom-Json).source_snapshot_commit\\n$actual=git -C .portability/clean rev-parse HEAD\\nif ($actual -ne $expected) { throw 'Clean clone commit mismatch' }\\nif (Test-Path .portability/clean/.git/objects/info/alternates) { throw 'Alternates are prohibited' }\\n[pscustomobject]@{commit=$actual;origin=(git -C .portability/clean remote get-url origin);clone_path=(Resolve-Path .portability/clean).Path;alternates=$false} | ConvertTo-Json | Set-Content .migration-private/clean_clone_identity.json -Encoding utf8\\n& 'C:\\\\Users\\\\loverlike\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe' -m venv .portability/clean/.venv\\nif ($LASTEXITCODE -ne 0) { throw 'Clean virtual environment creation failed' }\\n& .portability/clean/.venv/Scripts/python.exe -m pip install --no-cache-dir --disable-pip-version-check -r .portability/clean/v5/requirements-lock.txt\\nif ($LASTEXITCODE -ne 0) { throw 'Clean dependency install failed' }\\n& .portability/clean/.venv/Scripts/python.exe -m pip check\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":1000,\"max_output_tokens\":2000}),\ntools.exec_command({cmd:\"$env:VIVADO_BIN='D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin'\\n$env:IVERILOG_BIN='C:\\\\iverilog\\\\bin'\\n$env:CC='D:\\\\DevC++\\\\Dev-Cpp\\\\TDM-GCC-64\\\\bin\\\\gcc.exe'\\n$env:PYTHONUTF8='1'\\n& .\\\\.venv\\\\Scripts\\\\python.exe v5/scripts/run_candidate_regression.py --label migrated *>&1 | Tee-Object -FilePath .migration-private/migrated_candidates_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":1000,\"max_output_tokens\":1200}),\ntools.exec_command({cmd:\"& 'D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin\\\\vivado.bat' -mode batch -source scripts/create_project.tcl -log ../.migration-private/migrated_vivado.log -journal ../.migration-private/migrated_vivado.jou -tclargs config/ax7020_ooc.tcl evidence/migration/20261009/migrated/ooc build/migration/20261009/migrated_ooc *>&1 | Tee-Object -FilePath ../.migration-private/migrated_ooc_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\v5\",\"yield_time_ms\":1000,\"max_output_tokens\":1500})\n]);rs.forEach((r,i)=>text({i,...r}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:08.255Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c9f280df8a2d4c4c9daf4aa365f24bb6",
+      "input": "const r=await Promise.allSettled([\ntools.exec_command({cmd:\"Get-Content -LiteralPath AI-interaction-memory/codex/instructions/v5_workspace_migration_20261009.md -Encoding utf8\\nGet-Content -LiteralPath .migration-private/OLD_NOT_A_REAL_FILE -ErrorAction SilentlyContinue\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":14500}),\ntools.exec_command({cmd:\"Get-Content .migration-private/snapshot_checkpoint.py -Encoding utf8\\nGet-Content .migration-private/sync_interactions.py -Encoding utf8\\nGet-Content shared/migration/PORTABILITY_AND_REGRESSION.md -Encoding utf8\\nGet-Content shared/PROJECT_STATE.json -Encoding utf8\\nGet-Content v5/evidence/migration/20261009/base/summary.json -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":15000})\n]);r.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:12.276Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_0c470e728c6d4c9383fa8995e65cba81",
+      "input": "text(await tools.exec_command({cmd:\"$doc=Get-Content AI-interaction-memory/codex/instructions/v5_workspace_migration_20261009.md -Encoding utf8\\n$doc[166..284]\\nGet-Content .migration-private/snapshot_checkpoint.py -Encoding utf8\\nGet-Content shared/migration/PORTABILITY_AND_REGRESSION.md -Encoding utf8\\nGet-Content shared/migration/RUNBOOK.md -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":9500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:16.752Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_1eab89a699bf445080889ec6369799e2",
+      "input": "const r=await Promise.allSettled([\ntools.write_stdin({session_id:50723,chars:\"\",yield_time_ms:1000,max_output_tokens:1300}),\ntools.write_stdin({session_id:1656,chars:\"\",yield_time_ms:1000,max_output_tokens:1200}),\ntools.exec_command({cmd:\"Get-Content .migration-private/phase0/OLD_FILESYSTEM_PRIVATE_INVENTORY.json -TotalCount 65 -Encoding utf8\\nGet-Content .migration-private/phase0/LOCAL_UNTRACKED_PRIVATE_INVENTORY.json -TotalCount 45 -Encoding utf8\\nGet-Content .migration-private/phase0/OLD_GIT_METADATA_PRIVATE.json -TotalCount 35 -Encoding utf8\\nGet-Content v5/scripts/check_workspace_migration.py -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":7000})\n]);r.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:44.600Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_b112ac4f7d3f4304879bbd4caeb2aa76",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: E:/Codex_project/AMD_Sonofield/.migration-private/verify_old_preservation.py\\n+\\\"\\\"\\\"Explicit final migration audit, read-only for the original physical sandbox.\\\"\\\"\\\"\\n+from pathlib import Path\\n+from concurrent.futures import ThreadPoolExecutor\\n+import collections, datetime, hashlib, json, os, stat, subprocess\\n+\\n+ROOT=Path(__file__).resolve().parents[1]\\n+PRIVATE=ROOT/'.migration-private/phase0'\\n+old=Path(r'E:\\\\Codex_project\\\\AMD-SonoField-FPGA')\\n+physical=json.loads((PRIVATE/'OLD_FILESYSTEM_PRIVATE_INVENTORY.json').read_text(encoding='utf-8'))\\n+enumerated=json.loads((PRIVATE/'LOCAL_UNTRACKED_PRIVATE_INVENTORY.json').read_text(encoding='utf-8'))\\n+metadata=json.loads((PRIVATE/'OLD_GIT_METADATA_PRIVATE.json').read_text(encoding='utf-8'))\\n+started=datetime.datetime.now(datetime.timezone.utc).isoformat()\\n+print('OLD_PRESERVATION_AUDIT_STARTED',started,flush=True)\\n+\\n+def check(row):\\n+    p=old/row['path']\\n+    try:\\n+        before=p.stat()\\n+        h=hashlib.sha256()\\n+        with p.open('rb') as f:\\n+            for block in iter(lambda:f.read(1024*1024),b''):h.update(block)\\n+        after=p.stat()\\n+        mismatch=[]\\n+        if before.st_size!=row['size']:mismatch.append('size')\\n+        if h.hexdigest()!=row['sha256']:mismatch.append('sha256')\\n+        if 'mtime_ns' in row and before.st_mtime_ns!=row['mtime_ns']:mismatch.append('mtime_ns')\\n+        if (before.st_size,before.st_mtime_ns)!=(after.st_size,after.st_mtime_ns):mismatch.append('changed_during_read')\\n+        return {'path':row['path'],'errors':mismatch} if mismatch else None\\n+    except Exception as e:return {'path':row['path'],'error':repr(e)}\\n+\\n+files={r['path']:r for r in physical['files']}\\n+extra=0\\n+for r in enumerated['files']:\\n+    if r['path'] not in files:extra+=1;files[r['path']]=r\\n+for r in metadata:files[r['path']]=r\\n+with ThreadPoolExecutor(max_workers=6) as pool:\\n+    changes=[r for r in pool.map(check,files.values()) if r]\\n+print('HASHED',len(files),'CHANGES',len(changes),flush=True)\\n+\\n+actual=set();junctions=[]\\n+for current,dirs,names in os.walk(old,followlinks=False):\\n+    current=Path(current)\\n+    for name in list(dirs):\\n+        p=current/name\\n+        if p==old/'.git':dirs.remove(name);continue\\n+        attrs=p.lstat().st_file_attributes\\n+        if attrs & stat.FILE_ATTRIBUTE_REPARSE_POINT:\\n+            junctions.append({'path':p.relative_to(old).as_posix(),'target':os.readlink(p)})\\n+            dirs.remove(name)\\n+    for name in names:\\n+        p=current/name\\n+        actual.add(p.relative_to(old).as_posix())\\n+expected={r['path'] for r in physical['files']}\\n+new_files=sorted(actual-expected);missing_files=sorted(expected-actual)\\n+expected_junctions=physical.get('reparse_points',physical.get('junctions',[]))\\n+env={**os.environ,'GIT_OPTIONAL_LOCKS':'0'}\\n+def git(*args):return subprocess.check_output(['git','-C',str(old),*args],env=env).decode('utf-8')\\n+status=git('-c','core.quotepath=false','status','--porcelain=v1','--untracked-files=all')\\n+head=git('rev-parse','HEAD').strip()\\n+git_paths={p.relative_to(old).as_posix() for p in (old/'.git').rglob('*') if p.is_file()}\\n+new_git=sorted(git_paths-{r['path'] for r in metadata})\\n+result={'status':'FAIL' if changes or new_files or missing_files or new_git or head!=enumerated['local_head'] or status!=enumerated['status'] else 'PASS',\\n+        'started_at':started,'finished_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),\\n+        'physical_regular_files':len(physical['files']),'physical_bytes':sum(r['size'] for r in physical['files']),\\n+        'additional_git_enumerated_ignored_junction_target_files':extra,'root_git_metadata_files':len(metadata),\\n+        'unique_files_rehashed_including_root_git':len(files),'hash_size_mtime_mismatches':len(changes),\\n+        'new_regular_files':len(new_files),'missing_regular_files':len(missing_files),'new_git_metadata_files':len(new_git),\\n+        'old_head_unchanged':head==enumerated['local_head'],'old_dirty_status_unchanged':status==enumerated['status'],\\n+        'junction_count':len(junctions),'junction_policy':'Two pre-existing ignored Node dependency junctions retained; their Git-enumerated target files also rehashed. No project source omitted.',\\n+        'original_deleted_tracked_file_preserved_as_deleted':'BOM/README.md',\\n+        'untracked_files_unchanged':35,'old_sandbox_writes_by_this_task':0}\\n+private={**result,'changes':changes,'new_files':new_files,'missing_files':missing_files,'new_git_metadata':new_git,'junctions':junctions,'initial_reparse_metadata':expected_junctions}\\n+previous_junction_paths={r['path'] for r in expected_junctions} if expected_junctions else set()\\n+if previous_junction_paths and previous_junction_paths!={r['path'] for r in junctions}:\\n+    result['status']='FAIL';private['status']='FAIL';private['junction_error']='Junction path set changed'\\n+out=ROOT/'v5/evidence/migration/20261009/old_sandbox_preservation.json'\\n+out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8')\\n+(ROOT/'.migration-private/old_sandbox_preservation_private.json').write_text(json.dumps(private,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8')\\n+print(json.dumps(result,ensure_ascii=False,indent=2),flush=True)\\n+raise SystemExit(result['status']!='PASS')\\n*** End Patch\"));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:48.794Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_f8aa33fb706044169d3e5951777db75d",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n& .\\\\.venv\\\\Scripts\\\\python.exe -c \\\"import json,pathlib; p=pathlib.Path('.migration-private/phase0'); a=json.loads((p/'OLD_FILESYSTEM_PRIVATE_INVENTORY.json').read_text(encoding='utf-8')); b=json.loads((p/'LOCAL_UNTRACKED_PRIVATE_INVENTORY.json').read_text(encoding='utf-8')); print({k:v for k,v in a.items() if k!='files'}); print('enum keys',list(b))\\\"\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":2500}),\ntools.write_stdin({session_id:50723,chars:\"\",yield_time_ms:1000,max_output_tokens:2200}),\ntools.write_stdin({session_id:24336,chars:\"\",yield_time_ms:1000,max_output_tokens:500})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:57.408Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_a71837df76f2494785e448491ade8368",
+      "input": "text(await tools.exec_command({cmd:\"Get-Content v5/evidence/migration/20261009/migrated/motion_full.log -Tail 85 -Encoding utf8\\nGet-Content v5/scripts/run_baseline.py -Encoding utf8\\nGet-Content v5/evidence/migration/20261009/migrated/motion/python_tests.log -Tail 40 -ErrorAction SilentlyContinue -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":5000}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:28:01.259Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_81a6d3c56fc3479e9aaade94df61df5b",
+      "input": "text(await tools.exec_command({cmd:\"Get-Content v5/tests/test_board_project_gate.py -Encoding utf8\\nGet-Content v5/scripts/create_project.tcl -Encoding utf8\\nGet-Content v5/evidence/migration/20261009/migrated/motion/python_tests.log -TotalCount 35 -Encoding utf8\\nGet-Content shared/migration/ADAPTED_FILES.json -TotalCount 90 -Encoding utf8\\nGet-Content v5/config/inheritance_manifest.json -TotalCount 70 -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":6500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:28:15.978Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c8a5d105a4bf4768bdacf9d9987578be",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/v5/scripts/create_project.tcl\\n@@\\n-if {[string first \\\"${root}/config/\\\" $configuration] != 0} {error \\\"Configuration must belong to this v5 clone\\\"}\\n+# Temporary validation configurations also live in this clone's build scratch.\\n+# This preserves the original negative part/provenance checks without loading\\n+# any configuration from another workspace or from the frozen archive.\\n+if {[string first \\\"${root}/config/\\\" $configuration] != 0 && [string first \\\"${root}/build/\\\" $configuration] != 0} {error \\\"Configuration must belong to this v5 clone config or build scratch\\\"}\\n*** Update File: E:/Codex_project/AMD_Sonofield/.migration-private/verify_old_preservation.py\\n@@\\n-expected_junctions=physical.get('reparse_points',physical.get('junctions',[]))\\n+expected_junctions=physical['reparse_or_nonregular']\\n@@\\n-if previous_junction_paths and previous_junction_paths!={r['path'] for r in junctions}:\\n+if previous_junction_paths!={r['path'] for r in junctions} or any(hashlib.sha256(r['target'].encode('utf-8')).hexdigest()!=next(e['target_sha256'] for e in expected_junctions if e['path']==r['path']) for r in junctions if r['path'] in previous_junction_paths):\\n*** End Patch\"));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:28:29.560Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_fe14b01b256b4726bc33f67577e58b5f",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport hashlib,json\\nr=Path.cwd();p=r/'v5/scripts/create_project.tcl';h=hashlib.sha256(p.read_bytes()).hexdigest()\\nf=r/'shared/migration/ADAPTED_FILES.json';a=json.loads(f.read_text(encoding='utf-8'))\\nfor row in a['files']:\\n if row['path']=='v5/scripts/create_project.tcl':row['after_canonical_sha256']=h;row['reason']+='; allow same-clone build scratch configurations so original negative gate fixtures retain original semantics'\\nf.write_text(json.dumps(a,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8')\\nf=r/'v5/config/inheritance_manifest.json';a=json.loads(f.read_text(encoding='utf-8'))\\nfor row in a['files']:\\n if row.get('target')=='v5/scripts/create_project.tcl':row['v5_expected_sha256']=h\\nf.write_text(json.dumps(a,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8')\\nf=r/'v5/evidence/migration/20261009/migrated/failure_resolution.json'\\na={'status':'FAILED_ATTEMPT_PRESERVED','source_snapshot':'fa3b019c29a927a9fd41c8e4b54496ead5ed1ee1','failed_gate':'motion_full/python_tests','test_count':115,'failure_assertions':9,'root_cause':'New config-only Tcl path guard rejected original test fixtures in this same v5 build scratch before established device/provenance gates','resolution':'Allow only this-clone config OR build scratch; no acceptance/test/golden/core changes','retry_output':'evidence/migration/20261009/migrated_retry1','original_test_files_changed':False}\\nf.write_text(json.dumps(a,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8')\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\\n$env:TEMP=(Resolve-Path v5/build/migration_scratch/migrated).Path\\n$env:TMP=$env:TEMP\\nPush-Location v5\\n& ..\\\\.venv\\\\Scripts\\\\python.exe -m unittest discover -s tests -p test_board_project_gate.py -v\\nPop-Location\\nif ($LASTEXITCODE -ne 0) { throw 'Unchanged original device gates still fail' }\\n& .\\\\.venv\\\\Scripts\\\\python.exe v5/scripts/check_migration.py\\nif ($LASTEXITCODE -ne 0) { throw 'Inheritance provenance mismatch' }\\ngit add v5/scripts/create_project.tcl v5/config/inheritance_manifest.json shared/migration/ADAPTED_FILES.json v5/evidence/migration/20261009/migrated\\ngit diff --cached --check\\nif ($LASTEXITCODE -ne 0) { throw 'Diff check failed' }\\ngit commit -q -m 'fix(v5): keep temporary board gate fixtures inside clone allowlist'\\nif ($LASTEXITCODE -ne 0) { throw 'Source correction commit failed' }\\n$correctedSource=git rev-parse HEAD\\n[pscustomobject]@{source_snapshot_commit=$correctedSource;baseline_commit='ecd32e76e9b6c08806eae30a3c75a9c3be5e7570';previous_source_snapshot='fa3b019c29a927a9fd41c8e4b54496ead5ed1ee1';created_at=(Get-Date -Format o)} | ConvertTo-Json | Set-Content .migration-private/source_snapshot.json -Encoding utf8\\nGet-Content .migration-private/source_snapshot.json\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1800}),\ntools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n& .\\\\.venv\\\\Scripts\\\\python.exe .migration-private/verify_old_preservation.py\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":1000,\"max_output_tokens\":1000}),\ntools.write_stdin({session_id:50723,chars:\"\",yield_time_ms:1000,max_output_tokens:1000}),\ntools.write_stdin({session_id:1656,chars:\"\",yield_time_ms:1000,max_output_tokens:1000})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:28:50.697Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_f4e5920831424ba7b05c17c54f1718f2",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"$env:VIVADO_BIN='D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin'\\n$env:IVERILOG_BIN='C:\\\\iverilog\\\\bin'\\n$env:CC='D:\\\\DevC++\\\\Dev-Cpp\\\\TDM-GCC-64\\\\bin\\\\gcc.exe'\\n$env:PYTHONUTF8='1'\\n& .\\\\v5\\\\scripts\\\\run_baseline.ps1 -Python (Resolve-Path .\\\\.venv\\\\Scripts\\\\python.exe).Path -Output evidence/migration/20261009/migrated_retry1 *>&1 | Tee-Object -FilePath .migration-private/migrated_retry1_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":1000,\"max_output_tokens\":1000}),\ntools.exec_command({cmd:\"git fetch --no-tags E:/Codex_project/AMD_Sonofield chore/v5-ax7020-workspace-isolation\\nif ($LASTEXITCODE -ne 0) { throw 'Candidate fetch failed' }\\ngit merge --ff-only FETCH_HEAD\\nif ($LASTEXITCODE -ne 0) { throw 'Clean clone candidate fast-forward failed' }\\nNew-Item -ItemType Directory -Path .migration-private -Force | Out-Null\\n$env:VIVADO_BIN='D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin'\\n$env:IVERILOG_BIN='C:\\\\iverilog\\\\bin'\\n$env:CC='D:\\\\DevC++\\\\Dev-Cpp\\\\TDM-GCC-64\\\\bin\\\\gcc.exe'\\n$env:PYTHONUTF8='1'\\n& .\\\\v5\\\\scripts\\\\run_baseline.ps1 -Python (Resolve-Path .\\\\.venv\\\\Scripts\\\\python.exe).Path -Output evidence/migration/20261009/clean_clone *>&1 | Tee-Object -FilePath .migration-private/clean_clone_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\.portability\\\\clean\",\"yield_time_ms\":1000,\"max_output_tokens\":1600}),\ntools.exec_command({cmd:\"& 'D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin\\\\vivado.bat' -mode batch -source scripts/create_project.tcl -log ../.migration-private/migrated_retry1_vivado.log -journal ../.migration-private/migrated_retry1_vivado.jou -tclargs config/ax7020_ooc.tcl evidence/migration/20261009/migrated_retry1/ooc build/migration/20261009/migrated_retry1_ooc *>&1 | Tee-Object -FilePath ../.migration-private/migrated_retry1_ooc_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\v5\",\"yield_time_ms\":1000,\"max_output_tokens\":700})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:29:11.924Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_8897db40bb8e4e4aa3ee11baaab0e04d",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"$env:VIVADO_BIN='D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin'\\n$env:IVERILOG_BIN='C:\\\\iverilog\\\\bin'\\n$env:CC='D:\\\\DevC++\\\\Dev-Cpp\\\\TDM-GCC-64\\\\bin\\\\gcc.exe'\\n$env:PYTHONUTF8='1'\\n$env:TMP=(Resolve-Path v5/build/migration_scratch/migrated_retry1).Path\\n$env:TEMP=$env:TMP\\n& .\\\\.venv\\\\Scripts\\\\python.exe v5/scripts/run_candidate_regression.py --label migrated_retry1 *>&1 | Tee-Object -FilePath .migration-private/migrated_retry1_candidates_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":1000,\"max_output_tokens\":600}),\ntools.exec_command({cmd:\"$env:VIVADO_BIN='D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin'\\n$env:IVERILOG_BIN='C:\\\\iverilog\\\\bin'\\n$env:CC='D:\\\\DevC++\\\\Dev-Cpp\\\\TDM-GCC-64\\\\bin\\\\gcc.exe'\\n$env:PYTHONUTF8='1'\\n$env:TMP=(Resolve-Path v5/build/migration_scratch/clean_clone).Path\\n$env:TEMP=$env:TMP\\n& .\\\\.venv\\\\Scripts\\\\python.exe v5/scripts/run_candidate_regression.py --label clean_clone *>&1 | Tee-Object -FilePath .migration-private/clean_candidates_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\.portability\\\\clean\",\"yield_time_ms\":1000,\"max_output_tokens\":600}),\ntools.exec_command({cmd:\"& 'D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin\\\\vivado.bat' -mode batch -source scripts/create_project.tcl -log ../.migration-private/clean_vivado.log -journal ../.migration-private/clean_vivado.jou -tclargs config/ax7020_ooc.tcl evidence/migration/20261009/clean_clone/ooc build/migration/20261009/clean_clone_ooc *>&1 | Tee-Object -FilePath ../.migration-private/clean_ooc_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\.portability\\\\clean\\\\v5\",\"yield_time_ms\":1000,\"max_output_tokens\":600}),\ntools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n& .\\\\.venv\\\\Scripts\\\\python.exe v5/scripts/check_workspace_migration.py --archive-audit --freeze-base 0ab574f9e2ad422106655f3c827e89d262d93bb4 --output v5/evidence/migration/20261009/clean_clone/archive_structure.json\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\.portability\\\\clean\",\"yield_time_ms\":1000,\"max_output_tokens\":1400})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:29:32.021Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_346832bb43ce4c6d840d52077dd28f74",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:23194,chars:\"\",yield_time_ms:1000,max_output_tokens:1200}),\ntools.exec_command({cmd:\"Get-Content .github/workflows/workspace-integrity.yml -Encoding utf8\\nGet-Content .gitignore -Encoding utf8\\nGet-Content .ignore -Encoding utf8\\nGet-Content shared/migration/ROLLBACK_PLAN.md -Encoding utf8\\nGet-Content shared/migration/ACTIVE_TREE_ALLOWLIST.json -Encoding utf8\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/candidates/extra_summary.json -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":6500}),\ntools.exec_command({cmd:\"gh repo view loverlike1216/SonoField-FPGA --json nameWithOwner,url,visibility,defaultBranchRef\\nrg --files -g '*.sv' -g '*.py' -g '*.tcl' | Measure-Object\\nrg -n -i 'TODO|FIXME|placeholder|stub|mock|fake|hard.?coded|not implemented|demo only|simulation only|skip|disabled' v5/rtl v5/firmware v5/software v5/scripts v5/tests -g '*.sv' -g '*.py' -g '*.c' -g '*.h' -g '*.tcl'\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":6500})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:29:44.221Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_53c36dad62404acaa0294f33036120cc",
+      "input": "text(await tools.exec_command({cmd:\"Get-Content v5/evidence/migration/20261009/staged_audit.json -Encoding utf8\\nGet-Content .migration-private/search_before.json -Encoding utf8\\nGet-Content shared/PROJECT_STATE.md -Encoding utf8\\nGet-Content shared/CURRENT_PLAN.md -Encoding utf8\\nGet-Content shared/BLOCKERS.md -Encoding utf8\\nGet-Content shared/ACCEPTANCE.md -Encoding utf8\\nGet-Content .migration-private/sync_interactions.py -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":9500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:29:58.114Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_2495cc93611f478c8e70aa22abafd28f",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"Get-Content v5/evidence/migration/20261009/migrated_retry1/motion/summary.json -Encoding utf8 -ErrorAction SilentlyContinue\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion/python_tests.log -Tail 4 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion/python_tests.log -Tail 4 -Encoding utf8\\nGet-Content v5/scripts/motion_gate.py -TotalCount 110 -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":5000}),\ntools.write_stdin({session_id:57453,chars:\"\",yield_time_ms:1000,max_output_tokens:500}),\ntools.write_stdin({session_id:83773,chars:\"\",yield_time_ms:1000,max_output_tokens:500})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:30:25.355Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_d65018c328bc403aaed6ca7fb3575fd4",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/.github/workflows/workspace-integrity.yml\\n@@\\n-        run: python v5/scripts/check_workspace_migration.py --freeze-base \\\"$FREEZE_BASE\\\"\\n+        run: |\\n+          if [[ \\\"$FREEZE_BASE\\\" =~ ^0+$ ]]; then\\n+            FREEZE_BASE=$(python -c \\\"import json; print(json.load(open('shared/migration/OLD_TRACKED_MANIFEST.json'))['base_commit'])\\\")\\n+          fi\\n+          python v5/scripts/check_workspace_migration.py --freeze-base \\\"$FREEZE_BASE\\\"\\n*** Update File: E:/Codex_project/AMD_Sonofield/shared/migration/RUNBOOK.md\\n@@\\n-git clone https://github.com/loverlike1216/SonoField-FPGA.git <new-empty-directory>\\n+git clone -c core.longpaths=true -c core.autocrlf=false -c core.eol=lf https://github.com/loverlike1216/SonoField-FPGA.git <new-empty-directory>\\n@@\\n python -m venv .venv\\n-./.venv/Scripts/python.exe -m pip install -r v5/requirements-lock.txt\\n+./.venv/Scripts/python.exe -m pip install --no-cache-dir --disable-pip-version-check -r v5/requirements-lock.txt\\n@@\\n ./v5/scripts/run_baseline.ps1 -Python $pythonExe -Output \\\"evidence/migration/$runId/full\\\"\\n ./.venv/Scripts/python.exe v5/scripts/check_workspace_migration.py\\n ./.venv/Scripts/python.exe v5/hardware/integration_candidates/20261009/verify_candidates.py --output \\\"evidence/migration/$runId/candidates\\\"\\n+# The additional ADC-candidate cross-simulator gate is offline, not ADC approval:\\n+./.venv/Scripts/python.exe v5/scripts/run_candidate_regression.py --label \\\"manual-$runId\\\"\\n@@\\n For an explicitly user-authorized archive/recovery audit only, append `--archive-audit` to check_workspace_migration.py. Normal check compares Git metadata and does not read archive source. Baseline refuses an existing summary; equivalence and OOC refuse existing evidence. Use a fresh runId after a failure and retain the failed logs. Do not use skip flags. Tk needs an interactive desktop; no GUI skip substitutes for full PASS. A missing compiler/simulator/dependency is a failure to resolve or a stated blocker.\\n+\\n+The clone options keep raw archived bytes at canonical LF on Windows and avoid path-length defaults. If running original negative Tcl gate tests directly, first create a scratch directory under this clone's `v5/build/` and point `TMP` and `TEMP` there. `run_baseline` does this automatically. Tcl accepts verified configurations under this clone's `v5/config/` or temporary configurations under its `v5/build/`; external workspace and archive configurations remain rejected.\\n*** End Patch\"));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:30:49.821Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_89311f97f77c4c7a91b318ad6ffff579",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: E:/Codex_project/AMD_Sonofield/.migration-private/audit_active_paths.py\\n+\\\"\\\"\\\"Current candidate runtime/search/source ownership; authorized archive filenames only.\\\"\\\"\\\"\\n+from pathlib import Path\\n+import collections,hashlib,json,os,re,subprocess,datetime\\n+R=Path(__file__).resolve().parents[1]\\n+E=R/'v5/evidence/migration/20261009'\\n+def git(*args):return subprocess.check_output(['git','-C',str(R),*args])\\n+before=json.loads((R/'.migration-private/search_before.json').read_text(encoding='utf-8'))\\n+args=['rg','--files','-g','*.sv','-g','*.py','-g','*.tcl']\\n+paths=subprocess.check_output(args,cwd=R,text=True).splitlines()\\n+counts=collections.Counter(p.replace('\\\\\\\\','/').split('/')[0] for p in paths)\\n+archive_names=subprocess.check_output(['rg','--files','--no-ignore','--hidden','history_old'],cwd=R,text=True).splitlines()\\n+search={'status':'PASS' if not any(p.replace('\\\\\\\\','/').startswith(('history_old/','v1/','v2/','PCB/','BOM/','parameter_detection/')) for p in paths) and len(archive_names)==3909 else 'FAIL',\\n+        'before':before,'after':{'files':len(paths),'root_counts':dict(counts),'historical_paths':0,'inactive_old_root_paths':0},\\n+        'explicit_authorized_archive_filename_enumeration':{'command':['rg','--files','--no-ignore','--hidden','history_old'],'files':len(archive_names),'source_content_read':False},\\n+        'default_command':args,'default_paths':paths}\\n+(E/'search_isolation.json').write_text(json.dumps(search,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+manifest=json.loads((R/'shared/migration/OLD_TRACKED_MANIFEST.json').read_text(encoding='utf-8'))\\n+original={r['path']:r for r in manifest['files']}\\n+tracked={}\\n+for row in git('ls-files','--stage','-z').split(b'\\\\0'):\\n+ if row:\\n+  meta,path=row.split(b'\\\\t',1);mode,oid,stage=meta.split();tracked[path.decode()]=(mode.decode(),oid.decode())\\n+protected=[p for p in original if p.startswith(('v5/rtl/','v5/software/','v5/firmware/','v5/tests/','v5/tb/','v5/simulation/')) or (p.startswith('v5/') and p.endswith('.xlsx'))]\\n+changes=[p for p in protected if tracked.get(p)!=(original[p]['mode'],original[p]['git_blob_sha'])]\\n+retained=[p for p in original if p.startswith('v5/')]\\n+missing=[p for p in retained if p not in tracked]\\n+reuse={'status':'FAIL' if changes or missing else 'PASS','protected_files':len(protected),'protected_blob_mode_changes':changes,'original_v5_files':len(retained),'missing_original_v5_files':missing,\\n+       'files':[{'path':p,'mode':original[p]['mode'],'git_blob_sha':original[p]['git_blob_sha'],'sha256':original[p]['sha256'],'current_blob_mode_equal':p not in changes} for p in protected],\\n+       'adapted_scripts_metadata_docs':'shared/migration/ADAPTED_FILES.json','golden_test_acceptance_changed':False}\\n+(E/'active_reuse_hashes.json').write_text(json.dumps(reuse,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+code=\\\"\\\"\\\"\\n+from pathlib import Path\\n+import hashlib,json,sys,importlib.metadata,tkinter\\n+import software,software.ui.app,software.board.serial_transport,software.motion.trajectory,software.calibration.pipeline\\n+root=Path.cwd().resolve()\\n+modules={k:str(Path(m.__file__).resolve()) for k,m in sys.modules.items() if (k=='software' or k.startswith('software.')) and getattr(m,'__file__',None)}\\n+owned=all(Path(v).is_relative_to(root/'software') for v in modules.values())\\n+packages={k:importlib.metadata.version(k) for k in ('numpy','scipy','matplotlib','pillow')}\\n+print(json.dumps({'status':'PASS' if owned else 'FAIL','source_root':str(root),'cwd':str(root),'python_executable':sys.executable,'python_prefix':sys.prefix,'software_modules':modules,'all_software_owned_by_this_v5':owned,'tk_version':tkinter.TkVersion,'packages':packages},indent=2))\\n+\\\"\\\"\\\"\\n+for label,clone in [('migrated_retry1',R),('clean_clone',R/'.portability/clean')]:\\n+ env={**os.environ,'PYTHONUTF8':'1','PYTHONDONTWRITEBYTECODE':'1'}\\n+ result=json.loads(subprocess.check_output([str(clone/'.venv/Scripts/python.exe'),'-c',code],cwd=clone/'v5',env=env,text=True))\\n+ result['git_commit']=subprocess.check_output(['git','-C',str(clone),'rev-parse','HEAD'],text=True).strip()\\n+ result['git_alternates_exist']=(clone/'.git/objects/info/alternates').exists()\\n+ result['origin']=subprocess.check_output(['git','-C',str(clone),'remote','get-url','origin'],text=True).strip()\\n+ assert result['status']=='PASS' and not result['git_alternates_exist']\\n+ (E/label/'runtime_ownership.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+scan_args=['rg','-n','-i',r'TODO|FIXME|placeholder|stub|mock|fake|hard.?coded|not implemented|demo only|simulation only|skip|disabled','v5/rtl','v5/firmware','v5/software','v5/scripts','v5/tests','-g','*.sv','-g','*.py','-g','*.c','-g','*.h','-g','*.tcl']\\n+scan=subprocess.run(scan_args,cwd=R,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)\\n+assert scan.returncode in (0,1)\\n+(E/'implementation_keyword_scan.log').write_text(scan.stdout,encoding='utf-8',newline='\\\\n')\\n+review={'status':'PASS_WITH_DECLARED_PHYSICAL_LIMITATIONS','command':scan_args,'actual_scan':'implementation_keyword_scan.log','classifications':[\\n+ {'matches':'SAFE_DISABLED / disabled','role':'Actual safety transitions, UI enable state and regression assertions; not missing implementation'},\\n+ {'matches':'motion_gate --skip-regression; validate/self_calibration --skip-xsim','role':'Inherited optional flags explicitly yield PARTIAL; none used in full baseline or any nested command'},\\n+ {'matches':'package_review stub','role':'Historical package-metadata inspection helper; not instantiated production RTL, not executed by this migration, not hardware proof'},\\n+ {'matches':'check_board_integration review strings / curate historical recovery','role':'Audit/provenance descriptions, not functional shortcut'},\\n+ {'matches':'tests/ps_service_harness.c','role':'Deliberate offline C bus/UART fixture, classified host-test only; no real target ARM/PS-PL claim'},\\n+ {'matches':'serial_transport map capability disabled','role':'Known fail-closed first-stage transport limitation; not claimed physically functional'}],\\n+ 'production_fake_implementation_detected':False,'core_files_changed':False,'whole_platform_status':'REVISE'}\\n+(E/'implementation_review.json').write_text(json.dumps(review,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+print(json.dumps({'search':search['status'],'default_source_counts':dict(counts),'archive_filename_count':len(archive_names),'protected':len(protected),'protected_changes':changes,'runtime_ownership':'BOTH_PASS'},indent=2))\\n+assert search['status']=='PASS' and reuse['status']=='PASS'\\n*** End Patch\"));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:30:52.816Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_825a149a6e8f4fb79ae8c2a597e4d5e4",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n& .\\\\.venv\\\\Scripts\\\\python.exe .migration-private/audit_active_paths.py\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1800}),\ntools.write_stdin({session_id:57453,chars:\"\",yield_time_ms:1000,max_output_tokens:600}),\ntools.write_stdin({session_id:83773,chars:\"\",yield_time_ms:1000,max_output_tokens:600})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:02.716Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c0e4ad651631421e9a00e5c914ac1872",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/.migration-private/audit_active_paths.py\\n@@\\n for label,clone in [('migrated_retry1',R),('clean_clone',R/'.portability/clean')]:\\n+ (E/label).mkdir(parents=True,exist_ok=True)\\n*** End Patch\"));\ntext(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n& .\\\\.venv\\\\Scripts\\\\python.exe .migration-private/audit_active_paths.py\\nif ($LASTEXITCODE -ne 0) { throw 'Active path audit failed' }\\n& 'D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin\\\\vivado.bat' -mode batch -source scripts/reopen_ooc.tcl -log ../.migration-private/migrated_retry1_reopen.log -journal ../.migration-private/migrated_retry1_reopen.jou -tclargs build/migration/20261009/migrated_retry1_ooc/sonofield_v5.xpr evidence/migration/20261009/migrated_retry1/ooc_reopen *>&1 | Tee-Object -FilePath ../.migration-private/migrated_retry1_reopen_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":1000,\"max_output_tokens\":1600}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:13.235Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_f95d0f4b3a2f46779e98e729e6f56fdf",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"& 'D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin\\\\vivado.bat' -mode batch -source scripts/reopen_ooc.tcl -log ../.migration-private/migrated_retry1_reopen.log -journal ../.migration-private/migrated_retry1_reopen.jou -tclargs build/migration/20261009/migrated_retry1_ooc/sonofield_v5.xpr evidence/migration/20261009/migrated_retry1/ooc_reopen *>&1 | Tee-Object -FilePath ../.migration-private/migrated_retry1_reopen_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\v5\",\"yield_time_ms\":1000,\"max_output_tokens\":1000}),\ntools.write_stdin({session_id:83773,chars:\"\",yield_time_ms:1000,max_output_tokens:700}),\ntools.exec_command({cmd:\"Get-Content v5/evidence/migration/20261009/migrated_retry1/ooc/timing_synthesis.rpt -Encoding utf8 | Select-String -Pattern 'WNS\\\\(ns\\\\)|0.994|0.157|no_input_delay|no_output_delay' -Context 1,1\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/ooc/utilization.rpt -Encoding utf8 | Select-String -Pattern 'Slice LUTs|Slice Registers|Block RAM Tile'\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1500})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:26.679Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_63a43d03287e458e87e7cb98fe2697a2",
+      "input": "text(await tools.exec_command({cmd:\"& 'D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin\\\\vivado.bat' -mode batch -source scripts/reopen_ooc.tcl -log ../.migration-private/clean_reopen.log -journal ../.migration-private/clean_reopen.jou -tclargs build/migration/20261009/clean_clone_ooc/sonofield_v5.xpr evidence/migration/20261009/clean_clone/ooc_reopen *>&1 | Tee-Object -FilePath ../.migration-private/clean_reopen_console.log\\nexit $LASTEXITCODE\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\.portability\\\\clean\\\\v5\",\"yield_time_ms\":1000,\"max_output_tokens\":800}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:43.407Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_03371fea83f94454b6c6203f960857a8",
+      "input": "text(await tools.exec_command({cmd:\"Get-Content shared/PROJECT_STATE.json -Encoding utf8\\nGet-Content shared/CONTEXT_CHECKPOINT.json -Encoding utf8\\nGet-Content README.md -Encoding utf8\\nGet-Content CHANGELOG.md -Encoding utf8\\nGet-Content shared/ENGINEERING_STATE.md -Encoding utf8 -ErrorAction SilentlyContinue\\nGet-Content shared/migration/HARDWARE_CONFLICT_DISPOSITION.md -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":7500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:54.074Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c64deff03240464db926dc5f33ab1b66",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/shared/migration/HARDWARE_CONFLICT_DISPOSITION.md\\n@@\\n-| board_clock_candidate.sv low-level old defaults | Inherited unused candidate | Not included in OOC production source list, not AX7020 clock fact |132MHz internal target preserved; physical clocks remain unqualified |\\n+| board_clock_candidate.sv low-level old defaults | Inherited unused candidate | Included in the original 18-file OOC allowlist, but not instantiated by sono_axi_system; no physical clock/pin authority |132MHz internal target preserved; physical clocks remain unqualified |\\n*** End Patch\"));\ntext(await tools.exec_command({cmd:\"Get-Content AGENTS.md -Encoding utf8\\nGet-Content shared/migration/OLD_TRACKED_MANIFEST.json -TotalCount 8 -Encoding utf8\\nGet-Content shared/migration/DELIVERY_MANIFEST.md -Encoding utf8\\nGet-Content v5/rtl/timing/board_clock_candidate.sv -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":2200}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:32:10.957Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_0a1b5c7ce17e41a9a78e1ba22f4952be",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:40373,chars:\"\",yield_time_ms:1000,max_output_tokens:800}),\ntools.write_stdin({session_id:22823,chars:\"\",yield_time_ms:1000,max_output_tokens:800}),\ntools.exec_command({cmd:\"Get-ChildItem v5/evidence/migration/20261009/migrated_retry1/motion -Directory | Select-Object Name\\nGet-ChildItem .portability/clean/v5/evidence/migration/20261009/clean_clone/motion -Directory | Select-Object Name\\nGet-Process vvp,xsimk -ErrorAction SilentlyContinue | Select-Object ProcessName,Id,CPU,StartTime\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1500})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:32:17.317Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_6f64a422d7d24cf5a71bce63e08e23c2",
+      "input": "text(await tools.exec_command({cmd:\"Get-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 12 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 12 -Encoding utf8\\nGet-CimInstance Win32_Process -Filter \\\"name='python.exe' OR name='vvp.exe' OR name='xsimk.exe'\\\" | Select-Object ProcessId,ParentProcessId,Name,CommandLine | ConvertTo-Json -Depth 2\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":3500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:32:43.064Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_b7004f40b46f41e3b6a81bd6b78d2362",
+      "input": "text(await tools.exec_command({cmd:\"Get-ChildItem v5/evidence/migration/20261009/base | Select-Object Name\\nGet-Content v5/evidence/migration/20261009/base/equivalence/equivalence_summary.json -Encoding utf8 -ErrorAction SilentlyContinue\\nGet-Content v5/evidence/migration/20261009/base/equivalence/summary.json -Encoding utf8 -ErrorAction SilentlyContinue\\nrg -n 'equivalence|copytree|fresh_base' .migration-private/prepare_candidate.py\\nGet-Content v5/scripts/run_candidate_regression.py -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":3300}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:34:53.486Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_66ce7512281146cda2b297a1808c9e26",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: E:/Codex_project/AMD_Sonofield/.migration-private/finalize_migration_evidence.py\\n+\\\"\\\"\\\"Write final candidate reports ONLY after observing all real regression results.\\\"\\\"\\\"\\n+from pathlib import Path\\n+import datetime,hashlib,json,re,shutil,subprocess\\n+R=Path(__file__).resolve().parents[1]\\n+E=R/'v5/evidence/migration/20261009'\\n+BASE='ecd32e76e9b6c08806eae30a3c75a9c3be5e7570'\\n+SOURCE=json.loads((R/'.migration-private/source_snapshot.json').read_text(encoding='utf-8-sig'))['source_snapshot_commit']\\n+now=datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat()\\n+def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))\\n+def put(p,value):\\n+ p=R/p;p.parent.mkdir(parents=True,exist_ok=True)\\n+ p.write_text((json.dumps(value,ensure_ascii=False,indent=2) if not isinstance(value,str) else value).rstrip()+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+def git(*args):return subprocess.check_output(['git','-C',str(R),*args]).decode('utf-8').strip()\\n+assert git('rev-parse','HEAD')==SOURCE,'Source changed since validation began'\\n+clean=R/'.portability/clean'\\n+assert subprocess.check_output(['git','-C',str(clean),'rev-parse','HEAD'],text=True).strip()==SOURCE\\n+summary_paths={'BASE':E/'base/summary.json','MIGRATED':E/'migrated_retry1/summary.json','CLEAN_CLONE':clean/'v5/evidence/migration/20261009/clean_clone/summary.json'}\\n+summaries={k:read(p) for k,p in summary_paths.items()}\\n+for name,s in summaries.items():\\n+ assert s['status']=='PASS' and s['python_tests']==115 and s['frame_count']==3696,(name,s.get('status'))\\n+ assert s['determinism']['status']=='PASS' and s['determinism']['runs']==4\\n+ assert all(s[k]=='PASS' for k in ('regression','axi_offline','independent_safety','timing_equivalence'))\\n+ assert s['hardware_programmed'] is False\\n+ assert all(c['exit_code']==0 and not any(str(x).startswith('--skip') for x in c['command']) for c in s['commands'])\\n+historical=read(R/'v5/evidence/baseline/board_integration_20261009/summary.json')\\n+hashes=summaries['BASE']['determinism']['hashes']\\n+assert historical['determinism']['hashes']==hashes\\n+assert all(s['determinism']['hashes']==hashes for s in summaries.values())\\n+for label,root in [('base',R),('migrated_retry1',R),('clean_clone',clean)]:\\n+ extra=read(root/'v5/evidence/migration/20261009'/label/'candidates/extra_summary.json')\\n+ assert extra['status']=='PASS' and not extra['hardware_verified']\\n+ assert all(c['exit_code']==0 for c in extra['commands'])\\n+ candidate=read(root/'v5/evidence/migration/20261009'/label/'candidates/candidate_checks.json')\\n+ assert candidate['status']=='PASS'\\n+ for engine in ('icarus','xsim'):\\n+  assert 'ADC_CANDIDATE_SERIAL_PASS frames=256' in (root/'v5/evidence/migration/20261009'/label/'candidates'/('adc_'+engine+'.log')).read_text(encoding='utf-8')\\n+\\n+# Only independently generated, Git-eligible evidence is copied from the clean clone.\\n+paths=subprocess.check_output(['git','-C',str(clean),'ls-files','--others','--exclude-standard','-z','--','v5/evidence/migration/20261009/clean_clone']).split(b'\\\\0')\\n+copied=[]\\n+for raw in paths:\\n+ if not raw:continue\\n+ rel=raw.decode('utf-8');src=clean/rel;dest=R/rel\\n+ assert src.is_file() and not src.is_symlink()\\n+ dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,dest);copied.append(rel)\\n+put('v5/evidence/migration/20261009/clean_clone/copy_receipt.json',{'source_clone':str(clean),'source_commit':SOURCE,'policy':'Only this clean run Git-eligible evidence copied; raw binaries/cache excluded; original paths retained in actual logs','files':copied,'status':'PASS'})\\n+console_files=[(R,'.migration-private/migrated_ooc_console.log','migrated/ooc/synthesis_console.log'),\\n+ (R,'.migration-private/migrated_retry1_ooc_console.log','migrated_retry1/ooc/synthesis_console.log'),\\n+ (R,'.migration-private/migrated_retry1_reopen_console.log','migrated_retry1/ooc_reopen/console.log'),\\n+ (R,'.migration-private/migrated_retry1_console.log','migrated_retry1/console.log'),\\n+ (clean,'.migration-private/clean_ooc_console.log','clean_clone/ooc/synthesis_console.log'),\\n+ (clean,'.migration-private/clean_reopen_console.log','clean_clone/ooc_reopen/console.log'),\\n+ (clean,'.migration-private/clean_clone_console.log','clean_clone/console.log')]\\n+for root,source,target in console_files:\\n+ p=E/target;p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(root/source,p)\\n+allow=(R/'v5/config/ooc_source_list.txt').read_text(encoding='utf-8').splitlines()\\n+ooc={}\\n+for label,root in [('base',R),('migrated_retry1',R),('clean_clone',clean)]:\\n+ d=E/label;expected={str((root/'v5'/p).resolve()).replace('\\\\\\\\','/') for p in allow}\\n+ actual=set((d/'ooc/loaded_sources.txt').read_text(encoding='utf-8').splitlines())\\n+ reopened=set((d/'ooc_reopen/loaded_sources_reopened.txt').read_text(encoding='utf-8').splitlines())\\n+ assert actual==expected and reopened==expected,(label,'Foreign or missing OOC source')\\n+ synth=(d/'ooc/synthesis_console.log').read_text(encoding='utf-8-sig')\\n+ reopen=(d/'ooc_reopen/console.log').read_text(encoding='utf-8-sig')\\n+ assert 'V5_OOC_SYNTHESIS_COMPLETE' in synth and 'V5_OOC_REOPEN_PASS sources=18' in reopen\\n+ assert 'Vivado v2025.2' in synth and 'Vivado v2025.2' in reopen\\n+ timing=(d/'ooc/timing_synthesis.rpt').read_text(encoding='utf-8')\\n+ setup=float(re.search(r'Setup\\\\s*:\\\\s*0\\\\s+Failing Endpoints,\\\\s+Worst Slack\\\\s+([\\\\d.-]+)ns',timing)[1])\\n+ hold=float(re.search(r'Hold\\\\s*:\\\\s*0\\\\s+Failing Endpoints,\\\\s+Worst Slack\\\\s+([\\\\d.-]+)ns',timing)[1])\\n+ assert (setup,hold)==(0.994,0.157)\\n+ ooc[label]={'status':'PASS','scope':'SYNTHESIZED_OOC_PRE_ROUTE_ONLY','part':'xc7z020clg400-2_DOCUMENTED_NOT_FULL_PHYSICAL_PART_CONFIRMATION','internal_target_hz':132000000,'source_count':len(actual),'reopened_sources':len(reopened),'wns_ns':setup,'whs_ns':hold,'tns_ns':0.0,'ths_ns':0.0,'lut':7219,'registers':17918,'ramb36':4,'board_input_output_constraints':'NOT_VERIFIED','hd_clk_src':'UNSET_OOC_WARNING','place_route':'NOT_RUN','bitstream':'NOT_GENERATED','hardware':'NOT_VERIFIED'}\\n+assert read(E/'old_sandbox_preservation.json')['status']=='PASS'\\n+assert read(E/'search_isolation.json')['status']=='PASS'\\n+assert read(E/'active_reuse_hashes.json')['status']=='PASS'\\n+assert read(E/'clean_clone/archive_structure.json')['status']=='PASS'\\n+ownership={k:read(E/k/'runtime_ownership.json') for k in ('migrated_retry1','clean_clone')}\\n+assert ownership['migrated_retry1']['python_prefix']!=ownership['clean_clone']['python_prefix']\\n+assert all(v['status']=='PASS' and v['git_commit']==SOURCE for v in ownership.values())\\n+comparison={'status':'PASS','source_commit':SOURCE,'historical_baseline_commit':BASE,'comparison':'Exact canonical functional hashes; timestamps/report headers and absolute runtime paths are nonfunctional metadata','historical_baseline_equal':True,'all_three_fresh_environments_equal':True,'hash_roles':['trajectory','phase_map_words','trap_reports','RTL_ACK'],'apply_center':hashes[0],'full_3696_frame_demo':hashes[1],'python_tests_each':115,'frames_per_run':3696,'runs_per_environment':4,'simulators_each':['Icarus x3','Vivado2025.2 XSim x1'],'fresh_environments':['BASE','MIGRATED','CLEAN_CLONE'],'core_test_golden_threshold_changes':False}\\n+put('v5/evidence/migration/20261009/digital_behavior_comparison.json',comparison)\\n+put('v5/evidence/migration/20261009/ooc_comparison.json',{'status':'PASS','source_commit':SOURCE,'environments':ooc})\\n+matrix={k:{'status':s['status'],'python_tests':s['python_tests'],'frames':s['frame_count'],'simulator_runs':s['determinism']['runs'],'baseline_summary':f\\\"v5/evidence/migration/20261009/{'base' if k=='BASE' else 'migrated_retry1' if k=='MIGRATED' else 'clean_clone'}/summary.json\\\",'canonical_hashes_equal':True,'protocol_C_AXI_safety_calibration_serializer_golden_equivalence':'PASS'} for k,s in summaries.items()}\\n+limitations=['Candidate only; main merge and post-merge fresh remote-main clone await explicit user approval','Permanent workspace_path is not promoted; candidate execution path is E:\\\\\\\\Codex_project\\\\\\\\AMD_Sonofield','Second Git clone and independently installed locked venv share the same host installed EDA/compiler versions; not a second machine or OS','No matched ARM BSP/compiler/target download, PS-PL/DDR/UART/ADC/AFE/driver/power/acoustic hardware verification','OOC pre-route only;2324inputs/256outputs lack board delay constraints;HD.CLK_SRC unset; do not infer board timing or complete CDC coverage','Native v5 schematic NOT_CREATED,ERC_NOT_RUN,MANUFACTURING_HOLD; C16 ADC not approved','BOM generator was not cold-started; original and working workbook bytes preserved and15read-only checks passed in all3environments','External ChatGPT full history reader BLOCKED and independent human/AI final review pending']\\n+port={'status':'PASS_WITH_LIMITATIONS','scope':'V5_WORKSPACE_MIGRATION_CANDIDATE_ONLY','base_commit':BASE,'validated_source_commit':SOURCE,'matrix':matrix,'ooc':ooc,'runtime_ownership':ownership,'determinism':comparison,'limitations':limitations,'failed_attempts':[{'path':'v5/evidence/migration/20261009/preparation_failure.json','resolution':'Atomic new-clone file restoration; archive bytes fully audited before freeze'},{'path':'v5/evidence/migration/20261009/migrated/summary.json','resolution':'Tcl config scope repaired; unchanged tests and entire baseline rerun under migrated_retry1'}],'clean_clone_source_transfer':'Fresh clone of formal remote history; fetch only committed candidate objects from new primary clone; no worktree files or shared Git alternates; origin remains formal remote','hardware_operations_this_task':[],'created_at':now}\\n+put('shared/migration/PORTABILITY_AND_REGRESSION.json',port)\\n+put('shared/migration/PORTABILITY_AND_REGRESSION.md',f'''# Candidate portability and regression\\n+\\n+Result: ACCEPT WITH LIMITATIONS — CANDIDATE ONLY. BASE `{BASE}`; actual validated candidate source `{SOURCE}`. All results below were produced by tools in this task. Main is not merged; permanent workspace promotion and post-merge fresh remote-main cold start remain user-gated.\\n+\\n+| Gate | Fresh BASE before extraction | Migrated retry1 | Independent clean clone |\\n+|---|---|---|---|\\n+| Python/Tk tests |115/115 PASS|115/115 PASS|115/115 PASS|\\n+| Full GUI-driven fixed trajectories |3696frames×4 PASS|3696frames×4 PASS|3696frames×4 PASS|\\n+| Independent simulators |Icarus×3 +XSim2025.2×1|Icarus×3 +XSim2025.2×1|Icarus×3 +XSim2025.2×1|\\n+| Canonical trajectory/map/trap/ACK |Exact historical BASE hashes|Exact fresh BASE hashes|Exact fresh BASE hashes|\\n+| C service/protocol/AXI/MMIO/safety/serializer/calibration/golden equivalence |PASS|PASS|PASS|\\n+| Offline hardware-candidate/BOM checks |15 PASS|15 PASS|15 PASS|\\n+| ADC candidate interface, Icarus and XSim |256frames each PASS|256frames each PASS|256frames each PASS|\\n+| Vivado2025.2 OOC rebuild / reopen |18 own-v5 sources PASS|18 own-v5 sources PASS|18 own-v5 sources PASS|\\n+| OOC timing, WNS/WHS |+0.994ns/+0.157ns|+0.994ns/+0.157ns|+0.994ns/+0.157ns|\\n+\\n+Evidence: [machine matrix](PORTABILITY_AND_REGRESSION.json), [canonical hash comparison](../../v5/evidence/migration/20261009/digital_behavior_comparison.json), [OOC comparison](../../v5/evidence/migration/20261009/ooc_comparison.json), [BASE](../../v5/evidence/migration/20261009/base/summary.json), [MIGRATED](../../v5/evidence/migration/20261009/migrated_retry1/summary.json), [CLEAN_CLONE](../../v5/evidence/migration/20261009/clean_clone/summary.json), [old sandbox preservation](../../v5/evidence/migration/20261009/old_sandbox_preservation.json), [source/search isolation](../../v5/evidence/migration/20261009/search_isolation.json), [102 protected hashes](../../v5/evidence/migration/20261009/active_reuse_hashes.json). Logs/source lists/runtime ownership/dependency versions remain in each environment's evidence. LOG_HASHES.json records raw-workspace and canonical-LF hashes, because Git legitimately normalizes text evidence line endings.\\n+\\n+The independent clean clone has its own .git, no alternates/hardlink sharing, and a newly installed .venv using --no-cache-dir and locked requirements. It cloned the actual formal remote history then fetched committed candidate objects before publication; its own source/runtime/output paths are recorded in the actual commands. Reproduction does not require the old physical sandbox. The two environments share installed host Vivado/Icarus/GCC; this is not a second machine or OS.\\n+\\n+Full demo canonical trajectory `{hashes[1][0]}`, phase maps `{hashes[1][1]}`, trap reports `{hashes[1][2]}`, ACK `{hashes[1][3]}`. APPLY_CENTER has its own four exact hashes in the comparison. No goldens/tests/thresholds were relaxed, and no skip flag was used.\\n+\\n+Failures retained: Phase2 in-place restoration hit Windows errno22 before freeze, then same-volume atomic replacement succeeded with exact BASE hash. First migrated run failed9 assertions because the config-only guard rejected original temporary gate fixtures; configurations now remain confined to this v5 config/build scratch, all original115tests and full nested gates passed on retry. See migrated/failure_resolution.json and preparation_failure.json. No failure was relabelled PASS.\\n+\\n+OOC remains pre-route, with no verified board input/output delays and HD.CLK_SRC warning; utilization7219LUT/17918registers/4RAMB36. Reopen warnings about unrelated installed board-store parts and the long clean-clone path are retained; selected exact device and all18source checks passed. No board clock/pin/preset, PS init, DDR, bitstream, SD/Flash or physical acoustic operation was performed. ARM target/BSP unqualified; whole platform REVISE. Native v5 schematic NOT_CREATED/ERC_NOT_RUN/MANUFACTURING_HOLD; BOM generator cold start and external ChatGPT/independent final review are not claimed. Original/working workbook bytes and all15offline checks are verified.\\n+''')\\n+gates=[('MIG-01','Same repo/currentv5/fixedBASE/independent new clone'),('MIG-02','3907original paths,97559165bytes,mode/blob/rawSHA256 zero mismatch;2frozen metadata'),('MIG-03','101394unique original/ignored-target/Git files rehashed;35untracked kept;public scan required before push'),('MIG-04','Default121source paths allv5;18own-source OOC;independent importedsoftware andvenv'),('MIG-05','Single currentv5 state/AX7020 facts;historical clock candidate unused;no oldboardphysicalconstraints'),('MIG-06','115tests and3696frames×4 each of3fresh environments'),('MIG-07','3Icarus+1XSim canonical hashes equal originalBASE and eachother'),('MIG-08','Full inheritedC/AXI/UARToffline/calibration/queue/safety/atomic/serializer/golden gates'),('MIG-09','RealVivado2025.2 rebuild/reopen18sources in3environments;OOC only'),('MIG-10','SecondindependentGit/lockednewvenv/fullavailableofflinegates;samehost limitation'),('MIG-11','Currentrecovery/acceptance/blockers/hardwareboundary/runbook/packageboundary;linkcheckbeforecommit'),('MIG-12','Zero device operations;no board/hardware proof invented')]\\n+quality={'conclusion':'ACCEPT WITH LIMITATIONS','qualifier':'CANDIDATE ONLY','scope':'Workspace migration, not whole hardware platform acceptance','validated_source_commit':SOURCE,'gates':[{'id':i,'status':'PASS','evidence':v} for i,v in gates],'blocking_candidate_regressions':0,'critical_candidate_bugs_observed':0,'main_merge':'USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE','post_merge_remote_main_clone':'PENDING_APPROVAL_AND_MERGE','whole_platform':'REVISE','physical_manufacturing':'HOLD','independent_review':'PENDING','limitations':limitations,'created_at':now}\\n+put('shared/migration/QUALITY_GATE.json',quality)\\n+put('shared/migration/QUALITY_GATE.md','# Candidate quality gate\\\\n\\\\nConclusion: **ACCEPT WITH LIMITATIONS — CANDIDATE ONLY**. The whole physical platform remains **REVISE**, manufacturing **HOLD**. User approval for main merge/post-merge fresh remote clone/permanent workspace promotion is pending. No version upgrade.\\\\n\\\\n| Gate | Status | Evidence / scope |\\\\n|---|---|---|\\\\n'+'\\\\n'.join(f'|{i}|PASS|{v}|' for i,v in gates)+'\\\\n\\\\nSee [full regression](PORTABILITY_AND_REGRESSION.md) and [machine gate](QUALITY_GATE.json) for actual tools, canonical hashes, failures, evidence and limits. Online CI and candidate remote receipts are recorded separately only after observed completion. Model self-review does not constitute independent final acceptance.\\\\n')\\n+state=read(R/'shared/PROJECT_STATE.json')\\n+state.update(current_stage='AX7020_V5_MIGRATION_CANDIDATE_USER_REVIEW',migration_phase='PHASE_6_CANDIDATE_VALIDATED_PENDING_PUBLICATION',organization_result='ACCEPT_WITH_LIMITATIONS_CANDIDATE_ONLY',digital_validation='BASE_MIGRATED_CLEAN_CLONE_PASS',digital_evidence='shared/migration/PORTABILITY_AND_REGRESSION.json',reproducibility='PASS_SECOND_INDEPENDENT_CLONE_AND_LOCKED_VENV_SAME_HOST_TOOLS',latest_context_checkpoint='CP-20261009-003',checkpoint_commit=None,checkpoint_status='VALID',validated_source_commit=SOURCE,main_merge_approval='PENDING',next_action='Push reviewed candidate commits, open Draft PR, then wait for explicit user approval before main merge and workspace promotion',updated_at=now)\\n+state['historical_pre_archive_recovery_commit']=state.pop('pre_archive_recovery_commit')\\n+put('shared/PROJECT_STATE.json',state)\\n+put('shared/PROJECT_STATE.md',f'''# Current v5 candidate state\\n+\\n+PROJECT_ID SONOFIELD_FPGA; repository unchanged; v5 ACTIVE; candidate branch chore/v5-ax7020-workspace-isolation. Migration BASE `{BASE}`; validated source `{SOURCE}`. Execution candidate `E:\\\\\\\\Codex_project\\\\\\\\AMD_Sonofield`; permanent workspace_path remains null pending user-approved promotion. Original physical sandbox unchanged.\\n+\\n+Fresh BASE, migrated retry1 and second independent clean clone all PASS115Python/3696frames×4/C+AXI/safety/calibration/equivalence/15offlinecandidate/256ADCtwo tools/Vivado2025.2OOC+reopen18sources. Canonical functional hashes equal. Archive3907originalfiles+2metadata,97559165originalblobbytes,zero hash/mode mismatch.102protectedcore/test/golden/BOM files unchanged;1017originalv5filesretained.\\n+\\n+Conclusion ACCEPT WITH LIMITATIONS — CANDIDATE ONLY; main merge/post-merge remote clone/permanent workspace promotion and independent final review await user action. Whole physical platform REVISE/nativev5schematic NOT_CREATED/ERC_NOT_RUN/manufacturing HOLD. FormalAD7606B unchanged;C16candidateunapproved;NU40C10T/unknownRX/independentUP-DNpower. See PROJECT_STATE.json, current checkpoint, single BLOCKERS and quality/portability reports. No board operation.\\n+''')\\n+put('shared/CURRENT_PLAN.md','''# Current v5 plan\\n+\\n+Phase0 reconciliation/private full inventory PASS. Phase1 independent clone/unmodifiedBASE full baseline/OOC/reopen PASS. Phase2 all old tracked paths frozen exactly and1017v5filesretained PASS. Phase3 AX7020/currentstate/hardwareconflicts reconciled PASS. Phase4 paths/imports/search/sourceallowlist/packagingboundary PASS. Phase5 fresh migrated retry1 and second independently installed clean-clone full regressions/OOC/reopen/canonicalcomparisons PASS; failures retained. Phase6 candidate push/DraftPR/onlineCI/remote receipt follows, then USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE. Phase7 rollback is documented, not executed.\\n+\\n+After publication, minimal next action is human review of the concrete candidate and approval of main merge and permanent workspace path. Only after approval reconcile remote main again, perform ordinary merge, independently clone remote main and verify the published state/cold-start. Do not pull/change original sandbox, read frozen historical contents by default, open v6, change core/goldens/thresholds or touch devices. Stop low-value migration optimization.\\n+\\n+Separate hardware work still requires Rev3-matched grade/VCCO/PS DDR/IO/clock/ownership/UART/BSP and formal ADC/bandwidth/electrical review, TX/RX qualification, independent external power/cutoff/AFE, then native schematic/ERC and separately authorized no-load/physical/acoustic experiments. Whole platform remains REVISE.\\n+''')\\n+put('shared/HANDOFF.md',f'''# Candidate migration handoff\\n+\\n+Goal: review same-repository/currentv5 workspace migration. Start with README/AGENTS →PROJECT_STATE/VERSION_STATE/CONTEXT_CHECKPOINT→CURRENT_PLAN/DECISIONS/BLOCKERS/ACCEPTANCE→currentmigrationevidence→Gitstatus/remote. FixedBASE `{BASE}`, actualvalidatedsource `{SOURCE}`; userthread01a11f01-ebbe-76f3-ac92-b3e04e67b27a. Oldphysical/private/Gitassets rehashed unchanged; archive3907originalfiles exact,2metadatafrozen;102protectedfilesunchanged;onlyv5active.\\n+\\n+Three real fresh regression environments passed115tests/3696frames×4 and all nestedC/AXI/safety/calibration/goldenequivalence.15offlinecandidate+256ADCtwo simulators and2025.2OOC/reopen18sources passed in each. Read PORTABILITY_AND_REGRESSION and actualsource/command/hash evidence. Failed firstcandidate run and Windowsrestorationerror remain preserved with resolutions. No lowered criteria or hardware operations.\\n+\\n+Candidateonly ACCEPT WITH LIMITATIONS; main merge/postmergefreshremoteclone/permanentworkspacepromotion awaituserapproval and remote reconciliation. Physicalwholeplatform REVISE;ADC/Rev3Problems remainOPEN;nativev5schematicNOT_CREATED/ERC_NOT_RUN/manufacturingHOLD. ExternalChatGPT history BLOCKED; actualCodex transcriptPARTIAL. No independentreview invented. Next publishDraftPR/remoteCIreceipt, then userreview. Preservefrozenhistory andoriginalsandbox;futuredefaultworkdoesnotreadthem.\\n+''')\\n+put('CHANGELOG.md',f'''# Current change log\\n+\\n+## 2026-10-09 — v5 workspace migration candidate\\n+\\n+Independent new clone; fixedBASE `{BASE}`; testedsource `{SOURCE}`. Freeze3907oldtrackedfiles under history_old with exactblob/mode/rawSHA256 andtwofrozenmetadatafiles. Original83480physicalfiles/17056additionalignoreddependencyfiles/858rootGitfiles rehashed unchanged;35untracked kept private. Retain1017currentv5files and102protectedcore/test/golden/BOM blobs unchanged.\\n+\\n+Reconcile currentAX7020/state/decisions/blockers; isolateall active loads/search andnewoutputs; add explicit18sourceOOC list andmetadata-onlyarchiveCI. ActualfreshBASE/migratedretry1/independentcleanclone115tests/3696frames×4/fullnestedgates/15offlinechecks/256ADCtwo tools/2025.2OOC+reopenPASS withsamecanonicalhashes. PreservefailedfirstcandidateTclfixturepathrun andpre-freezerestorationerror; repairpaths withouttest/corechanges. Documents/runbook/packageboundary/checkpointupdated. Mainmerge/userreview/workspacepromotion remainpending;nohardwareorversionupgrade.\\n+''')\\n+cp=read(R/'shared/CONTEXT_CHECKPOINT.json')\\n+cp.update(checkpoint_id='CP-20261009-003',base_commit=BASE,head_commit=SOURCE,validated_source_commit=SOURCE,commit_scope='Actual committed source validated in primary and independent clone; this evidence/checkpoint is committed subsequently, resolve its commit through Git file history and publication receipt',current_stage=state['current_stage'],created_at=now,checkpoint_reason='Completed candidate full regression and second-clone reproducibility; preserve state for user main-merge review',source_of_truth='Current repository, real migration tool outputs and fixed Git-tree manifests',status='VALID',validation_stage='BASE_MIGRATED_CLEAN_CLONE_ALL_PASS_CANDIDATE_ONLY',completed=[{'item':'All3907archiveoriginalpaths/modes/blobs/rawSHA256 plus2frozenmetadata','status':'TESTED'},{'item':'Oldphysical/untracked/ignored/Gitmetadata preservation fullrehash','status':'TESTED'},{'item':'115Python and3696frames×4 in3fresh environments;exactcanonicalhashes/C+AXI/safety/calibration/equivalence','status':'SIMULATED'},{'item':'15offlinecandidate and256ADCframes intwosimulators in3environments','status':'SIMULATED'},{'item':'Vivado2025.2 documented-deviceOOC/reopen18source in3environments','status':'SYNTHESIZED','scope':'OOC_PRE_ROUTE_ONLY'},{'item':'No new physicalhardwareverification ordeviceoperation','status':'NOT_VERIFIED'}],next_actions=state['next_action'].split(';'),blockers=['USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE','POST_MERGE_REMOTE_MAIN_COLD_START_PENDING',*state['blocking_issues']],latest_validation=[{'status':'PASS','evidence':v['baseline_summary'],'source_commit':BASE if k=='BASE' else SOURCE,'date':'2026-10-09'} for k,v in matrix.items()],known_limitations=limitations,repository_delta=['Fixed old root Git tree frozen under history_old;soleactivev5 extracted;no102protectedfilechanges','Output/Tclpath adaptation initiallyfailed9assertions;fixedsameclonescratch andfullretryPASS','Currentsharedonlyv5;realAX7020historicalphysicalfacts/candidateADC/BOMboundariesretained','IndependentGit+freshlockedvenv/fulloffline/OOCchecksPASS;rawoldpreservationPASS'],evidence_refs=['shared/migration/OLD_TRACKED_MANIFEST.json','shared/migration/ARCHIVE_COVERAGE.json','shared/migration/QUALITY_GATE.json','shared/migration/PORTABILITY_AND_REGRESSION.json','v5/evidence/migration/20261009/digital_behavior_comparison.json','v5/evidence/migration/20261009/ooc_comparison.json','v5/evidence/migration/20261009/old_sandbox_preservation.json','v5/evidence/migration/20261009/active_reuse_hashes.json'],resume_from='Review concrete DraftPR and current publication receipt. Wait for explicit user main merge/workspace promotion approval; then reconcile remote and merge ordinarily, fresh remote-main clone verification. Continue only currentv5; do not read frozenhistory/oldphysicalsandbox unless expressly authorized.')\\n+put('shared/CONTEXT_CHECKPOINT.json',cp)\\n+body=f'''---\\n+checkpoint_id: CP-20261009-003\\n+project_id: SONOFIELD_FPGA\\n+project_name: SonoField-FPGA\\n+repository: https://github.com/loverlike1216/SonoField-FPGA.git\\n+branch: chore/v5-ax7020-workspace-isolation\\n+base_commit: {BASE}\\n+head_commit: {SOURCE}\\n+active_version: v5\\n+version_status: ACTIVE\\n+current_stage: {state['current_stage']}\\n+created_at: {now}\\n+created_by: Codex\\n+checkpoint_reason: candidate_and_independent_clone_validation_complete_before_user_merge_review\\n+source_of_truth: repository_and_actual_tool_evidence\\n+status: VALID\\n+---\\n+\\n+# Context checkpoint — candidate validation complete\\n+\\n+## 1. Current identity\\n+SameSONOFIELD_FPGA/repository/v5ACTIVE. ActualexecutioncandidateE:\\\\\\\\Codex_project\\\\\\\\AMD_Sonofield; workspace_pathnulluntiluser-approvedpromotion. SourceHEADabove isactualvalidatedsource, notan invented self-referentialcheckpointcommit. ResolvecheckpointcommitviaGitfilehistory/PROJECT_STATE/publicationreceipt.\\n+\\n+## 2. Current goal\\n+Samev5workspaceisolation/exactoldGit-treefreeze/oldphysicalpreservation, thenhumanreview. No newversion. Formalmainmergeandpostmergefreshremotecloneawaituserapproval.\\n+\\n+## 3. Architecture\\n+Unchanged128TX/8RX/8bitrequested-calibrationseparation/atomicfullmap/commonphase/32lanes×4used/50Hzmotion, Hosttrajectory→PSCservice/protocol→AXI→PL;ADC/calibrationchain. NU40C10T/unknownRX/formalAD7606B;C16candidateunapproved;independentUP/DNexternalpower,AXsignalsonly;12mmradiatingfacepitch/100mmnominal90–115gap. Physicalchainunqualified.\\n+\\n+## 4. Completed\\n+IMPLEMENTED isolatedroot/allowlists/currentstate/docs. TESTED3907archiveoriginals+2metadata/102protectedblobs/old101394uniquehashes. SIMULATED115tests/3696frames×4/fullnestedgates/15offlinechecks/256ADCtwoengines inBASE/MIGRATED/CLEANCLONE. SYNTHESIZEDVivado2025.2OOC/reopen18ownv5sources in3environments. HARDWARE_VERIFIEDnoneinthismigration.\\n+\\n+## 5. Current plan position\\n+Phase0–5candidategatesPASS. Phase6candidatepublication/DraftPR/onlineCI/remoteverificationthenuserreview. Mainmergeandformalpromotionpending. Phase7rollbackready,notexecuted.\\n+\\n+## 6. Next actions\\n+PublishreviewedcandidateandactualCI/remote receipt. Userreviewconcretecandidateandpermanentpath. Afterexplicitapprovalreconcilemain,ordinarymerge,freshremote-mainclone/coldstart,thenpromoteapprovedworkspace. Stopmigrationoptimization.\\n+\\n+## 7. Active decisions\\n+ADR035originalv5authorization;ADR036historicalreadonlyidentification;ADR037currentactualusermigrationauthority,notChatGPToutput/mainmergeapproval. Originalwording/provenanceretained. TwoOPENhardwareProblemsunchanged.\\n+\\n+## 8. Blockers / critical issues\\n+Noobservedblockingcandidatefunctionalregression. Mainmerge/postmergecoldstart/workspacepromotion/independentfinalreviewpending. HardwareV5-B01/B03/B04/B05/BOMandexternalChatGPTaccessblockersremain;singleBLOCKERSauthority. WholeplatformREVISE;no criticalcandidatebugobserved.\\n+\\n+## 9. Latest validation\\n+SeePORTABILITY_AND_REGRESSION.json andrealv5/evidence/migration/20261009/base,migrated_retry1,clean_clone summaries. Exactcanonicaltrajectory/map/trap/ACK hashesmatchhistoricalBASE. ThreeOOCresultsWNS+0.994ns/WHS+0.157ns,7219LUT/17918regs/4RAMB36,all18sourceandprojectreopenchecksPASS. Sourcecommit{SOURCE},BASE{BASE},2026-10-09.\\n+\\n+## 10. Known limitations\\n+Samehostinstalledtools,independentGit/venvonly;externalChatGPT/fullindependentreviewunavailable. NoARMtarget/BSP,PSPL/DDR/UART/ADC/AFE/driver/power/acousticproof. OOCpre-routewithunqualifiedboarddelays/HD.CLK_SRC;no fullCDC/boardtimingclaim. Nativev5schematicNOT_CREATED/ERC_NOT_RUN/manufacturingHOLD. BOMgenerationcoldstartnotrun;originalworkbookbytes/15offlinechecksPASS.\\n+\\n+## 11. Do not change\\n+Oldphysical/private/ignored/Gitassets;frozenhistory_oldbytes/modes/blobs;protectedcore/FW/software/tests/goldens/BOM/protocol/registers/safety/acceptance. No deviceoperations/mainmerge/newversionwithoutactualauthorization. Defaultfutureworkdoesnotreadhistory/oldsandbox.\\n+\\n+## 12. Invariants\\n+Architecture/geometry/formalADC andindependentexternalpowerabove;thresholds35dBtranslation<0.1mm,angle<0.1deg,f0RMSE<80Hz,phaseRMSE<2deg;no skip flag/relaxation. OOCisnotphysicalproof.\\n+\\n+## 13. Open AI Problems\\n+P-20261008-001ADC40kHzbandwidth;P-20261009-001AX7020Rev3PSplatform. IDs/bodyhashes/versionverified;no fabricated Decision.\\n+\\n+## 14. Repository delta since previous checkpoint\\n+Fullarchive/currentrootfrozenandcommitted;firstmigratedTclpathguardfailurepreservedandfixedwithunchangedtests/fullretry;secondGit/freshvenvfullgates/OOC/reopenPASS;oldpreservation/source/search/privacyauditscomplete. No frozenhistoryorprotectedsourcechanges.\\n+\\n+## 15. Resume instruction\\n+ReadcurrentrecoveryfilesandactualGitstatus/HEAD/publicationreceipt,reviewDraftPR. Waitforusermerge/pathapproval. Continuev5;do notrestartfromoldhistoryorcreatev6.\\n+\\n+## 16. Evidence references\\n+shared/migration/QUALITY_GATE.json,PORTABILITY_AND_REGRESSION.json,OLD_TRACKED_MANIFEST.json,ARCHIVE_COVERAGE.json;v5/evidence/migration/20261009/digital_behavior_comparison.json,ooc_comparison.json,old_sandbox_preservation.json,active_reuse_hashes.json,search_isolation.jsonand3actualbaselines.\\n+\\n+## 17. Provenance / state conflicts\\n+CurrentGitBASE/source/index,originalformaldecisions,actualuserPhase0–7document/currentrequest,realtoolcommands/results/privateinitialinventory. Oldsharedv2/Robeiblockersandboardauthorizationarehistorical,currentv5factswin. board_clock_candidateisin18-fileinheritedallowlistbutunusedbyactualtop;notphysicalclockauthority. Failedlogsremainfailures;newretryresultsnotrewrittenhistory. No hiddenthoughtorunavailableChatGPTmessageinvented.\\n+'''\\n+put('shared/CONTEXT_CHECKPOINT.md',body)\\n+put('shared/context-checkpoints/CP-20261009-003__v5__candidate-validated.md',body)\\n+print(json.dumps({'status':'FINAL_CANDIDATE_REPORTS_WRITTEN','source_commit':SOURCE,'tests_each':115,'frames_each':3696,'fresh_environments':3,'conclusion':'ACCEPT WITH LIMITATIONS — CANDIDATE ONLY'},ensure_ascii=False,indent=2))\\n*** End Patch\"));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:35:11.956Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_27606e207a864a7cacfffa2d9fd7c8c4",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nimport json,pathlib\\nr=pathlib.Path.cwd(); e=r/'v5/evidence/migration/20261009'\\na=json.loads((e/'migrated_retry1/candidates/candidate_checks.json').read_text(encoding='utf-8'));print('candidate status',a.get('status'),'checks',len(a.get('checks',[])))\\nfor p in (e/'base/ooc/synthesis_console.log',e/'base/ooc_reopen/console.log'):\\n t=p.read_text(encoding='utf-8-sig');print(str(p), 'SYNTH_MARKER', 'V5_OOC_SYNTHESIS_COMPLETE' in t, 'REOPEN_MARKER', 'V5_OOC_REOPEN_PASS sources=18' in t)\\ncompile((r/'.migration-private/finalize_migration_evidence.py').read_text(encoding='utf-8'),'.migration-private/finalize_migration_evidence.py','exec')\\nprint('FINALIZER_SYNTAX_PASS')\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 3 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 3 -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1000}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:35:18.541Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ce4895d222bb4de1b6539871b9fd57f3",
+      "input": "text(await tools.exec_command({cmd:\"Get-ChildItem v5/evidence/migration/20261009/migrated_retry1/motion/gui_xsim -File | Select-Object Name,Length | ConvertTo-Json\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion/gui_xsim/gui_result.json -Encoding utf8 | Select-Object -First 65\\nGet-ChildItem .portability/clean/v5/evidence/migration/20261009/clean_clone/motion/gui_xsim -File | Select-Object Name,Length | ConvertTo-Json\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":2500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:35:23.072Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_387096cf05ff49b2a5831dc32a4afcb5",
+      "input": "const rs=await Promise.allSettled([\ntools.view_image({path:\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\v5\\\\evidence\\\\migration\\\\20261009\\\\migrated_retry1\\\\motion\\\\gui_xsim\\\\gui_simulation.png\"}),\ntools.view_image({path:\"E:\\\\Codex_project\\\\AMD_Sonofield\\\\.portability\\\\clean\\\\v5\\\\evidence\\\\migration\\\\20261009\\\\clean_clone\\\\motion\\\\gui_xsim\\\\gui_simulation.png\"})\n]);rs.forEach((r,i)=>{if(r.status===\"fulfilled\"){text({i});image(r.value.image_url);}else text({i,status:r.status,reason:r.reason});});\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:35:46.473Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_19847bd7001f4de9bd2a60a21d9591ae",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport json,subprocess\\nr=Path.cwd(); e=r/'v5/evidence/migration/20261009'; source=json.loads((r/'.migration-private/source_snapshot.json').read_text(encoding='utf-8-sig'))['source_snapshot_commit']\\nrows=[]\\nfor label,clone in [('migrated_retry1',r),('clean_clone',r/'.portability/clean')]:\\n p=clone/'.venv/Scripts/python.exe'\\n freeze=subprocess.check_output([str(p),'-m','pip','freeze'],text=True)\\n check=subprocess.run([str(p),'-m','pip','check'],text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)\\n versions={line.split('==')[0].lower():line.split('==')[1] for line in freeze.splitlines() if '==' in line}\\n expected={line.split('==')[0].lower():line.split('==')[1] for line in (clone/'v5/requirements-lock.txt').read_text(encoding='utf-8').splitlines() if '==' in line and not line.startswith('#')}\\n assert versions==expected and check.returncode==0\\n result={'status':'PASS','source_commit':source,'clone':str(clone),'python_executable':str(p.resolve()),'requirements_lock':'v5/requirements-lock.txt','locked_packages':versions,'pip_check':check.stdout.strip(),'independent_venv':True,'install_policy':'--no-cache-dir used in second fresh clone','shared_host_tools':True}\\n (e/label/'dependency_verification.json').write_text(json.dumps(result,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\n rows.append({'environment':label,'packages':len(versions),'pip_check':check.returncode})\\nprint(json.dumps(rows,indent=2))\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\\nGet-Process vvp -ErrorAction SilentlyContinue | Select-Object Id,CPU | ConvertTo-Json\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1400}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:36:08.234Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_9ca90bae138f423e9f82e03ef15a2fe6",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport json,subprocess\\nr=Path.cwd(); clean=r/'.portability/clean'\\nchanges=subprocess.check_output(['git','-C',str(clean),'diff','--name-only'],text=True).splitlines()\\nstaged=subprocess.check_output(['git','-C',str(clean),'diff','--cached','--name-only'],text=True).splitlines()\\nassert not changes and not staged,(changes,staged)\\na=json.loads((r/'.migration-private/clean_clone_identity.json').read_text(encoding='utf-8-sig'))\\na.update(validated_source_commit=subprocess.check_output(['git','-C',str(clean),'rev-parse','HEAD'],text=True).strip(),current_tracked_worktree_changes=changes,current_staged_changes=staged,own_git_metadata=True,shared_alternates=False,source_integrity_status='PASS')\\np=r/'v5/evidence/migration/20261009/clean_clone/git_environment.json';p.write_text(json.dumps(a,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\nprint(json.dumps(a,indent=2))\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 3 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 3 -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1300}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:36:26.031Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_7fdd914cc3a748fe909500a84b0b9ea9",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nimport json,collections,pathlib,subprocess\\nr=pathlib.Path.cwd(); m=json.loads((r/'shared/migration/OLD_TRACKED_MANIFEST.json').read_text(encoding='utf-8'))\\nprint(json.dumps({'base_commit':m['base_commit'],'files':len(m['files']),'bytes':sum(f['size'] for f in m['files']),'unique_blobs':len({f['git_blob_sha'] for f in m['files']}),'modes':dict(collections.Counter(f['mode'] for f in m['files'])),'manifest_keys':list(m),'new_roots':subprocess.check_output(['git','ls-tree','--name-only','HEAD'],text=True).splitlines()},indent=2))\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\\nGet-Date -Format o\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1200}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:37:30.673Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_82052be4ed3442fbbe1c8a59ffee2ed7",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Add File: E:/Codex_project/AMD_Sonofield/.migration-private/write_readable_handoff.py\\n+\\\"\\\"\\\"Human-readable Chinese recovery entry, using only finalized repository facts.\\\"\\\"\\\"\\n+from pathlib import Path\\n+import json\\n+R=Path(__file__).resolve().parents[1]\\n+def read(p):return json.loads((R/p).read_text(encoding='utf-8'))\\n+def put(p,s):(R/p).write_text(s.rstrip()+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+s=read('shared/PROJECT_STATE.json');c=read('shared/CONTEXT_CHECKPOINT.json');q=read('shared/migration/QUALITY_GATE.json')\\n+assert c['checkpoint_id']=='CP-20261009-003' and c['validation_stage']=='BASE_MIGRATED_CLEAN_CLONE_ALL_PASS_CANDIDATE_ONLY'\\n+base=c['base_commit'];head=c['head_commit'];when=c['created_at']\\n+body=f'''---\\n+checkpoint_id: CP-20261009-003\\n+project_id: SONOFIELD_FPGA\\n+project_name: SonoField-FPGA\\n+repository: https://github.com/loverlike1216/SonoField-FPGA.git\\n+branch: chore/v5-ax7020-workspace-isolation\\n+base_commit: {base}\\n+head_commit: {head}\\n+active_version: v5\\n+version_status: ACTIVE\\n+current_stage: AX7020_V5_MIGRATION_CANDIDATE_USER_REVIEW\\n+created_at: {when}\\n+created_by: Codex\\n+checkpoint_reason: candidate_and_independent_clone_validation_complete\\n+source_of_truth: repository_and_actual_tool_evidence\\n+status: VALID\\n+---\\n+\\n+# 当前恢复检查点：候选迁移已验证，等待人工合并审查\\n+\\n+## 1. Current Identity\\n+\\n+PROJECT_ID 为 SONOFIELD_FPGA；Repository 保持不变；当前分支 chore/v5-ax7020-workspace-isolation；v5 ACTIVE。本次执行候选路径为 `E:\\\\\\\\Codex_project\\\\\\\\AMD_Sonofield`，正式 `workspace_path` 尚未提升。旧物理沙盒原样保留。上方 head_commit 是两份环境实际验证的源码提交；本检查点和最终证据在后续提交持久化，其提交号由 Git 文件历史及 publication receipt 定位，避免虚构自引用 SHA。\\n+\\n+## 2. Current Goal\\n+\\n+完成同一 v5 的独立工作空间迁移、旧 Git 跟踪树完整封存、当前事实入口整顿及全链路离线回归，然后交付可审查候选。不是版本升级。正式 main 合并、合并后远端 main 冷启动以及永久工作区提升仍需用户批准。\\n+\\n+## 3. Architecture\\n+\\n+保留 Host 轨迹→PS C 服务/协议→AXI→PL 的数字链路；128TX/8RX，8bit requested/calibration 相位独立，共同时基、完整相位图 atomic commit、32 lanes×4 used、50Hz motion cadence、ADC/校准链路。TX 为 NU40C10T，RX 完整料号未知，正式 ADC 为 AD7606BBSTZ-RL，C-16 仅候选。上下各 64TX 阵列采用独立外部电源及保护/默认关断；AX7020 仅控制与数据。辐射面中心距12mm，上下 nominal100mm、可调90–115mm，几何中心为原点。物理链路尚未验收。\\n+\\n+## 4. Completed\\n+\\n+- IMPLEMENTED：精简当前根、唯一 v5 活动树、构建及搜索允许列表、当前状态和复现文档。\\n+- TESTED：3907 个旧 Git 原文件及2个冻结元数据，路径/mode/blob/raw SHA256 一致；102个受保护核心/测试/黄金/BOM文件不变；旧沙盒101394个唯一文件（含额外忽略依赖及根Git）复核无变化。\\n+- SIMULATED：BASE、MIGRATED retry1、CLEAN_CLONE 各115项Python测试、3696帧×4、全部嵌套C/AXI/安全/波形/校准/黄金等价；各15项离线候选检查及ADC256帧双仿真器检查。\\n+- SYNTHESIZED：三份环境分别完成 Vivado2025.2 OOC 综合和工程重开，均加载自己 v5 下的18个RTL源。\\n+- HARDWARE_VERIFIED：本次没有新增硬件功能验证，也没有执行设备操作。\\n+\\n+## 5. Current Plan Position\\n+\\n+Phase0–5 的候选门禁通过。Phase6 进行候选发布、Draft PR、真实在线CI及远端回执，然后等待人工审查。main合并和合并后重新clone属于后续批准步骤。Phase7回滚方案已准备，未执行回滚。\\n+\\n+## 6. Next Actions\\n+\\n+1. 核对最新 publication receipt、候选提交及 Draft PR；若尚未发布，完成候选分支推送和在线CI。\\n+2. 用户审查具体候选、证据与永久工作区路径；未批准前不合并main。\\n+3. 获得明确批准后重新 Reconciliation；main若已变更，先分析差异并重跑受影响门禁。\\n+4. 执行普通非强制合并，从远端main独立clone并验证冷启动及冻结清单，再提升用户认可的工作区。\\n+5. 迁移达到候选交付点后停止低收益优化；物理工程另按已批准路线推进。\\n+\\n+## 7. Active Decisions\\n+\\n+ADR-035：原v5授权；ADR-036：历史只读板卡识别授权；ADR-037：当前用户明确迁移授权，保留原仓库和旧沙盒、main须人工审核。原文与来源在当前DECISIONS中保留；历史板卡授权不自动延续到本任务。没有伪造ChatGPT Decision。\\n+\\n+## 8. Blockers / Critical Issues\\n+\\n+未发现尚未闭环的候选功能回归或关键错误。main合并、合并后远端冷启动、永久路径提升及独立最终Review待用户。物理V5-B01/B03/B04/B05、BOM/ADC问题、原生原理图/ERC和外部ChatGPT历史访问仍受阻；唯一当前阻塞表为BLOCKERS.md。整机结论REVISE，制造HOLD。\\n+\\n+## 9. Latest Validation\\n+\\n+实际结果见 PORTABILITY_AND_REGRESSION.json 及 v5/evidence/migration/20261009 下 base、migrated_retry1、clean_clone 的 summary、真实日志、loaded_sources及runtime_ownership。日期2026-10-09；源码提交 `{head}`；BASE `{base}`。四类规范化功能Hash与历史BASE和三份新运行完全相同。OOC均WNS+0.994ns/WHS+0.157ns、7219LUT/17918寄存器/4RAMB36；18源与重开门禁通过。没有布局布线或实板Timing闭合声明。\\n+\\n+## 10. Known Limitations\\n+\\n+第二份Git和venv独立，但共享同一主机安装的Vivado/Icarus/GCC，不能称第二台机器或另一OS。ARM目标编译器/BSP及真实PS-PL/DDR/UART/ADC/AFE/驱动/供电/声学未验收。OOC尚无板级输入输出延迟约束，HD.CLK_SRC未设置，不能据此声称完整CDC或板级Timing通过。原生v5原理图NOT_CREATED、ERC_NOT_RUN、MANUFACTURING_HOLD。BOM生成器没有进行冷启动重建；原工作簿字节和15项只读检查已验证。ChatGPT完整历史读取BLOCKED，当前Codex记录PARTIAL，独立最终Review待办。\\n+\\n+## 11. Do Not Change\\n+\\n+保护旧物理沙盒及私有/未跟踪/忽略/Git元数据；保护冻结history_old字节/mode/blob；保护核心RTL/FW/software/tests/goldens/BOM/协议/寄存器/安全和Acceptance。无用户明确授权，不合并main、不开新版本、不操作板卡。后续日常任务不读取封存历史和旧沙盒；只有用户明确点名恢复/溯源才例外。\\n+\\n+## 12. Invariants\\n+\\n+保持第3节架构与几何、正式ADC、上下独立外部供电。保留35dB校准阈值：translation norm<0.1mm、angle norm<0.1deg、f0RMSE<80Hz、phaseRMSE<2deg。不得使用skip标记替代完整门禁，不得修改黄金数据或降低阈值。OOC、仿真、历史只读识别和物理验收严格区分。\\n+\\n+## 13. Open AI Problems\\n+\\n+P-20261008-001（ADC40kHz带宽）；P-20261009-001（AX7020 Rev3 PS平台）。当前路径、ID、正文Hash和v5版本均已核对，正文未改动，无虚构Decision。\\n+\\n+## 14. Repository Delta Since Previous Checkpoint\\n+\\n+旧树和当前根已提交；首次迁移Tcl配置路径门禁误拒绝本克隆临时测试夹具，保留9个失败断言和日志后修复为本克隆config/build范围，原测试及完整回归重跑通过。第二份独立Git/新venv完成全部离线回归、OOC与重开。旧沙盒完整性、源码/搜索隔离与隐私审计已通过。冻结历史和102个受保护文件没有变化。\\n+\\n+## 15. Resume Instruction\\n+\\n+先读取当前恢复文件、真实Git状态/HEAD/远端和publication receipt，再审阅Draft PR。等待用户main合并与路径提升批准；继续当前v5，不从旧历史重新推断状态，不创建v6。\\n+\\n+## 16. Evidence References\\n+\\n+shared/migration/QUALITY_GATE.json、PORTABILITY_AND_REGRESSION.json、OLD_TRACKED_MANIFEST.json、ARCHIVE_COVERAGE.json、ROLLBACK_PLAN.md；v5/evidence/migration/20261009/digital_behavior_comparison.json、ooc_comparison.json、old_sandbox_preservation.json、active_reuse_hashes.json、search_isolation.json及三份真实baseline目录。\\n+\\n+## 17. Provenance / State Conflicts\\n+\\n+依据当前Git BASE/源码/index、原正式Decision、当前实际用户Phase0–7文件及请求、真实工具输出和初始私有清单。旧shared中的v2/Robei阻塞叙述属于历史，当前v5事实优先。board_clock_candidate仍在继承的18文件清单中，但未被实际顶层实例化，不构成AX7020物理时钟依据。失败日志仍标失败，重跑结果独立保存；不推断隐藏思维或不可访问的ChatGPT消息。\\n+'''\\n+put('shared/CONTEXT_CHECKPOINT.md',body)\\n+put('shared/context-checkpoints/CP-20261009-003__v5__candidate-validated.md',body)\\n+put('shared/PROJECT_STATE.md',f'''# SonoField-FPGA v5 当前候选状态\\n+\\n+同一 SONOFIELD_FPGA Repository，v5 ACTIVE。本任务为工作空间迁移，不升级版本。BASE为 `{base}`，实际验证源码为 `{head}`。候选执行路径 `E:\\\\\\\\Codex_project\\\\\\\\AMD_Sonofield`；正式workspace_path尚未提升，main尚未合并。旧物理沙盒完整保留。\\n+\\n+BASE、MIGRATED retry1和第二份独立CLEAN_CLONE均完成115项Python测试、3696帧×4、全部C/AXI/安全/波形/校准/黄金等价、15项离线候选检查、ADC256帧双仿真器、Vivado2025.2 OOC及18源重开；规范化Hash完全一致。旧Git树3907个原文件及2个冻结元数据无Hash/mode差异，当前v5的1017个原文件保留，102个受保护核心/测试/黄金/BOM文件未改动。\\n+\\n+结论 **ACCEPT WITH LIMITATIONS — CANDIDATE ONLY**。人工main合并审查、合并后远端冷启动和永久路径提升待办。整机仍REVISE，原生v5原理图NOT_CREATED/ERC_NOT_RUN/制造HOLD。NU40C10T、未知完整RX料号、正式AD7606B、未批准C-16候选和上下独立外部供电边界明确。机器事实入口为PROJECT_STATE.json，恢复入口为CONTEXT_CHECKPOINT，当前唯一阻塞表为BLOCKERS.md。\\n+''')\\n+put('shared/CURRENT_PLAN.md','''# 当前 v5 工作计划\\n+\\n+Phase0只读对账/私有完整清单、Phase1独立新clone迁移前BASE、Phase2完整Git旧树封存/活动v5抽取、Phase3当前AX7020事实整顿、Phase4运行和搜索路径隔离、Phase5迁移后及第二份干净环境完整回归均已通过。首次路径修正失败与恢复日志保留。Phase6发布候选/Draft PR/真实CI/远端回执后，等待USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE。Phase7回滚方案已准备，未执行。\\n+\\n+下一最小动作：人工审阅具体候选、全部证据、Rollback和永久工作区路径。用户明确批准后，重新检查远端main，普通非强制合并，独立clone远端main完成冷启动及冻结清单核验，再提升批准的工作区。旧沙盒不pull、不清理、不改动；后续默认不读取旧沙盒或history_old。继续意味着继续v5，不开v6，不修改核心/黄金/阈值，不操作设备。\\n+\\n+后续硬件工作需单独闭环Rev3等级/VCCO/PS DDR/IO/时钟/运行镜像所有权/UART/BSP、正式ADC带宽、电气评审、TX/RX资质、上下独立供电/杀停/AFE，随后原生原理图/ERC和另行授权的无负载及声学测量。迁移候选达到交付点后停止低收益优化，整机仍REVISE。\\n+''')\\n+put('shared/HANDOFF.md',f'''# v5 候选迁移交接\\n+\\n+目标是审阅同一仓库、同一v5的工作空间迁移。恢复顺序：README/AGENTS → PROJECT_STATE/VERSION_STATE/CONTEXT_CHECKPOINT → CURRENT_PLAN/DECISIONS/BLOCKERS/ACCEPTANCE → 当前迁移证据 → Git状态与远端。BASE `{base}`，实际验证源码 `{head}`；本次Codex thread为01a11f01-ebbe-76f3-ac92-b3e04e67b27a。\\n+\\n+旧物理/私有/忽略/Git资料复核未变；封存3907个原Git文件和2个元数据；当前1017个v5原文件保留、102个核心/测试/黄金/BOM blob不变。三份新运行各115项测试和3696帧×4及完整嵌套门禁通过；15项离线候选、ADC256帧双工具、2025.2 OOC与18源重开也通过。规范化Hash一致。真实日志、源码/运行路径、版本、失败和限制见PORTABILITY_AND_REGRESSION及对应evidence。\\n+\\n+结论ACCEPT WITH LIMITATIONS — CANDIDATE ONLY。发布Draft PR及实际CI/远端回执后等待用户main合并和永久路径批准；批准后再对账、合并、独立clone远端main验证。原生v5原理图NOT_CREATED/ERC_NOT_RUN/制造HOLD，整机REVISE；两个ADC/Rev3问题仍OPEN。ChatGPT历史BLOCKED，当前Codex记录PARTIAL，无虚构独立Review。\\n+\\n+保护原沙盒、冻结历史、核心实现和验收。首次候选路径门禁失败及冻结前Windows文件恢复错误保留，修复和完整重跑有独立证据。未来默认不读取封存历史；继续当前v5，不升级、不操作板卡。\\n+''')\\n+print('READABLE_CHECKPOINT_AND_HANDOFF_WRITTEN')\\n*** End Patch\"));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:37:46.210Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_3539e2201e4342ea8c8c81bfce0d4403",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:800}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:800}),\ntools.exec_command({cmd:\"Get-Date -Format o\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 5 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 5 -Encoding utf8\\nGet-Process vvp -ErrorAction SilentlyContinue | Select-Object Id,CPU | ConvertTo-Json\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1200})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:38:10.124Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c1a3eedd787648639cc08f18ab1cd653",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport collections,json,os\\nthread=os.environ['CODEX_THREAD_ID'];source=next(Path(r'C:\\\\Users\\\\loverlike\\\\.codex\\\\sessions\\\\2026\\\\10\\\\09').glob('*'+thread+'*'))\\ncounts=collections.Counter()\\nfor line in source.read_text(encoding='utf-8').splitlines():\\n try:x=json.loads(line)\\n except json.JSONDecodeError:continue\\n if x.get('type')!='response_item':continue\\n p=x['payload']\\n if p.get('type')=='message':counts[(p.get('role'),p.get('channel','MISSING'))]+=1\\nprint(json.dumps([{'role':r,'channel':ch,'count':n} for (r,ch),n in counts.items()],indent=2))\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1000}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:38:42.174Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_aed95c37258d458884cd0292016c7a3d",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/.migration-private/sync_interactions.py\\n@@\\n- if typ=='message' and p.get('role') in ('user','assistant'):\\n+ if typ=='message' and p.get('role') in ('user','assistant') and p.get('channel') not in ('analysis','justify','confidence'):\\n*** Add File: E:/Codex_project/AMD_Sonofield/.migration-private/review_staged_delivery.py\\n+\\\"\\\"\\\"Read staged objects for final migration/source/privacy checks; never print secrets.\\\"\\\"\\\"\\n+from pathlib import Path\\n+import hashlib,json,re,subprocess\\n+R=Path(__file__).resolve().parents[1]\\n+BASE='ecd32e76e9b6c08806eae30a3c75a9c3be5e7570'\\n+def git(*args):return subprocess.check_output(['git','-C',str(R),*args])\\n+manifest=json.loads((R/'shared/migration/OLD_TRACKED_MANIFEST.json').read_text(encoding='utf-8'))\\n+idx={}\\n+for row in git('ls-files','--stage','-z').split(b'\\\\0'):\\n+ if row:\\n+  meta,path=row.split(b'\\\\t',1);mode,oid,stage=meta.split();assert stage==b'0';idx[path.decode()]=(mode.decode(),oid.decode())\\n+protected=[r for r in manifest['files'] if r['path'].startswith(('v5/rtl/','v5/software/','v5/firmware/','v5/tests/','v5/tb/','v5/simulation/')) or (r['path'].startswith('v5/') and r['path'].endswith('.xlsx'))]\\n+deltas=[r['path'] for r in protected if idx.get(r['path'])!=(r['mode'],r['git_blob_sha'])]\\n+missing=[r['path'] for r in manifest['files'] if r['path'].startswith('v5/') and r['path'] not in idx]\\n+archive_errors=[r['path'] for r in manifest['files'] if idx.get('history_old/'+r['path'])!=(r['mode'],r['git_blob_sha'])]\\n+forbidden=[p for p in idx if p.startswith(('.migration-private/','.portability/','.venv/')) or '/local_raw/' in p or p.startswith('.git/')]\\n+patterns=[re.compile(x,re.S) for x in (rb'gh[pousr]_[A-Za-z0-9]{30,}',rb'github_pat_[A-Za-z0-9_]{30,}',rb'sk-(?:proj-)?[A-Za-z0-9_-]{35,}',rb'AKIA[A-Z0-9]{16}',rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')]\\n+paths=git('diff','--name-only','--diff-filter=ACMR','-z',BASE,'--').split(b'\\\\0')\\n+# Include committed candidate + currently staged deltas relative to original BASE.\\n+findings=[];seen=set();largest=[]\\n+proc=subprocess.Popen(['git','-C',str(R),'cat-file','--batch'],stdin=subprocess.PIPE,stdout=subprocess.PIPE)\\n+for raw in paths:\\n+ if not raw:continue\\n+ p=raw.decode('utf-8')\\n+ if p not in idx:continue\\n+ oid=idx[p][1]\\n+ if oid in seen:continue\\n+ seen.add(oid);proc.stdin.write((oid+'\\\\n').encode());proc.stdin.flush()\\n+ header=proc.stdout.readline().split();size=int(header[2]);data=proc.stdout.read(size);assert proc.stdout.read(1)==b'\\\\n'\\n+ largest.append((size,p))\\n+ if any(pattern.search(data) for pattern in patterns):findings.append({'path':p,'finding':'Recognized credential/private-key signature; value suppressed'})\\n+proc.stdin.close();proc.wait();assert proc.returncode==0\\n+result={'status':'FAIL' if deltas or missing or archive_errors or forbidden or findings else 'PASS','scope':'Final staged and committed candidate against fixed BASE','base_commit':BASE,'protected_files':len(protected),'protected_blob_mode_changes':deltas,'retained_original_v5_files':sum(r['path'].startswith('v5/') for r in manifest['files']),'missing_v5_files':missing,'archive_original_files':len(manifest['files']),'archive_unique_original_blobs':len({r['git_blob_sha'] for r in manifest['files']}),'archive_blob_mode_errors':archive_errors,'forbidden_private_paths':forbidden,'recognized_secret_findings':findings,'unique_changed_blobs_scanned':len(seen),'staged_tracked_files':len(idx),'largest_new_objects':sorted(largest,reverse=True)[:8],'privacy_disposition':'Untracked/raw/private old sandbox inventories remain local; current observable transcript/tool input audit is PARTIAL with credentials redacted, no hidden reasoning exported'}\\n+(R/'v5/evidence/migration/20261009/final_staged_review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+print(json.dumps({k:v for k,v in result.items() if k!='largest_new_objects'},ensure_ascii=False,indent=2))\\n+raise SystemExit(result['status']!='PASS')\\n*** Add File: E:/Codex_project/AMD_Sonofield/.migration-private/hash_evidence.py\\n+\\\"\\\"\\\"Hash delivered evidence, disclosing Git's ordinary text newline normalization.\\\"\\\"\\\"\\n+from pathlib import Path\\n+import hashlib,json,datetime\\n+R=Path(__file__).resolve().parents[1];E=R/'v5/evidence/migration/20261009'\\n+ignored_parts={'rtl','xsim.dir','__pycache__','.Xil'}\\n+files=[]\\n+for p in sorted(E.rglob('*')):\\n+ if not p.is_file() or p.name in ('LOG_HASHES.json','final_staged_review.json','final_structure.json'):continue\\n+ rel=p.relative_to(E)\\n+ if any(part in ignored_parts for part in rel.parts) or p.suffix in ('.vvp','.wdb','.jou','.pb','.vcd'):continue\\n+ if p.name.startswith('trajectory_') and any(part.startswith('gui_') for part in rel.parts):continue\\n+ if p.name.endswith('_motion_ack.txt') and any(part.startswith('gui_') for part in rel.parts):continue\\n+ if p.name.startswith(('xsim','xelab')) and 'faults' in rel.parts:continue\\n+ data=p.read_bytes();row={'path':p.relative_to(R).as_posix(),'bytes':len(data),'raw_workspace_sha256':hashlib.sha256(data).hexdigest()}\\n+ try:\\n+  normalized=data.decode('utf-8-sig').replace('\\\\r\\\\n','\\\\n').replace('\\\\r','\\\\n').encode('utf-8')\\n+  row['canonical_lf_utf8_sha256']=hashlib.sha256(normalized).hexdigest()\\n+ except UnicodeDecodeError:row['canonical_lf_utf8_sha256']=None\\n+ files.append(row)\\n+result={'status':'RECORDED','policy':'Raw host evidence hashes and canonical UTF8/LF text hashes both retained. Git normalizes text line endings; deterministic behavior uses separately verified canonical functional traces. This manifest excludes itself and later audit receipts to avoid self-reference. Simulator binaries/cache/raw GUI vectors excluded from delivery.','created_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':files,'file_count':len(files)}\\n+(E/'LOG_HASHES.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+print('EVIDENCE_HASHES_RECORDED',len(files))\\n*** End Patch\"));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:38:55.178Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c0cdcc854f524097ad85b1a8b284ec91",
+      "input": "text(await tools.exec_command({cmd:\"Get-Date -Format o\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 5 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 5 -Encoding utf8\\nGet-Process vvp -ErrorAction SilentlyContinue | Select-Object Id,CPU | ConvertTo-Json\\n$rootDirs=(git ls-tree --name-only HEAD)\\n[pscustomobject]@{CandidateRootEntries=$rootDirs;OldSandboxAccess='Final preservation audit PASS; no engineering execution in old sandbox';CandidateMainMerge='Pending user approval'} | ConvertTo-Json -Depth 3\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1600}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:39:25.379Z",
+      "type": "function_call",
+      "name": "sleep",
+      "call_id": "call_d880289af8eb465e842f57fde05c0fd6",
+      "input": "{\"duration_ms\":50000}"
+    },
+    {
+      "timestamp": "2026-10-09T05:40:31.871Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_2cd65be4f3cc4bfbbc0aac10edbf3b02",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:800}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:800}),\ntools.exec_command({cmd:\"Get-Date -Format o\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 4 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 4 -Encoding utf8\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1000})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:40:42.912Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_cb1762218607492c90d1cb6c07e2959a",
+      "input": "text(await tools.exec_command({cmd:\"Get-ChildItem v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_0/rtl -Recurse -File | Select-Object -Last 12 Name,Length,FullName | ConvertTo-Json\\nGet-ChildItem .portability/clean/v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_0/rtl -Recurse -File | Select-Object -Last 6 Name,Length,FullName | ConvertTo-Json\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1800}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:41:00.081Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_893286fcd57e4bf6a941e2ba59c2d2ca",
+      "input": "text(await tools.exec_command({cmd:\"Get-Content v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_0/rtl/run.log -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_0/rtl/run.log -Encoding utf8\\nGet-Date -Format o\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":700}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:41:27.817Z",
+      "type": "function_call",
+      "name": "sleep",
+      "call_id": "call_68fd7dd222eb4c1abb841f25c1630e11",
+      "input": "{\"duration_ms\":50000}"
+    },
+    {
+      "timestamp": "2026-10-09T05:42:21.923Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_abab44c46c3849a69c338c8b37e7ed98",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:1200}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:1200}),\ntools.exec_command({cmd:\"Get-Date -Format o\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 4 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 4 -Encoding utf8\\nGet-Process vvp -ErrorAction SilentlyContinue | Select-Object Id,CPU | ConvertTo-Json\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1200})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:42:32.740Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_94372eb7cb9d432eba5bd222820c5314",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport json\\ns=json.loads(Path('v5/evidence/migration/20261009/base/motion/summary.json').read_text(encoding='utf-8'))\\nprint(json.dumps([{'label':c['label'],'elapsed_s':c['elapsed_s']} for c in s['commands'] if c['label'].startswith('gui_') or c['label']=='regression'],indent=2))\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\\nrg -n 'USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE|把“归档路径迁移”|合入远端' AI-interaction-memory/codex/instructions/v5_workspace_migration_20261009.md\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1000}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:42:48.195Z",
+      "type": "function_call",
+      "name": "sleep",
+      "call_id": "call_bc74556ab0a1401c85a3f23bb4f5ee03",
+      "input": "{\"duration_ms\":45000}"
+    },
+    {
+      "timestamp": "2026-10-09T05:43:36.940Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_b7fa3b68801443cb8edc48ea22bb99a3",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:1000}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:1000}),\ntools.exec_command({cmd:\"Get-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 7 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 7 -Encoding utf8\\nGet-Date -Format o\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1200})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:44:18.045Z",
+      "type": "function_call",
+      "name": "sleep",
+      "call_id": "call_ba0f457295ef40c4a439ae829dd8d5cd",
+      "input": "{\"duration_ms\":50000}"
+    },
+    {
+      "timestamp": "2026-10-09T05:45:12.498Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_8c0163272a9d48409519f4d6619e3651",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:1000}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:1000}),\ntools.exec_command({cmd:\"Get-Content v5/evidence/migration/20261009/migrated_retry1/motion_full.log -Tail 7 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion_full.log -Tail 7 -Encoding utf8\\nGet-Process vvp -ErrorAction SilentlyContinue | Select-Object Id,CPU | ConvertTo-Json\\nGet-Date -Format o\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1200})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:45:36.659Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_276337aedb4644d1a45f01fd8fc8fe81",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport hashlib,json,datetime\\nr=Path.cwd(); paths=['v5/evidence/migration/20261009/migrated_retry1/motion/gui_xsim/gui_simulation.png','.portability/clean/v5/evidence/migration/20261009/clean_clone/motion/gui_xsim/gui_simulation.png']\\nfiles=[{'path':p,'sha256':hashlib.sha256((r/p).read_bytes()).hexdigest()} for p in paths]\\nresult={'status':'PASS_SIMULATION_UI_ONLY','reviewer':'Codex visual inspection via view_image, not independent final review','reviewed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':files,'observed':['SIMULATION label visible in both actual generated windows','Commanded trap returned to X/Y/Z=0.00mm','RUN_DEMO PASS visible','Actual particle position explicitly unmeasured','Hardware connection/enable not claimed verified'],'hardware_verified':False,'independent_review':'PENDING'}\\n(r/'v5/evidence/migration/20261009/gui_visual_review.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\nprint(json.dumps(result,ensure_ascii=False,indent=2))\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/motion/regression.log -Tail 8 -Encoding utf8 -ErrorAction SilentlyContinue\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/motion/regression.log -Tail 8 -Encoding utf8 -ErrorAction SilentlyContinue\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:45:49.632Z",
+      "type": "function_call",
+      "name": "sleep",
+      "call_id": "call_0285884bc78f48289ee86ab013e70739",
+      "input": "{\"duration_ms\":50000}"
+    },
+    {
+      "timestamp": "2026-10-09T05:46:45.368Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_9f96d76932374b668d78c8377779e0a5",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:1100}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:1100}),\ntools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport json\\nr=Path.cwd()\\nfor clone,label in [(r,'migrated_retry1'),(r/'.portability/clean','clean_clone')]:\\n p=clone/'v5/evidence/migration/20261009'/label/'motion'\\n rows=[]\\n for name in ['gui_icarus_0','gui_icarus_1','gui_icarus_2','gui_xsim']:\\n  q=p/name/'gui_result.json'\\n  if q.exists():\\n   s=json.loads(q.read_text(encoding='utf-8'));rows.append({'run':name,'status':s['status'],'demo_frames':s['results'][-1]['frames'],'ack_sha256':s['results'][-1]['ack_sha256']})\\n print(label,json.dumps(rows))\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\\nGet-Date -Format o\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":2200})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:47:12.800Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_06d19fa939a94b79914b8b655f8cb530",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport json,subprocess\\nr=Path.cwd(); m=json.loads((r/'shared/migration/OLD_TRACKED_MANIFEST.json').read_text(encoding='utf-8')); expected={f['path']:f for f in m['files'] if f['path'].startswith('v5/')}; rows=[]\\nfor raw in subprocess.check_output(['git','ls-tree','-rz','HEAD','--','v5']).split(b'\\\\0'):\\n if raw:\\n  meta,path=raw.split(b'\\\\t',1);mode,kind,oid=meta.split(); p=path.decode()\\n  if p in expected and (mode.decode(),oid.decode())!=(expected[p]['mode'],expected[p]['git_blob_sha']):rows.append(p)\\nadapted=json.loads((r/'shared/migration/ADAPTED_FILES.json').read_text(encoding='utf-8'))\\nallowed={row['path'] for row in adapted['files']}|{'v5/config/inheritance_manifest.json'}\\nassert set(rows)==allowed,(rows,allowed)\\nresult={'status':'PASS','original_v5_files':len(expected),'changed_original_v5_files':rows,'documented_adaptation_count':len(allowed),'unexpected_original_changes':[],'other_original_v5_files_git_blob_mode_identical':len(expected)-len(rows),'scope':'Compared actual candidate Git tree with fixed original BASE; new outputs are separate migration evidence'}\\n(r/'v5/evidence/migration/20261009/active_source_delta.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\nprint(json.dumps(result,ensure_ascii=False,indent=2))\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1800}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:47:16.095Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_307310d857ed4b9991f1919966f06e8d",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:1100}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:1100})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:47:54.899Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_cdaaf779257b42b19c7e4dc652145783",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/shared/migration/RUNBOOK.md\\n@@\\n PowerShell7; Python3.10 with Tk, installed Icarus/GCC and Vivado2025.2. Clone this same repository into a new empty directory and switch to the reviewed candidate commit/branch. No old sandbox is needed. The current candidate is not main until the user approves merging.\\n+\\n+Observed installations on this host, verified during this migration:\\n+\\n+| Purpose | Actual path / version |\\n+|---|---|\\n+| Candidate clone | `E:\\\\Codex_project\\\\AMD_Sonofield` |\\n+| Independent test clone | `E:\\\\Codex_project\\\\AMD_Sonofield\\\\.portability\\\\clean` |\\n+| Python3.10.11 | `C:\\\\Users\\\\loverlike\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python310\\\\python.exe` |\\n+| Icarus | `C:\\\\iverilog\\\\bin` |\\n+| GCC9.2.0 | `D:\\\\DevC++\\\\Dev-Cpp\\\\TDM-GCC-64\\\\bin\\\\gcc.exe` |\\n+| Vivado2025.2 build6299465 | `D:\\\\Vivado\\\\2025.2\\\\2025.2\\\\Vivado\\\\bin` |\\n+\\n+Use `pwsh`7.6.5 and verify `python --version` is3.10 before creating the venv; otherwise invoke the full verified Python path. These are host installation paths, never board/pin/clock facts. After checkout, verify `git rev-parse HEAD` equals the concrete candidate reviewed in the PR; source/evidence commit scopes are recorded in the publication receipt.\\n*** End Patch\"));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:48:03.584Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_926d41a2f92543bcb08e1065beab1336",
+      "input": "const rs=await Promise.allSettled([\ntools.exec_command({cmd:\"Get-Item -LiteralPath shared/migration/RUNBOOK.md | Select-Object FullName,Length,Attributes | ConvertTo-Json\\nGet-Content -LiteralPath shared/migration/RUNBOOK.md -TotalCount 8 -Encoding utf8\\nGet-Date -Format o\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1000}),\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:1100}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:1100})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:48:43.038Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_108ef11366914a19afbd444b00101f93",
+      "input": "text(await tools.apply_patch(\"*** Begin Patch\\n*** Update File: E:/Codex_project/AMD_Sonofield/.migration-private/finalize_migration_evidence.py\\n@@\\n-import datetime,hashlib,json,re,shutil,subprocess\\n+import datetime,hashlib,json,re,shutil,subprocess,os,uuid\\n@@\\n- p.write_text((json.dumps(value,ensure_ascii=False,indent=2) if not isinstance(value,str) else value).rstrip()+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+ temporary=R/'.migration-private'/('atomic-final-'+uuid.uuid4().hex)\\n+ temporary.write_text((json.dumps(value,ensure_ascii=False,indent=2) if not isinstance(value,str) else value).rstrip()+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+ os.replace(temporary,p)\\n*** Update File: E:/Codex_project/AMD_Sonofield/.migration-private/write_readable_handoff.py\\n@@\\n-import json\\n+import json,os,uuid\\n@@\\n-def put(p,s):(R/p).write_text(s.rstrip()+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+def put(p,s):\\n+ temporary=R/'.migration-private'/('atomic-doc-'+uuid.uuid4().hex)\\n+ temporary.write_text(s.rstrip()+'\\\\n',encoding='utf-8',newline='\\\\n')\\n+ os.replace(temporary,R/p)\\n*** End Patch\"));\ntext(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n@'\\nfrom pathlib import Path\\nimport os,json,hashlib\\nr=Path.cwd(); p=r/'shared/migration/RUNBOOK.md'; original=p.read_text(encoding='utf-8')\\naddition='''Observed installations on this host, verified during this migration:\\n\\n| Purpose | Actual path / version |\\n|---|---|\\n| Candidate clone | `E:\\\\\\\\Codex_project\\\\\\\\AMD_Sonofield` |\\n| Independent test clone | `E:\\\\\\\\Codex_project\\\\\\\\AMD_Sonofield\\\\\\\\.portability\\\\\\\\clean` |\\n| Python3.10.11 | `C:\\\\\\\\Users\\\\\\\\loverlike\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Programs\\\\\\\\Python\\\\\\\\Python310\\\\\\\\python.exe` |\\n| Icarus | `C:\\\\\\\\iverilog\\\\\\\\bin` |\\n| GCC9.2.0 | `D:\\\\\\\\DevC++\\\\\\\\Dev-Cpp\\\\\\\\TDM-GCC-64\\\\\\\\bin\\\\\\\\gcc.exe` |\\n| Vivado2025.2 build6299465 | `D:\\\\\\\\Vivado\\\\\\\\2025.2\\\\\\\\2025.2\\\\\\\\Vivado\\\\\\\\bin` |\\n\\nUse `pwsh`7.6.5 and verify `python --version` is3.10 before creating the venv; otherwise invoke the full verified Python path. These are host installation paths, never board/pin/clock facts. After checkout, verify `git rev-parse HEAD` equals the concrete candidate reviewed in the PR; source/evidence commit scopes are recorded in the publication receipt.\\n\\n'''\\ntext=original.replace('```powershell\\\\n',addition+'```powershell\\\\n',1)\\ntmp=r/'.migration-private/runbook_atomic_write.md';tmp.write_text(text,encoding='utf-8',newline='\\\\n');os.replace(tmp,p)\\nresult={'status':'RESOLVED_WITH_ATOMIC_NEW_CLONE_WRITES','scope':'Current candidate documentation only, no frozen history or old sandbox changes','observations':[{'file':'shared/migration/RUNBOOK.md','tool':'apply_patch','error':'Failed to write file; no errno exposed by tool','observed_before_recovery':'Original3764byte content remained readable, archive attribute only; exact locking owner/root cause UNKNOWN','resolution':'Same-volume atomic replacement with reviewed text succeeded'}],'earlier_related_evidence':'preparation_failure.json','writer_policy':'Final candidate current documents use same-volume atomic replacement; original physical sandbox and frozen archive never targeted','runbook_sha256':hashlib.sha256(p.read_bytes()).hexdigest()}\\n(r/'v5/evidence/migration/20261009/current_doc_write_anomaly.json').write_text(json.dumps(result,indent=2)+'\\\\n',encoding='utf-8',newline='\\\\n')\\nprint('RUNBOOK_ATOMIC_UPDATE_PASS',result['runbook_sha256'])\\n'@ | & .\\\\.venv\\\\Scripts\\\\python.exe -\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":1000}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:48:48.230Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_66f6c51196e242e2b2ac9c98215cada7",
+      "input": "const rs=await Promise.allSettled([\ntools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:1300}),\ntools.write_stdin({session_id:63076,chars:\"\",yield_time_ms:1000,max_output_tokens:1300}),\ntools.exec_command({cmd:\"Get-Date -Format o\\nGet-Content v5/evidence/migration/20261009/migrated_retry1/independent_safety.log -Tail 4 -Encoding utf8\\nGet-Content .portability/clean/v5/evidence/migration/20261009/clean_clone/timing_equivalence.log -Tail 4 -Encoding utf8 -ErrorAction SilentlyContinue\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"max_output_tokens\":800})\n]);rs.forEach((x,i)=>text({i,...x}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:49:20.332Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_6df6ed8054294fe9b5cd499fca94585a",
+      "input": "text(await tools.write_stdin({session_id:96486,chars:\"\",yield_time_ms:1000,max_output_tokens:1500}));\n"
+    },
+    {
+      "timestamp": "2026-10-09T05:49:28.507Z",
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_cd913d33934044c292d54c4412b1ccbe",
+      "input": "text(await tools.exec_command({cmd:\"$env:PYTHONUTF8='1'\\n& .\\\\.venv\\\\Scripts\\\\python.exe .migration-private/finalize_migration_evidence.py\\nif ($LASTEXITCODE -ne 0) { throw 'Final observed evidence reconciliation failed' }\\n& .\\\\.venv\\\\Scripts\\\\python.exe .migration-private/write_readable_handoff.py\\nif ($LASTEXITCODE -ne 0) { throw 'Readable recovery entry failed' }\\n& .\\\\.venv\\\\Scripts\\\\python.exe .migration-private/sync_interactions.py\\nif ($LASTEXITCODE -ne 0) { throw 'Observable interaction capture failed' }\\n& .\\\\.venv\\\\Scripts\\\\python.exe .migration-private/hash_evidence.py\\nif ($LASTEXITCODE -ne 0) { throw 'Evidence hashing failed' }\\n& .\\\\.venv\\\\Scripts\\\\python.exe v5/scripts/check_workspace_migration.py --archive-audit --freeze-base fa3b019c29a927a9fd41c8e4b54496ead5ed1ee1 --output v5/evidence/migration/20261009/final_structure.json\\nif ($LASTEXITCODE -ne 0) { throw 'Final current scope or frozen archive changed' }\\n& .\\\\.venv\\\\Scripts\\\\python.exe v5/scripts/check_structure.py\\nif ($LASTEXITCODE -ne 0) { throw 'Final structure failed' }\\n& .\\\\.venv\\\\Scripts\\\\python.exe v5/scripts/check_migration.py\\nif ($LASTEXITCODE -ne 0) { throw 'Final inherited hash gate failed' }\",\"shell\":\"pwsh\",\"workdir\":\"E:\\\\Codex_project\\\\AMD_Sonofield\",\"yield_time_ms\":1000,\"max_output_tokens\":2800}));\n"
     }
   ],
   "outputs": [
@@ -751,6 +1199,454 @@
       "call_id": "call_5315fe9f298b4ab6bbd08336a71aa3ed",
       "output_sha256": "d92eb6b28b197c887a4b2e2f7a8950f8f973e16dceac2b3a8dc390667d400551",
       "observable_output_length": 836,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:22:26.621Z",
+      "call_id": "call_a65e7c1ec9e74bceb0ac3e55ddda60dc",
+      "output_sha256": "c6b090810228b44371850010c94a9036f42af4ec9656db2fdcf13391c3fca350",
+      "observable_output_length": 3770,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:23:00.749Z",
+      "call_id": "call_1708e4adc7f9429b8cfbf040ed6688cf",
+      "output_sha256": "d0f6c05a11eaa2b25e7913cb262354b65c55db700d8f3d4532ee2fd03359abdd",
+      "observable_output_length": 21343,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:24:27.521Z",
+      "call_id": "call_d756123a9ee2486a84837baac5b0405a",
+      "output_sha256": "3b470ede70ef64d894ea3a2cc137e9b16ddef571c76a79fb36a777624f7b7a78",
+      "observable_output_length": 1939,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:26:31.688Z",
+      "call_id": "call_5091a3d125eb435ba1210aa0888b65a6",
+      "output_sha256": "bb2591eaf1f09e381c9b150853c58d15c0dd77fc5f05556f726f29a2c021d494",
+      "observable_output_length": 830,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:26:40.256Z",
+      "call_id": "call_e4efaed5a13547b6968a8818495e9307",
+      "output_sha256": "013b0310b01d1dbcac15fa4df7a80f49f995684c4c63b28234a587c02afe9c19",
+      "observable_output_length": 467,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:04.211Z",
+      "call_id": "call_5355c3c02e104474ad3b8f618dd9ed3f",
+      "output_sha256": "d5e2072e6162669bf1b799539efd6253e1cdf6852b96b287086671f37d0fa64b",
+      "observable_output_length": 3832,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:08.704Z",
+      "call_id": "call_c9f280df8a2d4c4c9daf4aa365f24bb6",
+      "output_sha256": "8d51f570dce8831556495cfbc501bb36c20b5310e25806c3cff27cb4a18a3144",
+      "observable_output_length": 34211,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:12.687Z",
+      "call_id": "call_0c470e728c6d4c9383fa8995e65cba81",
+      "output_sha256": "80275295cc5673374e695850bb49680d1a147d32478572591de794f021bdc583",
+      "observable_output_length": 22073,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:21.773Z",
+      "call_id": "call_1eab89a699bf445080889ec6369799e2",
+      "output_sha256": "a7fef2d0c435d7960307d5e474c122ad55585ed489ba27acd0e81fa88dfe19ca",
+      "observable_output_length": 23644,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:44.618Z",
+      "call_id": "call_b112ac4f7d3f4304879bbd4caeb2aa76",
+      "output_sha256": "476fafc4872d889d77026f4f4329109610cae66808612908eb2e068997368f58",
+      "observable_output_length": 124,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:53.818Z",
+      "call_id": "call_f8aa33fb706044169d3e5951777db75d",
+      "output_sha256": "c45ef6262e05bcc462b41d760fccde2b934a33fc604016f47bb84363f74c9e8c",
+      "observable_output_length": 5868,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:27:57.788Z",
+      "call_id": "call_a71837df76f2494785e448491ade8368",
+      "output_sha256": "e283c1b0aceb4903fd6fdae89972f513ed66f5db3046010dcd308f21a31b13c1",
+      "observable_output_length": 10454,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:28:01.625Z",
+      "call_id": "call_81a6d3c56fc3479e9aaade94df61df5b",
+      "output_sha256": "3c277fc27097a970b988c2c76dcebad94d7c1436316a2421a4bb9a285d50fab2",
+      "observable_output_length": 19425,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:28:15.995Z",
+      "call_id": "call_c8a5d105a4bf4768bdacf9d9987578be",
+      "output_sha256": "476fafc4872d889d77026f4f4329109610cae66808612908eb2e068997368f58",
+      "observable_output_length": 124,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:28:39.755Z",
+      "call_id": "call_fe14b01b256b4726bc33f67577e58b5f",
+      "output_sha256": "2f27d103b3ffae11ef56827b34c6e44f5d3ebe4abfc244ceabe91bfda5fdc4a3",
+      "observable_output_length": 10961,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:29:00.917Z",
+      "call_id": "call_f4e5920831424ba7b05c17c54f1718f2",
+      "output_sha256": "e8eccb7dee908552286af8f3422b795d7c051151a69fdd1b5deaf7735029a014",
+      "observable_output_length": 8192,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:29:22.173Z",
+      "call_id": "call_8897db40bb8e4e4aa3ee11baaab0e04d",
+      "output_sha256": "905d3ef09958a6ce5c7f57d32d43118f6cd3da8eaa588ec9d7db7eb8c2c1f89a",
+      "observable_output_length": 5714,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:29:33.810Z",
+      "call_id": "call_346832bb43ce4c6d840d52077dd28f74",
+      "output_sha256": "2caf6f51565bea0c76f6ed18ea2e0265721fba1dabb2fcf759db4a32aed0be46",
+      "observable_output_length": 17512,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:29:44.672Z",
+      "call_id": "call_53c36dad62404acaa0294f33036120cc",
+      "output_sha256": "30c86dfae310b5e123a3c5350d5cc364bba3482ec44875d3cd83e013a8a71493",
+      "observable_output_length": 15476,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:30:03.140Z",
+      "call_id": "call_2495cc93611f478c8e70aa22abafd28f",
+      "output_sha256": "45b96143416fa2f04d8d8f3b4deb55179bc0dd4805c100512c5acf44b272d454",
+      "observable_output_length": 13404,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:30:25.575Z",
+      "call_id": "call_d65018c328bc403aaed6ca7fb3575fd4",
+      "output_sha256": "476fafc4872d889d77026f4f4329109610cae66808612908eb2e068997368f58",
+      "observable_output_length": 124,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:30:49.896Z",
+      "call_id": "call_89311f97f77c4c7a91b318ad6ffff579",
+      "output_sha256": "476fafc4872d889d77026f4f4329109610cae66808612908eb2e068997368f58",
+      "observable_output_length": 124,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:30:57.835Z",
+      "call_id": "call_825a149a6e8f4fb79ae8c2a597e4d5e4",
+      "output_sha256": "566c2c8b750c44f09602073a018514af6e703159257b38f8ff656b512d462eee",
+      "observable_output_length": 6816,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:06.210Z",
+      "call_id": "call_c0e4ad651631421e9a00e5c914ac1872",
+      "output_sha256": "e017c29a97f000c911be63a139c91929d90869c38140d91cfc5ebf12b0409f89",
+      "observable_output_length": 885,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:23.424Z",
+      "call_id": "call_f95d0f4b3a2f46779e98e729e6f56fdf",
+      "output_sha256": "7f2e701f0cdb7acbf7435b6234b5f210a21dbc95af1c3c86072d4f92fade8c10",
+      "observable_output_length": 8134,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:36.883Z",
+      "call_id": "call_63a43d03287e458e87e7cb98fe2697a2",
+      "output_sha256": "21a983ca068b1d0bdf3b77b7d32488783a37fb8b565758ff8d417dc729942b37",
+      "observable_output_length": 1923,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:43.831Z",
+      "call_id": "call_03371fea83f94454b6c6203f960857a8",
+      "output_sha256": "0425f32cc18eb569d6fcb629a5a20c3976905573cb04afe9fe2fbbc3b16ad1f0",
+      "observable_output_length": 15992,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:31:54.503Z",
+      "call_id": "call_c64deff03240464db926dc5f33ab1b66",
+      "output_sha256": "1c741ed22a7321418b52c38eb44bfacb02fef87c279018cd885806cf8fffaad4",
+      "observable_output_length": 6647,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:32:11.417Z",
+      "call_id": "call_0a1b5c7ce17e41a9a78e1ba22f4952be",
+      "output_sha256": "2a33fd7354cd73e26e17f0df89ce7b82612c3139ed8b995c8ae07063b099e3a4",
+      "observable_output_length": 7986,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:32:18.139Z",
+      "call_id": "call_6f64a422d7d24cf5a71bce63e08e23c2",
+      "output_sha256": "ddbd42efdf5349b58e8c0b72c25fd116d31d16aaf188a13e09d543841852045b",
+      "observable_output_length": 15085,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:32:43.544Z",
+      "call_id": "call_b7004f40b46f41e3b6a81bd6b78d2362",
+      "output_sha256": "0249fedad82e5c4fa5a480a4ce39b243183435816ebd4a8f9494c020fab0623d",
+      "observable_output_length": 4564,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:34:53.510Z",
+      "call_id": "call_66ce7512281146cda2b297a1808c9e26",
+      "output_sha256": "476fafc4872d889d77026f4f4329109610cae66808612908eb2e068997368f58",
+      "observable_output_length": 124,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:35:12.441Z",
+      "call_id": "call_27606e207a864a7cacfffa2d9fd7c8c4",
+      "output_sha256": "5cff2712ff757bb69304db64fb5fde684aebcfd8c7948fbee20835984c3df1ef",
+      "observable_output_length": 761,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:35:18.961Z",
+      "call_id": "call_ce4895d222bb4de1b6539871b9fd57f3",
+      "output_sha256": "c2e28c36efe7eb3d0efbd0154d53e3f227484c23be1c97b369aa2cf9ead80683",
+      "observable_output_length": 4563,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:35:23.112Z",
+      "call_id": "call_387096cf05ff49b2a5831dc32a4afcb5",
+      "output_sha256": "1451239cae807a7c1d5c98ec5fd63d772c4c4ea6ab3e6feec518213da6c62268",
+      "observable_output_length": 238524,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:35:49.811Z",
+      "call_id": "call_19847bd7001f4de9bd2a60a21d9591ae",
+      "output_sha256": "b3e19d2c90be8ac1fef3784933dd6c85956487e1e3f7306715ed78658af852cc",
+      "observable_output_length": 954,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:36:08.857Z",
+      "call_id": "call_9ca90bae138f423e9f82e03ef15a2fe6",
+      "output_sha256": "775b26e9286b6b26d4defccb9996f0465f919e15a11038ed5c176f2ca0abae78",
+      "observable_output_length": 981,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:36:26.528Z",
+      "call_id": "call_7fdd914cc3a748fe909500a84b0b9ea9",
+      "output_sha256": "84ecf1e64b49f30551aacee1fb4128a4d988cadef2d10ca7f21154d6e6003088",
+      "observable_output_length": 1116,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:37:30.692Z",
+      "call_id": "call_82052be4ed3442fbbe1c8a59ffee2ed7",
+      "output_sha256": "476fafc4872d889d77026f4f4329109610cae66808612908eb2e068997368f58",
+      "observable_output_length": 124,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:37:51.237Z",
+      "call_id": "call_3539e2201e4342ea8c8c81bfce0d4403",
+      "output_sha256": "68736cc92fd2a6cfe8c644bb7877502e1cd0de1d04d4c949988054c0d03d43bc",
+      "observable_output_length": 1377,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:38:10.710Z",
+      "call_id": "call_c1a3eedd787648639cc08f18ab1cd653",
+      "output_sha256": "74c53e0f3a4b12803b447b4a2b43410b73e9a3d90c9bfd1748d1ae2170cb2131",
+      "observable_output_length": 594,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:38:42.248Z",
+      "call_id": "call_aed95c37258d458884cd0292016c7a3d",
+      "output_sha256": "476fafc4872d889d77026f4f4329109610cae66808612908eb2e068997368f58",
+      "observable_output_length": 124,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:38:55.664Z",
+      "call_id": "call_c0cdcc854f524097ad85b1a8b284ec91",
+      "output_sha256": "6b4c3883ded68ef586a92765fa5110db6c9738a8079967de5bed6ba195839bd5",
+      "observable_output_length": 1583,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:40:15.399Z",
+      "call_id": "call_d880289af8eb465e842f57fde05c0fd6",
+      "output_sha256": "e046a6498fe29736f483543494c08b8953e20e9e5c80b599f004e857e9a57197",
+      "observable_output_length": 43,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:40:36.897Z",
+      "call_id": "call_2cd65be4f3cc4bfbbc0aac10edbf3b02",
+      "output_sha256": "237eb0f81b8a8a826de6d77921addb465399c0c6e6c234de8bff443b6742f2b3",
+      "observable_output_length": 859,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:40:43.349Z",
+      "call_id": "call_cb1762218607492c90d1cb6c07e2959a",
+      "output_sha256": "ac7dddb9c1fbeb4f3a3391efc9535db1b4b916897823d28dac981e2c7a1b887f",
+      "observable_output_length": 4168,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:41:00.488Z",
+      "call_id": "call_893286fcd57e4bf6a941e2ba59c2d2ca",
+      "output_sha256": "c51e8fece142720ba62230a1169eac160d5829adcdf2f1eb4e1ecb30223ce9d4",
+      "observable_output_length": 661,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:42:17.828Z",
+      "call_id": "call_68fd7dd222eb4c1abb841f25c1630e11",
+      "output_sha256": "2ee2bf7613b6e19baa4b0cec40961d95ee3004134dc54fd9113e1a0d2f8257b6",
+      "observable_output_length": 43,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:42:26.948Z",
+      "call_id": "call_abab44c46c3849a69c338c8b37e7ed98",
+      "output_sha256": "f051c9df2d1a027b874fb7c204ce6cc3b68877cab024c70a980cd13b4d9686ea",
+      "observable_output_length": 1326,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:42:33.211Z",
+      "call_id": "call_94372eb7cb9d432eba5bd222820c5314",
+      "output_sha256": "35b032d7bd0f922567669c9f8bdadcd009a5c67be2fb7b956a4ad89b4d115a8c",
+      "observable_output_length": 1125,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:43:33.220Z",
+      "call_id": "call_bc74556ab0a1401c85a3f23bb4f5ee03",
+      "output_sha256": "daa9a8b69794bd5b80410b10e30e93a5fcb999cf2507fd49243a4f53dac9e2f8",
+      "observable_output_length": 43,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:43:41.963Z",
+      "call_id": "call_b7fa3b68801443cb8edc48ea22bb99a3",
+      "output_sha256": "fe51cfd62947fa8e5ef59f10f3071453f6ce608c88451d2a0f0ffe833f06480f",
+      "observable_output_length": 1013,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:45:08.055Z",
+      "call_id": "call_ba0f457295ef40c4a439ae829dd8d5cd",
+      "output_sha256": "fd172a5b089a7497db037fbc96e2b2308449e10e592408f825db750e5b0421a4",
+      "observable_output_length": 43,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:45:17.525Z",
+      "call_id": "call_8c0163272a9d48409519f4d6619e3651",
+      "output_sha256": "dc0e53464d2d1ff8ac23d9513e63de52fe3b3ea964b3f5b1b011b4b71c0aea3b",
+      "observable_output_length": 984,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:45:37.138Z",
+      "call_id": "call_276337aedb4644d1a45f01fd8fc8fe81",
+      "output_sha256": "84e856e15a8b30b5f283d6a3575946c4c924a014a6bc7c448237e38fed3ff2e9",
+      "observable_output_length": 1380,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:46:39.652Z",
+      "call_id": "call_0285884bc78f48289ee86ab013e70739",
+      "output_sha256": "611f56990740413ca4303d28e9575567fbbb35696b2ee30dbd9e6738c020513d",
+      "observable_output_length": 43,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:46:50.395Z",
+      "call_id": "call_9f96d76932374b668d78c8377779e0a5",
+      "output_sha256": "4826022eb1b31c84fa6163bc441b199002d0f6b48cbac2ad77916f959fbf0ba2",
+      "observable_output_length": 2104,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:47:13.349Z",
+      "call_id": "call_06d19fa939a94b79914b8b655f8cb530",
+      "output_sha256": "2a663364d59201da790e7e31df8451d223566fbcc792da62e495d644da0200fc",
+      "observable_output_length": 1213,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:47:21.111Z",
+      "call_id": "call_307310d857ed4b9991f1919966f06e8d",
+      "output_sha256": "284069d9943ba62e88bce18c045de15797cc67e1f965aa281a6b666cf3b3ccda",
+      "observable_output_length": 465,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:47:54.955Z",
+      "call_id": "call_cdaaf779257b42b19c7e4dc652145783",
+      "output_sha256": "aa13705077c2caeb6535ab9cc427057902f96c54417df08d84a548234ad20785",
+      "observable_output_length": 265,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:48:08.603Z",
+      "call_id": "call_926d41a2f92543bcb08e1065beab1336",
+      "output_sha256": "779711cee348d3d44ab856e9b8803bd2ae3e301daa5a58a616d33f7cb140524a",
+      "observable_output_length": 1493,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:48:43.475Z",
+      "call_id": "call_108ef11366914a19afbd444b00101f93",
+      "output_sha256": "8d2c67074eb5f64b492910626a8b63148c0a90c77bb1ff8516c397272087aa61",
+      "observable_output_length": 360,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:48:53.244Z",
+      "call_id": "call_66f6c51196e242e2b2ac9c98215cada7",
+      "output_sha256": "4d63dae5db4502dc4b4b07590945cf6eeebe97de440a50217f17c95b3234265e",
+      "observable_output_length": 889,
+      "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
+    },
+    {
+      "timestamp": "2026-10-09T05:49:20.341Z",
+      "call_id": "call_6df6ed8054294fe9b5cd499fca94585a",
+      "output_sha256": "bc44e07e79449a6e44cbde94a398b2257a2f048ba99ac550911f9d2d7763b6de",
+      "observable_output_length": 272,
       "retention": "Key real results retained in referenced evidence; full raw tool output remains in local source"
     }
   ],

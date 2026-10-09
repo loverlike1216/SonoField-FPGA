@@ -6,8 +6,8 @@ session_id: S-20261009-1253-codex-migration
 active_version: v5
 current_stage: AX7020_V5_WORKSPACE_MIGRATION_CANDIDATE
 sync_status: PARTIAL
-message_count: 16
-content_hash: 92f23d8bfede130ede0bff1c80287d70ee7997aeca8fa1657eb6c0295e6e7fcb
+message_count: 27
+content_hash: a6796fddd302e71c3e183e350d091a88600dab21ce243951b7f6200f027ad397
 ---
 
 # Actual visible Codex conversation
@@ -4339,3 +4339,91 @@ Message ID: msg_0e0ddf454b5d790a016ac879ddf1c8819aa42f03acf53552fd
 补充审计已完成：旧沙盒中 **83,480 个物理普通文件、约 4.16 GB** 已 Hash；另有两处指向 Codex 已安装 Node 工具缓存的 junction，已单独记录目标，原有文件未发现变化。
 
 候选归档执行到恢复一个 Vivado `utilization.rpt` 时，Windows 拒绝了文件写入。归档尚未冻结，也没有推送。我会先检查文件状态并修复新克隆中的这一处替换问题；旧沙盒未受影响。
+
+
+## Message 0017
+Role: assistant
+Time: 2026-10-09T05:26:35.272Z
+Message ID: msg_0e0ddf454b5d790a016ac87b0a5550819a9a87dcd3b2d9db0e
+
+归档门禁已经通过：固定基线中的 3,907 个旧文件已逐一核对 Git Blob、文件模式和 SHA-256，全部一致；当前 `v5/` 的 1,017 个原文件均保留，102 个受保护的核心实现与测试文件没有变化。接下来会对迁移后的工程和第二份独立克隆分别运行完整回归，并重新执行 Vivado 综合与工程重开检查。候选分支完成后供你审核，`main` 暂不合并。
+
+
+## Message 0018
+Role: assistant
+Time: 2026-10-09T05:28:11.869Z
+Message ID: msg_0e0ddf454b5d790a016ac87b6b8254819a8c25ee980869113a
+
+迁移后的首轮回归发现了一个路径适配问题：新增的 Tcl 配置路径限制提前拒绝了原测试在本沙盒临时目录生成的板型校验夹具，导致 115 项测试中出现 9 个失败断言。失败日志已保留。我会修正配置路径的允许范围，保持原测试和断言不变，再用新的证据目录完整重跑；旧沙盒和冻结归档均不受影响。
+
+
+## Message 0019
+Role: assistant
+Time: 2026-10-09T05:29:42.690Z
+Message ID: msg_0e0ddf454b5d790a016ac87bc5c714819a8df2e16bd4f9afdc
+
+路径修正后，原有的 7 项板型、来源和工具版本门禁测试已全部通过；两份新环境的完整回归正在运行。旧沙盒的复核也已通过：83,480 个物理文件、17,056 个额外忽略依赖文件，以及 858 个根 `.git` 元数据文件均无变化，35 个未跟踪文件仍在原位。第二份克隆的归档逐字节检查同样通过，文件模式和 Hash 差异均为 0。
+
+
+## Message 0020
+Role: assistant
+Time: 2026-10-09T05:32:24.706Z
+Message ID: msg_0e0ddf454b5d790a016ac87c681ae8819aa488a21f320dec6b
+
+两份新环境的 115 项 Python 测试及生产周期故障注入均已通过，正在执行四路完整轨迹仿真。Vivado 2025.2 的综合和工程重开也已在两份环境中分别通过，实际加载的都是各自 `v5/` 下的 18 个 RTL 文件。综合结果与迁移前一致：WNS 为 +0.994 ns、WHS 为 +0.157 ns；这些是 OOC 综合结果，板级 IO 约束和布局布线仍未验证。
+
+
+## Message 0021
+Role: assistant
+Time: 2026-10-09T05:36:03.555Z
+Message ID: msg_0e0ddf454b5d790a016ac87d429fc8819a98c72362232564ec
+
+两份环境的 XSim 完整演示已通过，轨迹、相位图、陷阱报告和 ACK 的规范化 Hash 与原基线一致；Icarus 的六个重复运行仍在执行。运行路径审计也已通过：两套软件分别从各自的 `v5/` 和独立 `.venv` 加载。默认搜索命中的 121 个 SV/Python/Tcl 文件全部位于当前 `v5/`，没有命中封存历史中的源码。
+
+
+## Message 0022
+Role: assistant
+Time: 2026-10-09T05:39:25.132Z
+Message ID: msg_0e0ddf454b5d790a016ac87e0c064c819a9bc344905a8bd501
+
+复现环境检查已完成：第二份克隆重新下载安装了锁定的 12 个 Python 依赖，`pip check` 通过，运行后受跟踪源码没有变化。BOM、硬件候选和 ADC 数字接口的附加检查也已在两份环境中分别通过。当前保留的硬件边界是：正式 ADC 仍为 AD7606B，C-16 未获批准；原生 v5 原理图尚未创建、ERC 未运行，制造状态仍为 HOLD。
+
+
+## Message 0023
+Role: assistant
+Time: 2026-10-09T05:41:27.454Z
+Message ID: msg_0e0ddf454b5d790a016ac87e86db1c819a94cc570f7a5a32ec
+
+回滚和交付边界已核对：候选失败时保留分支与失败日志、让 `main` 保持原状；如果批准合并后发现严重回归，则通过新的 revert 提交恢复，不改写历史。最终证据会分别列出迁移前基线、首次失败、修正后的完整重跑和第二份独立克隆结果。目前仍在等待 Icarus 长轨迹运行结束，尚未将完整门禁标为通过。
+
+
+## Message 0024
+Role: assistant
+Time: 2026-10-09T05:44:17.682Z
+Message ID: msg_0e0ddf454b5d790a016ac87f30c010819a9e4963b327eb7557
+
+完整轨迹测试还在执行 Icarus 的三次重复验证。此前的 Python、故障注入、XSim、附加候选检查和 Vivado 检查已经通过；轨迹测试结束后，脚本还会自动执行校准、波形及黄金模型回归。最终报告生成器已准备好，只有三份完整结果均为 PASS 且规范化 Hash 一致时才会生成候选通过结论。
+
+
+## Message 0025
+Role: assistant
+Time: 2026-10-09T05:45:49.489Z
+Message ID: msg_0e0ddf454b5d790a016ac87f8cdf48819a8ce794cdaa1895da
+
+两份环境的 Icarus 三次完整轨迹运行现在都已通过，连同各自的 XSim，四路轨迹仿真已完成。脚本正在继续执行最后的嵌套回归，包括校准、波形、C/AXI 和黄金模型等价检查；完成后会汇总日志 Hash、更新检查点，再推送候选分支并建立 Draft PR。
+
+
+## Message 0026
+Role: assistant
+Time: 2026-10-09T05:48:30.476Z
+Message ID: msg_0e0ddf454b5d790a016ac8802da8c8819aaa4035848978e079
+
+三份环境的完整运动回归现在均已通过；迁移后和独立克隆的 C/AXI 回归也已通过，正在收尾独立安全与时序等价检查。源码差异审计确认：原 `v5/` 的 1,017 个文件中，1,006 个 Git Blob 和模式完全相同；另外 11 个仅涉及已记录的路径适配、元数据和文档，没有额外的核心实现变化。
+
+
+## Message 0027
+Role: assistant
+Time: 2026-10-09T05:49:23.868Z
+Message ID: msg_0e0ddf454b5d790a016ac880633f28819ab53bc926b279d100
+
+迁移前 BASE、迁移后修正重跑、第二份独立干净克隆的完整门禁现已全部通过。每份均完成 115 项 Python 测试、3696 帧×四路仿真，以及 C/AXI、安全、校准和黄金模型等价回归；规范化功能 Hash 完全一致。现在进行最终隐私和差异审查、证据归档与检查点更新，随后只推送候选分支并建立 Draft PR。
