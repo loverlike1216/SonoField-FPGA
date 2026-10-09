@@ -18,7 +18,7 @@ Use `pwsh`7.6.5 and verify `python --version` is3.10 before creating the venv; o
 ```powershell
 git clone -c core.longpaths=true -c core.autocrlf=false -c core.eol=lf https://github.com/loverlike1216/SonoField-FPGA.git <new-empty-directory>
 Set-Location <new-empty-directory>
-git switch chore/v5-ax7020-workspace-isolation
+git switch codex/v5-historical-project-isolation-20261009
 git remote -v
 git rev-parse HEAD
 git status --porcelain=v1
@@ -42,10 +42,12 @@ Push-Location v5
 Pop-Location
 ```
 
-Success: full/summary.json PASS;115Python,3696frames×3Icarus+1XSim; exact canonical trace hashes, all waveform/calibration/C/AXI/safety/equivalence gates; candidate_checks.json15PASS; OOC marker and18v5RTL sources; reopened project marker and same18sources. Source/RAM/DDR/IO/physical board are not validated by these commands. Two independent new environments are required for the migration acceptance matrix.
+Success: full/summary.json PASS;171Python (original115 + new56),3696frames×3Icarus+1XSim; exact canonical trace hashes, all waveform/calibration/C/AXI/safety/equivalence gates; candidate_checks.json15PASS; OOC marker and18v5RTL sources; reopened project marker and same18sources. Source/RAM/DDR/IO/physical board are not validated by these commands. Two independent new environments are required for the migration acceptance matrix.
 
 For an explicitly user-authorized archive/recovery audit only, append `--archive-audit` to check_workspace_migration.py. Normal check compares Git metadata and does not read archive source. Baseline refuses an existing summary; equivalence and OOC refuse existing evidence. Use a fresh runId after a failure and retain the failed logs. Do not use skip flags. Tk needs an interactive desktop; no GUI skip substitutes for full PASS. A missing compiler/simulator/dependency is a failure to resolve or a stated blocker.
 
-The clone options keep raw archived bytes at canonical LF on Windows and avoid path-length defaults. If running original negative Tcl gate tests directly, first create a scratch directory under this clone's `v5/build/` and point `TMP` and `TEMP` there. `run_baseline` does this automatically. Tcl accepts verified configurations under this clone's `v5/config/` or temporary configurations under its `v5/build/`; external workspace and archive configurations remain rejected.
+The clone options keep raw archived bytes at their original raw blob bytes on Windows and avoid path-length defaults. If running original negative Tcl gate tests directly, first create a scratch directory under this clone's `v5/build/` and point `TMP` and `TEMP` there. `run_baseline` does this automatically. Tcl accepts verified configurations under this clone's `v5/config/` or temporary configurations under its `v5/build/`; external workspace and archive configurations remain rejected.
 
 Target ARM service still requires a revision-matched XSA/BSP and SF_UART_DEVICE_ID/SF_UART_BAUD/SF_PL_BASE. Serial profile rejects unverified board facts; do not enter guessed COM/pins. Host GCC is not ARM runtime evidence. BOM generator additionally needs Node and @oai/artifact-tool or ARTIFACT_TOOL_MODULE; the workbook is readable and fifteen checks run using Python standard library without that proprietary generation dependency. No manufacture/package is claimed.
+
+Current historical isolation evidence and fresh history-absent clone: v5/evidence/repository_cleanup/20261009. Historical content access requires explicit user authorization even for debugging. Current pre-PCB full entry is v5/scripts/run_prepcb.py; see v5/docs/pre_pcb/REPRODUCTION.md.

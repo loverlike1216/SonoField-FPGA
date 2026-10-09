@@ -1,13 +1,7 @@
-# Current v5 plan — candidate review
+# Current plan — v5 historical isolation
 
-S0–S6 feasible offline work and all final executable gates completed. S7 code,
-evidence, state and checkpoint delivery prepared; normal branch publication and
-actual CI/remote receipt recorded under shared/prepcb. Current task stops after
-publication verification, not at setup. No new version.
+Gate0 PASS: fixed source7dda49f/mainECD32, tracked/private inventories, fresh full before171-test/four-simulator-run baseline and native OOC. Gate1 PASS: all6670 sourcefiles uniquely classified, no path/case conflict, dependency inventory, mixed original/current governance preserved.
+Gate2 PASS:3911 Git moves (3909 old frozen entries +2v2 instructions),2759 kept; exact SHA256/blob/mode preserved; current shared/openProblems intact. Gate3 PASS local: exact Historical project root, explicit access policy, ignores/IDE/searchallowlist, metadata-only integrity checker.
+Gate4 IN_PROGRESS: fresh independent no-hardlinks sparseclone with no historicalworktree, newlockedvenv full run_prepcb; before/after trace/ACK/hash/native source/clock/utilization/unconstrained comparisons. Gate5 inspect unchanged BOM/contracts/boardfacts; no electrical assumptions promoted. Gate6 privacy/license/diff review, evidence/checkpoint, regular branchpush/DraftPR and remoteCI verification. Gate7 DEFERRED until explicit user approval of concrete PR.
 
-Next: independent/user review the full report and stacked development PR.
-Keep migrationPR1 separate/unmerged until user approval; then approved merges
-must respect dependency order and use a fresh remote-main clone regression.
-Close PC-B01..PC-B13 with actual Rev3/electrical/target-tool/measurement evidence
-before physical deployment, CAD/manufacturing release or acoustic claims.
-No unrequested hardware action, archive reads, test weakening or optimization loop.
+Runnable entries: v5/scripts/run_baseline.ps1, v5/scripts/run_prepcb.py, v5/scripts/create_project.tcl config/ax7020_ooc.tcl. Runtime trajectory GUI: fromv5 ../.venv/Scripts/python.exe -m software.ui.prepcb_app. Current search shared/repository_cleanup/search_current.ps1. No default archive reads, even during debugging. No newversion/testrelaxation/hardwareoperation/mainmerge.

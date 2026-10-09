@@ -1,23 +1,9 @@
 # SonoField-FPGA v5 current state
 
-Repository: https://github.com/loverlike1216/SonoField-FPGA.git
-Workspace: E:\Codex_project\AMD_Sonofield
-Branch: feat/v5-prepcb-full-system
-Active/highest version: v5; ACTIVE; no upgrade.
-Stage: S7 candidate delivery and independent/user review.
-Verified executable source: a43728870a06949e67b0604f4716f07419b3306c
-Checkpoint: CP-20261009-006; containing commit resolved from Git, not self-referenced.
-
-Offline candidate: ACCEPT WITH LIMITATIONS; original115+new56=171tests PASS,
-two independent clones each3696frames×3Icarus+1XSim; final5runtimeGUI cases375frames,
-160temperaturemaps/20480words,10sparsefits and actualnewtop37frames in two tools.
-PS6addresswindows/5IRQs verified; real2025.2 PL OOC WNS+.081/WHS+.096ns.
-All new physical sensor/ADC references SYNTHETIC/ALTERNATIVE_VALIDATION.
-Whole platform REVISE; PCB/manufacturing NOT_RELEASED; hardware_verified=false.
-13open gateitems, offlineBlocking0/knownCritical0. ARM target/boardtiming/power/
-Rev3/physicalcutoff/acoustics/independentreview remain blocked or pending.
-
-Read v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md, FINAL_VERIFICATION.json and
-PRE_PCB_OPEN_BLOCKERS.md before proceeding. Original migration PR1 remains
-unmerged; normal development branch is stacked on it. No main merge/forcepush,
-version creation or device operation. ChatGPT BLOCKED; observable records PARTIAL.
+PROJECT_ID SONOFIELD_FPGA; same official repository; workspace E:\Codex_project\AMD_Sonofield.
+Branch codex/v5-historical-project-isolation-20261009; active/highest v5, no version upgrade.
+Current stage HISTORICAL_GATE4_VALIDATING. Main remains ecd32e76e9b6c08806eae30a3c75a9c3be5e7570; PR1/PR2 remain unmerged.
+3,911 original files moved by audited paths with exact SHA256/blob/mode; 2,759 original files kept. Current v5 implementation/BOM/evidence remains at its original paths.
+New before baseline PASS:171tests,3696frames×3Icarus+1XSim,C/AXI/safety/equivalence. Before native2025.2 OOC and reopen complete. After fresh sparse clone and native comparison are IN_PROGRESS, not claimed PASS.
+CP007 is an in-progress checkpoint. Physical/ARM/boardtiming/PCB/manufacturing gates remain as previously recorded in PC-B01..13; wholeplatform REVISE. ChatGPT BLOCKED, actual Codex records PARTIAL.
+Next: execute Gate4/5/6 and produce reviewable Draft PR. Explicit user main approval required for Gate7.

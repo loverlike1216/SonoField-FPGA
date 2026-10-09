@@ -15,3 +15,8 @@ runtimeXYZ/Bezier editor and safePLsupervisor/BRAMwrapper. Preserve originalcore
 and formalADCB. 171tests/two-clonefullbaseline/dualRTL/newtop/GUI/model gates
 PASS; real2025.2 PS6windows/5IRQ and PL OOC route internally positive.
 CP006 and full report record all holds; no physicaloperation or automaticmainmerge.
+
+
+## 2026-10-09 — v5 Historical project candidate
+
+Audited3911historicalGitpathmoves preservingbody/blob/mode; currentv5/shared/openProblems remain. Exact Historical project root, explicitreadban, currentsearchallowlist andmetadata-onlyCI. Before171-test/four-run baselinePASS;afterindependentclonevalidationinprogress. Samev5;main/hardware/manufacturingpromotionrequiresseparateapproval.

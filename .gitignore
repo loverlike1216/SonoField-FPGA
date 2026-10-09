@@ -39,3 +39,12 @@ v5/evidence/pre_pcb_20261009/**/*.dll
 v5/evidence/pre_pcb_20261009/**/*.so
 v5/evidence/pre_pcb_20261009/**/*.pb
 v5/evidence/pre_pcb_20261009/**/webtalk*
+
+# Historical migration evidence: preserve text/traces/reports, exclude generated binaries.
+v5/evidence/repository_cleanup/**/xsim.dir/
+v5/evidence/repository_cleanup/**/*.vvp
+v5/evidence/repository_cleanup/**/*.exe
+v5/evidence/repository_cleanup/**/*.dll
+v5/evidence/repository_cleanup/**/*.so
+v5/evidence/repository_cleanup/**/*.pb
+v5/evidence/repository_cleanup/**/webtalk*

@@ -1,6 +1,6 @@
 # SonoField-FPGA — AX7020 v5
 
-唯一活动工程版本。用户于2026-10-08明确批准使用已有v5目录；没有创建v4。复制来源和逐文件Hash见config/inheritance_manifest.json；旧本地沙盒原样保存；旧Git根树在history_old封存，仅显式历史调查可读取。历史来源模型记录：GPT-6.1 Sol High（当时用户声明）；本次运行模型身份未独立确认。
+唯一活动工程版本。用户于2026-10-08明确批准使用已有v5目录；没有创建v4。复制来源和逐文件Hash见config/inheritance_manifest.json；旧本地沙盒原样保存；旧Git根树按来源在根目录 Historical project/ 封存，仅显式历史调查可读取。历史来源模型记录：GPT-6.1 Sol High（当时用户声明）；本次运行模型身份未独立确认。
 
 继承128通道/8bit相位、独立校准、原子提交、确定性共同时基、采集/校准调度、运动轨迹、PS协议/C服务/AXI桥和安全控制。算法、接口、寄存器、测试阈值不因目录整理改变。10mm换能器、12mm辐射面中心间距、100mm上下辐射面间距（90–115mm可调）、双8×8与中心原点保持不变。
 
@@ -22,7 +22,7 @@ $env:CC='D:/DevC++/Dev-Cpp/TDM-GCC-64/bin/gcc.exe'   # 改为本机C编译器
 ./v5/scripts/run_baseline.ps1 -Output evidence/migration/manual_run
 ```
 
-输出目录必须没有已有summary.json，避免覆盖证据。成功标准：总summary PASS、115项Python测试、3696帧、3次Icarus和1次XSim固定输入Hash一致，以及协议/C/AXI、安全、黄金等价回归全部通过。测试有GUI自动化，需要可用的桌面/Tk，不能以无GUI跳过核心回归。
+输出目录必须没有已有summary.json，避免覆盖证据。成功标准：总summary PASS、171项Python测试（原115+新增56）、3696帧、3次Icarus和1次XSim固定输入Hash一致，以及协议/C/AXI、安全、黄金等价回归全部通过。测试有GUI自动化，需要可用的桌面/Tk，不能以无GUI跳过核心回归。
 
 只验证Python：进入v5，运行`../.venv/Scripts/python.exe -m unittest discover -s tests -v`。完整基线采用上面的入口，不要将单项通过当成完整通过。
 
@@ -42,6 +42,8 @@ rtl/software/firmware/tb/tests为当前源；config为配置及继承清单；si
 
 下一步依据已确认的Rev3.0，获得厂家匹配PS/DDR/时钟/IO参考、完整器件等级与VCCO，说明当前运行镜像和可用内存范围；接板上UART口并资格确认ARM BSP/工具链，再做无外部负载的临时PS-PL测试。独立审核ADC/本地安全/浪涌候选，保持制造HOLD。不得下载OOC工程或驱动未知GPIO；本次只进行实板只读检测，没有程序下载、PCB修改或声学实测。
 
-默认只检索v5/shared/当前有效决策；历史仅在回归或用户要求时查看。全工程验收仍未完成。
+默认只检索v5/shared/当前有效决策；历史仅在用户明确授权后定向查看，回归或调试本身不构成读取授权。全工程验收仍未完成。
 
 当前候选迁移结果与完整冷启动命令见仓库shared/migration/RUNBOOK.md及PORTABILITY_AND_REGRESSION.md；旧证据保留原日期，不作为本轮复跑结果。
+
+当前完整 pre-PCB 离线入口：`.venv/Scripts/python.exe v5/scripts/run_prepcb.py --output v5/evidence/repository_cleanup/manual_prepcb`（仓库根目录；新输出目录）。新轨迹编辑器从 v5 运行 `../.venv/Scripts/python.exe -m software.ui.prepcb_app`；操作指南见 docs/pre_pcb/GUI_USER_DRAWN_TRAJECTORY_GUIDE.md。制造与实板门禁保持 HOLD。当前历史迁移证据见 evidence/repository_cleanup/20261009。

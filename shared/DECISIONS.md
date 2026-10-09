@@ -54,3 +54,7 @@ corrected PS6window/5IRQ and actualnewtopchain; CP005 addressclaim superseded
 by CP006, immutablehistoricalsnapshot preserved. Deliver candidate with limits,
 retain physical/ARM/independentreview/main gates; stop further optimization.
 Source: actual instruction + FINAL_VERIFICATION; not a ChatGPT Decision.
+
+## ADR-039 — User-authorized historical path isolation (2026-10-09)
+
+Source: actual current user request and exact Gate0–7 document in AI-interaction-memory/codex/instructions/v5_historical_project_20261009.md. Same repository/version. Authorize one-time bijective path relocation of frozen snapshots and old v2 instruction copies into exact Historical project root, preserving bytes/blob/mode; current v5 and root shared/open Problems/approval provenance remain. Current older BLOCKERS/ACCEPTANCE conflict had already been resolved by PR1/PR2; original stale bodies remain frozen. Branch is created from main then normally fast-forwarded to complete unmerged v5 candidate, with dependencies explicit. Main merge and Gate7 require concrete user approval. No external ChatGPT Decision is claimed. No old board pin/clock/DDR choice transfers. No hardware or ADC change.

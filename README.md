@@ -1,16 +1,25 @@
 # SonoField-FPGA — AX7020 v5
 
-PROJECT_ID **SONOFIELD_FPGA** · **v5 ACTIVE** · **ALINX AX7020** · Vivado/Vitis2025.2. Current work continues v5 pre-PCB full-system stages S0–S7 on a development branch stacked on the unmerged migration candidate. Main merge and permanent workspace promotion require user review. No version upgrade.
+**SONOFIELD_FPGA · v5 ACTIVE · ALINX AX7020 · Vivado/Vitis 2025.2**
 
-Start with [current state](shared/PROJECT_STATE.json), [recovery checkpoint](shared/CONTEXT_CHECKPOINT.md), [runbook](shared/migration/RUNBOOK.md), [migration evidence](shared/migration/PORTABILITY_AND_REGRESSION.md), [acceptance](shared/ACCEPTANCE.md) and [rollback](shared/migration/ROLLBACK_PLAN.md). The sole production implementation is [v5](v5/README.md). Build/tests/imports use v5 only. Frozen history is excluded from everyday work and may be inspected only on explicit history/recovery instructions.
+128 TX / 8 RX acoustic field and trajectory control, opposed 8×8 arrays, separate 8-bit requested/calibration phases, atomic maps, shared timebase and 32 lanes × 4 used. Current v5 adds fail-closed power/safety supervision, temperature compensation, bounded sparse geometry calibration, optional PS/PL service and a user-drawn trajectory editor at 50 Hz. Formal ADC is AD7606BBSTZ-RL; TX NU40C10T, RX MPN unqualified. Array geometry is 12 mm pitch, 100 mm nominal radiating-face gap adjustable 90–115 mm, origin at geometric center.
 
-128TX/8RX, opposed8×8 arrays,8bit independent requested/calibration phases, atomic maps, common timebase,32lanes×4used,50Hz motion infrastructure and existing PS/C/AXI interfaces are preserved. TX NU40C10T; RX MPN unknown; formal ADC AD7606BBSTZ-RL. C-16 is an unapproved candidate. Geometry is12mm radiating-face pitch,100mm nominal face gap adjustable90–115mm, geometric-center origin. Upper/lower64TX arrays have independent external power/protection/cutoff. Central power comes only from protected AX7020 J10/J11 single sources; measured capacity is still blocked. See [hardware contract](v5/docs/pre_pcb/CENTRAL_ARRAY_HARDWARE_CONTRACT.md), [runtime trajectory guide](v5/docs/pre_pcb/GUI_USER_DRAWN_TRAJECTORY_GUIDE.md) and [open blockers](v5/docs/pre_pcb/PRE_PCB_OPEN_BLOCKERS.md).
+Start with [v5 run instructions](v5/README.md), [current state](shared/PROJECT_STATE.json), [recovery checkpoint](shared/CONTEXT_CHECKPOINT.md), [acceptance](shared/ACCEPTANCE.md), [hardware contract](v5/docs/pre_pcb/CENTRAL_ARRAY_HARDWARE_CONTRACT.md) and [runtime trajectory guide](v5/docs/pre_pcb/GUI_USER_DRAWN_TRAJECTORY_GUIDE.md). v5 is the sole active implementation. Root shared and current AI indexes retain decisions and provenance. This branch is a migration candidate containing earlier unmerged v5 work; main promotion requires user review.
 
-Real digital regression and documented-device OOC evidence are separate from physical acceptance. Historical AX701020.3.0/XC7Z020/CLG400 read-only identification does not prove PS-PL/DDR/UART/ADC/driver/acoustic operation. Whole-platform conclusion remains REVISE; native v5 schematic NOT_CREATED, ERC_NOT_RUN, electrical/manufacturing HOLD.50mg EPS is a future measured milestone. ChatGPT history access BLOCKED; observable current Codex records PARTIAL.
+From the repository root in PowerShell 7, create a Python 3.10 venv with Tk and install locked dependencies:
 
+```powershell
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -r v5/requirements-lock.txt
+# Set VIVADO_BIN, IVERILOG_BIN and CC to actual installed 2025.2/Icarus/GCC tools.
+./v5/scripts/run_baseline.ps1 -Output evidence/manual_baseline
+.venv/Scripts/python.exe v5/scripts/run_prepcb.py --output v5/evidence/manual_prepcb
+```
 
-Current pre-PCB candidate: [full result and limits](v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md),
-[reproduction commands](v5/docs/pre_pcb/REPRODUCTION.md), and
-[machine verification](v5/evidence/pre_pcb_20261009/FINAL_VERIFICATION.json).
-171tests, dual-tool and independentclone evidence pass within offline scope;
-hardware/manufacturing remain NOT_RELEASED and wholeplatform REVISE.
+Use fresh output directories. The complete current baseline requires 171 tests, 3,696 frames in each of three Icarus runs and one XSim run, plus C/AXI/calibration/safety/equivalence checks. The pre-PCB entry adds two-simulator supervisor/top verification, temperature/C comparison, sparse calibration and actual GUI callbacks. See [reproduction commands](v5/docs/pre_pcb/REPRODUCTION.md). For GUI use, enter v5 and run `../.venv/Scripts/python.exe -m software.ui.prepcb_app`; simulated sensor/calibration inputs are explicitly synthetic.
+
+Current evidence: [pre-PCB results and limits](v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md), [historical-isolation gates](v5/evidence/repository_cleanup/20261009/), [active dependency report](V5_ACTIVE_DEPENDENCY_REPORT.md) and [rollback plan](ROLLBACK_PLAN.md). Default search uses [current-scope search](shared/repository_cleanup/search_current.ps1), explicit v5 source lists and current root governance. Local ignore/IDE rules do not control GitHub website indexing.
+
+Both 64-TX arrays use independent external power/protection/default-off cutoff. Central power uses protected single sources from AX7020 J10/J11 only; capacity, Rev3-matched PS/DDR/VCCO/pins, real UART/ADC/power cutoff, board timing and acoustics remain unqualified. OOC synthesis is documented-device evidence. No board programming or PCB release is authorized. Native v5 schematic NOT_CREATED, ERC_NOT_RUN, manufacturing HOLD; whole platform **REVISE**. No physical levitation/50 mg EPS result is claimed. ChatGPT access BLOCKED; current observable Codex records PARTIAL.
+
+[Frozen historical project index — explicit user authorization required to read](<Historical project/README.md>)

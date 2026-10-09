@@ -1,35 +1,34 @@
 {
-  "checkpoint_id": "CP-20261009-006",
+  "checkpoint_id": "CP-20261009-007",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex_project\\AMD_Sonofield",
-  "branch": "feat/v5-prepcb-full-system",
-  "base_commit": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+  "branch": "codex/v5-historical-project-isolation-20261009",
+  "base_commit": "7dda49f00983c57d06ac639ad70bdaff9696e900",
   "head_commit": null,
-  "source_commit": "a43728870a06949e67b0604f4716f07419b3306c",
   "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
+  "move_commit": "a98ad7c7fceaee574ae97ea37a8daa52691b180e",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "V5_PREPCB_S7_CANDIDATE_USER_REVIEW_PENDING",
-  "created_at": "2026-10-09T10:38:08.858692+00:00",
+  "current_stage": "V5_HISTORICAL_GATE4_VALIDATING",
+  "created_at": "2026-10-09T15:43:16.273613+00:00",
   "created_by": "Codex",
-  "checkpoint_reason": "S0-S7 offline candidate gates complete; independent clone and corrected PS address mapping; final review handoff",
+  "checkpoint_reason": "Actual historical path moves verified; independent regression in progress",
   "source_of_truth": "repository",
-  "status": "VALID_CANDIDATE_WITH_LIMITATIONS",
+  "status": "VALID_IN_PROGRESS",
   "architecture_ref": "v5/docs/pre_pcb/CENTRAL_ARRAY_HARDWARE_CONTRACT.md",
   "completed": [
-    "IMPLEMENTED optional C protocol extension, temperature/sparse/runtimeGUI and failclosed supervisor/mailbox wrapper",
-    "TESTED 171 including unchanged original115; originalfullbaseline in two clones",
-    "SIMULATED supervisor and actualnewtop + GUI C-generated maps in Icarus and XSim",
-    "SYNTHESIZED realVivado2025.2 PS BD/logicalXSA and132MHz PL OOC routed; externaltiming held",
-    "ALTERNATIVE_VALIDATION numericaltemperature/sparse/trap; no physicalhardwareverified"
+    "TESTED before171tests and3696frames×4 baseline",
+    "SYNTHESIZED_OOC before native2025.2 and projectreopen",
+    "IMPLEMENTED 3911 byte/blob/mode-identical historical path moves and current-scope exclusions"
   ],
   "next_actions": [
-    "User/independent reviewer inspect stacked development Draft PR and evidence; close PC-B01..PC-B13 before any hardware/manufacturing operation; no automatic main merge"
+    "Gate4: fresh history-absent clone/new locked venv full prePCB baseline; compare native OOC before/after; privacy/diff review then Draft PR; Gate7 deferred for user approval"
   ],
   "active_decisions": [
-    "ADR-038 actualuser existing-v5 prePCB authorization; formalADC/core/version unchanged"
+    "ADR035–038 preserved",
+    "ADR039 actualuser one-time historical path authorization"
   ],
   "blockers": [
     "PC-B01",
@@ -48,44 +47,44 @@
   ],
   "critical_issues": [],
   "latest_validation": [
-    "v5/evidence/pre_pcb_20261009/FINAL_VERIFICATION.json",
-    "v5/evidence/pre_pcb_20261009/CLEAN_SOURCE_COMPARISON.json"
+    "v5/evidence/repository_cleanup/20261009/baseline_before/summary.json",
+    "v5/evidence/repository_cleanup/20261009/post_move_integrity.json"
   ],
   "known_limitations": [
-    "Vitis ARM target blocked",
-    "Rev3/power/externalSTA/CDC/BRAMasync/cutoff unqualified",
-    "128TXresponses UNMEASURED; no actualADC/temp/particle/mass evidence",
-    "Independenthumanreview and mainapproval pending",
-    "Same-machine shared EDA independentclone only"
+    "After regression not yet complete",
+    "Same-machine shared EDA",
+    "Physical/ARM/manufacturing remain unqualified",
+    "ExternalChatGPT BLOCKED; no fabricated reviewer"
   ],
   "do_not_change": [
-    "Frozenhistory/oldphysicalsandbox",
-    "OriginalRTL/tests/goldens/thresholds",
-    "AD7606BBSTZ-RL/NU40C10T",
-    "No forcedpush/mainmerge/deviceoperation/manufacturing"
+    "All frozen body bytes and modes; originalphysicalworkspace untouched",
+    "Current v5 implementation/tests/goldens/thresholds/ADCB",
+    "No default historycontentread; no boardoperation/mainmerge/forcepush"
   ],
   "invariants": [
     "v5 only",
     "128TX/8RX",
     "32lanes×4 commonclock",
-    "separate8bit requested/calibration completeatomicmaps",
-    "50Hz local motion; PCtaskupload",
-    "3mandatoryTMP117",
-    "centralonlyprotectedAX7020headers;twoindependentarraypowerdomains"
+    "independent8bit requested/calibration;completeatomicmaps",
+    "50Hz motion",
+    "12mm pitch/100mm90–115mmgap",
+    "twoindependentarraypower;centralprotectedAX7020headers"
   ],
   "open_ai_problems": [
     "P-20261008-001",
     "P-20261009-001"
   ],
   "evidence_refs": [
-    "v5/evidence/pre_pcb_20261009/FINAL_VERIFICATION.json",
-    "v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md"
+    "v5/evidence/repository_cleanup/20261009",
+    "shared/repository_cleanup/ARCHIVE_PATH_MAP.json"
   ],
-  "state_conflicts": [
-    {
-      "source": "CP005 PSBD-valid statement and earlier exit0 logs",
-      "current": "Automatic map was incomplete; six explicit64KiB mappings and5IRQ verified in final independentclone; earlierPS addressspaces invalidated"
-    }
-  ],
-  "resume_from": "README/AGENTS, current state/version/checkpoint, full report/final summaries, openproblems and remote receipt. Do not read frozenhistory."
+  "resume_from": "Read current state/checkpoint and Gate4 real outputs; do not repeat completed moves or read historical source",
+  "delta_since_previous": "User new explicit historical-isolation task; sourcePR2 retained by normal ancestry; actual pathmove verified; aftergates pending",
+  "provenance": [
+    "Git HEAD/index",
+    "beforebaseline",
+    "MOVE_PLAN",
+    "rawSHA256/blobmode checks",
+    "actual user Gate0–7 instruction"
+  ]
 }

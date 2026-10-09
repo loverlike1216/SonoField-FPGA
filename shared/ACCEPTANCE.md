@@ -29,3 +29,6 @@ PL OOC WNS+.081/WHS+.096ns. No originaltest/golden/threshold changes.
 Candidate conclusion ACCEPT WITH LIMITATIONS FOR REVIEW; wholeplatform REVISE.
 13open gates, no physicalhardwareacceptance, no finalindependentreview claimed.
 PCB/productionXDC/ARMtarget/electrical/manufacturing NOT_RELEASED or BLOCKED.
+
+
+Current Historical project migration (ADR039): all6670sourcefiles unique disposition;3911rawSHA256/blob/mode-identical moves and2759kept; current171tests and allprePCB gates required. Actualsource lists/cleanhistory-absent clone required, not grep-only. Gate7 is a separate post-user-approval action. See current cleanup evidence, do not rewrite older result sections.

@@ -22,3 +22,6 @@ maps the above electrical/physical/provenance/review blockers. OfflineBlocking0
 and knownofflineCritical0 apply only to testedofflinecandidate, not wholeplatform.
 Final PS address-map defect is resolved; fullboardtiming, ARMtargetbuild and
 physicalcutoff remain OPEN. Main and migrationPR1 remain unmerged pending user.
+
+
+Historical isolation candidate: Gate4 validation/publication in progress; no known fileloss/blob/mode mismatch. Gate7 blocked by pending explicit user main approval. Existing PC-B01..13 and both open v5 Problems unchanged. No new stale BLOCKERS_ENGINEERING authority is created.
