@@ -4,7 +4,7 @@ Device-direction approval is CLOSED: user approved C-16. Its analog/electrical q
 
 | Gate | Priority / owner | Minimum closure evidence | Current status |
 |---|---|---|---|
-| NS-UART / JTAG | P1 user + system/board operator | Official CP2102N driver restored, COM enumerated; actual JTAG adapter and existing safe server visible; then read-only identification | BLOCKED Code28, no COM/JTAG; no install/write authorized |
+| NS-UART / JTAG | P1 user + system/board operator | Official CP2102N driver restored, COM enumerated; actual JTAG adapter and existing safe server visible; then read-only identification | JTAG read-only identification PASS after reseat; UART Code28/0COM remains BLOCKED; no install/write authorized |
 | PC-B01 Rev3 | P0 user/vendor | Exact revision schematic/full part/VCCO/PSclock/UART/DDR and current image ownership | BLOCKED; generic2023.1 candidate only |
 | PC-B02 central power | P0 electrical reviewer | Per-rail max/startup/fault budget and header capacity with single protected source/no backfeed | CENTRAL_POWER_BUDGET_BLOCKED |
 | PC-B03 transducers | P1 supplier/bench operator | Exact T/R ordering codes, rated continuous/burst excitation, batch dimensions, impedance/current/thermal sweep | Images transcribed; bench NOT_RUN |

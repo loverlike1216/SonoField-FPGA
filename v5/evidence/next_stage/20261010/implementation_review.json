@@ -1,0 +1,39 @@
+{
+  "status": "REVIEWED_WITH_EXPLICIT_LIMITATIONS",
+  "scope": "Candidate changed/new current source only; preserved existing source not silently rewritten",
+  "findings": [
+    {
+      "path": "v5/rtl/acquisition/ad7606c16_if.sv",
+      "matches": [
+        {
+          "line": 35,
+          "text": "9:initialization=16'h2100; // interface CRC disabled; 16/32-bit profile"
+        }
+      ]
+    },
+    {
+      "path": "v5/scripts/build_nextstage_platform.tcl",
+      "matches": [
+        {
+          "line": 21,
+          "text": "# Candidate on-chip-only PS platform; DDR deliberately disabled, no Rev3 preset imported."
+        }
+      ]
+    },
+    {
+      "path": "v5/software/prepcb/adc7606c16.py",
+      "matches": [
+        {
+          "line": 15,
+          "text": "if any(values.get(k)!=v for k,v in self.registers().items()):raise ValueError('Readback mismatch; acquisition disabled')"
+        }
+      ]
+    }
+  ],
+  "disposition": "ADC CRC intentionally disabled in explicit qualified digital profile and enabled profile rejected; REAL_BOARD transport locked pendingA2; synthetic/host fixtures labeled; ADC simulation startup only accelerated; fixture names/test mocks not hardware claims; exact values in negativebench encode independent expected behavior; no production stub claimed complete",
+  "core_closure": "Actual C16adapter/fullcapture/BRAM/AXI/phaseACK path verified by two tools+clone, original171tests/goldens/35dB preserved",
+  "physical_remaining": "No deployedBSPapplication/DMAstreaming/analog/nativeERC/acoustic/powerqualification; all listed OPEN",
+  "original_assertions_removed": 0,
+  "test_thresholds_lowered": 0,
+  "historical_bodies_read": false
+}

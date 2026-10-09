@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-10-09T23:29:41.1601096Z",
+  "trigger": "Actual user JTAG reseated",
+  "devices": [
+    {
+      "name": "CP2102N USB to UART Bridge Controller",
+      "status": "Error",
+      "class": null,
+      "vid_pid": "VID_10C4&PID_EA60",
+      "problem": 28,
+      "driver": [
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": null
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": null
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Service",
+          "Data": null
+        }
+      ]
+    },
+    {
+      "name": "USB Serial Converter",
+      "status": "OK",
+      "class": "USB",
+      "vid_pid": "VID_0403&PID_6014",
+      "problem": 0,
+      "driver": [
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "FTDI"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "2.12.28.0"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Service",
+          "Data": "FTDIBUS"
+        }
+      ]
+    }
+  ],
+  "port_count": 0,
+  "processes": [
+    {
+      "Name": "vivado.exe",
+      "ProcessId": 55512,
+      "ExecutablePath": "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "CommandLine": "\"D:/Vivado/2025.2/2025.2/Vivado/bin/unwrapped/win64.o/vivado.exe\"   -gui_launcher_event rodinguilauncherevent55344"
+    }
+  ],
+  "listeners": [],
+  "hardware_written": false,
+  "serial_opened": false
+}

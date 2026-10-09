@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "classification": "OFFLINE_OOC_NOT_BOARD_TIMING",
+  "policy": "Exact report body after title; only nonfunctional generated header Date/Host/Command excluded",
+  "reports": [
+    {
+      "current": "expanded_current2/timing_reopened.rpt",
+      "clean": "expanded_clean/timing_reopened.rpt",
+      "canonical_equal": true,
+      "current_sha256": "721b4f9b4a34fd97db6176f60c2fc9261fd6f7666a40d59ad48b1cf219f3933c",
+      "clean_sha256": "721b4f9b4a34fd97db6176f60c2fc9261fd6f7666a40d59ad48b1cf219f3933c"
+    },
+    {
+      "current": "expanded_current2/drc_reopened.rpt",
+      "clean": "expanded_clean/drc_reopened.rpt",
+      "canonical_equal": true,
+      "current_sha256": "675d72529ac320c75eec6764e0a7c191efa67afae63cd5e041a2d9efdfaa2e25",
+      "clean_sha256": "675d72529ac320c75eec6764e0a7c191efa67afae63cd5e041a2d9efdfaa2e25"
+    },
+    {
+      "current": "nextstage_platform_run3/pl_routed_utilization.rpt",
+      "clean": "nextstage_platform_clean/pl_routed_utilization.rpt",
+      "canonical_equal": true,
+      "current_sha256": "300befa2994f6a7cc86fcd240a21d9e0c01119508d70c4174c6f79537c5c6dd0",
+      "clean_sha256": "300befa2994f6a7cc86fcd240a21d9e0c01119508d70c4174c6f79537c5c6dd0"
+    }
+  ]
+}

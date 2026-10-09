@@ -1,0 +1,25 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 10 02:00:30 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/faults_2640000/xsim_script.tcl
+# xsim {faults_2640000} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS MOTION-RTL01/02/03/04 complete maps, ordered double-buffer swap, cadence=2640000 cycles
+PASS MOTION-RTL05 underflow disables
+PASS MOTION-RTL06 overflow
+PASS MOTION-RTL07 STOP mid-load remains disabled until reset
+PASS MOTION-RTL08 reset mid-trajectory
+PASS MOTION-RTL09 invalid frame/sequence reject
+PASS MOTION-RTL10 reset and new complete map recover safely
+PASS MOTION extra lost ACK timeout
+$finish called at time : 79226806 ns : File "E:/Codex_project/AMD_Sonofield/.portability/nextstage_clean_20261010/v5/tb/tb_motion_faults.sv" Line 86
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 10 02:00:34 2026...

@@ -1,30 +1,31 @@
-# Current v5 blockers — 2026-10-09
+# Current v5 blocker authority — 2026-10-10
 
-Only this table is the current blocker authority. Earlier v2/Robei narratives are historical and do not close AX7020 gates. Last verified from repository evidence and this migration:2026-10-09.
+This current table supersedes prior shared B-approval/state text; old Git snapshots remain provenance. Offline candidate gates have no unclosed test failures; physical release has the unresolved risks below. No hardware/main/manufacturing acceptance is claimed.
 
-| ID | Status / evidence | Owner / next action | Scope |
+# Current unresolved gates and minimal closure
+
+Device-direction approval is CLOSED: user approved C-16. Its analog/electrical qualification remains OPEN. Original PC-B01..13 IDs persist for continuity; current meaning below supersedes the old pre-PCB B-direction condition.
+
+| Gate | Priority / owner | Minimum closure evidence | Current status |
 |---|---|---|---|
-| V5-B01 | PARTIALLY_RESOLVED: AX701020.3.0/XC7Z020/CLG400 historical read-only evidence; full grade/VCCO/Rev3 clock/connector match unknown. v5/evidence/board_bringup/20261009/RESULT.md | User/manufacturer: revision-matched facts | Physical |
-| V5-B03 | OPEN: running-image ownership, matched PS DDR/preset/XSA/BSP, UART and real PS-PL absent. P-20261009-001 | User/embedded: obtain matched platform and safe ownership; no DDR RAM or board operation during migration | Physical |
-| V5-B04 | OPEN: external66MHz min/max/fanout/cable/PVT, ADC/AFE, watchdog/default-off/rearm/surge/thermal. v5/hardware/integration_candidates/20261009/SAFETY_AND_POWER.md | Hardware/reviewer: measured qualification | Electrical |
-| V5-B05 | OPEN: NU40C10T batch/continuous drive/phase/amplitude, exact RX MPN, physical trap/particle milestones missing | User/experimental: datasheets/samples and staged measurements | Acoustic |
-| V5-BOM_REVIEW | OPEN/HOLD: formal AD7606B bandwidth; C-16 remains unapproved, surge/MPN/native pin-level netlist unresolved. P-20261008-001; v5/hardware/bom/working/2026-10-09/ | Independent reviewer/user: decisions then verification | Electrical |
-| NATIVE_SCHEMATIC_ENVIRONMENT | NOT_CREATED / ERC_NOT_RUN / MANUFACTURING_HOLD | CAD owner after board/electrical facts; old PCB/V1 is not a v5 production design | Hardware |
-| CHAT_MEMORY_ACCESS_BLOCKED | BLOCKED: no exposed supported external ChatGPT history reader, ID/URL UNKNOWN | User: supported export or connector if needed | Provenance |
-| INDEPENDENT_REVIEW_PENDING | OPEN: no external AI/independent human review fabricated; A+B real environments and two simulators are available evidence | User/reviewer: review concrete Draft PR and evidence | Final review |
-| MIG-MAIN | PENDING: explicit user approval for main merge and then post-merge fresh remote clone | User/Codex after approval | Migration promotion |
+| NS-UART / JTAG | P1 user + system/board operator | Official CP2102N driver restored, COM enumerated; actual JTAG adapter and existing safe server visible; then read-only identification | JTAG current read-only identification PASS; UART Code28/0COM remains BLOCKED; no install/write authorized |
+| PC-B01 Rev3 | P0 user/vendor | Exact revision schematic/full part/VCCO/PSclock/UART/DDR and current image ownership | BLOCKED; generic2023.1 candidate only |
+| PC-B02 central power | P0 electrical reviewer | Per-rail max/startup/fault budget and header capacity with single protected source/no backfeed | CENTRAL_POWER_BUDGET_BLOCKED |
+| PC-B03 transducers | P1 supplier/bench operator | Exact T/R ordering codes, rated continuous/burst excitation, batch dimensions, impedance/current/thermal sweep | Images transcribed; bench NOT_RUN |
+| PC-B04 RXAFE | P0 electrical/bench reviewer | Exact RX, AFE/protection/blank/gain/filter/noise/group-delay/40kHz measurements | HOLD |
+| PC-B05 C-16 analog | P0 electrical/bench reviewer | Reference/supply/brownout/straps/highBW/anti-alias/phase/SNR and independent review | USER_DIRECTION_APPROVED; ELECTRICAL_HOLD |
+| PC-B06 protection | P0 electrical reviewer | TVS/eFuse/fuse/wire/inrush/thermal coordination; NC estop/localwatchdog/coldrearm real cutoff injections | PROPOSED / SIMULATED_ONLY |
+| PC-B07 BRAM/external timing | P0 independent RTL/electrical reviewer | Real decision for P-20261010-001; reset-at-capture proof; complete DRC/CDC; production pins/66MHzIOminmax/SI |346 inherited REQP-1839 plus1OOC PS warning; board timing HOLD |
+| PC-B08 target application | P1 platform owner | Qualified XSA/BSP/linker/OCM/UART/I2C/IRQ and linked ARM ELF with logged success | Portable Cortex-A9 object PASS; BSP application BLOCKED |
+| PC-B09 temperature/acquisition | P1 bench operator | Three timestamped actual sensor readings, ADC waveforms, coarseTOF/phase gauges and air bias | Digital synthetic / host fixture PASS; real NOT_RUN |
+| PC-B10 acoustic/fullTX | P1 bench operator |128TX response/polarity/frequency/temperature, field maps and physical particle tests | UNMEASURED |
+| PC-B11 nativeCAD/ERC | P1 CAD/electrical reviewer | Connected native EasyEDA project, every symbol/net/passive pin allocated, actual ERC warnings resolved | Network contract only; ERC_NOT_RUN; MANUFACTURING_HOLD |
+| PC-B12 review/merge | P1 user + independent reviewer | Review concrete new stacked Draft PR and dependencies; explicit merge approval | PENDING; main untouched |
+| PC-B13 externalChat | P2 user/tool environment | Real exported history or supported reader; genuine independent decisions | BLOCKED; no fabricated transcript/decision |
 
-Physical blockers do not prevent digital migration validation. Whole-platform REVISE; candidate scope evaluated separately. No second active BLOCKERS_ENGINEERING table is created.
+S5 real UART->PS->AXI->PL volatile test is NOT_RUN. A2's board facts, safe isolated outputs, known image/recovery and explicit reset/download/RAM-write approval must all be present before any write. No missing physical gate blocks safe offline implementation, regression, reports or Draft publication.
 
-
-Current pre-PCB gate detail: v5/docs/pre_pcb/PRE_PCB_OPEN_BLOCKERS.md PC-B01..13
-maps the above electrical/physical/provenance/review blockers. OfflineBlocking0
-and knownofflineCritical0 apply only to testedofflinecandidate, not wholeplatform.
-Final PS address-map defect is resolved; fullboardtiming, ARMtargetbuild and
-physicalcutoff remain OPEN. Main and migrationPR1 remain unmerged pending user.
-
-
-Historical isolation candidate: Gate4 validation/publication in progress; no known fileloss/blob/mode mismatch. Gate7 blocked by pending explicit user main approval. Existing PC-B01..13 and both open v5 Problems unchanged. No new stale BLOCKERS_ENGINEERING authority is created.
+Rollback before merge: retain the new candidate branch and switch a separate clean checkout to PR3 baseb08ccf58. Never reset/clean the original sandbox. Revert C-16 adaptation only through a reviewed normal revert/decision; it must not silently withdraw the user's formal device choice. Current evidence and all failed logs remain preserved. No board state restoration action was needed because no hardware state was changed. If the user later approves an affected hardware test, its reviewed image must include a separate restore plan. Main merge and postmerge fresh-main regression remain deferred.
 
 
-Historicalmigrationblocking0/critical0/sourcefileloss0/bodyhashmismatch0/currentruntimehistoricalsources0. Gate6publication/CIreceipt andexplicituser mainapprovalpending;13existingphysicalgatesunchanged. Gate7notexecuted.
+Current JTAG update after actual user reseat: After the actual user reseated JTAG, dedicated localhost3122 XSDB/Vivado2025.2 read-only identification PASS: xc7z020 ID0x23727093; both Cortex-A9 Running before/after; BOOT_MODE0x05, DDRC0x81/0x3e; PL DONE/EOS1, existing image identity UNKNOWN. Sysmon zero/-273.1 values INVALID, no voltage/temperature claim. Original Vivado GUI retained; owned server disconnected/stopped. CP2102N remains Code28/0COM. No halt/reset/init/download/memory/DDR-RAM/GPIO/driver/serial write. Real UART->PS->AXI->PL and A2 write gate remain STOP. Evidence: v5/evidence/next_stage/20261010/jtag_reseated/summary.json.

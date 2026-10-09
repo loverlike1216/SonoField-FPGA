@@ -1,0 +1,68 @@
+[
+  {
+    "evidence": "adc_run1/summary.json;adc_run2/summary.json",
+    "status": "FAIL_PRESERVED",
+    "cause": "Independent model retained a conversion across logic reset and test waited on stale valid; bounded model reset cancellation/bench sequencing correction, no old golden change",
+    "closure": "adc_run3/run4/adc_final plus fresh clone two tools PASS"
+  },
+  {
+    "evidence": "preserved_vivado_52116.backup.log;preserved_vivado.log",
+    "status": "FAIL_PRESERVED",
+    "cause": "Module-reference SystemVerilog top rejected; then wildcard register connections not inferable",
+    "closure": "Explicit plain Verilog C16 wrapper and clean full native run exit0"
+  },
+  {
+    "evidence": "vivado_platform_run3.log",
+    "status": "FAIL_PRESERVED",
+    "cause": "Unsupported report_drc -violations at final report after successful route",
+    "closure": "Corrected Tcl committed627; clean full run exit0 and reopened full DRC independently"
+  },
+  {
+    "evidence": "unit203.log;unit_final203.log",
+    "status": "FAIL_PRESERVED",
+    "cause": "Wrong unittest cwd then TEMP outside current clone path guards",
+    "closure": "Correct cwd and clone-local TMP/TEMP; current203 and clean203 PASS; no guard weakened"
+  },
+  {
+    "evidence": "clean_reproduction/clean_preservation_final2.json;clean_reproduction/checkout_eol_receipt.json",
+    "status": "FAIL_PRESERVED",
+    "cause": "Global core.autocrlf=true in fresh clone changed141 unchanged-file checkout EOL bytes",
+    "closure": "Local false plus exact S0 bytes reconstructed only from own Git objects, no source copy; same strict checker PASS"
+  },
+  {
+    "evidence": "expanded_current/drc_reopened.rpt;expanded_current2/drc_reopened.rpt",
+    "status": "INCOMPLETE_REPORT_PRESERVED",
+    "cause": "Default20 messages and MAX_MESSAGES=-1 did not expand REQP-1839",
+    "closure": "Explicit100000 reporting limit exposes346 warnings; no waiver/severity/constraint change"
+  },
+  {
+    "evidence": "vitis_preflight.log",
+    "status": "BLOCKED",
+    "cause": "Vitis2025.2 launcher exit0 contained traceback/path errors and no qualified BSP/platform",
+    "closure": "Portable actual Cortex-A9 ARM object separately PASS; application link/deploy remains BLOCKED"
+  },
+  {
+    "status": "SUPERSEDED_OBSERVATION",
+    "evidence": "windows_readonly_after_continue.json;jtag_reseated_os.json;jtag_reseated/summary.json",
+    "cause": "JTAG absent in earlier snapshot; user physically reseated adapter",
+    "closure": "Fresh20261010hardware read-only ID/register/config status PASS; UART still Code28/0COM"
+  },
+  {
+    "status": "INVALID_NOT_A_MEASUREMENT",
+    "evidence": "jtag_reseated/vivado_readonly.log",
+    "cause": "Read-only sysmon reported zero rails and -273.1C",
+    "closure": "No false sensor/power claim and no configuration write; physical voltage/temperature qualification stays OPEN"
+  },
+  {
+    "status": "FAIL_PRESERVED",
+    "evidence": "jtag_reseated/server_launch_failed_path.json;AI-interaction-memory/codex/S-20261010-nextstage-001.tools.json",
+    "cause": "Assumed ProgramFiles pwsh path absent; first Vivado wrapper read used incorrect relative cwd; raw stderr GB18030 not UTF8",
+    "closure": "Use actual Get-Command pwsh and absolute current-v5 paths; record raw/public encoding receipts; all readonly commands exit0"
+  },
+  {
+    "status": "FAIL_PRESERVED",
+    "evidence": "workspace_initial_failure.json",
+    "cause": "New history rejection guards triggered existing literal runtime-history scanner; new CP relative links wrong",
+    "closure": "Equivalent history-ban guard representation and corrected new CP links; unchanged scanner finalPASS"
+  }
+]

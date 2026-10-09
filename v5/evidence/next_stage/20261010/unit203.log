@@ -1,0 +1,257 @@
+test_acoustic_model (unittest.loader._FailedTest) ... ERROR
+test_complete_fixture_reaches_boundary_only (test_board_project_gate.BoardProjectGateTests) ... FAIL
+test_family_only_rejected (test_board_project_gate.BoardProjectGateTests) ... FAIL
+test_missing_provenance_rejected (test_board_project_gate.BoardProjectGateTests) ... FAIL
+test_unknown_or_mismatched_part_rejected (test_board_project_gate.BoardProjectGateTests) ... test_wildcard_rejected_even_single_resolution (test_board_project_gate.BoardProjectGateTests) ... FAIL
+test_wrong_silicon_rejected (test_board_project_gate.BoardProjectGateTests) ... FAIL
+test_wrong_tool_rejected (test_board_project_gate.BoardProjectGateTests) ... FAIL
+test_board_transport (unittest.loader._FailedTest) ... ERROR
+test_motion (unittest.loader._FailedTest) ... ERROR
+test_nextstage (unittest.loader._FailedTest) ... ERROR
+test_bom_and_network_references_match (test_nextstage_contract.Contract) ... ok
+test_current_formal_adc_and_hold (test_nextstage_contract.Contract) ... ok
+test_unused_adc_outputs_are_unconnected (test_nextstage_contract.Contract) ... ok
+test_workbook_seven_sheets_and_formula_caches (test_nextstage_contract.Contract) ... ok
+test_potential_proxy (unittest.loader._FailedTest) ... ERROR
+test_prepcb (unittest.loader._FailedTest) ... ERROR
+test_prepcb_transfer (unittest.loader._FailedTest) ... ERROR
+test_radiating_geometry (unittest.loader._FailedTest) ... ERROR
+test_adjacent_hash_detects_mutation (test_repository_audit.ProblemIntegrityTests) ... ok
+test_body_hash_detects_mutation (test_repository_audit.ProblemIntegrityTests) ... ok
+test_self_calibration (unittest.loader._FailedTest) ... ERROR
+test_simulator_timeout (unittest.loader._FailedTest) ... ERROR
+test_ui_evidence (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_acoustic_model (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_acoustic_model
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_acoustic_model.py", line 4, in <module>
+    from software.acoustic_model.array_geometry import opposing_arrays, SHAPES
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_board_transport (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_board_transport
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_transport.py", line 8, in <module>
+    from software.board import generated as g
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_motion (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_motion
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_motion.py", line 9, in <module>
+    from software.motion.workspace import load_profile,validate_target,validate_speed,mm_to_m,m_to_mm
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_nextstage (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_nextstage
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_nextstage.py", line 3, in <module>
+    from software.prepcb.adc7606c16 import Profile,Snapshot
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_potential_proxy (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_potential_proxy
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_potential_proxy.py", line 3, in <module>
+    from software.acoustic_model.array_geometry import opposing_arrays
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_prepcb (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_prepcb
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_prepcb.py", line 5, in <module>
+    from software.prepcb.temperature import Reading, Environment, Sensors, tmp117_decode, sht45_decode, sht_crc, compensate, transition
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_prepcb_transfer (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_prepcb_transfer
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_prepcb_transfer.py", line 3, in <module>
+    from software.prepcb.c_session import Session,build
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_radiating_geometry (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_radiating_geometry
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_radiating_geometry.py", line 5, in <module>
+    from software.acoustic_model.array_geometry import planar_profile, coordinate_rows
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_self_calibration (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_self_calibration
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_self_calibration.py", line 4, in <module>
+    from software.calibration.config import load
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_simulator_timeout (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_simulator_timeout
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_simulator_timeout.py", line 5, in <module>
+    from software.motion.transport import SimulationTransport
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+ERROR: test_ui_evidence (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_ui_evidence
+Traceback (most recent call last):
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_ui_evidence.py", line 6, in <module>
+    from software.motion.trap_solver import digest
+ModuleNotFoundError: No module named 'software'
+
+
+======================================================================
+FAIL: test_complete_fixture_reaches_boundary_only (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 52, in test_complete_fixture_reaches_boundary_only
+    self.assertEqual('REACHED_PROJECT_BOUNDARY', self.invoke('xc7z020clg400-1'))
+AssertionError: 'REACHED_PROJECT_BOUNDARY' != 'Configuration must belong to this v5 clone config or build scratch'
+- REACHED_PROJECT_BOUNDARY
++ Configuration must belong to this v5 clone config or build scratch
+
+
+======================================================================
+FAIL: test_family_only_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 32, in test_family_only_rejected
+    self.assertIn('full documented', self.invoke('xc7z020'))
+AssertionError: 'full documented' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_missing_provenance_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 41, in test_missing_provenance_rejected
+    self.assertIn('missing PART_SOURCE', self.invoke('xc7z020clg400-1', source=''))
+AssertionError: 'missing PART_SOURCE' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_unknown_or_mismatched_part_rejected (test_board_project_gate.BoardProjectGateTests) (resolved='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 46, in test_unknown_or_mismatched_part_rejected
+    self.assertIn('non-exact', self.invoke('xc7z020clg400-1', resolved))
+AssertionError: 'non-exact' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_unknown_or_mismatched_part_rejected (test_board_project_gate.BoardProjectGateTests) (resolved='xc7z020clg484-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 46, in test_unknown_or_mismatched_part_rejected
+    self.assertIn('non-exact', self.invoke('xc7z020clg400-1', resolved))
+AssertionError: 'non-exact' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_unknown_or_mismatched_part_rejected (test_board_project_gate.BoardProjectGateTests) (resolved='xc7z020clg400-1 xc7z020clg400-2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 46, in test_unknown_or_mismatched_part_rejected
+    self.assertIn('non-exact', self.invoke('xc7z020clg400-1', resolved))
+AssertionError: 'non-exact' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_wildcard_rejected_even_single_resolution (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 38, in test_wildcard_rejected_even_single_resolution
+    self.assertIn('full documented', self.invoke('xc7z020clg400-*', 'xc7z020clg400-1'))
+AssertionError: 'full documented' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_wrong_silicon_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 35, in test_wrong_silicon_rejected
+    self.assertIn('full documented', self.invoke('xc7z010clg400-1'))
+AssertionError: 'full documented' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_wrong_tool_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 49, in test_wrong_tool_rejected
+    self.assertIn('2025.2', self.invoke('xc7z020clg400-1', version='2024.2'))
+AssertionError: '2025.2' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.110s
+
+FAILED (failures=9, errors=11)

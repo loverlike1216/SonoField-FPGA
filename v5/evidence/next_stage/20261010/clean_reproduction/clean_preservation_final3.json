@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "s0_files": 3324,
+  "immutable_tests_goldens_evidence_bom_files": 3026,
+  "changed": [
+    {
+      "path": "AGENTS.md",
+      "before": "e700963ec252bb59df70d770330d1ee6391bd9469a5e092859c6ca63e8cb61fe",
+      "after": "8f7c6dff106824f928e44fe8007330b5ce01fb6ae82db4cddbae4bd9f5d03d19",
+      "authorized": true
+    },
+    {
+      "path": "README.md",
+      "before": "332dd8ea069a4d58d3bb4b9ef2a897383076a10d9d88e5f4481293edf1749b4a",
+      "after": "178b535f84d4c7b7953d6b0f9f44cade98939c1e8b2faacabaa2176529829ed5",
+      "authorized": true
+    },
+    {
+      "path": "shared/DECISIONS.md",
+      "before": "a20cc597d0762f15e0e375c552546c8a178a3b0869fa2e1bdfbd835ce35cc961",
+      "after": "022e0a59d595460ff6dc95742b47b4fee4d4f00ef2523f907254bc34f696fde0",
+      "authorized": true
+    },
+    {
+      "path": "shared/VERSION_STATE.json",
+      "before": "f7cb9ebf3e26ed757059b8ad0efe8dc6d66d0e8ce9a5805e12dfbbfcc770d793",
+      "after": "b47747cc7c7ab68a3db3e6e193def0298772959f0f8e321b0743b715702c01ab",
+      "authorized": true
+    },
+    {
+      "path": "v5/config/hardware_parts.json",
+      "before": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
+      "after": "591030453cf86cd2c823f774a6ba4d0999ca45c16bc0c7abad2e9723b1717ab2",
+      "authorized": true
+    },
+    {
+      "path": "v5/config/inheritance_manifest.json",
+      "before": "e998fd9597128b9647855c92f41273528499f130abd7743527dfa68a59217a9c",
+      "after": "c40b26cff85ecde81a9fdb32e58a2a8080699092d6cc956ab41b195542427800",
+      "authorized": true
+    },
+    {
+      "path": "v5/config/system_baseline.json",
+      "before": "cd6ae558b5104b23b2949ac84eba608787d95d7d4658f4737c86dc3c7cf148b8",
+      "after": "a0e8322593ef61c90f90de8b601e3c8e13048b337a5bffea7f6648b62cb1051e",
+      "authorized": true
+    },
+    {
+      "path": "v5/rtl/board/prepcb_pl.v",
+      "before": "aa0b34a3ea6360105e9a4b1702a23b413af4ae8c5bf67b3c3683bdbc786ef323",
+      "after": "12e91fe73c6b96aca953342a8e29482fc51e03bcea4ad6191f6c687153ced997",
+      "authorized": true
+    },
+    {
+      "path": "v5/rtl/sono_axi_system.sv",
+      "before": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd",
+      "after": "da19bd32431a8f810d140ea0411fe26e3648d6c20fb333d8f548dfc7bdbab0f8",
+      "authorized": true
+    },
+    {
+      "path": "v5/rtl/sono_digital_system.sv",
+      "before": "781d483af8b9b050c86f3c3806d9754fcc5629fc9ce4a9ecaba0c970bd7241de",
+      "after": "3722c029eff6bf1ba22e6a2ed41d3cf82bd9b804ef2dadf30f863d0f1b50296d",
+      "authorized": true
+    },
+    {
+      "path": "v5/rtl/sono_motion_system.sv",
+      "before": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148",
+      "after": "d1fdd11eaf57c0c8b0dc21a9d223ee198af16f6794a4296fb6da58f4b4824452",
+      "authorized": true
+    },
+    {
+      "path": "v5/scripts/check_prepcb_preservation.py",
+      "before": "938ab4977f6e1b82f30c2f10666cc5ca684fa55fde4df2594bd1b433b1756584",
+      "after": "ebc46d31bd18e078bc2cee13477483d84f68f81fc1a6c70935b5232c504869b2",
+      "authorized": true
+    }
+  ],
+  "errors": [],
+  "frozen_metadata_files": 3918,
+  "frozen_body_read": false,
+  "old_physical_workspace_accessed": false
+}

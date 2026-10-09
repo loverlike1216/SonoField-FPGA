@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "classification": "OFFLINE_NOT_PHYSICAL",
+  "commands": [
+    {
+      "name": "preservation",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\check_prepcb_preservation.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "inherited_full",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\run_baseline.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\full\\inherited_full"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "supervisor_mailbox",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\prepcb_rtl_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\full\\supervisor"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "temperature_sparse_gui",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\prepcb_system_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\full\\system"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "actual_top",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\prepcb_top_gate.py",
+        "--maps",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\full\\system\\gui\\case_1\\icarus\\motion_maps.hex",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\full\\top"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "started_at": "2026-10-09T17:59:40.655946+00:00",
+  "source_root": "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5",
+  "python": "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe"
+}

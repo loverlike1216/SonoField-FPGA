@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 10 02:05:15 2026
+# Process ID         : 432
+# Current directory  : E:/Codex_project/AMD_Sonofield
+# Command line       : vivado.exe -mode batch -log v5/evidence/next_stage/20261010/param_help.log -nojournal -source v5/build/next_stage/param_help.tcl
+# Log file           : E:/Codex_project/AMD_Sonofield/v5/evidence/next_stage/20261010/param_help.log
+# Journal file       : 
+# Running On         : [REDACTED_WINDOWS_HOST]
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 29081 MB
+# Total Virtual      : 45855 MB
+# Available Virtual  : 4251 MB
+#-----------------------------------------------------------
+source v5/build/next_stage/param_help.tcl
+# list_param -help
+list_param
+
+Description: 
+Get all parameter names
+
+Syntax: 
+list_param  [-quiet] [-verbose]
+
+Returns: 
+list
+
+Usage: 
+  Name        Description
+  -----------------------
+  [-quiet]    Ignore command errors
+  [-verbose]  Suspend message limits during command execution
+
+Categories: 
+PropertyAndParameter
+
+Description:
+
+  Gets a list of user-definable configuration parameters. These parameters
+  configure a variety of settings and behaviors of the tool. For more
+  information on a specific parameter use the report_param command, which
+  returns a description of the parameter as well as its current value.
+
+Arguments:
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+Examples:
+
+  The following example returns a list of all user-definable parameters:
+
+    list_param 
+    
+
+See Also:
+
+   *  get_param
+   *  report_param
+   *  reset_param
+   *  set_param
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 10 02:05:20 2026...

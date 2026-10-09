@@ -1,0 +1,640 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "highest_version": "v5",
+  "branch": "codex/v5-ad7606c16-nextstage-20261010",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace": "E:\\Codex_project\\AMD_Sonofield",
+  "created_at": "2026-10-09T23:35:52.116897+00:00",
+  "base_pr3_commit": "b08ccf58c984ca7e6250d9e8489a24bc0789c4b0",
+  "last_verified_main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "implementation_commit": "6274330f98955fa0d4c4703a90d31bc1421104fb",
+  "final_tools_source_commit": "feb97ad5c95088affaf075cb034fe29d4b5aeda0",
+  "quality_gate": {
+    "offline_scope": "ACCEPT WITH LIMITATIONS",
+    "real_board_scope": "REVISE",
+    "whole_platform": "REVISE"
+  },
+  "formal_adc": "AD7606C-16_USER_APPROVED_ELECTRICAL_HOLD",
+  "decision": {
+    "status": "PASS",
+    "body_sha256": "231aa1770662448c8e9f9cd83aa1b309abcbc21790ffd26eb58821ffe33843ab",
+    "version": "v5",
+    "source": "User",
+    "implementation_commit": "6274330f98955fa0d4c4703a90d31bc1421104fb"
+  },
+  "tests": {
+    "original": 171,
+    "new": 32,
+    "final": 203,
+    "full_before_initial_discovery": 171,
+    "full_after_initial_discovery": 199,
+    "full_clean": 203,
+    "note": "Four contract tests were added after after-run discovery; final standalone current203 and clean203 executed all, no original tests changed",
+    "before_after_clean_frames_each": 3696,
+    "simulator_runs_each": 4,
+    "tools": "Icarus3 + XSim1",
+    "canonical_hashes_equal": true,
+    "canonical_hashes": [
+      [
+        "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+        "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+        "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917",
+        "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1"
+      ],
+      [
+        "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+        "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+        "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694",
+        "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef"
+      ]
+    ]
+  },
+  "prepcb": {
+    "sparse": {
+      "status": "PASS",
+      "fits": 10,
+      "seeds": 5,
+      "initial_guesses_per_fit": 5,
+      "holdout_paths_per_fit": 384,
+      "maximum_translation_error_mm": 0.0022751900215110463,
+      "maximum_rotation_error_deg": 0.0030915293626549434,
+      "maximum_holdout_error_ns": 10.236393363591972,
+      "rejection_cases": {
+        "missing_rx": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]",
+        "ambiguous_phase": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]",
+        "low_snr": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]"
+      },
+      "robust_rejected": 3,
+      "deterministic_repeat": true
+    },
+    "phase_maps": 160,
+    "channel_words": 20480,
+    "gui_runtime_inputs": 5,
+    "gui_frames": 375,
+    "gui_human_manual_test": false,
+    "gui_before_after_clean_hashes_equal": true,
+    "original_top_two_tool_frames": 37,
+    "original_c_axi_safety_calibration_equivalence": "PASS",
+    "calibration_35db_thresholds_unchanged": true
+  },
+  "adc": {
+    "status": "PASS",
+    "classification": "DIGITAL_ADAPTER_SIMULATED_ANALOG_UNVERIFIED",
+    "signed_frames": 64,
+    "continuous_800ksps_frames": 32,
+    "negative_readback_cases": 5,
+    "hashes": {
+      "icarus": "11a9e2c3f9e601b616a7053db0b79efd098730a0fd2a9c76446bd19ba12a9ecb",
+      "xsim": "11a9e2c3f9e601b616a7053db0b79efd098730a0fd2a9c76446bd19ba12a9ecb"
+    },
+    "commands": [
+      {
+        "simulator": "icarus",
+        "step": "compile",
+        "exit_code": 0
+      },
+      {
+        "simulator": "icarus",
+        "step": "run",
+        "exit_code": 0
+      },
+      {
+        "simulator": "xsim",
+        "step": "xvlog",
+        "exit_code": 0
+      },
+      {
+        "simulator": "xsim",
+        "step": "xelab",
+        "exit_code": 0
+      },
+      {
+        "simulator": "xsim",
+        "step": "run",
+        "exit_code": 0
+      }
+    ],
+    "crc": "DISABLED_AND_READBACK_CHECKED; unexpected-enable rejected; CRC-enabled frames unsupported"
+  },
+  "capture_chain": {
+    "status": "PASS",
+    "classification": "SIMULATED_C16_SCHEDULER_BRAM_SIGNED_READ_ACK_NOT_HARDWARE",
+    "runs": [
+      {
+        "simulator": "icarus",
+        "signed_frames": 2048,
+        "trace_sha256": "ff6001e389b357f4339f5d5133a2afb304329d0a2b050acae433bc856464d4b0"
+      },
+      {
+        "simulator": "xsim",
+        "signed_frames": 2048,
+        "trace_sha256": "ff6001e389b357f4339f5d5133a2afb304329d0a2b050acae433bc856464d4b0"
+      }
+    ]
+  },
+  "c16_integrated_top": {
+    "status": "PASS",
+    "classification": "C16_ACTUAL_TOP_SIMULATED_NOT_BOARD",
+    "maps_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+    "runs": [
+      {
+        "simulator": "icarus",
+        "frames": 37,
+        "ack_sha256": "84db46a42298ea8f89938a7a23dd7dd60a5eabd44b375d10471f583c84abac8f"
+      },
+      {
+        "simulator": "xsim",
+        "frames": 37,
+        "ack_sha256": "84db46a42298ea8f89938a7a23dd7dd60a5eabd44b375d10471f583c84abac8f"
+      }
+    ]
+  },
+  "software": {
+    "status": "PASS",
+    "classification": "HOST_FIXTURE_AND_ARM_OBJECT_ONLY",
+    "register_masks": 256,
+    "ping": {
+      "count": 1000,
+      "success": 1000,
+      "classification": "IN_PROCESS_COMPILED_C_NOT_UART_PS_AXI",
+      "min_us": 3.5,
+      "p50_us": 6.0,
+      "p95_us": 7.5,
+      "p99_us": 12.501,
+      "max_us": 99.3
+    },
+    "arm_object_sha256": "9c0f09221b1e4a1748875dce96b459f1ab97ddda5780971fca68e488118536ff",
+    "target_application": "BLOCKED_NO_QUALIFIED_XSA_BSP",
+    "commands": [
+      {
+        "name": "host_compile",
+        "command": [
+          "D:\\DevC++\\Dev-Cpp\\TDM-GCC-64\\bin\\gcc.exe",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\firmware\\ps_service",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\firmware\\ps_service\\adc7606c16.c",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\tests\\nextstage_driver_fixture.c",
+          "-o",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\nextstage_software\\software_run1\\driver.exe"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "host_execute",
+        "command": [
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\nextstage_software\\software_run1\\driver.exe"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "arm_compiler_version",
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\clang.exe",
+          "--version"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "arm_compile",
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\clang.exe",
+          "-target",
+          "armv7a-none-eabi",
+          "-mcpu=cortex-a9",
+          "-mfloat-abi=soft",
+          "-ffreestanding",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-O2",
+          "-c",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\firmware\\ps_service\\adc7606c16.c",
+          "-o",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\nextstage_software\\software_run1\\adc7606c16_arm.o"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "arm_readelf",
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\llvm-readelf.exe",
+          "-h",
+          "-s",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\nextstage_software\\software_run1\\adc7606c16_arm.o"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  "software_clean": {
+    "status": "PASS",
+    "classification": "HOST_FIXTURE_AND_ARM_OBJECT_ONLY",
+    "register_masks": 256,
+    "ping": {
+      "count": 1000,
+      "success": 1000,
+      "classification": "IN_PROCESS_COMPILED_C_NOT_UART_PS_AXI",
+      "min_us": 3.1,
+      "p50_us": 3.7,
+      "p95_us": 5.7,
+      "p99_us": 9.112999999999987,
+      "max_us": 141.4
+    },
+    "arm_object_sha256": "9c0f09221b1e4a1748875dce96b459f1ab97ddda5780971fca68e488118536ff",
+    "target_application": "BLOCKED_NO_QUALIFIED_XSA_BSP",
+    "commands": [
+      {
+        "name": "host_compile",
+        "command": [
+          "D:\\DevC++\\Dev-Cpp\\TDM-GCC-64\\bin\\gcc.exe",
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-I",
+          "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\firmware\\ps_service",
+          "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\firmware\\ps_service\\adc7606c16.c",
+          "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tests\\nextstage_driver_fixture.c",
+          "-o",
+          "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\nextstage_software\\software\\driver.exe"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "host_execute",
+        "command": [
+          "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\nextstage_software\\software\\driver.exe"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "arm_compiler_version",
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\clang.exe",
+          "--version"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "arm_compile",
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\clang.exe",
+          "-target",
+          "armv7a-none-eabi",
+          "-mcpu=cortex-a9",
+          "-mfloat-abi=soft",
+          "-ffreestanding",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-O2",
+          "-c",
+          "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\firmware\\ps_service\\adc7606c16.c",
+          "-o",
+          "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\nextstage_software\\software\\adc7606c16_arm.o"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "arm_readelf",
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\llvm-readelf.exe",
+          "-h",
+          "-s",
+          "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\nextstage_software\\software\\adc7606c16_arm.o"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  "native": {
+    "status": "PASS_INTERNAL_OOC_WITH_RELEASE_HOLDS",
+    "version": "Vivado2025.2",
+    "part": "xc7z020clg400-2_DOCUMENTED_CANDIDATE_NOT_PHYSICAL_GRADE_PROOF",
+    "wns_ns": 0.038,
+    "whs_ns": 0.068,
+    "tns_ns": 0,
+    "ths_ns": 0,
+    "luts": 7480,
+    "flip_flops": 20223,
+    "bram36": 4,
+    "missing_input_delays": 161,
+    "missing_output_delays": 148,
+    "drc_warnings": {
+      "REQP-1839": 346,
+      "ZPS7-1": 1
+    },
+    "full_drc_waived": false,
+    "cdc_scope": "Empty single-defined-clock report; unqualified IO excluded; not reset/board closure",
+    "explicit_current_sources": 23,
+    "axi_windows": 6,
+    "irq_inputs": 5,
+    "i2c_segments": 3,
+    "ddr_enabled": false,
+    "current_build": "Run3 routed then failed final unsupported -violations command; preserve exit1",
+    "clean_build": "Full corrected Tcl native run exit0; current and clean reopening exit0",
+    "report_body_equality": [
+      {
+        "current": "expanded_current2/timing_reopened.rpt",
+        "clean": "expanded_clean/timing_reopened.rpt",
+        "canonical_equal": true,
+        "current_sha256": "721b4f9b4a34fd97db6176f60c2fc9261fd6f7666a40d59ad48b1cf219f3933c",
+        "clean_sha256": "721b4f9b4a34fd97db6176f60c2fc9261fd6f7666a40d59ad48b1cf219f3933c"
+      },
+      {
+        "current": "expanded_current2/drc_reopened.rpt",
+        "clean": "expanded_clean/drc_reopened.rpt",
+        "canonical_equal": true,
+        "current_sha256": "675d72529ac320c75eec6764e0a7c191efa67afae63cd5e041a2d9efdfaa2e25",
+        "clean_sha256": "675d72529ac320c75eec6764e0a7c191efa67afae63cd5e041a2d9efdfaa2e25"
+      },
+      {
+        "current": "nextstage_platform_run3/pl_routed_utilization.rpt",
+        "clean": "nextstage_platform_clean/pl_routed_utilization.rpt",
+        "canonical_equal": true,
+        "current_sha256": "300befa2994f6a7cc86fcd240a21d9e0c01119508d70c4174c6f79537c5c6dd0",
+        "clean_sha256": "300befa2994f6a7cc86fcd240a21d9e0c01119508d70c4174c6f79537c5c6dd0"
+      }
+    ],
+    "board_timing": "HOLD",
+    "hardware_programmed": false
+  },
+  "reproducibility": {
+    "status": "PASS",
+    "independent_clone": true,
+    "no_hardlinks": true,
+    "fresh_locked_venv": true,
+    "same_os_and_eda": true,
+    "initial_full_commit": "6274330f98955fa0d4c4703a90d31bc1421104fb",
+    "final_supplement_commit": "feb97ad5c95088affaf075cb034fe29d4b5aeda0",
+    "runtime_functional_sources_unchanged_between_those_commits": true,
+    "supplements": "New full capture chain, stricter preservation, BOM formatting, reporting/audit/reproduction tools; final203 and checks",
+    "history_worktree_absent": true,
+    "canonical_equal_source_files": 202,
+    "raw_equal_source_files": 200,
+    "source_eol_only_differences": [
+      "v5/config/nextstage_source_list.txt",
+      "v5/scripts/build_nextstage_bom.mjs"
+    ],
+    "exact_s0_file_byte_check": "PASS_CURRENT_AND_CLEAN_AFTER_RECORDED_EOL_REMATERIALIZATION"
+  },
+  "hardware": {
+    "latest_observation": {
+      "timestamp": "2026-10-09T23:29:41.1601096Z",
+      "trigger": "Actual user JTAG reseated",
+      "devices": [
+        {
+          "name": "CP2102N USB to UART Bridge Controller",
+          "status": "Error",
+          "class": null,
+          "vid_pid": "VID_10C4&PID_EA60",
+          "problem": 28,
+          "driver": [
+            {
+              "KeyName": "DEVPKEY_Device_DriverProvider",
+              "Data": null
+            },
+            {
+              "KeyName": "DEVPKEY_Device_DriverVersion",
+              "Data": null
+            },
+            {
+              "KeyName": "DEVPKEY_Device_Service",
+              "Data": null
+            }
+          ]
+        },
+        {
+          "name": "USB Serial Converter",
+          "status": "OK",
+          "class": "USB",
+          "vid_pid": "VID_0403&PID_6014",
+          "problem": 0,
+          "driver": [
+            {
+              "KeyName": "DEVPKEY_Device_DriverProvider",
+              "Data": "FTDI"
+            },
+            {
+              "KeyName": "DEVPKEY_Device_DriverVersion",
+              "Data": "2.12.28.0"
+            },
+            {
+              "KeyName": "DEVPKEY_Device_Service",
+              "Data": "FTDIBUS"
+            }
+          ]
+        }
+      ],
+      "port_count": 0,
+      "processes": [
+        {
+          "Name": "vivado.exe",
+          "ProcessId": 55512,
+          "ExecutablePath": "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\unwrapped\\win64.o\\vivado.exe",
+          "CommandLine": "\"D:/Vivado/2025.2/2025.2/Vivado/bin/unwrapped/win64.o/vivado.exe\"   -gui_launcher_event rodinguilauncherevent55344"
+        }
+      ],
+      "listeners": [],
+      "hardware_written": false,
+      "serial_opened": false
+    },
+    "new_jtag_id": {
+      "status": "PASS_READONLY_IDENTIFICATION",
+      "classification": "HARDWARE_READONLY",
+      "timestamp": "2026-10-09T23:35:06.1490344Z",
+      "trigger": "Actual user reseated JTAG",
+      "tools": [
+        "Vivado2025.2 Hardware Manager batch",
+        "XSDB2025.2"
+      ],
+      "adapter": "Digilent JTAG-HS1 via FTDI VID0403/PID6014; serial private",
+      "target": "xc7z020",
+      "idcode": "0x23727093",
+      "dap_idcode": "0x4BA00477",
+      "cpu0_before_after": "Running",
+      "cpu1_before_after": "Running",
+      "ps_registers": {
+        "BOOT_MODE_0xF800025C": "0x00000005",
+        "DDRC_CTRL_0xF8006000": "0x00000081",
+        "DDRC_CTRL_REG1_0xF8006060": "0x0000003E"
+      },
+      "pl_status": {
+        "EOS": 1,
+        "DONE_INTERNAL": 1,
+        "DONE_PIN": 1,
+        "CRC_ERROR": 0,
+        "IDCODE_ERROR": 0,
+        "SECURITY_ERROR": 0,
+        "image_identity": "UNKNOWN; existing configured image is not proof of SonoField deployment"
+      },
+      "sysmon": {
+        "status": "INVALID_NOT_A_MEASUREMENT",
+        "reported_temperature_c": -273.1,
+        "reported_rails_v": 0.0,
+        "interpretation": "Unusable zero/raw sysmon values; no supply or temperature qualification; no XADC configuration written"
+      },
+      "uart": {
+        "device": "CP2102N VID10C4/PIDEA60",
+        "problem_code": 28,
+        "com_ports": 0,
+        "serial_opened": false
+      },
+      "actions": [
+        "Dedicated localhost3122 server with GDB ports disabled; no existing server before launch",
+        "Enumerate targets and read only three documented AP0 status/config registers",
+        "Hardware Manager property refresh with update_hw_probes false",
+        "Re-read same targets/registers after Hardware Manager; both CPUs remained Running",
+        "Disconnect clients and stop only owned dedicated3122 hw_server; original GUI still alive"
+      ],
+      "cpu_halted": false,
+      "reset": false,
+      "initialized": false,
+      "hardware_programmed": false,
+      "memory_written": false,
+      "ddr_ram_accessed": false,
+      "driver_modified": false,
+      "unknown_gpio_accessed": false,
+      "scope_limits": [
+        "No package/speed-grade/Rev3/VCCO/DDR-topology qualification",
+        "Existing DONE/EOS do not identify running image or establish SonoField deployment",
+        "No real UART PS AXI PL control-chain, ADC/sensor/acoustic test or physical safety closure",
+        "A2 write gate remains STOP"
+      ],
+      "exits": {
+        "xsdb_before": 0,
+        "vivado_readonly": 0,
+        "xsdb_after": 0
+      },
+      "raw_public_receipts": [
+        {
+          "path": "jtag_reseated/xsdb.log",
+          "raw_sha256": "4f4557ddfd578170152fb750498d9114b4c4652b95cb630aad43af3c1bb94a75",
+          "public_sha256": "7cd4e69d5c414f464b22e41df56e0506e56543da3b5670e71ea8f856e607a376",
+          "raw_encoding": "utf-8",
+          "public_encoding": "utf-8",
+          "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+        },
+        {
+          "path": "jtag_reseated/xsdb_after_vivado.log",
+          "raw_sha256": "4f4557ddfd578170152fb750498d9114b4c4652b95cb630aad43af3c1bb94a75",
+          "public_sha256": "7cd4e69d5c414f464b22e41df56e0506e56543da3b5670e71ea8f856e607a376",
+          "raw_encoding": "utf-8",
+          "public_encoding": "utf-8",
+          "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+        },
+        {
+          "path": "jtag_reseated/vivado_readonly.log",
+          "raw_sha256": "6d1066c1b3fdf6cd1ba580ba76bb6e69356e48eb081a838e429128a3bebebe8c",
+          "public_sha256": "15a7f6f0b3239169b648f91d3ee60ad967368d3157acfbae011736a13af9d368",
+          "raw_encoding": "utf-8",
+          "public_encoding": "utf-8",
+          "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+        },
+        {
+          "path": "jtag_reseated/hw_server.stdout.log",
+          "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "raw_encoding": "utf-8",
+          "public_encoding": "utf-8",
+          "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+        },
+        {
+          "path": "jtag_reseated/hw_server.stderr.log",
+          "raw_sha256": "3c33cd9e7f4e01692decf4b7844853853f041d6b6e07318bb7ef86eec9fbf22f",
+          "public_sha256": "d2268dc5713937b3f461510447681b53c0908357f50eb07b2a3185590b1aa37f",
+          "raw_encoding": "gb18030",
+          "public_encoding": "utf-8",
+          "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+        },
+        {
+          "path": "jtag_reseated/server_launch.json",
+          "raw_sha256": "062e2a6bdacc54d9c8cf4233582a9b699a75e29e917306fb32a5d02d6a8ea8fb",
+          "public_sha256": "062e2a6bdacc54d9c8cf4233582a9b699a75e29e917306fb32a5d02d6a8ea8fb",
+          "raw_encoding": "utf-8",
+          "public_encoding": "utf-8",
+          "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+        },
+        {
+          "path": "jtag_reseated/server_launch_failed_path.json",
+          "raw_sha256": "2498381f4151de187c63b9517ba10871ccfabe43357821bedd29951d057a59ce",
+          "public_sha256": "2498381f4151de187c63b9517ba10871ccfabe43357821bedd29951d057a59ce",
+          "raw_encoding": "utf-8",
+          "public_encoding": "utf-8",
+          "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+        }
+      ]
+    },
+    "real_uart_ps_axi_pl_100_1000": "NOT_RUN_A2_STOP",
+    "actual_adc_tmp117_acoustics_cutoff": "NOT_RUN",
+    "historical_20261009_readonly_ids": "PROVENANCE; newly repeated read is independently recorded20261010",
+    "board_programmed": false,
+    "driver_modified": false
+  },
+  "pcb": {
+    "status": "PROPOSED_DIGITAL_CONTRACT_CHECKED",
+    "bom_line_types": 80,
+    "bom_sheets": 7,
+    "installed_candidate_units": {
+      "upper": 488,
+      "lower": 488,
+      "central": 83,
+      "external": 13
+    },
+    "prices": "ALL_UNKNOWN",
+    "native_easyeda": "NO_CONNECTED_SERVICE",
+    "native_schematic": "NOT_CREATED",
+    "erc": "NOT_RUN",
+    "manufacturing": "HOLD",
+    "central_power": "AX7020_SINGLE_PROTECTED_SOURCE_PER_RAIL_CAPACITY_BLOCKED",
+    "array_power": "TWO_INDEPENDENT_EXTERNAL12V_PROPOSED_PROTECTION_UNQUALIFIED",
+    "analog_afe_per_tx_and_continuous_drive": "UNMEASURED"
+  },
+  "unresolved": {
+    "prepcb_ids": [
+      "PC-B01",
+      "PC-B02",
+      "PC-B03",
+      "PC-B04",
+      "PC-B05",
+      "PC-B06",
+      "PC-B07",
+      "PC-B08",
+      "PC-B09",
+      "PC-B10",
+      "PC-B11",
+      "PC-B12",
+      "PC-B13"
+    ],
+    "new_problem": "P-20261010-001",
+    "external_chat": "BLOCKED",
+    "independent_review": "PENDING"
+  },
+  "history": {
+    "git_metadata_files": 3918,
+    "blob_mode_path_identical": true,
+    "body_read": false,
+    "original_physical_workspace_accessed": false
+  },
+  "publication": {
+    "status_at_evidence_seal": "PENDING_DRAFT_PUBLICATION",
+    "receipt": "shared/next_stage/PUBLICATION_RECEIPT.json",
+    "main_merge": "NOT_AUTHORIZED"
+  },
+  "limits": [
+    "Offline synthetic/host-fixture evidence only, no board/analog/acoustic/manufacturing closure",
+    "Two environments share Windows and EDA installation; not another OS/tool release",
+    "Positive OOC slack does not close346BRAM warnings,161input/148output delays or externalCDC",
+    "ARM object is not a linked BSP application",
+    "Snapshot reference is not a deployed hardware DMA service",
+    "User-drawn trajectories command/model open-loop fields, not measured particle tracking",
+    "Final user/independent review and explicit main approval pending"
+  ]
+}

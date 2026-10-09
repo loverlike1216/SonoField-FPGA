@@ -1,0 +1,41 @@
+{
+  "driver_modified": false,
+  "ports": [],
+  "jtag_status": "BLOCKED_NO_EXISTING_HW_SERVER_OR_PRESENT_JTAG_ADAPTER",
+  "processes": [
+    {
+      "Name": "vivado.exe",
+      "ProcessId": 55512,
+      "ExecutablePath": "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\unwrapped\\win64.o\\vivado.exe"
+    }
+  ],
+  "timestamp": "2026-10-09T17:24:19.2853737Z",
+  "serial_opened": false,
+  "devices": [
+    {
+      "problem": 28,
+      "driver": [
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": null
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": null
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Service",
+          "Data": null
+        }
+      ],
+      "status": "Error",
+      "class": null,
+      "vid_pid": "VID_10C4&PID_EA60",
+      "name": "CP2102N USB to UART Bridge Controller"
+    }
+  ],
+  "listeners": [],
+  "uart_status": "BLOCKED_CP2102N_CODE28_NO_DRIVER_NO_COM",
+  "classification": "READ_ONLY_OS_ENUMERATION",
+  "hardware_written": false
+}

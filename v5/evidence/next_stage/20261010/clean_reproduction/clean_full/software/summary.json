@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "classification": "HOST_FIXTURE_AND_ARM_OBJECT_ONLY",
+  "register_masks": 256,
+  "ping": {
+    "count": 1000,
+    "success": 1000,
+    "classification": "IN_PROCESS_COMPILED_C_NOT_UART_PS_AXI",
+    "min_us": 3.1,
+    "p50_us": 3.7,
+    "p95_us": 5.7,
+    "p99_us": 9.112999999999987,
+    "max_us": 141.4
+  },
+  "arm_object_sha256": "9c0f09221b1e4a1748875dce96b459f1ab97ddda5780971fca68e488118536ff",
+  "target_application": "BLOCKED_NO_QUALIFIED_XSA_BSP",
+  "commands": [
+    {
+      "name": "host_compile",
+      "command": [
+        "D:\\DevC++\\Dev-Cpp\\TDM-GCC-64\\bin\\gcc.exe",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\firmware\\ps_service",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\firmware\\ps_service\\adc7606c16.c",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tests\\nextstage_driver_fixture.c",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\nextstage_software\\software\\driver.exe"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "host_execute",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\nextstage_software\\software\\driver.exe"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "arm_compiler_version",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\clang.exe",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "arm_compile",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\clang.exe",
+        "-target",
+        "armv7a-none-eabi",
+        "-mcpu=cortex-a9",
+        "-mfloat-abi=soft",
+        "-ffreestanding",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-O2",
+        "-c",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\firmware\\ps_service\\adc7606c16.c",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\nextstage_software\\software\\adc7606c16_arm.o"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "arm_readelf",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\win64\\tools\\clang-16\\bin\\llvm-readelf.exe",
+        "-h",
+        "-s",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\nextstage_software\\software\\adc7606c16_arm.o"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

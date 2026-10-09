@@ -1,0 +1,126 @@
+{
+  "status": "PASS_READONLY_IDENTIFICATION",
+  "classification": "HARDWARE_READONLY",
+  "timestamp": "2026-10-09T23:35:06.1490344Z",
+  "trigger": "Actual user reseated JTAG",
+  "tools": [
+    "Vivado2025.2 Hardware Manager batch",
+    "XSDB2025.2"
+  ],
+  "adapter": "Digilent JTAG-HS1 via FTDI VID0403/PID6014; serial private",
+  "target": "xc7z020",
+  "idcode": "0x23727093",
+  "dap_idcode": "0x4BA00477",
+  "cpu0_before_after": "Running",
+  "cpu1_before_after": "Running",
+  "ps_registers": {
+    "BOOT_MODE_0xF800025C": "0x00000005",
+    "DDRC_CTRL_0xF8006000": "0x00000081",
+    "DDRC_CTRL_REG1_0xF8006060": "0x0000003E"
+  },
+  "pl_status": {
+    "EOS": 1,
+    "DONE_INTERNAL": 1,
+    "DONE_PIN": 1,
+    "CRC_ERROR": 0,
+    "IDCODE_ERROR": 0,
+    "SECURITY_ERROR": 0,
+    "image_identity": "UNKNOWN; existing configured image is not proof of SonoField deployment"
+  },
+  "sysmon": {
+    "status": "INVALID_NOT_A_MEASUREMENT",
+    "reported_temperature_c": -273.1,
+    "reported_rails_v": 0.0,
+    "interpretation": "Unusable zero/raw sysmon values; no supply or temperature qualification; no XADC configuration written"
+  },
+  "uart": {
+    "device": "CP2102N VID10C4/PIDEA60",
+    "problem_code": 28,
+    "com_ports": 0,
+    "serial_opened": false
+  },
+  "actions": [
+    "Dedicated localhost3122 server with GDB ports disabled; no existing server before launch",
+    "Enumerate targets and read only three documented AP0 status/config registers",
+    "Hardware Manager property refresh with update_hw_probes false",
+    "Re-read same targets/registers after Hardware Manager; both CPUs remained Running",
+    "Disconnect clients and stop only owned dedicated3122 hw_server; original GUI still alive"
+  ],
+  "cpu_halted": false,
+  "reset": false,
+  "initialized": false,
+  "hardware_programmed": false,
+  "memory_written": false,
+  "ddr_ram_accessed": false,
+  "driver_modified": false,
+  "unknown_gpio_accessed": false,
+  "scope_limits": [
+    "No package/speed-grade/Rev3/VCCO/DDR-topology qualification",
+    "Existing DONE/EOS do not identify running image or establish SonoField deployment",
+    "No real UART PS AXI PL control-chain, ADC/sensor/acoustic test or physical safety closure",
+    "A2 write gate remains STOP"
+  ],
+  "exits": {
+    "xsdb_before": 0,
+    "vivado_readonly": 0,
+    "xsdb_after": 0
+  },
+  "raw_public_receipts": [
+    {
+      "path": "jtag_reseated/xsdb.log",
+      "raw_sha256": "4f4557ddfd578170152fb750498d9114b4c4652b95cb630aad43af3c1bb94a75",
+      "public_sha256": "7cd4e69d5c414f464b22e41df56e0506e56543da3b5670e71ea8f856e607a376",
+      "raw_encoding": "utf-8",
+      "public_encoding": "utf-8",
+      "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+    },
+    {
+      "path": "jtag_reseated/xsdb_after_vivado.log",
+      "raw_sha256": "4f4557ddfd578170152fb750498d9114b4c4652b95cb630aad43af3c1bb94a75",
+      "public_sha256": "7cd4e69d5c414f464b22e41df56e0506e56543da3b5670e71ea8f856e607a376",
+      "raw_encoding": "utf-8",
+      "public_encoding": "utf-8",
+      "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+    },
+    {
+      "path": "jtag_reseated/vivado_readonly.log",
+      "raw_sha256": "6d1066c1b3fdf6cd1ba580ba76bb6e69356e48eb081a838e429128a3bebebe8c",
+      "public_sha256": "15a7f6f0b3239169b648f91d3ee60ad967368d3157acfbae011736a13af9d368",
+      "raw_encoding": "utf-8",
+      "public_encoding": "utf-8",
+      "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+    },
+    {
+      "path": "jtag_reseated/hw_server.stdout.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_encoding": "utf-8",
+      "public_encoding": "utf-8",
+      "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+    },
+    {
+      "path": "jtag_reseated/hw_server.stderr.log",
+      "raw_sha256": "3c33cd9e7f4e01692decf4b7844853853f041d6b6e07318bb7ef86eec9fbf22f",
+      "public_sha256": "d2268dc5713937b3f461510447681b53c0908357f50eb07b2a3185590b1aa37f",
+      "raw_encoding": "gb18030",
+      "public_encoding": "utf-8",
+      "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+    },
+    {
+      "path": "jtag_reseated/server_launch.json",
+      "raw_sha256": "062e2a6bdacc54d9c8cf4233582a9b699a75e29e917306fb32a5d02d6a8ea8fb",
+      "public_sha256": "062e2a6bdacc54d9c8cf4233582a9b699a75e29e917306fb32a5d02d6a8ea8fb",
+      "raw_encoding": "utf-8",
+      "public_encoding": "utf-8",
+      "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+    },
+    {
+      "path": "jtag_reseated/server_launch_failed_path.json",
+      "raw_sha256": "2498381f4151de187c63b9517ba10871ccfabe43357821bedd29951d057a59ce",
+      "public_sha256": "2498381f4151de187c63b9517ba10871ccfabe43357821bedd29951d057a59ce",
+      "raw_encoding": "utf-8",
+      "public_encoding": "utf-8",
+      "policy": "Cable serial/security-unique fields/userhome identity only; original retained ignoredlocal_raw"
+    }
+  ]
+}

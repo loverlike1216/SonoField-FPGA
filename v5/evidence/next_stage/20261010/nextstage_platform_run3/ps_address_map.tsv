@@ -1,0 +1,7 @@
+slave	offset	range	master_segment
+pl_core/S_AXI/reg0	0x40000000	0x00010000	/ps7/Data/SEG_pl_core_reg0
+task_bram/S_AXI/Mem0	0x42000000	0x00010000	/ps7/Data/SEG_task_bram_Mem0
+service_io/S_AXI/Reg	0x41200000	0x00010000	/ps7/Data/SEG_service_io_Reg
+i2c_center/S_AXI/Reg	0x41600000	0x00010000	/ps7/Data/SEG_i2c_center_Reg
+i2c_upper/S_AXI/Reg	0x41610000	0x00010000	/ps7/Data/SEG_i2c_upper_Reg
+i2c_lower/S_AXI/Reg	0x41620000	0x00010000	/ps7/Data/SEG_i2c_lower_Reg
