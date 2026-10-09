@@ -1,151 +1,91 @@
 {
-  "checkpoint_id": "CP-20261009-004",
+  "checkpoint_id": "CP-20261009-006",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
-  "workspace_path": null,
-  "candidate_workspace_path": "E:\\Codex_project\\AMD_Sonofield",
-  "branch": "chore/v5-ax7020-workspace-isolation",
-  "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
-  "head_commit": "f014214fb8db554fb3df9ac971ac759d683447a5",
-  "commit_scope": "Observed published evidence HEAD and verified remote tree before this publication checkpoint/receipt commit; containing commit is resolved via Git file history",
+  "workspace_path": "E:\\Codex_project\\AMD_Sonofield",
+  "branch": "feat/v5-prepcb-full-system",
+  "base_commit": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+  "head_commit": null,
+  "source_commit": "a43728870a06949e67b0604f4716f07419b3306c",
+  "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "AX7020_V5_MIGRATION_CANDIDATE_USER_REVIEW",
-  "created_at": "2026-10-09T13:53:22.176049+08:00",
+  "current_stage": "V5_PREPCB_S7_CANDIDATE_USER_REVIEW_PENDING",
+  "created_at": "2026-10-09T10:38:08.858692+00:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Actual Draft PR publication, exact remote tree verification and independent push/PR Linux CI success",
-  "source_of_truth": "Current repository, real migration tool outputs and fixed Git-tree manifests",
-  "status": "VALID",
-  "validation_stage": "ALL_CANDIDATE_GATES_AND_ONLINE_STRUCTURAL_CI_PASS_USER_MERGE_REVIEW_PENDING",
-  "architecture_ref": "v5/docs/architecture/SELF_CALIBRATION.md",
+  "checkpoint_reason": "S0-S7 offline candidate gates complete; independent clone and corrected PS address mapping; final review handoff",
+  "source_of_truth": "repository",
+  "status": "VALID_CANDIDATE_WITH_LIMITATIONS",
+  "architecture_ref": "v5/docs/pre_pcb/CENTRAL_ARRAY_HARDWARE_CONTRACT.md",
   "completed": [
-    {
-      "item": "All3907archiveoriginalpaths/modes/blobs/rawSHA256 plus2frozenmetadata",
-      "status": "TESTED"
-    },
-    {
-      "item": "Oldphysical/untracked/ignored/Gitmetadata preservation fullrehash",
-      "status": "TESTED"
-    },
-    {
-      "item": "115Python and3696frames×4 in3fresh environments;exactcanonicalhashes/C+AXI/safety/calibration/equivalence",
-      "status": "SIMULATED"
-    },
-    {
-      "item": "15offlinecandidate and256ADCframes intwosimulators in3environments",
-      "status": "SIMULATED"
-    },
-    {
-      "item": "Vivado2025.2 documented-deviceOOC/reopen18source in3environments",
-      "status": "SYNTHESIZED",
-      "scope": "OOC_PRE_ROUTE_ONLY"
-    },
-    {
-      "item": "No new physicalhardwareverification ordeviceoperation",
-      "status": "NOT_VERIFIED"
-    }
+    "IMPLEMENTED optional C protocol extension, temperature/sparse/runtimeGUI and failclosed supervisor/mailbox wrapper",
+    "TESTED 171 including unchanged original115; originalfullbaseline in two clones",
+    "SIMULATED supervisor and actualnewtop + GUI C-generated maps in Icarus and XSim",
+    "SYNTHESIZED realVivado2025.2 PS BD/logicalXSA and132MHz PL OOC routed; externaltiming held",
+    "ALTERNATIVE_VALIDATION numericaltemperature/sparse/trap; no physicalhardwareverified"
   ],
   "next_actions": [
-    "User reviews Draft PR#1, full evidence, rollback and permanent workspace path",
-    "After explicit main approval reconcile current remote and rerun affected gates if main changed",
-    "Ordinary non-forced merge, independent fresh remote-main clone/full cold start/freeze verification",
-    "Promote only the user-approved workspace after remote-main verification; never pull/alter original sandbox"
+    "User/independent reviewer inspect stacked development Draft PR and evidence; close PC-B01..PC-B13 before any hardware/manufacturing operation; no automatic main merge"
   ],
   "active_decisions": [
-    "ADR-035 original v5 authorization",
-    "ADR-036 historical read-only identification scope",
-    "ADR-037 current user migration authority; main merge pending"
+    "ADR-038 actualuser existing-v5 prePCB authorization; formalADC/core/version unchanged"
   ],
   "blockers": [
-    "USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE",
-    "POST_MERGE_REMOTE_MAIN_COLD_START_PENDING",
-    "V5-B01",
-    "V5-B03",
-    "V5-B04",
-    "V5-B05",
-    "CHAT_MEMORY_ACCESS_BLOCKED",
-    "V5-BOM_REVIEW"
+    "PC-B01",
+    "PC-B02",
+    "PC-B03",
+    "PC-B04",
+    "PC-B05",
+    "PC-B06",
+    "PC-B07",
+    "PC-B08",
+    "PC-B09",
+    "PC-B10",
+    "PC-B11",
+    "PC-B12",
+    "PC-B13"
   ],
   "critical_issues": [],
   "latest_validation": [
-    {
-      "status": "PASS",
-      "evidence": "v5/evidence/migration/20261009/base/summary.json",
-      "source_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
-      "date": "2026-10-09"
-    },
-    {
-      "status": "PASS",
-      "evidence": "v5/evidence/migration/20261009/migrated_retry1/summary.json",
-      "source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
-      "date": "2026-10-09"
-    },
-    {
-      "status": "PASS",
-      "evidence": "v5/evidence/migration/20261009/clean_clone/summary.json",
-      "source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
-      "date": "2026-10-09"
-    },
-    {
-      "status": "PASS",
-      "scope": "REMOTE_COMMITTED_TREE_BLOB_MODE_PATHS",
-      "evidence": "v5/evidence/migration/20261009/remote_tree_verification.json",
-      "commit": "f014214fb8db554fb3df9ac971ac759d683447a5"
-    },
-    {
-      "status": "PASS",
-      "scope": "INDEPENDENT_UBUNTU_STRUCTURAL_CHECKS_ONLY",
-      "evidence": "v5/evidence/migration/20261009/ci_observed.json",
-      "commit": "f014214fb8db554fb3df9ac971ac759d683447a5"
-    }
+    "v5/evidence/pre_pcb_20261009/FINAL_VERIFICATION.json",
+    "v5/evidence/pre_pcb_20261009/CLEAN_SOURCE_COMPARISON.json"
   ],
   "known_limitations": [
-    "Candidate only; main merge and post-merge fresh remote-main clone await explicit user approval",
-    "Permanent workspace_path is not promoted; candidate execution path is E:\\Codex_project\\AMD_Sonofield",
-    "Second Git clone and independently installed locked venv share the same host installed EDA/compiler versions; not a second machine or OS",
-    "No matched ARM BSP/compiler/target download, PS-PL/DDR/UART/ADC/AFE/driver/power/acoustic hardware verification",
-    "OOC pre-route only;2324inputs/256outputs lack board delay constraints;HD.CLK_SRC unset; do not infer board timing or complete CDC coverage",
-    "Native v5 schematic NOT_CREATED,ERC_NOT_RUN,MANUFACTURING_HOLD; C16 ADC not approved",
-    "BOM generator was not cold-started; original and working workbook bytes preserved and15read-only checks passed in all3environments",
-    "External ChatGPT full history reader BLOCKED and independent human/AI final review pending"
+    "Vitis ARM target blocked",
+    "Rev3/power/externalSTA/CDC/BRAMasync/cutoff unqualified",
+    "128TXresponses UNMEASURED; no actualADC/temp/particle/mass evidence",
+    "Independenthumanreview and mainapproval pending",
+    "Same-machine shared EDA independentclone only"
   ],
   "do_not_change": [
-    "Original physical sandbox including private/untracked/ignored/Git metadata",
-    "history_old frozen BASE bytes/modes/blob identities",
-    "Core RTL/firmware/software/tests/goldens/originalBOM/protocol/registers/safety/geometry/acceptance",
-    "No main merge/new version/board operation without actual authorization"
+    "Frozenhistory/oldphysicalsandbox",
+    "OriginalRTL/tests/goldens/thresholds",
+    "AD7606BBSTZ-RL/NU40C10T",
+    "No forcedpush/mainmerge/deviceoperation/manufacturing"
   ],
   "invariants": [
-    "v5 only;128TX/8RX/8bit/32×4/commonphase/requested-calibration/atomicmap/50Hz",
-    "NU40C10T/unknownRX/formalAD7606B;C16candidateunapproved",
-    "Independent upper/lower externalpower;AXsignalsonly",
-    "OOC not board timing/hardware"
+    "v5 only",
+    "128TX/8RX",
+    "32lanes×4 commonclock",
+    "separate8bit requested/calibration completeatomicmaps",
+    "50Hz local motion; PCtaskupload",
+    "3mandatoryTMP117",
+    "centralonlyprotectedAX7020headers;twoindependentarraypowerdomains"
   ],
   "open_ai_problems": [
     "P-20261008-001",
     "P-20261009-001"
   ],
-  "repository_delta": [
-    "Draft PR#1 published, main remains original BASE",
-    "Exact remote blob/mode/path verification PASS; push and PR Ubuntu integrity runs both success",
-    "Functional v5 inputs still exactly match tested source0ab574f; original/archived/protected source untouched"
-  ],
   "evidence_refs": [
-    "shared/migration/OLD_TRACKED_MANIFEST.json",
-    "shared/migration/ARCHIVE_COVERAGE.json",
-    "shared/migration/QUALITY_GATE.json",
-    "shared/migration/PORTABILITY_AND_REGRESSION.json",
-    "v5/evidence/migration/20261009/digital_behavior_comparison.json",
-    "v5/evidence/migration/20261009/ooc_comparison.json",
-    "v5/evidence/migration/20261009/old_sandbox_preservation.json",
-    "v5/evidence/migration/20261009/active_reuse_hashes.json",
-    "shared/migration/PUBLICATION_RECEIPT.json",
-    "v5/evidence/migration/20261009/remote_tree_verification.json",
-    "v5/evidence/migration/20261009/ci_observed.json"
+    "v5/evidence/pre_pcb_20261009/FINAL_VERIFICATION.json",
+    "v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md"
   ],
-  "resume_from": "User reviews concrete Draft PR, evidence, rollback and permanent path; after explicit approval reconcile remote, ordinary merge and independently verify remote main before promotion",
-  "validated_source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
-  "publication_receipt": "shared/migration/PUBLICATION_RECEIPT.json",
-  "pr_url": "https://github.com/loverlike1216/SonoField-FPGA/pull/1"
+  "state_conflicts": [
+    {
+      "source": "CP005 PSBD-valid statement and earlier exit0 logs",
+      "current": "Automatic map was incomplete; six explicit64KiB mappings and5IRQ verified in final independentclone; earlierPS addressspaces invalidated"
+    }
+  ],
+  "resume_from": "README/AGENTS, current state/version/checkpoint, full report/final summaries, openproblems and remote receipt. Do not read frozenhistory."
 }

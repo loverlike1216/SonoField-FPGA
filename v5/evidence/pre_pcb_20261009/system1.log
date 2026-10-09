@@ -1,0 +1,22 @@
+SPARSE 7020_25_25_25 PASS
+SPARSE 7020_25_31_19 PASS
+SPARSE 7021_25_25_25 PASS
+SPARSE 7021_25_31_19 PASS
+SPARSE 7022_25_25_25 PASS
+SPARSE 7022_25_31_19 PASS
+SPARSE 7023_25_25_25 PASS
+SPARSE 7023_25_31_19 PASS
+SPARSE 7024_25_25_25 PASS
+SPARSE 7024_25_31_19 PASS
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\prepcb_system_gate.py", line 187, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\prepcb_system_gate.py", line 181, in main
+    summary['phase']=phase_gate(library,out/'phase',fit)
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\prepcb_system_gate.py", line 88, in phase_gate
+    lib=ctypes.CDLL(str(library));f=lib.sf_pc_map_geometry
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\ctypes\__init__.py", line 387, in __getattr__
+    func = self.__getitem__(name)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\ctypes\__init__.py", line 392, in __getitem__
+    func = self._FuncPtr((name_or_ordinal, self))
+AttributeError: function 'sf_pc_map_geometry' not found

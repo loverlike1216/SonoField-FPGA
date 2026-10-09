@@ -1,0 +1,19 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Oct  9 15:24:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/system/xsim_script.tcl
+# xsim {system} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+WARNING: File adc_vectors.hex referenced on E:/Codex_project/AMD_Sonofield/v5/rtl/motion/prepcb_frame_mailbox.sv at line 12 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+PASS PREPCB SYSTEM C maps BRAM supervisor AXI atomic ACK fault latch manual rearm frames=37
+$finish called at time : 2525686880 ps : File "E:/Codex_project/AMD_Sonofield/v5/tb/tb_prepcb_system.sv" Line 66
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct  9 15:24:57 2026...
+The system cannot find the path specified.

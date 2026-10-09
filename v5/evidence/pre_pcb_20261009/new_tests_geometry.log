@@ -1,0 +1,18 @@
+test_prepcb (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_prepcb (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_prepcb
+Traceback (most recent call last):
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_prepcb.py", line 5, in <module>
+    from software.prepcb.temperature import Reading, Environment, Sensors, tmp117_decode, sht45_decode, sht_crc, compensate, transition
+ModuleNotFoundError: No module named 'software'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

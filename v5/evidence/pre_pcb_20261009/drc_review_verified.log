@@ -1,0 +1,88 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Oct  9 18:29:59 2026
+# Process ID         : 16780
+# Current directory  : E:/Codex_project/AMD_Sonofield
+# Command line       : vivado.exe -mode batch -source v5/scripts/review_prepcb_drc.tcl -log v5/evidence/pre_pcb_20261009/drc_review_verified.log -journal v5/build/drc_review_verified.jou -tclargs .portability/prepcb_clean/v5/build/platform_verified/prepcb_pl_routed.dcp .portability/prepcb_clean/v5/evidence/pre_pcb_clean/drc_review_verified
+# Log file           : E:/Codex_project/AMD_Sonofield/v5/evidence/pre_pcb_20261009/drc_review_verified.log
+# Journal file       : E:/Codex_project/AMD_Sonofield\v5/build/drc_review_verified.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 23622 MB
+# Total Virtual      : 40396 MB
+# Available Virtual  : 17950 MB
+#-----------------------------------------------------------
+source v5/scripts/review_prepcb_drc.tcl
+# if {![string match "2025.2*" [version -short]]} {error "Vivado2025.2 required"}
+# if {[llength $argv] != 2} {error "Expected routed DCP and fresh review directory"}
+# set dcp [file normalize [lindex $argv 0]]
+# set out [file normalize [lindex $argv 1]]
+# if {[file exists $out]} {error "Fresh review directory required"}
+# file mkdir $out
+# open_checkpoint $dcp
+Command: open_checkpoint E:/Codex_project/AMD_Sonofield/.portability/prepcb_clean/v5/build/platform_verified/prepcb_pl_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 327.395 ; gain = 4.715
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.123 . Memory (MB): peak = 806.016 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1151 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 932.027 ; gain = 2.508
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1549.332 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1549.332 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1549.332 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.392 . Memory (MB): peak = 1557.633 ; gain = 8.301
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1557.633 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 1571.445 ; gain = 13.812
+Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.597 . Memory (MB): peak = 1571.445 ; gain = 22.113
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.632 . Memory (MB): peak = 1571.445 ; gain = 25.074
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1584.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1593.043 ; gain = 1280.328
+# set check [get_drc_checks REQP-1839]
+# set f [open [file join $out bram_rule_properties.txt] w]
+# puts $f [report_property -return_string $check]
+# close $f
+# help report_drc
+# report_drc -file [file join $out pl_routed_drc_reopened.rpt]
+Command: report_drc -file E:/Codex_project/AMD_Sonofield/.portability/prepcb_clean/v5/evidence/pre_pcb_clean/drc_review_verified/pl_routed_drc_reopened.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2025.2/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file E:/Codex_project/AMD_Sonofield/.portability/prepcb_clean/v5/evidence/pre_pcb_clean/drc_review_verified/pl_routed_drc_reopened.rpt.
+report_drc completed successfully
+# set f [open [file join $out actual_violation_properties.txt] w]
+# foreach violation [get_drc_violations] {
+#  puts $f [report_property -return_string $violation]
+# }
+# close $f
+# puts "PREPCB_DRC_REVIEW_COMPLETE_BOARD_RELEASE_STILL_HELD"
+PREPCB_DRC_REVIEW_COMPLETE_BOARD_RELEASE_STILL_HELD
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  9 18:30:22 2026...

@@ -2,7 +2,7 @@ name: v5 workspace integrity
 on:
   pull_request:
   push:
-    branches: [main, chore/v5-ax7020-workspace-isolation]
+    branches: [main, chore/v5-ax7020-workspace-isolation, 'feat/v5-*']
 permissions:
   contents: read
 jobs:
@@ -19,6 +19,7 @@ jobs:
         run: |
           python v5/scripts/check_structure.py
           python v5/scripts/check_migration.py
+          python v5/scripts/check_prepcb_preservation.py
       - name: Frozen Git metadata and current scope (no historical source read)
         env:
           FREEZE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}

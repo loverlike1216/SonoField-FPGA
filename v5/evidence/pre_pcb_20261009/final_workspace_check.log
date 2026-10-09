@@ -1,0 +1,63 @@
+{
+  "status": "FAIL",
+  "scope": "CURRENT_WORKSPACE_INTEGRITY_NOT_BOARD_VERIFICATION",
+  "errors": [
+    "Broken active doc link: {'source': 'v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md', 'target': 'REPOSITORY_RECONCILIATION.md'}"
+  ],
+  "checks": {
+    "archive": {
+      "original_files": 3907,
+      "metadata_files": 2,
+      "actual_files": 3909,
+      "raw_blob_bytes": 97559165,
+      "content_read": false,
+      "mismatches": 0
+    },
+    "freeze_base": {
+      "commit": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+      "existing_tree_compared": true
+    },
+    "identity": {
+      "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+      "active_version": "v5",
+      "highest_version": "v5",
+      "root_extras": []
+    },
+    "source_isolation": {
+      "root": "v5",
+      "scanned_executables": 161,
+      "ooc_explicit_sources": 18,
+      "historical_sources_loaded": false,
+      "source_list": [
+        "rtl/sono_core.sv",
+        "rtl/sono_top.sv",
+        "rtl/timing/board_clock_candidate.sv",
+        "rtl/timing/ultrasonic_timebase.sv",
+        "rtl/output/sono_array_interface.sv",
+        "rtl/control/safety_controller.sv",
+        "rtl/acquisition/ad7606b_if.sv",
+        "rtl/acquisition/adc_serial.sv",
+        "rtl/control/axi_native_bridge.sv",
+        "rtl/calibration/burst_generator.sv",
+        "rtl/calibration/calibration_scheduler.sv",
+        "rtl/output/channel_waveform.sv",
+        "rtl/motion/motion_queue.sv",
+        "rtl/phase/phase_bank.sv",
+        "rtl/output/serializer.sv",
+        "rtl/sono_digital_system.sv",
+        "rtl/sono_motion_system.sv",
+        "rtl/sono_axi_system.sv"
+      ]
+    },
+    "problems": "CURRENT_ID_HASH_VERSION_VERIFIED",
+    "documentation": {
+      "files": 72,
+      "broken_links": [
+        {
+          "source": "v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md",
+          "target": "REPOSITORY_RECONCILIATION.md"
+        }
+      ]
+    }
+  }
+}

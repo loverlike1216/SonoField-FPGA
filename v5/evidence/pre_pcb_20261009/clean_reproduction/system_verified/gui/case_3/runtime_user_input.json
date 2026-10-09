@@ -1,0 +1,113 @@
+{
+  "payload": {
+    "schema": "sonofield.user_path/1",
+    "version": "v5",
+    "created_at": "2026-10-09T10:26:38.646227+00:00",
+    "vertices": [
+      {
+        "xyz": [
+          0.043311638,
+          -0.014619723,
+          -0.034029841
+        ],
+        "dwell_s": 0.0,
+        "speed_mm_s": 3.0
+      },
+      {
+        "xyz": [
+          0.223311638,
+          0.025380277,
+          -0.014029841
+        ],
+        "dwell_s": 0.0,
+        "speed_mm_s": 3.0
+      },
+      {
+        "xyz": [
+          0.133311638,
+          0.165380277,
+          -0.064029841
+        ],
+        "dwell_s": 0.0,
+        "speed_mm_s": 3.0
+      }
+    ],
+    "segments": [
+      {
+        "index": 0,
+        "control1": [
+          0.12331163799612123,
+          0.09538027726737892,
+          -0.014029840594888408
+        ],
+        "control2": [
+          0.16331163799612122,
+          -0.03461972273262108,
+          -0.03402984059488841
+        ]
+      }
+    ],
+    "closed": false,
+    "limits": {
+      "bounds_mm": [
+        10,
+        10,
+        6
+      ],
+      "speed_mm_s": 3.0,
+      "acceleration_mm_s2": 8.0,
+      "jerk_mm_s3": 40.0,
+      "max_step_mm": 0.2,
+      "phase_step_codes": 8,
+      "max_frames": 12000
+    },
+    "calibration_snapshot": {
+      "classification": "SYNTHETIC_REFERENCE",
+      "temperature": {
+        "model": "dry_linear_Tz_v1",
+        "pressure_assumed": true,
+        "humidity_percent": null,
+        "humidity_applied": false,
+        "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+        "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+        "readings": [
+          {
+            "sensor_id": "TMP117_CENTER",
+            "location": "center",
+            "timestamp": 0,
+            "reading_C": 25.0,
+            "uncertainty": 0.15,
+            "status": "OK",
+            "staleness_ms": 0,
+            "calibration_offset": 0,
+            "provenance": "SYNTHETIC_REFERENCE"
+          },
+          {
+            "sensor_id": "TMP117_UPPER",
+            "location": "upper",
+            "timestamp": 0,
+            "reading_C": 26.0,
+            "uncertainty": 0.15,
+            "status": "OK",
+            "staleness_ms": 0,
+            "calibration_offset": 0,
+            "provenance": "SYNTHETIC_REFERENCE"
+          },
+          {
+            "sensor_id": "TMP117_LOWER",
+            "location": "lower",
+            "timestamp": 0,
+            "reading_C": 24.0,
+            "uncertainty": 0.15,
+            "status": "OK",
+            "staleness_ms": 0,
+            "calibration_offset": 0,
+            "provenance": "SYNTHETIC_REFERENCE"
+          }
+        ]
+      },
+      "phase_reference": "NOMINAL_ZERO_ERROR_REFERENCE_NOT_HARDWARE"
+    }
+  },
+  "sha256": "baebf3f72ea401e6730c3586a43fa4c948795070b2524608de09d86f86c8e63e"
+}

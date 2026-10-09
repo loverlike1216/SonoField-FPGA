@@ -1,0 +1,1464 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Oct  9 14:52:32 2026
+# Process ID         : 44148
+# Current directory  : E:/Codex_project/AMD_Sonofield
+# Command line       : vivado.exe -mode batch -source v5/scripts/build_prepcb_platform.tcl -log v5/evidence/pre_pcb_20261009/platform_connected4.log -journal v5/build/prepcb_connected4.jou -tclargs platform_connected4
+# Log file           : E:/Codex_project/AMD_Sonofield/v5/evidence/pre_pcb_20261009/platform_connected4.log
+# Journal file       : E:/Codex_project/AMD_Sonofield\v5/build/prepcb_connected4.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 23622 MB
+# Total Virtual      : 40396 MB
+# Available Virtual  : 17791 MB
+#-----------------------------------------------------------
+source v5/scripts/build_prepcb_platform.tcl
+# if {![string match "2025.2*" [version -short]]} {error "Vivado2025.2 required"}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set label [expr {[llength $argv] ? [lindex $argv 0] : "platform_final"}]
+# if {![regexp {^[A-Za-z0-9_]+$} $label]} {error "Invalid build label"}
+# set work [file join $root build $label]
+# set out [file join $root evidence pre_pcb_20261009 $label]
+# file mkdir $out
+# if {[file exists [file join $work platform.xpr]]} {error "Use a fresh build directory"}
+# set parts [get_parts -quiet xc7z020*clg400*]
+# set f [open [file join $out parts.txt] w]
+# puts $f $parts
+# close $f
+# if {[llength [get_parts -quiet xc7z020clg400-2]] != 1} {error "Required documented candidate part unavailable"}
+# create_project platform $work -part xc7z020clg400-2
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 531.426 ; gain = 219.977
+# set f [open [file join $root config ooc_source_list.txt] r]
+# foreach rel [split [string trim [read $f]] \n] {read_verilog -sv [file join $root [string trim $rel]]}
+# close $f
+# read_verilog -sv [file join $root rtl control prepcb_supervisor.sv]
+# read_verilog -sv [file join $root rtl motion prepcb_frame_mailbox.sv]
+# read_verilog [file join $root rtl board prepcb_pl.v]
+# set_property include_dirs [list [file join $root rtl generated]] [current_fileset]
+# add_files -norecurse [list [file join $root rtl generated transport_valid.svh] [file join $root rtl generated registers.svh]]
+# create_bd_design prepcb_ps
+Wrote  : <E:\Codex_project\AMD_Sonofield\v5\build\platform_connected4\platform.srcs\sources_1\bd\prepcb_ps\prepcb_ps.bd> 
+# set ps [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:* ps7]
+# set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_EN_CLK0_PORT {1} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {132} CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1} CONFIG.PCW_UIPARAM_DDR_ENABLE {0} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART1_UART1_IO {MIO 48 .. 49}] $ps
+# set f [open [file join $out ps7_properties.txt] w]
+# puts $f [report_property -return_string $ps]
+# close $f
+# set inter [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:* interconnect]
+# set_property CONFIG.NUM_MI 6 $inter
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] prepcb_ps_task_bram_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] prepcb_ps_task_bram_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+# set bram [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:* task_bram]
+# set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1} CONFIG.DATA_WIDTH {32}] $bram
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] prepcb_ps_task_bram_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] prepcb_ps_task_bram_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+# set mem [create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:* task_memory]
+# set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Use_Byte_Write_Enable {true} CONFIG.Byte_Size {8} CONFIG.Register_PortB_Output_of_Memory_Primitives {false}] $mem
+# set gpio [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:* service_io]
+# set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_ALL_OUTPUTS {1} CONFIG.C_IS_DUAL {1} CONFIG.C_GPIO2_WIDTH {32} CONFIG.C_ALL_INPUTS_2 {1} CONFIG.C_INTERRUPT_PRESENT {1}] $gpio
+# set reset [create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:* reset]
+# connect_bd_intf_net [get_bd_intf_pins ps7/M_AXI_GP0] [get_bd_intf_pins interconnect/S00_AXI]
+# connect_bd_intf_net [get_bd_intf_pins interconnect/M00_AXI] [get_bd_intf_pins task_bram/S_AXI]
+# connect_bd_intf_net [get_bd_intf_pins interconnect/M01_AXI] [get_bd_intf_pins service_io/S_AXI]
+# connect_bd_intf_net [get_bd_intf_pins task_bram/BRAM_PORTA] [get_bd_intf_pins task_memory/BRAM_PORTA]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXI' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'adc_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'bram_rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'bram_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'latch_clock' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'shift_clock' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'irq' of definition 'xilinx.com:signal:interrupt:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'irq': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXI'.
+INFO: [IP_Flow 19-4728] Bus Interface 'bram_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'bram_rst'.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'bram_clk': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'latch_clock': FREQ_HZ bus parameter is missing for output clock interface.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'shift_clock': FREQ_HZ bus parameter is missing for output clock interface.
+# set core [create_bd_cell -type module -reference prepcb_pl pl_core]
+# connect_bd_intf_net [get_bd_intf_pins interconnect/M02_AXI] [get_bd_intf_pins pl_core/S_AXI]
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+# set slice [create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:* control_slice]
+# set_property -dict [list CONFIG.DIN_WIDTH {32} CONFIG.DIN_FROM {15} CONFIG.DIN_TO {0} CONFIG.DOUT_WIDTH {16}] $slice
+# connect_bd_net [get_bd_pins service_io/gpio_io_o] [get_bd_pins control_slice/Din]
+WARNING: [BD 41-1306] The connection to interface pin </service_io/gpio_io_o> is being overridden by the user with net <service_io_gpio_io_o>. This pin will not be connected as a part of interface connection <GPIO>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+# connect_bd_net [get_bd_pins control_slice/Dout] [get_bd_pins pl_core/control]
+# connect_bd_net [get_bd_pins pl_core/status] [get_bd_pins service_io/gpio2_io_i]
+WARNING: [BD 41-1306] The connection to interface pin </service_io/gpio2_io_i> is being overridden by the user with net <pl_core_status>. This pin will not be connected as a part of interface connection <GPIO2>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+# foreach {a b} {bram_clk clkb bram_rst rstb bram_en enb bram_we web bram_addr addrb bram_wrdata dinb bram_rddata doutb} {
+#  connect_bd_net [get_bd_pins pl_core/$a] [get_bd_pins task_memory/$b]
+# }
+WARNING: [BD 41-1306] The connection to interface pin </task_memory/clkb> is being overridden by the user with net <pl_core_bram_clk>. This pin will not be connected as a part of interface connection <BRAM_PORTB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </task_memory/rstb> is being overridden by the user with net <pl_core_bram_rst>. This pin will not be connected as a part of interface connection <BRAM_PORTB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </task_memory/enb> is being overridden by the user with net <pl_core_bram_en>. This pin will not be connected as a part of interface connection <BRAM_PORTB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </task_memory/web> is being overridden by the user with net <pl_core_bram_we>. This pin will not be connected as a part of interface connection <BRAM_PORTB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </task_memory/addrb> is being overridden by the user with net <pl_core_bram_addr>. This pin will not be connected as a part of interface connection <BRAM_PORTB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </task_memory/dinb> is being overridden by the user with net <pl_core_bram_wrdata>. This pin will not be connected as a part of interface connection <BRAM_PORTB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </task_memory/doutb> is being overridden by the user with net <task_memory_doutb>. This pin will not be connected as a part of interface connection <BRAM_PORTB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconcat:1.0 for the IP type xilinx.com:ip:xlconcat:2.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconcat:2.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+# set concat [create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:* irq_concat]
+# set_property CONFIG.NUM_PORTS 5 $concat
+# set_property CONFIG.PCW_NUM_F2P_INTR_INPUTS 5 $ps
+CRITICAL WARNING: [BD 41-737] Cannot set the parameter PCW_NUM_F2P_INTR_INPUTS on /ps7. It is read-only.
+# connect_bd_net [get_bd_pins pl_core/irq] [get_bd_pins irq_concat/In0]
+# connect_bd_net [get_bd_pins service_io/ip2intc_irpt] [get_bd_pins irq_concat/In1]
+# connect_bd_net [get_bd_pins irq_concat/dout] [get_bd_pins ps7/IRQ_F2P]
+# foreach {name port index} {center M03_AXI 2 upper M04_AXI 3 lower M05_AXI 4} {
+#  set iic [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:* i2c_$name]
+#  connect_bd_intf_net [get_bd_intf_pins interconnect/$port] [get_bd_intf_pins i2c_$name/S_AXI]
+#  connect_bd_net [get_bd_pins i2c_$name/iic2intc_irpt] [get_bd_pins irq_concat/In$index]
+#  connect_bd_net [get_bd_pins ps7/FCLK_CLK0] [get_bd_pins i2c_$name/s_axi_aclk]
+#  connect_bd_net [get_bd_pins reset/peripheral_aresetn] [get_bd_pins i2c_$name/s_axi_aresetn]
+#  make_bd_intf_pins_external [get_bd_intf_pins i2c_$name/IIC]
+# }
+# connect_bd_net [get_bd_pins ps7/FCLK_CLK0] [get_bd_pins ps7/M_AXI_GP0_ACLK] [get_bd_pins interconnect/ACLK] [get_bd_pins interconnect/S00_ACLK] [get_bd_pins interconnect/M00_ACLK] [get_bd_pins interconnect/M01_ACLK] [get_bd_pins task_bram/s_axi_aclk] [get_bd_pins service_io/s_axi_aclk] [get_bd_pins reset/slowest_sync_clk]
+# connect_bd_net [get_bd_pins ps7/FCLK_RESET0_N] [get_bd_pins reset/ext_reset_in]
+# connect_bd_net [get_bd_pins reset/interconnect_aresetn] [get_bd_pins interconnect/ARESETN] [get_bd_pins interconnect/S00_ARESETN] [get_bd_pins interconnect/M00_ARESETN] [get_bd_pins interconnect/M01_ARESETN]
+# connect_bd_net [get_bd_pins reset/peripheral_aresetn] [get_bd_pins task_bram/s_axi_aresetn] [get_bd_pins service_io/s_axi_aresetn]
+# connect_bd_net [get_bd_pins ps7/FCLK_CLK0] [get_bd_pins pl_core/clk] [get_bd_pins interconnect/M02_ACLK] [get_bd_pins interconnect/M03_ACLK] [get_bd_pins interconnect/M04_ACLK] [get_bd_pins interconnect/M05_ACLK]
+# connect_bd_net [get_bd_pins reset/peripheral_aresetn] [get_bd_pins pl_core/rst_n] [get_bd_pins interconnect/M02_ARESETN] [get_bd_pins interconnect/M03_ARESETN] [get_bd_pins interconnect/M04_ARESETN] [get_bd_pins interconnect/M05_ARESETN]
+# make_bd_intf_pins_external [get_bd_intf_pins ps7/FIXED_IO]
+# foreach p {health adc_busy adc_dout adc_reset adc_convst adc_cs_n adc_sclk adc_sdi rx_blank serial_data shift_clock latch_clock output_disable heartbeat efuse_up efuse_dn} {make_bd_pins_external [get_bd_pins pl_core/$p]}
+# assign_bd_address
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+WARNING: [BD 41-1627] Requested range of <4G> for slave segments </pl_core/S_AXI/reg0> exceeds the range of the largest address space in assignment request </ps7/Data>. Shrinking the initial requested range to <1G>
+CRITICAL WARNING: [BD 41-1359] Failed to assign slave segment '/task_bram/S_AXI/Mem0' into address space '/ps7/Data'.
+CRITICAL WARNING: [BD 41-1359] Failed to assign slave segment '/i2c_center/S_AXI/Reg' into address space '/ps7/Data'.
+CRITICAL WARNING: [BD 41-1359] Failed to assign slave segment '/i2c_lower/S_AXI/Reg' into address space '/ps7/Data'.
+CRITICAL WARNING: [BD 41-1359] Failed to assign slave segment '/i2c_upper/S_AXI/Reg' into address space '/ps7/Data'.
+CRITICAL WARNING: [BD 41-1359] Failed to assign slave segment '/service_io/S_AXI/Reg' into address space '/ps7/Data'.
+Slave segment '/pl_core/S_AXI/reg0' is being assigned into address space '/ps7/Data' at <0x4000_0000 [ 1G ]>.
+# validate_bd_design
+CRITICAL WARNING: [BD 41-1356] Slave segment </i2c_lower/S_AXI/Reg> is not assigned into address space </ps7/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </service_io/S_AXI/Reg> is not assigned into address space </ps7/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </i2c_upper/S_AXI/Reg> is not assigned into address space </ps7/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </i2c_center/S_AXI/Reg> is not assigned into address space </ps7/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </task_bram/S_AXI/Mem0> is not assigned into address space </ps7/Data>. Please use Address Editor to either assign or exclude it.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressing -of_objects /task_bram/S_AXI'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressing -of_objects /service_io/S_AXI'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressing -of_objects /i2c_center/S_AXI'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressing -of_objects /i2c_upper/S_AXI'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -addressing -of_objects /i2c_lower/S_AXI'
+WARNING: [BD 41-2180] Resetting the memory initialization file of </task_memory> to default.
+# save_bd_design
+Wrote  : <E:\Codex_project\AMD_Sonofield\v5\build\platform_connected4\platform.srcs\sources_1\bd\prepcb_ps\prepcb_ps.bd> 
+# generate_target all [get_files prepcb_ps.bd]
+INFO: [BD 41-1662] The design 'prepcb_ps.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/task_memory/addra'(32) to pin: '/task_bram/bram_addr_a'(15) - Only lower order bits will be connected.
+Verilog Output written to : E:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/synth/prepcb_ps.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/task_memory/addra'(32) to pin: '/task_bram/bram_addr_a'(15) - Only lower order bits will be connected.
+Verilog Output written to : E:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/sim/prepcb_ps.v
+Verilog Output written to : E:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/hdl/prepcb_ps_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interconnect/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/ip/prepcb_ps_interconnect_imp_auto_pc_5/prepcb_ps_interconnect_imp_auto_pc_5_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interconnect/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/ip/prepcb_ps_interconnect_imp_auto_pc_0/prepcb_ps_interconnect_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interconnect/m01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/ip/prepcb_ps_interconnect_imp_auto_pc_1/prepcb_ps_interconnect_imp_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interconnect/m02_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/ip/prepcb_ps_interconnect_imp_auto_pc_2/prepcb_ps_interconnect_imp_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interconnect/m03_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/ip/prepcb_ps_interconnect_imp_auto_pc_3/prepcb_ps_interconnect_imp_auto_pc_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interconnect/m04_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/ip/prepcb_ps_interconnect_imp_auto_pc_4/prepcb_ps_interconnect_imp_auto_pc_4_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interconnect/m05_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block interconnect/s00_mmu .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block task_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block task_memory .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block service_io .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pl_core .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block control_slice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block irq_concat .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block i2c_center .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block i2c_upper .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block i2c_lower .
+Exporting to file E:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/hw_handoff/prepcb_ps.hwh
+Generated Hardware Definition File E:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/synth/prepcb_ps.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/prepcb_ps.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/prepcb_ps.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file e:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/platform.gen/sources_1/bd/prepcb_ps/prepcb_ps_sv.sveo
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 784.020 ; gain = 39.914
+# make_wrapper -files [get_files prepcb_ps.bd] -top -import
+# write_bd_tcl -force [file join $out recreate_ps_bd.tcl]
+WARNING: [BD 41-2925] The design that will be created by this Tcl script contains the following module references: prepcb_pl.
+Please add the sources of those modules before sourcing this Tcl script or use write_project_tcl.
+INFO: [BD 5-148] Tcl file written out <E:/Codex_project/AMD_Sonofield/v5/evidence/pre_pcb_20261009/platform_connected4/recreate_ps_bd.tcl>.
+
+# write_hw_platform -fixed -force -file [file join $out prepcb_logical_candidate.xsa]
+INFO: [Projectvivado 1-1918] Creating Hardware Platform: E:/Codex_project/AMD_Sonofield/v5/evidence/pre_pcb_20261009/platform_connected4/prepcb_logical_candidate.xsa ...
+INFO: [Projectvivado 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Projectvivado 1-1941] Successfully created Hardware Platform: E:/Codex_project/AMD_Sonofield/v5/evidence/pre_pcb_20261009/platform_connected4/prepcb_logical_candidate.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (D:/Vivado/2025.2/2025.2/Vivado/data/embeddedsw) loading 0 seconds
+# set f [open [file join $out loaded_sources.txt] w]
+# puts $f [join [get_files] \n]
+# close $f
+# puts "PREPCB_PS_BD_CREATED_NON_DEPLOYABLE"
+PREPCB_PS_BD_CREATED_NON_DEPLOYABLE
+# close_project
+# create_project -in_memory -part xc7z020clg400-2
+# set f [open [file join $root config ooc_source_list.txt] r]
+# foreach rel [split [string trim [read $f]] \n] {read_verilog -sv [file join $root [string trim $rel]]}
+# close $f
+# read_verilog -sv [file join $root rtl control prepcb_supervisor.sv]
+# read_verilog -sv [file join $root rtl motion prepcb_frame_mailbox.sv]
+# read_verilog [file join $root rtl board prepcb_pl.v]
+# set_property include_dirs [list [file join $root rtl generated]] [current_fileset]
+# synth_design -mode out_of_context -top prepcb_pl -part xc7z020clg400-2
+Command: synth_design -mode out_of_context -top prepcb_pl -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2748
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1239.664 ; gain = 275.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'prepcb_pl' [E:/Codex_project/AMD_Sonofield/v5/rtl/board/prepcb_pl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'prepcb_frame_mailbox' [E:/Codex_project/AMD_Sonofield/v5/rtl/motion/prepcb_frame_mailbox.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'prepcb_frame_mailbox' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/motion/prepcb_frame_mailbox.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'prepcb_supervisor' [E:/Codex_project/AMD_Sonofield/v5/rtl/control/prepcb_supervisor.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'prepcb_supervisor' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/control/prepcb_supervisor.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sono_axi_system' [E:/Codex_project/AMD_Sonofield/v5/rtl/sono_axi_system.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_native_bridge' [E:/Codex_project/AMD_Sonofield/v5/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_native_bridge' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/control/axi_native_bridge.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'sono_motion_system' [E:/Codex_project/AMD_Sonofield/v5/rtl/sono_motion_system.sv:4]
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'motion_queue' [E:/Codex_project/AMD_Sonofield/v5/rtl/motion/motion_queue.sv:4]
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter INTERVAL_CYCLES bound to: 2640000 - type: integer 
+	Parameter ACK_TIMEOUT_CYCLES bound to: 6600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'motion_queue' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/motion/motion_queue.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'sono_digital_system' [E:/Codex_project/AMD_Sonofield/v5/rtl/sono_digital_system.sv:3]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ad7606b_if' [E:/Codex_project/AMD_Sonofield/v5/rtl/acquisition/ad7606b_if.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+	Parameter POWER_WAIT_CYCLES bound to: 264000001 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adc_serial' [E:/Codex_project/AMD_Sonofield/v5/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'adc_serial' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/acquisition/adc_serial.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'ad7606b_if' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/acquisition/ad7606b_if.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'calibration_scheduler' [E:/Codex_project/AMD_Sonofield/v5/rtl/calibration/calibration_scheduler.sv:3]
+	Parameter DEPTH bound to: 1024 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'calibration_scheduler' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/calibration/calibration_scheduler.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'burst_generator' [E:/Codex_project/AMD_Sonofield/v5/rtl/calibration/burst_generator.sv:2]
+	Parameter CLOCK_HZ bound to: 132000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'burst_generator' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/calibration/burst_generator.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'phase_bank' [E:/Codex_project/AMD_Sonofield/v5/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'phase_bank' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/phase/phase_bank.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'channel_waveform' [E:/Codex_project/AMD_Sonofield/v5/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'channel_waveform' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/output/channel_waveform.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'serializer' [E:/Codex_project/AMD_Sonofield/v5/rtl/output/serializer.sv:2]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/Codex_project/AMD_Sonofield/v5/rtl/output/serializer.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'serializer' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/output/serializer.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'sono_digital_system' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/sono_digital_system.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'sono_motion_system' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/sono_motion_system.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'sono_axi_system' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/sono_axi_system.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'prepcb_pl' (0#1) [E:/Codex_project/AMD_Sonofield/v5/rtl/board/prepcb_pl.v:3]
+WARNING: [Synth 8-7137] Register queue_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register seq_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register last_reg in module motion_queue has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'last_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD_Sonofield/v5/rtl/motion/motion_queue.sv:93]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-4767] Trying to implement RAM 'queue_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD_Sonofield/v5/rtl/motion/motion_queue.sv:101]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-13159] Potential Runtime issue for RAM 'queue_reg' since this is dissolved into (8704) registers bits. Consider modifying RTL as per supported RAM templates
+WARNING: [Synth 8-4767] Trying to implement RAM 'seq_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [E:/Codex_project/AMD_Sonofield/v5/rtl/motion/motion_queue.sv:101]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+WARNING: [Synth 8-7129] Port frequency[31] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[30] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[29] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[28] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[27] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[26] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[25] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[24] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[23] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[22] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[21] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[20] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[19] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[18] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[17] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frequency[16] in module burst_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port burst_done in module calibration_scheduler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[15] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[14] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[13] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[12] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[11] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[10] in module prepcb_pl is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1469.102 ; gain = 505.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1469.102 ; gain = 505.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1469.102 ; gain = 505.105
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'prepcb_frame_mailbox'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_native_bridge'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'motion_queue'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ad7606b_if'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'serializer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                            00001 |                              000
+                 iSTATE2 |                            00010 |                              001
+                 iSTATE0 |                            00100 |                              010
+                 iSTATE3 |                            01000 |                              011
+                 iSTATE1 |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'prepcb_frame_mailbox'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   ISSUE |                               01 |                               01
+                 CAPTURE |                               10 |                               10
+                 RESPOND |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_native_bridge'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                             0000 |                             0000
+*
+                 iSTATE2 |                             0001 |                             0001
+                 iSTATE1 |                             0010 |                             0010
+                  iSTATE |                             0011 |                             0011
+                 iSTATE0 |                             0100 |                             0100
+                 iSTATE7 |                             0101 |                             0101
+                 iSTATE6 |                             0110 |                             0110
+                 iSTATE4 |                             0111 |                             0111
+                 iSTATE5 |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'motion_queue'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   POWER |                              000 |                              000
+                   RESET |                              001 |                              001
+                   SETUP |                              010 |                              010
+                    INIT |                              011 |                              011
+                WAIT_SPI |                              100 |                              100
+                     RUN |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ad7606b_if'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                               00
+                   SHIFT |                             0010 |                               01
+                   LATCH |                             0100 |                               10
+                  FINISH |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'serializer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1487.082 ; gain = 523.086
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 11    
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   28 Bit       Adders := 2     
+	   2 Input   27 Bit       Adders := 2     
+	   2 Input   22 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 133   
+	   3 Input    8 Bit       Adders := 128   
+	   2 Input    7 Bit       Adders := 34    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 4     
++---Registers : 
+	             2176 Bit    Registers := 5     
+	              128 Bit    Registers := 7     
+	               64 Bit    Registers := 6     
+	               32 Bit    Registers := 61    
+	               27 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	                8 Bit    Registers := 519   
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 79    
++---RAMs : 
+	             128K Bit	(1024 X 128 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input 2176 Bit        Muxes := 1     
+	   2 Input 2176 Bit        Muxes := 1     
+	   5 Input 2176 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 6     
+	   2 Input   32 Bit        Muxes := 14    
+	   7 Input   32 Bit        Muxes := 3     
+	   6 Input   32 Bit        Muxes := 1     
+	   9 Input   32 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 4     
+	   2 Input   22 Bit        Muxes := 3     
+	   6 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 1     
+	   9 Input   13 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   7 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 5     
+	   7 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   9 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   6 Input    6 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 7     
+	   2 Input    4 Bit        Muxes := 6     
+	   7 Input    4 Bit        Muxes := 1     
+	  15 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 8     
+	   5 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 10    
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 225   
+	   4 Input    1 Bit        Muxes := 28    
+	   7 Input    1 Bit        Muxes := 11    
+	   8 Input    1 Bit        Muxes := 5     
+	   6 Input    1 Bit        Muxes := 20    
+	   9 Input    1 Bit        Muxes := 10    
+	   5 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port control[15] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[14] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[13] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[12] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[11] in module prepcb_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port control[10] in module prepcb_pl is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1788.754 ; gain = 824.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scheduler   | memory_reg | 1 K x 128(READ_FIRST)  | W |   | 1 K x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 4      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1788.754 ; gain = 824.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|scheduler   | memory_reg | 1 K x 128(READ_FIRST)  | W |   | 1 K x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 4      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance core/native_system/digital/scheduler/memory_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance core/native_system/digital/scheduler/memory_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance core/native_system/digital/scheduler/memory_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance core/native_system/digital/scheduler/memory_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1788.754 ; gain = 824.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1914.609 ; gain = 950.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1914.609 ; gain = 950.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1914.609 ; gain = 950.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1914.609 ; gain = 950.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1929.145 ; gain = 965.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1929.145 ; gain = 965.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   717|
+|2     |LUT1     |    84|
+|3     |LUT2     |  2556|
+|4     |LUT3     |   255|
+|5     |LUT4     |   582|
+|6     |LUT5     |   826|
+|7     |LUT6     |  3677|
+|8     |MUXF7    |   282|
+|9     |MUXF8    |   136|
+|10    |RAMB36E1 |     4|
+|11    |FDCE     | 11356|
+|12    |FDPE     |    54|
+|13    |FDRE     |  8775|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------+----------------------+------+
+|      |Instance          |Module                |Cells |
++------+------------------+----------------------+------+
+|1     |top               |                      | 29304|
+|2     |  core            |sono_axi_system       | 26339|
+|3     |    bridge        |axi_native_bridge     |   373|
+|4     |    native_system |sono_motion_system    | 25966|
+|5     |      digital     |sono_digital_system   | 10913|
+|6     |        adc       |ad7606b_if            |  1032|
+|7     |          spi     |adc_serial            |   466|
+|8     |        bank      |phase_bank            |  6733|
+|9     |        burst     |burst_generator       |   274|
+|10    |        scheduler |calibration_scheduler |   917|
+|11    |        serial    |serializer            |  1094|
+|12    |      queue       |motion_queue          | 15053|
+|13    |  mailbox         |prepcb_frame_mailbox  |  2530|
+|14    |  supervisor      |prepcb_supervisor     |   292|
++------+------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1929.145 ; gain = 965.148
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1929.145 ; gain = 965.148
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1929.145 ; gain = 965.148
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.205 . Memory (MB): peak = 1941.219 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1139 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2080.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1d38e931
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2080.195 ; gain = 1116.199
+# create_clock -name core_clk -period 7.575758 [get_ports clk]
+WARNING: [Vivado 12-2489] -period contains time 7.575758 which will be rounded to 7.576 to ensure it is an integer multiple of 1 picosecond
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.459 . Memory (MB): peak = 2080.195 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 11b1a6b51
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2080.195 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 11b1a6b51
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2264.227 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 11b1a6b51
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Phase 1 Initialization | Checksum: 11b1a6b51
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2264.227 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 11b1a6b51
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2264.227 ; gain = 0.000
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 11b1a6b51
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 11b1a6b51
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 2264.227 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 21 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 4 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 12f678b89
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.280 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Retarget | Checksum: 12f678b89
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 2 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 15c78dacc
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.404 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Constant propagation | Checksum: 15c78dacc
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Phase 5 Sweep | Checksum: 12be4e295
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.549 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Sweep | Checksum: 12be4e295
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 12be4e295
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.611 . Memory (MB): peak = 2264.227 ; gain = 0.000
+BUFG optimization | Checksum: 12be4e295
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 12be4e295
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.634 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Shift Register Optimization | Checksum: 12be4e295
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 12be4e295
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.680 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Post Processing Netlist | Checksum: 12be4e295
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 8f40fac2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.938 . Memory (MB): peak = 2264.227 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 8f40fac2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.965 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Phase 9 Finalization | Checksum: 8f40fac2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.966 . Memory (MB): peak = 2264.227 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               2  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 8f40fac2
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.969 . Memory (MB): peak = 2264.227 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 4 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 4 Total Ports: 8
+Ending PowerOpt Patch Enables Task | Checksum: 120eae3a1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 120eae3a1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2276.398 ; gain = 12.172
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 12e7d2854
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.717 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 12e7d2854
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2276.398 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2276.398 ; gain = 196.203
+# place_design -directive Explore
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Vivado_Tcl 4-2302] The placer was invoked with the 'Explore' directive.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 8dda037a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: dbc15929
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.764 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: def7f747
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: def7f747
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: def7f747
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1758251e7
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1886b8f4c
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1886b8f4c
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 1f852f4c8
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 21ef08e82
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 11 LUTNM shape to break, 306 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 10, two critical 1, total 11, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 156 nets or LUTs. Breaked 11 LUTs, combined 145 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-46] Identified 4 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           11  |            145  |                   156  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           11  |            145  |                   156  |           0  |          10  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 29dfbb80e
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:19 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 1fe9eb863
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:20 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1fe9eb863
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:20 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 2da56d6f7
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:21 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ebef32ec
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 27cc7d249
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 278cb8b69
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1c1b40cbd
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:26 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 19f6ec2ca
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:33 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1561804c9
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:34 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 19ae402f9
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:34 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 19ae402f9
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:35 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 123fdf35f
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.254 | TNS=-3.229 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1935bbe60
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.206 . Memory (MB): peak = 2276.398 ; gain = 0.000
+INFO: [Place 46-33] Processed net core/native_system/digital/bank/reset_sync_reg[1], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net core/bridge/rst_n_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net core/native_system/digital/bank/written1, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net core/native_system/queue/active[2175]_i_1_n_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net core/native_system/queue/seq[2][15]_i_1_n_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 5 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 5, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1952f6e6d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.759 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 123fdf35f
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:39 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.502. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 174e7aca0
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 174e7aca0
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 174e7aca0
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                1x1|                2x2|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 174e7aca0
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 174e7aca0
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 124b1f883
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+Ending Placer Task | Checksum: cb17bd81
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:52 . Memory (MB): peak = 2276.398 ; gain = 0.000
+46 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:13 ; elapsed = 00:00:54 . Memory (MB): peak = 2276.398 ; gain = 0.000
+# phys_opt_design -directive AggressiveExplore
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2276.398 ; gain = 0.000
+INFO: [Vivado_Tcl 4-2280] Estimated Timing Summary | WNS= 0.502 | TNS= 0.000 | WHS= 0.082 |
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-2291] Design worst hold slack (WHS) is greater than or equal to -0.250 ns. Hold fix optimization will be skipped.
+ 
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+7 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+# route_design -directive Explore
+Command: route_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 420d0ef4 ConstDB: 0 ShapeSum: 73113b9d RouteDB: 15f972f0
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "bram_rddata[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "rst_n" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "rst_n". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "bram_rddata[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "bram_rddata[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "health[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "health[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "health[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "health[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "health[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "health[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "health[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "health[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "health[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "health[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "health[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "health[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "health[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "health[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "health[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "health[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[25]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[25]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[12]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[12]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[30]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[30]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[28]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[28]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[13]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[13]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[26]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[26]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[24]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[24]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[15]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[15]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[9]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[9]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[20]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[20]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[10]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[10]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_araddr[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_araddr[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_araddr[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_araddr[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_araddr[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_araddr[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_araddr[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_araddr[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_araddr[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_araddr[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[8]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[8]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_awaddr[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_awaddr[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "control[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "control[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[31]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[31]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[27]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[27]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[22]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[22]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[14]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[14]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wdata[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wdata[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wvalid" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wvalid". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "S_AXI_wstrb[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "S_AXI_wstrb[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+INFO: [Common 17-14] Message 'Route 35-198' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Constraints 18-8777] Unable to split tiles. All required files are not available.
+Post Restoration Checksum: NetGraph: 4fe7935c | NumContArr: 46a6b705 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 21be03f9b
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 21be03f9b
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2276.398 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 21be03f9b
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2276.398 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1749c8b40
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 2276.398 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.502  | TNS=0.000  | WHS=0.052  | THS=0.000  |
+
+
+Phase 2.4 Soft Constraint Pins - Fast Budgeting
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 18c9a1a65
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 24069
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 24069
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 18c9a1a65
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 18c9a1a65
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 198645603
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 2314.766 ; gain = 38.367
+Phase 4 Initial Routing | Checksum: 198645603
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 2034
+ Number of Nodes with overlaps = 388
+ Number of Nodes with overlaps = 139
+ Number of Nodes with overlaps = 67
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.067  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 24ceb3559
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:33 . Memory (MB): peak = 2314.766 ; gain = 38.367
+Phase 5 Rip-up And Reroute | Checksum: 24ceb3559
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:33 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+Phase 6.1 Delay CleanUp | Checksum: 24ceb3559
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:33 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 24ceb3559
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:33 . Memory (MB): peak = 2314.766 ; gain = 38.367
+Phase 6 Delay and Skew Optimization | Checksum: 24ceb3559
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:33 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.067  | TNS=0.000  | WHS=0.069  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 21f4df14b
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:33 . Memory (MB): peak = 2314.766 ; gain = 38.367
+Phase 7 Post Hold Fix | Checksum: 21f4df14b
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:33 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 5.78617 %
+  Global Horizontal Routing Utilization  = 7.46949 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 21f4df14b
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:34 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 21f4df14b
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:34 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1ea43fce3
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 1ea43fce3
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Phase 12 Post Router Timing
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.068  | TNS=0.000  | WHS=0.070  | THS=0.000  |
+
+Phase 12 Post Router Timing | Checksum: 28ebe63a5
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.766 ; gain = 38.367
+INFO: [Route 35-61] The design met the timing requirement.
+Total Elapsed time in route_design: 38.67 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 18c2d0ade
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.766 ; gain = 38.367
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 18c2d0ade
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.766 ; gain = 38.367
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:39 . Memory (MB): peak = 2314.766 ; gain = 38.367
+# phys_opt_design -directive AggressiveExplore
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode 
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2314.766 ; gain = 0.000
+INFO: [Vivado_Tcl 4-2280] Estimated Timing Summary | WNS= 0.068 | TNS= 0.000 | WHS= 0.070 |
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-2291] Design worst hold slack (WHS) is greater than or equal to 0.000 ns. Hold fix optimization will be skipped.
+ 
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+# report_timing_summary -delay_type min_max -report_unconstrained -file [file join $out pl_routed_timing.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_utilization -file [file join $out pl_routed_utilization.rpt]
+# report_drc -file [file join $out pl_routed_drc.rpt]
+Command: report_drc -file E:/Codex_project/AMD_Sonofield/v5/evidence/pre_pcb_20261009/platform_connected4/pl_routed_drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2025.2/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-814] Not all possible (connectivity based) DRCs may have been run because this design is seen as Out of Context.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file E:/Codex_project/AMD_Sonofield/v5/evidence/pre_pcb_20261009/platform_connected4/pl_routed_drc.rpt.
+report_drc completed successfully
+# report_cdc -file [file join $out pl_cdc.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-314] The report_cdc command only analyzes and reports clock domain crossing paths where clocks have been defined on both source and destination sides. Ports with no input delay constraint are skipped. Please run check_timing to verify there are no missing clock definitions in your design, nor any unconstrained input port.
+# write_checkpoint -force [file join $work prepcb_pl_routed.dcp]
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2314.766 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2314.766 ; gain = 0.000
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2314.766 ; gain = 0.000
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.222 . Memory (MB): peak = 2314.766 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.663 . Memory (MB): peak = 2314.766 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 2314.766 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2314.766 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.975 . Memory (MB): peak = 2314.766 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/Codex_project/AMD_Sonofield/v5/build/platform_connected4/prepcb_pl_routed.dcp' has been generated.
+# puts "PREPCB_PL_OOC_ROUTED_NOT_BOARD_TIMING_CLOSURE"
+PREPCB_PL_OOC_ROUTED_NOT_BOARD_TIMING_CLOSURE
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  9 14:55:57 2026...
