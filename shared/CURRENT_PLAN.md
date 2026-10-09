@@ -1,12 +1,13 @@
-# Current v5 pre-PCB plan
+# Current v5 plan — candidate review
 
-S0 facts/reconciliation complete; S1 contract/pin/BOM candidate prepared,
-physical power/deployment HOLD. S2 actual PS7BD and PL OOC route done;
-original full digital regression running. S3 temperature/C maps and faults,
-S4 ten sparsefits/holdout, S5 five runtimeGUI replay cases, S6 full integration
-and independent cleanclone validation are underway. S7 persists final evidence,
-blockers/acceptance/checkpoint and normal developmentbranch publication.
+S0–S6 feasible offline work and all final executable gates completed. S7 code,
+evidence, state and checkpoint delivery prepared; normal branch publication and
+actual CI/remote receipt recorded under shared/prepcb. Current task stops after
+publication verification, not at setup. No new version.
 
-MigrationPR1 remains a separate unmerged candidate. Current developmentbranch
-is stacked on it. Finalmain approval belongs to user. Oldphysicalsandbox and
-frozenarchive are excluded from current reads/build/tests. Continue v5 only.
+Next: independent/user review the full report and stacked development PR.
+Keep migrationPR1 separate/unmerged until user approval; then approved merges
+must respect dependency order and use a fresh remote-main clone regression.
+Close PC-B01..PC-B13 with actual Rev3/electrical/target-tool/measurement evidence
+before physical deployment, CAD/manufacturing release or acoustic claims.
+No unrequested hardware action, archive reads, test weakening or optimization loop.

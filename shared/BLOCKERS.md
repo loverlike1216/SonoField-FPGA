@@ -15,3 +15,10 @@ Only this table is the current blocker authority. Earlier v2/Robei narratives ar
 | MIG-MAIN | PENDING: explicit user approval for main merge and then post-merge fresh remote clone | User/Codex after approval | Migration promotion |
 
 Physical blockers do not prevent digital migration validation. Whole-platform REVISE; candidate scope evaluated separately. No second active BLOCKERS_ENGINEERING table is created.
+
+
+Current pre-PCB gate detail: v5/docs/pre_pcb/PRE_PCB_OPEN_BLOCKERS.md PC-B01..13
+maps the above electrical/physical/provenance/review blockers. OfflineBlocking0
+and knownofflineCritical0 apply only to testedofflinecandidate, not wholeplatform.
+Final PS address-map defect is resolved; fullboardtiming, ARMtargetbuild and
+physicalcutoff remain OPEN. Main and migrationPR1 remain unmerged pending user.

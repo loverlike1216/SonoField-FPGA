@@ -1,69 +1,91 @@
 {
-  "checkpoint_id": "CP-20261009-005",
+  "checkpoint_id": "CP-20261009-006",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace_path": "E:\\Codex_project\\AMD_Sonofield",
   "branch": "feat/v5-prepcb-full-system",
   "base_commit": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
   "head_commit": null,
+  "source_commit": "a43728870a06949e67b0604f4716f07419b3306c",
+  "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "V5_PREPCB_S0_S1_CONTRACTS_S2_S6_VALIDATION_RUNNING",
-  "checkpoint_reason": "User-authorized existing-v5 pre-PCB development; S0/S1 and first actual RTL/platform milestones",
-  "created_at": "2026-10-09T07:09:42.963343+00:00",
+  "current_stage": "V5_PREPCB_S7_CANDIDATE_USER_REVIEW_PENDING",
+  "created_at": "2026-10-09T10:38:08.858692+00:00",
   "created_by": "Codex",
+  "checkpoint_reason": "S0-S7 offline candidate gates complete; independent clone and corrected PS address mapping; final review handoff",
   "source_of_truth": "repository",
-  "status": "VALID_IN_PROGRESS",
+  "status": "VALID_CANDIDATE_WITH_LIMITATIONS",
   "architecture_ref": "v5/docs/pre_pcb/CENTRAL_ARRAY_HARDWARE_CONTRACT.md",
   "completed": [
-    "S0 current clone/remote reconciliation and actual attachments",
-    "S1 candidate67of68GPIO contract; central power HOLD",
-    "51new tests PASS",
-    "supervisor/mailbox Icarus+XSim PASS",
-    "PS7/AXI/BRAM/IRQ/threeIIC BD valid; logical XSA",
-    "PL OOC routed132MHz internal timing positive"
+    "IMPLEMENTED optional C protocol extension, temperature/sparse/runtimeGUI and failclosed supervisor/mailbox wrapper",
+    "TESTED 171 including unchanged original115; originalfullbaseline in two clones",
+    "SIMULATED supervisor and actualnewtop + GUI C-generated maps in Icarus and XSim",
+    "SYNTHESIZED realVivado2025.2 PS BD/logicalXSA and132MHz PL OOC routed; externaltiming held",
+    "ALTERNATIVE_VALIDATION numericaltemperature/sparse/trap; no physicalhardwareverified"
   ],
   "next_actions": [
-    "Complete new integration and original full regressions, independently reproduce committed source in fresh clone/venv, then S7 review package and ordinary development-branch push"
+    "User/independent reviewer inspect stacked development Draft PR and evidence; close PC-B01..PC-B13 before any hardware/manufacturing operation; no automatic main merge"
   ],
   "active_decisions": [
-    "USER_V5_PREPCB_20261009; existing ADC/core/version preserved"
+    "ADR-038 actualuser existing-v5 prePCB authorization; formalADC/core/version unchanged"
   ],
   "blockers": [
-    "PC-B01..PC-B13"
+    "PC-B01",
+    "PC-B02",
+    "PC-B03",
+    "PC-B04",
+    "PC-B05",
+    "PC-B06",
+    "PC-B07",
+    "PC-B08",
+    "PC-B09",
+    "PC-B10",
+    "PC-B11",
+    "PC-B12",
+    "PC-B13"
   ],
   "critical_issues": [],
   "latest_validation": [
-    "v5/evidence/pre_pcb_20261009/new_tests_geometry_retry1.log",
-    "v5/evidence/pre_pcb_20261009/rtl_supervisor1/summary.json",
-    "v5/evidence/pre_pcb_20261009/platform_connected4/pl_routed_timing.rpt"
+    "v5/evidence/pre_pcb_20261009/FINAL_VERIFICATION.json",
+    "v5/evidence/pre_pcb_20261009/CLEAN_SOURCE_COMPARISON.json"
   ],
   "known_limitations": [
-    "All new sensor/ADC references synthetic",
-    "No actual ARM/BSP build/physicalUART",
-    "External timing, board power and independent cutoff unverified",
-    "Independent review and main approval pending"
+    "Vitis ARM target blocked",
+    "Rev3/power/externalSTA/CDC/BRAMasync/cutoff unqualified",
+    "128TXresponses UNMEASURED; no actualADC/temp/particle/mass evidence",
+    "Independenthumanreview and mainapproval pending",
+    "Same-machine shared EDA independentclone only"
   ],
   "do_not_change": [
-    "Frozen history and physical old sandbox",
-    "Original RTL/tests/goldens/thresholds",
-    "Formal AD7606BBSTZ-RL",
-    "No main merge/force push/device operation"
+    "Frozenhistory/oldphysicalsandbox",
+    "OriginalRTL/tests/goldens/thresholds",
+    "AD7606BBSTZ-RL/NU40C10T",
+    "No forcedpush/mainmerge/deviceoperation/manufacturing"
   ],
   "invariants": [
+    "v5 only",
     "128TX/8RX",
-    "32lanes×4",
-    "separate8bit requested/calibration",
-    "complete atomic maps/commonclock/50Hz",
-    "three mandatoryTMP117",
-    "centralonlyAX7020headerpower/arrayindependent12V"
+    "32lanes×4 commonclock",
+    "separate8bit requested/calibration completeatomicmaps",
+    "50Hz local motion; PCtaskupload",
+    "3mandatoryTMP117",
+    "centralonlyprotectedAX7020headers;twoindependentarraypowerdomains"
   ],
   "open_ai_problems": [
     "P-20261008-001",
     "P-20261009-001"
   ],
   "evidence_refs": [
-    "v5/evidence/pre_pcb_20261009/"
+    "v5/evidence/pre_pcb_20261009/FINAL_VERIFICATION.json",
+    "v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md"
   ],
-  "resume_from": "Read current root states/checkpoint, then actual running/successful gate summaries; do not read frozen content"
+  "state_conflicts": [
+    {
+      "source": "CP005 PSBD-valid statement and earlier exit0 logs",
+      "current": "Automatic map was incomplete; six explicit64KiB mappings and5IRQ verified in final independentclone; earlierPS addressspaces invalidated"
+    }
+  ],
+  "resume_from": "README/AGENTS, current state/version/checkpoint, full report/final summaries, openproblems and remote receipt. Do not read frozenhistory."
 }

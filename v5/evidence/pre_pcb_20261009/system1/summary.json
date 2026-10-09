@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "classification": "ALTERNATIVE_VALIDATION_AND_SIMULATED_NO_PHYSICAL_HARDWARE",
+  "started_at": 1791529319.3920813,
+  "sparse": {
+    "status": "PASS",
+    "fits": 10,
+    "seeds": 5,
+    "initial_guesses_per_fit": 5,
+    "holdout_paths_per_fit": 384,
+    "maximum_translation_error_mm": 0.0022751900215110463,
+    "maximum_rotation_error_deg": 0.0030915293626549434,
+    "maximum_holdout_error_ns": 10.236393363591972,
+    "rejection_cases": {
+      "missing_rx": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]",
+      "ambiguous_phase": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]",
+      "low_snr": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]"
+    },
+    "robust_rejected": 3,
+    "deterministic_repeat": true
+  },
+  "error": "function 'sf_pc_map_geometry' not found"
+}

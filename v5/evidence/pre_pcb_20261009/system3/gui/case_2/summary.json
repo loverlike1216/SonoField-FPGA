@@ -1,0 +1,277 @@
+{
+  "status": "PASS",
+  "input": "AUTOMATED_RUNTIME_GUI_ENTRY_AND_CALLBACKS",
+  "human_manual_test": false,
+  "frames": 27,
+  "path_sha256": "cfa8bcc49e3090b397e096d347dd33ebc71b027e08ef166880a7b4c06fe7d308",
+  "maps_sha256": "ce8d58cce234403c0505f732f77b508d9680c31265e6d6516a67b13cd730fc1a",
+  "protocol_trace": [
+    {
+      "command": 1,
+      "sequence": 1,
+      "status": 0,
+      "logical_ms": 0
+    },
+    {
+      "command": 32,
+      "sequence": 2,
+      "status": 0,
+      "logical_ms": 0
+    },
+    {
+      "command": 38,
+      "sequence": 3,
+      "status": 0,
+      "logical_ms": 0
+    },
+    {
+      "command": 38,
+      "sequence": 4,
+      "status": 0,
+      "logical_ms": 0
+    },
+    {
+      "command": 39,
+      "sequence": 5,
+      "status": 0,
+      "logical_ms": 0
+    },
+    {
+      "command": 1,
+      "sequence": 6,
+      "status": 0,
+      "logical_ms": 0
+    },
+    {
+      "command": 40,
+      "sequence": 7,
+      "status": 0,
+      "logical_ms": 20
+    },
+    {
+      "command": 1,
+      "sequence": 8,
+      "status": 0,
+      "logical_ms": 20
+    },
+    {
+      "command": 1,
+      "sequence": 9,
+      "status": 0,
+      "logical_ms": 40
+    },
+    {
+      "command": 1,
+      "sequence": 10,
+      "status": 0,
+      "logical_ms": 60
+    },
+    {
+      "command": 41,
+      "sequence": 11,
+      "status": 0,
+      "logical_ms": 80
+    },
+    {
+      "command": 1,
+      "sequence": 12,
+      "status": 0,
+      "logical_ms": 80
+    },
+    {
+      "command": 1,
+      "sequence": 13,
+      "status": 0,
+      "logical_ms": 100
+    },
+    {
+      "command": 1,
+      "sequence": 14,
+      "status": 0,
+      "logical_ms": 120
+    },
+    {
+      "command": 1,
+      "sequence": 15,
+      "status": 0,
+      "logical_ms": 140
+    },
+    {
+      "command": 1,
+      "sequence": 16,
+      "status": 0,
+      "logical_ms": 160
+    },
+    {
+      "command": 1,
+      "sequence": 17,
+      "status": 0,
+      "logical_ms": 180
+    },
+    {
+      "command": 1,
+      "sequence": 18,
+      "status": 0,
+      "logical_ms": 200
+    },
+    {
+      "command": 1,
+      "sequence": 19,
+      "status": 0,
+      "logical_ms": 220
+    },
+    {
+      "command": 1,
+      "sequence": 20,
+      "status": 0,
+      "logical_ms": 240
+    },
+    {
+      "command": 1,
+      "sequence": 21,
+      "status": 0,
+      "logical_ms": 260
+    },
+    {
+      "command": 1,
+      "sequence": 22,
+      "status": 0,
+      "logical_ms": 280
+    },
+    {
+      "command": 1,
+      "sequence": 23,
+      "status": 0,
+      "logical_ms": 300
+    },
+    {
+      "command": 1,
+      "sequence": 24,
+      "status": 0,
+      "logical_ms": 320
+    },
+    {
+      "command": 1,
+      "sequence": 25,
+      "status": 0,
+      "logical_ms": 340
+    },
+    {
+      "command": 1,
+      "sequence": 26,
+      "status": 0,
+      "logical_ms": 360
+    },
+    {
+      "command": 1,
+      "sequence": 27,
+      "status": 0,
+      "logical_ms": 380
+    },
+    {
+      "command": 1,
+      "sequence": 28,
+      "status": 0,
+      "logical_ms": 400
+    },
+    {
+      "command": 1,
+      "sequence": 29,
+      "status": 0,
+      "logical_ms": 420
+    },
+    {
+      "command": 1,
+      "sequence": 30,
+      "status": 0,
+      "logical_ms": 440
+    },
+    {
+      "command": 1,
+      "sequence": 31,
+      "status": 0,
+      "logical_ms": 460
+    },
+    {
+      "command": 1,
+      "sequence": 32,
+      "status": 0,
+      "logical_ms": 480
+    },
+    {
+      "command": 1,
+      "sequence": 33,
+      "status": 0,
+      "logical_ms": 500
+    },
+    {
+      "command": 1,
+      "sequence": 34,
+      "status": 0,
+      "logical_ms": 520
+    },
+    {
+      "command": 1,
+      "sequence": 35,
+      "status": 0,
+      "logical_ms": 540
+    },
+    {
+      "command": 1,
+      "sequence": 36,
+      "status": 0,
+      "logical_ms": 560
+    },
+    {
+      "command": 1,
+      "sequence": 37,
+      "status": 0,
+      "logical_ms": 580
+    },
+    {
+      "command": 1,
+      "sequence": 38,
+      "status": 0,
+      "logical_ms": 600
+    },
+    {
+      "command": 1,
+      "sequence": 39,
+      "status": 0,
+      "logical_ms": 620
+    },
+    {
+      "command": 1,
+      "sequence": 40,
+      "status": 0,
+      "logical_ms": 640
+    }
+  ],
+  "pause_holds_cursor": true,
+  "python_c_maps_bit_exact": true,
+  "rtl": [
+    {
+      "classification": "SIMULATED",
+      "simulator": "icarus",
+      "frames_acknowledged": 27,
+      "map_words_sha256": "ce8d58cce234403c0505f732f77b508d9680c31265e6d6516a67b13cd730fc1a",
+      "ack_sha256": "ba30adf153c51bc1226fa6b4be638179b2f81181295305b8a9e0265053ac6351",
+      "interval_cycles": 8192,
+      "production_interval_cycles": 2640000,
+      "clock_hz": 132000000,
+      "bus_writes": 10395
+    },
+    {
+      "classification": "SIMULATED",
+      "simulator": "xsim",
+      "frames_acknowledged": 27,
+      "map_words_sha256": "ce8d58cce234403c0505f732f77b508d9680c31265e6d6516a67b13cd730fc1a",
+      "ack_sha256": "ba30adf153c51bc1226fa6b4be638179b2f81181295305b8a9e0265053ac6351",
+      "interval_cycles": 8192,
+      "production_interval_cycles": 2640000,
+      "clock_hz": 132000000,
+      "bus_writes": 10395
+    }
+  ],
+  "actual_particle_position": "NOT_MEASURED"
+}

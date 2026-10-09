@@ -44,3 +44,13 @@ halt/reset/DDR/boot/CADmanufacturing operation. ExternalChatGPT reading remains
 BLOCKED. This record is a user decision, not a fabricated ChatGPT Decision.
 Evidence: v5/evidence/pre_pcb_20261009 and docs/pre_pcb contracts. CP005 records
 in-progress validation; final acceptance follows actual successful gates.
+
+
+### ADR-038 execution closure — 2026-10-09
+
+User-authorized existingv5 offlineprePCB stage executed and cross-checked.
+No new architectural/version/ADC substitution decision. Final evidence selects
+corrected PS6window/5IRQ and actualnewtopchain; CP005 addressclaim superseded
+by CP006, immutablehistoricalsnapshot preserved. Deliver candidate with limits,
+retain physical/ARM/independentreview/main gates; stop further optimization.
+Source: actual instruction + FINAL_VERIFICATION; not a ChatGPT Decision.

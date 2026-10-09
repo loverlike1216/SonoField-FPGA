@@ -17,3 +17,15 @@ modeltrap/motion checks, actualCpacket/50Hztick and bothsimulators'ACK equality.
 Centralpower/Rev3/IOtiming/ARMbuild remain explicitHOLD rather than guessed.
 Freshindependentclone+lockedvenv must reproduce executable gates before S7
 candidate delivery. Independentreview and user's main approval remain pending.
+
+
+## 2026-10-09 final pre-PCB candidate evidence
+
+All feasible offline gates PASS at the sources qualified by FINAL_VERIFICATION.
+171tests; two-clone3696frames×4 with matchingcanonical hashes; new safety/top
+two-tool PASS; five runtimeGUIcases375frames;160temperaturemaps/20480words;
+ten sparsefits, rank12 and384holdouts each. Actual PS6windows/5IRQs, real2025.2
+PL OOC WNS+.081/WHS+.096ns. No originaltest/golden/threshold changes.
+Candidate conclusion ACCEPT WITH LIMITATIONS FOR REVIEW; wholeplatform REVISE.
+13open gates, no physicalhardwareacceptance, no finalindependentreview claimed.
+PCB/productionXDC/ARMtarget/electrical/manufacturing NOT_RELEASED or BLOCKED.

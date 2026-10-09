@@ -21,18 +21,27 @@ candidate, not verified USB-UART1 ownership. DDR is disabled; no2023.1 DDR or
 board preset is imported. The build emits xpr, logical xsa and BD recreation Tcl.
 An XSA without an implemented bitstream and matchedBSP is NON_DEPLOYABLE.
 
-`platform_connected4` performs PL-core OOC route on documented−2 candidate,
-not routed fullPS7 top/board. WNS+.068ns, WHS+.070ns; internal unclocked and
-unconstrained endpoints0.161 input and147 output external delays absent by
-design rather than fabricated.22 DRC warnings include20 reported inherited
-RAMB36 asynchronous-control checks, rule-limit warning, and PS7-required warning
-for OOC. CDC explicitly skips unconstrained ports. Clock-source skew is not
-board-qualified. **BOARD_TIMING_HOLD**; no bitstream or hardware validation.
+Final accepted platform is clean_reproduction/platform_verified. Earlier bare
+automatic addressing mapped only the core despite tool exit0; those PS address
+spaces are invalidated. Final six explicit64KiB windows have unique/offset/range
+assertions and the propagated IRQ count is five. No critical warning or ERROR
+appears in the final platform build. See ps_address_map.tsv and ps_irq_count.txt.
+
+Final PL-core OOC route uses the documented−2 candidate, not fullPS7 top/board.
+WNS+.081ns, WHS+.096ns, WPWS+3.288ns; internal unclocked and unconstrained
+endpoints0.161 input and148 output external delays remain absent.22 reported
+DRC warnings include20 inherited RAMB36 asynchronous-control entries, a rule
+limit warning and the PS7-required warning for OOC. The20-entry cap means this
+is not an exhaustive count. ReopenedDCP review retained; no rule waived.
+CDC skips unconstrained ports. Clock-source skew is not board-qualified.
+**BOARD_TIMING_HOLD**; no bitstream or hardware validation.
 
 Actual Vitis command reports2025.2 build6295257 with two missing-path messages;
 installed UART/IIC driver headers are visible. A matched standalone Cortex-A9
 compiler/BSP/linker/OCM and Rev3 startup target have not been established.
-Portable C host tests do not qualify them. ARM_TARGET_BUILD_BLOCKED remains.
+Portable C host tests do not qualify them. Actual VitisPython preflight reports
+PS_TARGET_BUILD_BLOCKED; its traceback is authoritative even though the
+launcher returns OS exit0. ARM_TARGET_BUILD_BLOCKED remains.
 
 Sources and exact input hashes: `SOURCES.json`. Independent checks of actual
 pins, VCCO, grounds, source capacity, cable delays, current and device ratings

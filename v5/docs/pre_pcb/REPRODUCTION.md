@@ -35,9 +35,21 @@ Build the candidate PS7/AXI/IIC platform and PL OOC route separately:
 `-tclargs` is last. Existing output project labels are rejected. Build creates
 v5/build/manual_platform/platform.xpr and evidence/manual_platform/logicalXSA,
 BD recreation, loadedsources, timing/utilization/DRC/CDC and routedDCP in build.
-Logical XSA has no bitstream, DDR is disabled; fullboard constraints/BSP and
+Six64KiB PS windows and five propagated IRQs are asserted, and ps_address_map.tsv
+records the actual assigned segments. Logical XSA has no bitstream, DDR is disabled; fullboard constraints/BSP and
 actual ARM firmware build remain gated. Never load candidateXDC into a
 production flow: it deliberately errors. Do not program a device.
+
+An optional real routed-DCP reread without disabling DRC rules:
+
+```powershell
+& "$env:VIVADO_BIN/vivado.bat" -mode batch -source v5/scripts/review_prepcb_drc.tcl -log v5/evidence/manual_drc.log -journal v5/build/manual_drc.jou -tclargs v5/build/manual_platform/prepcb_pl_routed.dcp v5/evidence/manual_drc_review
+```
+
+The default REQP-1839 report stops at20entries, so its warning count is a
+reported subset. Review output does not qualify board reset/CDC or offchip
+timing. Inspect required report content in addition to OS return codes;
+in particular Vitis can return0 while the actual script raises a traceback.
 
 Standalone tests must use a clone-local build TMP/TEMP directory; the original
 board-project path tests deliberately reject globalWindowsTEMP fixtures.

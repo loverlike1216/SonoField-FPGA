@@ -7,3 +7,10 @@ Start with [current state](shared/PROJECT_STATE.json), [recovery checkpoint](sha
 128TX/8RX, opposed8×8 arrays,8bit independent requested/calibration phases, atomic maps, common timebase,32lanes×4used,50Hz motion infrastructure and existing PS/C/AXI interfaces are preserved. TX NU40C10T; RX MPN unknown; formal ADC AD7606BBSTZ-RL. C-16 is an unapproved candidate. Geometry is12mm radiating-face pitch,100mm nominal face gap adjustable90–115mm, geometric-center origin. Upper/lower64TX arrays have independent external power/protection/cutoff. Central power comes only from protected AX7020 J10/J11 single sources; measured capacity is still blocked. See [hardware contract](v5/docs/pre_pcb/CENTRAL_ARRAY_HARDWARE_CONTRACT.md), [runtime trajectory guide](v5/docs/pre_pcb/GUI_USER_DRAWN_TRAJECTORY_GUIDE.md) and [open blockers](v5/docs/pre_pcb/PRE_PCB_OPEN_BLOCKERS.md).
 
 Real digital regression and documented-device OOC evidence are separate from physical acceptance. Historical AX701020.3.0/XC7Z020/CLG400 read-only identification does not prove PS-PL/DDR/UART/ADC/driver/acoustic operation. Whole-platform conclusion remains REVISE; native v5 schematic NOT_CREATED, ERC_NOT_RUN, electrical/manufacturing HOLD.50mg EPS is a future measured milestone. ChatGPT history access BLOCKED; observable current Codex records PARTIAL.
+
+
+Current pre-PCB candidate: [full result and limits](v5/docs/pre_pcb/PRE_PCB_COMPLETE_REPORT.md),
+[reproduction commands](v5/docs/pre_pcb/REPRODUCTION.md), and
+[machine verification](v5/evidence/pre_pcb_20261009/FINAL_VERIFICATION.json).
+171tests, dual-tool and independentclone evidence pass within offline scope;
+hardware/manufacturing remain NOT_RELEASED and wholeplatform REVISE.

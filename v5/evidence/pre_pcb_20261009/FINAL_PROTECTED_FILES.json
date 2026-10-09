@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "protected_files": 112,
+  "changed": [
+    {
+      "file": "firmware/ps_service/service.c",
+      "before": "65656588d9a349fac18e424fe4ef8761af34559ac36b97e24346e724c7a4c957",
+      "after": "0dc7029ca988dac2f09f0d4071e83183d81669c33be4be593b974aabd1efee96"
+    },
+    {
+      "file": "firmware/ps_service/service.h",
+      "before": "e8c3a65ea2c34d1faa12a8b98a13b379bb33e9b4c4955d301e73730568d5ae55",
+      "after": "9fe9c818efcd59ce9336cdce6c43d104b3d858a07f2c41a23abbb1ae1fdab4bf"
+    },
+    {
+      "file": "config/inheritance_manifest.json",
+      "before": "a5c067b9312d3d96ce3a329b4a46b839b883a6d4968faf583d8fc844a2272139",
+      "after": "1f92570e38a7d146122f72966515e77f74bb7e4ce095c328067aee25852212fd"
+    }
+  ],
+  "errors": [],
+  "authorization": "Current user pre-PCB optional protocol extension; original build unchanged when macro absent",
+  "original_tests_goldens_thresholds_unchanged": true
+}

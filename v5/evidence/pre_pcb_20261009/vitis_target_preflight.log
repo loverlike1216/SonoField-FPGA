@@ -1,0 +1,25 @@
+The system cannot find the path specified.
+
+****** Xilinx Vitis Development Environment
+****** Vitis v2025.2 (64-bit)
+The system cannot find the path specified.
+****** SW Build 6295257 on 2025-11-13-08:29:30
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+The system cannot find the path specified.
+{
+  "scope": "Installed target-build capability and required platform facts; no board access",
+  "vitis_python_available": true,
+  "arm_gcc_on_path": null,
+  "xsa": null,
+  "bsp": null,
+  "uart_route": "UNVERIFIED_AX7020",
+  "target_compile": "NOT_RUN_MISSING_VERIFIED_PLATFORM",
+  "host_c": "Verified independently by board_transport_gate.py against real GCC DLL"
+}
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\ps_platform_preflight.py", line 13, in <module>
+    raise RuntimeError('PS_TARGET_BUILD_BLOCKED: no reviewed XSA/BSP; do not substitute a guessed board preset')
+RuntimeError: PS_TARGET_BUILD_BLOCKED: no reviewed XSA/BSP; do not substitute a guessed board preset
+VITIS_PREFLIGHT_EXIT=0
