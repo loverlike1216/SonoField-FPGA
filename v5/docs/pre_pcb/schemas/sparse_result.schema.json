@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SonoField v5 sparse geometry result",
+  "type": "object",
+  "required": [
+    "classification",
+    "grade",
+    "pose",
+    "gauges",
+    "covariance",
+    "rank",
+    "condition",
+    "receiver_delay_us",
+    "channels",
+    "temperature",
+    "actual_levitation_bounds"
+  ],
+  "properties": {
+    "grade": {
+      "const": "GEOMETRY_SPARSITY_CALIBRATED"
+    },
+    "pose": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "number"
+      }
+    },
+    "rank": {
+      "const": 12
+    },
+    "condition": {
+      "type": "number",
+      "maximum": 100000
+    },
+    "channels": {
+      "type": "array",
+      "minItems": 128,
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "required": [
+          "channel",
+          "phase_offset",
+          "gain",
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "const": "UNMEASURED"
+          },
+          "phase_offset": {
+            "type": "null"
+          },
+          "gain": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    "actual_levitation_bounds": {
+      "type": "null"
+    }
+  }
+}

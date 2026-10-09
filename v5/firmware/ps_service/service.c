@@ -4,6 +4,9 @@
  */
 #include "service.h"
 #include <string.h>
+#ifdef SF_PREPCB_EXTENSION
+#include "prepcb_service.h"
+#endif
 static uint32_t u32(const uint8_t *p) {return (uint32_t)p[0]|(uint32_t)p[1]<<8|(uint32_t)p[2]<<16|(uint32_t)p[3]<<24;}
 static void put32(uint8_t *p,uint32_t x) {unsigned i;for(i=0;i<4;i++)p[i]=(uint8_t)(x>>(i*8));}
 static uint32_t crc32(const uint8_t *p,size_t n) {
@@ -65,7 +68,13 @@ static void dispatch(sf_service *s,uint32_t now) {
         if(!((address==SF_REG_CONTROL&&value==4)||(address==SF_REG_MODE&&value==0)))status=SF_ERR_DENIED;
         else if(s->io.write32(s->io.context,address,value))status=SF_ERR_BUS_ERROR;
         break;
-    default: status=SF_ERR_UNSUPPORTED;break;
+    default:
+#ifdef SF_PREPCB_EXTENSION
+        status=sf_pc_dispatch(s,cmd,p,n,out,&count);
+#else
+        status=SF_ERR_UNSUPPORTED;
+#endif
+        break;
     }
     reply(s,cmd,seq,status,out,count);
     if(status!=SF_ERR_OK)sf_disconnect(s);

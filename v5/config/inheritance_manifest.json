@@ -330,22 +330,24 @@
     {
       "source": "v2/firmware/ps_service/service.c",
       "target": "v5/firmware/ps_service/service.c",
-      "classification": "COPY_AS_IS",
-      "reason": "Reusable current core/interface/test or reference input",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "User-authorized v5 pre-PCB additive protocol dispatch behind SF_PREPCB_EXTENSION; original build and protocol preserved without macro",
       "source_sha256_bytes": "65656588d9a349fac18e424fe4ef8761af34559ac36b97e24346e724c7a4c957",
       "initial_copy_sha256_bytes": "65656588d9a349fac18e424fe4ef8761af34559ac36b97e24346e724c7a4c957",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "65656588d9a349fac18e424fe4ef8761af34559ac36b97e24346e724c7a4c957"
+      "v5_expected_sha256": "0dc7029ca988dac2f09f0d4071e83183d81669c33be4be593b974aabd1efee96",
+      "current_adaptation_evidence": "v5/docs/pre_pcb/OPTIONAL_C_EXTENSION.md"
     },
     {
       "source": "v2/firmware/ps_service/service.h",
       "target": "v5/firmware/ps_service/service.h",
-      "classification": "COPY_AS_IS",
-      "reason": "Reusable current core/interface/test or reference input",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "User-authorized v5 pre-PCB additive protocol dispatch behind SF_PREPCB_EXTENSION; original build and protocol preserved without macro",
       "source_sha256_bytes": "e8c3a65ea2c34d1faa12a8b98a13b379bb33e9b4c4955d301e73730568d5ae55",
       "initial_copy_sha256_bytes": "e8c3a65ea2c34d1faa12a8b98a13b379bb33e9b4c4955d301e73730568d5ae55",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "e8c3a65ea2c34d1faa12a8b98a13b379bb33e9b4c4955d301e73730568d5ae55"
+      "v5_expected_sha256": "9fe9c818efcd59ce9336cdce6c43d104b3d858a07f2c41a23abbb1ae1fdab4bf",
+      "current_adaptation_evidence": "v5/docs/pre_pcb/OPTIONAL_C_EXTENSION.md"
     },
     {
       "source": "v2/firmware/ps_service/zynq_service_main.c",

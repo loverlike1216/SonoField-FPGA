@@ -30,3 +30,12 @@ v5/evidence/**/faults/xelab*.log
 v5/evidence/migration/**/candidates/*.vvp
 v5/evidence/migration/**/candidates/xsim.dir/
 v5/evidence/migration/**/candidates/*.pb
+
+# New pre-PCB evidence keeps logs/maps/ACKs/reports, not simulator executables.
+v5/evidence/pre_pcb_20261009/**/xsim.dir/
+v5/evidence/pre_pcb_20261009/**/*.vvp
+v5/evidence/pre_pcb_20261009/**/*.exe
+v5/evidence/pre_pcb_20261009/**/*.dll
+v5/evidence/pre_pcb_20261009/**/*.so
+v5/evidence/pre_pcb_20261009/**/*.pb
+v5/evidence/pre_pcb_20261009/**/webtalk*

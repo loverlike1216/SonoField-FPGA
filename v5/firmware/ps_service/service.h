@@ -17,6 +17,9 @@ typedef struct {
     uint32_t last_sequence, last_rx_ms;
     int connected;
     uint8_t nonce[8];
+#ifdef SF_PREPCB_EXTENSION
+    void *extension;
+#endif
 } sf_service;
 void sf_init(sf_service *, sf_io);
 void sf_receive(sf_service *, const uint8_t *, size_t, uint32_t now_ms);

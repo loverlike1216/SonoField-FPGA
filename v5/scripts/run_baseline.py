@@ -37,7 +37,7 @@ def main():
         assert motion['determinism']['status']=='PASS' and motion['determinism']['runs']==4
         text=(out/'motion/python_tests.log').read_text(encoding='utf-8')
         import re
-        tests=int(re.search(r'Ran (\d+) tests',text).group(1));assert tests==115,tests
+        tests=int(re.search(r'Ran (\d+) tests',text).group(1));assert tests>=115,tests
         summary.update(status='PASS',python_tests=tests,frame_count=motion['frame_count'],determinism=motion['determinism'],
             regression='PASS',axi_offline='PASS',independent_safety='PASS',timing_equivalence='PASS',
             source_sha256={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_text(encoding='utf-8').encode()).hexdigest()

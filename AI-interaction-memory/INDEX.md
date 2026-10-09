@@ -10,3 +10,16 @@ PROJECT_ID SONOFIELD_FPGA; v5; current workspace migration. Only actual observed
 | SonoField-FPGA ChatGPT | DESIGN_INPUT | [canonical blocked source](../AI-chat-memory/INDEX.md) | BLOCKED / UNKNOWN |
 
 Approved v5/board instructions are retained in codex/instructions at their original relative paths. Historical v2 calibration/formal instruction copies are provenance only, not automatic AX7020 board authority. Session manifest records actual message IDs/timestamps/cutoff; later final output is not fabricated into this capture.
+
+## Current pre-PCB S0–S7 session
+
+Same v5, new actual user authorization. Migration records above remain historical provenance.
+
+| Source | Record | Status | Impact |
+|---|---|---|---|
+| Codex current task | [actual conversation](codex/S-20261009-prepcb.md) | PARTIAL | IMPLEMENTATION_INPUT |
+| CLI/Python/C/EDA/Git actual tools | [hashed tool flow](tool-flow/T-20261009-004__prepcb.json) | PARTIAL | VALIDATION_INPUT |
+| Actual full-system instruction | [canonical input](codex/instructions/v5_prepcb_full_system_20261009.md) | ACTUAL_DOCUMENT | IMPLEMENTATION_INPUT |
+| Current message/hash manifest | [session](sessions/S-20261009-prepcb.json) | PARTIAL | AUDIT |
+
+External ChatGPT remains BLOCKED; no subagent/Work/independent reviewer output claimed.

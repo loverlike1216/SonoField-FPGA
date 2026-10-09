@@ -29,3 +29,12 @@ AI-interaction-memory/codex/instructions/*.md text eol=lf -whitespace
 
 # Exact frozen Git blob bytes; no CRLF normalization or filters in the archive.
 history_old/** -text -filter -ident -whitespace
+
+# Additional current sources and verbatim Vivado export formatting.
+*.v text eol=lf
+*.svh text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+v5/evidence/pre_pcb_20261009/platform*/clockInfo.txt -whitespace
+v5/evidence/pre_pcb_20261009/platform*/ps7_properties.txt -whitespace
+v5/evidence/pre_pcb_20261009/platform*/recreate_ps_bd.tcl -whitespace
