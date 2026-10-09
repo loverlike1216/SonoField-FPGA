@@ -25,3 +25,6 @@ PARTIAL and chathistoryBLOCKED. CurrentCP006 contains corrected stateconflict.
 Publish normaldevelopmentbranch, verify remote/CI receipt, stop for review.
 Rollback beforemerge uses retainedmigrationbranchd7f; afterapprovedmerge normal
 revert+regression, neverforce/historyrewrite. Oldphysicalcopy remains intact.
+
+Publication verified: DraftPR2, push+PR integritySUCCESS, evidence SHA94d8be58d3c75e79c28bcf0d935f0a0d3f13661d.
+Receipt shared/prepcb/PUBLICATION_RECEIPT.json. Both PRs unmerged; main unchanged.

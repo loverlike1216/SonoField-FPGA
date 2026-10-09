@@ -1,0 +1,114 @@
+{
+  "status": "VERIFIED",
+  "verified_at": "2026-10-09T10:43:32.859068+00:00",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "branch": "feat/v5-prepcb-full-system",
+  "published_evidence_commit": "94d8be58d3c75e79c28bcf0d935f0a0d3f13661d",
+  "source_commit": "a43728870a06949e67b0604f4716f07419b3306c",
+  "remote_refs": {
+    "refs/heads/chore/v5-ax7020-workspace-isolation": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+    "refs/heads/feat/v5-prepcb-full-system": "94d8be58d3c75e79c28bcf0d935f0a0d3f13661d",
+    "refs/heads/main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570"
+  },
+  "pull_requests": [
+    {
+      "baseRefName": "main",
+      "headRefName": "chore/v5-ax7020-workspace-isolation",
+      "headRefOid": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+      "isDraft": true,
+      "mergedAt": null,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-09T05:55:52Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37890911045/job/113691397225",
+          "name": "integrity",
+          "startedAt": "2026-10-09T05:55:43Z",
+          "status": "COMPLETED",
+          "workflowName": "v5 workspace integrity"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-09T05:55:44Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37890905103/job/113691379208",
+          "name": "integrity",
+          "startedAt": "2026-10-09T05:55:37Z",
+          "status": "COMPLETED",
+          "workflowName": "v5 workspace integrity"
+        }
+      ],
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/1"
+    },
+    {
+      "baseRefName": "chore/v5-ax7020-workspace-isolation",
+      "headRefName": "feat/v5-prepcb-full-system",
+      "headRefOid": "94d8be58d3c75e79c28bcf0d935f0a0d3f13661d",
+      "isDraft": true,
+      "mergedAt": null,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-09T10:42:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37919188250/job/113782714358",
+          "name": "integrity",
+          "startedAt": "2026-10-09T10:41:57Z",
+          "status": "COMPLETED",
+          "workflowName": "v5 workspace integrity"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-09T10:41:52Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37919161546/job/113782627970",
+          "name": "integrity",
+          "startedAt": "2026-10-09T10:41:42Z",
+          "status": "COMPLETED",
+          "workflowName": "v5 workspace integrity"
+        }
+      ],
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/2"
+    }
+  ],
+  "ci": [
+    {
+      "conclusion": "success",
+      "databaseId": 37919188250,
+      "event": "pull_request",
+      "headSha": "94d8be58d3c75e79c28bcf0d935f0a0d3f13661d",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37919188250"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37919161546,
+      "event": "push",
+      "headSha": "94d8be58d3c75e79c28bcf0d935f0a0d3f13661d",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37919161546"
+    }
+  ],
+  "ci_scope": "Ubuntu structure/inheritance/protected assets/frozen Git metadata ONLY; not cloud EDA or hardware",
+  "independent_remote_checkout": {
+    "commit": "94d8be58d3c75e79c28bcf0d935f0a0d3f13661d",
+    "path": "E:\\Codex_project\\AMD_Sonofield\\.portability\\prepcb_clean",
+    "origin": "officialGitHub; fetched and detached checkout",
+    "scope_gate": "PASS",
+    "executable_delta_from_tested_source": [
+      "scripts/review_prepcb_drc.tcl; separately executed on actual final DCP"
+    ]
+  },
+  "main_merged": false,
+  "force_push": false,
+  "history_rewritten": false,
+  "physical_operation": false,
+  "quality_gate": "ACCEPT WITH LIMITATIONS FOR REVIEW",
+  "whole_platform": "REVISE",
+  "pcb": "NOT_RELEASED",
+  "receipt_containing_commit_resolution": "git log -1 --format=%H -- shared/prepcb/PUBLICATION_RECEIPT.json",
+  "receipt_commit_note": "This file verifies the evidence commit above; its containing commit is published afterward and independently compared with remote, avoiding self-referential SHA"
+}
