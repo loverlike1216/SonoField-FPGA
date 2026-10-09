@@ -3,7 +3,7 @@
 Canonical ChatGPT history: [SonoField-FPGA](../AI-chat-memory/SonoField-FPGA.md), BLOCKED.
 Codex records below are distinct from external ChatGPT history. Provider: OpenAI.
 Work, other AI and cross-agent consultations: none captured; no participation invented.
-Source timestamps are UTC. Current recovery: v5 / AX7020_V5_SAFE_ORGANIZATION_AND_STANDALONE_BASELINE / GPT-6.1 Sol High. Older rows retain their historical capture scope.
+Source timestamps are UTC. Current recovery: v5 / AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT / GPT-6.1 Sol High. Older rows retain their historical capture scope.
 
 | Thread / Session | Role / Impact | First used | Last captured | Record | Status | Content SHA256 |
 |---|---|---|---|---|---|---|
@@ -67,10 +67,12 @@ Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual vis
 
 
 
+
+
 <!-- AX7020_BOARD_BOM_20261009 -->
 ## Current AX7020 board/BOM integration — 2026-10-09
 
-Active v5; Stage AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT; OpenAI / GPT-6.1 Sol High (user-declared). [Session S-20261009-codex-001](codex/S-20261009-codex-001.md) · [manifest](sessions/S-20261009-codex-001.json) · [observable tool register](tool-flow/S-20261009-codex-001.md). 20 actual visible messages; cutoff 2026-10-09T02:25:35.424Z; PARTIAL. Canonical sanitized transcript SHA256 fa1c5d2d530a05f7581cd6e890822c837a3fb5b8bf738971f130bdbabe4924a5. Impact IMPLEMENTATION_INPUT.
+Active v5; Stage AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT; OpenAI / GPT-6.1 Sol High (user-declared). [Session S-20261009-codex-001](codex/S-20261009-codex-001.md) · [manifest](sessions/S-20261009-codex-001.json) · [observable tool register](tool-flow/S-20261009-codex-001.md). 21 actual visible messages; cutoff 2026-10-09T02:30:27.558Z; PARTIAL. Canonical sanitized transcript SHA256 9609387f19d5b296e8ce9d2981deeb4badae922d0a3c39f4861ebaaf6677d5e9. Impact IMPLEMENTATION_INPUT.
 
 [Formal user instruction](codex/instructions/ax7020_v5_board_bom_integration.md) · [curated tool flow T-20261009-001](tool-flow/T-20261009-001__ax7020-board-bom.md), VALIDATION_INPUT, PARTIAL. No external ChatGPT/Work/other-agent consultation occurred. ChatGPT source remains BLOCKED; independent review PENDING. Original device identities/photos stay private local_raw. Current state/checkpoint supersedes older recovery scope, preserving original history.
 <!-- END_AX7020_BOARD_BOM_20261009 -->
