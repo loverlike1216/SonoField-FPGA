@@ -12,7 +12,7 @@ def main():
     subprocess.run(['git','config','core.autocrlf','false'],cwd=ROOT,check=True)
     changed=[]
     for rel,old in snapshot.items():
-        if rel.startswith(('Historical project/','history_old/')):raise RuntimeError('Historical body forbidden')
+        if rel.split('/',1)[0] in {'Historical project','history_old'}:raise RuntimeError('Historical body forbidden')
         path=ROOT/rel
         if not path.is_file():raise RuntimeError('Missing '+rel)
         raw=path.read_bytes()

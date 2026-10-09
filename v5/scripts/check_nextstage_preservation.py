@@ -19,7 +19,7 @@ def audit():
     changed, errors = [], []
     immutable = 0
     for rel, old in snapshot.items():
-        if rel.startswith(('Historical project/', 'history_old/')):
+        if rel.split('/',1)[0] in {'Historical project', 'history_old'}:
             errors.append('Forbidden historical body in S0 snapshot: '+rel)
             continue
         path = ROOT/rel
@@ -38,7 +38,7 @@ def audit():
                 errors.append('Unreviewed S0 change: '+rel)
     base = 'b08ccf58c984ca7e6250d9e8489a24bc0789c4b0'
     def tree(ref):
-        raw = subprocess.check_output(['git','ls-tree','-r','-z',ref,'--','Historical project/'],cwd=ROOT)
+        raw = subprocess.check_output(['git','ls-tree','-r','-z',ref,'--','Historical project'],cwd=ROOT)
         return sorted(raw.split(b'\0')[:-1])
     frozen_before, frozen_now = tree(base), tree('HEAD')
     if frozen_before != frozen_now or len(frozen_now) != 3918:
