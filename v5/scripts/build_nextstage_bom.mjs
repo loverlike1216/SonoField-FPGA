@@ -18,6 +18,8 @@ for(let b=0;b<4;b++){
  s.getRange(`G5:G${4+items.length}`).formulas=items.map((_,i)=>[`=ROUNDUP(E${i+5}*(1+F${i+5}),0)`]);
  s.getRange(`F5:F${4+items.length}`).setNumberFormat('0%');
  s.getRange(`A4:P${4+items.length}`).format.wrapText=true;s.getRange(`A5:P${4+items.length}`).format.rowHeight=76;
+ // Preserve every instance ID and give long reference lists enough visible height.
+ items.forEach((x,i)=>{const rows=Math.ceil(x.references[names[b]].join(', ').length/55);s.getRange(`A${i+5}:P${i+5}`).format.rowHeight=Math.max(76,rows*12);});
  const widths=[11,38,40,46,11,12,12,70,48,22,58,28,48,26,16,90];widths.forEach((v,i)=>s.getRangeByIndexes(0,i,items.length+4,1).format.columnWidth=v);
  s.getRange('A4:P4').format={fill:'#174967',font:{color:'#ffffff',bold:true},rowHeight:38,wrapText:true};
  s.freezePanes.freezeRows(4);s.freezePanes.freezeColumns(2);s.tables.add(`A4:P${4+items.length}`,true,`${names[b]}Parts`);
@@ -38,6 +40,6 @@ for(const s of wb.worksheets.items){s.showGridLines=false;s.getRange('A1:P100').
 for(const s of [sources,decisions]){[28,38,85,60].forEach((v,i)=>s.getRangeByIndexes(0,i,10,1).format.columnWidth=v);s.getRange('A2:D8').format.wrapText=true;s.getRange('A3:D8').format.rowHeight=65;s.getRange('A2:D2').format={fill:'#174967',font:{color:'#ffffff',bold:true},rowHeight:30};}
 wb.recalculate();const original=review.getRange('B25').values[0][0];review.getRange('B23').values=[[4.4]];wb.recalculate();if(Math.abs(review.getRange('B25').values[0][0]-original*2)>1e-10)throw Error('Formula recalculation failed');review.getRange('B23').values=[[2.2]];wb.recalculate();
 const checks=await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#NUM!|#SPILL!',options:{useRegex:true,maxResults:20},maxChars:2000});await fs.writeFile(path.join(ev,'formula_inspection.ndjson'),checks.ndjson);
-for(const s of [review,...names.map(n=>wb.worksheets.getItem(n)),sources,decisions]){const range=s.name==='Review'?'A1:D30':names.includes(s.name)?'A1:G12':'A1:D8';const preview=await wb.render({sheetName:s.name,range,scale:1.2,format:'png'});await fs.writeFile(path.join(ev,s.name+'.png'),new Uint8Array(await preview.arrayBuffer()));}
+for(const s of [review,...names.map(n=>wb.worksheets.getItem(n)),sources,decisions]){const range=s.name==='Review'?'A1:D30':names.includes(s.name)?'A1:G12':'A1:D8';const preview=await wb.render({sheetName:s.name,range,scale:1.2,format:'png'});await fs.writeFile(path.join(ev,s.name+'.png'),new Uint8Array(await preview.arrayBuffer()));if(names.includes(s.name)){const detail=await wb.render({sheetName:s.name,range:'H4:P8',scale:1,format:'png'});await fs.writeFile(path.join(ev,s.name+'_detail.png'),new Uint8Array(await detail.arrayBuffer()));}}
 const file=path.join(out,'BOM_AX7020_NU40C10T_AD7606C16_WORKING.xlsx');await(await SpreadsheetFile.exportXlsx(wb)).save(file);
 console.log(JSON.stringify({status:'EXPORTED',sheets:7,types:data.items.length,ideal_only_W:original,file}));

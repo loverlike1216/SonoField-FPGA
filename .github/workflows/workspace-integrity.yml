@@ -2,7 +2,7 @@ name: v5 workspace integrity
 on:
   pull_request:
   push:
-    branches: [main, chore/v5-ax7020-workspace-isolation, 'feat/v5-*', 'codex/v5-historical-*']
+    branches: [main, chore/v5-ax7020-workspace-isolation, 'feat/v5-*', 'codex/v5-historical-*', 'codex/v5-ad7606c16-*']
 permissions:
   contents: read
 jobs:

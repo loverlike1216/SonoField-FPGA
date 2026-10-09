@@ -14,6 +14,7 @@ def main():
  try:
   run('prepcb_full','run_prepcb.py','--output',out/'full')
   run('adc_c16','adc7606c16_gate.py','--output',out/'adc')
+  run('c16_capture_chain','c16_capture_chain_gate.py','--output',out/'capture_c16')
   run('c16_actual_top','nextstage_top_gate.py','--maps',out/'full/system/gui/case_1/icarus/motion_maps.hex','--output',out/'top_c16')
   run('software_target','nextstage_software_gate.py','--output',out/'software')
   result['status']='PASS'

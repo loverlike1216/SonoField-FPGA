@@ -3,12 +3,14 @@ from pathlib import Path
 import hashlib,json
 ROOT=Path(__file__).resolve().parents[1]
 ALLOWED={'firmware/ps_service/service.c','firmware/ps_service/service.h','config/inheritance_manifest.json'}
+REVIEWABLE={'rtl/sono_digital_system.sv','rtl/sono_motion_system.sv','rtl/sono_axi_system.sv','rtl/board/prepcb_pl.v','config/system_baseline.json','config/hardware_parts.json'}
 
 def audit():
     original=json.loads((ROOT/'evidence/pre_pcb_20261009/S0_protected_hashes.json').read_text())
     changed=[];errors=[]
     review_path=ROOT/'config/nextstage_reviewed_changes.json'
     reviewed=json.loads(review_path.read_text())['files'] if review_path.exists() else {}
+    if set(reviewed)-REVIEWABLE:errors.append('Review manifest cannot exempt tests/goldens/thresholds or unrelated files')
     for rel,wanted in original.items():
         p=ROOT/rel
         if not p.is_file():errors.append('Missing '+rel);continue
