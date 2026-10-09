@@ -140,13 +140,16 @@ def gui_gate(library,out):
         if case==3:app.change(lambda:app.document.edit(lambda d:d.update(closed=True)))
         if case==4:
             app.selected=1;app.add(True);app.document.delete(1);app.document.reorder(1,2);app.document.reorder(2,1);app.refresh()
+            app.plane.set('3D');point=app.document.data['vertices'][2]['xyz'][:];x,y=app.project(point)
+            app.click(SimpleNamespace(x=x,y=y));app.drag_point(SimpleNamespace(x=x+1,y=y-1));app.release(None)
+            assert app.document.data['vertices'][2]['xyz'][2]==point[2]
         frames=app.preview();app.document.save(folder/'runtime_user_input.json')
         assert digest(Document.load(folder/'runtime_user_input.json').data)==digest(app.document.data)
         assert len(frames)<=512
         if case==2:
-            root.lift();root.attributes('-topmost',True);root.update();time.sleep(.2);root.update()
-            from PIL import ImageGrab
-            ImageGrab.grab(bbox=(root.winfo_rootx(),root.winfo_rooty(),root.winfo_rootx()+root.winfo_width(),root.winfo_rooty()+root.winfo_height())).save(folder/'gui.png')
+            root.update()
+            from software.ui.capture_window import capture
+            capture(root,folder/'gui.png')
         app.close()
         session=Session(library);session.client.upload(frames);session.client.command('MOTION_START')
         session.tick();session.client.command('MOTION_PAUSE');before=session.lib.fixture_cursor()

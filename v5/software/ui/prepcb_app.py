@@ -23,6 +23,7 @@ class Editor:
         self.document=Document();self.frames=None;self.selected=None;self.drag=None
         self.events=queue.Queue();self.session=None;self.stop_event=threading.Event();self.paused=False
         self.worker=None;self.rtl=None;self.result=None;self.automated=automated
+        self.array_tx,self.array_rx=positions(load(),[0,0,.1,0,0,0],centered=True)
         root.title('SonoField v5 用户轨迹与校准');root.geometry('1450x950')
         style=ttk.Style();style.theme_use('clam')
         ttk.Label(root,text='SIMULATION · 开环声场指令 · 实际粒子位置未测量',font=('Microsoft YaHei UI',15)).pack(anchor='w',padx=15,pady=10)
@@ -32,7 +33,7 @@ class Editor:
         edit=ttk.Frame(tabs,padding=8);diag=ttk.Frame(tabs,padding=12);cal=ttk.Frame(tabs,padding=12)
         tabs.add(edit,text='用户轨迹');tabs.add(diag,text='连接与运行');tabs.add(cal,text='温度与稀疏校准')
         left=ttk.Frame(edit);left.pack(side='left',fill='y',padx=(0,12));right=ttk.Frame(edit);right.pack(side='left',fill='both',expand=True)
-        self.tree=ttk.Treeview(left,columns=('x','y','z','speed','dwell'),show='headings',height=13)
+        self.tree=ttk.Treeview(left,columns=('x','y','z','speed','dwell'),show='headings',height=8)
         for key,title in [('x','X mm'),('y','Y mm'),('z','Z mm'),('speed','mm/s'),('dwell','停留 s')]:
             self.tree.heading(key,text=title);self.tree.column(key,width=72)
         self.tree.pack(fill='x');self.tree.bind('<<TreeviewSelect>>',self.select)
@@ -48,6 +49,9 @@ class Editor:
         ttk.Button(left,text='设为三次 Bezier 段',command=lambda:self.guarded(self.bezier)).pack(fill='x',pady=3)
         row=ttk.Frame(left);row.pack(fill='x');ttk.Button(row,text='保存 JSON',command=lambda:self.guarded(self.save)).pack(side='left');ttk.Button(row,text='重载并编辑',command=lambda:self.guarded(self.open)).pack(side='left')
         self.plane=tk.StringVar(value='XY');ttk.Combobox(right,textvariable=self.plane,values=['XY','XZ','YZ','3D'],state='readonly',width=10).pack(anchor='w')
+        self.zoom=tk.DoubleVar(value=28)
+        zoomrow=ttk.Frame(right);zoomrow.pack(fill='x');ttk.Label(zoomrow,text='缩放 px/mm（6 查看双阵列，400 精调短路径）').pack(side='left')
+        ttk.Scale(zoomrow,from_=6,to=400,variable=self.zoom,command=lambda _:self.draw()).pack(side='left',fill='x',expand=True)
         self.plane.trace_add('write',lambda *_:self.draw())
         self.canvas=tk.Canvas(right,bg='white',width=850,height=580,highlightthickness=1,highlightbackground='#c8d2df');self.canvas.pack(fill='both',expand=True)
         self.canvas.bind('<Configure>',lambda e:self.draw());self.canvas.bind('<Button-1>',self.click);self.canvas.bind('<B1-Motion>',self.drag_point);self.canvas.bind('<ButtonRelease-1>',self.release)
@@ -129,12 +133,20 @@ class Editor:
 
     def project(self,p):
         mode=self.plane.get();a,b={'XY':(0,1),'XZ':(0,2),'YZ':(1,2),'3D':(0,1)}[mode]
-        if mode=='3D':return self.canvas.winfo_width()/2+28*(p[0]+.45*p[2]),self.canvas.winfo_height()/2-28*(p[1]+.3*p[2])
-        return self.canvas.winfo_width()/2+28*p[a],self.canvas.winfo_height()/2-28*p[b]
+        scale=self.zoom.get()
+        if mode=='3D':return self.canvas.winfo_width()/2+scale*(p[0]+.45*p[2]),self.canvas.winfo_height()/2-scale*(p[1]+.3*p[2])
+        return self.canvas.winfo_width()/2+scale*p[a],self.canvas.winfo_height()/2-scale*p[b]
 
     def draw(self):
         c=self.canvas;c.delete('all');w,h=c.winfo_width(),c.winfo_height()
         c.create_line(w/2,0,w/2,h,fill='#dde3ed');c.create_line(0,h/2,w,h/2,fill='#dde3ed')
+        c.create_text(12,12,anchor='nw',text='名义阵列：灰128TX / 紫8RX / 箭头发射法向；坐标 mm；非实测',fill='#526071')
+        for point in self.array_tx*1000:
+            x,y=self.project(point);c.create_oval(x-2,y-2,x+2,y+2,fill='#a5afba',outline='')
+        for point in self.array_rx*1000:
+            x,y=self.project(point);c.create_rectangle(x-3,y-3,x+3,y+3,fill='#875a9f',outline='')
+        for z in (-50,50):
+            x,y=self.project([0,0,z]);a,b=self.project([0,0,z-np.sign(z)*10]);c.create_line(x,y,a,b,arrow='last',fill='#875a9f')
         if self.frames and len(self.frames)>1:c.create_line(*[v for r in self.frames for v in self.project([r[k] for k in ('x_mm','y_mm','z_mm')])],fill='#167d85',width=2)
         for i,v in enumerate(self.document.data['vertices']):
             x,y=self.project(v['xyz']);c.create_oval(x-5,y-5,x+5,y+5,fill='#1f4e78' if i!=self.selected else '#bc3345');c.create_text(x+12,y-9,text=str(i))
@@ -144,15 +156,22 @@ class Editor:
 
     def click(self,event):
         if self.worker and self.worker.is_alive():return
+        candidates=[]
         for s in self.document.data['segments']:
             for key in ('control1','control2'):
                 x,y=self.project(s[key])
-                if (x-event.x)**2+(y-event.y)**2<144:self.drag=('control',s['index'],key);return
+                candidates.append(((x-event.x)**2+(y-event.y)**2,('control',s['index'],key)))
         for i,v in enumerate(self.document.data['vertices']):
             x,y=self.project(v['xyz'])
-            if (x-event.x)**2+(y-event.y)**2<144:self.selected=i;self.tree.selection_set(str(i));self.drag=('vertex',i,None);return
+            candidates.append(((x-event.x)**2+(y-event.y)**2,('vertex',i,None)))
+        if candidates:
+            distance,picked=min(candidates,key=lambda x:x[0])
+            if distance<144:
+                self.drag=picked
+                if picked[0]=='vertex':self.selected=picked[1];self.tree.selection_set(str(self.selected))
+                return
         p=[float(v.get()) for v in self.xyz];a,b={'XY':(0,1),'XZ':(0,2),'YZ':(1,2),'3D':(0,1)}[self.plane.get()]
-        p[a]=(event.x-self.canvas.winfo_width()/2)/28;p[b]=-(event.y-self.canvas.winfo_height()/2)/28
+        p[a]=(event.x-self.canvas.winfo_width()/2)/self.zoom.get();p[b]=-(event.y-self.canvas.winfo_height()/2)/self.zoom.get()
         if self.plane.get()=='3D':p[0]-=.45*p[2];p[1]-=.3*p[2]
         self.guarded(lambda:self.change(lambda:self.document.add(p,speed=float(self.speed.get()),dwell=float(self.dwell.get()))))
 
@@ -160,7 +179,7 @@ class Editor:
         if not self.drag:return
         kind,index,key=self.drag;a,b={'XY':(0,1),'XZ':(0,2),'YZ':(1,2),'3D':(0,1)}[self.plane.get()]
         p=(self.document.data['vertices'][index]['xyz'][:] if kind=='vertex' else next(s[key][:] for s in self.document.data['segments'] if s['index']==index))
-        p[a]=(event.x-self.canvas.winfo_width()/2)/28;p[b]=-(event.y-self.canvas.winfo_height()/2)/28
+        p[a]=(event.x-self.canvas.winfo_width()/2)/self.zoom.get();p[b]=-(event.y-self.canvas.winfo_height()/2)/self.zoom.get()
         if self.plane.get()=='3D':p[0]-=.45*p[2];p[1]-=.3*p[2]
         if kind=='vertex':self.guarded(lambda:self.change(lambda:self.document.move(index,p)))
         else:

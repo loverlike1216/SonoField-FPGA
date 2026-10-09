@@ -18,7 +18,7 @@ module prepcb_supervisor #(
  wire fault_reset_n=rst_n & kill_ok;
  assign state=!rst_n?RESET_SAFE:(!estop_loop_ok?ESTOP:(fault_latched?FAULT_LATCHED:state_reg));
  wire tick=ms_div==MS_CYCLES-1;
- assign emit_permit=kill_ok & rst_n & ((state==CAL_SPARSE)||(state==IDLE_TRAP)||(state==MOTION_EXEC));
+ assign emit_permit=kill_ok & rst_n & ~stop & ((state==CAL_SPARSE)||(state==IDLE_TRAP)||(state==MOTION_EXEC));
  assign efuse_up=emit_permit;
  assign efuse_dn=emit_permit;
  assign output_disable=~emit_permit;

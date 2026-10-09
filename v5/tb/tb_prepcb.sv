@@ -32,7 +32,7 @@ module tb_prepcb;
   boot();emitting();cal_complete=1;ms(2);cal_complete=0;ms(2);if(state!=6)$fatal(1,"quality gate");offcheck();
   trap_request=1;ms(2);trap_request=0;if(state!=7||!emit_permit)$fatal(1,"trap gate");
   motion_request=1;ms(2);motion_request=0;if(state!=8)$fatal(1,"motion gate");motion_done=1;ms(2);motion_done=0;if(state!=7)$fatal(1,"done");
-  stop=1;ms(2);stop=0;offcheck();
+  stop=1;offcheck();ms(2);stop=0;offcheck();
   boot();ps_arm=1;ms(1);ps_arm=0;ms(10);if(state!=2)$fatal(1,"short press");
   ms(210);if(state!=9)$fatal(1,"timeout");offcheck();
   boot();publish=1;wait(frame_valid);#1;
