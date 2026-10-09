@@ -1,0 +1,205 @@
+{
+  "status": "PASS",
+  "latency_change_cycles": 0,
+  "commands": [
+    {
+      "name": "tb_phase_equivalence_compile",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\generated",
+        "-s",
+        "tb_phase_equivalence",
+        "-o",
+        "tb_phase_equivalence.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\sono_board_smoke_pl.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\prepcb_supervisor.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_motion_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\board_clock_candidate.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\migration_equivalence\\baseline_before\\burst_generator_golden.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_phase_equivalence.sv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_phase_equivalence_icarus",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "tb_phase_equivalence.vvp"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_phase_equivalence_xvlog",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "-i",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\generated",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\sono_board_smoke_pl.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\prepcb_supervisor.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_motion_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\board_clock_candidate.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\migration_equivalence\\baseline_before\\burst_generator_golden.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_phase_equivalence.sv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_phase_equivalence_xelab",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_phase_equivalence",
+        "--snapshot",
+        "tb_phase_equivalence",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_phase_equivalence_xsim",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_phase_equivalence",
+        "--runall"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_burst_equivalence_compile",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\generated",
+        "-s",
+        "tb_burst_equivalence",
+        "-o",
+        "tb_burst_equivalence.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\sono_board_smoke_pl.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\prepcb_supervisor.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_motion_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\board_clock_candidate.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\migration_equivalence\\baseline_before\\burst_generator_golden.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_burst_equivalence.sv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_burst_equivalence_icarus",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "tb_burst_equivalence.vvp"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_burst_equivalence_xvlog",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "-i",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\generated",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\sono_board_smoke_pl.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\prepcb_supervisor.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_motion_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\board_clock_candidate.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\migration_equivalence\\baseline_before\\burst_generator_golden.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_burst_equivalence.sv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_burst_equivalence_xelab",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_burst_equivalence",
+        "--snapshot",
+        "tb_burst_equivalence",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_burst_equivalence_xsim",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_burst_equivalence",
+        "--runall"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "scope": "valid frequency contract, main phase/boundary/tick and burst active/done/wave compared to original formula/RTL"
+}

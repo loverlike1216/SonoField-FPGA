@@ -1,0 +1,52 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "visibility": "PUBLIC",
+  "workspace": "E:\\Codex_project\\AMD_Sonofield",
+  "source_head": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+  "main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "branch": "feat/v5-prepcb-full-system",
+  "active_version": "v5",
+  "highest_version": "v5",
+  "status": "GATE0_PASS",
+  "inventories": {
+    "tracked": {
+      "files": 6670,
+      "bytes": 160039515
+    },
+    "untracked": {
+      "files": 134,
+      "bytes": 10023349
+    },
+    "ignored": {
+      "files": 19342,
+      "bytes": 1247199743
+    }
+  },
+  "private_inventory": "LOCAL_ONLY_OMITTED",
+  "old_physical_sandbox": "NOT_ACCESSED_OR_MODIFIED_THIS_TASK; previous preservation evidence retained",
+  "submodules": "",
+  "target_existed": false,
+  "existing_archive": "history_old; authorized bijective relocation, no overwrite or duplicate nesting",
+  "missing": [
+    "shared/BLOCKERS_ENGINEERING.md"
+  ],
+  "unpublished_commits": "0\t0",
+  "document_conflicts": [
+    "main still old tree; full current v5 is unmerged PR2",
+    "current BLOCKERS/ACCEPTANCE already v5, not stale v2",
+    "current suite is 171 tests, not 115"
+  ],
+  "created_at": "2026-10-09T15:33:40.008388+00:00",
+  "baseline_before": "baseline_before/summary.json",
+  "python_tests": 171,
+  "frame_count": 3696,
+  "tool_versions": {
+    "pwsh": "7.6.5",
+    "python": "3.10.11",
+    "tk": "8.6",
+    "icarus": "12.0 devel g2693dd32b",
+    "gcc": "9.2.0",
+    "vivado": "2025.2 build6299465"
+  }
+}

@@ -1,0 +1,5 @@
+# Current v5 dependency graph
+
+`run_baseline.ps1` → clone-local Python → structure/inheritance/generators → motion gate (Python/C/reference + 3 Icarus + XSim) → AXI/safety/equivalence. `run_prepcb.py` adds preservation, supervisor/mailbox, temperature/sparse fitting/runtime trajectory GUI and actual top in both simulators. `create_project.tcl` → `config/ax7020_ooc.tcl` + exact 18-entry `ooc_source_list.txt` + local generated include files + `core_ooc.xdc`. The separate current pre-PCB top/PS candidate scripts use only v5/config/rtl assets. Python imports, C/RTL includes and all current runtime assets are enumerated in dependency_inventory.json.
+
+All current implementation and evidence remains in v5. No historical fixture is copied or substituted. All root shared current decisions/checkpoints and current open Problems remain. Old governance originals move unchanged; current summaries already exist. Static inventories are supplemented by actual native Vivado loaded-source lists and a fresh sparse clone with no historical worktree files and a newly installed venv. Same-machine EDA is shared; this is not an independent computer or hardware proof.

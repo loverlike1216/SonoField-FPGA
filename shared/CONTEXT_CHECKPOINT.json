@@ -1,5 +1,5 @@
 {
-  "checkpoint_id": "CP-20261009-007",
+  "checkpoint_id": "CP-20261009-008",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
@@ -11,20 +11,21 @@
   "move_commit": "a98ad7c7fceaee574ae97ea37a8daa52691b180e",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "V5_HISTORICAL_GATE4_VALIDATING",
-  "created_at": "2026-10-09T15:43:16.273613+00:00",
+  "current_stage": "V5_HISTORICAL_GATE6_READY_FOR_USER_REVIEW",
+  "created_at": "2026-10-09T16:11:17.660966+00:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Actual historical path moves verified; independent regression in progress",
+  "checkpoint_reason": "Fresh before/after full regression, three native OOC/reopen runs and history-absent clean clone passed",
   "source_of_truth": "repository",
-  "status": "VALID_IN_PROGRESS",
+  "status": "VALID_CANDIDATE_WITH_LIMITATIONS",
   "architecture_ref": "v5/docs/pre_pcb/CENTRAL_ARRAY_HARDWARE_CONTRACT.md",
   "completed": [
-    "TESTED before171tests and3696frames×4 baseline",
-    "SYNTHESIZED_OOC before native2025.2 and projectreopen",
-    "IMPLEMENTED 3911 byte/blob/mode-identical historical path moves and current-scope exclusions"
+    "TESTED171before+171after;3696frames×4each;canonicalhashesequal",
+    "SIMULATEDfullprePCBsupervisor/mailbox/actualtop/GUI,Ctemperature,sparse",
+    "SYNTHESIZED_OOCthree native2025.2runsandreopens,18currentv5sources",
+    "IMPLEMENTED3911exacthistoricalmovesandexclusions;currentpayloadpreserved"
   ],
   "next_actions": [
-    "Gate4: fresh history-absent clone/new locked venv full prePCB baseline; compare native OOC before/after; privacy/diff review then Draft PR; Gate7 deferred for user approval"
+    "Normalpush migrationbranch, DraftPR/CI/remote receipt; user review before main merge; Gate7 only after approval"
   ],
   "active_decisions": [
     "ADR035–038 preserved",
@@ -47,14 +48,14 @@
   ],
   "critical_issues": [],
   "latest_validation": [
-    "v5/evidence/repository_cleanup/20261009/baseline_before/summary.json",
-    "v5/evidence/repository_cleanup/20261009/post_move_integrity.json"
+    "v5/evidence/repository_cleanup/20261009/FINAL_VERIFICATION.json"
   ],
   "known_limitations": [
-    "After regression not yet complete",
-    "Same-machine shared EDA",
-    "Physical/ARM/manufacturing remain unqualified",
-    "ExternalChatGPT BLOCKED; no fabricated reviewer"
+    "SameOS/EDAindependentcloneonly",
+    "2324input/256outputexternaldelaysmissing;no boardtimingqualification",
+    "13existingphysical/ARM/PCB/reviewgatesremainopen",
+    "Mainunmerged;Gate7requiresuserapproval",
+    "ExternChatGPTBLOCKED"
   ],
   "do_not_change": [
     "All frozen body bytes and modes; originalphysicalworkspace untouched",
@@ -78,13 +79,14 @@
     "v5/evidence/repository_cleanup/20261009",
     "shared/repository_cleanup/ARCHIVE_PATH_MAP.json"
   ],
-  "resume_from": "Read current state/checkpoint and Gate4 real outputs; do not repeat completed moves or read historical source",
-  "delta_since_previous": "User new explicit historical-isolation task; sourcePR2 retained by normal ancestry; actual pathmove verified; aftergates pending",
+  "resume_from": "Review FINAL_VERIFICATION and PR/CIreceipt; do not repeat archive reading or moves. Gate7 only on explicit user approval",
+  "delta_since_previous": "Afterfullbaseline/prePCB/native/history-absentclonePASSevidence nowavailable",
   "provenance": [
-    "Git HEAD/index",
-    "beforebaseline",
-    "MOVE_PLAN",
-    "rawSHA256/blobmode checks",
-    "actual user Gate0–7 instruction"
-  ]
+    "ActualGitcodecommit3e788f4",
+    "freshbeforeandafterlogs/hashes",
+    "three realVivado2025.2runs",
+    "sourcepreservation/manifests",
+    "actual user instruction ADR039"
+  ],
+  "source_commit": "3e788f4a2763c0354ca66d3836d0709dcf9f0107"
 }

@@ -1,6 +1,6 @@
 # Current v5 acceptance
 
-Migration scope preserves all inherited technical criteria. Required: MIG01–12 exact archive blob/mode/rawSHA256; private original protection; v5-only load/search; current facts;115/115Python and3696frames×3Icarus+1XSim; canonical trajectory/map/trap/ACK equality; all protocol/C/AXI/calibration/safety/serializer/golden gates; native Vivado2025.2 OOC/reopen/loaded source proof; second clean clone with new locked venv and full offline gates; consistent current docs and hardware no-operation boundary. Results: shared/migration/PORTABILITY_AND_REGRESSION.md.
+Migration scope preserves all inherited technical criteria. Required: MIG01–12 exact archive blob/mode/rawSHA256; private original protection; v5-only load/search; current facts;171/171Python (original115 + new56) and3696frames×3Icarus+1XSim; canonical trajectory/map/trap/ACK equality; all protocol/C/AXI/calibration/safety/serializer/golden gates; native Vivado2025.2 OOC/reopen/loaded source proof; second clean clone with new locked venv and full offline gates; consistent current docs and hardware no-operation boundary. Results: shared/migration/PORTABILITY_AND_REGRESSION.md.
 
 Keep calibration35dB thresholds: translation norm<0.1mm, angle norm<0.1deg, f0RMSE<80Hz, phaseRMSE<2deg. Keep lower-SNR failed/rejected records; never weaken thresholds. Signed1024×8 capture, two-bank reference constraints, full-map atomic commit/ACK/no overwrite, safety/timeout/error behavior and protocol/registers remain fixed. Canonical functional hashes ignore only explicitly nonfunctional timestamps/absolute-report headers. Formal ADC remains AD7606BBSTZ-RL; candidates require separate decision/approval.
 
@@ -32,3 +32,6 @@ PCB/productionXDC/ARMtarget/electrical/manufacturing NOT_RELEASED or BLOCKED.
 
 
 Current Historical project migration (ADR039): all6670sourcefiles unique disposition;3911rawSHA256/blob/mode-identical moves and2759kept; current171tests and allprePCB gates required. Actualsource lists/cleanhistory-absent clone required, not grep-only. Gate7 is a separate post-user-approval action. See current cleanup evidence, do not rewrite older result sections.
+
+
+Historical-isolationcandidateGates0–5PASS: fresh171before/after,3696×4exactcanonicalhashes,fullprePCBextra,three nativeOOC/reopens andhistory-absentnewvenv. CandidateACCEPTWITHLIMITATIONS;Gate6receiptpending;Gate7userapprovalrequired;wholeplatformREVISE.

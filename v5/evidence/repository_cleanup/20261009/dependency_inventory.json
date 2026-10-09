@@ -1,0 +1,3444 @@
+{
+  "scope": "STATIC_CURRENT_INPUTS_ONLY_PLUS_REAL_RUNTIME_AND_HISTORY_ABSENT_CLONE_REQUIRED",
+  "python_imports": [
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "itertools",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "math",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "random",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "zipfile",
+      "level": 0
+    },
+    {
+      "source": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "module": "xml.etree.ElementTree",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/audit_bom.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/audit_bom.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/audit_bom.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/audit_bom.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/audit_bom.py",
+      "module": "xml.etree.ElementTree",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/audit_bom.py",
+      "module": "zipfile",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/board_transport_gate.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/board_transport_gate.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/board_transport_gate.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/board_transport_gate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/board_transport_gate.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/board_transport_gate.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/board_transport_gate.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/capture_board_integration_interaction.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/capture_board_integration_interaction.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/capture_board_integration_interaction.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/capture_board_integration_interaction.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/capture_board_integration_interaction.py",
+      "module": "sync_codex",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_board_integration.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_board_integration.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_board_integration.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_board_integration.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_board_integration.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_board_integration.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_migration.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_migration.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_migration.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_prepcb_preservation.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_prepcb_preservation.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_prepcb_preservation.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_repository.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_repository.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_repository.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_repository.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_repository.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_repository.py",
+      "module": "check_migration",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_repository.py",
+      "module": "check_structure",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_structure.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_structure.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_structure.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_structure.py",
+      "module": "ast",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_waveform.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_waveform.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_waveform.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_waveform.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "module": "urllib.parse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/curate_ax7020_evidence.py",
+      "module": "verify_candidates",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/generate_system.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/generate_system.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/generate_system.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/generate_transport.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/generate_transport.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/generate_transport.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "concurrent.futures",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "gzip",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "time",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/motion_gate.py",
+      "module": "software.motion.trap_solver",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/pre_pcb_checks.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/pre_pcb_checks.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/pre_pcb_checks.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/pre_pcb_checks.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/pre_pcb_checks.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/pre_pcb_checks.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_ax7020_candidates.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_ax7020_candidates.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_ax7020_candidates.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_ax7020_candidates.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_ax7020_candidates.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_ax7020_candidates.py",
+      "module": "xml.etree.ElementTree",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_ax7020_candidates.py",
+      "module": "datetime",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_prepcb.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_prepcb.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_prepcb.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_prepcb.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_prepcb.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_prepcb.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepare_prepcb.py",
+      "module": "datetime",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_bom_inputs.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_bom_inputs.py",
+      "module": "zipfile",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_bom_inputs.py",
+      "module": "xml.etree.ElementTree",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_bom_inputs.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "software.board.protocol",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "software.prepcb.protocol",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_host_gate.py",
+      "module": "software.motion.transport",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_rtl_gate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_rtl_gate.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_rtl_gate.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_rtl_gate.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_rtl_gate.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "ctypes",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "time",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "types",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.prepcb.temperature",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.prepcb.reference",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.prepcb.sparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.prepcb.c_session",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.prepcb.field",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.prepcb.user_path",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.calibration.config",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.calibration.geometry",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.motion.workspace",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.motion.transport",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.motion.trap_solver",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "tkinter",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.ui.prepcb_app",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_system_gate.py",
+      "module": "software.ui.capture_window",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_top_gate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_top_gate.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_top_gate.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_top_gate.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_top_gate.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/prepcb_top_gate.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/ps_platform_preflight.py",
+      "module": "importlib.util",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/ps_platform_preflight.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/ps_platform_preflight.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/ps_platform_preflight.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/ps_platform_preflight.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "datetime",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_baseline.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_candidate_regression.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_candidate_regression.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_candidate_regression.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_candidate_regression.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_candidate_regression.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_candidate_regression.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_candidate_regression.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_candidate_regression.py",
+      "module": "time",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_prepcb.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_prepcb.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_prepcb.py",
+      "module": "datetime",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_prepcb.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_prepcb.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_prepcb.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/run_prepcb.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "datetime",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "software.calibration.config",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "software.calibration.synthetic",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "software.calibration.experiment",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "software.calibration.database",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "software.calibration.signal",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "software.calibration.visualize",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "software.calibration.pipeline",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/self_calibration_gate.py",
+      "module": "software.calibration.report",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/timing_equivalence.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/timing_equivalence.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/timing_equivalence.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/timing_equivalence.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/timing_equivalence.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/timing_equivalence.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "datetime",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "check_waveform",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "software.acoustic_model.array_geometry",
+      "level": 0
+    },
+    {
+      "source": "v5/scripts/validate.py",
+      "module": "software.acoustic_model.phase_lut_generator",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/array_geometry.py",
+      "module": "math",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/array_geometry.py",
+      "module": "transducer",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "matplotlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "matplotlib.pyplot",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "matplotlib.patches",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "array_geometry",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "phase_lut_generator",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/export_geometry.py",
+      "module": "visualize_field",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/field_solver.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/field_solver.py",
+      "module": "scipy.special",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/particle_model.py",
+      "module": "dataclasses",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/particle_model.py",
+      "module": "math",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_lut_generator.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_lut_generator.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_lut_generator.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_lut_generator.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_lut_generator.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_lut_generator.py",
+      "module": "array_geometry",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_lut_generator.py",
+      "module": "phase_solver",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_lut_generator.py",
+      "module": "standing_wave",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/phase_solver.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/standing_wave.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/standing_wave.py",
+      "module": "phase_solver",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/transducer.py",
+      "module": "dataclasses",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/transducer.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "dataclasses",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "matplotlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "matplotlib.pyplot",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "scipy.ndimage",
+      "level": 0
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "array_geometry",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "field_solver",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "phase_solver",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "standing_wave",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "particle_model",
+      "level": 1
+    },
+    {
+      "source": "v5/software/acoustic_model/visualize_field.py",
+      "module": "phase_lut_generator",
+      "level": 1
+    },
+    {
+      "source": "v5/software/board/protocol.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/software/board/protocol.py",
+      "module": "zlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/board/protocol.py",
+      "module": null,
+      "level": 1
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "re",
+      "level": 0
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "secrets",
+      "level": 0
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "time",
+      "level": 0
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": null,
+      "level": 1
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "protocol",
+      "level": 1
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "control",
+      "level": 2
+    },
+    {
+      "source": "v5/software/board/serial_transport.py",
+      "module": "serial",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/config.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/config.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/database.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/database.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/database.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/database.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "config",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "synthetic",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "pipeline",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "database",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/experiment.py",
+      "module": "signal",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/geometry.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/geometry.py",
+      "module": "scipy.spatial.transform",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/geometry.py",
+      "module": "scipy.optimize",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/pipeline.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/pipeline.py",
+      "module": "geometry",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/pipeline.py",
+      "module": "signal",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/pipeline.py",
+      "module": "sound_speed",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/pipeline.py",
+      "module": "characterization.response",
+      "level": 2
+    },
+    {
+      "source": "v5/software/calibration/pipeline.py",
+      "module": "acoustic_model.phase_solver",
+      "level": 2
+    },
+    {
+      "source": "v5/software/calibration/pipeline.py",
+      "module": "warnings",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/pipeline.py",
+      "module": "scipy.spatial.transform",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/report.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/report.py",
+      "module": "csv",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/report.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/report.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/report.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/report.py",
+      "module": "experiment",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/report.py",
+      "module": "database",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/signal.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/signal.py",
+      "module": "scipy.signal",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/signal.py",
+      "module": "scipy.optimize",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/sound_speed.py",
+      "module": "math",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/synthetic.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/synthetic.py",
+      "module": "scipy.spatial.transform",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/synthetic.py",
+      "module": "geometry",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/synthetic.py",
+      "module": "sound_speed",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/synthetic.py",
+      "module": "signal",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/visualize.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/visualize.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/visualize.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/visualize.py",
+      "module": "matplotlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/visualize.py",
+      "module": "matplotlib.pyplot",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/visualize.py",
+      "module": "scipy.spatial.transform",
+      "level": 0
+    },
+    {
+      "source": "v5/software/calibration/visualize.py",
+      "module": "geometry",
+      "level": 1
+    },
+    {
+      "source": "v5/software/calibration/visualize.py",
+      "module": "pipeline",
+      "level": 1
+    },
+    {
+      "source": "v5/software/characterization/response.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/control/host.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/software/control/host.py",
+      "module": "time",
+      "level": 0
+    },
+    {
+      "source": "v5/software/control/host.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/control/host.py",
+      "module": null,
+      "level": 1
+    },
+    {
+      "source": "v5/software/control/host.py",
+      "module": "calibration.pipeline",
+      "level": 2
+    },
+    {
+      "source": "v5/software/motion/commands.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/commands.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/commands.py",
+      "module": "zlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "threading",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "time",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "typing",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "commands",
+      "level": 1
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "trajectory",
+      "level": 1
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "trap_solver",
+      "level": 1
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "transport",
+      "level": 1
+    },
+    {
+      "source": "v5/software/motion/motion_controller.py",
+      "module": "control.host",
+      "level": 2
+    },
+    {
+      "source": "v5/software/motion/trajectory.py",
+      "module": "math",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trajectory.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trajectory.py",
+      "module": "scipy.interpolate",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trajectory.py",
+      "module": "workspace",
+      "level": 1
+    },
+    {
+      "source": "v5/software/motion/transport.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/transport.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/transport.py",
+      "module": "threading",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/transport.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/transport.py",
+      "module": "control",
+      "level": 2
+    },
+    {
+      "source": "v5/software/motion/transport.py",
+      "module": "trap_solver",
+      "level": 1
+    },
+    {
+      "source": "v5/software/motion/transport.py",
+      "module": "board.serial_transport",
+      "level": 2
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "scipy.special",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "scipy.spatial.transform",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "workspace",
+      "level": 1
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "calibration.geometry",
+      "level": 2
+    },
+    {
+      "source": "v5/software/motion/trap_solver.py",
+      "module": "calibration.pipeline",
+      "level": 2
+    },
+    {
+      "source": "v5/software/motion/workspace.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/workspace.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/motion/workspace.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/acquisition.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/acquisition.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/acquisition.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/acquisition.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/acquisition.py",
+      "module": "calibration.signal",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/acquisition.py",
+      "module": "sparse",
+      "level": 1
+    },
+    {
+      "source": "v5/software/prepcb/c_session.py",
+      "module": "ctypes",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/c_session.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/c_session.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/c_session.py",
+      "module": "secrets",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/c_session.py",
+      "module": "threading",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/c_session.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/c_session.py",
+      "module": "board.protocol",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/c_session.py",
+      "module": "protocol",
+      "level": 1
+    },
+    {
+      "source": "v5/software/prepcb/field.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/field.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/field.py",
+      "module": "scipy.special",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/field.py",
+      "module": "motion.trap_solver",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/field.py",
+      "module": "motion.workspace",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/field.py",
+      "module": "calibration.pipeline",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/field.py",
+      "module": "temperature",
+      "level": 1
+    },
+    {
+      "source": "v5/software/prepcb/protocol.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/protocol.py",
+      "module": "board.protocol",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/protocol.py",
+      "module": "serial.tools",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/reference.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/reference.py",
+      "module": "calibration.config",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/reference.py",
+      "module": "calibration.geometry",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/reference.py",
+      "module": "sparse",
+      "level": 1
+    },
+    {
+      "source": "v5/software/prepcb/sparse.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/sparse.py",
+      "module": "scipy.optimize",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/sparse.py",
+      "module": "calibration.geometry",
+      "level": 2
+    },
+    {
+      "source": "v5/software/prepcb/temperature.py",
+      "module": "dataclasses",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/temperature.py",
+      "module": "functools",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/temperature.py",
+      "module": "math",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/temperature.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/temperature.py",
+      "module": "scipy.integrate",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/user_path.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/user_path.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/user_path.py",
+      "module": "math",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/user_path.py",
+      "module": "datetime",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/user_path.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/user_path.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/prepcb/user_path.py",
+      "module": "motion.trap_solver",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "queue",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "threading",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "tkinter",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "tkinter",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "calibration.config",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "motion.workspace",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "motion.motion_controller",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "motion.transport",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "motion.commands",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "motion.trap_solver",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "motion.trajectory",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "shutil",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "PIL",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "ctypes",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "time",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/app.py",
+      "module": "ctypes",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/capture_window.py",
+      "module": "ctypes",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/capture_window.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/capture_window.py",
+      "module": "ctypes",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/capture_window.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/capture_window.py",
+      "module": "PIL",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "argparse",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "queue",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "threading",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "time",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "tkinter",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "tkinter",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "prepcb.user_path",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "prepcb.protocol",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "prepcb.c_session",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "prepcb.temperature",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "calibration.geometry",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "calibration.config",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "motion.transport",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "motion.trap_solver",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "motion.workspace",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "prepcb.field",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "app",
+      "level": 1
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "prepcb.reference",
+      "level": 2
+    },
+    {
+      "source": "v5/software/ui/prepcb_app.py",
+      "module": "prepcb.sparse",
+      "level": 2
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "dataclasses",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "software.acoustic_model.array_geometry",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "software.acoustic_model.field_solver",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "software.acoustic_model.phase_solver",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "software.acoustic_model.standing_wave",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "software.acoustic_model.phase_lut_generator",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_acoustic_model.py",
+      "module": "software.acoustic_model.particle_model",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_project_gate.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_project_gate.py",
+      "module": "tempfile",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_project_gate.py",
+      "module": "tkinter",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_project_gate.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "ctypes",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "os",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "subprocess",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "software.board",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "software.board.protocol",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_board_transport.py",
+      "module": "software.board.serial_transport",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "tempfile",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "threading",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.motion.workspace",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.motion.trajectory",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.motion.trap_solver",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.motion.commands",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.motion.motion_controller",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.motion.transport",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.calibration.config",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.control.host",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.acoustic_model.transducer",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.acoustic_model.field_solver",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_motion.py",
+      "module": "software.acoustic_model.visualize_field",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_potential_proxy.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_potential_proxy.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_potential_proxy.py",
+      "module": "software.acoustic_model.array_geometry",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_potential_proxy.py",
+      "module": "software.acoustic_model.standing_wave",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_potential_proxy.py",
+      "module": "software.acoustic_model.visualize_field",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "math",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "tempfile",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.prepcb.temperature",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.prepcb.sparse",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.prepcb.safety",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.prepcb.user_path",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.prepcb.protocol",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.calibration.config",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.calibration.geometry",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.prepcb.c_session",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.prepcb.c_session",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.board.protocol",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb.py",
+      "module": "software.board.protocol",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb_transfer.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb_transfer.py",
+      "module": "tempfile",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb_transfer.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb_transfer.py",
+      "module": "struct",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb_transfer.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb_transfer.py",
+      "module": "software.prepcb.c_session",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb_transfer.py",
+      "module": "software.prepcb.acquisition",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_prepcb_transfer.py",
+      "module": "software.prepcb.protocol",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "software.acoustic_model.array_geometry",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "software.acoustic_model.export_geometry",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "software.acoustic_model.phase_lut_generator",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "software.acoustic_model.field_solver",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_radiating_geometry.py",
+      "module": "software.acoustic_model.standing_wave",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_repository_audit.py",
+      "module": "hashlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_repository_audit.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_repository_audit.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_repository_audit.py",
+      "module": "tempfile",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_repository_audit.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_repository_audit.py",
+      "module": "check_repository",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "copy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "tempfile",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "numpy",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.calibration.config",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.calibration.geometry",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.calibration.sound_speed",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.calibration.signal",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.characterization.response",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.calibration.database",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.calibration.synthetic",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.calibration.pipeline",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.control.host",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_self_calibration.py",
+      "module": "software.control",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_simulator_timeout.py",
+      "module": "sys",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_simulator_timeout.py",
+      "module": "tempfile",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_simulator_timeout.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_simulator_timeout.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_simulator_timeout.py",
+      "module": "software.motion.transport",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_ui_evidence.py",
+      "module": "json",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_ui_evidence.py",
+      "module": "pathlib",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_ui_evidence.py",
+      "module": "tempfile",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_ui_evidence.py",
+      "module": "unittest",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_ui_evidence.py",
+      "module": "software.motion.trap_solver",
+      "level": 0
+    },
+    {
+      "source": "v5/tests/test_ui_evidence.py",
+      "module": "software.ui.app",
+      "level": 0
+    }
+  ],
+  "includes": [
+    {
+      "source": "v5/firmware/ps_service/prepcb_service.c",
+      "include": "prepcb_service.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/prepcb_service.c",
+      "include": "math.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/prepcb_service.c",
+      "include": "string.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/prepcb_service.h",
+      "include": "service.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/service.c",
+      "include": "service.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/service.c",
+      "include": "string.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/service.c",
+      "include": "prepcb_service.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/service.h",
+      "include": "stdint.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/service.h",
+      "include": "stddef.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/service.h",
+      "include": "generated.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/zynq_service_main.c",
+      "include": "service.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/zynq_service_main.c",
+      "include": "xuartps.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/zynq_service_main.c",
+      "include": "xil_io.h"
+    },
+    {
+      "source": "v5/firmware/ps_service/zynq_service_main.c",
+      "include": "xtime_l.h"
+    },
+    {
+      "source": "v5/rtl/control/axi_native_bridge.sv",
+      "include": "transport_valid.svh"
+    },
+    {
+      "source": "v5/rtl/sono_digital_system.sv",
+      "include": "registers.svh"
+    },
+    {
+      "source": "v5/tb/tb_calibration.sv",
+      "include": "registers.svh"
+    },
+    {
+      "source": "v5/tb/tb_phase_equivalence.sv",
+      "include": "registers.svh"
+    },
+    {
+      "source": "v5/tests/prepcb_fixture.c",
+      "include": "prepcb_service.h"
+    },
+    {
+      "source": "v5/tests/prepcb_fixture.c",
+      "include": "string.h"
+    },
+    {
+      "source": "v5/tests/prepcb_fixture.c",
+      "include": "math.h"
+    },
+    {
+      "source": "v5/tests/prepcb_host.c",
+      "include": "prepcb_service.h"
+    },
+    {
+      "source": "v5/tests/prepcb_host.c",
+      "include": "stdio.h"
+    },
+    {
+      "source": "v5/tests/prepcb_host.c",
+      "include": "stdlib.h"
+    },
+    {
+      "source": "v5/tests/prepcb_host.c",
+      "include": "string.h"
+    },
+    {
+      "source": "v5/tests/ps_service_harness.c",
+      "include": "service.h"
+    },
+    {
+      "source": "v5/tests/ps_service_harness.c",
+      "include": "string.h"
+    }
+  ],
+  "all_runtime_assets": [
+    "v5/.gitignore",
+    "v5/MIGRATION_FROM_v2.md",
+    "v5/README.md",
+    "v5/VERSION_MANIFEST.md",
+    "v5/config/SIGNAL_CONTRACT.json",
+    "v5/config/acoustic_baseline.json",
+    "v5/config/ax7020_ooc.tcl",
+    "v5/config/ax7020_power_budget.json",
+    "v5/config/board_facts.json",
+    "v5/config/board_smoke_profile.json",
+    "v5/config/board_transport_profile.json",
+    "v5/config/document_reference_repairs.json",
+    "v5/config/hardware_parts.json",
+    "v5/config/inheritance_manifest.json",
+    "v5/config/motion_profile.json",
+    "v5/config/ooc_source_list.txt",
+    "v5/config/register_map.json",
+    "v5/config/system_baseline.json",
+    "v5/config/transport_protocol.json",
+    "v5/firmware/ps_service/generated.h",
+    "v5/firmware/ps_service/prepcb_service.c",
+    "v5/firmware/ps_service/prepcb_service.h",
+    "v5/firmware/ps_service/service.c",
+    "v5/firmware/ps_service/service.h",
+    "v5/firmware/ps_service/zynq_service_main.c",
+    "v5/hardware/ax7020/README.md",
+    "v5/hardware/ax7020/sources.json",
+    "v5/hardware/bom/BOM_LOCK.md",
+    "v5/hardware/bom/BOM_MASTER.csv",
+    "v5/hardware/bom/BOM_MASTER.xlsx",
+    "v5/hardware/bom/README.md",
+    "v5/hardware/bom/import_manifest.json",
+    "v5/hardware/bom/prototype_bom.md",
+    "v5/hardware/bom/source_sheets/00_Executive.csv",
+    "v5/hardware/bom/source_sheets/01_BOM_Master.csv",
+    "v5/hardware/bom/source_sheets/02_ArrayPCB_x2.csv",
+    "v5/hardware/bom/source_sheets/03_ADC_Calibration.csv",
+    "v5/hardware/bom/source_sheets/04_Cables_Power.csv",
+    "v5/hardware/bom/source_sheets/05_Passive_Values.csv",
+    "v5/hardware/bom/source_sheets/06_Procurement_Alternates.csv",
+    "v5/hardware/bom/source_sheets/07_Codex_Config.csv",
+    "v5/hardware/bom/source_sheets/08_Sources.csv",
+    "v5/hardware/bom/submissions/2026-10-08/BOM_AX7020_NU40C10T_2026-10-08.xlsx",
+    "v5/hardware/bom/submissions/2026-10-08/github_sync.json",
+    "v5/hardware/bom/submissions/2026-10-08/submission.json",
+    "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx",
+    "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx.inspect.ndjson",
+    "v5/hardware/bom/working/2026-10-09/README.md",
+    "v5/hardware/bom/working/2026-10-09/artifact_inspection.ndjson",
+    "v5/hardware/bom/working/2026-10-09/changes.json",
+    "v5/hardware/bom/working/2026-10-09/prepcb/BOM_AX7020_NU40C10T_PREPCB_WORKING.xlsx",
+    "v5/hardware/characterization/object_measurements.csv",
+    "v5/hardware/characterization/transducer_characterization.md",
+    "v5/hardware/characterization/transducer_measurements.csv",
+    "v5/hardware/constraints/README.md",
+    "v5/hardware/constraints/ax7020_candidate.xdc",
+    "v5/hardware/constraints/core_ooc.xdc",
+    "v5/hardware/integration_candidates/20261009/ADC_CANDIDATE_REVIEW.md",
+    "v5/hardware/integration_candidates/20261009/SAFETY_AND_POWER.md",
+    "v5/hardware/integration_candidates/20261009/SCHEMATIC_PREPARATION.md",
+    "v5/hardware/integration_candidates/20261009/TIMING_BUDGET.md",
+    "v5/hardware/integration_candidates/20261009/ad7606c_candidate_rom.sv",
+    "v5/hardware/integration_candidates/20261009/adc_candidate.json",
+    "v5/hardware/integration_candidates/20261009/connector_pinmap_candidate.csv",
+    "v5/hardware/integration_candidates/20261009/current_hardware_scope.json",
+    "v5/hardware/integration_candidates/20261009/gpio_budget.json",
+    "v5/hardware/integration_candidates/20261009/official_ps_reference.json",
+    "v5/hardware/integration_candidates/20261009/package_procurement_audit.csv",
+    "v5/hardware/integration_candidates/20261009/tb_adc_candidate.sv",
+    "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+    "v5/hardware/mechanical/geometry_10mm/array_dimensions.png",
+    "v5/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+    "v5/hardware/mechanical/geometry_10mm/coordinates_100mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/coordinates_105mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/coordinates_110mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/coordinates_115mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/coordinates_90mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/coordinates_95mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/coordinates_nominal.csv",
+    "v5/hardware/mechanical/geometry_10mm/coordinates_nominal.json",
+    "v5/hardware/mechanical/geometry_10mm/geometry_summary.json",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_focus_100mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_focus_105mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_focus_110mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_focus_115mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_focus_90mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_focus_95mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_100mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_105mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_110mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_115mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_90mm.csv",
+    "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_95mm.csv",
+    "v5/hardware/mechanical/radiating_surface_geometry.md",
+    "v5/hardware/pcb/README.md",
+    "v5/hardware/prepcb/AX7020_REV3_PINMAP.csv",
+    "v5/hardware/prepcb/bom_inputs.json",
+    "v5/hardware/transducers/10mm_supplier_reference.md",
+    "v5/hardware/transducers/user_supplied/10mm_supplier_user.png",
+    "v5/requirements-board.txt",
+    "v5/requirements-lock.txt",
+    "v5/requirements.txt",
+    "v5/rtl/acquisition/ad7606b_if.sv",
+    "v5/rtl/acquisition/adc_serial.sv",
+    "v5/rtl/board/prepcb_pl.v",
+    "v5/rtl/board/sono_board_smoke_pl.sv",
+    "v5/rtl/calibration/burst_generator.sv",
+    "v5/rtl/calibration/calibration_scheduler.sv",
+    "v5/rtl/control/axi_native_bridge.sv",
+    "v5/rtl/control/prepcb_supervisor.sv",
+    "v5/rtl/control/safety_controller.sv",
+    "v5/rtl/generated/registers.svh",
+    "v5/rtl/generated/transport_valid.svh",
+    "v5/rtl/motion/motion_queue.sv",
+    "v5/rtl/motion/prepcb_frame_mailbox.sv",
+    "v5/rtl/output/channel_waveform.sv",
+    "v5/rtl/output/serializer.sv",
+    "v5/rtl/output/sono_array_interface.sv",
+    "v5/rtl/phase/phase_bank.sv",
+    "v5/rtl/sono_axi_system.sv",
+    "v5/rtl/sono_core.sv",
+    "v5/rtl/sono_digital_system.sv",
+    "v5/rtl/sono_motion_system.sv",
+    "v5/rtl/sono_top.sv",
+    "v5/rtl/timing/board_clock_candidate.sv",
+    "v5/rtl/timing/ultrasonic_timebase.sv",
+    "v5/scripts/audit_bom.py",
+    "v5/scripts/ax7020_package_review.tcl",
+    "v5/scripts/ax7020_ps_readonly.tcl",
+    "v5/scripts/ax7020_readonly.tcl",
+    "v5/scripts/ax7020_results_gui.tcl",
+    "v5/scripts/board_transport_gate.py",
+    "v5/scripts/build_prepcb_bom.mjs",
+    "v5/scripts/build_prepcb_platform.tcl",
+    "v5/scripts/capture_board_integration_interaction.py",
+    "v5/scripts/check_board_integration.py",
+    "v5/scripts/check_migration.py",
+    "v5/scripts/check_prepcb_preservation.py",
+    "v5/scripts/check_repository.py",
+    "v5/scripts/check_structure.py",
+    "v5/scripts/check_waveform.py",
+    "v5/scripts/check_workspace_migration.py",
+    "v5/scripts/create_project.tcl",
+    "v5/scripts/curate_ax7020_evidence.py",
+    "v5/scripts/generate_system.py",
+    "v5/scripts/generate_transport.py",
+    "v5/scripts/motion_gate.py",
+    "v5/scripts/pre_pcb_checks.py",
+    "v5/scripts/prepare_ax7020_candidates.py",
+    "v5/scripts/prepare_prepcb.py",
+    "v5/scripts/prepcb_bom_inputs.py",
+    "v5/scripts/prepcb_host_gate.py",
+    "v5/scripts/prepcb_rtl_gate.py",
+    "v5/scripts/prepcb_system_gate.py",
+    "v5/scripts/prepcb_top_gate.py",
+    "v5/scripts/ps_platform_preflight.py",
+    "v5/scripts/reopen_ooc.tcl",
+    "v5/scripts/review_prepcb_drc.tcl",
+    "v5/scripts/revise_ax7020_bom.mjs",
+    "v5/scripts/run_baseline.ps1",
+    "v5/scripts/run_baseline.py",
+    "v5/scripts/run_candidate_regression.py",
+    "v5/scripts/run_motion_app.ps1",
+    "v5/scripts/run_prepcb.py",
+    "v5/scripts/self_calibration_gate.py",
+    "v5/scripts/timing_equivalence.py",
+    "v5/scripts/validate.py",
+    "v5/simulation/README.md",
+    "v5/simulation/fixtures/calibration_reference.json",
+    "v5/simulation/golden/burst_generator.sv",
+    "v5/simulation/golden/calibration_scheduler.sv",
+    "v5/simulation/golden/motion_queue.sv",
+    "v5/software/__init__.py",
+    "v5/software/acoustic_model/__init__.py",
+    "v5/software/acoustic_model/array_geometry.py",
+    "v5/software/acoustic_model/export_geometry.py",
+    "v5/software/acoustic_model/field_solver.py",
+    "v5/software/acoustic_model/particle_model.py",
+    "v5/software/acoustic_model/phase_lut_generator.py",
+    "v5/software/acoustic_model/phase_solver.py",
+    "v5/software/acoustic_model/standing_wave.py",
+    "v5/software/acoustic_model/transducer.py",
+    "v5/software/acoustic_model/visualize_field.py",
+    "v5/software/board/__init__.py",
+    "v5/software/board/generated.py",
+    "v5/software/board/protocol.py",
+    "v5/software/board/serial_transport.py",
+    "v5/software/calibration/__init__.py",
+    "v5/software/calibration/config.py",
+    "v5/software/calibration/database.py",
+    "v5/software/calibration/experiment.py",
+    "v5/software/calibration/geometry.py",
+    "v5/software/calibration/pipeline.py",
+    "v5/software/calibration/report.py",
+    "v5/software/calibration/signal.py",
+    "v5/software/calibration/sound_speed.py",
+    "v5/software/calibration/synthetic.py",
+    "v5/software/calibration/visualize.py",
+    "v5/software/characterization/__init__.py",
+    "v5/software/characterization/response.py",
+    "v5/software/control/__init__.py",
+    "v5/software/control/host.py",
+    "v5/software/control/registers.py",
+    "v5/software/motion/__init__.py",
+    "v5/software/motion/commands.py",
+    "v5/software/motion/motion_controller.py",
+    "v5/software/motion/trajectory.py",
+    "v5/software/motion/transport.py",
+    "v5/software/motion/trap_solver.py",
+    "v5/software/motion/workspace.py",
+    "v5/software/prepcb/__init__.py",
+    "v5/software/prepcb/acquisition.py",
+    "v5/software/prepcb/c_session.py",
+    "v5/software/prepcb/field.py",
+    "v5/software/prepcb/protocol.py",
+    "v5/software/prepcb/reference.py",
+    "v5/software/prepcb/safety.py",
+    "v5/software/prepcb/sparse.py",
+    "v5/software/prepcb/temperature.py",
+    "v5/software/prepcb/user_path.py",
+    "v5/software/ui/__init__.py",
+    "v5/software/ui/app.py",
+    "v5/software/ui/capture_window.py",
+    "v5/software/ui/prepcb_app.py",
+    "v5/tb/ad7606b_model.sv",
+    "v5/tb/tb_array_interface.sv",
+    "v5/tb/tb_axi_native_bridge.sv",
+    "v5/tb/tb_axi_system.sv",
+    "v5/tb/tb_bad_bandwidth.sv",
+    "v5/tb/tb_board_smoke_pl.sv",
+    "v5/tb/tb_burst_equivalence.sv",
+    "v5/tb/tb_calibration.sv",
+    "v5/tb/tb_core.sv",
+    "v5/tb/tb_motion.sv",
+    "v5/tb/tb_motion_faults.sv",
+    "v5/tb/tb_motion_queue_equivalence.sv",
+    "v5/tb/tb_phase_equivalence.sv",
+    "v5/tb/tb_phase_map.sv",
+    "v5/tb/tb_prepcb.sv",
+    "v5/tb/tb_prepcb_system.sv",
+    "v5/tb/tb_scheduler_equivalence.sv",
+    "v5/tb/tb_serializer_fault.sv",
+    "v5/tb/tb_serializer_throughput.sv",
+    "v5/tb/tb_system.sv",
+    "v5/tests/prepcb_fixture.c",
+    "v5/tests/prepcb_host.c",
+    "v5/tests/ps_service_harness.c",
+    "v5/tests/test_acoustic_model.py",
+    "v5/tests/test_board_project_gate.py",
+    "v5/tests/test_board_transport.py",
+    "v5/tests/test_motion.py",
+    "v5/tests/test_potential_proxy.py",
+    "v5/tests/test_prepcb.py",
+    "v5/tests/test_prepcb_transfer.py",
+    "v5/tests/test_radiating_geometry.py",
+    "v5/tests/test_repository_audit.py",
+    "v5/tests/test_self_calibration.py",
+    "v5/tests/test_simulator_timeout.py",
+    "v5/tests/test_ui_evidence.py"
+  ],
+  "ooc_sources": [
+    "rtl/sono_core.sv",
+    "rtl/sono_top.sv",
+    "rtl/timing/board_clock_candidate.sv",
+    "rtl/timing/ultrasonic_timebase.sv",
+    "rtl/output/sono_array_interface.sv",
+    "rtl/control/safety_controller.sv",
+    "rtl/acquisition/ad7606b_if.sv",
+    "rtl/acquisition/adc_serial.sv",
+    "rtl/control/axi_native_bridge.sv",
+    "rtl/calibration/burst_generator.sv",
+    "rtl/calibration/calibration_scheduler.sv",
+    "rtl/output/channel_waveform.sv",
+    "rtl/motion/motion_queue.sv",
+    "rtl/phase/phase_bank.sv",
+    "rtl/output/serializer.sv",
+    "rtl/sono_digital_system.sv",
+    "rtl/sono_motion_system.sv",
+    "rtl/sono_axi_system.sv"
+  ],
+  "active_reference_occurrences": [
+    {
+      "source": ".vscode/settings.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "AGENTS.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "AI-interaction-memory/codex/S-20261009-1253-codex-migration.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "AI-interaction-memory/codex/instructions/v5_prepcb_full_system_20261009.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "AI-interaction-memory/codex/instructions/v5_workspace_migration_20261009.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "AI-interaction-memory/tool-flow/T-20261009-003__workspace-migration.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "AI-interaction-memory/tool-flow/T-20261009-004__prepcb.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "CHANGELOG.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/VERSION_STATE.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/context-checkpoints/CP-20261009-003__v5__candidate-validated.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/context-checkpoints/CP-20261009-004__v5__draft-published.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/migration/ACTIVE_TREE_ALLOWLIST.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/migration/ARCHIVE_COVERAGE.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/migration/DELIVERY_MANIFEST.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/migration/EXECUTION_CONTRACT.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/migration/OLD_TRACKED_MANIFEST.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/migration/PUBLICATION_RECEIPT.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "shared/migration/ROLLBACK_PLAN.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "v5/README.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "v5/docs/motion/INTERACTIVE_CONTROL_ARCHITECTURE.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "v5/evidence/migration/20261009/final_staged_review.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "v5/evidence/migration/20261009/search_isolation.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "v5/evidence/migration/20261009/staged_audit.json",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "v5/hardware/pcb/README.md",
+      "archive_metadata_or_document_reference": true
+    },
+    {
+      "source": "v5/scripts/check_workspace_migration.py",
+      "archive_metadata_or_document_reference": true
+    }
+  ],
+  "static_claim": "Dynamic paths require actual clean-clone execution; textual absence alone is not proof"
+}

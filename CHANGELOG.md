@@ -20,3 +20,5 @@ CP006 and full report record all holds; no physicaloperation or automaticmainmer
 ## 2026-10-09 — v5 Historical project candidate
 
 Audited3911historicalGitpathmoves preservingbody/blob/mode; currentv5/shared/openProblems remain. Exact Historical project root, explicitreadban, currentsearchallowlist andmetadata-onlyCI. Before171-test/four-run baselinePASS;afterindependentclonevalidationinprogress. Samev5;main/hardware/manufacturingpromotionrequiresseparateapproval.
+
+HistoricalcandidateafterverificationPASS:171tests/3696×4/newprePCBextra/three nativeOOC+reopens/history-absentnewvenv;seeCP008andcurrentcleanupFINAL_VERIFICATION. No hardware/mainpromotion.

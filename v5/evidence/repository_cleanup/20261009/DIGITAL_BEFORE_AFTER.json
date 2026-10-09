@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "before_source": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+  "after_source": "3e788f4a2763c0354ca66d3836d0709dcf9f0107",
+  "before_tests": 171,
+  "after_tests": 171,
+  "frames_per_run": 3696,
+  "runs_each": 4,
+  "tools": [
+    "3×Icarus",
+    "1×Vivado2025.2 XSim"
+  ],
+  "same_inputs_seeds_contract": true,
+  "exact_canonical_hashes_equal": true,
+  "determinism": {
+    "status": "PASS",
+    "runs": 4,
+    "independent_simulators": [
+      "Icarus",
+      "Vivado 2025.2 XSim"
+    ],
+    "comparison": "exact canonical JSON and ACK hashes; wall timestamps excluded",
+    "hashes": [
+      [
+        "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+        "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+        "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917",
+        "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1"
+      ],
+      [
+        "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+        "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+        "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694",
+        "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef"
+      ]
+    ]
+  },
+  "all_c_axi_safety_equivalence": "PASS_BOTH_ENVIRONMENTS",
+  "new_prepcb_full": "PASS",
+  "temperature_maps": 160,
+  "channel_words": 20480,
+  "sparse": {
+    "status": "PASS",
+    "fits": 10,
+    "seeds": 5,
+    "initial_guesses_per_fit": 5,
+    "holdout_paths_per_fit": 384,
+    "maximum_translation_error_mm": 0.0022751900215110463,
+    "maximum_rotation_error_deg": 0.0030915293626549434,
+    "maximum_holdout_error_ns": 10.236393363591972,
+    "rejection_cases": {
+      "missing_rx": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]",
+      "ambiguous_phase": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]",
+      "low_snr": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]"
+    },
+    "robust_rejected": 3,
+    "deterministic_repeat": true
+  },
+  "gui_cases": 5,
+  "gui_frames": 375,
+  "gui_frames_per_case": [
+    37,
+    40,
+    113,
+    111,
+    74
+  ],
+  "gui_ack_path_maps_equal_prior_accepted_source": true,
+  "actual_top": {
+    "status": "PASS",
+    "classification": "SIMULATED_ACTUAL_NEW_TOP_NOT_BOARD",
+    "maps_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+    "runs": [
+      {
+        "simulator": "icarus",
+        "frames": 37,
+        "ack_sha256": "84db46a42298ea8f89938a7a23dd7dd60a5eabd44b375d10471f583c84abac8f"
+      },
+      {
+        "simulator": "xsim",
+        "frames": 37,
+        "ack_sha256": "84db46a42298ea8f89938a7a23dd7dd60a5eabd44b375d10471f583c84abac8f"
+      }
+    ]
+  },
+  "supervisor": {
+    "status": "PASS",
+    "classification": "SIMULATED_NOT_PHYSICAL_FAILSAFE",
+    "commands": [
+      {
+        "label": "compile",
+        "exit_code": 0
+      },
+      {
+        "label": "icarus",
+        "exit_code": 0
+      },
+      {
+        "label": "xvlog",
+        "exit_code": 0
+      },
+      {
+        "label": "xelab",
+        "exit_code": 0
+      },
+      {
+        "label": "xsim",
+        "exit_code": 0
+      }
+    ]
+  },
+  "history_absent": true,
+  "hardware_verified": false
+}

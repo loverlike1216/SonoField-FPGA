@@ -25,3 +25,6 @@ physicalcutoff remain OPEN. Main and migrationPR1 remain unmerged pending user.
 
 
 Historical isolation candidate: Gate4 validation/publication in progress; no known fileloss/blob/mode mismatch. Gate7 blocked by pending explicit user main approval. Existing PC-B01..13 and both open v5 Problems unchanged. No new stale BLOCKERS_ENGINEERING authority is created.
+
+
+Historicalmigrationblocking0/critical0/sourcefileloss0/bodyhashmismatch0/currentruntimehistoricalsources0. Gate6publication/CIreceipt andexplicituser mainapprovalpending;13existingphysicalgatesunchanged. Gate7notexecuted.

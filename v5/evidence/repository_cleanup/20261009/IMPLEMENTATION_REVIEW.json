@@ -1,0 +1,20 @@
+{
+  "status": "PASS_SCOPE_REVIEW",
+  "scan_roots": [
+    "v5/rtl",
+    "v5/software",
+    "v5/firmware",
+    "v5/scripts",
+    "v5/tests"
+  ],
+  "matches": 50,
+  "dispositions": [
+    "disabled matches are actual safety/UI states and negative capability gates",
+    "C harness is explicitly host-fixture simulation, not physical PS/PL/UART",
+    "Package-review stub is preexisting bounded silicon/package inspection, not core runtime or this task hardware evidence",
+    "Existing skip CLI flags mark PARTIAL and are never used by the full runner; actual fresh commands have no skip arguments",
+    "No new implementation bypass/TODO/mock/golden or threshold changes in this task; all core blobs preserved"
+  ],
+  "physical_backend": "NOT_QUALIFIED; no fake hardware acceptance",
+  "raw_search": "Local audit record; observable tool flow and unchanged source identities retained"
+}

@@ -23,3 +23,16 @@ Same v5, new actual user authorization. Migration records above remain historica
 | Current message/hash manifest | [session](sessions/S-20261009-prepcb.json) | PARTIAL | AUDIT |
 
 External ChatGPT remains BLOCKED; no subagent/Work/independent reviewer output claimed.
+
+## Current Historical project isolation session
+
+Same v5; actual current user Gate0–7 path-isolation instruction. Earlier complete v5 authorization remains valid.
+
+| Source | Record | Status | Impact |
+|---|---|---|---|
+| Codex current task | [actual conversation](codex/S-20261009-historical-project.md) | PARTIAL | IMPLEMENTATION_INPUT |
+| CLI/Python/C/EDA/Git actual tools | [hashed tool flow](tool-flow/T-20261009-005__historical-project.json) | PARTIAL | VALIDATION_INPUT |
+| Actual historical-isolation instruction | [canonical input](codex/instructions/v5_historical_project_20261009.md) | ACTUAL_DOCUMENT | IMPLEMENTATION_INPUT |
+| Current message/hash manifest | [session](sessions/S-20261009-historical-project.json) | PARTIAL | AUDIT |
+
+External ChatGPT remains BLOCKED; no subagent/Work/independent reviewer output claimed.
