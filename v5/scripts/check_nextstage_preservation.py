@@ -5,7 +5,7 @@ import hashlib, json, subprocess
 ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE = ROOT/'v5/evidence/next_stage/20261010'
 ALLOWED = {'README.md', 'AGENTS.md', '.gitignore', '.gitattributes', '.github/workflows/workspace-integrity.yml',
-    'CHANGELOG.md', 'AI-interaction-memory/INDEX.md', 'AI-chat-memory/INDEX.md',
+    'CHANGELOG.md', 'AI-interaction-memory/INDEX.md', 'AI-chat-memory/INDEX.md', 'AI-problem/INDEX.md',
     'AI-problem/decision/P-20261008-001__adc-40khz-bandwidth.md',
     'v5/config/inheritance_manifest.json', 'v5/scripts/check_prepcb_preservation.py'}
 ALLOWED.update('shared/'+name for name in ('PROJECT_STATE.md', 'PROJECT_STATE.json', 'VERSION_STATE.json',
