@@ -4,7 +4,7 @@
 
 Stage: INTERACTIVE_LEVITATION_AND_TRAJECTORY_CONTROL. Project version stays v5.
 Scope: **open-loop commanded trap position**, never measured particle position.
-Validation status is recorded in `evidence/engineering/motion` at repository root;
+Validation status is recorded in `history_old/evidence/engineering/motion` as a frozen historical reference (explicit history access only); current validation is in `v5/evidence/migration/20261009/`;
 this design document does not grant independent acceptance.
 
 ## Data and timing ownership

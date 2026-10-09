@@ -5,12 +5,17 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);args=parser.parse_args()
-    out=(ROOT/args.output).resolve();out.mkdir(parents=True,exist_ok=True)
+    out=(ROOT/args.output).resolve()
+    if not out.is_relative_to(ROOT/'evidence'):raise ValueError('Baseline output must be inside this v5 evidence directory')
+    out.mkdir(parents=True,exist_ok=True)
     if (out/'summary.json').exists():raise RuntimeError('Use a fresh evidence directory; never overwrite an earlier result')
     env=os.environ.copy();env['PYTHONUTF8']='1';env['PYTHONIOENCODING']='utf-8'
+    scratch=ROOT/'build/migration_scratch'/out.name;scratch.mkdir(parents=True,exist_ok=True)
+    env['TMP']=env['TEMP']=str(scratch);env['MPLCONFIGDIR']=str(scratch/'matplotlib')
     records=[];summary={'status':'RUNNING','active_version':'v5','platform':'ALINX AX7020','commands':records,
         'classification':'DIGITAL_BASELINE_NOT_BOARD_VERIFICATION','hardware_programmed':False,
-        'started_at':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+        'started_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        'runtime':{'source_root':str(ROOT),'python_executable':sys.executable,'python_prefix':sys.prefix,'cwd':str(ROOT),'temp_root':env['TMP'],'matplotlib_config_root':env['MPLCONFIGDIR'],'tools':{k:env[k] for k in ('VIVADO_BIN','IVERILOG_BIN','CC')}}}
     def run(label,script,*argv):
         cmd=[sys.executable,str(ROOT/'scripts'/script),*map(str,argv)]
         with (out/(label+'.log')).open('w',encoding='utf-8') as log:
@@ -26,7 +31,7 @@ def main():
         run('motion_full','motion_gate.py','--output',out/'motion')
         run('axi_offline','board_transport_gate.py','--output',out/'axi')
         run('independent_safety','pre_pcb_checks.py','--output',out/'independent')
-        run('timing_equivalence','timing_equivalence.py')
+        run('timing_equivalence','timing_equivalence.py','--output',out/'equivalence','--work',ROOT/'build/migration_equivalence'/out.name)
         motion=json.loads((out/'motion/summary.json').read_text(encoding='utf-8'))
         assert motion['status']=='PASS' and motion['frame_count']==3696
         assert motion['determinism']['status']=='PASS' and motion['determinism']['runs']==4

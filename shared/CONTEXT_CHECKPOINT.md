@@ -1,98 +1,99 @@
 ---
-checkpoint_id: CP-20261009-001
+checkpoint_id: CP-20261009-004
 project_id: SONOFIELD_FPGA
 project_name: SonoField-FPGA
 repository: https://github.com/loverlike1216/SonoField-FPGA.git
-branch: main
-base_commit: 4dc8e765403561e9aff9980a54390cdbb01ea0ed
-head_commit: 4dc8e765403561e9aff9980a54390cdbb01ea0ed
+branch: chore/v5-ax7020-workspace-isolation
+base_commit: ecd32e76e9b6c08806eae30a3c75a9c3be5e7570
+head_commit: f014214fb8db554fb3df9ac971ac759d683447a5
 active_version: v5
 version_status: ACTIVE
-current_stage: AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT
-created_at: 2026-10-09T02:16:17.071733+00:00
+current_stage: AX7020_V5_MIGRATION_CANDIDATE_USER_REVIEW
+created_at: 2026-10-09T13:53:22.176049+08:00
 created_by: Codex
-checkpoint_reason: Real read-only board/BOM/candidate/regression milestone
-source_of_truth: repository
+checkpoint_reason: draft_publication_remote_tree_and_independent_ci_pass
+source_of_truth: repository_and_actual_tool_evidence
 status: VALID
-model: GPT-6.1 Sol High
 ---
 
-# Context Checkpoint — AX7020 v5
+# 当前恢复检查点：候选迁移已验证，等待人工合并审查
 
-## 1. 当前身份
+## 1. Current Identity
 
-SONOFIELD_FPGA / SonoField-FPGA；仓库 https://github.com/loverlike1216/SonoField-FPGA.git；工作区 E:\Codex_project\AMD-SonoField-FPGA；main；唯一活动版本 v5；Stage AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT。模型记录 GPT-6.1 Sol High（用户声明）。
+PROJECT_ID 为 SONOFIELD_FPGA；Repository 保持不变；当前分支 chore/v5-ax7020-workspace-isolation；v5 ACTIVE。本次执行候选路径为 `E:\Codex_project\AMD_Sonofield`，正式 `workspace_path` 尚未提升。旧物理沙盒原样保留。上方 head_commit 是已发布并已核验远端树的真实证据提交；两份环境实际验证的功能源码为 `0ab574f9e2ad422106655f3c827e89d262d93bb4`，功能输入仍完全相同。本发布检查点及回执在随后提交保存，包含提交由Git文件历史定位，避免虚构自引用SHA。
 
-本检查点生成时的代码基准 HEAD 为 `4dc8e765403561e9aff9980a54390cdbb01ea0ed`，描述本次已审阅但尚未提交的证据与文件改动。检查点所在 commit 由推送后回执记录，不伪造自引用 Hash。
+## 2. Current Goal
 
-## 2. 当前目标
+完成同一 v5 的独立工作空间迁移、旧 Git 跟踪树完整封存、当前事实入口整顿及全链路离线回归，然后交付可审查候选。不是版本升级。正式 main 合并、合并后远端 main 冷启动以及永久工作区提升仍需用户批准。
 
-构建 128 通道、40 kHz 空气超声声场平台。50 mg 是分阶段最终实物目标，未证明悬浮。本阶段完成 AX7020 只读识别、板级配置核对、独立 BOM 修订与三板原理图准备，保持板上既有程序。
+## 3. Architecture
 
-## 3. 正式架构
+保留 Host 轨迹→PS C 服务/协议→AXI→PL 的数字链路；128TX/8RX，8bit requested/calibration 相位独立，共同时基、完整相位图 atomic commit、32 lanes×4 used、50Hz motion cadence、ADC/校准链路。TX 为 NU40C10T，RX 完整料号未知，正式 ADC 为 AD7606BBSTZ-RL，C-16 仅候选。上下各 64TX 阵列采用独立外部电源及保护/默认关断；AX7020 仅控制与数据。辐射面中心距12mm，上下 nominal100mm、可调90–115mm，几何中心为原点。物理链路尚未验收。
 
-Host 声场/轨迹 → PS 传输与 C 服务 → AXI PL → 128 TX 共同时基、8 bit requested/calibration 独立相位与原子提交 → 32 lanes、每 lane 使用 4 个输出 → 后续经资格验证的驱动器。8 RX 的 ADC/校准反馈目前为数字仿真。核心架构、寄存器、协议、运动参数和验收阈值保持不变。
+## 4. Completed
 
-## 4. 已完成，按证据区分
+- IMPLEMENTED：精简当前根、唯一 v5 活动树、构建及搜索允许列表、当前状态和复现文档。
+- TESTED：3907 个旧 Git 原文件及2个冻结元数据，路径/mode/blob/raw SHA256 一致；102个受保护核心/测试/黄金/BOM文件不变；旧沙盒101394个唯一文件（含额外忽略依赖及根Git）复核无变化。
+- SIMULATED：BASE、MIGRATED retry1、CLEAN_CLONE 各115项Python测试、3696帧×4、全部嵌套C/AXI/安全/波形/校准/黄金等价；各15项离线候选检查及ADC256帧双仿真器检查。
+- SYNTHESIZED：三份环境分别完成 Vivado2025.2 OOC 综合和工程重开，均加载自己 v5 下的18个RTL源。
+- HARDWARE_VERIFIED：本次没有新增硬件功能验证，也没有执行设备操作。
 
-- HARDWARE_VERIFIED，仅限识别/只读寄存器：AX701020.3.0、XC7Z020 JTAG 0x23727093、CLG400 照片、ARM DAP、既有 PL DONE 与双 CPU Running、SD 启动；读取三个 PS 控制寄存器。
-- SIMULATED：115 Python 测试、3696 帧×三次 Icarus/一次 XSim、波形/校准/C/AXI/安全/黄金等价回归通过；ADC 候选 256 帧/两个模拟器通过。
-- TESTED，离线范围：15 项候选检查；原始 BOM Hash 不变、工作副本重算/视觉检查；72 行封装状态审查；完整 80 针/63 GPIO 候选及 68 球位 Bank 核验。
-- SYNTHESIZED：此前 v5 文档器件 OOC 综合保留原日期和范围。本次未改核心 RTL，没有新增整板综合、布线、bitstream 或部署结果。
+## 5. Current Plan Position
 
-## 5. 计划位置
+Phase0–5 的候选门禁通过。Phase6 已建立Draft PR#1，远端候选树核对通过，push与PR的独立Linux结构/冻结检查均success；当前等待人工审查。main合并和合并后重新clone属于后续批准步骤。Phase7回滚方案已准备，未执行回滚。
 
-全部当前安全可执行的识别、离线候选、BOM 和数字回归已完成；提交、推送并核验远端后，转入板级事实补全。CURRENT_PLAN.md 是执行入口。
+## 6. Next Actions
 
-## 6. 下一步
+1. 核对最新 publication receipt、候选提交及 Draft PR；若尚未发布，完成候选分支推送和在线CI。
+2. 用户审查具体候选、证据与永久工作区路径；未批准前不合并main。
+3. 获得明确批准后重新 Reconciliation；main若已变更，先分析差异并重跑受影响门禁。
+4. 执行普通非强制合并，从远端main独立clone并验证冷启动及冻结清单，再提升用户认可的工作区。
+5. 迁移达到候选交付点后停止低收益优化；物理工程另按已批准路线推进。
 
-1. 获得厂家 Rev3 匹配的 PS/DDR/时钟/IO 资料、完整 FPGA 等级和 VCCO；明确当前 SD 程序与可安全使用的 CPU/RAM 范围。
-2. 连接板上 UART 口、确认 CP2102/COM；资格确认 ARM BSP/编译器，再执行无外部负载的临时 PL/PS/DDR/UART/AXI 测试。
-3. 对 ADC、关断/重新使能、浪涌、RX AFE、外部时序做独立 Review；获取 TX/RX 厂商数据与样品，决定正式 ADC 换型。
-4. 连接真实 v5 EasyEDA 工程后建立候选原理图、网表/BOM 对账并实际运行 ERC。制造保持 HOLD。
+## 7. Active Decisions
 
-## 7. 有效决策
+ADR-035：原v5授权；ADR-036：历史只读板卡识别授权；ADR-037：当前用户明确迁移授权，保留原仓库和旧沙盒、main须人工审核。原文与来源在当前DECISIONS中保留；历史板卡授权不自动延续到本任务。没有伪造ChatGPT Decision。
 
-ADR-035：用户明确批准 AX7020 v5；ADR-036：本轮只读资格确认与原件保留的候选实施边界。来源为实际用户附件、照片与工具输出，没有伪造 ChatGPT Decision。
+## 8. Blockers / Critical Issues
 
-## 8. 阻塞与严重问题
+未发现尚未闭环的候选功能回归或关键错误。main合并、合并后远端冷启动、永久路径提升及独立最终Review待用户。物理V5-B01/B03/B04/B05、BOM/ADC问题、原生原理图/ERC和外部ChatGPT历史访问仍受阻；唯一当前阻塞表为BLOCKERS.md。整机结论REVISE，制造HOLD。
 
-V5-B01 部分解决；V5-B03/B04/B05/BOM_REVIEW 未关闭。当前运行镜像所有权、Rev3 匹配 PS 配置、完整等级、VCCO、真实 UART、目标 ARM 工具链、外部电气/声学与原生 EDA 工程仍缺失。独立 Review 待执行，外部 ChatGPT 读取 BLOCKED。已知 Critical 软件缺陷为零不代表硬件可放行。
+## 9. Latest Validation
 
-## 9. 最新验证
+实际结果见 PORTABILITY_AND_REGRESSION.json 及 v5/evidence/migration/20261009 下 base、migrated_retry1、clean_clone 的 summary、真实日志、loaded_sources及runtime_ownership。日期2026-10-09；源码提交 `0ab574f9e2ad422106655f3c827e89d262d93bb4`；BASE `ecd32e76e9b6c08806eae30a3c75a9c3be5e7570`。四类规范化功能Hash与历史BASE和三份新运行完全相同。OOC均WNS+0.994ns/WHS+0.157ns、7219LUT/17918寄存器/4RAMB36；18源与重开门禁通过。没有布局布线或实板Timing闭合声明。
 
-日期 2026-10-09。`v5/evidence/baseline/board_integration_20261009/summary.json` 为完整数字结果；`v5/evidence/board_bringup/20261009/` 保存真实只读日志、summary、candidate_checks、ADC Icarus/XSim、包脚数据库和来源 Hash。日志的失败与重试分开保留，不能用自述替代工具结果。
+## 10. Known Limitations
 
-## 10. 已知限制
-
-DDR 控制器的 32 bit 配置不证明物理容量或稳定性；实际 DDR RAM/UART/PS→AXI→PL/ADC/安全/温升/声场未测试。XADC 返回无效值。公开 V2.0 原理图与实板 Rev3、Hynix 手册与 Micron 预设尚未匹配。原生 v5 原理图 NOT_CREATED / ERC NOT_RUN；ADC 正式替换未批准。
+第二份Git和venv独立，但共享同一主机安装的Vivado/Icarus/GCC，不能称第二台机器或另一OS。ARM目标编译器/BSP及真实PS-PL/DDR/UART/ADC/AFE/驱动/供电/声学未验收。OOC尚无板级输入输出延迟约束，HD.CLK_SRC未设置，不能据此声称完整CDC或板级Timing通过。原生v5原理图NOT_CREATED、ERC_NOT_RUN、MANUFACTURING_HOLD。BOM生成器没有进行冷启动重建；原工作簿字节和15项只读检查已验证。ChatGPT完整历史读取BLOCKED，当前Codex记录PARTIAL，独立最终Review待办。
 
 ## 11. Do Not Change
 
-保持冻结历史、原始 BOM 和当前运行镜像；不改 128TX/8RX/32lanes×4used/8bit/共同时基/校准分离/原子提交/协议/寄存器/运动/几何/阈值。无 v6，无永久存储/启动/驱动变更，无未知 GPIO，无制造。
+保护旧物理沙盒及私有/未跟踪/忽略/Git元数据；保护冻结history_old字节/mode/blob；保护核心RTL/FW/software/tests/goldens/BOM/协议/寄存器/安全和Acceptance。无用户明确授权，不合并main、不开新版本、不操作板卡。后续日常任务不读取封存历史和旧沙盒；只有用户明确点名恢复/溯源才例外。
 
 ## 12. Invariants
 
-132 MHz 为内部目标，区别于原厂 50 MHz 物理参考。上下板各自独立供电，AX7020 不通过 GPIO 接口给 TX 供电。坐标采用辐射面中心、12 mm pitch、100 mm nominal/90–115 mm 可调间距与几何中心原点。候选不会因离线 PASS 自动成为生产实现。
+保持第3节架构与几何、正式ADC、上下独立外部供电。保留35dB校准阈值：translation norm<0.1mm、angle norm<0.1deg、f0RMSE<80Hz、phaseRMSE<2deg。不得使用skip标记替代完整门禁，不得修改黄金数据或降低阈值。OOC、仿真、历史只读识别和物理验收严格区分。
 
 ## 13. Open AI Problems
 
-P-20261008-001：ADC 带宽/正式选择；P-20261009-001：Rev3 PS 平台与现有镜像安全工作区。未收到外部 ChatGPT Decision。Codex 可观察交互记录 PARTIAL，仅保存可见人机消息和工具索引，不保存隐藏推理。
+P-20261008-001（ADC40kHz带宽）；P-20261009-001（AX7020 Rev3 PS平台）。当前路径、ID、正文Hash和v5版本均已核对，正文未改动，无虚构Decision。
 
-## 14. 相对上一检查点的增量
+## 14. Repository Delta Since Previous Checkpoint
 
-新增真实板卡身份/既有运行状态、BOM 工作副本、ADC/安全/电源/时序/GPIO 候选、当前完整数字回归和新 Problem。旧 v5 等价日志因自动回归被覆盖后，已将新日志另归档并恢复原字节。预存用户改动不加入本次提交。
+旧树和当前根已提交；首次迁移Tcl配置路径门禁误拒绝本克隆临时测试夹具，保留9个失败断言和日志后修复为本克隆config/build范围，原测试及完整回归重跑通过。第二份独立Git/新venv完成全部离线回归、OOC与重开。旧沙盒完整性、源码/搜索隔离与隐私审计已通过。冻结历史和102个受保护文件没有变化。
 
-## 15. 恢复指令
+## 15. Resume Instruction
 
-先读 README/AGENTS、PROJECT_STATE、VERSION_STATE、本检查点、CURRENT_PLAN、DECISIONS、BLOCKERS、ACCEPTANCE 与最新证据；核对 Git status/HEAD/远端回执。继续 v5 板级资格验证，不导入旧板 COM、引脚、512 MiB 或 FT2232 结论。
+先读取当前恢复文件、真实Git状态/HEAD/远端和publication receipt，再审阅Draft PR。等待用户main合并与路径提升批准；继续当前v5，不从旧历史重新推断状态，不创建v6。
 
-## 16. 证据索引
+## 16. Evidence References
 
-实板结果：`v5/evidence/board_bringup/20261009/RESULT.md`；BOM：`v5/hardware/bom/working/2026-10-09/`；三板准备：`v5/hardware/integration_candidates/20261009/`。原始照片、完整设备身份、桌面截图和厂商原文件仅本地 local_raw，公开副本经过脱敏并附原始/公开 Hash。
+shared/migration/QUALITY_GATE.json、PORTABILITY_AND_REGRESSION.json、OLD_TRACKED_MANIFEST.json、ARCHIVE_COVERAGE.json、ROLLBACK_PLAN.md；v5/evidence/migration/20261009/digital_behavior_comparison.json、ooc_comparison.json、old_sandbox_preservation.json、active_reuse_hashes.json、search_isolation.json及三份真实baseline目录。
 
-## 17. 来源与冲突处理
+## 17. Provenance / State Conflicts
 
-依据真实仓库基准、用户附件 4b78522d、Revision3.0 回答及照片、固定 ALINX 提交 fcf1e4a、Windows/Vivado/XSDB 2025.2、原厂资料和实际回归。
+依据当前Git BASE/源码/index、原正式Decision、当前实际用户Phase0–7文件及请求、真实工具输出和初始私有清单。旧shared中的v2/Robei阻塞叙述属于历史，当前v5事实优先。board_clock_candidate仍在继承的18文件清单中，但未被实际顶层实例化，不构成AX7020物理时钟依据。失败日志仍标失败，重跑结果独立保存；不推断隐藏思维或不可访问的ChatGPT消息。
 
-上一阶段“没有访问硬件”属于整理任务历史。本次用户明确授权检测，当前只读工具证据更新当前状态。历史 Robei 事实不迁移为 AX7020 事实；原理图版本和 DDR 预设差异保留 OPEN，不能凭推理升级为确认。
+## Publication Update
+
+[Draft PR #1](https://github.com/loverlike1216/SonoField-FPGA/pull/1) 已实际发布；观察证据提交 `f014214fb8db554fb3df9ac971ac759d683447a5`；main仍为 `ecd32e76e9b6c08806eae30a3c75a9c3be5e7570`。在线push和PR结构检查均success，详细回执见shared/migration/PUBLICATION_RECEIPT.json。下一最小动作是用户审阅候选并决定main合并和永久路径；禁止自动合并。在线结构验证不等于全功能或实板验证。

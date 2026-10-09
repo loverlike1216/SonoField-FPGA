@@ -1,0 +1,65 @@
+{
+  "scope": "Paths/evidence isolation and status metadata only; no production RTL/FW/software/testbench/test/golden/BOM bytes changed",
+  "files": [
+    {
+      "path": "v5/scripts/timing_equivalence.py",
+      "reason": "Parameterize equivalence evidence/work; refuse overwriting historical results; functional tests unchanged",
+      "before_canonical_sha256": "3b69208b63b5e1ac46d2e18ec891bca9daf5f1f4a6b662f31707645621b6f4da",
+      "after_canonical_sha256": "86d8c705c4b6cae9b11ae9eac953b896ef439897e0003c4996ffc28a5b7bcf88"
+    },
+    {
+      "path": "v5/scripts/run_baseline.py",
+      "reason": "Keep all gate requirements; isolate equivalence, host temporary files/font cache; append actual environment",
+      "before_canonical_sha256": "91915b08b42640739da158123e1a385493fc88f6054171045b35de0beb67c52f",
+      "after_canonical_sha256": "2ecb2693dee2101c2be1412f1dff376e45385e895db5e8ad40a25b066671b32d"
+    },
+    {
+      "path": "v5/scripts/create_project.tcl",
+      "reason": "Exact original 18-source allowlist; isolated fresh build/reports; same top/part/generic/constraints/synthesis; allow same-clone build scratch configurations so original negative gate fixtures retain original semantics",
+      "before_canonical_sha256": "12fb290d12d77565085626ae44008fc9dae4fcc76ebe3dc82a1fa03dd5d3b347",
+      "after_canonical_sha256": "d83eee89a6d5152786bfbac84d3a04ac25a7bc8c2bbc24e09a1e52b0f1ce7dd5"
+    },
+    {
+      "path": "v5/hardware/integration_candidates/20261009/verify_candidates.py",
+      "reason": "Isolate candidate checker writes while retaining existing package-database fixture and all15 checks/formulas/seed",
+      "before_canonical_sha256": "b4aaf61008d56ef30bc811b2f4a6fceacbe9c4c6158ffddc43223e75c177628e",
+      "after_canonical_sha256": "9ebad50ef89e5b19cc62746a94a41506c01031c910860956f9dafe8926fec897"
+    },
+    {
+      "path": "v5/config/board_facts.json",
+      "reason": "Reclassify past read-only authorization as historical; current migration grants no board access; physical facts unchanged",
+      "before_canonical_sha256": "391d1faa6e98819cf279b958d993d1674f2b17a32bbd10ac02547041cf55ad7f",
+      "after_canonical_sha256": "253c3a1b098dfe03f9d0d68d5ddc1a02f2390da24a5417d435358e3a2906bbd4"
+    },
+    {
+      "path": "v5/README.md",
+      "reason": "Current archive and safe evidence paths; inherited functional run instructions unchanged",
+      "before_canonical_sha256": "1d615de59ec10f5969b6a4d7acc9bfac423b2aabe22e33f5019d24f52b9a307f",
+      "after_canonical_sha256": "ffaf7f8b688afa9428421a5cecda27492f6821e1d8e63f7f929604e3f56121ea"
+    },
+    {
+      "path": "v5/hardware/pcb/README.md",
+      "reason": "Clarify archived native v2 schematic is not an active v5 production design",
+      "before_canonical_sha256": "2e8383f45ecafd741f8a88cb770e5d2d91fbb2a0e0a6bc4c8f970ab6b32886bf",
+      "after_canonical_sha256": "226d02dc80f9cc53c5b2f1ec5b0aee841c2cc090cc8316754a1ec5bd822de947"
+    },
+    {
+      "path": "v5/hardware/bom/working/2026-10-09/README.md",
+      "reason": "Document fresh candidate-check output; original/working workbooks unchanged",
+      "before_canonical_sha256": "92a7137731c1645f81b941798a4f123fa5f1fff3e58b5bd58e61f378b13d56ff",
+      "after_canonical_sha256": "479e1bc8885b0be3780c814f096dfb5da5a07d20ba5ce76ec7380b9679d04b60"
+    },
+    {
+      "path": "v5/docs/motion/INTERACTIVE_CONTROL_ARCHITECTURE.md",
+      "reason": "Map old evidence provenance to the archived path; current gate entry is separate",
+      "before_canonical_sha256": "b6326bdb0226c379326675a403575e40a50864b64e44474fcd3bb0c7084f2f5d",
+      "after_canonical_sha256": "325cc16bb9eba51fda71052093fd1befb7c349554e38d092a659056304148cde"
+    },
+    {
+      "path": "v5/docs/experiments/bringup.md",
+      "reason": "Correct current handoff navigation after root reorganization",
+      "before_canonical_sha256": "71cd116a8faf241bcf859634313ad315748ec89702c464a6639470edee6fd280",
+      "after_canonical_sha256": "04e5fc99f7f91bc8f63bb14b9d2305e0fd69d9f433ff0a3e19f4fd3e26dd6e80"
+    }
+  ]
+}

@@ -1,25 +1,11 @@
-# AX7020 v5 交接 — 2026-10-09
+# v5 候选迁移交接
 
-模型：GPT-6.1 Sol High（用户声明）。基准 HEAD：4dc8e765403561e9aff9980a54390cdbb01ea0ed。检查点 CP-20261009-001；Stage AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT；版本 v5 未变。
+目标是审阅同一仓库、同一v5的工作空间迁移。恢复顺序：README/AGENTS → PROJECT_STATE/VERSION_STATE/CONTEXT_CHECKPOINT → CURRENT_PLAN/DECISIONS/BLOCKERS/ACCEPTANCE → 当前迁移证据 → Git状态与远端。BASE `ecd32e76e9b6c08806eae30a3c75a9c3be5e7570`，实际验证源码 `0ab574f9e2ad422106655f3c827e89d262d93bb4`；本次Codex thread为01a11f01-ebbe-76f3-ac92-b3e04e67b27a。
 
-## Goal / Inputs
+旧物理/私有/忽略/Git资料复核未变；封存3907个原Git文件和2个元数据；当前1017个v5原文件保留、102个核心/测试/黄金/BOM blob不变。三份新运行各115项测试和3696帧×4及完整嵌套门禁通过；15项离线候选、ADC256帧双工具、2025.2 OOC与18源重开也通过。规范化Hash一致。真实日志、源码/运行路径、版本、失败和限制见PORTABILITY_AND_REGRESSION及对应evidence。
 
-核验连接的 AX7020，保留既有基线，形成独立 BOM 修订与三板准备。已读当前治理/证据、正式用户附件、实板照片、72 行原始 BOM、原厂器件资料和固定 ALINX XSA。
+结论ACCEPT WITH LIMITATIONS — CANDIDATE ONLY。发布Draft PR及实际CI/远端回执后等待用户main合并和永久路径批准；批准后再对账、合并、独立clone远端main验证。原生v5原理图NOT_CREATED/ERC_NOT_RUN/制造HOLD，整机REVISE；两个ADC/Rev3问题仍OPEN。ChatGPT历史BLOCKED，当前Codex记录PARTIAL，无虚构独立Review。
 
-## Changes
+保护原沙盒、冻结历史、核心实现和验收。首次候选路径门禁失败及冻结前Windows文件恢复错误保留，修复和完整重跑有独立证据。未来默认不读取封存历史；继续当前v5，不升级、不操作板卡。
 
-只读脚本/脱敏证据；保留未知字段的 board_facts；BOM 工作副本和 72 行审查；63 GPIO/ADC/安全/电源/时序候选；当前状态/计划/阻塞/检查点/AI 记录。没有核心 RTL、旧历史或原生 PCB 改动。
-
-## Tests / Evidence
-
-完整数字基线 PASS；15 个候选检查 PASS；ADC256帧 Icarus+XSim PASS；Vivado68球位 Bank 核验 PASS；BOM 原件 Hash、公式、缓存与预览 PASS。结果入口 v5/evidence/board_bringup/20261009/RESULT.md，完整数字结果在 evidence/baseline/board_integration_20261009/summary.json。
-
-## Failures / Limits
-
-包脚审查首次缺少 open design，修复输入后 PASS；XSim drive-path 参数首次失败，使用本地向量文件后同一 TB PASS；原厂 PDF 首次截断后完整重试。失败记录保留于 execution_failures.json 及对应日志。
-
-实板只有 JTAG/三个 PS 寄存器读取。已有 PL DONE、双 CPU Running、SD boot 保持原样；XADC 无有效测量。DDR RAM/UART/PS→AXI→PL/模拟采样/安全/声学 NOT_RUN。原生 ERC NOT_RUN。
-
-## Unresolved / Next
-
-补全 Rev3 PS/DDR/时钟/IO、完整等级/VCCO、当前程序可用内存说明；连接 UART，资格确认 ARM BSP/工具链。独立审核 ADC/安全/浪涌，测 TX/RX。候选原理图准备可审阅，制造 HOLD。恢复时以 CONTEXT_CHECKPOINT 和最新 GitHub 回执为入口，不绕过门禁。
+发布核对：Draft PR #1 `https://github.com/loverlike1216/SonoField-FPGA/pull/1` 已建立；远端证据提交 `f014214fb8db554fb3df9ac971ac759d683447a5`，main仍为BASE；独立Linux push/PR结构门禁均已实际通过。当前恢复检查点CP-20261009-004，回执PUBLICATION_RECEIPT.json。下一动作仅为用户审核，获批准后才合并和远端main冷启动。

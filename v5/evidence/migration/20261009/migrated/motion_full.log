@@ -1,0 +1,41 @@
+python_tests: 1
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\motion_gate.py", line 107, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\motion_gate.py", line 43, in main
+    run('python_tests',[sys.executable,'-m','unittest','discover','-s','tests','-v'])
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\motion_gate.py", line 39, in run
+    raise RuntimeError(label+' failed: '+p.stdout[-2000:])
+RuntimeError: python_tests failed: te.py", line 46, in test_unknown_or_mismatched_part_rejected
+    self.assertIn('non-exact', self.invoke('xc7z020clg400-1', resolved))
+AssertionError: 'non-exact' not found in 'Configuration must belong to this v5 clone'
+
+======================================================================
+FAIL: test_wildcard_rejected_even_single_resolution (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 38, in test_wildcard_rejected_even_single_resolution
+    self.assertIn('full documented', self.invoke('xc7z020clg400-*', 'xc7z020clg400-1'))
+AssertionError: 'full documented' not found in 'Configuration must belong to this v5 clone'
+
+======================================================================
+FAIL: test_wrong_silicon_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 35, in test_wrong_silicon_rejected
+    self.assertIn('full documented', self.invoke('xc7z010clg400-1'))
+AssertionError: 'full documented' not found in 'Configuration must belong to this v5 clone'
+
+======================================================================
+FAIL: test_wrong_tool_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_board_project_gate.py", line 49, in test_wrong_tool_rejected
+    self.assertIn('2025.2', self.invoke('xc7z020clg400-1', version='2024.2'))
+AssertionError: '2025.2' not found in 'Configuration must belong to this v5 clone'
+
+----------------------------------------------------------------------
+Ran 115 tests in 5.657s
+
+FAILED (failures=9)
+

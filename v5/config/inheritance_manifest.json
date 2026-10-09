@@ -151,7 +151,14 @@
       "source_sha256_bytes": "40944b582057a73832127fbf2e4bedc68cf2c4c67b9dc0a3e70ee592693e6db4",
       "initial_copy_sha256_bytes": "40944b582057a73832127fbf2e4bedc68cf2c4c67b9dc0a3e70ee592693e6db4",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "71cd116a8faf241bcf859634313ad315748ec89702c464a6639470edee6fd280"
+      "v5_expected_sha256": "04e5fc99f7f91bc8f63bb14b9d2305e0fd69d9f433ff0a3e19f4fd3e26dd6e80",
+      "workspace_migration_adaptation": {
+        "date": "2026-10-09",
+        "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+        "previous_expected_sha256": "71cd116a8faf241bcf859634313ad315748ec89702c464a6639470edee6fd280",
+        "reason": "Correct current handoff navigation after root reorganization",
+        "behavior_change": false
+      }
     },
     {
       "source": "v2/docs/hardware/PCB_SOFTWARE_INTERFACE.md",
@@ -231,7 +238,14 @@
       "source_sha256_bytes": "f51e07e00d66e915e679f394d192c8691e17a041a8a00366ae74bc4974e8d5b6",
       "initial_copy_sha256_bytes": "f51e07e00d66e915e679f394d192c8691e17a041a8a00366ae74bc4974e8d5b6",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "b6326bdb0226c379326675a403575e40a50864b64e44474fcd3bb0c7084f2f5d"
+      "v5_expected_sha256": "325cc16bb9eba51fda71052093fd1befb7c349554e38d092a659056304148cde",
+      "workspace_migration_adaptation": {
+        "date": "2026-10-09",
+        "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+        "previous_expected_sha256": "b6326bdb0226c379326675a403575e40a50864b64e44474fcd3bb0c7084f2f5d",
+        "reason": "Map old evidence provenance to the archived path; current gate entry is separate",
+        "behavior_change": false
+      }
     },
     {
       "source": "v2/docs/motion/PC_CONTROL_APP.md",
@@ -1071,7 +1085,14 @@
       "source_sha256_bytes": "97f8ac02abf4b5bc2603888cb33529a5576ba4f97a642e6bd6c2e660c68924ec",
       "initial_copy_sha256_bytes": "97f8ac02abf4b5bc2603888cb33529a5576ba4f97a642e6bd6c2e660c68924ec",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "12fb290d12d77565085626ae44008fc9dae4fcc76ebe3dc82a1fa03dd5d3b347"
+      "v5_expected_sha256": "d83eee89a6d5152786bfbac84d3a04ac25a7bc8c2bbc24e09a1e52b0f1ce7dd5",
+      "workspace_migration_adaptation": {
+        "date": "2026-10-09",
+        "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+        "previous_expected_sha256": "12fb290d12d77565085626ae44008fc9dae4fcc76ebe3dc82a1fa03dd5d3b347",
+        "reason": "Exact original 18-source allowlist; isolated fresh build/reports; same top/part/generic/constraints/synthesis",
+        "behavior_change": false
+      }
     },
     {
       "source": "v2/scripts/generate_system.py",
@@ -1141,7 +1162,14 @@
       "source_sha256_bytes": "bc07ab3d045dd1701b465e6e8f44994e359ada407d6924f928057dce75ad776c",
       "initial_copy_sha256_bytes": "bc07ab3d045dd1701b465e6e8f44994e359ada407d6924f928057dce75ad776c",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "3b69208b63b5e1ac46d2e18ec891bca9daf5f1f4a6b662f31707645621b6f4da"
+      "v5_expected_sha256": "86d8c705c4b6cae9b11ae9eac953b896ef439897e0003c4996ffc28a5b7bcf88",
+      "workspace_migration_adaptation": {
+        "date": "2026-10-09",
+        "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+        "previous_expected_sha256": "3b69208b63b5e1ac46d2e18ec891bca9daf5f1f4a6b662f31707645621b6f4da",
+        "reason": "Parameterize equivalence evidence/work; refuse overwriting historical results; functional tests unchanged",
+        "behavior_change": false
+      }
     },
     {
       "source": "v2/scripts/validate.py",

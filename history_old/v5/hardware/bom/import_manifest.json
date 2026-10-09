@@ -1,0 +1,504 @@
+{
+  "source_filename": "SonoField-FPGA_BOM_2026.9.20.xlsx",
+  "sha256": "750ad8cabe5279e2218d5d956f8154ae12444b21da76458ee0eb2aa6811c567c",
+  "source_preserved_unmodified": true,
+  "reader": "@oai/artifact-tool; original values only; no workbook rewrite",
+  "sheets": [
+    {
+      "name": "00_Executive",
+      "rows": 22
+    },
+    {
+      "name": "01_BOM_Master",
+      "rows": 68
+    },
+    {
+      "name": "02_ArrayPCB_x2",
+      "rows": 22
+    },
+    {
+      "name": "03_ADC_Calibration",
+      "rows": 17
+    },
+    {
+      "name": "04_Cables_Power",
+      "rows": 19
+    },
+    {
+      "name": "05_Passive_Values",
+      "rows": 41
+    },
+    {
+      "name": "06_Procurement_Alternates",
+      "rows": 15
+    },
+    {
+      "name": "07_Codex_Config",
+      "rows": 35
+    },
+    {
+      "name": "08_Sources",
+      "rows": 27
+    }
+  ],
+  "master_data_rows": 65,
+  "quantity_checks": [
+    {
+      "source_row": 4,
+      "mpn": "TCT40-10T (same supplier/same lot)",
+      "computed_installed": 128,
+      "declared_installed": 128,
+      "match": true
+    },
+    {
+      "source_row": 5,
+      "mpn": "TCT40-10R (matched family)",
+      "computed_installed": 8,
+      "declared_installed": 8,
+      "match": true
+    },
+    {
+      "source_row": 6,
+      "mpn": "TC4427AEOA713",
+      "computed_installed": 64,
+      "declared_installed": 64,
+      "match": true
+    },
+    {
+      "source_row": 7,
+      "mpn": "SN74LVC595APWR",
+      "computed_installed": 32,
+      "declared_installed": 32,
+      "match": true
+    },
+    {
+      "source_row": 8,
+      "mpn": "SN74AXC8T245PWR",
+      "computed_installed": 8,
+      "declared_installed": 8,
+      "match": true
+    },
+    {
+      "source_row": 9,
+      "mpn": "SN74LVC244APWR",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 10,
+      "mpn": "SN74LVC1G32DBVR",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 11,
+      "mpn": "TMUX1574PWR",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 12,
+      "mpn": "OPA4192IPWR",
+      "computed_installed": 4,
+      "declared_installed": 4,
+      "match": true
+    },
+    {
+      "source_row": 13,
+      "mpn": "REF5025AIDR",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 14,
+      "mpn": "BAT54S",
+      "computed_installed": 8,
+      "declared_installed": 8,
+      "match": true
+    },
+    {
+      "source_row": 15,
+      "mpn": "AD7606BBSTZ-RL",
+      "computed_installed": 1,
+      "declared_installed": 1,
+      "match": true
+    },
+    {
+      "source_row": 16,
+      "mpn": "TPS259470LRPWR",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 17,
+      "mpn": "INA226AIDGSR",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 18,
+      "mpn": "TMP117MAIDRVR",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 19,
+      "mpn": "AP63203WU-7",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 20,
+      "mpn": "AP63200WU-7",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 21,
+      "mpn": "ADP7118ACPZN5.0-R7",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 22,
+      "mpn": "BLM21PG221SN1D",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 23,
+      "mpn": "FXL0630-6R8-M",
+      "computed_installed": 6,
+      "declared_installed": 6,
+      "match": true
+    },
+    {
+      "source_row": 24,
+      "mpn": "GX2512-2W-20mR-1%",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 25,
+      "mpn": "SHT45-AD1B-R2",
+      "computed_installed": 1,
+      "declared_installed": 1,
+      "match": true
+    },
+    {
+      "source_row": 26,
+      "mpn": "2.54-2*25P / keyed equivalent",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 27,
+      "mpn": "KH-5224-8P8C",
+      "computed_installed": 4,
+      "declared_installed": 4,
+      "match": true
+    },
+    {
+      "source_row": 28,
+      "mpn": "BH254V-20P / keyed equivalent",
+      "computed_installed": 1,
+      "declared_installed": 1,
+      "match": true
+    },
+    {
+      "source_row": 29,
+      "mpn": "XT30PW-M30.G.Y",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 30,
+      "mpn": "XT30U-F",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 31,
+      "mpn": "B4B-XH-A(LF)(SN)",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 32,
+      "mpn": "XHP-4",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 33,
+      "mpn": "SXH-001T-P0.6",
+      "computed_installed": 8,
+      "declared_installed": 8,
+      "match": true
+    },
+    {
+      "source_row": 34,
+      "mpn": "UL2651 28AWG 50C + IDC",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 35,
+      "mpn": "UL2651 28AWG 20C + IDC",
+      "computed_installed": 1,
+      "declared_installed": 1,
+      "match": true
+    },
+    {
+      "source_row": 36,
+      "mpn": "Cat6 U/FTP or F/UTP",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 37,
+      "mpn": "GST120A15-R7B",
+      "computed_installed": 1,
+      "declared_installed": 1,
+      "match": true
+    },
+    {
+      "source_row": 38,
+      "mpn": "18AWG + XT30U-F×3",
+      "computed_installed": 1,
+      "declared_installed": 1,
+      "match": true
+    },
+    {
+      "source_row": 39,
+      "mpn": "GRM188R71H104KA93D",
+      "computed_installed": 164,
+      "declared_installed": 164,
+      "match": true
+    },
+    {
+      "source_row": 40,
+      "mpn": "GRM21BR71E105KA99L",
+      "computed_installed": 68,
+      "declared_installed": 68,
+      "match": true
+    },
+    {
+      "source_row": 41,
+      "mpn": "GRM32ER71E226KE15L",
+      "computed_installed": 28,
+      "declared_installed": 28,
+      "match": true
+    },
+    {
+      "source_row": 42,
+      "mpn": "GRM31CR71E106KA12L",
+      "computed_installed": 11,
+      "declared_installed": 11,
+      "match": true
+    },
+    {
+      "source_row": 43,
+      "mpn": "GRM21BR71E225KA73L",
+      "computed_installed": 6,
+      "declared_installed": 6,
+      "match": true
+    },
+    {
+      "source_row": 44,
+      "mpn": "EEU-FR1V471",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 45,
+      "mpn": "GRM1885C1H103JA01D",
+      "computed_installed": 8,
+      "declared_installed": 8,
+      "match": true
+    },
+    {
+      "source_row": 46,
+      "mpn": "GRM1885C1H102JA01D",
+      "computed_installed": 16,
+      "declared_installed": 16,
+      "match": true
+    },
+    {
+      "source_row": 47,
+      "mpn": "GRM1885C1H332JA01D",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 48,
+      "mpn": "GRM1885C1H222JA01D",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 49,
+      "mpn": "RC0603FR-07100KL",
+      "computed_installed": 180,
+      "declared_installed": 180,
+      "match": true
+    },
+    {
+      "source_row": 50,
+      "mpn": "RC0603FR-0710KL",
+      "computed_installed": 6,
+      "declared_installed": 6,
+      "match": true
+    },
+    {
+      "source_row": 51,
+      "mpn": "RC0603FR-074K7L",
+      "computed_installed": 8,
+      "declared_installed": 8,
+      "match": true
+    },
+    {
+      "source_row": 52,
+      "mpn": "RC0603FR-071KL",
+      "computed_installed": 16,
+      "declared_installed": 16,
+      "match": true
+    },
+    {
+      "source_row": 53,
+      "mpn": "RC0603FR-0747RL",
+      "computed_installed": 16,
+      "declared_installed": 16,
+      "match": true
+    },
+    {
+      "source_row": 54,
+      "mpn": "RC0603FR-0733RL",
+      "computed_installed": 16,
+      "declared_installed": 16,
+      "match": true
+    },
+    {
+      "source_row": 55,
+      "mpn": "RC0603FR-0710RL",
+      "computed_installed": 6,
+      "declared_installed": 6,
+      "match": true
+    },
+    {
+      "source_row": 56,
+      "mpn": "RC0603JR-070RL",
+      "computed_installed": 136,
+      "declared_installed": 136,
+      "match": true
+    },
+    {
+      "source_row": 57,
+      "mpn": "RC0603FR-071K2L",
+      "computed_installed": 0,
+      "declared_installed": 0,
+      "match": true
+    },
+    {
+      "source_row": 58,
+      "mpn": "RC0603FR-071K65L",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 59,
+      "mpn": "RC0603FR-071M37L",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 60,
+      "mpn": "RC0603FR-07590KL",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 61,
+      "mpn": "RT0603BRD07100KL",
+      "computed_installed": 8,
+      "declared_installed": 8,
+      "match": true
+    },
+    {
+      "source_row": 62,
+      "mpn": "RT0603BRD0710KL",
+      "computed_installed": 24,
+      "declared_installed": 24,
+      "match": true
+    },
+    {
+      "source_row": 63,
+      "mpn": "RT0603BRD0739KL",
+      "computed_installed": 0,
+      "declared_installed": 0,
+      "match": true
+    },
+    {
+      "source_row": 64,
+      "mpn": "SMBJ20A",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 65,
+      "mpn": "2A Slow-Blow",
+      "computed_installed": 3,
+      "declared_installed": 3,
+      "match": true
+    },
+    {
+      "source_row": 66,
+      "mpn": "Custom Array PCB",
+      "computed_installed": 2,
+      "declared_installed": 2,
+      "match": true
+    },
+    {
+      "source_row": 67,
+      "mpn": "Custom ADC PCB",
+      "computed_installed": 1,
+      "declared_installed": 1,
+      "match": true
+    },
+    {
+      "source_row": 68,
+      "mpn": "Custom SHT45 PCB",
+      "computed_installed": 1,
+      "declared_installed": 1,
+      "match": true
+    }
+  ],
+  "currency_price_inventory_status": "User-supplied research snapshot only; not independently verified or current quotation",
+  "runtime_dependency": "NONE; workbook and source_sheets are documentary inputs"
+}

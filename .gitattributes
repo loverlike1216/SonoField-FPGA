@@ -26,3 +26,6 @@ archive/historical_evidence/pre_v5_20261008/** -text
 v5/evidence/**/commands.txt text eol=lf -whitespace
 archive/historical_evidence/pre_v5_20261008/** -whitespace
 AI-interaction-memory/codex/instructions/*.md text eol=lf -whitespace
+
+# Exact frozen Git blob bytes; no CRLF normalization or filters in the archive.
+history_old/** -text -filter -ident -whitespace

@@ -1,8 +1,12 @@
 """Cross-tool exact-cycle equivalence checks for the authorized timing refactor."""
 from pathlib import Path
-import os,subprocess,json,sys
-R=Path(__file__).resolve().parents[1];O=R/'evidence/core_timing_real_loop/timing_refactor';W=R/'build/core_timing/equivalence'
+import os,subprocess,json,sys,argparse
+R=Path(__file__).resolve().parents[1]
 def main():
+ parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--work',required=True);args=parser.parse_args()
+ O=(R/args.output).resolve();W=(R/args.work).resolve()
+ if not O.is_relative_to(R/'evidence') or not W.is_relative_to(R/'build'):raise ValueError('Keep evidence/work inside this v5 clone')
+ if (O/'equivalence.json').exists():raise FileExistsError('Use a fresh equivalence evidence directory')
  W.mkdir(parents=True,exist_ok=True);O.mkdir(parents=True,exist_ok=True);records=[]
  golden=(R/'simulation/golden/burst_generator.sv').read_text(encoding='utf-8').replace('module burst_generator #','module burst_generator_golden #')
  (W/'burst_generator_golden.sv').write_text(golden,encoding='utf-8')

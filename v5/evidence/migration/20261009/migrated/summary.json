@@ -1,0 +1,68 @@
+{
+  "status": "FAIL",
+  "active_version": "v5",
+  "platform": "ALINX AX7020",
+  "commands": [
+    {
+      "label": "structure",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\check_structure.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "inheritance",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\check_migration.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "generated_system",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\generate_system.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "generated_transport",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\generate_transport.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "motion_full",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\motion_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\migration\\20261009\\migrated\\motion"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "classification": "DIGITAL_BASELINE_NOT_BOARD_VERIFICATION",
+  "hardware_programmed": false,
+  "started_at": "2026-10-09T05:26:54.511934+00:00",
+  "runtime": {
+    "source_root": "E:\\Codex_project\\AMD_Sonofield\\v5",
+    "python_executable": "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+    "python_prefix": "E:\\Codex_project\\AMD_Sonofield\\.venv",
+    "cwd": "E:\\Codex_project\\AMD_Sonofield\\v5",
+    "temp_root": "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\migration_scratch\\migrated",
+    "matplotlib_config_root": "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\migration_scratch\\migrated\\matplotlib",
+    "tools": {
+      "VIVADO_BIN": "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin",
+      "IVERILOG_BIN": "C:\\iverilog\\bin",
+      "CC": "D:\\DevC++\\Dev-Cpp\\TDM-GCC-64\\bin\\gcc.exe"
+    }
+  },
+  "error": "motion_full failed; inspect E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\migration\\20261009\\migrated\\motion_full.log"
+}

@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "classification": "OFFLINE_DIGITAL_CANDIDATE_ONLY",
+  "hardware_verified": false,
+  "commands": [
+    {
+      "name": "offline15",
+      "argv": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\hardware\\integration_candidates\\20261009\\verify_candidates.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\migration\\20261009\\migrated_retry1\\candidates"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.23500000000058208
+    },
+    {
+      "name": "adc_iverilog",
+      "argv": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_adc_candidate",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\migration\\20261009\\migrated_retry1\\candidates\\adc_candidate.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\hardware\\integration_candidates\\20261009\\ad7606c_candidate_rom.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\hardware\\integration_candidates\\20261009\\tb_adc_candidate.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.0779999999977008
+    },
+    {
+      "name": "adc_icarus",
+      "argv": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\migration\\20261009\\migrated_retry1\\candidates\\adc_candidate.vvp"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.125
+    },
+    {
+      "name": "adc_xvlog",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\hardware\\integration_candidates\\20261009\\ad7606c_candidate_rom.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\hardware\\integration_candidates\\20261009\\tb_adc_candidate.sv"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 1.3120000000017171
+    },
+    {
+      "name": "adc_xelab",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_adc_candidate",
+        "--snapshot",
+        "adc_candidate",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 1.7969999999986612
+    },
+    {
+      "name": "adc_xsim",
+      "argv": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "adc_candidate",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 3.2030000000013388
+    }
+  ]
+}

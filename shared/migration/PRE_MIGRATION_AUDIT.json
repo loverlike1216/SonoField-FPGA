@@ -1,0 +1,63 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "visibility": "PUBLIC",
+  "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "old_local_head": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "old_branch": "main",
+  "head_match": true,
+  "old_dirty": true,
+  "tracked_files": 3907,
+  "tracked_blob_bytes": 97559165,
+  "mode_counts": {
+    "100644": 3907
+  },
+  "case_collisions": [],
+  "max_relative_path_chars": 126,
+  "lfs_submodule_symlink_errors": [],
+  "secret_scan_findings": [],
+  "local_counts": {
+    "tracked": 3906,
+    "untracked": 35,
+    "ignored": 30068
+  },
+  "local_bytes": {
+    "tracked": 97952656,
+    "untracked": 1930642,
+    "ignored": 2254712160
+  },
+  "local_missing_count": 11,
+  "local_raw_hash_manifest_sha256": "deb918996cfc06fcfa6c8a211295953224af9d45b735a36a9f635f89465a0242",
+  "private_inventory_path": ".migration-private/phase0 (LOCAL ONLY)",
+  "e_drive_free": 128855216128,
+  "created_at": "2026-10-09T04:55:43.569909+00:00",
+  "source_attributes": "core.autocrlf true\n",
+  "gate_0": "PASS",
+  "full_filesystem_audit": {
+    "status": "PASS_WITH_DOCUMENTED_GENERATED_JUNCTIONS",
+    "scope": "ALL_REGULAR_FILES_RECURSIVELY_EXCEPT_ROOT_GIT_METADATA_WHICH_HAS_ITS_OWN_INVENTORY",
+    "files_count": 83480,
+    "bytes": 4158035918,
+    "kinds": {
+      "ignored": 13012,
+      "tracked": 3906,
+      "untracked": 35,
+      "ignored_nested_or_unlisted": 66527
+    },
+    "errors": [],
+    "initial_inventory_deltas": [],
+    "created_at": "2026-10-09T05:17:08.303418+00:00",
+    "manifest_sha256": "759063f2407a9e3dbac9190551d69a782750b8b37a233f070ca754472fe63a7a",
+    "resolution": "Two ignored Node node_modules directory junctions point to the installed Codex runtime dependency cache, outside the old physical project. The junction objects/target identities are preserved. Their Git-enumerated target files also have private initial hashes. No tracked/user source is excluded. No remote Git LFS/submodule/symlink exists.",
+    "documented_generated_junctions": 2
+  },
+  "local_nonregular_entries": {
+    "tracked_preexisting_absent": 1,
+    "ignored_nested_existing_directories": 10
+  },
+  "line_endings_policy": "Old core.autocrlf=true remains untouched. Candidate/second clone use core.autocrlf=false and exact archive blob/rawSHA256 checks.",
+  "new_workspace": "E:\\Codex_project\\AMD_Sonofield",
+  "workspace_approval": "CANDIDATE_PATH_PENDING_USER_RESPONSE",
+  "old_workspace_protection": "ALL_EXISTING_TRACKED_UNTRACKED_IGNORED_RAW_SHA256_AND_GIT_METADATA_INVENTORIED",
+  "gate_1": "PASS"
+}

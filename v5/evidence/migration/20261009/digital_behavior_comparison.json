@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+  "historical_baseline_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "comparison": "Exact canonical functional hashes; timestamps/report headers and absolute runtime paths are nonfunctional metadata",
+  "historical_baseline_equal": true,
+  "all_three_fresh_environments_equal": true,
+  "hash_roles": [
+    "trajectory",
+    "phase_map_words",
+    "trap_reports",
+    "RTL_ACK"
+  ],
+  "apply_center": [
+    "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+    "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+    "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917",
+    "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1"
+  ],
+  "full_3696_frame_demo": [
+    "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+    "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+    "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694",
+    "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef"
+  ],
+  "python_tests_each": 115,
+  "frames_per_run": 3696,
+  "runs_per_environment": 4,
+  "simulators_each": [
+    "Icarus x3",
+    "Vivado2025.2 XSim x1"
+  ],
+  "fresh_environments": [
+    "BASE",
+    "MIGRATED",
+    "CLEAN_CLONE"
+  ],
+  "core_test_golden_threshold_changes": false
+}

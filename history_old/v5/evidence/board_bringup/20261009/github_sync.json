@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "branch": "main",
+  "evidence_commit": "8cd40cfadd6450696458b507f0b7e48d13985056",
+  "remote_verified_commit": "8cd40cfadd6450696458b507f0b7e48d13985056",
+  "verified_at": "2026-10-09T02:28:48.399933+00:00",
+  "method": "git ls-remote plus GitHub raw download at immutable commit",
+  "workbooks": [
+    {
+      "path": "v5/hardware/bom/submissions/2026-10-08/BOM_AX7020_NU40C10T_2026-10-08.xlsx",
+      "bytes": 31403,
+      "sha256": "decf6b026c0b5a48efb6800d27463246d61f62a9e2de01c75da5012d7fe69a35",
+      "remote_byte_identity": "PASS",
+      "url": "https://raw.githubusercontent.com/loverlike1216/SonoField-FPGA/8cd40cfadd6450696458b507f0b7e48d13985056/v5/hardware/bom/submissions/2026-10-08/BOM_AX7020_NU40C10T_2026-10-08.xlsx"
+    },
+    {
+      "path": "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx",
+      "bytes": 33998,
+      "sha256": "b94c7d4bd1b829139f4cc3237ef07c52f6af6f349b36619fc9487adef5cbe814",
+      "remote_byte_identity": "PASS",
+      "url": "https://raw.githubusercontent.com/loverlike1216/SonoField-FPGA/8cd40cfadd6450696458b507f0b7e48d13985056/v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx"
+    }
+  ],
+  "remote_checkpoint_id": "CP-20261009-001",
+  "publication": "PUBLIC_SANITIZED",
+  "private_raw": "EXCLUDED",
+  "hardware_release": "HOLD",
+  "model": "GPT-6.1 Sol High"
+}
