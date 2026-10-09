@@ -1,13 +1,7 @@
-# Current plan — AX7020 v5
+# Current plan — v5 historical candidate review
 
-Stage:AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT. Model:GPT-6.1 Sol High (user-declared). Only v5 active.
+Gate0 PASS:fixedsource/main/privateinventories/freshbefore171tests×3696fourruns/nativeOOC. Gate1 PASS:6670uniqueclassifications/dependencyplan/no targetconflict. Gate2 PASS:3911actualGitpathmoves withbyte/blob/modeequality,2759kept,currentrootshared/openProblems retained. Gate3 PASS:exact Historical project root/readban/ignores/IDE/currentsearchwrapper/metadata-onlychecker.
+Gate4 PASS:history-absent independentGitclone/newlockedvenv full171-test/3696×4/prePCBextra,canonicalbeforeafter equality,nativeOOC/reopen beforeafterclean source/clock/resources/checksmatch. Gate5 PASS:unchangedhardware/BOM/contracts/evidence,physicalgates remainopen. Gate6 publishnormalbranch/DraftPRandverifyCI/remote receipt,thenREADY_FOR_USER_REVIEW. Gate7 DEFERRED explicituserapproval,then normalreviewedmerge+freshremote-mainverification. No automaticmainmerge.
+Runnablecurrententries: v5/scripts/run_baseline.ps1, v5/scripts/run_prepcb.py, currentcreate_project.tcl config/ax7020_ooc.tcl. GUIfromv5:../.venv/Scripts/python.exe -m software.ui.prepcb_app. Freshoutputs only; no defaultHistoricalcontentread,skip/testrelaxation/versionupgrade/hardwareoperation. Stopoptimizationanddeliverreviewablecandidate.
 
-1. DONE organization/standalone baseline and historical preservation from2026-10-08; no old evidence overwritten.
-2. DONE current user-authorized read-only Windows/Vivado/XSDB identification and official PS/reference inspection. Actual revision/photo+JTAG confirmed; precise grade/DDR capacity/Rev3 reference/VCCO remain open.
-3. DONE separate original-preserving BOM working copy; ADC/safety/power/I²C/63GPIO candidates and72-row audit. No formalADC substitution.
-4. DONE115Python/3696frames×4/full existing gates; candidate Icarus+XSim256frames and15offline checks. Native schematic/ ERC NOT_RUN because no live v5 EasyEDA project.
-5. DONE public-safe evidence/checkpoint committed and pushed at 8cd40cfadd6450696458b507f0b7e48d13985056; remote branch and original/working workbook bytes verified. Hardware Manager remains open. Delivery receipt is a separate normal commit.
-6. NEXT obtain board-matchedRev3 PS/DDR/clock/IO evidence and safe running-image ownership; connectUART1/CP2102; qualify ARM BSP/compiler; then execute conditionally authorized bounded volatile board tests.
-7. NEXT independent ADC/safety/surge/AFE/interface review and exactTX/RX datasheets/samples; approvedADC adapter must implement bandwidth init/readback without core/protocol changes. Open native v5 project for candidate schematics/realERC after facts are sufficient.
-
-Do Not Change:128TX/8RX/32lanes×4used/8bit/sharedphase/calibration separation/atomic maps/registers/protocol/motion/geometry/test thresholds; frozen history/originalBOM; no permanent boot/storage/driver changes, unknownGPIO or manufacturing.132MHz is internal target, not board oscillator. Existing running image is preserved. No newversion and no externalAI approval fabricated.
+Gate6 COMPLETE_CANDIDATE: DraftPR3 OPEN, push/PR structureCI PASS at sealed evidencecommit; remote root/archive/source identity verified through official fetch. READY_FOR_USER_REVIEW. Gate7 still DEFERRED; receipt/transcript publication update is not a main merge.

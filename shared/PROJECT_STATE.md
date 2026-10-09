@@ -1,9 +1,7 @@
-# Current SonoField-FPGA state
+# SonoField-FPGA v5 current state
 
-PROJECT_ID SONOFIELD_FPGA · main · active v5 · ALINX AX7020. Stage:AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT. Model:GPT-6.1 Sol High (user-declared). Version/architecture unchanged.
+SameSONOFIELD_FPGA/repository/workspace; branchcodex/v5-historical-project-isolation-20261009;v5ACTIVE/highestv5. CP008 candidatevalidated. Sourcebefore7dda49f00983c57d06ac639ad70bdaff9696e900;testedafter3e788f4a2763c0354ca66d3836d0709dcf9f0107;mainecd32e76e9b6c08806eae30a3c75a9c3be5e7570 unchanged. Gates0–5PASS;Gate6publicationpending;Gate7requiresuserapproval.
+3911historicalpayloadfiles exactbyte/blob/mode moves,2759kept,7newindexdocs. Currentv5source/BOM/evidence/coretests unchanged exceptnavigation/metadata checker. Fullbefore/after171tests and3696×4canonicalhashesequal;afterfullprePCB5GUIcases375frames/20480Cwords/10fits/actualtop37framesbothtoolsPASS. NativeOOCbefore/after/history-absentcleanclone18sources/7219LUT/17918FF/4BRAM/WNS+.994/WHS+.157 match;2324input/256outputexternaldelaysmissing.
+FreshnohardlinksGitclone/newlockedvenv sharesOS/EDA;nohistoricalworktree. Defaultcontentreads0. WholeplatformREVISE;13physical/ARM/PCB/independentreview gates remain. FormalADCB/NU40C10T/geometry/powercontracts unchanged. No oldphysicalworkspaceaccess or hardwareoperation. Next DraftPR/CIreceipt thenuserreview. PriorPR1/PR2unmerged;candidatecontainsancestry,notmainpromotion.
 
-Read-only actual-board identification PASS: AX701020.3.0 / Rev3.0,XC7Z020 ID0x23727093,CLG400 photo,DigilentHS1 VID0403/PID6014. PL already DONE and both CPUs Running; SD boot. DDRC configured32bit, actual capacity/topology unknown. Full FPGA grade/Rev3 matchedPS platform/VCCO unverified. No program/reset/init/RAMwrite. No COM; actual UART/DDR/PSPL NOT_RUN.
-
-Full115Python/3696frames×4 Icarus+XSim/AXI/safety/equivalence baseline PASS (v5/evidence/baseline/board_integration_20261009/summary.json). ADC candidate256frames/two simulators and15offline checks PASS, no production coreRTL change. OriginalBOM unchanged; separate working correction and72-row package audit prepared. Native v5 schematic/ ERC NOT_RUN; electrical/manufacturing HOLD. Whole platform REVISE.
-
-Next: matchedRev3 documentation/current image ownership/UART and qualified ARM BSP, then bounded actual PS/PL tests. ADC recommendation and local shutdown remain candidates requiring independent review. Recovery: CONTEXT_CHECKPOINT.md. External ChatGPT BLOCKED; observable Codex transcript PARTIAL. Historical versions unchanged and excluded from active work.
+Publication verified: DraftPR3 https://github.com/loverlike1216/SonoField-FPGA/pull/3; evidencecommit939280960e6baddaf5d190b9c7f8534eb0b6fb16; push/PR CI PASS; main unchangedecd32e76e9b6c08806eae30a3c75a9c3be5e7570. Finalreceipt shared/repository_cleanup/PUBLICATION_RECEIPT.json. READY_FOR_USER_REVIEW; Gate7 deferred.

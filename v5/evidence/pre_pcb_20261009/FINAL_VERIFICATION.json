@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "scope": "OFFLINE_PREPCB_CANDIDATE_ONLY",
+  "created_at": "2026-10-09T10:32:44.226218+00:00",
+  "source_commit": "a43728870a06949e67b0604f4716f07419b3306c",
+  "baseline_source_commit": "263f06f943e343f56639fb0f08d1bb07aeef3c64",
+  "source_delta_qualification": "Final original115tests, coreRTL, goldens and thresholds byte-identical; final171tests and newtop/safety/system/platform rerun at source_commit",
+  "primary_workspace": "E:\\Codex_project\\AMD_Sonofield",
+  "independent_workspace": "E:\\Codex_project\\AMD_Sonofield\\.portability\\prepcb_clean",
+  "clone_mode": "git clone --no-hardlinks; independent locked venv; same OS and EDA installations",
+  "original_tests": 115,
+  "new_tests": 56,
+  "total_tests": 171,
+  "full_frame_count": 3696,
+  "full_runs_per_environment": 4,
+  "full_environments": 2,
+  "determinism": {
+    "status": "PASS",
+    "runs": 4,
+    "independent_simulators": [
+      "Icarus",
+      "Vivado 2025.2 XSim"
+    ],
+    "comparison": "exact canonical JSON and ACK hashes; wall timestamps excluded",
+    "hashes": [
+      [
+        "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+        "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+        "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917",
+        "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1"
+      ],
+      [
+        "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+        "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+        "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694",
+        "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef"
+      ]
+    ]
+  },
+  "sparse": {
+    "status": "PASS",
+    "fits": 10,
+    "seeds": 5,
+    "initial_guesses_per_fit": 5,
+    "holdout_paths_per_fit": 384,
+    "maximum_translation_error_mm": 0.0022751900215110463,
+    "maximum_rotation_error_deg": 0.0030915293626549434,
+    "maximum_holdout_error_ns": 10.236393363591972,
+    "rejection_cases": {
+      "missing_rx": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]",
+      "ambiguous_phase": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]",
+      "low_snr": "CALIBRATION_BLOCKED_BY_OBSERVABILITY: missing/duplicate paths; extra TX [1, 6, 8, 15, 48, 55, 57, 62]"
+    },
+    "robust_rejected": 3,
+    "deterministic_repeat": true
+  },
+  "phase": {
+    "maps": 160,
+    "channel_words": 20480,
+    "python_c_bit_exact": true
+  },
+  "gui": {
+    "runtime_cases": 5,
+    "frames": 375,
+    "frames_per_case": [
+      37,
+      40,
+      113,
+      111,
+      74
+    ],
+    "automated_callbacks": true,
+    "human_manual_test": false,
+    "physical_position": "NOT_MEASURED"
+  },
+  "actual_newtop": {
+    "status": "PASS",
+    "classification": "SIMULATED_ACTUAL_NEW_TOP_NOT_BOARD",
+    "maps_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+    "runs": [
+      {
+        "simulator": "icarus",
+        "frames": 37,
+        "ack_sha256": "84db46a42298ea8f89938a7a23dd7dd60a5eabd44b375d10471f583c84abac8f"
+      },
+      {
+        "simulator": "xsim",
+        "frames": 37,
+        "ack_sha256": "84db46a42298ea8f89938a7a23dd7dd60a5eabd44b375d10471f583c84abac8f"
+      }
+    ]
+  },
+  "ps_bd": {
+    "mapped_peripherals": 6,
+    "window_bytes": 65536,
+    "irq_sources": 5,
+    "critical_warnings": 0,
+    "ddr_enabled": false,
+    "deployable": false
+  },
+  "pl_ooc": {
+    "wns_ns": 0.081,
+    "whs_ns": 0.096,
+    "wpws_ns": 3.288,
+    "tns_ns": 0.0,
+    "ths_ns": 0.0,
+    "clock_mhz": 132,
+    "resources": {
+      "Slice LUTs": 7463,
+      "Slice Registers": 20185,
+      "Block RAM Tile": 4,
+      "BUFGCTRL": 0,
+      "MMCME2_ADV": 0
+    },
+    "no_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "missing_input_delays": 161,
+    "missing_output_delays": 148,
+    "drc_reported_warnings": 22,
+    "drc_rule_cap": "REQP-1839 stops at20; not exhaustive",
+    "cdc": "No internal clock crossing; unconstrained externalports not qualified",
+    "board_timing": "HOLD"
+  },
+  "vitis_target": "BLOCKED_REAL_PREFLIGHT; OS_EXIT0_WITH_PYTHON_TRACEBACK_NOT_SUCCESS",
+  "hardware_verified": false,
+  "physical_operations": false,
+  "quality_gate": "ACCEPT WITH LIMITATIONS",
+  "whole_platform": "REVISE",
+  "pcb_ready": "NOT_RELEASED",
+  "offline_blocking": 0,
+  "known_offline_critical_bugs": 0,
+  "open_gate_items": 13,
+  "independent_human_review": "PENDING",
+  "chat_history": "BLOCKED_ZERO_IMPORTED",
+  "archive_content_read": false,
+  "protected_files": 112,
+  "allowed_original_changes": [
+    "firmware/ps_service/service.c",
+    "firmware/ps_service/service.h",
+    "config/inheritance_manifest.json"
+  ],
+  "hashes": {
+    "bom": "07a52db35a3a650f5fbdc78e5717d83d926f3f2f71cb5ad6e987f37dd74eba69",
+    "pinmap": "7f34f86566162e800d98fd13621878357cdf02be4baaf5a6ba3997b83f771f58",
+    "canonical_instruction": "163c7658f24b985346d5718abc3e6c118114d965e5147d7dcc5a4b66f6afa5fc"
+  },
+  "references": {
+    "primary_baseline": "inherited_full1/summary.json",
+    "clean_baseline": "clean_reproduction/full1/summary.json",
+    "final_system": "clean_reproduction/system_verified/summary.json",
+    "final_top": "clean_reproduction/top_verified/summary.json",
+    "final_platform": "clean_reproduction/platform_verified",
+    "source_compare": "CLEAN_SOURCE_COMPARISON.json"
+  }
+}

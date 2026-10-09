@@ -1,0 +1,1867 @@
+{
+  "source_version": "v2",
+  "source_head": "851d1ef747cd95da13e5eb0705b5a7885b68d83c",
+  "source_validated_core_commit": "9936a737c45bf61f1908863a94f6374c6b5c828c",
+  "files": [
+    {
+      "source": "v2/config/acoustic_baseline.json",
+      "target": "v5/config/acoustic_baseline.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "2368c19cd55c69c00f4dd2dbf0c0944005e0533d819ca3ddfb2aade3e284efba",
+      "initial_copy_sha256_bytes": "2368c19cd55c69c00f4dd2dbf0c0944005e0533d819ca3ddfb2aade3e284efba",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "2368c19cd55c69c00f4dd2dbf0c0944005e0533d819ca3ddfb2aade3e284efba"
+    },
+    {
+      "source": "v2/config/board_smoke_profile.json",
+      "target": "v5/config/board_smoke_profile.json",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "1117d0851f273b5cadf6b4574557a00d8725a3f32106dcb0ceeb4e65360bfa2b",
+      "initial_copy_sha256_bytes": "1117d0851f273b5cadf6b4574557a00d8725a3f32106dcb0ceeb4e65360bfa2b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "32efc280a98529a2c935bad5d55ac4985e1b6fd765803e930915979b0e2959de"
+    },
+    {
+      "source": "v2/config/board_transport_profile.json",
+      "target": "v5/config/board_transport_profile.json",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3bc4d63751a8b92f822cf7279a47c9a068fe0e3b2c7d7b87ba563fd1981617da",
+      "initial_copy_sha256_bytes": "3bc4d63751a8b92f822cf7279a47c9a068fe0e3b2c7d7b87ba563fd1981617da",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "a8ac0b8af0d7970b8cbb0bcbefa5ebdb8611040c641b39ffc64d3b7d57a29261"
+    },
+    {
+      "source": "v2/config/hardware_parts.json",
+      "target": "v5/config/hardware_parts.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
+      "initial_copy_sha256_bytes": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b"
+    },
+    {
+      "source": "v2/config/motion_profile.json",
+      "target": "v5/config/motion_profile.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "46202c098c8fb18c22c58c9e7fd7675a912c998d7c1c1d283155bfc9e4038006",
+      "initial_copy_sha256_bytes": "46202c098c8fb18c22c58c9e7fd7675a912c998d7c1c1d283155bfc9e4038006",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "46202c098c8fb18c22c58c9e7fd7675a912c998d7c1c1d283155bfc9e4038006"
+    },
+    {
+      "source": "v2/config/register_map.json",
+      "target": "v5/config/register_map.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "97aaba496c194d592d03b56fa7c0ff602b0821df0ae36e60274208c20986f2f6",
+      "initial_copy_sha256_bytes": "97aaba496c194d592d03b56fa7c0ff602b0821df0ae36e60274208c20986f2f6",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "237a081d82bd960e9e64357a33573c3819c3a99f01e28e8969e39e33d9df3499"
+    },
+    {
+      "source": "v2/config/system_baseline.json",
+      "target": "v5/config/system_baseline.json",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "609d59d5b498e8de1f7258e465b5254a373a657338b788e808fa0cfb2fb6fd41",
+      "initial_copy_sha256_bytes": "609d59d5b498e8de1f7258e465b5254a373a657338b788e808fa0cfb2fb6fd41",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "cd6ae558b5104b23b2949ac84eba608787d95d7d4658f4737c86dc3c7cf148b8"
+    },
+    {
+      "source": "v2/config/transport_protocol.json",
+      "target": "v5/config/transport_protocol.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "389f131bb71a8edd339baf0b7c1dc51dc0f45124dfa30121808eee69478c1ef1",
+      "initial_copy_sha256_bytes": "389f131bb71a8edd339baf0b7c1dc51dc0f45124dfa30121808eee69478c1ef1",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "389f131bb71a8edd339baf0b7c1dc51dc0f45124dfa30121808eee69478c1ef1"
+    },
+    {
+      "source": "v2/docs/RESEARCH_BASELINE.md",
+      "target": "v5/docs/RESEARCH_BASELINE.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3674bc7835f759224c5442e41d16106a0014371243a98e7f00b4a0a1c746470b",
+      "initial_copy_sha256_bytes": "3674bc7835f759224c5442e41d16106a0014371243a98e7f00b4a0a1c746470b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "589d17e56926f607b17ca06d7e37ebcf7eadc88037c8ebd6d036a0ec9e27bbb0"
+    },
+    {
+      "source": "v2/docs/architecture/REGISTER_MAP.md",
+      "target": "v5/docs/architecture/REGISTER_MAP.md",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "7754c3ea31b519f2bb0564235d46130f24ce3044d6c9f0a9c3e7ba89913a12b3",
+      "initial_copy_sha256_bytes": "7754c3ea31b519f2bb0564235d46130f24ce3044d6c9f0a9c3e7ba89913a12b3",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "7754c3ea31b519f2bb0564235d46130f24ce3044d6c9f0a9c3e7ba89913a12b3"
+    },
+    {
+      "source": "v2/docs/architecture/SELF_CALIBRATION.md",
+      "target": "v5/docs/architecture/SELF_CALIBRATION.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c38a1d7856deb2b25c1386b4187f85aead647eb10584b7da3dd46034254926d0",
+      "initial_copy_sha256_bytes": "c38a1d7856deb2b25c1386b4187f85aead647eb10584b7da3dd46034254926d0",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1915f01d5abd5342d77a54327accb1bacb735330c485dc2e1c3cc6967c0a9dab"
+    },
+    {
+      "source": "v2/docs/architecture/V2_REQUIREMENTS.md",
+      "target": "v5/docs/architecture/V5_REQUIREMENTS.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "def427808fd6f56163cb9255f98d04ea6567f7a9c662d102376f17fee9a48618",
+      "initial_copy_sha256_bytes": "def427808fd6f56163cb9255f98d04ea6567f7a9c662d102376f17fee9a48618",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "7d88c8f406ae755e4f3efcb21d8249359d4644459188a91a49dfcea6faccc328"
+    },
+    {
+      "source": "v2/docs/architecture/digital_interface.md",
+      "target": "v5/docs/architecture/digital_interface.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "890d10329c0e33b53759f76a94fa22a7f7cfb6170daecd6a103af6120eba2912",
+      "initial_copy_sha256_bytes": "890d10329c0e33b53759f76a94fa22a7f7cfb6170daecd6a103af6120eba2912",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c1a4ea78fed8fc63a90c15d1cd729ac3e49334f27af01d0fb95519f35cabc0a5"
+    },
+    {
+      "source": "v2/docs/dependencies.md",
+      "target": "v5/docs/dependencies.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "bf3425f5f96c28e921486d3687f1ea835275d39d7259dc18c7ad8b36d9d172e6",
+      "initial_copy_sha256_bytes": "bf3425f5f96c28e921486d3687f1ea835275d39d7259dc18c7ad8b36d9d172e6",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "12d67b7284c5bfd2d8ec44982ed684f01dd108ab2456e6955bca03a583f16dca"
+    },
+    {
+      "source": "v2/docs/experiments/bringup.md",
+      "target": "v5/docs/experiments/bringup.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "40944b582057a73832127fbf2e4bedc68cf2c4c67b9dc0a3e70ee592693e6db4",
+      "initial_copy_sha256_bytes": "40944b582057a73832127fbf2e4bedc68cf2c4c67b9dc0a3e70ee592693e6db4",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "71cd116a8faf241bcf859634313ad315748ec89702c464a6639470edee6fd280"
+    },
+    {
+      "source": "v2/docs/hardware/PCB_SOFTWARE_INTERFACE.md",
+      "target": "v5/docs/hardware/PCB_SOFTWARE_INTERFACE.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "48517f1e3214b7896086344b54642081acc6b35251a94c475ee6b9930eec0eac",
+      "initial_copy_sha256_bytes": "48517f1e3214b7896086344b54642081acc6b35251a94c475ee6b9930eec0eac",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "d1e47b5c6b090fc33407b3a85668d60c0174de3e8f74dea6032b12d13f2d10a1"
+    },
+    {
+      "source": "v2/docs/hardware/PCB_SOFTWARE_INTERFACE_REQUIREMENTS.md",
+      "target": "v5/docs/hardware/PCB_SOFTWARE_INTERFACE_REQUIREMENTS.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "a846d233c882fa19c1b56bbb10a2311b64afe81b0c85a1fa342d858bcddf26fb",
+      "initial_copy_sha256_bytes": "a846d233c882fa19c1b56bbb10a2311b64afe81b0c85a1fa342d858bcddf26fb",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "5290233962c3427e299f01e8ebdbe42c9facd3c7e96bfe1fc1a4bc554e9d07e7"
+    },
+    {
+      "source": "v2/docs/hardware/SCHEMATIC_DESIGN_RULES.md",
+      "target": "v5/docs/hardware/SCHEMATIC_DESIGN_RULES.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c8527588aa563c24f60a4a73ba7ec5e03b53fd8312e7ef52a0395446445eb0b6",
+      "initial_copy_sha256_bytes": "c8527588aa563c24f60a4a73ba7ec5e03b53fd8312e7ef52a0395446445eb0b6",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "32d819f39897329953b9c663c629cbc3aba77f66bb6f5d5014a12ed63c6909c1"
+    },
+    {
+      "source": "v2/docs/hardware/SERIALIZER_THROUGHPUT_PROOF.md",
+      "target": "v5/docs/hardware/SERIALIZER_THROUGHPUT_PROOF.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "d95e570465655f319c98e55c5321e9e2dfbfd595a3eadb6e02cce1d13d70329b",
+      "initial_copy_sha256_bytes": "d95e570465655f319c98e55c5321e9e2dfbfd595a3eadb6e02cce1d13d70329b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "492f507986b15c6914946d70c01ee82d55e8a21cb25671046ce907cb17919627"
+    },
+    {
+      "source": "v2/docs/hardware/tct40_baseline.md",
+      "target": "v5/docs/hardware/tct40_baseline.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "a5993f7c4ff2168b328eab4f5f4c223f99285f0f5d9757b9ad313c8c99dd0bfe",
+      "initial_copy_sha256_bytes": "a5993f7c4ff2168b328eab4f5f4c223f99285f0f5d9757b9ad313c8c99dd0bfe",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "776880407e920752ffc02e0f37f44dc780c6bda05ecd6e6937c2fdedd08f5e61"
+    },
+    {
+      "source": "v2/docs/motion/COORDINATE_AND_WORKSPACE.md",
+      "target": "v5/docs/motion/COORDINATE_AND_WORKSPACE.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "d7ebdda9ec728aca3639744749bee5a75f05a0ca65aebfa16e7b1373fd6717c8",
+      "initial_copy_sha256_bytes": "d7ebdda9ec728aca3639744749bee5a75f05a0ca65aebfa16e7b1373fd6717c8",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "32c3ff6c588cbe91950808a089f7ca55efa39d5a4c354a0ca67fe5dd938f9912"
+    },
+    {
+      "source": "v2/docs/motion/FPGA_MOTION_INTERFACE.md",
+      "target": "v5/docs/motion/FPGA_MOTION_INTERFACE.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "246f90ca8fd5f1de3c9065e67dcfa08fbdc6afb1eaeb43e39f29966d9981c44a",
+      "initial_copy_sha256_bytes": "246f90ca8fd5f1de3c9065e67dcfa08fbdc6afb1eaeb43e39f29966d9981c44a",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "9e6f015d330da03a831a271b42a7e0745886ec1cefc6b12daa71cb457874d0df"
+    },
+    {
+      "source": "v2/docs/motion/INTERACTIVE_CONTROL_ARCHITECTURE.md",
+      "target": "v5/docs/motion/INTERACTIVE_CONTROL_ARCHITECTURE.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f51e07e00d66e915e679f394d192c8691e17a041a8a00366ae74bc4974e8d5b6",
+      "initial_copy_sha256_bytes": "f51e07e00d66e915e679f394d192c8691e17a041a8a00366ae74bc4974e8d5b6",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "b6326bdb0226c379326675a403575e40a50864b64e44474fcd3bb0c7084f2f5d"
+    },
+    {
+      "source": "v2/docs/motion/PC_CONTROL_APP.md",
+      "target": "v5/docs/motion/PC_CONTROL_APP.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "00353d8f51c5d77976e6a14ad2dee4e2f32d057be8b2cecd23af5e1daffd8476",
+      "initial_copy_sha256_bytes": "00353d8f51c5d77976e6a14ad2dee4e2f32d057be8b2cecd23af5e1daffd8476",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "11ada4393fe8a0b484cad4fc27d6322e6e6d2e0528dbf22f64dba4e69ee3b855"
+    },
+    {
+      "source": "v2/docs/motion/SAFETY_LIMITS.md",
+      "target": "v5/docs/motion/SAFETY_LIMITS.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "021e9002ea9a4682f1be155665b84c667eea56f6244f42d22f53243416504913",
+      "initial_copy_sha256_bytes": "021e9002ea9a4682f1be155665b84c667eea56f6244f42d22f53243416504913",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "41619370463bddf93dda5e043900ce4bcf5b52c3bb8f4827beb16591535d5b11"
+    },
+    {
+      "source": "v2/docs/motion/TRAJECTORY_PLANNER.md",
+      "target": "v5/docs/motion/TRAJECTORY_PLANNER.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f0b61118b2d006a92e616088eefe1ecd0ecca47a6214eadfffcaf6ed3ff75965",
+      "initial_copy_sha256_bytes": "f0b61118b2d006a92e616088eefe1ecd0ecca47a6214eadfffcaf6ed3ff75965",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "56b2e741c61f0bae65b8b43ffdb5ec21aded996caf1434811e5c13df9f15ac9c"
+    },
+    {
+      "source": "v2/docs/theory/model_and_results.md",
+      "target": "v5/docs/theory/model_and_results.md",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e91187713cbd4185d9f6ee67052f74006bae00b6bf28b0b7252f48796b8d6c40",
+      "initial_copy_sha256_bytes": "e91187713cbd4185d9f6ee67052f74006bae00b6bf28b0b7252f48796b8d6c40",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c2c672ade3d866cd2c0a9c5d929bb654a053075c2e5faec7178e886eb733bb6f"
+    },
+    {
+      "source": "v2/evidence/core_timing_real_loop/baseline/burst_generator.sv",
+      "target": "v5/simulation/golden/burst_generator.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3150b3766c786b493cb1eaaf2b46eea966c92160afe607baabca42f189649085",
+      "initial_copy_sha256_bytes": "3150b3766c786b493cb1eaaf2b46eea966c92160afe607baabca42f189649085",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "3150b3766c786b493cb1eaaf2b46eea966c92160afe607baabca42f189649085"
+    },
+    {
+      "source": "v2/evidence/pre_pcb_board_ready/timing/baseline/calibration_scheduler.sv",
+      "target": "v5/simulation/golden/calibration_scheduler.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "5d145d9bdc3e03cd97ac51f5a5e48fa441662add6dccff754005bd829c303406",
+      "initial_copy_sha256_bytes": "5d145d9bdc3e03cd97ac51f5a5e48fa441662add6dccff754005bd829c303406",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "5d145d9bdc3e03cd97ac51f5a5e48fa441662add6dccff754005bd829c303406"
+    },
+    {
+      "source": "v2/evidence/pre_pcb_board_ready/timing/baseline/motion_queue.sv",
+      "target": "v5/simulation/golden/motion_queue.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "962f3c414040d14733071ba5d3ae3ee01674906d5dfae90bc3a7913c90ecdfe5",
+      "initial_copy_sha256_bytes": "962f3c414040d14733071ba5d3ae3ee01674906d5dfae90bc3a7913c90ecdfe5",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "962f3c414040d14733071ba5d3ae3ee01674906d5dfae90bc3a7913c90ecdfe5"
+    },
+    {
+      "source": "v2/firmware/ps_service/generated.h",
+      "target": "v5/firmware/ps_service/generated.h",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "92cccb596cde1def1896cc230a13397d19f9b6100694e1e516886b31f4c0d369",
+      "initial_copy_sha256_bytes": "92cccb596cde1def1896cc230a13397d19f9b6100694e1e516886b31f4c0d369",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "92cccb596cde1def1896cc230a13397d19f9b6100694e1e516886b31f4c0d369"
+    },
+    {
+      "source": "v2/firmware/ps_service/service.c",
+      "target": "v5/firmware/ps_service/service.c",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "65656588d9a349fac18e424fe4ef8761af34559ac36b97e24346e724c7a4c957",
+      "initial_copy_sha256_bytes": "65656588d9a349fac18e424fe4ef8761af34559ac36b97e24346e724c7a4c957",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "65656588d9a349fac18e424fe4ef8761af34559ac36b97e24346e724c7a4c957"
+    },
+    {
+      "source": "v2/firmware/ps_service/service.h",
+      "target": "v5/firmware/ps_service/service.h",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e8c3a65ea2c34d1faa12a8b98a13b379bb33e9b4c4955d301e73730568d5ae55",
+      "initial_copy_sha256_bytes": "e8c3a65ea2c34d1faa12a8b98a13b379bb33e9b4c4955d301e73730568d5ae55",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e8c3a65ea2c34d1faa12a8b98a13b379bb33e9b4c4955d301e73730568d5ae55"
+    },
+    {
+      "source": "v2/firmware/ps_service/zynq_service_main.c",
+      "target": "v5/firmware/ps_service/zynq_service_main.c",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "dea278401f204e01da0b78f54ad1f304c9151beb1811a6d746f645a7b4d9ea52",
+      "initial_copy_sha256_bytes": "dea278401f204e01da0b78f54ad1f304c9151beb1811a6d746f645a7b4d9ea52",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "dea278401f204e01da0b78f54ad1f304c9151beb1811a6d746f645a7b4d9ea52"
+    },
+    {
+      "source": "v2/hardware/bom/BOM_LOCK.md",
+      "target": "v5/hardware/bom/BOM_LOCK.md",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "6bbc8ca86359620dbc9063125d61e01a1ee91ed5b8748685d92ed4c1821be490",
+      "initial_copy_sha256_bytes": "6bbc8ca86359620dbc9063125d61e01a1ee91ed5b8748685d92ed4c1821be490",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "6bbc8ca86359620dbc9063125d61e01a1ee91ed5b8748685d92ed4c1821be490"
+    },
+    {
+      "source": "v2/hardware/bom/BOM_MASTER.csv",
+      "target": "v5/hardware/bom/BOM_MASTER.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "aea277bcb2939f40cfadbcbad1b3d0f3d488674382f036a2550b6c72af9f1bef",
+      "initial_copy_sha256_bytes": "aea277bcb2939f40cfadbcbad1b3d0f3d488674382f036a2550b6c72af9f1bef",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e6749ff8379df652b24104cb02b308e055c8d35993806b01a0661181f8ce2537"
+    },
+    {
+      "source": "v2/hardware/bom/BOM_MASTER.xlsx",
+      "target": "v5/hardware/bom/BOM_MASTER.xlsx",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "750ad8cabe5279e2218d5d956f8154ae12444b21da76458ee0eb2aa6811c567c",
+      "initial_copy_sha256_bytes": "750ad8cabe5279e2218d5d956f8154ae12444b21da76458ee0eb2aa6811c567c",
+      "hash_policy": "EXACT_BYTES",
+      "v5_expected_sha256": "750ad8cabe5279e2218d5d956f8154ae12444b21da76458ee0eb2aa6811c567c"
+    },
+    {
+      "source": "v2/hardware/bom/import_manifest.json",
+      "target": "v5/hardware/bom/import_manifest.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "d9cbd9a9628f9bd5109a39236354f22f8ffa5938cd30489ebcd594c4a1694618",
+      "initial_copy_sha256_bytes": "d9cbd9a9628f9bd5109a39236354f22f8ffa5938cd30489ebcd594c4a1694618",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "d9cbd9a9628f9bd5109a39236354f22f8ffa5938cd30489ebcd594c4a1694618"
+    },
+    {
+      "source": "v2/hardware/bom/prototype_bom.md",
+      "target": "v5/hardware/bom/prototype_bom.md",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "1a8c35058b5fca9e01f1df832b0524ecbbfda5a3ed29f3338fd8ada2be277a70",
+      "initial_copy_sha256_bytes": "1a8c35058b5fca9e01f1df832b0524ecbbfda5a3ed29f3338fd8ada2be277a70",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1a8c35058b5fca9e01f1df832b0524ecbbfda5a3ed29f3338fd8ada2be277a70"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/00_Executive.csv",
+      "target": "v5/hardware/bom/source_sheets/00_Executive.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "cc0c972396a53d3110d841a3266d4659c6538c4b7d0ed483f6eec6b1de0e23d2",
+      "initial_copy_sha256_bytes": "cc0c972396a53d3110d841a3266d4659c6538c4b7d0ed483f6eec6b1de0e23d2",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "3c3ff4c8dae0db0037d68896473add5842a562d6b26ee164849ef88479f1594e"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/01_BOM_Master.csv",
+      "target": "v5/hardware/bom/source_sheets/01_BOM_Master.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "750d9d72e9c67fb948e6f9ba7e0fe9d43a2848d0402b0961c33ffd2b6fb32fa7",
+      "initial_copy_sha256_bytes": "750d9d72e9c67fb948e6f9ba7e0fe9d43a2848d0402b0961c33ffd2b6fb32fa7",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1984c0072328bcc9f8dd828b926dac0e60275775a7c3ea05d8375214004db7d5"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/02_ArrayPCB_x2.csv",
+      "target": "v5/hardware/bom/source_sheets/02_ArrayPCB_x2.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "b32966abec914a243b007acf33337fbf87d51f425071ffc06b35a2b6849588ae",
+      "initial_copy_sha256_bytes": "b32966abec914a243b007acf33337fbf87d51f425071ffc06b35a2b6849588ae",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "ae3828446385f063f466128df8e04efab0b1e1fc55ede6714b7a6a61f6dc9547"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/03_ADC_Calibration.csv",
+      "target": "v5/hardware/bom/source_sheets/03_ADC_Calibration.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "9f3c74d2bd44b5a121172398c0191ab85837ef4f389804ef703e17bdbcd0527c",
+      "initial_copy_sha256_bytes": "9f3c74d2bd44b5a121172398c0191ab85837ef4f389804ef703e17bdbcd0527c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "5845b6bc2e9328ea99235134cbac46692dfbb08270d17f276d5488c96a903a13"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/04_Cables_Power.csv",
+      "target": "v5/hardware/bom/source_sheets/04_Cables_Power.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "12c672f6b47dc0f8290419277c28b2bae279be1679a4b6c8f43c8bd727e7dd3a",
+      "initial_copy_sha256_bytes": "12c672f6b47dc0f8290419277c28b2bae279be1679a4b6c8f43c8bd727e7dd3a",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "37034a3edcc0638d4c85b5bf8ba23fd025c10c5ef851eebee0756143bca1b68e"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/05_Passive_Values.csv",
+      "target": "v5/hardware/bom/source_sheets/05_Passive_Values.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "b7b791108cfbcd47d0676804fd738b78277874104a7f64a46eef94bdb701f9db",
+      "initial_copy_sha256_bytes": "b7b791108cfbcd47d0676804fd738b78277874104a7f64a46eef94bdb701f9db",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "22c69d31c29cd666ed4ae30f0ab1b25fefb383c0e51ff8aac01ee94b87aa5736"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/06_Procurement_Alternates.csv",
+      "target": "v5/hardware/bom/source_sheets/06_Procurement_Alternates.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "0e98a9d9a41a37919e9e56165e253d82a94c9e6e2fec57bb2d2d55d7d63d099f",
+      "initial_copy_sha256_bytes": "0e98a9d9a41a37919e9e56165e253d82a94c9e6e2fec57bb2d2d55d7d63d099f",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e3092bfb87699194e69c7fa1f9632f708ace69bde9ddb00d332b492da927a55a"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/07_Codex_Config.csv",
+      "target": "v5/hardware/bom/source_sheets/07_Codex_Config.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "fe343168e87b66c3e87a222f67619585e30090b8d88846087bb27c1c196d9480",
+      "initial_copy_sha256_bytes": "fe343168e87b66c3e87a222f67619585e30090b8d88846087bb27c1c196d9480",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "99ed3ea077af619cbeff4e719cd04824b9bf2fe6a139d08deb11980a5375f8c2"
+    },
+    {
+      "source": "v2/hardware/bom/source_sheets/08_Sources.csv",
+      "target": "v5/hardware/bom/source_sheets/08_Sources.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3734fc1fe70b20236a56d86d8fde38e4cff764d3eee3ebe7756ac3e26db83492",
+      "initial_copy_sha256_bytes": "3734fc1fe70b20236a56d86d8fde38e4cff764d3eee3ebe7756ac3e26db83492",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "fd7db4c21c5fe70a240f78bcb539843234096df731d38fbcc31ee090d2a05fdc"
+    },
+    {
+      "source": "v2/hardware/characterization/object_measurements.csv",
+      "target": "v5/hardware/characterization/object_measurements.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "964e79b0e1a5a76486f1294234d8369f6d4c94d260151fdbf20fe16ae4637782",
+      "initial_copy_sha256_bytes": "964e79b0e1a5a76486f1294234d8369f6d4c94d260151fdbf20fe16ae4637782",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "964e79b0e1a5a76486f1294234d8369f6d4c94d260151fdbf20fe16ae4637782"
+    },
+    {
+      "source": "v2/hardware/characterization/transducer_characterization.md",
+      "target": "v5/hardware/characterization/transducer_characterization.md",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "5e1cd5b35372d40a211c33dc2e12d59dc915f071d43cc96aa9d21b23522d715b",
+      "initial_copy_sha256_bytes": "5e1cd5b35372d40a211c33dc2e12d59dc915f071d43cc96aa9d21b23522d715b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "5e1cd5b35372d40a211c33dc2e12d59dc915f071d43cc96aa9d21b23522d715b"
+    },
+    {
+      "source": "v2/hardware/characterization/transducer_measurements.csv",
+      "target": "v5/hardware/characterization/transducer_measurements.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "5b7a4b7116059f6585a66bd878dca79be3e905340dddc453bf94504162c0dcb7",
+      "initial_copy_sha256_bytes": "5b7a4b7116059f6585a66bd878dca79be3e905340dddc453bf94504162c0dcb7",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "5b7a4b7116059f6585a66bd878dca79be3e905340dddc453bf94504162c0dcb7"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/array_dimensions.png",
+      "target": "v5/hardware/mechanical/geometry_10mm/array_dimensions.png",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3addff3b733047bf56a4d80bb3c844a48bf2bfe15d2598efa7f3e62f4f635a3c",
+      "initial_copy_sha256_bytes": "3addff3b733047bf56a4d80bb3c844a48bf2bfe15d2598efa7f3e62f4f635a3c",
+      "hash_policy": "EXACT_BYTES",
+      "v5_expected_sha256": "3addff3b733047bf56a4d80bb3c844a48bf2bfe15d2598efa7f3e62f4f635a3c"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+      "target": "v5/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "7f4570c5eaecdfbb338975eabdb46f62ab0c7a344ad59f3bb86c123b13f2201a",
+      "initial_copy_sha256_bytes": "7f4570c5eaecdfbb338975eabdb46f62ab0c7a344ad59f3bb86c123b13f2201a",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "7f4570c5eaecdfbb338975eabdb46f62ab0c7a344ad59f3bb86c123b13f2201a"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/coordinates_100mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/coordinates_100mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "13fdeabd258577acc2acc34e8e19e7b05265b78d46713b515d0f1ce684c43df4",
+      "initial_copy_sha256_bytes": "13fdeabd258577acc2acc34e8e19e7b05265b78d46713b515d0f1ce684c43df4",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "214476391d06da1f0d873adc1e89ce8a715b679fadb051713a7b276fdf8a4308"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/coordinates_105mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/coordinates_105mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "ae60e14fc28ed915977157cad9e0f29f26b8ed2022f5827fa560792163f32265",
+      "initial_copy_sha256_bytes": "ae60e14fc28ed915977157cad9e0f29f26b8ed2022f5827fa560792163f32265",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "3a9d4986172ef4e82a3ebeda506867cf0d3ee2b458637e7d76cac9d978d42a3f"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/coordinates_110mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/coordinates_110mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "35c4706fb76baa43197c8d377402a562dae68a2954adabd22f898a7ac9c50942",
+      "initial_copy_sha256_bytes": "35c4706fb76baa43197c8d377402a562dae68a2954adabd22f898a7ac9c50942",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "99c3f1981345b6a1d223867d67063ee1d6ef7cc2c378a57cf8322a448a87effc"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/coordinates_115mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/coordinates_115mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "cb4803a4f60e0d8c7cd27c25da9b24441eba96416d6a4bece75ded0fa829c4c3",
+      "initial_copy_sha256_bytes": "cb4803a4f60e0d8c7cd27c25da9b24441eba96416d6a4bece75ded0fa829c4c3",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "0a02c7234c8e07349101a35d76925ec8e9b20af93d38b44dc80f6c7c48e7c28c"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/coordinates_90mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/coordinates_90mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "5439e8ae4de7ba0cde5ba5551c42a173e3eceb968fb1cf03a7b97947eb741adc",
+      "initial_copy_sha256_bytes": "5439e8ae4de7ba0cde5ba5551c42a173e3eceb968fb1cf03a7b97947eb741adc",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1166f6c2da7dabe3798a328b7c8b26399ceb1ab456a8d38f3d477a4d87283f76"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/coordinates_95mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/coordinates_95mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3f58455ca2be00df4aff69622273f6e7b0da1a38523a6f7712b20b401b0ab70f",
+      "initial_copy_sha256_bytes": "3f58455ca2be00df4aff69622273f6e7b0da1a38523a6f7712b20b401b0ab70f",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "ae0ebce8af009431889fd327dfed0a0a768c7417f73906a592ce3d02c40bce01"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/coordinates_nominal.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/coordinates_nominal.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "13fdeabd258577acc2acc34e8e19e7b05265b78d46713b515d0f1ce684c43df4",
+      "initial_copy_sha256_bytes": "13fdeabd258577acc2acc34e8e19e7b05265b78d46713b515d0f1ce684c43df4",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "214476391d06da1f0d873adc1e89ce8a715b679fadb051713a7b276fdf8a4308"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/coordinates_nominal.json",
+      "target": "v5/hardware/mechanical/geometry_10mm/coordinates_nominal.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c40d1ff72900157fa1eafa1ee9b252500c0ea07ac586b7a6d7c762e92813832a",
+      "initial_copy_sha256_bytes": "c40d1ff72900157fa1eafa1ee9b252500c0ea07ac586b7a6d7c762e92813832a",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1f043381962e7b06f40063cc1f7993b720ad7235277b7be0c452869ef1063df6"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/geometry_summary.json",
+      "target": "v5/hardware/mechanical/geometry_10mm/geometry_summary.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "32fe467fd8d4b3db3360359846507fdf7c6fb59e1f6424a2d27e8ffbe4c4d84e",
+      "initial_copy_sha256_bytes": "32fe467fd8d4b3db3360359846507fdf7c6fb59e1f6424a2d27e8ffbe4c4d84e",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "bcf1bfbe08829dd9e977f48da0c0b0183f044554ace595faedc04a77dd7f3ab6"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_100mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_focus_100mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "1a0197ecec65895b7b8f482d10bfae89fe0ef998380ba440984b5e599d01edfb",
+      "initial_copy_sha256_bytes": "1a0197ecec65895b7b8f482d10bfae89fe0ef998380ba440984b5e599d01edfb",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "fd712e10738df850fb2318f6c5962f7091a4bc4023300f90489b99e7faa15eb2"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_105mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_focus_105mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "1ae800622469d0cb17566ff4d87cd144fb8912a57ee308a2b8c1de529755c21e",
+      "initial_copy_sha256_bytes": "1ae800622469d0cb17566ff4d87cd144fb8912a57ee308a2b8c1de529755c21e",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "807445a376b79c9b46db8f13fec863ad71d7b781a07fcb3beb698ae3eaab9e87"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_110mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_focus_110mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "51a03a8688c43bc6cab1877231949445b814fc6bff1d709b9cd6c0e7006a6845",
+      "initial_copy_sha256_bytes": "51a03a8688c43bc6cab1877231949445b814fc6bff1d709b9cd6c0e7006a6845",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "111288ad5f7311119d3a1dd727677fa8b93cf7ea92991d11c1d48ab0c1f49cc2"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_115mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_focus_115mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "660e47b919aed2116c004bf28438b1dad9548b7c98125d9678167a956ba2f9e9",
+      "initial_copy_sha256_bytes": "660e47b919aed2116c004bf28438b1dad9548b7c98125d9678167a956ba2f9e9",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "4c70ac5d73da4a1e627ff6c48a246f6f96e8662e12b00449e8bee825fb314934"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_90mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_focus_90mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "d83a458f331747b21fb3b7495394e0bb21af6ad6f5184b8700aed60e40ca2279",
+      "initial_copy_sha256_bytes": "d83a458f331747b21fb3b7495394e0bb21af6ad6f5184b8700aed60e40ca2279",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "6e61c2621b3716f4be7dcb82dbfba618e8b4044501848c956f0e8e8b8c031706"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_focus_95mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_focus_95mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c91b4d9fd5efc606ce83ed927cf9431f5ef56c7b5e1627c929b6f054289c1a9b",
+      "initial_copy_sha256_bytes": "c91b4d9fd5efc606ce83ed927cf9431f5ef56c7b5e1627c929b6f054289c1a9b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "90fa0c09122c8633753fe3e8e9690e4806a847e8909ed3c095eb71ddf2c125ca"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_100mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_100mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f2c92a368c4cd198fa73944b8388c1fc40b3c5f44f8c325b3979ba1f3c4ed944",
+      "initial_copy_sha256_bytes": "f2c92a368c4cd198fa73944b8388c1fc40b3c5f44f8c325b3979ba1f3c4ed944",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c800ed6d4c09fa716900df991fa74896c2dda081582379fe8156dc7ff4f1cf75"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_105mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_105mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e711e4d3e9374048fb4517e951adf57c19293ee4d8fc92d087e5c6c12b81283b",
+      "initial_copy_sha256_bytes": "e711e4d3e9374048fb4517e951adf57c19293ee4d8fc92d087e5c6c12b81283b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c5e814af32fa8ffa954d4f7e607d1d387e23678fe75598a0f9fc6e5fea78409d"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_110mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_110mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "882e82ba41d7194345e0d187f9c9d4d5ac10ba40104f12dd27fd0fcbc0e773b7",
+      "initial_copy_sha256_bytes": "882e82ba41d7194345e0d187f9c9d4d5ac10ba40104f12dd27fd0fcbc0e773b7",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "fd7ec46e2e8f5a4d69fbead3b83eab0253870ae3558054c9e7c787882f5a7560"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_115mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_115mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "7d6e7d77032f77fda43defdfb702a98d783733f02be2299cc5e6b611f474d6c8",
+      "initial_copy_sha256_bytes": "7d6e7d77032f77fda43defdfb702a98d783733f02be2299cc5e6b611f474d6c8",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "bdca11ca9b163edd80e4246ba2cccbce6db9bbde353208acde0de25ce0463e09"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_90mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_90mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "98db639beaf25bdf5a27b7a60cac6620fc601725aed3678dccf0d4a2b3b26bc9",
+      "initial_copy_sha256_bytes": "98db639beaf25bdf5a27b7a60cac6620fc601725aed3678dccf0d4a2b3b26bc9",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "f2c3ec47603f12493117a7ac6ef96daa1d38de9f90138f299f7f08f2aff6c26f"
+    },
+    {
+      "source": "v2/hardware/mechanical/geometry_10mm/phase_map_standing_wave_95mm.csv",
+      "target": "v5/hardware/mechanical/geometry_10mm/phase_map_standing_wave_95mm.csv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "0f9c1b18be013f60dee62db33cd43b1796a66791d6ec1f052e53229207f9bc03",
+      "initial_copy_sha256_bytes": "0f9c1b18be013f60dee62db33cd43b1796a66791d6ec1f052e53229207f9bc03",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "dc1c1c72b294b8984684ad77dd3d4d39015a7e00404743c398fc3b423336b5c9"
+    },
+    {
+      "source": "v2/hardware/mechanical/radiating_surface_geometry.md",
+      "target": "v5/hardware/mechanical/radiating_surface_geometry.md",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "0904af15ea0ad251865039506594dc87c3efd455fcad6471cf5f7ffdfd1d3c2e",
+      "initial_copy_sha256_bytes": "0904af15ea0ad251865039506594dc87c3efd455fcad6471cf5f7ffdfd1d3c2e",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "0904af15ea0ad251865039506594dc87c3efd455fcad6471cf5f7ffdfd1d3c2e"
+    },
+    {
+      "source": "v2/hardware/transducers/10mm_supplier_reference.md",
+      "target": "v5/hardware/transducers/10mm_supplier_reference.md",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "cfe8abd419894ce2b72445484543c4252882334a2241355dbae5328e99782394",
+      "initial_copy_sha256_bytes": "cfe8abd419894ce2b72445484543c4252882334a2241355dbae5328e99782394",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "cfe8abd419894ce2b72445484543c4252882334a2241355dbae5328e99782394"
+    },
+    {
+      "source": "v2/hardware/transducers/user_supplied/10mm_supplier_user.png",
+      "target": "v5/hardware/transducers/user_supplied/10mm_supplier_user.png",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "ad73997ca2a453fe2b2d3e01bf1e3f2d7e928c1f77acbd10ec52afa676d05b75",
+      "initial_copy_sha256_bytes": "ad73997ca2a453fe2b2d3e01bf1e3f2d7e928c1f77acbd10ec52afa676d05b75",
+      "hash_policy": "EXACT_BYTES",
+      "v5_expected_sha256": "ad73997ca2a453fe2b2d3e01bf1e3f2d7e928c1f77acbd10ec52afa676d05b75"
+    },
+    {
+      "source": "v2/requirements-board.txt",
+      "target": "v5/requirements-board.txt",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "d43d74120530e0c810945d3ad7fd1eb1ee63d7233726c8764365ce27c12ee7b2",
+      "initial_copy_sha256_bytes": "d43d74120530e0c810945d3ad7fd1eb1ee63d7233726c8764365ce27c12ee7b2",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "d43d74120530e0c810945d3ad7fd1eb1ee63d7233726c8764365ce27c12ee7b2"
+    },
+    {
+      "source": "v2/requirements-lock.txt",
+      "target": "v5/requirements-lock.txt",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "0b14698176c34f78a9b5715e92d0bc8f9b0ebc3d45b45d315f7b477a28d86cf3",
+      "initial_copy_sha256_bytes": "0b14698176c34f78a9b5715e92d0bc8f9b0ebc3d45b45d315f7b477a28d86cf3",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "80132690693fbf85239b61ff296573e9f602232fe896b56084d3e48de2f9935d"
+    },
+    {
+      "source": "v2/requirements.txt",
+      "target": "v5/requirements.txt",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "b596d62ae7d7147b13cf1ac7934f91215ca0b620e076dffe5566c5c21fbc17f5",
+      "initial_copy_sha256_bytes": "b596d62ae7d7147b13cf1ac7934f91215ca0b620e076dffe5566c5c21fbc17f5",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "b596d62ae7d7147b13cf1ac7934f91215ca0b620e076dffe5566c5c21fbc17f5"
+    },
+    {
+      "source": "v2/rtl/acquisition/ad7606b_if.sv",
+      "target": "v5/rtl/acquisition/ad7606b_if.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "b0f11a0269ec2e08193413eea12a79c38c176c24475d9348ffdcbcac3722cb44",
+      "initial_copy_sha256_bytes": "b0f11a0269ec2e08193413eea12a79c38c176c24475d9348ffdcbcac3722cb44",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "136678f0c6880ec26164884da54ee26af68a37657819cb517cff931244a5022c"
+    },
+    {
+      "source": "v2/rtl/acquisition/adc_serial.sv",
+      "target": "v5/rtl/acquisition/adc_serial.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "8647a75428cc5d06eef1130e8917efbca489acd5b17f73f8a19a66d9b6f319cb",
+      "initial_copy_sha256_bytes": "8647a75428cc5d06eef1130e8917efbca489acd5b17f73f8a19a66d9b6f319cb",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "8647a75428cc5d06eef1130e8917efbca489acd5b17f73f8a19a66d9b6f319cb"
+    },
+    {
+      "source": "v2/rtl/board/sono_board_smoke_pl.sv",
+      "target": "v5/rtl/board/sono_board_smoke_pl.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "49b47278790aa9555da5a8a8ea75d0340bcd7a9e44e6b71bbbf24b0071e89c11",
+      "initial_copy_sha256_bytes": "49b47278790aa9555da5a8a8ea75d0340bcd7a9e44e6b71bbbf24b0071e89c11",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "a56dca320ad25ece83cc7415aee8e336a0880afe8b087b715847260ec8ddc873"
+    },
+    {
+      "source": "v2/rtl/calibration/burst_generator.sv",
+      "target": "v5/rtl/calibration/burst_generator.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "7200d4f253e8e9d68b81c3011c8c24132419c3e7371844be51eaf2e371f53ec0",
+      "initial_copy_sha256_bytes": "7200d4f253e8e9d68b81c3011c8c24132419c3e7371844be51eaf2e371f53ec0",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "71d776845929966ec4d67c3344184373651107c83b7fb34478d58038a254134b"
+    },
+    {
+      "source": "v2/rtl/calibration/calibration_scheduler.sv",
+      "target": "v5/rtl/calibration/calibration_scheduler.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "98fb2d8b7ef86eac81efefa5cdc417d84511a30a7e1e27971d4ad14f91ca6213",
+      "initial_copy_sha256_bytes": "98fb2d8b7ef86eac81efefa5cdc417d84511a30a7e1e27971d4ad14f91ca6213",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "98fb2d8b7ef86eac81efefa5cdc417d84511a30a7e1e27971d4ad14f91ca6213"
+    },
+    {
+      "source": "v2/rtl/control/axi_native_bridge.sv",
+      "target": "v5/rtl/control/axi_native_bridge.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "7b13f98f522bbaa7de41c5f628b1da29eaf68469dfb5fcef6e79b3344c15a698",
+      "initial_copy_sha256_bytes": "7b13f98f522bbaa7de41c5f628b1da29eaf68469dfb5fcef6e79b3344c15a698",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "7b13f98f522bbaa7de41c5f628b1da29eaf68469dfb5fcef6e79b3344c15a698"
+    },
+    {
+      "source": "v2/rtl/control/safety_controller.sv",
+      "target": "v5/rtl/control/safety_controller.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3949c09e0aedeaeeb0169f50d02c80767730feca420087e080f1530b0ff90657",
+      "initial_copy_sha256_bytes": "3949c09e0aedeaeeb0169f50d02c80767730feca420087e080f1530b0ff90657",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "3949c09e0aedeaeeb0169f50d02c80767730feca420087e080f1530b0ff90657"
+    },
+    {
+      "source": "v2/rtl/generated/registers.svh",
+      "target": "v5/rtl/generated/registers.svh",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "7d4e89cbe0f79f3ec3db6e5f36e41221493469cba11468ea2fe17ce44efd38a8",
+      "initial_copy_sha256_bytes": "7d4e89cbe0f79f3ec3db6e5f36e41221493469cba11468ea2fe17ce44efd38a8",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "7d4e89cbe0f79f3ec3db6e5f36e41221493469cba11468ea2fe17ce44efd38a8"
+    },
+    {
+      "source": "v2/rtl/generated/transport_valid.svh",
+      "target": "v5/rtl/generated/transport_valid.svh",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "533f928a73cb53edf05a1a2a146f555bb266826ba15096b6d9026f1b42ab8515",
+      "initial_copy_sha256_bytes": "533f928a73cb53edf05a1a2a146f555bb266826ba15096b6d9026f1b42ab8515",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "533f928a73cb53edf05a1a2a146f555bb266826ba15096b6d9026f1b42ab8515"
+    },
+    {
+      "source": "v2/rtl/motion/motion_queue.sv",
+      "target": "v5/rtl/motion/motion_queue.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "9bc0d8962b7fb2fab65c66e49b1638cc46b53bb0770fb7a1e24ed939bb6aceca",
+      "initial_copy_sha256_bytes": "9bc0d8962b7fb2fab65c66e49b1638cc46b53bb0770fb7a1e24ed939bb6aceca",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "bdfe4f531d95373034a3edc76d87064dc3b39d565f7db81584e66354844b64f4"
+    },
+    {
+      "source": "v2/rtl/output/channel_waveform.sv",
+      "target": "v5/rtl/output/channel_waveform.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "97237593ed1f7fa2a4e006f38bc2262402029af88854d1a68ea3f5551c550b74",
+      "initial_copy_sha256_bytes": "97237593ed1f7fa2a4e006f38bc2262402029af88854d1a68ea3f5551c550b74",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "97237593ed1f7fa2a4e006f38bc2262402029af88854d1a68ea3f5551c550b74"
+    },
+    {
+      "source": "v2/rtl/output/serializer.sv",
+      "target": "v5/rtl/output/serializer.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "5d20788a6428cdfd46a7ba9b4163444e1c426dede85f046e86fe6836cd43e174",
+      "initial_copy_sha256_bytes": "5d20788a6428cdfd46a7ba9b4163444e1c426dede85f046e86fe6836cd43e174",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "5d20788a6428cdfd46a7ba9b4163444e1c426dede85f046e86fe6836cd43e174"
+    },
+    {
+      "source": "v2/rtl/output/sono_array_interface.sv",
+      "target": "v5/rtl/output/sono_array_interface.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e357aac7dde3a65fc22e9a3ad5114053b73a80bd5ffe2dbd3f3d12a7254de200",
+      "initial_copy_sha256_bytes": "e357aac7dde3a65fc22e9a3ad5114053b73a80bd5ffe2dbd3f3d12a7254de200",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e357aac7dde3a65fc22e9a3ad5114053b73a80bd5ffe2dbd3f3d12a7254de200"
+    },
+    {
+      "source": "v2/rtl/phase/phase_bank.sv",
+      "target": "v5/rtl/phase/phase_bank.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f93cab9b10f51d824bfbf6d1fd0a67cd3cb5d779db6ffaa9d6e0c3d329f3168e",
+      "initial_copy_sha256_bytes": "f93cab9b10f51d824bfbf6d1fd0a67cd3cb5d779db6ffaa9d6e0c3d329f3168e",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "f93cab9b10f51d824bfbf6d1fd0a67cd3cb5d779db6ffaa9d6e0c3d329f3168e"
+    },
+    {
+      "source": "v2/rtl/sono_axi_system.sv",
+      "target": "v5/rtl/sono_axi_system.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd",
+      "initial_copy_sha256_bytes": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd"
+    },
+    {
+      "source": "v2/rtl/sono_core.sv",
+      "target": "v5/rtl/sono_core.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "1d25f9c9ea884773397febfb57fca2c1a3a779f46bb9d63893186bdac88d207d",
+      "initial_copy_sha256_bytes": "1d25f9c9ea884773397febfb57fca2c1a3a779f46bb9d63893186bdac88d207d",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1d25f9c9ea884773397febfb57fca2c1a3a779f46bb9d63893186bdac88d207d"
+    },
+    {
+      "source": "v2/rtl/sono_digital_system.sv",
+      "target": "v5/rtl/sono_digital_system.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "9e94bc2195610ea9a754f9d5b9923ef8610e061578d8db06f858086ce0b44a5b",
+      "initial_copy_sha256_bytes": "9e94bc2195610ea9a754f9d5b9923ef8610e061578d8db06f858086ce0b44a5b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "781d483af8b9b050c86f3c3806d9754fcc5629fc9ce4a9ecaba0c970bd7241de"
+    },
+    {
+      "source": "v2/rtl/sono_motion_system.sv",
+      "target": "v5/rtl/sono_motion_system.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148",
+      "initial_copy_sha256_bytes": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148"
+    },
+    {
+      "source": "v2/rtl/sono_top.sv",
+      "target": "v5/rtl/sono_top.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "6fdba0c92cf82e37e3247047a97168fc21da74a91d37ce9b1d5061c8c64e5427",
+      "initial_copy_sha256_bytes": "6fdba0c92cf82e37e3247047a97168fc21da74a91d37ce9b1d5061c8c64e5427",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "6fdba0c92cf82e37e3247047a97168fc21da74a91d37ce9b1d5061c8c64e5427"
+    },
+    {
+      "source": "v2/rtl/timing/board_clock_candidate.sv",
+      "target": "v5/rtl/timing/board_clock_candidate.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "95506fd2c59b404adb837460a5a7855413783ee9ece3eb6b50143ec81af76be9",
+      "initial_copy_sha256_bytes": "95506fd2c59b404adb837460a5a7855413783ee9ece3eb6b50143ec81af76be9",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "95506fd2c59b404adb837460a5a7855413783ee9ece3eb6b50143ec81af76be9"
+    },
+    {
+      "source": "v2/rtl/timing/ultrasonic_timebase.sv",
+      "target": "v5/rtl/timing/ultrasonic_timebase.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f03a66f998b6df3d5adecd094bbc7964736ca1fc495ae958c85baa0e4ef36f8b",
+      "initial_copy_sha256_bytes": "f03a66f998b6df3d5adecd094bbc7964736ca1fc495ae958c85baa0e4ef36f8b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "f03a66f998b6df3d5adecd094bbc7964736ca1fc495ae958c85baa0e4ef36f8b"
+    },
+    {
+      "source": "v2/scripts/audit_bom.py",
+      "target": "v5/scripts/audit_bom.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "234cd5b77305412fb2ac03725811b02051779c97c3bda21c671f37c2ac05884c",
+      "initial_copy_sha256_bytes": "234cd5b77305412fb2ac03725811b02051779c97c3bda21c671f37c2ac05884c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "234cd5b77305412fb2ac03725811b02051779c97c3bda21c671f37c2ac05884c"
+    },
+    {
+      "source": "v2/scripts/board_transport_gate.py",
+      "target": "v5/scripts/board_transport_gate.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "661495ea8cf6abbfceff95924b25ad768de10c1b7fc393231e46d84445de0dfd",
+      "initial_copy_sha256_bytes": "661495ea8cf6abbfceff95924b25ad768de10c1b7fc393231e46d84445de0dfd",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "ac4256e7c74d5d78b041411730e053b9d7110072271f19cf134aad4f841e3122"
+    },
+    {
+      "source": "v2/scripts/check_migration.py",
+      "target": "v5/scripts/check_migration.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3b8e2cd16eca8fc271d524fdd615252dff49c64e15c2a5139f07447e7866f7b0",
+      "initial_copy_sha256_bytes": "3b8e2cd16eca8fc271d524fdd615252dff49c64e15c2a5139f07447e7866f7b0",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1de14feacd84c1ca242cad72adbf5e21f0424e8bfcfb6e7aea81647d1c96cb5d"
+    },
+    {
+      "source": "v2/scripts/check_repository.py",
+      "target": "v5/scripts/check_repository.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "77574ba3e70f30501f477d4183f702cb93c1c70dd7dd52ebe035bf881dfb4aa9",
+      "initial_copy_sha256_bytes": "77574ba3e70f30501f477d4183f702cb93c1c70dd7dd52ebe035bf881dfb4aa9",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "2ab1547fde4b58cd4f00d94aa05b0dcba31544e9f9356067b1fc0f1cad31a441"
+    },
+    {
+      "source": "v2/scripts/check_waveform.py",
+      "target": "v5/scripts/check_waveform.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "de91275544f88505de660e3a561cb2b46822f4532ef159bd00da23e1d2bb3115",
+      "initial_copy_sha256_bytes": "de91275544f88505de660e3a561cb2b46822f4532ef159bd00da23e1d2bb3115",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "de91275544f88505de660e3a561cb2b46822f4532ef159bd00da23e1d2bb3115"
+    },
+    {
+      "source": "v2/scripts/create_project.tcl",
+      "target": "v5/scripts/create_project.tcl",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "97f8ac02abf4b5bc2603888cb33529a5576ba4f97a642e6bd6c2e660c68924ec",
+      "initial_copy_sha256_bytes": "97f8ac02abf4b5bc2603888cb33529a5576ba4f97a642e6bd6c2e660c68924ec",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "12fb290d12d77565085626ae44008fc9dae4fcc76ebe3dc82a1fa03dd5d3b347"
+    },
+    {
+      "source": "v2/scripts/generate_system.py",
+      "target": "v5/scripts/generate_system.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "d89bdec66e4c75097551f641021d403a8525f46d8a93aa34d82b97905e8f89a9",
+      "initial_copy_sha256_bytes": "d89bdec66e4c75097551f641021d403a8525f46d8a93aa34d82b97905e8f89a9",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "d89bdec66e4c75097551f641021d403a8525f46d8a93aa34d82b97905e8f89a9"
+    },
+    {
+      "source": "v2/scripts/generate_transport.py",
+      "target": "v5/scripts/generate_transport.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c289372ac598563d2027f4b6bdad8886fd1b06d651ebc03a9d8593e8ede6b80b",
+      "initial_copy_sha256_bytes": "c289372ac598563d2027f4b6bdad8886fd1b06d651ebc03a9d8593e8ede6b80b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c289372ac598563d2027f4b6bdad8886fd1b06d651ebc03a9d8593e8ede6b80b"
+    },
+    {
+      "source": "v2/scripts/pre_pcb_checks.py",
+      "target": "v5/scripts/pre_pcb_checks.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "76fc8397e10feaba50804db401aae81834c5fdccb57593eaccbd516c284f62fc",
+      "initial_copy_sha256_bytes": "76fc8397e10feaba50804db401aae81834c5fdccb57593eaccbd516c284f62fc",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "883625b10e0514250580e0a14f83819f33ec0dcb421cb38420597526202d8d0f"
+    },
+    {
+      "source": "v2/scripts/ps_platform_preflight.py",
+      "target": "v5/scripts/ps_platform_preflight.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "cd83839661acbcfb9aa872aae2d957a7b06579da4052ffa440a1af755d57ddb0",
+      "initial_copy_sha256_bytes": "cd83839661acbcfb9aa872aae2d957a7b06579da4052ffa440a1af755d57ddb0",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "08e8ae8e314f4b4eb442cb77face32f4be372e0fc1c803714f02ddf638f43847"
+    },
+    {
+      "source": "v2/scripts/run_motion_app.ps1",
+      "target": "v5/scripts/run_motion_app.ps1",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "4b30a69d3b7c81d9c375a12c0a62770c24b230fda0057ef56a19e3252e5b84f3",
+      "initial_copy_sha256_bytes": "4b30a69d3b7c81d9c375a12c0a62770c24b230fda0057ef56a19e3252e5b84f3",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "a2490523c157096177f3653644920ba7900157780480cc189f68d91d515d43ec"
+    },
+    {
+      "source": "v2/scripts/self_calibration_gate.py",
+      "target": "v5/scripts/self_calibration_gate.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "5094336e8dc4bb088b66cb6c218b45817df502bb7724c665b477027ab6c52b3e",
+      "initial_copy_sha256_bytes": "5094336e8dc4bb088b66cb6c218b45817df502bb7724c665b477027ab6c52b3e",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "5094336e8dc4bb088b66cb6c218b45817df502bb7724c665b477027ab6c52b3e"
+    },
+    {
+      "source": "v2/scripts/timing_equivalence.py",
+      "target": "v5/scripts/timing_equivalence.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "bc07ab3d045dd1701b465e6e8f44994e359ada407d6924f928057dce75ad776c",
+      "initial_copy_sha256_bytes": "bc07ab3d045dd1701b465e6e8f44994e359ada407d6924f928057dce75ad776c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "3b69208b63b5e1ac46d2e18ec891bca9daf5f1f4a6b662f31707645621b6f4da"
+    },
+    {
+      "source": "v2/scripts/validate.py",
+      "target": "v5/scripts/validate.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "0b301ab3effb37624a5310753056a34c46c061801f025211baeef81d71a4bce0",
+      "initial_copy_sha256_bytes": "0b301ab3effb37624a5310753056a34c46c061801f025211baeef81d71a4bce0",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "00e3c1d9be0fb8f462da8bd09a65ec75baaf13ac7df37a5cf68563a06a8b8a49"
+    },
+    {
+      "source": "v2/software/__init__.py",
+      "target": "v5/software/__init__.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "7bda9b5d67fc4a63e4c1b14b7f2c51bdc32038527c8a4db3a028a0369747aa27",
+      "initial_copy_sha256_bytes": "7bda9b5d67fc4a63e4c1b14b7f2c51bdc32038527c8a4db3a028a0369747aa27",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "7bda9b5d67fc4a63e4c1b14b7f2c51bdc32038527c8a4db3a028a0369747aa27"
+    },
+    {
+      "source": "v2/software/acoustic_model/__init__.py",
+      "target": "v5/software/acoustic_model/__init__.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c1b125e3750409868a93b8c990d27746820ce5089d34d51a3ff2d5d73d1924ff",
+      "initial_copy_sha256_bytes": "c1b125e3750409868a93b8c990d27746820ce5089d34d51a3ff2d5d73d1924ff",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c1b125e3750409868a93b8c990d27746820ce5089d34d51a3ff2d5d73d1924ff"
+    },
+    {
+      "source": "v2/software/acoustic_model/array_geometry.py",
+      "target": "v5/software/acoustic_model/array_geometry.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "537c0a2029490565c133cf9a113b0ccf02a1ef5c1a8b46b61f292897171b8847",
+      "initial_copy_sha256_bytes": "537c0a2029490565c133cf9a113b0ccf02a1ef5c1a8b46b61f292897171b8847",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "537c0a2029490565c133cf9a113b0ccf02a1ef5c1a8b46b61f292897171b8847"
+    },
+    {
+      "source": "v2/software/acoustic_model/export_geometry.py",
+      "target": "v5/software/acoustic_model/export_geometry.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "36359f7672bc3ecc873060dbdfce60bcaac8f539a56d8ab881d493e0b5a83738",
+      "initial_copy_sha256_bytes": "36359f7672bc3ecc873060dbdfce60bcaac8f539a56d8ab881d493e0b5a83738",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "36359f7672bc3ecc873060dbdfce60bcaac8f539a56d8ab881d493e0b5a83738"
+    },
+    {
+      "source": "v2/software/acoustic_model/field_solver.py",
+      "target": "v5/software/acoustic_model/field_solver.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "1d2353c7b160286ac31c22bec7a29db783ef4ac25a1dabb5fa1f6efeab5adeb9",
+      "initial_copy_sha256_bytes": "1d2353c7b160286ac31c22bec7a29db783ef4ac25a1dabb5fa1f6efeab5adeb9",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1d2353c7b160286ac31c22bec7a29db783ef4ac25a1dabb5fa1f6efeab5adeb9"
+    },
+    {
+      "source": "v2/software/acoustic_model/particle_model.py",
+      "target": "v5/software/acoustic_model/particle_model.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "8953cbc7cdc84075260b34a8740ef277d296d1a6f29b422f1453d5f3f11f0625",
+      "initial_copy_sha256_bytes": "8953cbc7cdc84075260b34a8740ef277d296d1a6f29b422f1453d5f3f11f0625",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "8953cbc7cdc84075260b34a8740ef277d296d1a6f29b422f1453d5f3f11f0625"
+    },
+    {
+      "source": "v2/software/acoustic_model/phase_lut_generator.py",
+      "target": "v5/software/acoustic_model/phase_lut_generator.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "988ddf1f22528ad245c62c2a95c0f0d404e8cd1c676b35e91d68f65d9e939eef",
+      "initial_copy_sha256_bytes": "988ddf1f22528ad245c62c2a95c0f0d404e8cd1c676b35e91d68f65d9e939eef",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "ac3e567dfbc2f36e9a42f4f3939fdabae47c26089eaeefb50c7d63d8d768d6d9"
+    },
+    {
+      "source": "v2/software/acoustic_model/phase_solver.py",
+      "target": "v5/software/acoustic_model/phase_solver.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "995922c984babfb8a7cb3f862e2e92eb97f96d89d43ebfa629e159eddf81c8da",
+      "initial_copy_sha256_bytes": "995922c984babfb8a7cb3f862e2e92eb97f96d89d43ebfa629e159eddf81c8da",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "995922c984babfb8a7cb3f862e2e92eb97f96d89d43ebfa629e159eddf81c8da"
+    },
+    {
+      "source": "v2/software/acoustic_model/standing_wave.py",
+      "target": "v5/software/acoustic_model/standing_wave.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "1d1927d02ddba0daa7a1d2690f16b1ddcd5a1bd85015f9d38f009d460d2f08d7",
+      "initial_copy_sha256_bytes": "1d1927d02ddba0daa7a1d2690f16b1ddcd5a1bd85015f9d38f009d460d2f08d7",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1d1927d02ddba0daa7a1d2690f16b1ddcd5a1bd85015f9d38f009d460d2f08d7"
+    },
+    {
+      "source": "v2/software/acoustic_model/transducer.py",
+      "target": "v5/software/acoustic_model/transducer.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f7a275a0904304c156447ff128bd1fb38b8e8f9d918afb3508f7152d056453de",
+      "initial_copy_sha256_bytes": "f7a275a0904304c156447ff128bd1fb38b8e8f9d918afb3508f7152d056453de",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "f7a275a0904304c156447ff128bd1fb38b8e8f9d918afb3508f7152d056453de"
+    },
+    {
+      "source": "v2/software/acoustic_model/visualize_field.py",
+      "target": "v5/software/acoustic_model/visualize_field.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f9a00d01b1815fef6abbeb87fcf88f5c254a82bed33c139072625c6fea9a3234",
+      "initial_copy_sha256_bytes": "f9a00d01b1815fef6abbeb87fcf88f5c254a82bed33c139072625c6fea9a3234",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "f9a00d01b1815fef6abbeb87fcf88f5c254a82bed33c139072625c6fea9a3234"
+    },
+    {
+      "source": "v2/software/board/__init__.py",
+      "target": "v5/software/board/__init__.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "a2387b3b9c13edf786db7405f0193620098d8310a2c2e906dfe3acb071bc3d59",
+      "initial_copy_sha256_bytes": "a2387b3b9c13edf786db7405f0193620098d8310a2c2e906dfe3acb071bc3d59",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "a2387b3b9c13edf786db7405f0193620098d8310a2c2e906dfe3acb071bc3d59"
+    },
+    {
+      "source": "v2/software/board/generated.py",
+      "target": "v5/software/board/generated.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f93e0cf104c3be2221c43ab787f4f1a7f6f4792b67e3e63be7fda00e7460e4d8",
+      "initial_copy_sha256_bytes": "f93e0cf104c3be2221c43ab787f4f1a7f6f4792b67e3e63be7fda00e7460e4d8",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "f93e0cf104c3be2221c43ab787f4f1a7f6f4792b67e3e63be7fda00e7460e4d8"
+    },
+    {
+      "source": "v2/software/board/protocol.py",
+      "target": "v5/software/board/protocol.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "fa8e4e502a4d83901e48d1351af69469650d898a23083762863ea637d4c9095d",
+      "initial_copy_sha256_bytes": "fa8e4e502a4d83901e48d1351af69469650d898a23083762863ea637d4c9095d",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "fa8e4e502a4d83901e48d1351af69469650d898a23083762863ea637d4c9095d"
+    },
+    {
+      "source": "v2/software/board/serial_transport.py",
+      "target": "v5/software/board/serial_transport.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "921c21b5100728206036f9fbbf598e9bfe5dd812bd80ae825f172157fe6be333",
+      "initial_copy_sha256_bytes": "921c21b5100728206036f9fbbf598e9bfe5dd812bd80ae825f172157fe6be333",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "921c21b5100728206036f9fbbf598e9bfe5dd812bd80ae825f172157fe6be333"
+    },
+    {
+      "source": "v2/software/calibration/__init__.py",
+      "target": "v5/software/calibration/__init__.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_copy_sha256_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "v2/software/calibration/config.py",
+      "target": "v5/software/calibration/config.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "8ba5038def8ec08cd314eb8898fd5e41f7b296501cbdd1d0101192e96fa6973c",
+      "initial_copy_sha256_bytes": "8ba5038def8ec08cd314eb8898fd5e41f7b296501cbdd1d0101192e96fa6973c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "8ba5038def8ec08cd314eb8898fd5e41f7b296501cbdd1d0101192e96fa6973c"
+    },
+    {
+      "source": "v2/software/calibration/database.py",
+      "target": "v5/software/calibration/database.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "103f5d1d98fc2cc968afd0b7a4ad6a80ff09e32afd8895f9dbdd8d9401dfc5a8",
+      "initial_copy_sha256_bytes": "103f5d1d98fc2cc968afd0b7a4ad6a80ff09e32afd8895f9dbdd8d9401dfc5a8",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "b7a445ea22f1a0a6029d091d0e5a719f1e7e9cc2aebd067addb136e36fd75868"
+    },
+    {
+      "source": "v2/software/calibration/experiment.py",
+      "target": "v5/software/calibration/experiment.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "cd790a60856d650e984da4600a17c67b82ddd094356f56450fa2f01bff626169",
+      "initial_copy_sha256_bytes": "cd790a60856d650e984da4600a17c67b82ddd094356f56450fa2f01bff626169",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "cd790a60856d650e984da4600a17c67b82ddd094356f56450fa2f01bff626169"
+    },
+    {
+      "source": "v2/software/calibration/geometry.py",
+      "target": "v5/software/calibration/geometry.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "ae0dcd6a7f0507f939bea2b512b05447ffcfbf002a6e5c053cc0dae9ce43e0ac",
+      "initial_copy_sha256_bytes": "ae0dcd6a7f0507f939bea2b512b05447ffcfbf002a6e5c053cc0dae9ce43e0ac",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "ae0dcd6a7f0507f939bea2b512b05447ffcfbf002a6e5c053cc0dae9ce43e0ac"
+    },
+    {
+      "source": "v2/software/calibration/pipeline.py",
+      "target": "v5/software/calibration/pipeline.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "4706ba13c18b9173239b71bd153f62ec3348c3baa0d4b72ae502a4297917ecc5",
+      "initial_copy_sha256_bytes": "4706ba13c18b9173239b71bd153f62ec3348c3baa0d4b72ae502a4297917ecc5",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "51a93660330cb516da608eb7258998ca9ce3ac8b3acb4b5b383c408fe381b14b"
+    },
+    {
+      "source": "v2/software/calibration/report.py",
+      "target": "v5/software/calibration/report.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "09f129c49043835717a43d286a70132a6fef279092d03fe849c6533572c85f02",
+      "initial_copy_sha256_bytes": "09f129c49043835717a43d286a70132a6fef279092d03fe849c6533572c85f02",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "09f129c49043835717a43d286a70132a6fef279092d03fe849c6533572c85f02"
+    },
+    {
+      "source": "v2/software/calibration/signal.py",
+      "target": "v5/software/calibration/signal.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "517592dccb1a2d41c972744bb67a368faf7acbc7e5261e9ce0fa8b47064233cc",
+      "initial_copy_sha256_bytes": "517592dccb1a2d41c972744bb67a368faf7acbc7e5261e9ce0fa8b47064233cc",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "517592dccb1a2d41c972744bb67a368faf7acbc7e5261e9ce0fa8b47064233cc"
+    },
+    {
+      "source": "v2/software/calibration/sound_speed.py",
+      "target": "v5/software/calibration/sound_speed.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "98f953b4258a577f75e4ccd624f48d42ef40577d7c1a0c40d2e9e7f982a485b8",
+      "initial_copy_sha256_bytes": "98f953b4258a577f75e4ccd624f48d42ef40577d7c1a0c40d2e9e7f982a485b8",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "98f953b4258a577f75e4ccd624f48d42ef40577d7c1a0c40d2e9e7f982a485b8"
+    },
+    {
+      "source": "v2/software/calibration/synthetic.py",
+      "target": "v5/software/calibration/synthetic.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "01d0abb9dd7f49335abc84a054b6e96907c87e8573b9f6adeffbec498029abf4",
+      "initial_copy_sha256_bytes": "01d0abb9dd7f49335abc84a054b6e96907c87e8573b9f6adeffbec498029abf4",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "7d09e09c72d6a302c1c034a40e4acbb9c9d941f332d12b8e5a28dc63daa9de1b"
+    },
+    {
+      "source": "v2/software/calibration/visualize.py",
+      "target": "v5/software/calibration/visualize.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "0db14b445c7857cb8473b3c3251d75f6a43e34befc05722ac25e28b21d10132f",
+      "initial_copy_sha256_bytes": "0db14b445c7857cb8473b3c3251d75f6a43e34befc05722ac25e28b21d10132f",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "0db14b445c7857cb8473b3c3251d75f6a43e34befc05722ac25e28b21d10132f"
+    },
+    {
+      "source": "v2/software/characterization/__init__.py",
+      "target": "v5/software/characterization/__init__.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_copy_sha256_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "v2/software/characterization/response.py",
+      "target": "v5/software/characterization/response.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "bc2a8552cbf5c7732522a239a64f644f3d1b0c221c3985a52db63812df4b3e16",
+      "initial_copy_sha256_bytes": "bc2a8552cbf5c7732522a239a64f644f3d1b0c221c3985a52db63812df4b3e16",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "bc2a8552cbf5c7732522a239a64f644f3d1b0c221c3985a52db63812df4b3e16"
+    },
+    {
+      "source": "v2/software/control/__init__.py",
+      "target": "v5/software/control/__init__.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "initial_copy_sha256_bytes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "v2/software/control/host.py",
+      "target": "v5/software/control/host.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "740bda04dda96a14bb3af365ca47ada16e5bcfadcaaa1378d4981f778240c926",
+      "initial_copy_sha256_bytes": "740bda04dda96a14bb3af365ca47ada16e5bcfadcaaa1378d4981f778240c926",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "740bda04dda96a14bb3af365ca47ada16e5bcfadcaaa1378d4981f778240c926"
+    },
+    {
+      "source": "v2/software/control/registers.py",
+      "target": "v5/software/control/registers.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "8be6700ce5131cd3928c1a9dbd7837615e7d414240b5e904392e87931d84cbe3",
+      "initial_copy_sha256_bytes": "8be6700ce5131cd3928c1a9dbd7837615e7d414240b5e904392e87931d84cbe3",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "8be6700ce5131cd3928c1a9dbd7837615e7d414240b5e904392e87931d84cbe3"
+    },
+    {
+      "source": "v2/software/motion/__init__.py",
+      "target": "v5/software/motion/__init__.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c36d928075062dac08722f8f991a0ec30016dbec169b933250cc11e67e1eaf78",
+      "initial_copy_sha256_bytes": "c36d928075062dac08722f8f991a0ec30016dbec169b933250cc11e67e1eaf78",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c36d928075062dac08722f8f991a0ec30016dbec169b933250cc11e67e1eaf78"
+    },
+    {
+      "source": "v2/software/motion/commands.py",
+      "target": "v5/software/motion/commands.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "81d1044125eff69e286c51b1be7e82e29640554dabaace473b5fd872cc805c1c",
+      "initial_copy_sha256_bytes": "81d1044125eff69e286c51b1be7e82e29640554dabaace473b5fd872cc805c1c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "81d1044125eff69e286c51b1be7e82e29640554dabaace473b5fd872cc805c1c"
+    },
+    {
+      "source": "v2/software/motion/motion_controller.py",
+      "target": "v5/software/motion/motion_controller.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "8a34f01f5c48a1de9effc4aa6c472043e8838ff66d73d40a11118f5ce0fe5ff5",
+      "initial_copy_sha256_bytes": "8a34f01f5c48a1de9effc4aa6c472043e8838ff66d73d40a11118f5ce0fe5ff5",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "8a34f01f5c48a1de9effc4aa6c472043e8838ff66d73d40a11118f5ce0fe5ff5"
+    },
+    {
+      "source": "v2/software/motion/trajectory.py",
+      "target": "v5/software/motion/trajectory.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "1fa1931f226594fe2f6aade8f7319a59c657ff7d976783eb19b2c0b05128358d",
+      "initial_copy_sha256_bytes": "1fa1931f226594fe2f6aade8f7319a59c657ff7d976783eb19b2c0b05128358d",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1fa1931f226594fe2f6aade8f7319a59c657ff7d976783eb19b2c0b05128358d"
+    },
+    {
+      "source": "v2/software/motion/transport.py",
+      "target": "v5/software/motion/transport.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "82f4e5874c6161646538ceb021a119bf3d6d40ecc6f898e914154e2c43e598a7",
+      "initial_copy_sha256_bytes": "82f4e5874c6161646538ceb021a119bf3d6d40ecc6f898e914154e2c43e598a7",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "82f4e5874c6161646538ceb021a119bf3d6d40ecc6f898e914154e2c43e598a7"
+    },
+    {
+      "source": "v2/software/motion/trap_solver.py",
+      "target": "v5/software/motion/trap_solver.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "5cf0c2e68bec5fdd9d76b0dfdc0cfb855766471be41eebcb0e32a6735f4f70f9",
+      "initial_copy_sha256_bytes": "5cf0c2e68bec5fdd9d76b0dfdc0cfb855766471be41eebcb0e32a6735f4f70f9",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "5cf0c2e68bec5fdd9d76b0dfdc0cfb855766471be41eebcb0e32a6735f4f70f9"
+    },
+    {
+      "source": "v2/software/motion/workspace.py",
+      "target": "v5/software/motion/workspace.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "08aeffb84c7eb67f797fb60ce35d092aa25c5ee8529cd32b38e42ba3ee0b0f7c",
+      "initial_copy_sha256_bytes": "08aeffb84c7eb67f797fb60ce35d092aa25c5ee8529cd32b38e42ba3ee0b0f7c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "08aeffb84c7eb67f797fb60ce35d092aa25c5ee8529cd32b38e42ba3ee0b0f7c"
+    },
+    {
+      "source": "v2/software/ui/__init__.py",
+      "target": "v5/software/ui/__init__.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "fcac29e77c084b83999f6836aaeffaca6ec8c03139e16012194cacabfe213949",
+      "initial_copy_sha256_bytes": "fcac29e77c084b83999f6836aaeffaca6ec8c03139e16012194cacabfe213949",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "fcac29e77c084b83999f6836aaeffaca6ec8c03139e16012194cacabfe213949"
+    },
+    {
+      "source": "v2/software/ui/app.py",
+      "target": "v5/software/ui/app.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "3d240417e31d5657538ee504546bb9c980e39f55e2ac3867f16ea26b6836165d",
+      "initial_copy_sha256_bytes": "3d240417e31d5657538ee504546bb9c980e39f55e2ac3867f16ea26b6836165d",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "01909a1c48227c1c07f6e260198cc60cf73a0a0547819c462641d1cc5316d230"
+    },
+    {
+      "source": "v2/tb/ad7606b_model.sv",
+      "target": "v5/tb/ad7606b_model.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "50ba0e2c0248c0c842bed7ff5c234fcfdc463e1579bf82b405cedbbca63d0fb1",
+      "initial_copy_sha256_bytes": "50ba0e2c0248c0c842bed7ff5c234fcfdc463e1579bf82b405cedbbca63d0fb1",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "50ba0e2c0248c0c842bed7ff5c234fcfdc463e1579bf82b405cedbbca63d0fb1"
+    },
+    {
+      "source": "v2/tb/tb_array_interface.sv",
+      "target": "v5/tb/tb_array_interface.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "b0ce65574c039db95175e8c2b45c06b0625250636fcdc00561ea13c66f09da2a",
+      "initial_copy_sha256_bytes": "b0ce65574c039db95175e8c2b45c06b0625250636fcdc00561ea13c66f09da2a",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "b0ce65574c039db95175e8c2b45c06b0625250636fcdc00561ea13c66f09da2a"
+    },
+    {
+      "source": "v2/tb/tb_axi_native_bridge.sv",
+      "target": "v5/tb/tb_axi_native_bridge.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "0b8a24318a9fbb2301ac2851f647ad270c756efafd4aa1532688fe1f94286f31",
+      "initial_copy_sha256_bytes": "0b8a24318a9fbb2301ac2851f647ad270c756efafd4aa1532688fe1f94286f31",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "0b8a24318a9fbb2301ac2851f647ad270c756efafd4aa1532688fe1f94286f31"
+    },
+    {
+      "source": "v2/tb/tb_axi_system.sv",
+      "target": "v5/tb/tb_axi_system.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "9da8de2ef7683ae9530132cfc0047bf139c912213541e4409fe56b228aeae247",
+      "initial_copy_sha256_bytes": "9da8de2ef7683ae9530132cfc0047bf139c912213541e4409fe56b228aeae247",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "9da8de2ef7683ae9530132cfc0047bf139c912213541e4409fe56b228aeae247"
+    },
+    {
+      "source": "v2/tb/tb_bad_bandwidth.sv",
+      "target": "v5/tb/tb_bad_bandwidth.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "ba7a63df1a2fc66abdd05d1e0a09a8a1f5c8638a073236316aa88bd985a81318",
+      "initial_copy_sha256_bytes": "ba7a63df1a2fc66abdd05d1e0a09a8a1f5c8638a073236316aa88bd985a81318",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "ba7a63df1a2fc66abdd05d1e0a09a8a1f5c8638a073236316aa88bd985a81318"
+    },
+    {
+      "source": "v2/tb/tb_board_smoke_pl.sv",
+      "target": "v5/tb/tb_board_smoke_pl.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c29a704446c04bed74f243d1548af24dcaaf4273a309fdce74e4e72ce09f53e2",
+      "initial_copy_sha256_bytes": "c29a704446c04bed74f243d1548af24dcaaf4273a309fdce74e4e72ce09f53e2",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "95ff1924359a8f3d4147f846f8f5282aeb46cba2a84ea3d2be9fdd7537d10409"
+    },
+    {
+      "source": "v2/tb/tb_burst_equivalence.sv",
+      "target": "v5/tb/tb_burst_equivalence.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "8566136f029f6054c780c06f02611fcc4818ad7b22849892008ae994823cb343",
+      "initial_copy_sha256_bytes": "8566136f029f6054c780c06f02611fcc4818ad7b22849892008ae994823cb343",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "27e76f1020197e5c61f7393264416091fc5b6c499ba3e3d816ab7a95dd2c7703"
+    },
+    {
+      "source": "v2/tb/tb_calibration.sv",
+      "target": "v5/tb/tb_calibration.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "0e8e8dfe86ec7a883d7216f5db7d5b45663cbffb7c7215991c30ad4cbfd18764",
+      "initial_copy_sha256_bytes": "0e8e8dfe86ec7a883d7216f5db7d5b45663cbffb7c7215991c30ad4cbfd18764",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "90828812d79813f8e23cd988a82235c73630d3bc7d94e7875f794b3daf0369ea"
+    },
+    {
+      "source": "v2/tb/tb_core.sv",
+      "target": "v5/tb/tb_core.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "a1fb348297c833e6e7e2211c7978d85887a3b9e74277b0afc9f9e8c5afe1899a",
+      "initial_copy_sha256_bytes": "a1fb348297c833e6e7e2211c7978d85887a3b9e74277b0afc9f9e8c5afe1899a",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "a1fb348297c833e6e7e2211c7978d85887a3b9e74277b0afc9f9e8c5afe1899a"
+    },
+    {
+      "source": "v2/tb/tb_motion.sv",
+      "target": "v5/tb/tb_motion.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "ca2b083b7a33263fada9edbeebb0b1e25ac7bf7b53d9370dc316f1d1255e8d2e",
+      "initial_copy_sha256_bytes": "ca2b083b7a33263fada9edbeebb0b1e25ac7bf7b53d9370dc316f1d1255e8d2e",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "ca2b083b7a33263fada9edbeebb0b1e25ac7bf7b53d9370dc316f1d1255e8d2e"
+    },
+    {
+      "source": "v2/tb/tb_motion_faults.sv",
+      "target": "v5/tb/tb_motion_faults.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "602357fe7aeaf71a13475b6d18f3d52a986724737121d5f650eedaa4a0fdc317",
+      "initial_copy_sha256_bytes": "602357fe7aeaf71a13475b6d18f3d52a986724737121d5f650eedaa4a0fdc317",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "602357fe7aeaf71a13475b6d18f3d52a986724737121d5f650eedaa4a0fdc317"
+    },
+    {
+      "source": "v2/tb/tb_motion_queue_equivalence.sv",
+      "target": "v5/tb/tb_motion_queue_equivalence.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "42f46aa39939ff9652eef112c3248f849efd00847012674e67f548125f421a6b",
+      "initial_copy_sha256_bytes": "42f46aa39939ff9652eef112c3248f849efd00847012674e67f548125f421a6b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "42f46aa39939ff9652eef112c3248f849efd00847012674e67f548125f421a6b"
+    },
+    {
+      "source": "v2/tb/tb_phase_equivalence.sv",
+      "target": "v5/tb/tb_phase_equivalence.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "78a40f681545d42a44e6f63a8252917fb3ae5d7aec2e11f2c217492ffb163731",
+      "initial_copy_sha256_bytes": "78a40f681545d42a44e6f63a8252917fb3ae5d7aec2e11f2c217492ffb163731",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "aeb0560b753cec3cbea5282a1b08b82c1547b87a03c113ef5af1a47c86e511c3"
+    },
+    {
+      "source": "v2/tb/tb_phase_map.sv",
+      "target": "v5/tb/tb_phase_map.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e39bed44f032db29983221aee2e8d213a795351e9cbbce76b116d5f912c3f65b",
+      "initial_copy_sha256_bytes": "e39bed44f032db29983221aee2e8d213a795351e9cbbce76b116d5f912c3f65b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e39bed44f032db29983221aee2e8d213a795351e9cbbce76b116d5f912c3f65b"
+    },
+    {
+      "source": "v2/tb/tb_scheduler_equivalence.sv",
+      "target": "v5/tb/tb_scheduler_equivalence.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "e6455563b667a17b37cdb61f903d0f84a711865347a293b82e7d96ef1c420be0",
+      "initial_copy_sha256_bytes": "e6455563b667a17b37cdb61f903d0f84a711865347a293b82e7d96ef1c420be0",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "e6455563b667a17b37cdb61f903d0f84a711865347a293b82e7d96ef1c420be0"
+    },
+    {
+      "source": "v2/tb/tb_serializer_fault.sv",
+      "target": "v5/tb/tb_serializer_fault.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "82884280a08dd7dc168fa942dcd222bc10e3dcf71918bf34b7a30d331a01735c",
+      "initial_copy_sha256_bytes": "82884280a08dd7dc168fa942dcd222bc10e3dcf71918bf34b7a30d331a01735c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "82884280a08dd7dc168fa942dcd222bc10e3dcf71918bf34b7a30d331a01735c"
+    },
+    {
+      "source": "v2/tb/tb_serializer_throughput.sv",
+      "target": "v5/tb/tb_serializer_throughput.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "6a7f8a8979e439cfc322dc76360afa4aeb60750d97cd8ac2662522d5d80d482b",
+      "initial_copy_sha256_bytes": "6a7f8a8979e439cfc322dc76360afa4aeb60750d97cd8ac2662522d5d80d482b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "6a7f8a8979e439cfc322dc76360afa4aeb60750d97cd8ac2662522d5d80d482b"
+    },
+    {
+      "source": "v2/tb/tb_system.sv",
+      "target": "v5/tb/tb_system.sv",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "a6a0aacf610f28f2c43e92a007ed5b3b885a008988ab44be1de25204a05b7519",
+      "initial_copy_sha256_bytes": "a6a0aacf610f28f2c43e92a007ed5b3b885a008988ab44be1de25204a05b7519",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "a6a0aacf610f28f2c43e92a007ed5b3b885a008988ab44be1de25204a05b7519"
+    },
+    {
+      "source": "v2/tests/ps_service_harness.c",
+      "target": "v5/tests/ps_service_harness.c",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "2bd270881e90557af0e1bf7254649696c07a387deca136ff78b7f98705cff3e3",
+      "initial_copy_sha256_bytes": "2bd270881e90557af0e1bf7254649696c07a387deca136ff78b7f98705cff3e3",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "2bd270881e90557af0e1bf7254649696c07a387deca136ff78b7f98705cff3e3"
+    },
+    {
+      "source": "v2/tests/test_acoustic_model.py",
+      "target": "v5/tests/test_acoustic_model.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "10cbf65e25262a0d2b02a523a8a25df50499fdec53afc22e83c03adf18edf7e5",
+      "initial_copy_sha256_bytes": "10cbf65e25262a0d2b02a523a8a25df50499fdec53afc22e83c03adf18edf7e5",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "10cbf65e25262a0d2b02a523a8a25df50499fdec53afc22e83c03adf18edf7e5"
+    },
+    {
+      "source": "v2/tests/test_board_project_gate.py",
+      "target": "v5/tests/test_board_project_gate.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "fa5b13c2ca88876a91b2628c0023a881e751054d06e5c8d826602c3b18557b51",
+      "initial_copy_sha256_bytes": "fa5b13c2ca88876a91b2628c0023a881e751054d06e5c8d826602c3b18557b51",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "fa5b13c2ca88876a91b2628c0023a881e751054d06e5c8d826602c3b18557b51"
+    },
+    {
+      "source": "v2/tests/test_board_transport.py",
+      "target": "v5/tests/test_board_transport.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "b360b52a9006f61456ea0bc5e8fc898c741e3860308932d413587e11c1794923",
+      "initial_copy_sha256_bytes": "b360b52a9006f61456ea0bc5e8fc898c741e3860308932d413587e11c1794923",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "b360b52a9006f61456ea0bc5e8fc898c741e3860308932d413587e11c1794923"
+    },
+    {
+      "source": "v2/tests/test_motion.py",
+      "target": "v5/tests/test_motion.py",
+      "classification": "COPY_AND_UPDATE",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f4deff1659f59b7ea75dc43e7e68e5d6ef04c2bdb4cf8b62bf46fa9f349c06f9",
+      "initial_copy_sha256_bytes": "f4deff1659f59b7ea75dc43e7e68e5d6ef04c2bdb4cf8b62bf46fa9f349c06f9",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "692f23140c56e7cad4bb495e371b0efccc1e8221fd4ed77d645c0f71b298156b"
+    },
+    {
+      "source": "v2/tests/test_potential_proxy.py",
+      "target": "v5/tests/test_potential_proxy.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "96a8889ade5ff1b8f8fcddd7fad810d6bea34b3c054674053b8466e1788bc9ec",
+      "initial_copy_sha256_bytes": "96a8889ade5ff1b8f8fcddd7fad810d6bea34b3c054674053b8466e1788bc9ec",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "96a8889ade5ff1b8f8fcddd7fad810d6bea34b3c054674053b8466e1788bc9ec"
+    },
+    {
+      "source": "v2/tests/test_radiating_geometry.py",
+      "target": "v5/tests/test_radiating_geometry.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "233524bbfbb1875884369fb9f1d6d1ddd3504677701569feb5c716d357bbdd1b",
+      "initial_copy_sha256_bytes": "233524bbfbb1875884369fb9f1d6d1ddd3504677701569feb5c716d357bbdd1b",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "233524bbfbb1875884369fb9f1d6d1ddd3504677701569feb5c716d357bbdd1b"
+    },
+    {
+      "source": "v2/tests/test_repository_audit.py",
+      "target": "v5/tests/test_repository_audit.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "f90ade29c9992dda4b1a4004ae307cfd4e1e7b9152251d5f65dc16f1a474928c",
+      "initial_copy_sha256_bytes": "f90ade29c9992dda4b1a4004ae307cfd4e1e7b9152251d5f65dc16f1a474928c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "f90ade29c9992dda4b1a4004ae307cfd4e1e7b9152251d5f65dc16f1a474928c"
+    },
+    {
+      "source": "v2/tests/test_self_calibration.py",
+      "target": "v5/tests/test_self_calibration.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "85d0d679c4922b1028bebe1a988fd0812ef0a00de532c9ee944031857f3afb2c",
+      "initial_copy_sha256_bytes": "85d0d679c4922b1028bebe1a988fd0812ef0a00de532c9ee944031857f3afb2c",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "85d0d679c4922b1028bebe1a988fd0812ef0a00de532c9ee944031857f3afb2c"
+    },
+    {
+      "source": "v2/tests/test_simulator_timeout.py",
+      "target": "v5/tests/test_simulator_timeout.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "ef3083fbbe8dfee7592c38d74a8255c493f6814ab198f96399394673ff9b9e00",
+      "initial_copy_sha256_bytes": "ef3083fbbe8dfee7592c38d74a8255c493f6814ab198f96399394673ff9b9e00",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "ef3083fbbe8dfee7592c38d74a8255c493f6814ab198f96399394673ff9b9e00"
+    },
+    {
+      "source": "v2/tests/test_ui_evidence.py",
+      "target": "v5/tests/test_ui_evidence.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Reusable current core/interface/test or reference input",
+      "source_sha256_bytes": "c0c447047ce492f3c0257e576b06195147b61d895454f7b7b4e60172a023b887",
+      "initial_copy_sha256_bytes": "c0c447047ce492f3c0257e576b06195147b61d895454f7b7b4e60172a023b887",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c0c447047ce492f3c0257e576b06195147b61d895454f7b7b4e60172a023b887"
+    },
+    {
+      "source": "v2/scripts/motion_gate.py",
+      "target": "v5/scripts/motion_gate.py",
+      "classification": "COPY_AS_IS",
+      "reason": "Required complete motion/fault/GUI/cross-simulator gate dependency; initial omission found by actual baseline execution",
+      "source_sha256_bytes": "c6040ca57189df256acd5b9287a23a04f7a295a9c83aae684081144adcf5c601",
+      "initial_copy_sha256_bytes": "c6040ca57189df256acd5b9287a23a04f7a295a9c83aae684081144adcf5c601",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "c6040ca57189df256acd5b9287a23a04f7a295a9c83aae684081144adcf5c601"
+    },
+    {
+      "source": "v2/evidence/self_calibration_stage/validation_frequency/self_calibration/calibration.json",
+      "target": "v5/simulation/fixtures/calibration_reference.json",
+      "classification": "COPY_AS_IS",
+      "reason": "Explicit SYNTHETIC calibration test input; original metadata retained; never a board measurement",
+      "source_sha256_bytes": "0242b8a1fb7577c505122f350b9563a098a0f2bba1624712a18668ce8ac1adcb",
+      "initial_copy_sha256_bytes": "0242b8a1fb7577c505122f350b9563a098a0f2bba1624712a18668ce8ac1adcb",
+      "hash_policy": "CANONICAL_LF_UTF8",
+      "v5_expected_sha256": "1be42d3616a4b4aab100f03720fcfa5db17e254c68231cfccf1812c816150035"
+    }
+  ]
+}

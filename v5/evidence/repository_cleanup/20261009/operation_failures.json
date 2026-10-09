@@ -1,0 +1,15 @@
+{
+  "failures": [
+    {
+      "action": "Initial normal fast-forward after creating branch from main",
+      "result": "exit1; stderr not retained by first helper; no content edits were made",
+      "resolution": "Explicit same ff-only retry succeeded; main unchanged; all source identity checks then passed"
+    },
+    {
+      "action": "Continue current documentation after successful Git moves",
+      "result": "UnicodeDecodeError due Windows GBK default read",
+      "resolution": "UTF-8 mode enabled; resumed only not-yet-executed current documentation, did not repeat moves or rewrite archive indexes"
+    }
+  ],
+  "tests_relaxed": false
+}

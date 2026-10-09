@@ -1,0 +1,32 @@
+{
+  "status": "RECOVERED_OFFLINE_FAILURES_RETAINED",
+  "failures": [
+    {
+      "tool": "Vivado package review",
+      "error": "No open design",
+      "evidence": "package_review.log",
+      "recovery": "Read minimal combinational stub and synth_design -rtl",
+      "result": "package_review_retry.log PASS"
+    },
+    {
+      "tool": "ADI reference download",
+      "error": "IncompleteRead on initial requests",
+      "recovery": "Retry complete official source; validate actual PDF and byte hash",
+      "result": "reference_sources.json"
+    },
+    {
+      "tool": "XSim candidate wrapper",
+      "error": "Expected a switch but found E (drive-qualified testplusarg path)",
+      "recovery": "Run same self-checking TB with local vector filename; no assertions removed",
+      "result": "adc_candidate_xsim.log PASS",
+      "failure_log": "SOURCE_TOOL_OUTPUT_ONLY_NO_LOG_FILE"
+    },
+    {
+      "tool": "New integrity helper",
+      "error": "Initially compared raw CRLF bytes against LF-normalized baseline hashes",
+      "recovery": "Use the exact read_text UTF-8 hash scope of run_baseline.py; no source or acceptance change",
+      "result": "final_integrity.json PASS",
+      "failure_log": "SOURCE_TOOL_OUTPUT_ONLY_NO_LOG_FILE"
+    }
+  ]
+}

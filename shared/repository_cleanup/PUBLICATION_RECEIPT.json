@@ -1,0 +1,278 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "active_version": "v5",
+  "verified_at": "2026-10-09T16:23:22.043424+00:00",
+  "status": "READY_FOR_USER_REVIEW",
+  "verified_evidence_commit": "939280960e6baddaf5d190b9c7f8534eb0b6fb16",
+  "tested_runtime_source_commit": "3e788f4a2763c0354ca66d3836d0709dcf9f0107",
+  "checkpoint_containing_commit": "939280960e6baddaf5d190b9c7f8534eb0b6fb16",
+  "receipt_containing_commit": null,
+  "receipt_commit_resolution": "git log -1 --format=%H -- shared/repository_cleanup/PUBLICATION_RECEIPT.json",
+  "main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "main_merged": false,
+  "pr": {
+    "baseRefName": "main",
+    "headRefName": "codex/v5-historical-project-isolation-20261009",
+    "headRefOid": "939280960e6baddaf5d190b9c7f8534eb0b6fb16",
+    "isDraft": true,
+    "mergeStateStatus": "CLEAN",
+    "number": 3,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T16:20:46Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37958420085/job/113914754837",
+        "name": "integrity",
+        "startedAt": "2026-10-09T16:20:39Z",
+        "status": "COMPLETED",
+        "workflowName": "v5 workspace integrity"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-09T16:20:44Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37958411424/job/113914723506",
+        "name": "integrity",
+        "startedAt": "2026-10-09T16:20:35Z",
+        "status": "COMPLETED",
+        "workflowName": "v5 workspace integrity"
+      }
+    ],
+    "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/3"
+  },
+  "ci_runs": [
+    {
+      "conclusion": "success",
+      "databaseId": 37958420085,
+      "event": "pull_request",
+      "headSha": "939280960e6baddaf5d190b9c7f8534eb0b6fb16",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37958420085"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 37958411424,
+      "event": "push",
+      "headSha": "939280960e6baddaf5d190b9c7f8534eb0b6fb16",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/37958411424"
+    }
+  ],
+  "ci_jobs": [
+    {
+      "run": 37958420085,
+      "event": "pull_request",
+      "jobs": [
+        {
+          "name": "integrity",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "conclusion": "success"
+            },
+            {
+              "name": "Current structure and inherited copies",
+              "conclusion": "success"
+            },
+            {
+              "name": "Frozen Git metadata and current scope (no historical source read)",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run": 37958411424,
+      "event": "push",
+      "jobs": [
+        {
+          "name": "integrity",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "conclusion": "success"
+            },
+            {
+              "name": "Current structure and inherited copies",
+              "conclusion": "success"
+            },
+            {
+              "name": "Frozen Git metadata and current scope (no historical source read)",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ci_scope": "Ubuntu structure/inherited copies/frozen Git metadata with historical worktree absent; EDA/GUI/full functional runs are local real evidence, not cloud claims",
+  "remote_root_entries": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c798e5aeee16fb9585f7e926ab3d0921c2d97e0e"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da16bf8a40b3d90d711c2e25be2b425da157c2b9"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55fad0967e2383e780b8acbb5f12131e05254039"
+    },
+    {
+      "path": ".ignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "599f0dd6c48b989f32517dad1e93fbf01c1c7744"
+    },
+    {
+      "path": ".rgignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "599f0dd6c48b989f32517dad1e93fbf01c1c7744"
+    },
+    {
+      "path": ".vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb1eb454e961f19c82f24caea6087681dbb4fa36"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64ca64a7eb22505704d2ae6605abff0f50acd539"
+    },
+    {
+      "path": "AI-chat-memory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1df20a983e55e81b3d8009114dbf5419a4a519a"
+    },
+    {
+      "path": "AI-interaction-memory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "611eb9f29c2d093ddbc5983c7c75c78c525bf9e4"
+    },
+    {
+      "path": "AI-problem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82817477f0f9d1bf112a7dfa807a4df33d0a8fdd"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54d63ec3656d3ab278ed9ce249445849d0a71e15"
+    },
+    {
+      "path": "Historical project",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c07fb9c582ac11e34a59feda6798ea29d2351d0c"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fdd52a6f75013e0a5bbd5d9340f121fada47e26"
+    },
+    {
+      "path": "ROLLBACK_PLAN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "655e091a18e90a9b3125cbe568b53a5fd83b45d8"
+    },
+    {
+      "path": "V5_ACTIVE_DEPENDENCY_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cf5920f8ed07604638356913027a1609765f29c"
+    },
+    {
+      "path": "shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "28df30e7fc76bb79e89dcf926790846401776cf6"
+    },
+    {
+      "path": "v5",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b34c2e76ebc6420c32e74987d822fc24102e0a9"
+    }
+  ],
+  "remote_archive_git_metadata_equal": true,
+  "remote_archive_entries": 3918,
+  "clean_clone_official_fetch_verified": true,
+  "clean_clone_head": "3e788f4a2763c0354ca66d3836d0709dcf9f0107",
+  "clean_clone_historical_worktree_present": false,
+  "runtime_source_delta_tested_to_published": 0,
+  "inventory_snapshot": "939280960e6baddaf5d190b9c7f8534eb0b6fb16",
+  "inventory_scope": "Before/after and evidence hashes sealed at reviewed evidence commit; publication state/receipt/transcript update follows without runtime/archive changes",
+  "prior_unmerged_dependencies": [
+    1,
+    2
+  ],
+  "gate0_to_gate6": "COMPLETE_CANDIDATE",
+  "gate7": "DEFERRED_EXPLICIT_USER_MAIN_APPROVAL",
+  "migration_quality": "ACCEPT WITH LIMITATIONS",
+  "whole_platform": "REVISE",
+  "physical_operations": false,
+  "old_physical_workspace_accessed": false,
+  "hardware_and_review_open_gates": 13
+}

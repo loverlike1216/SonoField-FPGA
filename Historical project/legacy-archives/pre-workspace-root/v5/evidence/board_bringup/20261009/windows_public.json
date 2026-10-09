@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-10-09T09:27:01.2540514+08:00",
+  "pwsh": "7.6.5",
+  "relevant_usb": [
+    {
+      "Name": "USB Serial Converter",
+      "Service": "FTDIBUS",
+      "Manufacturer": "FTDI",
+      "Status": "OK",
+      "ConfigManagerErrorCode": 0,
+      "vid": "0403",
+      "pid": "6014",
+      "interface": null,
+      "com": null,
+      "serial": "[REDACTED_DEVICE_SERIAL]"
+    }
+  ],
+  "driver": {
+    "DriverVersion": "2.12.28.0",
+    "DriverProviderName": "FTDI",
+    "IsSigned": true
+  },
+  "com_devices": [],
+  "ft2232_confirmed": false,
+  "interpretation": "FTDI USB Converter VID0403/PID6014; Vivado identifies Digilent JTAG-HS1. No UART COM present; no driver failure proven."
+}

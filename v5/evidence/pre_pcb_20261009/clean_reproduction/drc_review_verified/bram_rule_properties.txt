@@ -1,0 +1,16 @@
+Property         Type     Read-only  Value
+ARCHITECTURES    string*  true       
+CLASS            string   true       rule_check
+DESCRIPTION      string   true       RAMB36 async control check
+FEATURES         string*  true       DRCHARC.RAMB36=E1
+GROUP            string   true       REQP
+HIERNAME         string   true       Netlist.Instance.Required Pin.RAMB36E1
+IS_ENABLED       bool     false      1
+IS_READ_ONLY     bool     true       0
+IS_USER_DEFINED  bool     true       0
+MAX_MESSAGES     int      false      -1
+MAX_NAMES        int      false      0
+MESSAGE          string   true       The <MESSAGE_STRING> <NETLIST_ELEMENT> has an input control pin <NETLIST_ELEMENT> (net: <NETLIST_ELEMENT>) which is driven by a register (<NETLIST_ELEMENT>) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+MSG_ID           int      true       1839
+NAME             string   true       REQP-1839
+SEVERITY         enum     false      Warning

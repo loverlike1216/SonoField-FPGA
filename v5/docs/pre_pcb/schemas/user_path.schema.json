@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SonoField v5 hashed runtime path",
+  "type": "object",
+  "required": [
+    "payload",
+    "sha256"
+  ],
+  "properties": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "payload": {
+      "type": "object",
+      "required": [
+        "schema",
+        "version",
+        "created_at",
+        "vertices",
+        "segments",
+        "closed",
+        "limits",
+        "calibration_snapshot"
+      ],
+      "properties": {
+        "schema": {
+          "const": "sonofield.user_path/1"
+        },
+        "version": {
+          "const": "v5"
+        },
+        "vertices": {
+          "type": "array",
+          "maxItems": 500
+        },
+        "segments": {
+          "type": "array"
+        },
+        "closed": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "$comment": "Document.validate enforces finite coordinates, speed/dwell/bounds/handles and hash; planner validates motion/phase/trap."
+}

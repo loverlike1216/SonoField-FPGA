@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SonoField v5 directed ToF observation",
+  "type": "object",
+  "required": [
+    "tx_id",
+    "rx_id",
+    "board",
+    "cmd_start_tick",
+    "actual_tx_onset_tick",
+    "convst_first_tick",
+    "sample_period",
+    "raw_ref",
+    "carrier_frequency",
+    "temperature_vector",
+    "humidity",
+    "quality_flags",
+    "SNR",
+    "amplitude",
+    "phase",
+    "TOF_candidate",
+    "coarse_uncertainty_s",
+    "coarse_ambiguity",
+    "frontend_delay",
+    "source_commit",
+    "provenance"
+  ],
+  "properties": {
+    "tx_id": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 127
+    },
+    "rx_id": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 7
+    },
+    "provenance": {
+      "enum": [
+        "SYNTHETIC_REFERENCE",
+        "RAW_ADC"
+      ]
+    },
+    "raw_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "carrier_frequency": {
+      "type": "number",
+      "minimum": 38500,
+      "maximum": 41500
+    },
+    "coarse_uncertainty_s": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  },
+  "$comment": "Physical coarse bound, source and frontend qualification are semantic gates; schema alone does not establish them."
+}

@@ -1,0 +1,56 @@
+test_actual_temp_bytes (tests.test_prepcb.CExtensionTests) ... ok
+test_crc_fail_safe (tests.test_prepcb.CExtensionTests) ... ok
+test_fault_both_off (tests.test_prepcb.CExtensionTests) ... ok
+test_jump_denied (tests.test_prepcb.CExtensionTests) ... ok
+test_missing_temp_denied (tests.test_prepcb.CExtensionTests) ... ok
+test_no_fabricated_cal_result (tests.test_prepcb.CExtensionTests) ... ok
+test_real_negotiation (tests.test_prepcb.CExtensionTests) ... ok
+test_sequence_fail_safe (tests.test_prepcb.CExtensionTests) ... ok
+test_unknown_command (tests.test_prepcb.CExtensionTests) ... ok
+test_unqualified_cal_denied (tests.test_prepcb.CExtensionTests) ... ok
+test_upload_pause_resume (tests.test_prepcb.CExtensionTests) ... ok
+test_watchdog_no_auto_resume (tests.test_prepcb.CExtensionTests) ... ok
+test_accel_jerk (tests.test_prepcb.PathTests) ... ok
+test_bezier (tests.test_prepcb.PathTests) ... ok
+test_bounds (tests.test_prepcb.PathTests) ... ok
+test_closed (tests.test_prepcb.PathTests) ... ok
+test_integrity (tests.test_prepcb.PathTests) ... ok
+test_nan (tests.test_prepcb.PathTests) ... ok
+test_negotiate_required (tests.test_prepcb.PathTests) ... ok
+test_order_delete_insert (tests.test_prepcb.PathTests) ... ok
+test_runtime_input (tests.test_prepcb.PathTests) ... ok
+test_save_reload (tests.test_prepcb.PathTests) ... ok
+test_undo_redo (tests.test_prepcb.PathTests) ... ok
+test_estop_clear_rearm (tests.test_prepcb.SafetyTests) ... ok
+test_fault_latches (tests.test_prepcb.SafetyTests) ... ok
+test_held_at_start (tests.test_prepcb.SafetyTests) ... ok
+test_no_automatic_enable (tests.test_prepcb.SafetyTests) ... ok
+test_qualified_cal (tests.test_prepcb.SafetyTests) ... ok
+test_quality_failure (tests.test_prepcb.SafetyTests) ... ok
+test_timeout (tests.test_prepcb.SafetyTests) ... ok
+test_ambiguity (tests.test_prepcb.SparseTests) ... ok
+test_bad_quality (tests.test_prepcb.SparseTests) ... ok
+test_missing (tests.test_prepcb.SparseTests) ... ok
+test_points (tests.test_prepcb.SparseTests) ... ok
+test_supplements (tests.test_prepcb.SparseTests) ... ok
+test_unique_measurements (tests.test_prepcb.SparseTests) ... ok
+test_atomic_calibration (tests.test_prepcb.TemperatureTests) ... ok
+test_center_participates (tests.test_prepcb.TemperatureTests) ... ok
+test_extreme (tests.test_prepcb.TemperatureTests) ... ok
+test_future (tests.test_prepcb.TemperatureTests) ... ok
+test_humidity_assumed (tests.test_prepcb.TemperatureTests) ... ok
+test_integral_reference (tests.test_prepcb.TemperatureTests) ... ok
+test_missing (tests.test_prepcb.TemperatureTests) ... ok
+test_offline (tests.test_prepcb.TemperatureTests) ... ok
+test_short_read (tests.test_prepcb.TemperatureTests) ... ok
+test_sht_crc (tests.test_prepcb.TemperatureTests) ... ok
+test_signed_register (tests.test_prepcb.TemperatureTests) ... ok
+test_stale (tests.test_prepcb.TemperatureTests) ... ok
+test_transition_hold (tests.test_prepcb.TemperatureTests) ... ok
+test_transition_slew (tests.test_prepcb.TemperatureTests) ... ok
+test_uniform (tests.test_prepcb.TemperatureTests) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 0.454s
+
+OK

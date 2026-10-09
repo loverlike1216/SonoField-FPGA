@@ -1,0 +1,55 @@
+{
+  "status": "FAIL",
+  "active_version": "v5",
+  "platform": "ALINX AX7020",
+  "commands": [
+    {
+      "label": "structure",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\scripts\\check_structure.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "inheritance",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\scripts\\check_migration.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "generated_system",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\scripts\\generate_system.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "generated_transport",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\scripts\\generate_transport.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "motion_full",
+      "command": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\scripts\\motion_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\evidence\\baseline\\before_migration_repaired\\motion"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "classification": "DIGITAL_BASELINE_NOT_BOARD_VERIFICATION",
+  "hardware_programmed": false,
+  "started_at": "2026-10-08T08:04:11.624186+00:00",
+  "error": "motion_full failed; inspect E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\evidence\\baseline\\before_migration_repaired\\motion_full.log"
+}

@@ -1,0 +1,128 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Oct  9 09:39:34 2026
+# Process ID         : 40744
+# Current directory  : E:/Codex_project/AMD-SonoField-FPGA
+# Command line       : vivado.exe -mode batch -source v5/scripts/ax7020_package_review.tcl -log v5/evidence/board_bringup/20261009/local_raw/package_review_retry.log -journal v5/evidence/board_bringup/20261009/local_raw/package_review_retry.jou
+# Log file           : E:/Codex_project/AMD-SonoField-FPGA/v5/evidence/board_bringup/20261009/local_raw/package_review_retry.log
+# Journal file       : E:/Codex_project/AMD-SonoField-FPGA\v5/evidence/board_bringup/20261009/local_raw/package_review_retry.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 23622 MB
+# Total Virtual      : 40396 MB
+# Available Virtual  : 12610 MB
+#-----------------------------------------------------------
+source v5/scripts/ax7020_package_review.tcl
+# create_project -in_memory -part xc7z020clg400-2
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 532.004 ; gain = 219.547
+# report_property [get_parts xc7z020clg400-2]
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+Property                   Type     Read-only  Value
+ARCHITECTURE               string   true       zynq
+ARCHITECTURE_FULL_NAME     string   true       Zynq-7000
+AVAILABLE_CONFIG_MODES     string*  true       
+AVAILABLE_IOBS             int      true       125
+BLOCK_RAMS                 int      true       140
+CLASS                      string   true       part
+COLS                       int      true       187
+COMPATIBLE_PARTS           string*  true       xc7z010clg400
+C_FAMILY                   string   true       zynq
+DEVICE                     string   true       xc7z020
+DSP                        int      true       220
+FAMILY                     string   true       zynq
+FE                         int      true       0
+FLIPFLOPS                  int      true       106400
+GB_TRANSCEIVERS            int      true       0
+IDCODE                     string   true       0x03727093
+IO_PIN_COUNT               int      true       400
+IO_STANDARDS               string   true       LVTTL LVCMOS33 LVCMOS25 LVCMOS18 LVCMOS15 LVCMOS12 HSUL_12 HSTL_I HSTL_II HSTL_I_18 HSTL_II_18 SSTL18_I SSTL18_II SSTL15 SSTL15_R SSTL135 SSTL135_R DIFF_HSTL_I DIFF_HSTL_II DIFF_HSTL_I_18 DIFF_HSTL_II_18 DIFF_SSTL18_I DIFF_SSTL18_II DIFF_SSTL15 DIFF_SSTL15_R DIFF_SSTL135 DIFF_SSTL135_R DIFF_HSUL_12 PCI33_3 MOBILE_DDR DIFF_MOBILE_DDR BLVDS_25 LVDS_25 RSDS_25 TMDS_33 MINI_LVDS_25 PPDS_25
+LUT_ELEMENTS               int      true       53200
+MAX_OPERATING_TEMPERATURE  int      true       0
+MAX_OPERATING_VOLTAGE      double   true       1.050
+MCBS                       int      true       0
+MIN_OPERATING_TEMPERATURE  int      true       0
+MIN_OPERATING_VOLTAGE      double   true       0.950
+MMCM                       int      true       4
+NAME                       string   true       xc7z020clg400-2
+PACKAGE                    string   true       clg400
+PACKAGE_PINOUT_VERSION     string   true       FINAL 2012-06-26
+PACKAGE_PIN_DELAY_VERSION  string   true       VERS. 2.0 2012-06-26
+PCI_BUSES                  int      true       0
+REF_OPERATING_TEMPERATURE  int      true       0
+REF_OPERATING_VOLTAGE      double   true       0.950
+ROWS                       int      true       157
+SLICES                     int      true       13300
+SLRS                       int      true       1
+SPEED                      string   true       -2
+SPEED_LABEL                string   true       PRODUCTION
+SPEED_LEVEL_ID             string   true       1.12
+SPEED_LEVEL_ID_DATE        string   true       2019-11-22
+SSN_REPORT                 bool     true       1
+SUPPORTS_NEXTGEN_VERSAL    bool     true       0
+TEMAC_NETWORK_CONTROLLERS  int      true       0
+TEMPERATURE_GRADE_LETTER   string   true       
+report_property: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 799.562 ; gain = 267.559
+# set stub [open v5/evidence/board_bringup/20261009/local_raw/package_review.v w]
+# puts $stub "module package_review(input wire a, output wire b); assign b=a; endmodule"
+# close $stub
+# read_verilog v5/evidence/board_bringup/20261009/local_raw/package_review.v
+# synth_design -rtl -top package_review -part xc7z020clg400-2
+Command: synth_design -rtl -top package_review -part xc7z020clg400-2
+Starting synth_design
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 41356
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1313.438 ; gain = 513.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'package_review' [E:/Codex_project/AMD-SonoField-FPGA/v5/evidence/board_bringup/20261009/local_raw/package_review.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'package_review' (0#1) [E:/Codex_project/AMD-SonoField-FPGA/v5/evidence/board_bringup/20261009/local_raw/package_review.v:1]
+WARNING: [Synth 8-3330] design package_review has an empty top module
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1430.883 ; gain = 631.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1430.883 ; gain = 631.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1430.883 ; gain = 631.277
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1430.883 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1430.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1430.883 ; gain = 631.277
+10 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1430.883 ; gain = 631.320
+# set out [open v5/evidence/board_bringup/20261009/package_pin_database.csv w]
+# puts $out "pin,bank,pin_func"
+# foreach pin {W19 W18 R14 P14 Y17 Y16 W15 V15 Y14 W14 P18 N17 U15 U14 P16 P15 U17 T16 V18 V17 T15 T14 V13 U13 W13 V12 U12 T12 T10 T11 A20 B19 B20 C20 F17 F16 F20 F19 G20 G19 H18 J18 L20 L19 M20 M19 K18 K17 J19 K19 H20 J20 L17 L16 M18 M17 D20 D19 E19 E18 G18 G17 H17 H16 G15 H15 J14 K14} {
+#  set obj [get_package_pins $pin]
+#  puts $out "$pin,[get_property BANK $obj],[get_property PIN_FUNC $obj]"
+# }
+# close $out
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  9 09:39:58 2026...

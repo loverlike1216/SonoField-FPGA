@@ -1,0 +1,26 @@
+{
+  "status": "EXPECTED_METADATA_DIFFERENCE",
+  "changed_fields_only": [
+    "git_commit"
+  ],
+  "raw_records_preserved": true,
+  "records": [
+    {
+      "baseline": "before_migration_complete",
+      "git_commit": "851d1ef747cd95da13e5eb0705b5a7885b68d83c",
+      "calibration_raw_artifact_sha256": "71ca83e3699cacc729afd5673c0b83ab5ec19d069b9cca12a7500b4751e84919"
+    },
+    {
+      "baseline": "after_migration",
+      "git_commit": "4cd42172dbbb1b4a2fc45d8f0d33d28f2efcc0fe",
+      "calibration_raw_artifact_sha256": "b0630716a2c608075509200ded6ef71840ddd3bbba10a6552252ef001cef2469"
+    },
+    {
+      "baseline": "standalone",
+      "git_commit": "851d1ef747cd95da13e5eb0705b5a7885b68d83c",
+      "calibration_raw_artifact_sha256": "71ca83e3699cacc729afd5673c0b83ab5ec19d069b9cca12a7500b4751e84919"
+    }
+  ],
+  "all_other_fields_exactly_equal": true,
+  "comparison_rule": "Only the independently verified recovery Git provenance may differ; no numerical or arbitrary metadata normalization"
+}

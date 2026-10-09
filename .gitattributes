@@ -26,3 +26,32 @@ archive/historical_evidence/pre_v5_20261008/** -text
 v5/evidence/**/commands.txt text eol=lf -whitespace
 archive/historical_evidence/pre_v5_20261008/** -whitespace
 AI-interaction-memory/codex/instructions/*.md text eol=lf -whitespace
+
+# Exact frozen Git blob bytes; no CRLF normalization or filters in the archive.
+history_old/** -text -filter -ident -whitespace
+
+# Additional current sources and verbatim Vivado export formatting.
+*.v text eol=lf
+*.svh text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+v5/evidence/pre_pcb_20261009/platform*/clockInfo.txt -whitespace
+v5/evidence/pre_pcb_20261009/platform*/ps7_properties.txt -whitespace
+v5/evidence/pre_pcb_20261009/platform*/recreate_ps_bd.tcl -whitespace
+# Verbatim reports from the independent clone and reopened routed checkpoint.
+# Preserve native formatting; these are evidence, not authored source style.
+v5/evidence/pre_pcb_20261009/**/bram_rule_properties.txt -whitespace
+v5/evidence/pre_pcb_20261009/**/actual_violation_properties.txt -whitespace
+v5/evidence/pre_pcb_20261009/**/ps7_properties.txt -whitespace
+v5/evidence/pre_pcb_20261009/**/recreate_ps_bd.tcl -whitespace
+v5/evidence/pre_pcb_20261009/**/*clockInfo.txt -whitespace
+
+# Frozen historical paths: original root attributes are archived as inert text.
+"Historical project/**" -text -filter -ident -whitespace
+
+# Exact received instruction and historical native SVG representation.
+AI-interaction-memory/codex/instructions/v5_historical_project_20261009.md -text -whitespace
+"Historical project/legacy-pcb/PCB/V1/project/*.svg" binary
+
+# Preserve this audit run raw logs, traces and manifests exactly as emitted.
+v5/evidence/repository_cleanup/20261009/** -text -filter -ident -whitespace

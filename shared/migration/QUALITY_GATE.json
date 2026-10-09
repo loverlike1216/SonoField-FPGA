@@ -1,0 +1,90 @@
+{
+  "conclusion": "ACCEPT WITH LIMITATIONS",
+  "qualifier": "CANDIDATE ONLY",
+  "scope": "Workspace migration, not whole hardware platform acceptance",
+  "validated_source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+  "gates": [
+    {
+      "id": "MIG-01",
+      "status": "PASS",
+      "evidence": "Same repo/currentv5/fixedBASE/independent new clone"
+    },
+    {
+      "id": "MIG-02",
+      "status": "PASS",
+      "evidence": "3907original paths,97559165bytes,mode/blob/rawSHA256 zero mismatch;2frozen metadata"
+    },
+    {
+      "id": "MIG-03",
+      "status": "PASS",
+      "evidence": "101394unique original/ignored-target/Git files rehashed;35untracked kept;public scan required before push"
+    },
+    {
+      "id": "MIG-04",
+      "status": "PASS",
+      "evidence": "Default121source paths allv5;18own-source OOC;independent importedsoftware andvenv"
+    },
+    {
+      "id": "MIG-05",
+      "status": "PASS",
+      "evidence": "Single currentv5 state/AX7020 facts;historical clock candidate unused;no oldboardphysicalconstraints"
+    },
+    {
+      "id": "MIG-06",
+      "status": "PASS",
+      "evidence": "115tests and3696frames×4 each of3fresh environments"
+    },
+    {
+      "id": "MIG-07",
+      "status": "PASS",
+      "evidence": "3Icarus+1XSim canonical hashes equal originalBASE and eachother"
+    },
+    {
+      "id": "MIG-08",
+      "status": "PASS",
+      "evidence": "Full inheritedC/AXI/UARToffline/calibration/queue/safety/atomic/serializer/golden gates"
+    },
+    {
+      "id": "MIG-09",
+      "status": "PASS",
+      "evidence": "RealVivado2025.2 rebuild/reopen18sources in3environments;OOC only"
+    },
+    {
+      "id": "MIG-10",
+      "status": "PASS",
+      "evidence": "SecondindependentGit/lockednewvenv/fullavailableofflinegates;samehost limitation"
+    },
+    {
+      "id": "MIG-11",
+      "status": "PASS",
+      "evidence": "Currentrecovery/acceptance/blockers/hardwareboundary/runbook/packageboundary;linkcheckbeforecommit"
+    },
+    {
+      "id": "MIG-12",
+      "status": "PASS",
+      "evidence": "Zero device operations;no board/hardware proof invented"
+    }
+  ],
+  "blocking_candidate_regressions": 0,
+  "critical_candidate_bugs_observed": 0,
+  "main_merge": "USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE",
+  "post_merge_remote_main_clone": "PENDING_APPROVAL_AND_MERGE",
+  "whole_platform": "REVISE",
+  "physical_manufacturing": "HOLD",
+  "independent_review": "PENDING",
+  "limitations": [
+    "Candidate only; main merge and post-merge fresh remote-main clone await explicit user approval",
+    "Permanent workspace_path is not promoted; candidate execution path is E:\\Codex_project\\AMD_Sonofield",
+    "Second Git clone and independently installed locked venv share the same host installed EDA/compiler versions; not a second machine or OS",
+    "No matched ARM BSP/compiler/target download, PS-PL/DDR/UART/ADC/AFE/driver/power/acoustic hardware verification",
+    "OOC pre-route only;2324inputs/256outputs lack board delay constraints;HD.CLK_SRC unset; do not infer board timing or complete CDC coverage",
+    "Native v5 schematic NOT_CREATED,ERC_NOT_RUN,MANUFACTURING_HOLD; C16 ADC not approved",
+    "BOM generator was not cold-started; original and working workbook bytes preserved and15read-only checks passed in all3environments",
+    "External ChatGPT full history reader BLOCKED and independent human/AI final review pending"
+  ],
+  "created_at": "2026-10-09T13:49:28.901812+08:00",
+  "online_ci": "PASS_PUSH_AND_PR_UBUNTU_STRUCTURAL_ONLY",
+  "remote_candidate_tree": "PASS",
+  "pr_url": "https://github.com/loverlike1216/SonoField-FPGA/pull/1",
+  "publication_evidence_commit": "f014214fb8db554fb3df9ac971ac759d683447a5"
+}

@@ -1,0 +1,279 @@
+{
+  "status": "PASS",
+  "classification": "SIMULATED",
+  "source_sha256": {
+    "build\\pre_pcb\\independent_checks\\scheduler_golden.sv": "b4b8e139c6f2bf04c5e7e7011c9bcb2d0b61b9e84187515efde95d9ee3ee86f8",
+    "rtl\\motion\\motion_queue.sv": "bdfe4f531d95373034a3edc76d87064dc3b39d565f7db81584e66354844b64f4",
+    "tb\\tb_scheduler_equivalence.sv": "e6455563b667a17b37cdb61f903d0f84a711865347a293b82e7d96ef1c420be0",
+    "tb\\tb_array_interface.sv": "b0ce65574c039db95175e8c2b45c06b0625250636fcdc00561ea13c66f09da2a",
+    "tb\\tb_motion_queue_equivalence.sv": "42f46aa39939ff9652eef112c3248f849efd00847012674e67f548125f421a6b",
+    "build\\pre_pcb\\independent_checks\\motion_queue_golden.sv": "87ba0b5eee96c7e415678d3f8b622cd04b9ba2ba77ab311753fb69fa1a48d1f4",
+    "rtl\\calibration\\calibration_scheduler.sv": "98fb2d8b7ef86eac81efefa5cdc417d84511a30a7e1e27971d4ad14f91ca6213",
+    "rtl\\control\\safety_controller.sv": "3949c09e0aedeaeeb0169f50d02c80767730feca420087e080f1530b0ff90657",
+    "rtl\\output\\sono_array_interface.sv": "e357aac7dde3a65fc22e9a3ad5114053b73a80bd5ffe2dbd3f3d12a7254de200",
+    "tb\\tb_serializer_throughput.sv": "6a7f8a8979e439cfc322dc76360afa4aeb60750d97cd8ac2662522d5d80d482b",
+    "rtl\\output\\serializer.sv": "5d20788a6428cdfd46a7ba9b4163444e1c426dede85f046e86fe6836cd43e174"
+  },
+  "commands": [
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 0,
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_motion_queue_equivalence",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\tb_motion_queue_equivalence.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\motion_queue_golden.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_motion_queue_equivalence.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_0.log"
+    },
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 1,
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\tb_motion_queue_equivalence.vvp"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_1.log"
+    },
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 2,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\motion_queue_golden.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_motion_queue_equivalence.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_2.log"
+    },
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 3,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_motion_queue_equivalence",
+        "--snapshot",
+        "tb_motion_queue_equivalence",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_3.log"
+    },
+    {
+      "top": "tb_motion_queue_equivalence",
+      "step": 4,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_motion_queue_equivalence",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "log": "tb_motion_queue_equivalence_4.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 0,
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_serializer_throughput",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\tb_serializer_throughput.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_serializer_throughput.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_0.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 1,
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\tb_serializer_throughput.vvp"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_1.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 2,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_serializer_throughput.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_2.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 3,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_serializer_throughput",
+        "--snapshot",
+        "tb_serializer_throughput",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_3.log"
+    },
+    {
+      "top": "tb_serializer_throughput",
+      "step": 4,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_serializer_throughput",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "log": "tb_serializer_throughput_4.log"
+    },
+    {
+      "top": "tb_array_interface",
+      "step": 0,
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_array_interface",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\tb_array_interface.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_array_interface.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_array_interface_0.log"
+    },
+    {
+      "top": "tb_array_interface",
+      "step": 1,
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\tb_array_interface.vvp"
+      ],
+      "exit_code": 0,
+      "log": "tb_array_interface_1.log"
+    },
+    {
+      "top": "tb_array_interface",
+      "step": 2,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_array_interface.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_array_interface_2.log"
+    },
+    {
+      "top": "tb_array_interface",
+      "step": 3,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_array_interface",
+        "--snapshot",
+        "tb_array_interface",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "log": "tb_array_interface_3.log"
+    },
+    {
+      "top": "tb_array_interface",
+      "step": 4,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_array_interface",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "log": "tb_array_interface_4.log"
+    },
+    {
+      "top": "tb_scheduler_equivalence",
+      "step": 0,
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "tb_scheduler_equivalence",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\tb_scheduler_equivalence.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\scheduler_golden.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_scheduler_equivalence.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_scheduler_equivalence_0.log"
+    },
+    {
+      "top": "tb_scheduler_equivalence",
+      "step": 1,
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\tb_scheduler_equivalence.vvp"
+      ],
+      "exit_code": 0,
+      "log": "tb_scheduler_equivalence_1.log"
+    },
+    {
+      "top": "tb_scheduler_equivalence",
+      "step": 2,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\pre_pcb\\independent_checks\\scheduler_golden.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\tb_scheduler_equivalence.sv"
+      ],
+      "exit_code": 0,
+      "log": "tb_scheduler_equivalence_2.log"
+    },
+    {
+      "top": "tb_scheduler_equivalence",
+      "step": 3,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_scheduler_equivalence",
+        "--snapshot",
+        "tb_scheduler_equivalence",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0,
+      "log": "tb_scheduler_equivalence_3.log"
+    },
+    {
+      "top": "tb_scheduler_equivalence",
+      "step": 4,
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_scheduler_equivalence",
+        "--runall"
+      ],
+      "exit_code": 0,
+      "log": "tb_scheduler_equivalence_4.log"
+    }
+  ],
+  "hardware_programmed": false,
+  "core_clock_design_target_hz": 132000000
+}

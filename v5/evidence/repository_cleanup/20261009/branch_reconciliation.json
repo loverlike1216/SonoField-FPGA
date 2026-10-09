@@ -1,0 +1,15 @@
+{
+  "branch": "codex/v5-historical-project-isolation-20261009",
+  "created_from": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "fast_forwarded_to_complete_candidate": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+  "commands": [
+    "git switch -c codex/v5-historical-project-isolation-20261009 origin/main",
+    "git merge --quiet --ff-only 7dda49f00983c57d06ac639ad70bdaff9696e900"
+  ],
+  "main_modified": false,
+  "dependencies": [
+    "PR1 OPEN UNMERGED",
+    "PR2 OPEN UNMERGED"
+  ],
+  "reason": "Main lacks current complete v5. Include prior candidates explicitly by normal ancestry without merging main. PR against main includes all prior candidates."
+}

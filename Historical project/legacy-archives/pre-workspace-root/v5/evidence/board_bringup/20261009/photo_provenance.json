@@ -1,0 +1,36 @@
+{
+  "photos": [
+    {
+      "file": "ax7020_front.jpg",
+      "sha256": "6b1fd6e7771aabebaf5f2ddc0397aabb25f82e43ca54521669a76e0f4ca31a91",
+      "size_bytes": 976648,
+      "storage": "PRIVATE_LOCAL_RAW",
+      "source": "USER_UPLOADED_REAL_BOARD_PHOTO"
+    },
+    {
+      "file": "ax7020_back.jpg",
+      "sha256": "04f91f261ff3832aac310bb388cf46b54d2ab2977327fd91267826b098dfa9c4",
+      "size_bytes": 1158607,
+      "storage": "PRIVATE_LOCAL_RAW",
+      "source": "USER_UPLOADED_REAL_BOARD_PHOTO"
+    }
+  ],
+  "observations": {
+    "front": [
+      "AX7020 product label",
+      "XC7Z020 and CLG400 FPGA marking",
+      "SD card inserted",
+      "SD boot jumper visible"
+    ],
+    "back": [
+      "AX701020.3.0 PCB silkscreen"
+    ],
+    "not_established": [
+      "full FPGA speed/temperature ordering code",
+      "DDR chip identity/capacity",
+      "measured VCCO",
+      "actual connector continuity"
+    ]
+  },
+  "privacy": "Originals contain QR/serial labels and remain local. No unsupported inference from obstructed markings."
+}

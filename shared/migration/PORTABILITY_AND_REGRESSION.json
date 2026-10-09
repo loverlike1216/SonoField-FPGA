@@ -1,0 +1,255 @@
+{
+  "status": "PASS_WITH_LIMITATIONS",
+  "scope": "V5_WORKSPACE_MIGRATION_CANDIDATE_ONLY",
+  "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "validated_source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+  "matrix": {
+    "BASE": {
+      "status": "PASS",
+      "python_tests": 115,
+      "frames": 3696,
+      "simulator_runs": 4,
+      "baseline_summary": "v5/evidence/migration/20261009/base/summary.json",
+      "canonical_hashes_equal": true,
+      "protocol_C_AXI_safety_calibration_serializer_golden_equivalence": "PASS"
+    },
+    "MIGRATED": {
+      "status": "PASS",
+      "python_tests": 115,
+      "frames": 3696,
+      "simulator_runs": 4,
+      "baseline_summary": "v5/evidence/migration/20261009/migrated_retry1/summary.json",
+      "canonical_hashes_equal": true,
+      "protocol_C_AXI_safety_calibration_serializer_golden_equivalence": "PASS"
+    },
+    "CLEAN_CLONE": {
+      "status": "PASS",
+      "python_tests": 115,
+      "frames": 3696,
+      "simulator_runs": 4,
+      "baseline_summary": "v5/evidence/migration/20261009/clean_clone/summary.json",
+      "canonical_hashes_equal": true,
+      "protocol_C_AXI_safety_calibration_serializer_golden_equivalence": "PASS"
+    }
+  },
+  "ooc": {
+    "base": {
+      "status": "PASS",
+      "scope": "SYNTHESIZED_OOC_PRE_ROUTE_ONLY",
+      "part": "xc7z020clg400-2_DOCUMENTED_NOT_FULL_PHYSICAL_PART_CONFIRMATION",
+      "internal_target_hz": 132000000,
+      "source_count": 18,
+      "reopened_sources": 18,
+      "wns_ns": 0.994,
+      "whs_ns": 0.157,
+      "tns_ns": 0.0,
+      "ths_ns": 0.0,
+      "lut": 7219,
+      "registers": 17918,
+      "ramb36": 4,
+      "board_input_output_constraints": "NOT_VERIFIED",
+      "hd_clk_src": "UNSET_OOC_WARNING",
+      "place_route": "NOT_RUN",
+      "bitstream": "NOT_GENERATED",
+      "hardware": "NOT_VERIFIED"
+    },
+    "migrated_retry1": {
+      "status": "PASS",
+      "scope": "SYNTHESIZED_OOC_PRE_ROUTE_ONLY",
+      "part": "xc7z020clg400-2_DOCUMENTED_NOT_FULL_PHYSICAL_PART_CONFIRMATION",
+      "internal_target_hz": 132000000,
+      "source_count": 18,
+      "reopened_sources": 18,
+      "wns_ns": 0.994,
+      "whs_ns": 0.157,
+      "tns_ns": 0.0,
+      "ths_ns": 0.0,
+      "lut": 7219,
+      "registers": 17918,
+      "ramb36": 4,
+      "board_input_output_constraints": "NOT_VERIFIED",
+      "hd_clk_src": "UNSET_OOC_WARNING",
+      "place_route": "NOT_RUN",
+      "bitstream": "NOT_GENERATED",
+      "hardware": "NOT_VERIFIED"
+    },
+    "clean_clone": {
+      "status": "PASS",
+      "scope": "SYNTHESIZED_OOC_PRE_ROUTE_ONLY",
+      "part": "xc7z020clg400-2_DOCUMENTED_NOT_FULL_PHYSICAL_PART_CONFIRMATION",
+      "internal_target_hz": 132000000,
+      "source_count": 18,
+      "reopened_sources": 18,
+      "wns_ns": 0.994,
+      "whs_ns": 0.157,
+      "tns_ns": 0.0,
+      "ths_ns": 0.0,
+      "lut": 7219,
+      "registers": 17918,
+      "ramb36": 4,
+      "board_input_output_constraints": "NOT_VERIFIED",
+      "hd_clk_src": "UNSET_OOC_WARNING",
+      "place_route": "NOT_RUN",
+      "bitstream": "NOT_GENERATED",
+      "hardware": "NOT_VERIFIED"
+    }
+  },
+  "runtime_ownership": {
+    "migrated_retry1": {
+      "status": "PASS",
+      "source_root": "E:\\Codex_project\\AMD_Sonofield\\v5",
+      "cwd": "E:\\Codex_project\\AMD_Sonofield\\v5",
+      "python_executable": "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "python_prefix": "E:\\Codex_project\\AMD_Sonofield\\.venv",
+      "software_modules": {
+        "software": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\__init__.py",
+        "software.ui": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\ui\\__init__.py",
+        "software.calibration": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\calibration\\__init__.py",
+        "software.calibration.config": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\calibration\\config.py",
+        "software.motion": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\motion\\__init__.py",
+        "software.motion.workspace": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\motion\\workspace.py",
+        "software.motion.commands": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\motion\\commands.py",
+        "software.motion.trajectory": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\motion\\trajectory.py",
+        "software.calibration.geometry": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\calibration\\geometry.py",
+        "software.calibration.signal": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\calibration\\signal.py",
+        "software.calibration.sound_speed": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\calibration\\sound_speed.py",
+        "software.characterization": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\characterization\\__init__.py",
+        "software.characterization.response": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\characterization\\response.py",
+        "software.acoustic_model": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\acoustic_model\\__init__.py",
+        "software.acoustic_model.phase_solver": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\acoustic_model\\phase_solver.py",
+        "software.calibration.pipeline": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\calibration\\pipeline.py",
+        "software.motion.trap_solver": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\motion\\trap_solver.py",
+        "software.control": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\control\\__init__.py",
+        "software.control.registers": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\control\\registers.py",
+        "software.board": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\board\\__init__.py",
+        "software.board.generated": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\board\\generated.py",
+        "software.board.protocol": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\board\\protocol.py",
+        "software.board.serial_transport": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\board\\serial_transport.py",
+        "software.motion.transport": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\motion\\transport.py",
+        "software.control.host": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\control\\host.py",
+        "software.motion.motion_controller": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\motion\\motion_controller.py",
+        "software.ui.app": "E:\\Codex_project\\AMD_Sonofield\\v5\\software\\ui\\app.py"
+      },
+      "all_software_owned_by_this_v5": true,
+      "tk_version": 8.6,
+      "packages": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "matplotlib": "3.10.6",
+        "pillow": "11.3.0"
+      },
+      "git_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+      "git_alternates_exist": false,
+      "origin": "https://github.com/loverlike1216/SonoField-FPGA.git"
+    },
+    "clean_clone": {
+      "status": "PASS",
+      "source_root": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5",
+      "cwd": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5",
+      "python_executable": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\.venv\\Scripts\\python.exe",
+      "python_prefix": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\.venv",
+      "software_modules": {
+        "software": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\__init__.py",
+        "software.ui": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\ui\\__init__.py",
+        "software.calibration": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\calibration\\__init__.py",
+        "software.calibration.config": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\calibration\\config.py",
+        "software.motion": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\motion\\__init__.py",
+        "software.motion.workspace": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\motion\\workspace.py",
+        "software.motion.commands": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\motion\\commands.py",
+        "software.motion.trajectory": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\motion\\trajectory.py",
+        "software.calibration.geometry": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\calibration\\geometry.py",
+        "software.calibration.signal": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\calibration\\signal.py",
+        "software.calibration.sound_speed": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\calibration\\sound_speed.py",
+        "software.characterization": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\characterization\\__init__.py",
+        "software.characterization.response": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\characterization\\response.py",
+        "software.acoustic_model": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\acoustic_model\\__init__.py",
+        "software.acoustic_model.phase_solver": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\acoustic_model\\phase_solver.py",
+        "software.calibration.pipeline": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\calibration\\pipeline.py",
+        "software.motion.trap_solver": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\motion\\trap_solver.py",
+        "software.control": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\control\\__init__.py",
+        "software.control.registers": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\control\\registers.py",
+        "software.board": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\board\\__init__.py",
+        "software.board.generated": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\board\\generated.py",
+        "software.board.protocol": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\board\\protocol.py",
+        "software.board.serial_transport": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\board\\serial_transport.py",
+        "software.motion.transport": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\motion\\transport.py",
+        "software.control.host": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\control\\host.py",
+        "software.motion.motion_controller": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\motion\\motion_controller.py",
+        "software.ui.app": "E:\\Codex_project\\AMD_Sonofield\\.portability\\clean\\v5\\software\\ui\\app.py"
+      },
+      "all_software_owned_by_this_v5": true,
+      "tk_version": 8.6,
+      "packages": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "matplotlib": "3.10.6",
+        "pillow": "11.3.0"
+      },
+      "git_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+      "git_alternates_exist": false,
+      "origin": "https://github.com/loverlike1216/SonoField-FPGA.git"
+    }
+  },
+  "determinism": {
+    "status": "PASS",
+    "source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+    "historical_baseline_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+    "comparison": "Exact canonical functional hashes; timestamps/report headers and absolute runtime paths are nonfunctional metadata",
+    "historical_baseline_equal": true,
+    "all_three_fresh_environments_equal": true,
+    "hash_roles": [
+      "trajectory",
+      "phase_map_words",
+      "trap_reports",
+      "RTL_ACK"
+    ],
+    "apply_center": [
+      "6645f19823c0136eb919c2daab46616fee9e2701a56f2593c63395320bdc7e57",
+      "f8d560b7bbc8032a2fb27fbea3d85926bbcf93b04447dc7ae811e086feaba403",
+      "70621eed7d8877a78bc612e544b35510e9cbcd03cb7e1b93d87d905eb8b51917",
+      "3b5df34431bc597ef830cd4caf13facdae3e5f47038a5956122c0fbf7bd40dc1"
+    ],
+    "full_3696_frame_demo": [
+      "1e5d592b95b9c0bf9ba69568eced9187cee573968aa253f9bb36e39f1353d66f",
+      "86a9a16a46321310681f724e22744f8289db5ee9d07abd3934a932efac72867b",
+      "a1a11fce45cfde8a7a8ab6d80658cfe0b406721b647400a55a91a8ab56dd2694",
+      "2ba1491d01e8dc41162fc0885f4095a05bd937db486dc9ea907789f0b4d7c8ef"
+    ],
+    "python_tests_each": 115,
+    "frames_per_run": 3696,
+    "runs_per_environment": 4,
+    "simulators_each": [
+      "Icarus x3",
+      "Vivado2025.2 XSim x1"
+    ],
+    "fresh_environments": [
+      "BASE",
+      "MIGRATED",
+      "CLEAN_CLONE"
+    ],
+    "core_test_golden_threshold_changes": false
+  },
+  "limitations": [
+    "Candidate only; main merge and post-merge fresh remote-main clone await explicit user approval",
+    "Permanent workspace_path is not promoted; candidate execution path is E:\\Codex_project\\AMD_Sonofield",
+    "Second Git clone and independently installed locked venv share the same host installed EDA/compiler versions; not a second machine or OS",
+    "No matched ARM BSP/compiler/target download, PS-PL/DDR/UART/ADC/AFE/driver/power/acoustic hardware verification",
+    "OOC pre-route only;2324inputs/256outputs lack board delay constraints;HD.CLK_SRC unset; do not infer board timing or complete CDC coverage",
+    "Native v5 schematic NOT_CREATED,ERC_NOT_RUN,MANUFACTURING_HOLD; C16 ADC not approved",
+    "BOM generator was not cold-started; original and working workbook bytes preserved and15read-only checks passed in all3environments",
+    "External ChatGPT full history reader BLOCKED and independent human/AI final review pending"
+  ],
+  "failed_attempts": [
+    {
+      "path": "v5/evidence/migration/20261009/preparation_failure.json",
+      "resolution": "Atomic new-clone file restoration; archive bytes fully audited before freeze"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated/summary.json",
+      "resolution": "Tcl config scope repaired; unchanged tests and entire baseline rerun under migrated_retry1"
+    }
+  ],
+  "clean_clone_source_transfer": "Fresh clone of formal remote history; fetch only committed candidate objects from new primary clone; no worktree files or shared Git alternates; origin remains formal remote",
+  "hardware_operations_this_task": [],
+  "created_at": "2026-10-09T13:49:28.901812+08:00"
+}

@@ -1,133 +1,92 @@
 {
-  "checkpoint_id": "CP-20261009-001",
+  "checkpoint_id": "CP-20261009-008",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
-  "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
-  "branch": "main",
-  "base_commit": "4dc8e765403561e9aff9980a54390cdbb01ea0ed",
-  "head_commit": "4dc8e765403561e9aff9980a54390cdbb01ea0ed",
-  "commit_scope": "Observed source HEAD before this evidence/checkpoint commit; reviewed working delta described below, receipt resolves checkpoint commit",
+  "workspace_path": "E:\\Codex_project\\AMD_Sonofield",
+  "branch": "codex/v5-historical-project-isolation-20261009",
+  "base_commit": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+  "head_commit": null,
+  "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
+  "move_commit": "a98ad7c7fceaee574ae97ea37a8daa52691b180e",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT",
-  "current_model": "GPT-6.1 Sol High",
-  "created_at": "2026-10-09T02:16:17.071733+00:00",
+  "current_stage": "V5_HISTORICAL_GATE6_READY_FOR_USER_REVIEW",
+  "created_at": "2026-10-09T16:11:17.660966+00:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Real AX7020 identification, full regression and original-preserving BOM/candidate milestone; hardware safety gates remain open",
+  "checkpoint_reason": "Fresh before/after full regression, three native OOC/reopen runs and history-absent clean clone passed",
   "source_of_truth": "repository",
-  "status": "VALID",
-  "architecture_ref": "v5/docs/architecture/SELF_CALIBRATION.md",
-  "architecture": "Host model/trajectory -> PS transport/C -> AXI PL -> coherent128TX 8bit requested+calibration atomic phase ->32lanes/four outputs -> future qualified drivers;8RX ADC/calibration simulated",
+  "status": "VALID_CANDIDATE_WITH_LIMITATIONS",
+  "architecture_ref": "v5/docs/pre_pcb/CENTRAL_ARRAY_HARDWARE_CONTRACT.md",
   "completed": [
-    {
-      "item": "AX7020 JTAG/Revision/package and existing PS/PL read-only state",
-      "status": "HARDWARE_VERIFIED",
-      "scope": "IDENTIFICATION_AND_READ_ONLY_REGISTERS_ONLY"
-    },
-    {
-      "item": "115Python/3696frames×4/waveform/calibration/C+AXI/safety/equivalence",
-      "status": "SIMULATED"
-    },
-    {
-      "item": "IsolatedADC256frames two simulators and15candidate checks",
-      "status": "SIMULATED"
-    },
-    {
-      "item": "Original-preserving BOMworkingcopy,72row package audit,63GPIO candidate/68bankchecks",
-      "status": "TESTED",
-      "scope": "OFFLINE_NOT_ELECTRICAL_RELEASE"
-    },
-    {
-      "item": "Earlier documented-part OOC synthesis",
-      "status": "SYNTHESIZED",
-      "scope": "HISTORICAL_V5_OOC_NOT_RERUN_NO_BOARD_ROUTING"
-    }
+    "TESTED171before+171after;3696frames×4each;canonicalhashesequal",
+    "SIMULATEDfullprePCBsupervisor/mailbox/actualtop/GUI,Ctemperature,sparse",
+    "SYNTHESIZED_OOCthree native2025.2runsandreopens,18currentv5sources",
+    "IMPLEMENTED3911exacthistoricalmovesandexclusions;currentpayloadpreserved"
   ],
   "next_actions": [
-    "Finish normal commit/push and byte verification receipt",
-    "Obtain manufacturer Rev3 matched PS/DDR/clock/IO/grade and current running-image ownership",
-    "ConnectUART/qualifyARM BSP and boundedvolatilePSPL tests onlyaftergates",
-    "IndependentADC/safety/surge/interface review andTX/RXsamples",
-    "Livev5schematic/netlist/realERC afterfacts"
+    "Normalpush migrationbranch, DraftPR/CI/remote receipt; user review before main merge; Gate7 only after approval"
   ],
   "active_decisions": [
-    "ADR-035 User-approvedv5",
-    "ADR-036 currentread-only/candidateexecutionboundary"
+    "ADR035–038 preserved",
+    "ADR039 actualuser one-time historical path authorization"
   ],
   "blockers": [
-    "V5-B01",
-    "V5-B03",
-    "V5-B04",
-    "V5-B05",
-    "CHAT_MEMORY_ACCESS_BLOCKED",
-    "V5-BOM_REVIEW",
-    "NATIVE_SCHEMATIC_ENVIRONMENT",
-    "RUNNING_IMAGE_OWNERSHIP"
+    "PC-B01",
+    "PC-B02",
+    "PC-B03",
+    "PC-B04",
+    "PC-B05",
+    "PC-B06",
+    "PC-B07",
+    "PC-B08",
+    "PC-B09",
+    "PC-B10",
+    "PC-B11",
+    "PC-B12",
+    "PC-B13"
   ],
   "critical_issues": [],
   "latest_validation": [
-    {
-      "evidence": "v5/evidence/board_bringup/20261009/RESULT.md",
-      "status": "READ_ONLY_IDENTIFICATION_PASS",
-      "date": "2026-10-09"
-    },
-    {
-      "evidence": "v5/evidence/baseline/board_integration_20261009/summary.json",
-      "status": "PASS",
-      "date": "2026-10-09"
-    },
-    {
-      "evidence": "v5/evidence/board_bringup/20261009/candidate_checks.json",
-      "status": "PASS_15_OFFLINE_CHECKS",
-      "date": "2026-10-09"
-    },
-    {
-      "evidence": "v5/evidence/board_bringup/20261009/adc_candidate_xsim.log",
-      "status": "PASS_256_SIMULATED_FRAMES",
-      "date": "2026-10-09"
-    }
+    "v5/evidence/repository_cleanup/20261009/FINAL_VERIFICATION.json"
   ],
   "known_limitations": [
-    "CompleteFPGAgrade/actualDDRcapacity/VCCOunknown",
-    "V2schematicvsRev3 andHynixmanualvsMicronpresetnotmatched",
-    "ExistingimageRunning,ownershipunknown;B/C/DNOT_RUN",
-    "UARTnotconnected;targetARMcompiler/BSPnotqualified",
-    "NoactualADC/safety/externaltiming/thermal/acoustics",
-    "Nativev5schematicNOT_CREATED/ ERCNOT_RUN",
-    "IndependentReviewPENDING/ChatGPTreaderBLOCKED",
-    "BOMworkingcandidateNOTreleased"
+    "SameOS/EDAindependentcloneonly",
+    "2324input/256outputexternaldelaysmissing;no boardtimingqualification",
+    "13existingphysical/ARM/PCB/reviewgatesremainopen",
+    "Mainunmerged;Gate7requiresuserapproval",
+    "ExternChatGPTBLOCKED"
   ],
   "do_not_change": [
-    "Frozenhistory/originalBOM/currentrunningimage",
-    "128TX/8RX/32lanes×4used/8bit/sharedphase/requested-calibration/atomicmap",
-    "Protocol/registers/motion/geometry/acceptance",
-    "No permanentstorage/driver/bootchange,unknownGPIO,PCBfabrication/newversion"
+    "All frozen body bytes and modes; originalphysicalworkspace untouched",
+    "Current v5 implementation/tests/goldens/thresholds/ADCB",
+    "No default historycontentread; no boardoperation/mainmerge/forcepush"
   ],
   "invariants": [
-    "132MHz internaltarget distinctfromphysical50MHzreference",
-    "Twoindependentarraypowerbranches;AXGPIOneverpowersTX",
-    "Center/radiatingfacecoordinates12mmpitch/100mmnominal90-115gap",
-    "CandidateADCnotproductionselection",
-    "Controllerconfigurationnottopologyproof"
+    "v5 only",
+    "128TX/8RX",
+    "32lanes×4 commonclock",
+    "independent8bit requested/calibration;completeatomicmaps",
+    "50Hz motion",
+    "12mm pitch/100mm90–115mmgap",
+    "twoindependentarraypower;centralprotectedAX7020headers"
   ],
   "open_ai_problems": [
     "P-20261008-001",
     "P-20261009-001"
   ],
-  "repository_delta": [
-    "Read-onlyboardevidence",
-    "BOMworkingcopyandisolatedcandidates",
-    "CurrentstateandnewProblem/interactioncapture"
-  ],
   "evidence_refs": [
-    "v5/evidence/board_bringup/20261009/RESULT.md",
-    "v5/evidence/board_bringup/20261009/windows_public.json",
-    "v5/evidence/board_bringup/20261009/photo_provenance.json",
-    "v5/evidence/baseline/board_integration_20261009/summary.json",
-    "v5/hardware/integration_candidates/20261009/official_ps_reference.json",
-    "v5/hardware/integration_candidates/20261009/connector_pinmap_candidate.csv",
-    "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx"
+    "v5/evidence/repository_cleanup/20261009",
+    "shared/repository_cleanup/ARCHIVE_PATH_MAP.json"
   ],
-  "resume_from": "ReadAGENTS/PROJECT_STATE/VERSION_STATE/thischeckpoint/CURRENT_PLAN/DECISIONS/BLOCKERS/ACCEPTANCE/currentevidence. VerifyGit statusandreceipt;continuev5withmatchedboardfacts,notolderboardpresets."
+  "resume_from": "Review FINAL_VERIFICATION and PR/CIreceipt; do not repeat archive reading or moves. Gate7 only on explicit user approval",
+  "delta_since_previous": "Afterfullbaseline/prePCB/native/history-absentclonePASSevidence nowavailable",
+  "provenance": [
+    "ActualGitcodecommit3e788f4",
+    "freshbeforeandafterlogs/hashes",
+    "three realVivado2025.2runs",
+    "sourcepreservation/manifests",
+    "actual user instruction ADR039"
+  ],
+  "source_commit": "3e788f4a2763c0354ca66d3836d0709dcf9f0107"
 }

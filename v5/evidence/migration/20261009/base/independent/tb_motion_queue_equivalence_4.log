@@ -1,0 +1,21 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Oct  9 13:12:46 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_motion_queue_equivalence/xsim_script.tcl
+# xsim {tb_motion_queue_equivalence} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS QUEUE_EQ depth=2 cycles=17587 words=1780
+PASS QUEUE_EQ depth=4 cycles=17591 words=1783
+PASS QUEUE_EQ depth=5 cycles=17593 words=1772
+PASS QUEUE_EQ_ALL
+$finish called at time : 175930 ns : File "E:/Codex_project/AMD_Sonofield/v5/tb/tb_motion_queue_equivalence.sv" Line 67
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct  9 13:12:48 2026...

@@ -1,0 +1,16 @@
+build/
+.Xil/
+**/local_raw/
+**/__pycache__/
+*.pyc
+*.vvp
+**/xsim.dir/
+*.wdb
+*.vcd
+evidence/**/gui_*/rtl/
+evidence/**/gui_*/trajectory_*.json
+evidence/**/gui_*/*_motion_ack.txt
+evidence/**/faults/*.vvp
+
+# Native tool auto-backups remain local; canonical failure/success logs are archived.
+*.backup.log

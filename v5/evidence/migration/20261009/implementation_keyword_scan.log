@@ -1,0 +1,51 @@
+v5/tests\ps_service_harness.c:9:static sf_service service;static uint32_t regs[32],writes,disabled,clock_ms;
+v5/tests\ps_service_harness.c:13:static int disable(void *p){(void)p;disabled++;regs[0]=0;regs[2]=0;return bus_fail?-1:0;}
+v5/tests\ps_service_harness.c:15:EXPORT void fixture_init(void){sf_io io={0,read32,write32,disable,send};memset(regs,0,sizeof(regs));regs[1]=128;writes=disabled=clock_ms=0;response_size=0;bus_fail=0;sf_init(&service,io);}
+v5/tests\ps_service_harness.c:20:EXPORT unsigned fixture_disabled(void){return disabled;}
+v5/tests\test_board_transport.py:88:        self.assertGreaterEqual(self.lib.fixture_disabled(),2)
+v5/tests\test_board_transport.py:104:        backend=self.backend().connect();self.assertEqual(backend.state,'SAFE_DISABLED')
+v5/scripts\ax7020_package_review.tcl:4:set stub [open v5/evidence/board_bringup/20261009/local_raw/package_review.v w]
+v5/scripts\ax7020_package_review.tcl:5:puts $stub "module package_review(input wire a, output wire b); assign b=a; endmodule"
+v5/scripts\ax7020_package_review.tcl:6:close $stub
+v5/tests\test_motion.py:167:            self.assertEqual(m.state,'SAFE_DISABLED')
+v5/tests\test_motion.py:176:            m.dispatch(encode(6,'STOP'));self.assertEqual(m.state,'SAFE_DISABLED');self.assertFalse(m.confirmed)
+v5/scripts\ax7020_results_gui.tcl:21:puts "DIGITAL BASELINE PASS is simulation only. Native PCB ERC / board PS-PL loop NOT_RUN."
+v5/software\ui\app.py:85:        self.log=tk.Text(right,height=7,bg='#f7f9fc',font=('Consolas',10),state='disabled');self.log.pack(fill='x',pady=(10,0))
+v5/software\ui\app.py:90:        self.log.configure(state='normal');self.log.insert('end',text+'\n');self.log.see('end');self.log.configure(state='disabled')
+v5/software\ui\app.py:146:        self.model.dispatch(self.packet('STOP'));self.note('SAFE_DISABLED · 队列取消 · 需要重新应用中心并确认');self.refresh()
+v5/software\ui\app.py:181:        self.confirm.configure(state='normal' if s['state']=='WAIT_OPERATOR' else 'disabled')
+v5/software\ui\app.py:182:        self.send.configure(state='normal' if self.model.confirmed and self.preview_path and not self.model.busy else 'disabled')
+v5/scripts\check_structure.py:16:            if re.search(r'(?i)[EG]:[/\\]Codex[-_]project',text):errors.append('Hard-coded workspace '+str(p.relative_to(ROOT)))
+v5/scripts\check_board_integration.py:62:        fake_implementation_review=dict(scope='Current rtl/software/firmware/candidate source grep', findings=[
+v5/scripts\check_board_integration.py:63:            'No new TODO/FIXME/stub/fake implementation found in active production sources.',
+v5/scripts\check_board_integration.py:64:            'disabled matches are safety/UI states; real serial map capability intentionally disabled until board integration, not a passed runtime feature.',
+v5/rtl\sono_digital_system.sv:40: wire kill=!software_enable||!enable_sync[1]||fault||mode==MODE_SAFE_DISABLED;
+v5/rtl\sono_digital_system.sv:113:   mode<=MODE_SAFE_DISABLED;software_enable<=0;start<=0;abort<=0;ack<=0;
+v5/rtl\sono_digital_system.sv:122:   if(fault)begin software_enable<=0;mode<=MODE_SAFE_DISABLED;end
+v5/rtl\sono_digital_system.sv:127:      if(bus_wdata[2])begin software_enable<=0;mode<=MODE_SAFE_DISABLED;end end
+v5/scripts\check_workspace_migration.py:76:            if re.search(r'(?i)[EG]:[/\\]Codex[-_]project',text):errors.append('Hard-coded project path: '+rel)
+v5/software\control\registers.py:34:MODE_SAFE_DISABLED = 0
+v5/software\control\host.py:23:        self.abort();raise TimeoutError('Digital operation timed out; disabled')
+v5/software\board\serial_transport.py:24:        self.state='SAFE_DISABLED';self.remote_disable_confirmed=False
+v5/software\board\serial_transport.py:59:        self.state='SAFE_DISABLED';self.connected=False;self.capabilities=0
+v5/software\board\serial_transport.py:91:        self._request(g.CMD_SAFE_DISABLE);self.state='SAFE_DISABLED';self.remote_disable_confirmed=True
+v5/software\board\serial_transport.py:103:            raise PermissionError('Map capability is disabled in the first transport stage')
+v5/scripts\run_baseline.py:1:"""Real v5 baseline; no hardware access, inherited tests are never skipped."""
+v5/software\calibration\report.py:30:       'recommended_disabled_channels':[c['channel'] for c in record['channels'] if not c['recommended_mask']],
+v5/software\calibration\report.py:31:       'active_disabled_channels':[c['channel'] for c in record['channels'] if not c['active_mask']]}
+v5/scripts\motion_gate.py:21:    parser.add_argument('--skip-regression',action='store_true');args=parser.parse_args()
+v5/scripts\motion_gate.py:88:        if not args.skip_regression:
+v5/scripts\motion_gate.py:98:        summary['status']='PARTIAL' if args.skip_regression else 'PASS'
+v5/scripts\prepare_ax7020_candidates.py:66:set stub [open v5/evidence/board_bringup/20261009/local_raw/package_review.v w]
+v5/scripts\prepare_ax7020_candidates.py:67:puts $stub "module package_review(input wire a, output wire b); assign b=a; endmodule"
+v5/scripts\prepare_ax7020_candidates.py:68:close $stub
+v5/scripts\validate.py:25:    parser.add_argument("--skip-xsim",action="store_true",help="Marks XSim NOT_RUN; does not claim full gate")
+v5/scripts\validate.py:92:        if not args.skip_xsim:
+v5/scripts\validate.py:120:        run("self_calibration_gate",[sys.executable,ROOT/"scripts/self_calibration_gate.py","--output",evidence/"self_calibration",*(["--skip-xsim"] if args.skip_xsim else [])],ROOT)
+v5/scripts\validate.py:131:        summary["status"]="PASS" if not args.skip_xsim else "PARTIAL"
+v5/scripts\self_calibration_gate.py:18:    parser.add_argument('--skip-xsim',action='store_true');a=parser.parse_args()
+v5/scripts\self_calibration_gate.py:80:        if not a.skip_xsim:
+v5/scripts\self_calibration_gate.py:99:        summary['status']='PARTIAL' if a.skip_xsim else 'PASS'
+v5/scripts\curate_ax7020_evidence.py:86:        dict(tool='Vivado package review', error='No open design', evidence='package_review.log', recovery='Read minimal combinational stub and synth_design -rtl', result='package_review_retry.log PASS'),
+v5/software\motion\motion_controller.py:26:        self.planner=Planner(profile);self.state='SAFE_DISABLED';self.connected=False
+v5/software\motion\motion_controller.py:48:            self.confirmed=False;self.state='SAFE_DISABLED';self.busy=False

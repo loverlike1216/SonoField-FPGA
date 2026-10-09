@@ -1,0 +1,3 @@
+# Historical board applicability
+
+Robei Octagonal Board is explicitly identified in legacy-versions/v1/config/board_facts.json and legacy-versions/v2/config/board_facts.json; complete board-specific contexts remain inside those frozen self-contained versions. Root v2 parameter detection and PCB/V1 are in their corresponding legacy groups. EBAZ4205 is named by the migration scope, but no independently tracked EBAZ4205 project/vendor tree was found in the source snapshot; none is fabricated or imported from private workspaces. Current AX7020 facts and explicit not_inherited exclusions remain in v5/config/board_facts.json.

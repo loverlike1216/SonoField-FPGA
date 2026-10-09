@@ -1,0 +1,35 @@
+{
+  "production_root": "v5",
+  "active_roots": [
+    "v5",
+    "shared",
+    "AI-problem",
+    "AI-chat-memory",
+    "AI-interaction-memory",
+    ".github",
+    ".vscode"
+  ],
+  "root_docs": [
+    "README.md",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    ".gitattributes",
+    ".gitignore",
+    ".ignore",
+    ".rgignore",
+    "ROLLBACK_PLAN.md",
+    "V5_ACTIVE_DEPENDENCY_REPORT.md"
+  ],
+  "exclude_from_runtime_search_package": [
+    "Historical project",
+    ".migration-private",
+    ".portability",
+    ".venv",
+    "build",
+    "local_raw"
+  ],
+  "ooc_source_list": "v5/config/ooc_source_list.txt",
+  "python_test_discovery": "v5/tests",
+  "runtime_source_discovery": "explicit v5-rooted folders only",
+  "historical_static_strings": "PROVENANCE_REFERENCE_ONLY"
+}

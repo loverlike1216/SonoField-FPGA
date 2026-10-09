@@ -1,0 +1,74 @@
+{
+  "geometry_status": "USER_DEFINED_NOMINAL_NOT_MEASURED",
+  "coordinate_reference": "RADIATING_SURFACE_CENTER",
+  "units": "mm",
+  "origin_mm": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "total_emitters": 128,
+  "emitters_per_plane": 64,
+  "x_coordinates_mm": [
+    -42.0,
+    -30.0,
+    -18.0,
+    -6.0,
+    6.0,
+    18.0,
+    30.0,
+    42.0
+  ],
+  "y_coordinates_mm": [
+    -42.0,
+    -30.0,
+    -18.0,
+    -6.0,
+    6.0,
+    18.0,
+    30.0,
+    42.0
+  ],
+  "nominal_face_z_mm": {
+    "upper": 50.0,
+    "lower": -50.0
+  },
+  "upper_face_z_range_mm": [
+    45.0,
+    57.5
+  ],
+  "lower_face_z_range_mm": [
+    -57.5,
+    -45.0
+  ],
+  "face_gap_range_mm": [
+    90.0,
+    115.0
+  ],
+  "total_gap_travel_mm": 25.0,
+  "symmetric_travel_per_plane_mm": 12.5,
+  "center_span_xy_mm": [
+    84.0,
+    84.0
+  ],
+  "nominal_body_envelope_xy_mm": [
+    94.0,
+    94.0
+  ],
+  "nominal_neighbor_clearance_mm": 2.0,
+  "body_diameter_mm": 10.0,
+  "nominal_body_back_z_mm": {
+    "upper": 57.0,
+    "lower": -57.0
+  },
+  "body_height_source": "Supplier image nominal; seating and face offset unmeasured",
+  "pcb_plane_z_mm": null,
+  "pcb_gap_mm": null,
+  "pcb_outline_mm": null,
+  "notes": [
+    "PCB plane needs measured mounting standoff and body datum offset",
+    "Body envelope is not a selected PCB outline or drilling pattern",
+    "Both plane exports share global XY; backside viewing does not renumber channels",
+    "10 mm body used as acoustic piston diameter only as an explicit approximation"
+  ]
+}

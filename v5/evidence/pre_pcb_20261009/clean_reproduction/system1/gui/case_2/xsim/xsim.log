@@ -1,0 +1,18 @@
+The system cannot find the path specified.
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Oct  9 15:24:40 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/motion_snapshot/xsim_script.tcl
+# xsim {motion_snapshot} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS MOTION RTL maps=27 atomic separate calibration FIFO cadence ACK STOP
+$finish called at time : 1900916888 ps : File "E:/Codex_project/AMD_Sonofield/.portability/prepcb_clean/v5/tb/tb_motion.sv" Line 75
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct  9 15:24:43 2026...

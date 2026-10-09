@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "source_commit": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+  "source_v5_files": 2695,
+  "same_blob_mode_v5": 2693,
+  "reviewed_v5_edits": [
+    {
+      "path": "v5/README.md",
+      "before_blob": "85918898e588a093598d53ef2e4e7fba1ce53c5c",
+      "after_blob": "c9fff773ac776033d4df7f7728570b0e20339d39"
+    },
+    {
+      "path": "v5/scripts/check_workspace_migration.py",
+      "before_blob": "685427d9d4fc6c6a3795532d634605cfffa2c589",
+      "after_blob": "13016c73c85fb5ea1ec868b0ac02b09d193c3d8b"
+    }
+  ],
+  "missing_files": [],
+  "unexpected_implementation_changes": [],
+  "all_original_source_tests_goldens_bom_evidence_preserved": true,
+  "all_current_problem_files_preserved": true,
+  "reviewed_governance_edits": [
+    {
+      "path": ".gitattributes",
+      "before_blob": "e3237df849366ad19218b45ab89b9736cf590d5b",
+      "after_blob": "c798e5aeee16fb9585f7e926ab3d0921c2d97e0e"
+    },
+    {
+      "path": ".github/workflows/workspace-integrity.yml",
+      "before_blob": "c1d2058aa0ec040288a80d0754c429aad5704e8d",
+      "after_blob": "4110ed91d0e73adea56c900242ea38f460a010d5"
+    },
+    {
+      "path": ".gitignore",
+      "before_blob": "be1760a7bf9a38cc0436566f2b0958f5820a0bef",
+      "after_blob": "55fad0967e2383e780b8acbb5f12131e05254039"
+    },
+    {
+      "path": ".ignore",
+      "before_blob": "3c9bd72eb33b9059e2be627b15f7a01f712daf2c",
+      "after_blob": "599f0dd6c48b989f32517dad1e93fbf01c1c7744"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "before_blob": "141e19ef4e9413ff028f52c4606ac0512d3406f8",
+      "after_blob": "0a52ecfead9df3da7544cb68ae16810bcff8735c"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_blob": "ac650ae44986854ffd15666c745a637454135700",
+      "after_blob": "64ca64a7eb22505704d2ae6605abff0f50acd539"
+    },
+    {
+      "path": "AI-interaction-memory/INDEX.md",
+      "before_blob": "fb7361cae79737f23e1ee64a95a1543d8c6717c2",
+      "after_blob": "8c077295171e98cf6aa0c18f935e293aaed88ad9"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "before_blob": "78ed89c7062686885a0034bfa09ca1760541e86b",
+      "after_blob": "54d63ec3656d3ab278ed9ce249445849d0a71e15"
+    },
+    {
+      "path": "README.md",
+      "before_blob": "539bf65623634b8aea14fab73df15f3a38a480a8",
+      "after_blob": "8fdd52a6f75013e0a5bbd5d9340f121fada47e26"
+    },
+    {
+      "path": "shared/ACCEPTANCE.md",
+      "before_blob": "0174e595f71c0b04c33944e4c0f15bf8d824d809",
+      "after_blob": "ea9ef2bcb36fad25109e6e5c002f878a6b257a09"
+    },
+    {
+      "path": "shared/BLOCKERS.md",
+      "before_blob": "b74946db131c5518ab91a24253998bc296214d8e",
+      "after_blob": "b611782b9543d5f33f54111a1341121dd4d3a778"
+    },
+    {
+      "path": "shared/CONTEXT_CHECKPOINT.json",
+      "before_blob": "0a58c4c0274a7f52eafbfb1907ad7d4e9dc4006b",
+      "after_blob": "9194f510c2982a8889c7e3e1663ea61d635ff131"
+    },
+    {
+      "path": "shared/CONTEXT_CHECKPOINT.md",
+      "before_blob": "6212d010c687a76b6d9267abaebe95fcde7d2141",
+      "after_blob": "babcfaa04a4379a8670492e0c910db37b9f14b69"
+    },
+    {
+      "path": "shared/CURRENT_PLAN.md",
+      "before_blob": "bf8b7f766e92a7cafea3f903e98ac78076efd7f5",
+      "after_blob": "48a7017c92621a3cf596562e553e0057860bfbe1"
+    },
+    {
+      "path": "shared/DECISIONS.md",
+      "before_blob": "75e7ba4b74ed53a6111f5842efab28428a51879a",
+      "after_blob": "4798d167dadf108c050d854c4e756996e88f60d6"
+    },
+    {
+      "path": "shared/HANDOFF.md",
+      "before_blob": "e6777c7bbd0323e09e623c38457dff62a3de5d28",
+      "after_blob": "6d5f9b8e8f076685403b0217e76cf3eb144e9b31"
+    },
+    {
+      "path": "shared/PROJECT_STATE.json",
+      "before_blob": "a70fe567eef9f9bcdc6c1505199fc20794492ca8",
+      "after_blob": "f5686f74824b22d40dec5584ea91ad910fa00a33"
+    },
+    {
+      "path": "shared/PROJECT_STATE.md",
+      "before_blob": "36f57c16d2f6e903aa30b0312b327d613c29f8e7",
+      "after_blob": "c098ea6e233e2900122eda5652b59fd3e35fdae5"
+    },
+    {
+      "path": "shared/VERSION_STATE.json",
+      "before_blob": "acbe0832cebdacdd6334dea32f1119c4a59c2387",
+      "after_blob": "82ccf5d6e3365a998975a73d79e5af74455f406c"
+    },
+    {
+      "path": "shared/migration/ACTIVE_TREE_ALLOWLIST.json",
+      "before_blob": "040ce8ed21534420f5d2bfd1a109de6671009451",
+      "after_blob": "c2ea8de75f122c8e0f5d5ac1a1b53fd317f9d40f"
+    },
+    {
+      "path": "shared/migration/RUNBOOK.md",
+      "before_blob": "4688b665c90175d1fbe848d13363152615fdbaa7",
+      "after_blob": "f067459757010d4f389eff7db9e0d4366ea95e3a"
+    }
+  ]
+}

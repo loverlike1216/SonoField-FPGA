@@ -1,0 +1,24 @@
+{
+  "status": "DOCUMENTED_CANDIDATE_NOT_XDC",
+  "available_documented": 68,
+  "used": 63,
+  "reserved": 5,
+  "array_each": {
+    "tx_data": 16,
+    "clocks": 2,
+    "oe_reset": 2,
+    "blank_heartbeat_sync": 3,
+    "pgood_fault": 2
+  },
+  "adc": 10,
+  "i2c": 2,
+  "estop": 1,
+  "axc_each_array": {
+    "nonclock_outputs": 21,
+    "returns": 2,
+    "four_bit_groups": 7,
+    "candidate_chips": 4,
+    "original_chips": 3
+  },
+  "power_pins": "NC except grounds; AX7020 does not feed array/central supply"
+}

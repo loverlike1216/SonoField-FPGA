@@ -8,7 +8,7 @@
 
 ## 复现与查看
 
-直接用 Excel 或兼容软件打开工作副本即可，不依赖 Codex。核验：从仓库根用 Python 3.10+ 运行 `python v5/hardware/integration_candidates/20261009/verify_candidates.py`；只用标准库读取 XLSX XML，无需 openpyxl。
+直接用 Excel 或兼容软件打开工作副本即可，不依赖 Codex。核验：从仓库根用 Python 3.10+ 运行 `python v5/hardware/integration_candidates/20261009/verify_candidates.py --output evidence/migration/manual_candidates`；只用标准库读取 XLSX XML，无需 openpyxl。
 
 生成脚本 `v5/scripts/revise_ax7020_bom.mjs` 使用 artifact-tool；在有该依赖的 Node 环境运行。Codex 环境可将 `ARTIFACT_TOOL_MODULE` 设为已安装包的 `dist/artifact_tool.mjs` 完整路径，再 `node v5/scripts/revise_ax7020_bom.mjs`。普通同事环境若无此内部依赖，可阅读脚本/changes.json 并人工按格修改；不要声称生成链可在没有该依赖的机器直接运行。脚本只改工作副本和预览，不改原件，也不操作板卡。xlsx 的 ZIP 元数据可能变化，验证内容/公式及原件 Hash，而非要求重导出二进制完全相同。
 

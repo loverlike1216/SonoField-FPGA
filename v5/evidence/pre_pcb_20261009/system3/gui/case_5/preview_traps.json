@@ -1,0 +1,4236 @@
+[
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.00733234426061811,
+    "normalized_gradient_residual": 3.743692116246465e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200895.7036140137,
+      200957.16111232355,
+      2220782.695106526
+    ],
+    "trap_score": 0.1343784687416753,
+    "map_sha256": "799edd447b69e314f7b62a78c1628b9a4daf4403318df768571f21b3f39b4e11",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.007295424451636684,
+    "normalized_gradient_residual": 3.7905957362382547e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200895.70358610302,
+      200957.16107769622,
+      2220782.6953097875
+    ],
+    "trap_score": 0.13437846872295112,
+    "map_sha256": "799edd447b69e314f7b62a78c1628b9a4daf4403318df768571f21b3f39b4e11",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.007049715591425402,
+    "normalized_gradient_residual": 4.130394203390619e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200895.70358705585,
+      200957.16107101622,
+      2220782.69536925
+    ],
+    "trap_score": 0.13437846872358772,
+    "map_sha256": "799edd447b69e314f7b62a78c1628b9a4daf4403318df768571f21b3f39b4e11",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.007281249672694111,
+    "normalized_gradient_residual": 2.7336740287846053e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200896.3362146107,
+      200951.39765394505,
+      2220801.569022294
+    ],
+    "trap_score": 0.13437818624901726,
+    "map_sha256": "8d0e491c5a65ff5758bd99e8c5138799b9df252d1b5a14408c56d94809541228",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.006865770565751287,
+    "normalized_gradient_residual": 2.70029591009614e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200885.54897982194,
+      200957.09507447635,
+      2220820.226973394
+    ],
+    "trap_score": 0.1343702740498155,
+    "map_sha256": "387f13076d31136a8e2f774b93c4232113565b7f03befdd45a6464f437169721",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.007984026184194372,
+    "normalized_gradient_residual": 1.115246598602659e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200873.11510428073,
+      200975.18866847138,
+      2220811.3758407887
+    ],
+    "trap_score": 0.13436211606868811,
+    "map_sha256": "bf2a525c6b0513acfdea4b2ab16c316d2ba86c3fc7b74628a42b586eabcf3b09",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.005323284072833725,
+    "normalized_gradient_residual": 1.2339009322141786e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200882.87050649835,
+      200961.43280887324,
+      2220817.0220039245
+    ],
+    "trap_score": 0.1343685562357298,
+    "map_sha256": "cf7cd69e485e51dd3452eeda9993979d965af364a2a8e22e02ae49443884a972",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0036384245258973542,
+    "normalized_gradient_residual": 1.7972357829551219e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200880.04312144977,
+      200972.69215671238,
+      2220798.310925612
+    ],
+    "trap_score": 0.13436718772944803,
+    "map_sha256": "f4d3e6a5f06bca5a8d74a3685453c1a496f6a7b229a7744741b23121d50b6061",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0017551718475914352,
+    "normalized_gradient_residual": 9.341128488700174e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200873.59848593344,
+      200988.6561196813,
+      2220766.8295166125
+    ],
+    "trap_score": 0.13436400130920614,
+    "map_sha256": "bfef22bf9e283747aae3c80cc602722b83857ccc771b4cfded3e2e9835e94629",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0009394154109320436,
+    "normalized_gradient_residual": 2.788926145950577e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200901.401714353,
+      200955.55094641028,
+      2220786.1671057986
+    ],
+    "trap_score": 0.13438187762376988,
+    "map_sha256": "0c3a6e60d7de361c7c55d426ca759f18420bc6924c07c93934c116915d5f2895",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0030901919410000448,
+    "normalized_gradient_residual": 1.047912860452809e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200921.95275153936,
+      200948.11417688912,
+      2220740.1523850546
+    ],
+    "trap_score": 0.13439730692857943,
+    "map_sha256": "dc47d2efcc6d3a6f9cdc330d17070c82294f0d88367680c1e25f6226a284c99e",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.002438540489558855,
+    "normalized_gradient_residual": 2.1811550738579559e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200926.37658715303,
+      200961.58916787786,
+      2220679.919461806
+    ],
+    "trap_score": 0.13440242981529876,
+    "map_sha256": "cc8310d05de8afbb3510efa7301d6c19daf594d812d24dc53dfbdde9b1e3635c",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0006697073252289206,
+    "normalized_gradient_residual": 7.538036611406708e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200924.81101182307,
+      200955.4299261508,
+      2220703.4249098506
+    ],
+    "trap_score": 0.13440056232050576,
+    "map_sha256": "6039346661b19dff237d701e8bce42602640f22a3e89d8a97d12360e4a6cf6b8",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.002321460350732919,
+    "normalized_gradient_residual": 8.16402551828837e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200903.16801875993,
+      200966.83728121492,
+      2220715.8696284187
+    ],
+    "trap_score": 0.1343859644055545,
+    "map_sha256": "8710aa12a2e54fa709f10d0e0362affe27e04125ce737d4130e227307fa90641",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0023378552827170588,
+    "normalized_gradient_residual": 3.3957395886509913e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200887.49305411289,
+      200951.5054883492,
+      2220819.6592468144
+    ],
+    "trap_score": 0.13437174182282074,
+    "map_sha256": "13d8e4e91e13f82880ab94b2e7cf03be8b1bc1bc628fbf246ab604e1d4ed3cdb",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.00397254133060865,
+    "normalized_gradient_residual": 4.328519669842338e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200902.38740868913,
+      200936.44032637405,
+      2220813.571529026
+    ],
+    "trap_score": 0.134382015616179,
+    "map_sha256": "1062b131969f018993be6d1385f0c2ce73f70e82bda72e02707c9164949c0550",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.004929107495121243,
+    "normalized_gradient_residual": 1.34210693523218e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200884.2146976305,
+      200958.73076908322,
+      2220793.621714309
+    ],
+    "trap_score": 0.13437066463065345,
+    "map_sha256": "65ceae3a330c32ca5c984e72895b9a279faa5f61e5e167e5968684b942d3277e",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0005087696968313761,
+    "normalized_gradient_residual": 4.874311331824189e-08,
+    "hessian_eigenvalues_au_per_mm2": [
+      200909.60215797045,
+      200963.62279308113,
+      2220661.8219018863
+    ],
+    "trap_score": 0.13439282543878583,
+    "map_sha256": "0854bdb2c95bd5fe5c8104b943aa1a469d9804a91dc3298736ee86334ae25cfe",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0033180611770385255,
+    "normalized_gradient_residual": 3.729730037232321e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200917.71278891122,
+      200963.613265384,
+      2220628.720623601
+    ],
+    "trap_score": 0.13439950146954455,
+    "map_sha256": "0ff54c5eaf620212602813a8815666124737343272021f1c3cc5fed680777c03",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.005059557602925517,
+    "normalized_gradient_residual": 4.78690457818291e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200906.4133638373,
+      200962.54067914392,
+      2220727.7984009744
+    ],
+    "trap_score": 0.1343874796810801,
+    "map_sha256": "4024f2c615caaedb8d0f2f3ea9d8c4ef3991772e7cb6876d508193723ea0d5e3",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.002967032669487161,
+    "normalized_gradient_residual": 3.322938462701736e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200910.48517772724,
+      200979.35481446842,
+      2220694.35089851
+    ],
+    "trap_score": 0.1343908386673968,
+    "map_sha256": "a01f6a3934ad4f056c9164a837eee05031688091b6609d6d43f8b3b8a4a02d68",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0041061130824073516,
+    "normalized_gradient_residual": 1.0621451836312685e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200883.99751479385,
+      200974.54260618772,
+      2220740.5376773505
+    ],
+    "trap_score": 0.13437235258196673,
+    "map_sha256": "fce8f1d585567aaeddcad42adbd18c7fe32cde11bd2ab1ce513821946eee11c1",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.001972800968663034,
+    "normalized_gradient_residual": 3.606731308018606e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200904.83768336332,
+      200946.86609466834,
+      2220737.9610705827
+    ],
+    "trap_score": 0.1343867520232578,
+    "map_sha256": "ff313a744d15bc48818007a26a2e8ad37e53ba821b0969eb55c21d7a1fae4389",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0038597323434640942,
+    "normalized_gradient_residual": 3.4284764274198637e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200884.22933754505,
+      200987.50302926655,
+      2220687.312288041
+    ],
+    "trap_score": 0.13437452002763528,
+    "map_sha256": "7218b15188ca6d8d5f86de78d02d704c2a4a608a9f9d69bf7a0bf26717144207",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.003954391395000681,
+    "normalized_gradient_residual": 4.528417138004721e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200883.85554046376,
+      200977.7813579307,
+      2220713.1731810425
+    ],
+    "trap_score": 0.13437344313781413,
+    "map_sha256": "c157848db9a5afd130f72ea3103467303dc76f016bad55d0f2d3d5bb16b3ce9b",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.002113469501552488,
+    "normalized_gradient_residual": 2.86095199823062e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200898.28574650522,
+      200961.65049078787,
+      2220704.132936843
+    ],
+    "trap_score": 0.1343836258110361,
+    "map_sha256": "7ffa43b8c1eb7df36f979685855e9a1bc5e443fd3b7be21cec307ab9b59553dd",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0013132392199289907,
+    "normalized_gradient_residual": 3.2600030815390826e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200902.66586245006,
+      200965.95858757303,
+      2220690.6567765498
+    ],
+    "trap_score": 0.13438679463618666,
+    "map_sha256": "e4b04f199d656f5bd1e2c8839954a63d0aff492bf242cc6ee834341573eb9cd1",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0019423070291438138,
+    "normalized_gradient_residual": 1.854671585776068e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200905.1705695453,
+      200964.50527455844,
+      2220688.1367250467
+    ],
+    "trap_score": 0.13438853260643388,
+    "map_sha256": "ed794efb74071cb60a4065c19ab288a6e2846df62976cfa1f52319039ef7dac0",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0014363423177841553,
+    "normalized_gradient_residual": 8.406475476856115e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200936.46351307537,
+      200951.03597544748,
+      2220605.8913462283
+    ],
+    "trap_score": 0.1344127639329472,
+    "map_sha256": "6cdac76207d3dd37b2027737cdb260c13b166945d6a85c559780d40834bc6559",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.003474754848820576,
+    "normalized_gradient_residual": 1.1680714660441841e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200909.30227795956,
+      200962.54238805335,
+      2220651.874711291
+    ],
+    "trap_score": 0.1343930352328831,
+    "map_sha256": "52afe4a2d17a4e90f1403b527e64a808556f8dbc49aa8d59e35813195e7ad878",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.004831720654287269,
+    "normalized_gradient_residual": 1.2568525308970627e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200900.34033154877,
+      200987.85955921386,
+      2220596.691357964
+    ],
+    "trap_score": 0.13438901886053464,
+    "map_sha256": "59e3ade42c2a52ad6be1bcadaec003cd0de0699a0b890deb5223ad10b7f2f39a",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.006736747430184393,
+    "normalized_gradient_residual": 1.6550693989202926e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200906.34998056,
+      200987.49655635963,
+      2220580.126775682
+    ],
+    "trap_score": 0.1343935941736943,
+    "map_sha256": "ccfda38c2a6e7d031e37880816f3584c6a4f026648fa89030575962aff9055eb",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.008094702979427099,
+    "normalized_gradient_residual": 5.752100124900601e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200913.45039617686,
+      200983.8491735031,
+      2220581.539587887
+    ],
+    "trap_score": 0.13439809510714956,
+    "map_sha256": "f43a69a6bfb402643afcc4ddfc29cbba0583074c5f99ebb85d9715685aba7e9f",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.008692457565051763,
+    "normalized_gradient_residual": 3.9895105318046446e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200913.45037703912,
+      200983.84917140665,
+      2220581.5394602963
+    ],
+    "trap_score": 0.13439809509436285,
+    "map_sha256": "f43a69a6bfb402643afcc4ddfc29cbba0583074c5f99ebb85d9715685aba7e9f",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.007847583585137855,
+    "normalized_gradient_residual": 9.99608157692265e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200925.32788776612,
+      200971.904325886,
+      2220571.5215027435
+    ],
+    "trap_score": 0.13440655173470675,
+    "map_sha256": "6406f5e9feb20b0668b7e876f6ada173802b9a35df00ba2863739e2cff198892",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.007989108823274124,
+    "normalized_gradient_residual": 9.500530218387398e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200925.32789451833,
+      200971.90434427906,
+      2220571.521656598
+    ],
+    "trap_score": 0.13440655173914928,
+    "map_sha256": "6406f5e9feb20b0668b7e876f6ada173802b9a35df00ba2863739e2cff198892",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.008010825149360518,
+    "normalized_gradient_residual": 9.426618282589511e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200925.32787450153,
+      200971.90432164163,
+      2220571.5215900084
+    ],
+    "trap_score": 0.13440655172578758,
+    "map_sha256": "6406f5e9feb20b0668b7e876f6ada173802b9a35df00ba2863739e2cff198892",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.008030656922088219,
+    "normalized_gradient_residual": 9.618507458696574e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200925.3278824351,
+      200971.90432791042,
+      2220571.521628705
+    ],
+    "trap_score": 0.13440655173105268,
+    "map_sha256": "6406f5e9feb20b0668b7e876f6ada173802b9a35df00ba2863739e2cff198892",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.008165570857872733,
+    "normalized_gradient_residual": 1.090391167086239e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200925.3279014966,
+      200971.90433650924,
+      2220571.5216526403
+    ],
+    "trap_score": 0.13440655174381463,
+    "map_sha256": "6406f5e9feb20b0668b7e876f6ada173802b9a35df00ba2863739e2cff198892",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.00853224178826262,
+    "normalized_gradient_residual": 1.4235780389271442e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200925.32796109785,
+      200971.90435653416,
+      2220571.521529195
+    ],
+    "trap_score": 0.13440655178378327,
+    "map_sha256": "6406f5e9feb20b0668b7e876f6ada173802b9a35df00ba2863739e2cff198892",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.009486059327104517,
+    "normalized_gradient_residual": 8.377942681790924e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200910.70483690494,
+      200980.74839677927,
+      2220597.4047784726
+    ],
+    "trap_score": 0.13439574459766665,
+    "map_sha256": "77bf88222f876e7b9c80f4a9a24e5f5738f81b0978c6eaf37318e36bd356e673",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.007751493811362938,
+    "normalized_gradient_residual": 1.084574970719506e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200890.17926278015,
+      200997.26686916366,
+      2220594.8504692265
+    ],
+    "trap_score": 0.13438234884151934,
+    "map_sha256": "a69ac83015ef523ca7b4e2e3718c2ac5151f39532814e22dc9252bd21340b633",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.006117141000082328,
+    "normalized_gradient_residual": 4.765047588218942e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200921.15298811274,
+      200998.67778947603,
+      2220516.4966762527
+    ],
+    "trap_score": 0.1344054296266163,
+    "map_sha256": "8c420430cddbb4e513864bd47148e7275c963d8e65a5b0f695c2777b27bb8fb1",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.005227604063011351,
+    "normalized_gradient_residual": 1.383610119321278e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200929.53627908835,
+      200948.7571715278,
+      2220627.3889389606
+    ],
+    "trap_score": 0.13440749174827638,
+    "map_sha256": "011b8c8385d3fcc0594218930b871c94b5110dd2607e4818901c220297d1028d",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0022964370704375036,
+    "normalized_gradient_residual": 2.415328007472148e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200916.19148161367,
+      200950.1819475538,
+      2220671.6172569897
+    ],
+    "trap_score": 0.13439690893597897,
+    "map_sha256": "1d7b283d2bf7468f1a093a7013701d5f1e824c92c021bbb30d72f974f00a230f",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.002227918704133106,
+    "normalized_gradient_residual": 1.0230070910845548e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200895.69890755427,
+      200975.40837393637,
+      2220647.259067625
+    ],
+    "trap_score": 0.13438421049970564,
+    "map_sha256": "cedfbc997e9f10847b7163bc9faefc80b051f656e0daaa32782ef90f5b2aa7e0",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.002274312539908045,
+    "normalized_gradient_residual": 1.070548801240463e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200896.1447387598,
+      200978.64626436657,
+      2220643.1164890854
+    ],
+    "trap_score": 0.13438454378168432,
+    "map_sha256": "a9abe73a3e7359d841274364bd5e8f8706b97fcfb1d23f81f5e2a44f8f0342e6",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0023863245474546784,
+    "normalized_gradient_residual": 3.8665493766578277e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200890.5076233808,
+      200964.7090170746,
+      2220704.1671760944
+    ],
+    "trap_score": 0.13437865463033843,
+    "map_sha256": "420526a85e23001bfe5cc7de356bac5008143866b8cb6207a1ae6a55c0b5ee33",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0015557237835898846,
+    "normalized_gradient_residual": 1.2157107038861206e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200876.2110619906,
+      200997.90771559847,
+      2220656.1865955205
+    ],
+    "trap_score": 0.13437058940152713,
+    "map_sha256": "0eb1965e75359cf70752fcb2149a6c63d13ff325d3ee6066f79d0278aa430880",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.004516552771658336,
+    "normalized_gradient_residual": 2.315078699839277e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200909.35234279846,
+      200960.91934588915,
+      2220680.7223451906
+    ],
+    "trap_score": 0.13439172155400825,
+    "map_sha256": "cd10789c7d43fac723eae4219b868b1ec0933102b6ea7748293b64d96f89bdab",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.003456336232476708,
+    "normalized_gradient_residual": 6.94957633781859e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200934.6875646642,
+      200956.89529251054,
+      2220616.3924788493
+    ],
+    "trap_score": 0.13441087929180182,
+    "map_sha256": "f4b36afec38c51fe5b22252482955a6b6822c05f84ab6ff3b06d194e87fd3133",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0013207860139034446,
+    "normalized_gradient_residual": 2.546628661495372e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200916.22230058498,
+      200956.42280563334,
+      2220698.381653376
+    ],
+    "trap_score": 0.13439530280881964,
+    "map_sha256": "0ca404ce0b576c872c2cefdc437cd56c4993785e93f0bd958bb283534355b398",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0032932063921525014,
+    "normalized_gradient_residual": 5.190338502846126e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200914.59107760416,
+      200952.9570999495,
+      2220715.643598721
+    ],
+    "trap_score": 0.13439359428028272,
+    "map_sha256": "8087056e6a50cd2209cc6a315c0af4e208c5f51981111bd1abc8e08f7ca6f98f",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0023912236208841497,
+    "normalized_gradient_residual": 4.596707249752121e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200908.21157733994,
+      200965.2527223098,
+      2220669.475286589
+    ],
+    "trap_score": 0.13439140598512475,
+    "map_sha256": "17cb2aba1bfbae9952021d2d0f59fcfa6bafeed39bebc34980a4c7ecf6250332",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0045393155173085635,
+    "normalized_gradient_residual": 5.178507995223697e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200902.2925838615,
+      200960.2706702382,
+      2220708.258269566
+    ],
+    "trap_score": 0.13438602241107223,
+    "map_sha256": "b4fda9b2b6f02273523a8eb5ec12a3036292f120d1de23abb523fadf02813553",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0029143002952313523,
+    "normalized_gradient_residual": 2.7268205672375013e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200930.8218214545,
+      200956.75357390157,
+      2220585.717144982
+    ],
+    "trap_score": 0.13441011688537768,
+    "map_sha256": "8607786b56b8662b07c920a6703860f6be37bd02880b32389f41e651cd6fe8ef",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0017628548043520187,
+    "normalized_gradient_residual": 5.897937263841925e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200929.33028318823,
+      200980.13415296754,
+      2220514.731069615
+    ],
+    "trap_score": 0.13441165915716385,
+    "map_sha256": "7f68031cc94b91b32fdea91290c70fba36039c72c8dbf93bd72f0ba34b02e443",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.002587994244261352,
+    "normalized_gradient_residual": 4.714088741422023e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200928.79618526882,
+      200939.35606762144,
+      2220655.839651751
+    ],
+    "trap_score": 0.13440617390544657,
+    "map_sha256": "ea27b3cd25ed0e393c5f018f65857530342428fab7cd29e1427d595747aecf37",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.00344925417053884,
+    "normalized_gradient_residual": 3.871120661901306e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200919.35952266827,
+      200958.75459741507,
+      2220634.2910490655
+    ],
+    "trap_score": 0.13440047555137602,
+    "map_sha256": "59ee861cd3087e1ef310b754cf02557949e074f6b4b5cc15e8ec2a515dc80024",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.003246627655386245,
+    "normalized_gradient_residual": 3.2352216500906706e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200911.73348300357,
+      200977.57204972568,
+      2220595.0646236474
+    ],
+    "trap_score": 0.1343968083532013,
+    "map_sha256": "3d02c2f33a9c0658ae12b8d9febba5fe26ec1e2441d49ae62d6d6eb8973a21d0",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0015545726600176032,
+    "normalized_gradient_residual": 2.918689031364255e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200912.06171337192,
+      200966.7402596814,
+      2220655.729564342
+    ],
+    "trap_score": 0.13439447884594152,
+    "map_sha256": "a853ba8908765a00f1ca171da4ee23a4d092e84862fae40e610d550834b74236",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0020520622303980248,
+    "normalized_gradient_residual": 3.050551441715526e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200920.2551575774,
+      200950.95197140606,
+      2220691.62584021
+    ],
+    "trap_score": 0.13439851817562232,
+    "map_sha256": "d1d514c0a3474e8301762e982b0b09469b4dde248da8b3c146c3f533ffdd541f",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.004034585356343237,
+    "normalized_gradient_residual": 1.0303997130976051e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200925.55760027468,
+      200942.40511501793,
+      2220699.432250687
+    ],
+    "trap_score": 0.13440183717672433,
+    "map_sha256": "35d00dda224592f5a2e6b2c63b4459d97398aad8326b36942b068649206d7b0f",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0035865515388999823,
+    "normalized_gradient_residual": 6.033424062300428e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200917.73540179513,
+      200933.72761194958,
+      2220742.757861784
+    ],
+    "trap_score": 0.1343952306134577,
+    "map_sha256": "95962d95bbf1857716f8b7d2d8da02c7be8933c7b694b99f5be3d43db1d6e60d",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.006005661524278731,
+    "normalized_gradient_residual": 8.401267398330506e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200909.28501207533,
+      200956.13380452048,
+      2220691.77697943
+    ],
+    "trap_score": 0.13439148803890574,
+    "map_sha256": "1fb1c306e26bd714559df027008dbb220b7baa18d842daa1946b0d7b20f23b17",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.004424401679341873,
+    "normalized_gradient_residual": 1.7497470636337216e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200919.0365536199,
+      200969.51304536432,
+      2220614.849960171
+    ],
+    "trap_score": 0.1344007691460698,
+    "map_sha256": "aefb00ac653b1d0ed3726589f2a13a6db7e3e12591998025b2fdfe8c2cc44de8",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.006131981991123966,
+    "normalized_gradient_residual": 7.448327328037145e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200901.10620906687,
+      200977.59223170506,
+      2220652.475435061
+    ],
+    "trap_score": 0.1343873546712869,
+    "map_sha256": "9b704e70904115e8fb996baf7f6988d6b71b4ed8dcb7828f618623f2012038c1",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.00463944645527328,
+    "normalized_gradient_residual": 1.961242380633518e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200893.3625894455,
+      200983.24876683642,
+      2220648.5587844774
+    ],
+    "trap_score": 0.13438248382046644,
+    "map_sha256": "a2d12fab6473561bbf1135b1cc3381cbc645f572a8a66f1a385fce6cf0f00cf1",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.004843794052050409,
+    "normalized_gradient_residual": 9.960627349793952e-07,
+    "hessian_eigenvalues_au_per_mm2": [
+      200893.36276112823,
+      200983.2488784018,
+      2220648.558705655
+    ],
+    "trap_score": 0.13438248393515287,
+    "map_sha256": "a2d12fab6473561bbf1135b1cc3381cbc645f572a8a66f1a385fce6cf0f00cf1",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.005204917192526413,
+    "normalized_gradient_residual": 1.92966265217357e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200896.02910499307,
+      200970.3629883763,
+      2220679.904188928
+    ],
+    "trap_score": 0.1343831872155477,
+    "map_sha256": "18ffa3be786f6438f093f98d1050f5a5b7b6945f0ec7651cd8f0d0b2cb2c901d",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.0050009361561505405,
+    "normalized_gradient_residual": 1.5891641781027149e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200896.02914041484,
+      200970.36302545454,
+      2220679.9040260445
+    ],
+    "trap_score": 0.13438318723921758,
+    "map_sha256": "18ffa3be786f6438f093f98d1050f5a5b7b6945f0ec7651cd8f0d0b2cb2c901d",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.00493959060050544,
+    "normalized_gradient_residual": 1.4565532835637294e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200896.02917768058,
+      200970.36306981795,
+      2220679.9041997376
+    ],
+    "trap_score": 0.13438318726407728,
+    "map_sha256": "18ffa3be786f6438f093f98d1050f5a5b7b6945f0ec7651cd8f0d0b2cb2c901d",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  },
+  {
+    "classification": "SIMULATION_ESTIMATE",
+    "validity": "TRAP_VALID",
+    "target_error_mm": 0.004931309597411882,
+    "normalized_gradient_residual": 1.4366709899667592e-06,
+    "hessian_eigenvalues_au_per_mm2": [
+      200896.02919301196,
+      200970.36308400973,
+      2220679.903952098
+    ],
+    "trap_score": 0.13438318727439644,
+    "map_sha256": "18ffa3be786f6438f093f98d1050f5a5b7b6945f0ec7651cd8f0d0b2cb2c901d",
+    "temperature": {
+      "model": "dry_linear_Tz_v1",
+      "pressure_assumed": true,
+      "humidity_percent": null,
+      "humidity_applied": false,
+      "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+      "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+      "readings": [
+        {
+          "sensor_id": "TMP117_CENTER",
+          "location": "center",
+          "timestamp": 0,
+          "reading_C": 25.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_UPPER",
+          "location": "upper",
+          "timestamp": 0,
+          "reading_C": 26.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        },
+        {
+          "sensor_id": "TMP117_LOWER",
+          "location": "lower",
+          "timestamp": 0,
+          "reading_C": 24.0,
+          "uncertainty": 0.15,
+          "status": "OK",
+          "staleness_ms": 0,
+          "calibration_offset": 0,
+          "provenance": "SYNTHETIC_REFERENCE"
+        }
+      ]
+    },
+    "max_supported_mass_mg": null,
+    "global_sidelobes": "NOT_EXHAUSTIVELY_SEARCHED_WORKSPACE_RESTRICTED"
+  }
+]

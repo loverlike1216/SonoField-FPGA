@@ -1,0 +1,102 @@
+test_actual_temp_bytes (tests.test_prepcb.CExtensionTests) ... ok
+test_crc_fail_safe (tests.test_prepcb.CExtensionTests) ... ok
+test_fault_both_off (tests.test_prepcb.CExtensionTests) ... ok
+test_jump_denied (tests.test_prepcb.CExtensionTests) ... ok
+test_missing_temp_denied (tests.test_prepcb.CExtensionTests) ... ok
+test_no_fabricated_cal_result (tests.test_prepcb.CExtensionTests) ... ok
+test_real_negotiation (tests.test_prepcb.CExtensionTests) ... ok
+test_sequence_fail_safe (tests.test_prepcb.CExtensionTests) ... ok
+test_unknown_command (tests.test_prepcb.CExtensionTests) ... ok
+test_unqualified_cal_denied (tests.test_prepcb.CExtensionTests) ... ok
+test_upload_pause_resume (tests.test_prepcb.CExtensionTests) ... ok
+test_watchdog_no_auto_resume (tests.test_prepcb.CExtensionTests) ... ok
+test_accel_jerk (tests.test_prepcb.PathTests) ... ok
+test_bezier (tests.test_prepcb.PathTests) ... ok
+test_bounds (tests.test_prepcb.PathTests) ... ok
+test_closed (tests.test_prepcb.PathTests) ... ok
+test_integrity (tests.test_prepcb.PathTests) ... ok
+test_nan (tests.test_prepcb.PathTests) ... ok
+test_negotiate_required (tests.test_prepcb.PathTests) ... ok
+test_order_delete_insert (tests.test_prepcb.PathTests) ... ok
+test_runtime_input (tests.test_prepcb.PathTests) ... ok
+test_save_reload (tests.test_prepcb.PathTests) ... ok
+test_undo_redo (tests.test_prepcb.PathTests) ... ok
+test_estop_clear_rearm (tests.test_prepcb.SafetyTests) ... ok
+test_fault_latches (tests.test_prepcb.SafetyTests) ... ok
+test_held_at_start (tests.test_prepcb.SafetyTests) ... ok
+test_no_automatic_enable (tests.test_prepcb.SafetyTests) ... ok
+test_qualified_cal (tests.test_prepcb.SafetyTests) ... ok
+test_quality_failure (tests.test_prepcb.SafetyTests) ... ok
+test_timeout (tests.test_prepcb.SafetyTests) ... ok
+test_ambiguity (tests.test_prepcb.SparseTests) ... ok
+test_bad_quality (tests.test_prepcb.SparseTests) ... ok
+test_missing (tests.test_prepcb.SparseTests) ... ok
+test_points (tests.test_prepcb.SparseTests) ... ok
+test_supplements (tests.test_prepcb.SparseTests) ... ok
+test_unique_measurements (tests.test_prepcb.SparseTests) ... ok
+test_atomic_calibration (tests.test_prepcb.TemperatureTests) ... ok
+test_center_participates (tests.test_prepcb.TemperatureTests) ... ok
+test_extreme (tests.test_prepcb.TemperatureTests) ... ok
+test_future (tests.test_prepcb.TemperatureTests) ... ok
+test_humidity_assumed (tests.test_prepcb.TemperatureTests) ... ok
+test_integral_reference (tests.test_prepcb.TemperatureTests) ... ok
+test_missing (tests.test_prepcb.TemperatureTests) ... ok
+test_offline (tests.test_prepcb.TemperatureTests) ... ok
+test_short_read (tests.test_prepcb.TemperatureTests) ... ok
+test_sht_crc (tests.test_prepcb.TemperatureTests) ... ok
+test_signed_register (tests.test_prepcb.TemperatureTests) ... ok
+test_stale (tests.test_prepcb.TemperatureTests) ... ok
+test_transition_hold (tests.test_prepcb.TemperatureTests) ... ok
+test_transition_slew (tests.test_prepcb.TemperatureTests) ... ok
+test_uniform (tests.test_prepcb.TemperatureTests) ... ok
+test_acquisition_requires_physical_references (tests.test_prepcb_transfer.TransferTests) ... ok
+test_actual_c_raw_framing (tests.test_prepcb_transfer.TransferTests) ... ok
+test_no_implicit_raw_capability (tests.test_prepcb_transfer.TransferTests) ... ok
+test_raw_offset_corruption_rejected (tests.test_prepcb_transfer.TransferTests) ... ok
+test_raw_timeout_bounded_retry (tests.test_prepcb_transfer.TransferTests) ... ok
+ERROR
+
+======================================================================
+ERROR: tearDownClass (tests.test_prepcb_transfer.TransferTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 618, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\LOVERL~1\\AppData\\Local\\Temp\\tmpv_wt54s0\\prepcb_service.dll'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\tempfile.py", line 843, in onerror
+    _os.unlink(path)
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\LOVERL~1\\AppData\\Local\\Temp\\tmpv_wt54s0\\prepcb_service.dll'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\tests\test_prepcb_transfer.py", line 12, in tearDownClass
+    def tearDownClass(cls):cls.folder.cleanup()
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\tempfile.py", line 873, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\tempfile.py", line 855, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 750, in rmtree
+    return _rmtree_unsafe(path, onerror)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 620, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\tempfile.py", line 846, in onerror
+    cls._rmtree(path, ignore_errors=ignore_errors)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\tempfile.py", line 855, in _rmtree
+    _shutil.rmtree(name, onerror=onerror)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 750, in rmtree
+    return _rmtree_unsafe(path, onerror)
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 601, in _rmtree_unsafe
+    onerror(os.scandir, path, sys.exc_info())
+  File "C:\Users\loverlike\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 598, in _rmtree_unsafe
+    with os.scandir(path) as scandir_it:
+NotADirectoryError: [WinError 267] 目录名称无效。: 'C:\\Users\\LOVERL~1\\AppData\\Local\\Temp\\tmpv_wt54s0\\prepcb_service.dll'
+
+----------------------------------------------------------------------
+Ran 56 tests in 1.265s
+
+FAILED (errors=1)

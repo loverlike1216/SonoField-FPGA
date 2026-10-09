@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "CURRENT_WORKSPACE_INTEGRITY_NOT_BOARD_VERIFICATION",
+  "errors": [],
+  "checks": {
+    "archive": {
+      "original_files": 3907,
+      "metadata_files": 2,
+      "relocated_files": 3911,
+      "new_index_files": 7,
+      "actual_files": 3918,
+      "raw_blob_bytes": 99317849,
+      "content_read": true,
+      "mismatches": 0,
+      "path_mapping": "shared/repository_cleanup/ARCHIVE_PATH_MAP.json"
+    },
+    "freeze_base": {
+      "commit": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+      "existing_target_compared": false,
+      "previous_archive_files_compared": 3909
+    },
+    "identity": {
+      "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+      "active_version": "v5",
+      "highest_version": "v5",
+      "root_extras": []
+    },
+    "source_isolation": {
+      "root": "v5",
+      "scanned_executables": 162,
+      "ooc_explicit_sources": 18,
+      "historical_sources_loaded": false,
+      "evidence_requirement": "Native source lists and history-absent clone execution are additionally required; static scan alone is not proof",
+      "source_list": [
+        "rtl/sono_core.sv",
+        "rtl/sono_top.sv",
+        "rtl/timing/board_clock_candidate.sv",
+        "rtl/timing/ultrasonic_timebase.sv",
+        "rtl/output/sono_array_interface.sv",
+        "rtl/control/safety_controller.sv",
+        "rtl/acquisition/ad7606b_if.sv",
+        "rtl/acquisition/adc_serial.sv",
+        "rtl/control/axi_native_bridge.sv",
+        "rtl/calibration/burst_generator.sv",
+        "rtl/calibration/calibration_scheduler.sv",
+        "rtl/output/channel_waveform.sv",
+        "rtl/motion/motion_queue.sv",
+        "rtl/phase/phase_bank.sv",
+        "rtl/output/serializer.sv",
+        "rtl/sono_digital_system.sv",
+        "rtl/sono_motion_system.sv",
+        "rtl/sono_axi_system.sv"
+      ]
+    },
+    "problems": "CURRENT_ID_HASH_VERSION_VERIFIED",
+    "documentation": {
+      "files": 73,
+      "broken_links": []
+    }
+  }
+}
