@@ -6,8 +6,8 @@ session_id: S-20261009-1253-codex-migration
 active_version: v5
 current_stage: AX7020_V5_WORKSPACE_MIGRATION_CANDIDATE
 sync_status: PARTIAL
-message_count: 27
-content_hash: a6796fddd302e71c3e183e350d091a88600dab21ce243951b7f6200f027ad397
+message_count: 29
+content_hash: b1b9ff8b32a2ad317a02356125c2ec1e9efcbfcf72a5a21f40db5ad51dfb456e
 ---
 
 # Actual visible Codex conversation
@@ -4427,3 +4427,19 @@ Time: 2026-10-09T05:49:23.868Z
 Message ID: msg_0e0ddf454b5d790a016ac880633f28819ab53bc926b279d100
 
 迁移前 BASE、迁移后修正重跑、第二份独立干净克隆的完整门禁现已全部通过。每份均完成 115 项 Python 测试、3696 帧×四路仿真，以及 C/AXI、安全、校准和黄金模型等价回归；规范化功能 Hash 完全一致。现在进行最终隐私和差异审查、证据归档与检查点更新，随后只推送候选分支并建立 Draft PR。
+
+
+## Message 0028
+Role: assistant
+Time: 2026-10-09T05:51:11.082Z
+Message ID: msg_0e0ddf454b5d790a016ac880cde5c0819a9a0812851dd1b825
+
+候选分支已推送，Draft PR 已建立：[SonoField-FPGA PR #1](https://github.com/loverlike1216/SonoField-FPGA/pull/1)。远端 `main` 仍是原基线 `ecd32e7…`，没有合并。最终提交审查未发现受保护源码变化、私有原始路径或已识别的凭据签名；GitHub 的独立 Linux 结构与冻结保护检查已进入队列，我正在核对发布后的实际远端树。
+
+
+## Message 0029
+Role: assistant
+Time: 2026-10-09T05:52:37.987Z
+Message ID: msg_0e0ddf454b5d790a016ac881248d74819aa118bc4bc8aff8b4
+
+GitHub 上的两次独立 Linux 检查（分支 push 和 Draft PR）均已通过，检查范围包括结构、继承文件、当前路径和冻结归档保护。远端候选的全部 5,642 个文件路径、Blob 和模式与本地提交一致，`main` 仍未改变。接下来会补齐发布回执和最终恢复检查点；只剩人工合并审核，以及批准合并后才能执行的远端 `main` 冷启动验证。

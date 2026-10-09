@@ -7,3 +7,5 @@
 结论ACCEPT WITH LIMITATIONS — CANDIDATE ONLY。发布Draft PR及实际CI/远端回执后等待用户main合并和永久路径批准；批准后再对账、合并、独立clone远端main验证。原生v5原理图NOT_CREATED/ERC_NOT_RUN/制造HOLD，整机REVISE；两个ADC/Rev3问题仍OPEN。ChatGPT历史BLOCKED，当前Codex记录PARTIAL，无虚构独立Review。
 
 保护原沙盒、冻结历史、核心实现和验收。首次候选路径门禁失败及冻结前Windows文件恢复错误保留，修复和完整重跑有独立证据。未来默认不读取封存历史；继续当前v5，不升级、不操作板卡。
+
+发布核对：Draft PR #1 `https://github.com/loverlike1216/SonoField-FPGA/pull/1` 已建立；远端证据提交 `f014214fb8db554fb3df9ac971ac759d683447a5`，main仍为BASE；独立Linux push/PR结构门禁均已实际通过。当前恢复检查点CP-20261009-004，回执PUBLICATION_RECEIPT.json。下一动作仅为用户审核，获批准后才合并和远端main冷启动。

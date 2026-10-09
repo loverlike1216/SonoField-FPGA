@@ -5,3 +5,5 @@ Phase0只读对账/私有完整清单、Phase1独立新clone迁移前BASE、Phas
 下一最小动作：人工审阅具体候选、全部证据、Rollback和永久工作区路径。用户明确批准后，重新检查远端main，普通非强制合并，独立clone远端main完成冷启动及冻结清单核验，再提升批准的工作区。旧沙盒不pull、不清理、不改动；后续默认不读取旧沙盒或history_old。继续意味着继续v5，不开v6，不修改核心/黄金/阈值，不操作设备。
 
 后续硬件工作需单独闭环Rev3等级/VCCO/PS DDR/IO/时钟/运行镜像所有权/UART/BSP、正式ADC带宽、电气评审、TX/RX资质、上下独立供电/杀停/AFE，随后原生原理图/ERC和另行授权的无负载及声学测量。迁移候选达到交付点后停止低收益优化，整机仍REVISE。
+
+发布核对：Draft PR #1 `https://github.com/loverlike1216/SonoField-FPGA/pull/1` 已建立；远端证据提交 `f014214fb8db554fb3df9ac971ac759d683447a5`，main仍为BASE；独立Linux push/PR结构门禁均已实际通过。当前恢复检查点CP-20261009-004，回执PUBLICATION_RECEIPT.json。下一动作仅为用户审核，获批准后才合并和远端main冷启动。

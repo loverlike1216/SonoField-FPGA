@@ -18,3 +18,5 @@ Conclusion: **ACCEPT WITH LIMITATIONS — CANDIDATE ONLY**. The whole physical p
 |MIG-12|PASS|Zero device operations;no board/hardware proof invented|
 
 See [full regression](PORTABILITY_AND_REGRESSION.md) and [machine gate](QUALITY_GATE.json) for actual tools, canonical hashes, failures, evidence and limits. Online CI and candidate remote receipts are recorded separately only after observed completion. Model self-review does not constitute independent final acceptance.
+
+Actual publication: [Draft PR#1](https://github.com/loverlike1216/SonoField-FPGA/pull/1), exact remote tree verified at `f014214fb8db554fb3df9ac971ac759d683447a5`, push and PR Ubuntu structural/frozen-metadata checks both success. See [publication receipt](PUBLICATION_RECEIPT.md). Main merge and post-merge fresh remote-main clone remain pending user approval.

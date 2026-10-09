@@ -1,7 +1,7 @@
 {
   "status": "RECORDED",
   "policy": "Raw host evidence hashes and canonical UTF8/LF text hashes both retained. Git normalizes text line endings; deterministic behavior uses separately verified canonical functional traces. This manifest excludes itself and later audit receipts to avoid self-reference. Simulator binaries/cache/raw GUI vectors excluded from delivery.",
-  "created_at": "2026-10-09T05:49:29.737185+00:00",
+  "created_at": "2026-10-09T05:53:22.530917+00:00",
   "files": [
     {
       "path": "v5/evidence/migration/20261009/active_reuse_hashes.json",
@@ -1238,6 +1238,12 @@
       "bytes": 18,
       "raw_workspace_sha256": "3f993848eb06f235b530c83b1e0797fcfa1cdd187253ff05331a8b9aed2343d4",
       "canonical_lf_utf8_sha256": "f1703bb3c5930735f95d0fe8d765d2f6d9e0c4e842c16087fc4fb26944fff7b2"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/ci_observed.json",
+      "bytes": 911,
+      "raw_workspace_sha256": "6913fe7c6bc9efaa7c30f089b5f2082d0761ef875a4683c29a251dc5808ccfcb",
+      "canonical_lf_utf8_sha256": "6913fe7c6bc9efaa7c30f089b5f2082d0761ef875a4683c29a251dc5808ccfcb"
     },
     {
       "path": "v5/evidence/migration/20261009/clean_clone/archive_structure.json",
@@ -3916,6 +3922,12 @@
       "canonical_lf_utf8_sha256": "4c19e7fff6df63d508a767efdbbf5e0431597d5c97d0f989c1f2966d678ae37c"
     },
     {
+      "path": "v5/evidence/migration/20261009/remote_tree_verification.json",
+      "bytes": 848,
+      "raw_workspace_sha256": "88c4aa024695fa74a2e00ed1f8af7cf4514cbfe1936147e46f6b0fe6e849f2c2",
+      "canonical_lf_utf8_sha256": "88c4aa024695fa74a2e00ed1f8af7cf4514cbfe1936147e46f6b0fe6e849f2c2"
+    },
+    {
       "path": "v5/evidence/migration/20261009/search_isolation.json",
       "bytes": 6118,
       "raw_workspace_sha256": "4da80294b5425b819575e47541c54b6f6f25b7aa7e1cd5f48cca20b666192f9e",
@@ -3928,5 +3940,5 @@
       "canonical_lf_utf8_sha256": "adbdfbd210048758246ccdd0562e87c356f1c73b3abf4b314da868aaebeb4e7f"
     }
   ],
-  "file_count": 654
+  "file_count": 656
 }

@@ -1,5 +1,5 @@
 {
-  "checkpoint_id": "CP-20261009-003",
+  "checkpoint_id": "CP-20261009-004",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
@@ -7,17 +7,17 @@
   "candidate_workspace_path": "E:\\Codex_project\\AMD_Sonofield",
   "branch": "chore/v5-ax7020-workspace-isolation",
   "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
-  "head_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
-  "commit_scope": "Actual committed source validated in primary and independent clone; this evidence/checkpoint is committed subsequently, resolve its commit through Git file history and publication receipt",
+  "head_commit": "f014214fb8db554fb3df9ac971ac759d683447a5",
+  "commit_scope": "Observed published evidence HEAD and verified remote tree before this publication checkpoint/receipt commit; containing commit is resolved via Git file history",
   "active_version": "v5",
   "version_status": "ACTIVE",
   "current_stage": "AX7020_V5_MIGRATION_CANDIDATE_USER_REVIEW",
-  "created_at": "2026-10-09T13:49:28.901812+08:00",
+  "created_at": "2026-10-09T13:53:22.176049+08:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Completed candidate full regression and second-clone reproducibility; preserve state for user main-merge review",
+  "checkpoint_reason": "Actual Draft PR publication, exact remote tree verification and independent push/PR Linux CI success",
   "source_of_truth": "Current repository, real migration tool outputs and fixed Git-tree manifests",
   "status": "VALID",
-  "validation_stage": "BASE_MIGRATED_CLEAN_CLONE_ALL_PASS_CANDIDATE_ONLY",
+  "validation_stage": "ALL_CANDIDATE_GATES_AND_ONLINE_STRUCTURAL_CI_PASS_USER_MERGE_REVIEW_PENDING",
   "architecture_ref": "v5/docs/architecture/SELF_CALIBRATION.md",
   "completed": [
     {
@@ -47,7 +47,10 @@
     }
   ],
   "next_actions": [
-    "Push reviewed candidate commits, open Draft PR, then wait for explicit user approval before main merge and workspace promotion"
+    "User reviews Draft PR#1, full evidence, rollback and permanent workspace path",
+    "After explicit main approval reconcile current remote and rerun affected gates if main changed",
+    "Ordinary non-forced merge, independent fresh remote-main clone/full cold start/freeze verification",
+    "Promote only the user-approved workspace after remote-main verification; never pull/alter original sandbox"
   ],
   "active_decisions": [
     "ADR-035 original v5 authorization",
@@ -83,6 +86,18 @@
       "evidence": "v5/evidence/migration/20261009/clean_clone/summary.json",
       "source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
       "date": "2026-10-09"
+    },
+    {
+      "status": "PASS",
+      "scope": "REMOTE_COMMITTED_TREE_BLOB_MODE_PATHS",
+      "evidence": "v5/evidence/migration/20261009/remote_tree_verification.json",
+      "commit": "f014214fb8db554fb3df9ac971ac759d683447a5"
+    },
+    {
+      "status": "PASS",
+      "scope": "INDEPENDENT_UBUNTU_STRUCTURAL_CHECKS_ONLY",
+      "evidence": "v5/evidence/migration/20261009/ci_observed.json",
+      "commit": "f014214fb8db554fb3df9ac971ac759d683447a5"
     }
   ],
   "known_limitations": [
@@ -112,10 +127,9 @@
     "P-20261009-001"
   ],
   "repository_delta": [
-    "Fixed old root Git tree frozen under history_old;soleactivev5 extracted;no102protectedfilechanges",
-    "Output/Tclpath adaptation initiallyfailed9assertions;fixedsameclonescratch andfullretryPASS",
-    "Currentsharedonlyv5;realAX7020historicalphysicalfacts/candidateADC/BOMboundariesretained",
-    "IndependentGit+freshlockedvenv/fulloffline/OOCchecksPASS;rawoldpreservationPASS"
+    "Draft PR#1 published, main remains original BASE",
+    "Exact remote blob/mode/path verification PASS; push and PR Ubuntu integrity runs both success",
+    "Functional v5 inputs still exactly match tested source0ab574f; original/archived/protected source untouched"
   ],
   "evidence_refs": [
     "shared/migration/OLD_TRACKED_MANIFEST.json",
@@ -125,8 +139,13 @@
     "v5/evidence/migration/20261009/digital_behavior_comparison.json",
     "v5/evidence/migration/20261009/ooc_comparison.json",
     "v5/evidence/migration/20261009/old_sandbox_preservation.json",
-    "v5/evidence/migration/20261009/active_reuse_hashes.json"
+    "v5/evidence/migration/20261009/active_reuse_hashes.json",
+    "shared/migration/PUBLICATION_RECEIPT.json",
+    "v5/evidence/migration/20261009/remote_tree_verification.json",
+    "v5/evidence/migration/20261009/ci_observed.json"
   ],
-  "resume_from": "Review concrete DraftPR and current publication receipt. Wait for explicit user main merge/workspace promotion approval; then reconcile remote and merge ordinarily, fresh remote-main clone verification. Continue only currentv5; do not read frozenhistory/oldphysicalsandbox unless expressly authorized.",
-  "validated_source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4"
+  "resume_from": "User reviews concrete Draft PR, evidence, rollback and permanent path; after explicit approval reconcile remote, ordinary merge and independently verify remote main before promotion",
+  "validated_source_commit": "0ab574f9e2ad422106655f3c827e89d262d93bb4",
+  "publication_receipt": "shared/migration/PUBLICATION_RECEIPT.json",
+  "pr_url": "https://github.com/loverlike1216/SonoField-FPGA/pull/1"
 }
