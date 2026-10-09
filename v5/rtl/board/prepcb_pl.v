@@ -7,12 +7,16 @@ module prepcb_pl(input wire clk,rst_n,
  input wire [31:0] S_AXI_araddr,input wire S_AXI_arvalid,output wire S_AXI_arready,
  output wire [31:0] S_AXI_rdata,output wire [1:0] S_AXI_rresp,output wire S_AXI_rvalid,input wire S_AXI_rready,
  input wire [15:0] control,input wire [7:0] health,output wire [31:0] status,
- output wire bram_clk,bram_rst,output wire [3:0] bram_we,output wire bram_en,
+ (* X_INTERFACE_PARAMETER = "FREQ_HZ 132000000" *) output wire bram_clk,
+ output wire bram_rst,output wire [3:0] bram_we,output wire bram_en,
  output wire [31:0] bram_addr,bram_wrdata,input wire [31:0] bram_rddata,
  input wire adc_busy,input wire [3:0] adc_dout,
  output wire adc_reset,adc_convst,adc_cs_n,adc_sclk,adc_sdi,
  output wire [1:0] rx_blank,output wire [31:0] serial_data,
- output wire shift_clock,latch_clock,output_disable,heartbeat,efuse_up,efuse_dn,irq);
+ // Serializer strobes are logical data ports; their off-chip timing is held.
+ (* X_INTERFACE_IGNORE = "true" *) output wire shift_clock,
+ (* X_INTERFACE_IGNORE = "true" *) output wire latch_clock,
+ output wire output_disable,heartbeat,efuse_up,efuse_dn,irq);
  wire emit_permit,supervisor_disable,core_disable;
  wire [3:0] state;
  wire [31:0] buffered_count,acknowledged_sequence;
