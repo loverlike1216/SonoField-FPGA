@@ -6,3 +6,6 @@ Failures: FAILURE_REGISTER preserves model/bench/BD/reportflag/cwdTMP/EOL/DRC/Vi
 
 
 Current JTAG update after actual user reseat: After the actual user reseated JTAG, dedicated localhost3122 XSDB/Vivado2025.2 read-only identification PASS: xc7z020 ID0x23727093; both Cortex-A9 Running before/after; BOOT_MODE0x05, DDRC0x81/0x3e; PL DONE/EOS1, existing image identity UNKNOWN. Sysmon zero/-273.1 values INVALID, no voltage/temperature claim. Original Vivado GUI retained; owned server disconnected/stopped. CP2102N remains Code28/0COM. No halt/reset/init/download/memory/DDR-RAM/GPIO/driver/serial write. Real UART->PS->AXI->PL and A2 write gate remain STOP. Evidence: v5/evidence/next_stage/20261010/jtag_reseated/summary.json.
+
+
+Publication milestone: DraftPR4 https://github.com/loverlike1216/SonoField-FPGA/pull/4 is OPEN/Draft onPR3. Evidencecommit24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c remote verified; push+pull_request Ubuntu structural CI PASS. PR1/2/3 and main unchanged/unmerged. Actual containingreceiptcommit resolves through Git; latest CI remains observable in GitHub. Review candidate/BRAMreset/physical gates; no additional runtime optimization or main/board/manufacturing operation. See next_stage/PUBLICATION_RECEIPT.json (under shared).

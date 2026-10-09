@@ -1,14 +1,93 @@
 {
-  "status": "PENDING_AT_EVIDENCE_SEAL",
+  "status": "PUBLISHED_DRAFT_REMOTE_VERIFIED_CI_PASS_AT_EVIDENCE_COMMIT",
   "project_id": "SONOFIELD_FPGA",
   "active_version": "v5",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace": "E:\\Codex_project\\AMD_Sonofield",
   "branch": "codex/v5-ad7606c16-nextstage-20261010",
+  "pr_number": 4,
+  "pr_url": "https://github.com/loverlike1216/SonoField-FPGA/pull/4",
+  "draft": true,
   "base_pr": 3,
   "base_branch": "codex/v5-historical-project-isolation-20261009",
+  "base_commit": "b08ccf58c984ca7e6250d9e8489a24bc0789c4b0",
+  "evidence_commit": "24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c",
+  "verified_remote_commit": "24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c",
+  "publication_receipt_commit": null,
+  "publication_receipt_commit_resolution": "git log -1 --format=%H -- shared/next_stage/PUBLICATION_RECEIPT.json",
+  "last_verified_main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
   "main_merge": false,
+  "prior_prs_unchanged": [
+    {
+      "baseRefName": "codex/v5-historical-project-isolation-20261009",
+      "headRefName": "codex/v5-ad7606c16-nextstage-20261010",
+      "headRefOid": "24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 4,
+      "state": "OPEN",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/4"
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "codex/v5-historical-project-isolation-20261009",
+      "headRefOid": "b08ccf58c984ca7e6250d9e8489a24bc0789c4b0",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 3,
+      "state": "OPEN",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/3"
+    },
+    {
+      "baseRefName": "chore/v5-ax7020-workspace-isolation",
+      "headRefName": "feat/v5-prepcb-full-system",
+      "headRefOid": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 2,
+      "state": "OPEN",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/2"
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "chore/v5-ax7020-workspace-isolation",
+      "headRefOid": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 1,
+      "state": "OPEN",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/1"
+    }
+  ],
+  "ci": [
+    {
+      "conclusion": "success",
+      "databaseId": 38005637845,
+      "event": "pull_request",
+      "headSha": "24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38005637845"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38005595418,
+      "event": "push",
+      "headSha": "24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38005595418"
+    }
+  ],
+  "ci_scope": "Ubuntu current structure/inheritance/preservation/frozenmetadata only; EDA/fullunit/capture evidence local+independentclone",
   "hardware_written": false,
-  "created_at": "2026-10-09T23:26:56.317794+00:00",
-  "pr_url": null,
-  "remote_commit": null,
-  "ci": "NOT_YET_RUN"
+  "hardware_classification": "HARDWARE_READONLY_ID_PS_STATUS_PL_DONE_EOS_ONLY",
+  "board_transport": "NOT_RUN_A2_STOP_UARTCode28_0COM",
+  "quality_gate": {
+    "offline": "ACCEPT WITH LIMITATIONS",
+    "real_board": "REVISE",
+    "whole_platform": "REVISE"
+  },
+  "created_at": "2026-10-09T23:42:39.743536+00:00",
+  "seal_supplement": "v5/evidence/next_stage/20261010/PUBLICATION_EVIDENCE.json",
+  "next_action": "User/independent review Draft4 and existingPR1/2/3 dependencies; review BRAMresetProblem and13physical gates. No mainmerge/boardwrite/manufacturing without concrete explicit gates.",
+  "latest_receipt_commit_ci": "Query GitHub after this normal follow-up push; evidencecommit CI recorded here, no recursive future-CI claim"
 }

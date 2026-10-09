@@ -8,11 +8,11 @@
     "sync_status": "PARTIAL",
     "scope": "Actual new request and subsequent visible messages up to source snapshot; no hidden reasoning; no inaccessible history",
     "source_basename": "rollout-2026-10-09T12-53-02-01a11f01-ebbe-76f3-ac92-b3e04e67b27a.jsonl",
-    "source_snapshot_sha256": "2ab781459acf59ba2fa72886440661cbaef4b346e744d43ff6bef4955dad23e4",
-    "source_line_cutoff": 4791,
-    "timestamp_cutoff": "2026-10-09T23:37:21.827533+00:00",
-    "message_count": 28,
-    "tool_event_count": 353,
+    "source_snapshot_sha256": "ba796f80f51113a4305773443d449babfa6ff41703f15297f83f8017d45792fb",
+    "source_line_cutoff": 4883,
+    "timestamp_cutoff": "2026-10-09T23:42:44.056391+00:00",
+    "message_count": 30,
+    "tool_event_count": 377,
     "start": "2026-10-09T17:20:16.025Z",
     "privacy": "Private user paths and credential patterns redacted; tool payloads stored as hashes only"
   },
@@ -2840,6 +2840,198 @@
       "timestamp": "2026-10-09T23:37:21.328Z",
       "source_line": 4790,
       "observable_payload_sha256": "8f2f0a49eaa06d2acc201545f0177bc5512e40a77538e6ae6a994ae1db563b65"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_51af203147544b50a9d8a405b15d0940",
+      "timestamp": "2026-10-09T23:37:21.937Z",
+      "source_line": 4793,
+      "observable_payload_sha256": "e56ea36942bd25e00e3d2531020b5a34989d37662de95eaf20c3380571441c95"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_725ae6d7bd974d5d8e8ef22292a16d5c",
+      "timestamp": "2026-10-09T23:38:04.361Z",
+      "source_line": 4797,
+      "observable_payload_sha256": "7667a065fd12552ca7989f96d27e3085b79d19f4cf0203bd454f766b89570ba3"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_725ae6d7bd974d5d8e8ef22292a16d5c",
+      "timestamp": "2026-10-09T23:38:07.152Z",
+      "source_line": 4801,
+      "observable_payload_sha256": "cac64ed257aaaaabb46af14495a892a5f44512eddc4d10010bbabe5d6a39364f"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_d9de9bbed2e6410bb08107347e1b3d5f",
+      "timestamp": "2026-10-09T23:38:21.725Z",
+      "source_line": 4805,
+      "observable_payload_sha256": "2f552ff9c2ef8ede5879858f3e0a596e87865bac0105c90b7c103c6548205425"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_d9de9bbed2e6410bb08107347e1b3d5f",
+      "timestamp": "2026-10-09T23:38:23.681Z",
+      "source_line": 4808,
+      "observable_payload_sha256": "f074bb85b7bb966f7fc4d3a3e30b40396aebf15c74b6fc928274a5111515e99a"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_cf96c004aba245ff92dd805783618218",
+      "timestamp": "2026-10-09T23:38:33.224Z",
+      "source_line": 4812,
+      "observable_payload_sha256": "d45c49e59b5c584bb7e099ebb4aa5b7d3dea5f6adf997999e59cb400a00801c2"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_cf96c004aba245ff92dd805783618218",
+      "timestamp": "2026-10-09T23:38:33.775Z",
+      "source_line": 4815,
+      "observable_payload_sha256": "5a7a5e7a93cbef453dca41299fcab1a9eb72359b4fba4dbe8e49a0795e1be29c"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_b942034846024361888d2dec46d115e2",
+      "timestamp": "2026-10-09T23:38:44.643Z",
+      "source_line": 4819,
+      "observable_payload_sha256": "39451bc20ca65f9d107a0006448daee77b8b3ca721c98c13e46525d22a4e45f0"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_b942034846024361888d2dec46d115e2",
+      "timestamp": "2026-10-09T23:38:45.038Z",
+      "source_line": 4822,
+      "observable_payload_sha256": "604dd0629726e4b804d07067ede57cba5c4549e630e538997a7dd6ab58ed28fa"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_75b487f70fdf4475976a2aebaf0aee00",
+      "timestamp": "2026-10-09T23:39:15.508Z",
+      "source_line": 4826,
+      "observable_payload_sha256": "69423a1a568d0fb00dab9b56ac34de9dc550fb5955249523e10f2080037b88b8"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_75b487f70fdf4475976a2aebaf0aee00",
+      "timestamp": "2026-10-09T23:39:20.116Z",
+      "source_line": 4830,
+      "observable_payload_sha256": "6697d81187933edbd80fde040c28c3d1f10f22f943e4622b297673b339dc52c8"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_fc46a8e26d6a415d92f2cc645ba8f0e3",
+      "timestamp": "2026-10-09T23:39:36.293Z",
+      "source_line": 4836,
+      "observable_payload_sha256": "9a34b6976c78f0715a5d2291f91f03f490e63d9f7c010dc0e14ea170bc327213"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_fc46a8e26d6a415d92f2cc645ba8f0e3",
+      "timestamp": "2026-10-09T23:39:37.526Z",
+      "source_line": 4840,
+      "observable_payload_sha256": "18c8302baf98ec87c1d8c9d99896157d5327509551a80de58254e7051756207d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_094b9df140b649ad8eeaeb2660a8e3b8",
+      "timestamp": "2026-10-09T23:39:53.956Z",
+      "source_line": 4844,
+      "observable_payload_sha256": "60da1d4d7197c887fa2334b1de74eeedce09774dce4d1a744022dcc68f7e4667"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_094b9df140b649ad8eeaeb2660a8e3b8",
+      "timestamp": "2026-10-09T23:39:59.623Z",
+      "source_line": 4847,
+      "observable_payload_sha256": "cc20eb9697868a8fe4017495804f08bc2faf9b6607399a69a1e7ab6b0c102edd"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_88715e0eac3c4f1880c8ae0cb91d21bf",
+      "timestamp": "2026-10-09T23:40:19.456Z",
+      "source_line": 4851,
+      "observable_payload_sha256": "26f54d1c2856b7c0240650c4bf400cec91b36a97b14fab6ad6ab4382ab2a6476"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_88715e0eac3c4f1880c8ae0cb91d21bf",
+      "timestamp": "2026-10-09T23:40:29.637Z",
+      "source_line": 4853,
+      "observable_payload_sha256": "b4a97a1b0e9f5e03b8322ed5e88f004f0d4bf8a5204e2038396f31cee79b0d82"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_8b791134ef6f45a880a134af44469ab2",
+      "timestamp": "2026-10-09T23:41:05.598Z",
+      "source_line": 4858,
+      "observable_payload_sha256": "6caae50af0a999e13c2251870ea9110dcb3115a80787a04db108ee9c1739f481"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_8b791134ef6f45a880a134af44469ab2",
+      "timestamp": "2026-10-09T23:41:05.721Z",
+      "source_line": 4861,
+      "observable_payload_sha256": "216dd2ebabb2c06606c83165046aec5aa30ca399c135b104a8bb670c8ccdcc7c"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_fed8399cf07044d0ae8a44c357b3cecf",
+      "timestamp": "2026-10-09T23:41:12.505Z",
+      "source_line": 4865,
+      "observable_payload_sha256": "911cccfd8080917f80c10446ea1b801973abf8cf2c7f407c8b33c971db941543"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_fed8399cf07044d0ae8a44c357b3cecf",
+      "timestamp": "2026-10-09T23:41:19.365Z",
+      "source_line": 4868,
+      "observable_payload_sha256": "6a9a9719230b70e004eaebacaf5d74e5fcc31963af2f27ec6d4c79087508ba34"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_a7afaa723bd6443f90d8806ba3dc2f0d",
+      "timestamp": "2026-10-09T23:41:39.996Z",
+      "source_line": 4874,
+      "observable_payload_sha256": "65f5bac83459faec9fe96403c8a7aa27c50e2ea89b033a510c526c070b16abd0"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_a7afaa723bd6443f90d8806ba3dc2f0d",
+      "timestamp": "2026-10-09T23:41:43.331Z",
+      "source_line": 4877,
+      "observable_payload_sha256": "8b071efdd4f52aadc17195c994aac1c7f9b7e1df211f9032ea20a459938da782"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_b036190131ec450cba995a3ec161fd92",
+      "timestamp": "2026-10-09T23:42:39.363Z",
+      "source_line": 4881,
+      "observable_payload_sha256": "18e75adcf5264259195f9f13a58fed6c8948c34b7b7e08671504d37242dc83ea"
     }
   ]
 }

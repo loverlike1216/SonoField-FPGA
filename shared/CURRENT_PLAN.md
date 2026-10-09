@@ -10,3 +10,6 @@ S6 COMPLETE_CANDIDATE_CONTRACTS / ELECTRICAL_HOLD: seven-sheet80typeBOM, ADC64/c
 S7 OFFLINE_COMPLETE: fullbefore/after/clean,final203,newcapture,rawS0/archivemetadata/source/report/tracehashes; preserve failures, privacy scan, currentstate/checkpoint. Next normalpush+stackedDraftPR onPR3 and actualCI/remote receipt. No merge/cancel of PR1/2/3, no forcepush.
 
 After publication, stop optimization and deliver concrete review package. User/independent reviewer closes actual hardware/electrical/BRAM gates. Current entry v5/scripts/run_nextstage.py and docs/next_stage/REPRODUCE.md; outputs/venv inside current clone only. Continue remains v5. Main promotion and fresh remote-main full regression follow explicit candidate approval only.
+
+
+Publication milestone: DraftPR4 https://github.com/loverlike1216/SonoField-FPGA/pull/4 is OPEN/Draft onPR3. Evidencecommit24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c remote verified; push+pull_request Ubuntu structural CI PASS. PR1/2/3 and main unchanged/unmerged. Actual containingreceiptcommit resolves through Git; latest CI remains observable in GitHub. Review candidate/BRAMreset/physical gates; no additional runtime optimization or main/board/manufacturing operation. See next_stage/PUBLICATION_RECEIPT.json (under shared).
