@@ -1,133 +1,112 @@
 {
-  "checkpoint_id": "CP-20261009-001",
+  "checkpoint_id": "CP-20261009-002",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
-  "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
-  "branch": "main",
-  "base_commit": "4dc8e765403561e9aff9980a54390cdbb01ea0ed",
-  "head_commit": "4dc8e765403561e9aff9980a54390cdbb01ea0ed",
-  "commit_scope": "Observed source HEAD before this evidence/checkpoint commit; reviewed working delta described below, receipt resolves checkpoint commit",
+  "workspace_path": null,
+  "candidate_workspace_path": "E:\\Codex_project\\AMD_Sonofield",
+  "branch": "chore/v5-ax7020-workspace-isolation",
+  "base_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "head_commit": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "commit_scope": "Observed HEAD before committing reviewed candidate migration tree; subsequent real source commit must be reconciled",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT",
-  "current_model": "GPT-6.1 Sol High",
-  "created_at": "2026-10-09T02:16:17.071733+00:00",
+  "current_stage": "AX7020_V5_WORKSPACE_MIGRATION_CANDIDATE",
+  "created_at": "2026-10-09T13:22:26.410020+08:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Real AX7020 identification, full regression and original-preserving BOM/candidate milestone; hardware safety gates remain open",
-  "source_of_truth": "repository",
+  "checkpoint_reason": "Archive preparation/current state reconciliation before candidate and second-clone regression",
+  "source_of_truth": "repository plus current real BASE tool evidence",
   "status": "VALID",
+  "validation_stage": "MIGRATED_AND_CLEAN_CLONE_PENDING",
   "architecture_ref": "v5/docs/architecture/SELF_CALIBRATION.md",
-  "architecture": "Host model/trajectory -> PS transport/C -> AXI PL -> coherent128TX 8bit requested+calibration atomic phase ->32lanes/four outputs -> future qualified drivers;8RX ADC/calibration simulated",
   "completed": [
     {
-      "item": "AX7020 JTAG/Revision/package and existing PS/PL read-only state",
-      "status": "HARDWARE_VERIFIED",
-      "scope": "IDENTIFICATION_AND_READ_ONLY_REGISTERS_ONLY"
+      "item": "Read-only old inventory, fixed BASE, independent new clone and locked venv",
+      "status": "TESTED"
     },
     {
-      "item": "115Python/3696frames×4/waveform/calibration/C+AXI/safety/equivalence",
+      "item": "Fresh BASE full digital baseline115/3696×4 plus15candidate/256ADCtwo tools",
       "status": "SIMULATED"
     },
     {
-      "item": "IsolatedADC256frames two simulators and15candidate checks",
-      "status": "SIMULATED"
-    },
-    {
-      "item": "Original-preserving BOMworkingcopy,72row package audit,63GPIO candidate/68bankchecks",
-      "status": "TESTED",
-      "scope": "OFFLINE_NOT_ELECTRICAL_RELEASE"
-    },
-    {
-      "item": "Earlier documented-part OOC synthesis",
+      "item": "Fresh BASE documented-device OOC and18source reopen",
       "status": "SYNTHESIZED",
-      "scope": "HISTORICAL_V5_OOC_NOT_RERUN_NO_BOARD_ROUTING"
+      "scope": "OOC_ONLY_NOT_ROUTED_NOT_BOARD"
+    },
+    {
+      "item": "Candidate exact archive and isolated current tree",
+      "status": "IMPLEMENTED",
+      "scope": "PENDING_STAGED_HASH_AND_FUNCTIONAL_GATES"
     }
   ],
   "next_actions": [
-    "Finish normal commit/push and byte verification receipt",
-    "Obtain manufacturer Rev3 matched PS/DDR/clock/IO/grade and current running-image ownership",
-    "ConnectUART/qualifyARM BSP and boundedvolatilePSPL tests onlyaftergates",
-    "IndependentADC/safety/surge/interface review andTX/RXsamples",
-    "Livev5schematic/netlist/realERC afterfacts"
+    "Stage reviewed candidate; verify all archive blob/mode/rawSHA256 and root structure",
+    "Commit candidate snapshot and clone it independently with own locked venv",
+    "Run migrated and clean-clone full baseline/candidate/OOC/reopen, compare canonical hashes",
+    "Rehash old original and inspect privacy/source ownership; update checkpoint/results",
+    "Push only candidate branch, open Draft PR, wait for explicit user main approval"
   ],
   "active_decisions": [
-    "ADR-035 User-approvedv5",
-    "ADR-036 currentread-only/candidateexecutionboundary"
+    "ADR-035 original v5 authorization",
+    "ADR-036 historical read-only identification scope",
+    "ADR-037 current user migration authority; main merge pending"
   ],
   "blockers": [
+    "MIGRATED_AND_CLEAN_CLONE_VALIDATION_PENDING",
+    "USER_APPROVAL_REQUIRED_FOR_MAIN_MERGE",
     "V5-B01",
     "V5-B03",
     "V5-B04",
     "V5-B05",
     "CHAT_MEMORY_ACCESS_BLOCKED",
-    "V5-BOM_REVIEW",
-    "NATIVE_SCHEMATIC_ENVIRONMENT",
-    "RUNNING_IMAGE_OWNERSHIP"
+    "V5-BOM_REVIEW"
   ],
   "critical_issues": [],
   "latest_validation": [
     {
-      "evidence": "v5/evidence/board_bringup/20261009/RESULT.md",
-      "status": "READ_ONLY_IDENTIFICATION_PASS",
-      "date": "2026-10-09"
-    },
-    {
-      "evidence": "v5/evidence/baseline/board_integration_20261009/summary.json",
       "status": "PASS",
-      "date": "2026-10-09"
+      "evidence": "v5/evidence/migration/20261009/base/summary.json"
     },
     {
-      "evidence": "v5/evidence/board_bringup/20261009/candidate_checks.json",
-      "status": "PASS_15_OFFLINE_CHECKS",
-      "date": "2026-10-09"
+      "status": "PASS_OFFLINE_ONLY",
+      "evidence": "v5/evidence/migration/20261009/base/candidates/extra_summary.json"
     },
     {
-      "evidence": "v5/evidence/board_bringup/20261009/adc_candidate_xsim.log",
-      "status": "PASS_256_SIMULATED_FRAMES",
-      "date": "2026-10-09"
+      "status": "PASS_OOC_REOPEN_18_SOURCES",
+      "evidence": "v5/evidence/migration/20261009/base/ooc_reopen/console.log"
     }
   ],
   "known_limitations": [
-    "CompleteFPGAgrade/actualDDRcapacity/VCCOunknown",
-    "V2schematicvsRev3 andHynixmanualvsMicronpresetnotmatched",
-    "ExistingimageRunning,ownershipunknown;B/C/DNOT_RUN",
-    "UARTnotconnected;targetARMcompiler/BSPnotqualified",
-    "NoactualADC/safety/externaltiming/thermal/acoustics",
-    "Nativev5schematicNOT_CREATED/ ERCNOT_RUN",
-    "IndependentReviewPENDING/ChatGPTreaderBLOCKED",
-    "BOMworkingcandidateNOTreleased"
+    "Candidate only; main unchanged; permanent workspace path not promoted",
+    "Same-host tools; second environment not yet run",
+    "Full-board/PS-PL/DDR/UART/analog/safety/acoustic/nativeERC not verified",
+    "ExternalChatGPT history/independent review unavailable"
   ],
   "do_not_change": [
-    "Frozenhistory/originalBOM/currentrunningimage",
-    "128TX/8RX/32lanes×4used/8bit/sharedphase/requested-calibration/atomicmap",
-    "Protocol/registers/motion/geometry/acceptance",
-    "No permanentstorage/driver/bootchange,unknownGPIO,PCBfabrication/newversion"
+    "Original physical sandbox including private/untracked/ignored/Git metadata",
+    "history_old frozen BASE bytes/modes/blob identities",
+    "Core RTL/firmware/software/tests/goldens/originalBOM/protocol/registers/safety/geometry/acceptance",
+    "No main merge/new version/board operation without actual authorization"
   ],
   "invariants": [
-    "132MHz internaltarget distinctfromphysical50MHzreference",
-    "Twoindependentarraypowerbranches;AXGPIOneverpowersTX",
-    "Center/radiatingfacecoordinates12mmpitch/100mmnominal90-115gap",
-    "CandidateADCnotproductionselection",
-    "Controllerconfigurationnottopologyproof"
+    "v5 only;128TX/8RX/8bit/32×4/commonphase/requested-calibration/atomicmap/50Hz",
+    "NU40C10T/unknownRX/formalAD7606B;C16candidateunapproved",
+    "Independent upper/lower externalpower;AXsignalsonly",
+    "OOC not board timing/hardware"
   ],
   "open_ai_problems": [
     "P-20261008-001",
     "P-20261009-001"
   ],
   "repository_delta": [
-    "Read-onlyboardevidence",
-    "BOMworkingcopyandisolatedcandidates",
-    "CurrentstateandnewProblem/interactioncapture"
+    "Fixed Git old tree duplicated into history_old; old roots removed only in new clone",
+    "Current root facts and protected output paths; source code semantics unchanged"
   ],
   "evidence_refs": [
-    "v5/evidence/board_bringup/20261009/RESULT.md",
-    "v5/evidence/board_bringup/20261009/windows_public.json",
-    "v5/evidence/board_bringup/20261009/photo_provenance.json",
-    "v5/evidence/baseline/board_integration_20261009/summary.json",
-    "v5/hardware/integration_candidates/20261009/official_ps_reference.json",
-    "v5/hardware/integration_candidates/20261009/connector_pinmap_candidate.csv",
-    "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx"
+    "shared/migration/PRE_MIGRATION_AUDIT.json",
+    "shared/migration/OLD_TRACKED_MANIFEST.json",
+    "shared/migration/ADAPTED_FILES.json",
+    "v5/evidence/migration/20261009/base/summary.json"
   ],
-  "resume_from": "ReadAGENTS/PROJECT_STATE/VERSION_STATE/thischeckpoint/CURRENT_PLAN/DECISIONS/BLOCKERS/ACCEPTANCE/currentevidence. VerifyGit statusandreceipt;continuev5withmatchedboardfacts,notolderboardpresets."
+  "resume_from": "Read root recovery files, compare Git status/actualHEAD with source snapshot, finish current v5 candidate validation; do not restart from old history or open v6."
 }

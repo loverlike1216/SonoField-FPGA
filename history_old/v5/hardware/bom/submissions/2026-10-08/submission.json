@@ -1,0 +1,174 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "current_stage": "AX7020_V5_SAFE_ORGANIZATION_AND_STANDALONE_BASELINE",
+  "model": "GPT-6.1 Sol High",
+  "model_provenance": "USER_DECLARED",
+  "reviewed_at": "2026-10-08T11:16:56.427509+00:00",
+  "base_commit": "0f42f49443bf001a147b2d58e2ae939bbcac38ce",
+  "source_relative_path": "BOM/SonoField_FPGA_v5_AX7020_NU40C10T_8BE78BBEE7B5_96E788BOM_2026-10-08.xlsx",
+  "canonical_submission": "v5/hardware/bom/submissions/2026-10-08/BOM_AX7020_NU40C10T_2026-10-08.xlsx",
+  "source_sha256": "decf6b026c0b5a48efb6800d27463246d61f62a9e2de01c75da5012d7fe69a35",
+  "copy_sha256": "decf6b026c0b5a48efb6800d27463246d61f62a9e2de01c75da5012d7fe69a35",
+  "byte_identical": true,
+  "bytes": 31403,
+  "bom_rows": 72,
+  "sheets": [
+    "使用说明",
+    "新版BOM",
+    "板级供电",
+    "接口与网表",
+    "变化与质量门禁",
+    "数据来源"
+  ],
+  "arithmetic_check": "PASS_72_ROWS_STATIC_FORMULA_AND_CACHE",
+  "formula_errors": [],
+  "status": "REVISE",
+  "electrical_release": "HOLD",
+  "scope": "Read-only BOM compatibility review and GitHub sync only; workbook unchanged; no board/PCB/code changes. Companion proposal is data, not authority to execute its broader scope.",
+  "historical_bom": "v5/hardware/bom/BOM_MASTER.xlsx",
+  "hardware_test": "NOT_RUN",
+  "schematic_erc": "NOT_RUN",
+  "findings": [
+    {
+      "id": "BOM-R01",
+      "rows": [
+        "B-014",
+        "B-015"
+      ],
+      "severity": "HIGH",
+      "kind": "SELECTION_RISK",
+      "finding": "AD7606B analog -3dB bandwidth is 13.5kHz at +/-5V (22.5kHz at +/-10V); 800kSPS is not analog bandwidth. 40kHz direct acquisition needs measured SNR/phase/attenuation qualification before acceptance.",
+      "source": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606b.pdf",
+      "reference": "Rev B Table2 and Figures46-47",
+      "problem": "P-20261008-001"
+    },
+    {
+      "id": "BOM-R02",
+      "rows": [
+        "B-029"
+      ],
+      "severity": "HIGH",
+      "kind": "CONFIRMED_BOM_ERROR",
+      "finding": "ADP7118ACPZN5.0-R7 is 6-lead LFCSP CP-6-3, not LFCSP-8 as G33 states.",
+      "source": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADP7118.pdf",
+      "reference": "Rev H ordering guide page22"
+    },
+    {
+      "id": "BOM-R03",
+      "rows": [
+        "B-020",
+        "B-023",
+        "B-003"
+      ],
+      "severity": "HIGH",
+      "kind": "PROTECTION_COORDINATION_RISK",
+      "finding": "SMBJ20A maximum clamp32.4V at rated surge exceeds TPS25947 absolute max input28V. TC4427A operating supply ceiling18V also needs independently coordinated OVLO and overshoot margins. No claim of actual damage or a measured surge.",
+      "sources": [
+        "https://m.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smbj_datasheet.pdf.pdf",
+        "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+        "https://ww1.microchip.com/downloads/en/DeviceDoc/20001423J.pdf"
+      ]
+    },
+    {
+      "id": "BOM-R04",
+      "rows": [
+        "B-001",
+        "B-002",
+        "B-003"
+      ],
+      "severity": "HIGH",
+      "kind": "MISSING_QUALIFICATION",
+      "finding": "NU40C10T exact supplier/suffix/datasheet/load/continuous drive not established; RX full MPN TBD. No 16mm specifications transferred. 12V is a proposed current-limited test setting, not a verified safe transducer rating."
+    },
+    {
+      "id": "BOM-R05",
+      "rows": [
+        "B-003",
+        "B-004",
+        "B-007",
+        "B-008",
+        "B-009",
+        "B-025",
+        "B-026"
+      ],
+      "severity": "HIGH",
+      "kind": "FAIL_SAFE_NOT_CLOSED",
+      "finding": "TC4427A has no independent EN pin; 595 OE makes outputs high impedance and SRCLR clears shift stage only. Input pull-downs/local power gating/OE reset sequencing and powered-off logic protection need a complete circuit and fault tests. Single2input OR and TBD watchdog/brownout are not proof of the required combined safety logic.",
+      "sources": [
+        "https://ww1.microchip.com/downloads/en/DeviceDoc/20001423J.pdf",
+        "https://www.ti.com/lit/ds/symlink/sn74lvc595a.pdf"
+      ]
+    },
+    {
+      "id": "BOM-R06",
+      "rows": [
+        "B-004",
+        "B-005",
+        "B-006",
+        "B-033",
+        "B-034",
+        "B-035",
+        "B-041",
+        "B-043"
+      ],
+      "severity": "HIGH",
+      "kind": "EXTERNAL_TIMING_NOT_VERIFIED",
+      "finding": "SN74LVC595A specified clock104MHz at3.3V permits66MHz device-level use, but min/max translator/buffer/cable/clock setup hold/load closure is absent. AX7020 documented onboard33ohm series arrays must be included before adding termination.",
+      "sources": [
+        "https://www.ti.com/lit/ds/symlink/sn74lvc595a.pdf",
+        "https://ax7020-20231-v101.readthedocs.io/zh-cn/latest/AX7020UserManual_CN/AX7020UserManual.html"
+      ]
+    },
+    {
+      "id": "BOM-R07",
+      "rows": [
+        "B-005",
+        "B-021",
+        "B-032",
+        "B-037",
+        "B-056"
+      ],
+      "severity": "MEDIUM",
+      "kind": "INTERFACE_ALLOCATION_PENDING",
+      "finding": "60 GPIO estimate is not a physical pin map and omits explicit INA226/TMP117 I2C routing. AXC8T245 directions are grouped4+4:22outputs+2inputs per array require7groups if every signal passes through these parts, exceeding3parts/6groups; bypass/group allocation must be defined before changing count. Standard open-drain I2C cannot simply use fixed-direction push-pull transceivers.",
+      "source": "https://www.ti.com/lit/ds/symlink/sn74axc8t245.pdf"
+    },
+    {
+      "id": "BOM-R08",
+      "rows": [
+        "B-021",
+        "B-022",
+        "B-024",
+        "B-028",
+        "B-029",
+        "B-030",
+        "B-062",
+        "B-063",
+        "B-064"
+      ],
+      "severity": "MEDIUM",
+      "kind": "POWER_BUDGET_PENDING",
+      "finding": "1.65kohm RILM is nominal~2.02A for TPS259470, not5.5A. INA226 +/-81.92mV with20mohm shunt reaches~4.096A measured full-scale; this does not conflict with2A but would saturate before5.5A. ADP7118 rated200mA;5.5V->5V headroom requires tolerance/ripple/dropout review, not an automatic failure. Buck feedback/inductor/capacitor/UVLO/OVLO values need full netlist calculations.",
+      "sources": [
+        "https://www.ti.com/lit/ds/symlink/ina226.pdf",
+        "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+        "https://www.analog.com/media/en/technical-documentation/data-sheets/ADP7118.pdf",
+        "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf"
+      ]
+    },
+    {
+      "id": "BOM-R09",
+      "rows": [
+        "B-011",
+        "B-015",
+        "B-016",
+        "B-036",
+        "B-046..B-068"
+      ],
+      "severity": "MEDIUM",
+      "kind": "BOM_COMPLETENESS",
+      "finding": "AFE gain and precise passive nets not closed; ADC reference/REGCAP network remains a placeholder. Composite RC/suite rows are not production MPN quantities. Blank source sheet has title only; quality-gate sheet mixes source records and gate evidence inconsistently. All72 SUM formulas/cached installed totals and purchase>=installed checks passed; no cached formula error found. Not an Excel-engine recalculation or ERC check."
+    }
+  ]
+}

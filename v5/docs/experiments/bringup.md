@@ -40,5 +40,5 @@ Use headers in hardware/characterization/; do not populate measured fields with 
 
 After 2–3 unsuccessful attempts with unchanged configuration: stop changing counts/voltage. Collect evidence,
 compare baseline, check resonance/polarity/phase/gap/alignment/consistency/loading/driver clipping/airflow and
-particle dimensions/density. Record cause, alternatives and recommendation in ../shared/HANDOFF.md.
+particle dimensions/density. Record cause, alternatives and recommendation in repository-root shared/HANDOFF.md.
 Only increase emitters or voltage after acoustic strength is identified as the likely limiting factor.

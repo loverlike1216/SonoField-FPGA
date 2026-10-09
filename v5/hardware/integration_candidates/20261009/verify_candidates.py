@@ -1,8 +1,8 @@
 """Independent candidate checks. No board programming or physical pass claims."""
 from pathlib import Path
-import csv,hashlib,itertools,json,math,random,re,subprocess,sys,zipfile,xml.etree.ElementTree as ET
+import argparse,csv,hashlib,itertools,json,math,random,re,subprocess,sys,zipfile,xml.etree.ElementTree as ET
 HERE=Path(__file__).resolve().parent; V=HERE.parents[2]; R=V.parent
-OUT=V/'evidence/board_bringup/20261009';OUT.mkdir(parents=True,exist_ok=True)
+REFERENCE=V/'evidence/board_bringup/20261009/package_pin_database.csv'
 checks=[]
 def check(name,condition,detail):
  checks.append(dict(name=name,status='PASS' if condition else 'FAIL',detail=detail))
@@ -72,8 +72,14 @@ def xlsx(path):
   return sheets
 
 def main():
+ global OUT
+ parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);args=parser.parse_args()
+ OUT=(V/args.output).resolve()
+ if not OUT.is_relative_to(V/'evidence'):raise ValueError('Candidate evidence must stay in this v5 clone')
+ if (OUT/'candidate_checks.json').exists():raise FileExistsError('Use new evidence directory')
+ OUT.mkdir(parents=True,exist_ok=True)
  pins=list(csv.DictReader((HERE/'connector_pinmap_candidate.csv').open(encoding='utf-8-sig')))
- db={r['pin']:r for r in csv.DictReader((OUT/'package_pin_database.csv').open())}
+ db={r['pin']:r for r in csv.DictReader(REFERENCE.open())}
  gpio=[p for p in pins if p['bank']]
  check('connector_all80_and_unique68',len(pins)==80 and len(gpio)==68 and len(db)==68,'Official connector candidate only; no physical continuity claimed')
  check('vivado_pin_bank_crosscheck',all(db[p['package_pin']]['bank']==p['bank'] for p in gpio),'Vivado2025.2 database; clock-capable fields retained in pin_func')

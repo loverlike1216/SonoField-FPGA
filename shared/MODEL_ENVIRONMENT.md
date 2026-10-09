@@ -1,0 +1,5 @@
+# Current execution environment
+
+Real host checks2026-10-09: PowerShell7.6.5; Python3.10.11 withTk8.6; new clone .venv from v5/requirements-lock.txt (numpy2.2.6/scipy1.15.3/matplotlib3.10.6, pip check PASS); Icarus12.0devel s20150603-1539-g2693dd32b at C:/iverilog/bin; GCCtdm64-1 9.2.0 at D:/DevC++/Dev-Cpp/TDM-GCC-64/bin/gcc.exe; Vivado2025.2 build6299465 at D:/Vivado/2025.2/2025.2/Vivado/bin. These installed tool paths are machine facts, not FPGA/board parameters. The vendor wrapper prints “The system cannot find the path specified” before the successful version output; actual OOC/XSim/reopen outcomes determine tool availability.
+
+Current runtime model identity is not independently exposed/verified here; do not copy the historical user-declared GPT-6.1 record into a fresh runtime claim. Past evidence/model provenance remains unchanged. Target ARM compiler/BSP is not qualified and no ARM application linked/downloaded. BOM generation needs separately available Node/@oai/artifact-tool; standard-library workbook checks do not claim that generator was cold-started. External ChatGPT history reader BLOCKED. No subagent/Work/reviewer participation invented.

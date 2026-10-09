@@ -1,0 +1,21 @@
+{
+  "files.exclude": {
+    "history_old": true,
+    ".migration-private": true,
+    ".portability": true
+  },
+  "search.exclude": {
+    "history_old/**": true,
+    "**/build/**": true,
+    "**/local_raw/**": true
+  },
+  "files.watcherExclude": {
+    "**/history_old/**": true,
+    "**/build/**": true
+  },
+  "python.analysis.exclude": [
+    "history_old",
+    ".portability",
+    ".migration-private"
+  ]
+}

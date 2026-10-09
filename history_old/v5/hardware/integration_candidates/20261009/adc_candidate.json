@@ -1,0 +1,31 @@
+{
+  "status": "ISOLATED_RECOMMENDATION_NOT_FORMAL_SELECTION",
+  "mpn": "AD7606C-16BSTZ-RL",
+  "hardware_mode": "software mode selected by OS[2:0]=111",
+  "registers": {
+    "0x02": 16,
+    "0x03": 17,
+    "0x04": 17,
+    "0x05": 17,
+    "0x06": 17,
+    "0x07": 255
+  },
+  "range": "all +/-5V single-ended",
+  "bandwidth": "all channels high bandwidth220kHz",
+  "sample_rate": "retain current sample cadence; do not silently raise to1MSPS",
+  "serial": "4 DOUT;16bit two-complement;32clocks per8channel frame;no status/CRC",
+  "verification": [
+    "read back CONFIG,RANGE1..4,BANDWIDTH",
+    "corrupt readback must prevent ready",
+    "check lane/channel ordering",
+    "remeasure phase/gain; no automatic LUT inheritance"
+  ],
+  "source": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf",
+  "source_pages": [
+    42,
+    47,
+    49,
+    61,
+    67
+  ]
+}

@@ -1,15 +1,9 @@
-# SonoField-FPGA
+# SonoField-FPGA — AX7020 v5
 
-PROJECT_ID **SONOFIELD_FPGA** · active **v5** · **ALINX AX7020 / Zynq-7020** · Vivado2025.2 · main. Same repository and history; v5 was explicitly authorized by the user on2026-10-08. No v4 was created.
+PROJECT_ID **SONOFIELD_FPGA** · **v5 ACTIVE** · **ALINX AX7020** · Vivado2025.2. This is a candidate workspace migration in the existing repository. Main merge and permanent workspace promotion require user review. No version upgrade.
 
-Start here: [v5开发入口](v5/README.md) · [完整运行指南](指南.md) · [当前状态](shared/PROJECT_STATE.json) · [恢复检查点](shared/CONTEXT_CHECKPOINT.md) · [真实基线结果](v5/evidence/BASELINE_VALIDATION.md).
+Start with [current state](shared/PROJECT_STATE.json), [recovery checkpoint](shared/CONTEXT_CHECKPOINT.md), [runbook](shared/migration/RUNBOOK.md), [migration evidence](shared/migration/PORTABILITY_AND_REGRESSION.md), [acceptance](shared/ACCEPTANCE.md) and [rollback](shared/migration/ROLLBACK_PLAN.md). The sole production implementation is [v5](v5/README.md). Build/tests/imports use v5 only. Frozen history is excluded from everyday work and may be inspected only on explicit history/recovery instructions.
 
-128-channel40kHz acoustic field with8bit programmable phase, separate per-channel calibration, atomic maps, acquisition/calibration, trajectory and PS/PL protocol infrastructure. Geometry: opposed8×8+8×8,10mm candidate emitters,12mm radiating-center pitch, nominal100mm face-to-face gap adjustable90–115mm, origin at geometric center. 50mg EPS remains a staged final physical target, not a demonstrated result.
+128TX/8RX, opposed8×8 arrays,8bit independent requested/calibration phases, atomic maps, common timebase,32lanes×4used,50Hz motion infrastructure and existing PS/C/AXI interfaces are preserved. TX NU40C10T; RX MPN unknown; formal ADC AD7606BBSTZ-RL. C-16 is an unapproved candidate. Geometry is12mm radiating-face pitch,100mm nominal face gap adjustable90–115mm, geometric-center origin. Upper/lower64TX arrays have independent external power/protection/cutoff; AX7020 handles signals only.
 
-2026-10-09: actual AX7020 PCB AX701020.3.0, XC7Z020 JTAG and CLG400 photo confirmed. The existing PL/PS/SD image was preserved. Full 115-test/four-run digital baseline passes again. Full FPGA grade, DDR capacity, revision-matched PS platform, VCCO, actual UART/PS-PL and acoustic operation remain unverified; whole platform REVISE, electrical/manufacturing HOLD.
-
-Latest [board/BOM results](v5/evidence/board_bringup/20261009/RESULT.md) · [separate BOM working copy](v5/hardware/bom/working/2026-10-09/) · [three-board preparation](v5/hardware/integration_candidates/20261009/SCHEMATIC_PREPARATION.md). No core RTL or formal ADC selection changed. Native v5 schematic and ERC have not run.
-
-Root shared/ and AI records hold cross-version governance/provenance; v5/ is the sole active implementation; archive/ is frozen indexed history. v1/v2 and referenced old hardware/PCB/evidence remain at original locations to preserve history, excluded from default v5 builds/search. Paused v3 is incomplete local history and is not claimed published/validated; no v4 exists. Original private/local assets and generated caches are intentionally not mirrored to public GitHub.
-
-Audit/reuse/archive manifests: shared/organization/ and archive/manifests/. External ChatGPT source SonoField-FPGA is BLOCKED; observable Codex transcript PARTIAL, never invented history. All future Windows commands default to PowerShell7.
+Real digital regression and documented-device OOC evidence are separate from physical acceptance. Historical AX701020.3.0/XC7Z020/CLG400 read-only identification does not prove PS-PL/DDR/UART/ADC/driver/acoustic operation. Whole-platform conclusion remains REVISE; native v5 schematic NOT_CREATED, ERC_NOT_RUN, electrical/manufacturing HOLD.50mg EPS is a future measured milestone. ChatGPT history access BLOCKED; observable current Codex records PARTIAL.

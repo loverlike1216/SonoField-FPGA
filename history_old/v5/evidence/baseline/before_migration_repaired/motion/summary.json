@@ -1,0 +1,32 @@
+{
+  "status": "FAIL",
+  "classification": "SIMULATION_VALIDATED_PENDING",
+  "commands": [
+    {
+      "label": "python_tests",
+      "argv": [
+        "E:\\Codex_project\\AMD-SonoField-FPGA\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "elapsed_s": 8.062
+    }
+  ],
+  "limits": "PROVISIONAL_UNTIL_HARDWARE_VALIDATED",
+  "gui": "Tk 8.6; PySide6 absent in pinned environment",
+  "timing": "GUI controls no field clock. RTL queue is clocked at 132 MHz, 2,640,000 cycles production cadence; full waveform demo shortens interval to 8192 cycles.",
+  "not_verified": [
+    "physical particle movement",
+    "absolute force / mass support",
+    "PS transport deployment",
+    "board synthesis / pin constraints / timing closure",
+    "hardware enable and watchdog circuit"
+  ],
+  "started_utc": "2026-10-08T08:04:16Z",
+  "error": "python_tests failed: . ok\ntest_SW20_control_errors_disable (test_self_calibration.CalibrationTests) ... ok\ntest_SW21_rx_reference_is_explicit (test_self_calibration.CalibrationTests) ... ok\ntest_SW22_fixed_seed (test_self_calibration.CalibrationTests) ... ok\ntest_SW23_invalid_or_relative_lut_rejected (test_self_calibration.CalibrationTests) ... ok\ntest_SW24_noisy_integer_tof (test_self_calibration.CalibrationTests) ... ok\ntest_SW25_reject_synthetic_reference_for_real_capture (test_self_calibration.CalibrationTests) ... ok\ntest_SW26_host_applies_common_frequency_before_field (test_self_calibration.CalibrationTests) ... ok\ntest_environment_timeout_preserves_output_and_is_not_rtl_cycle_timeout (test_simulator_timeout.SimulatorTimeoutTests) ... ok\ntest_mismatched_path_is_rejected_before_recording_success (test_ui_evidence.UIEvidenceTests) ... ok\ntest_saved_path_is_executed_snapshot_not_new_preview (test_ui_evidence.UIEvidenceTests) ... ok\n\n======================================================================\nERROR: setUpClass (test_motion.MotionTests)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"E:\\Codex_project\\AMD-SonoField-FPGA\\v5\\tests\\test_motion.py\", line 29, in setUpClass\n    cls.record=json.loads(RECORD.read_text());cls.solver=TrapSolver(load(),cls.record,cls.profile)\n  File \"C:\\Users\\loverlike\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pathlib.py\", line 1134, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"C:\\Users\\loverlike\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pathlib.py\", line 1119, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\Codex_project\\\\AMD-SonoField-FPGA\\\\v5\\\\evidence\\\\self_calibration_stage\\\\validation_frequency\\\\self_calibration\\\\calibration.json'\n\n----------------------------------------------------------------------\nRan 72 tests in 5.937s\n\nFAILED (errors=1)\n"
+}

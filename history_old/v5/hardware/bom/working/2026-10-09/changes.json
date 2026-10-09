@@ -1,0 +1,554 @@
+{
+  "classification": "WORKING_CANDIDATE_NOT_PROCUREMENT_RELEASE",
+  "original_sha256": "decf6b026c0b5a48efb6800d27463246d61f62a9e2de01c75da5012d7fe69a35",
+  "changes": [
+    {
+      "sheet": "新版BOM",
+      "cell": "G33",
+      "before": "LFCSP-8",
+      "after": "LFCSP-6 / CP-6-3 (EP=GND)",
+      "reason": "ADI Rev H ordering table: exact ACPZN model has six pins"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U33",
+      "before": null,
+      "after": "Pin1 VOUT,2 SENSE/ADJ,3 GND,4 EN,5 SS,6 VIN; exposed pad GND. CAD pad geometry still requires library audit.",
+      "reason": "Exact LFCSP6 pin map"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "E18",
+      "before": "AD7606BBSTZ-RL",
+      "after": "AD7606C-16BSTZ-RL (推荐候选)",
+      "reason": "P-20261008-001 recommendation; formal selection still pending user/independent review"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "F18",
+      "before": "8ch 800kSPS/ch; 5V AVCC, 1.71~3.6V VDRIVE",
+      "after": "8×16bit同步；软件模式0x07=0xFF，220kHz；四DOUT；保留既有采样节奏",
+      "reason": "High bandwidth requires register write and readback"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "P18",
+      "before": "继承核心选型",
+      "after": "候选；待独立Review与用户批准",
+      "reason": "Not a formal ADC substitution"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "R18",
+      "before": "真实接口four-DOUT 时序、REF、输入范围必须对照手册",
+      "after": "现有AD7606B初始化不能直接沿用；需隔离适配及带宽读回/实际相位测量",
+      "reason": "Pin compatibility alone does not prove protocol compatibility"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "T18",
+      "before": "https://www.analog.com/en/products/ad7606b.html",
+      "after": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf",
+      "reason": "Primary manufacturer source"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U18",
+      "before": null,
+      "after": "原件为AD7606BBSTZ-RL；数字核心未改；候选ROM/模型单独保存，不能声称实板采样通过",
+      "reason": "Preserve traceable baseline"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "H9",
+      "before": 3,
+      "after": 4,
+      "reason": "21 nonclock outputs plus2 returns require7 four-bit direction groups per array"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "I9",
+      "before": 3,
+      "after": 4,
+      "reason": "Each AXC has2 direction groups;4 devices candidate, not automatic manufacturing approval"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "N9",
+      "before": 10,
+      "after": 12,
+      "reason": "10 candidate installed plus2 spare"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "P9",
+      "before": "继承估计/按IO重核",
+      "after": "数量候选：4+4+2；电平/VCCO待核验",
+      "reason": "Explicit group allocation"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U9",
+      "before": null,
+      "after": "每阵列6组输出+1组返回；2路时钟另走LVC244。中央ADC5出5入分四组；I2C不得走推挽AXC。",
+      "reason": "Keep32-lane architecture"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "H19",
+      "before": 0,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "I19",
+      "before": 0,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "J19",
+      "before": 8,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "K19",
+      "before": 0,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "L19",
+      "before": 0,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "N19",
+      "before": 12,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "P19",
+      "before": "复核RC参数",
+      "after": "非采购设计组；见无源分配",
+      "reason": "Prevent double counting"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "H20",
+      "before": 0,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "I20",
+      "before": 0,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "J20",
+      "before": 1,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "K20",
+      "before": 0,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "L20",
+      "before": 0,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "N20",
+      "before": 2,
+      "after": 0,
+      "reason": "Composite design group is not a purchasable line; actual passives remain in dedicated rows"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "P20",
+      "before": "必须设计/未冻结",
+      "after": "非采购设计组；见无源分配",
+      "reason": "Prevent double counting"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U19",
+      "before": null,
+      "after": "8个ADC输入各47Ω与1nF在B-053/B-058计数；不能再采购RC套件。",
+      "reason": "Explicit passive ownership"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U20",
+      "before": null,
+      "after": "ADC REFIN10µF×1、REFCAPA/B共10µF×1、REGCAP1µF×2；从B-049/B-047分配，独立去耦另行核算。",
+      "reason": "Separate ADC reference/bypass nets"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "K21",
+      "before": 1,
+      "after": 0,
+      "reason": "Remote environment board optional DNP, not compulsory fourth board"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "K42",
+      "before": 1,
+      "after": 0,
+      "reason": "Remote environment board optional DNP, not compulsory fourth board"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "K75",
+      "before": 1,
+      "after": 0,
+      "reason": "Remote environment board optional DNP, not compulsory fourth board"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "K50",
+      "before": 1,
+      "after": 0,
+      "reason": "Remote environment board optional DNP, not compulsory fourth board"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "K60",
+      "before": 2,
+      "after": 0,
+      "reason": "Remote environment board optional DNP, not compulsory fourth board"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "P21",
+      "before": "继承候选",
+      "after": "可选DNP；不纳入三块主板装机",
+      "reason": "Current formal user instruction"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "P42",
+      "before": "继承",
+      "after": "可选DNP；不纳入三块主板装机",
+      "reason": "Current formal user instruction"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "P75",
+      "before": "候选",
+      "after": "可选DNP；不纳入三块主板装机",
+      "reason": "Current formal user instruction"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "F27",
+      "before": "三路外接电源独立TVS；钳位与eFuse需协同",
+      "after": "SMBJ20A候选撤销释放；32.4V钳位高于eFuse28V abs max",
+      "reason": "Surge coordination cannot be fixed by package correction"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "P27",
+      "before": "继承候选",
+      "after": "阻塞；保护网络待浪涌条件核算",
+      "reason": "Do not invent safe replacement TVS"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U27",
+      "before": null,
+      "after": "不能仅改低VRWM就放行；要验证Ipp、源阻抗、寄生、响应及TC4427A电压限制。",
+      "reason": "Worst-case protection review"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "F66",
+      "before": "按原v5零件计数移植；新布板新增保护网路另计",
+      "after": "1.65kΩ→约2.02A标称；不是5.5A",
+      "reason": "Datasheet ILIM≈3334/RILIM"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U66",
+      "before": null,
+      "after": "保持候选2A档；电阻/IC容差、启动浪涌及新增TX切断级协调待测。",
+      "reason": "No automatic current increase"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "F26",
+      "before": "Kelvin连线；3个",
+      "after": "20mΩ：INA226电流测量满量程约±4.096A",
+      "reason": "81.92mV /20mohm"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U67",
+      "before": null,
+      "after": "1.37M仅为上臂；下臂/OVLO公式与容差未冻结，不能作为已闭合保护。",
+      "reason": "No guessed OVLO configuration"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U68",
+      "before": null,
+      "after": "Rtop590k/Rbottom100k、VFB0.8V→5.52V；LDO最大dropout420mV@200mA，余量需含buck公差/纹波。",
+      "reason": "Document full calculation"
+    },
+    {
+      "sheet": "新版BOM",
+      "cell": "U44",
+      "before": null,
+      "after": "上/下独立保护支路必需；另给中央AUX供电，源端星形分配；AX7020原厂5V独立。",
+      "reason": "Third branch and ground policy"
+    },
+    {
+      "sheet": "使用说明",
+      "cell": "A3",
+      "before": "2026-10-08 | 上、下独立12V阵列电源 | FPGA仅负责数据/相位/时序/采集处理 | 非采购或Gerber发布",
+      "after": "2026-10-09 工作修订候选 | 原始提交保留 | 三块必需PCB | 制造/采购释放HOLD",
+      "reason": "Separate source from working revision"
+    },
+    {
+      "sheet": "使用说明",
+      "cell": "B15",
+      "before": "v5/hardware/bom/BOM_MASTER.csv原稿保留；此处为未验证替代建议",
+      "after": "原始提交：submissions/2026-10-08；本文件为工作候选，不替换继承BOM_MASTER",
+      "reason": "Original preserved"
+    },
+    {
+      "sheet": "板级供电",
+      "cell": "G6",
+      "before": "上板掉电输出默认禁止；断线不触发",
+      "after": "候选：OE+输入偏置+独立TX电源切断+锁存重新使能；实物未测",
+      "reason": "No unsupported safety assertion"
+    },
+    {
+      "sheet": "板级供电",
+      "cell": "G7",
+      "before": "下板掉电输出默认禁止；断线不触发",
+      "after": "候选：同上，下板独立；失电恢复不自动重启",
+      "reason": "Independent fail-safe"
+    },
+    {
+      "sheet": "板级供电",
+      "cell": "D8",
+      "before": "AD7606B、板载数字/模拟电源",
+      "after": "同步ADC候选AD7606C-16；正式选型待批",
+      "reason": "Recommendation not release"
+    },
+    {
+      "sheet": "接口与网表",
+      "cell": "A9",
+      "before": "UP_OE / DN_OE",
+      "after": "UP_OE_N / DN_OE_N",
+      "reason": "Align active-low naming"
+    },
+    {
+      "sheet": "接口与网表",
+      "cell": "A10",
+      "before": "UP_RESET / DN_RESET",
+      "after": "UP_RESET_N / DN_RESET_N",
+      "reason": "595 clear active low"
+    },
+    {
+      "sheet": "接口与网表",
+      "cell": "A11",
+      "before": "UP_BLANK / DN_BLANK",
+      "after": "UP_RX_BLANK / DN_RX_BLANK",
+      "reason": "Canonical net names"
+    },
+    {
+      "sheet": "接口与网表",
+      "cell": "A16",
+      "before": "I2C_ENV_SCL/SDA",
+      "after": "MON_I2C_SCL / MON_I2C_SDA",
+      "reason": "Shared status bus, not obligatory environment board"
+    },
+    {
+      "sheet": "接口与网表",
+      "cell": "F16",
+      "before": "传输温湿度",
+      "after": "3×INA226+3×TMP117；环境传感器可选",
+      "reason": "Do not remove monitoring"
+    },
+    {
+      "sheet": "接口与网表",
+      "cell": "C17",
+      "before": "TBD",
+      "after": "63 / 68候选，余5；另见80针表",
+      "reason": "Complete signal budget includesSYNC andESTOP"
+    },
+    {
+      "sheet": "接口与网表",
+      "cell": "H17",
+      "before": "优先减少总线长排线",
+      "after": "V2.0官方映射，Vivado器件库核验；Rev3.0实板连通/VCCO仍未核验",
+      "reason": "Not productionXDC"
+    }
+  ],
+  "added_sheets": [
+    "新增候选与无源分配"
+  ],
+  "sources": [
+    [
+      "AD7606C-16",
+      "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf",
+      "Rev A p67 BANDWIDTH=0x07",
+      "220kHz需软件模式；推荐未批准"
+    ],
+    [
+      "AD7606B",
+      "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606b.pdf",
+      "Rev B analog LPF",
+      "采样率不能代替40kHz模拟带宽"
+    ],
+    [
+      "ADP7118",
+      "https://www.analog.com/media/en/technical-documentation/data-sheets/ADP7118.pdf",
+      "Rev H p6/p22",
+      "ACPZN5.0 CP-6-3六引脚"
+    ],
+    [
+      "TPS25947",
+      "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+      "Rev C 电气/ILIM/引脚表",
+      "28V abs；FLT不是PGOOD"
+    ],
+    [
+      "SN74AXC8T245",
+      "https://www.ti.com/lit/ds/symlink/sn74axc8t245.pdf",
+      "Rev C 两个四位DIR组",
+      "I2C另用开漏隔离；VCC≤3.6V"
+    ],
+    [
+      "SN74LVC595A",
+      "https://www.ti.com/lit/ds/symlink/sn74lvc595a.pdf",
+      "Rev A 3.3V时序",
+      "104MHz器件规格不等于66MHz外部链路通过"
+    ],
+    [
+      "ALINX AX7020",
+      "https://github.com/alinxalinx/AX7020_2023.1/tree/fcf1e4a239b0f47e8ee95dfde7c2eedc5685c327",
+      "官方手册/原理图/hello XSA",
+      "实板Rev3.0；文件V2.0；DDR预设料号有差异"
+    ],
+    [
+      "INA226",
+      "https://www.ti.com/lit/ds/symlink/ina226.pdf",
+      "±81.92mV",
+      "20mΩ→4.096A量程"
+    ],
+    [
+      "NU40C10T/RX",
+      "用户供应商原件待提供",
+      "SOURCE_MISSING",
+      "不套用16mm额定参数"
+    ]
+  ],
+  "issues": [
+    [
+      "P0-01 ADC",
+      "C-16软件高带宽候选",
+      "ADC_CANDIDATE_REVIEW.md",
+      "已提出可验证方案",
+      "独立Review+用户批准+实测",
+      "NOT_RUN",
+      "HOLD"
+    ],
+    [
+      "P0-02安全",
+      "本地门禁+锁存rearm+TX切断候选",
+      "SAFETY_AND_POWER.md",
+      "已提出可验证方案",
+      "门级/掉电/热/断线示波器测试",
+      "NOT_RUN",
+      "HOLD"
+    ],
+    [
+      "P0-03浪涌",
+      "SMBJ20A未释放；核算真实surge",
+      "SAFETY_AND_POWER.md",
+      "仍然阻塞",
+      "浪涌条件/容差/响应/器件选定",
+      "NOT_RUN",
+      "HOLD"
+    ],
+    [
+      "P1-04封装",
+      "ADP7118改为LFCSP6",
+      "ADI RevH p6/p22",
+      "已解决：文本封装",
+      "EDA焊盘/Pin1/EP仍需审查",
+      "NOT_RUN",
+      "HOLD"
+    ],
+    [
+      "P1-05 T/R",
+      "保持NU40C10T；RX未知",
+      "供应商规格与样品缺失",
+      "仍然阻塞",
+      "完整型号/尺寸/C/频响/连续驱动",
+      "NOT_RUN",
+      "HOLD"
+    ],
+    [
+      "P1-06链路",
+      "维持32lane；分开内外时序",
+      "TIMING_BUDGET.md",
+      "已提出可验证方案",
+      "外部min/max及线束实测",
+      "NOT_RUN",
+      "HOLD"
+    ],
+    [
+      "P1-07 IO",
+      "63/68；AXC4+4+2候选",
+      "connector_pinmap_candidate.csv",
+      "已提出可验证方案",
+      "Rev3/VCCO/开漏隔离/连接器核验",
+      "NOT_RUN",
+      "HOLD"
+    ],
+    [
+      "P1-08功耗",
+      "2A/4.096A/200mA及动态参数扫描",
+      "candidate_checks.json",
+      "已提出可验证方案",
+      "1–4路负载/热/电容测量",
+      "NOT_RUN",
+      "HOLD"
+    ],
+    [
+      "P2-09 BOM",
+      "保留原件、补源、复合行去重复",
+      "changes.json",
+      "已提出可验证方案",
+      "精确料号/位号/原生网表对账",
+      "NOT_RUN",
+      "HOLD"
+    ]
+  ]
+}

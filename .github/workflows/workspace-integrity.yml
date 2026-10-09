@@ -1,0 +1,25 @@
+name: v5 workspace integrity
+on:
+  pull_request:
+  push:
+    branches: [main, chore/v5-ax7020-workspace-isolation]
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Current structure and inherited copies
+        run: |
+          python v5/scripts/check_structure.py
+          python v5/scripts/check_migration.py
+      - name: Frozen Git metadata and current scope (no historical source read)
+        env:
+          FREEZE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python v5/scripts/check_workspace_migration.py --freeze-base "$FREEZE_BASE"

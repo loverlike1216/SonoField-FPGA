@@ -1,0 +1,9 @@
+PASS MOTION-RTL01/02/03/04 complete maps, ordered double-buffer swap, cadence=2640000 cycles
+PASS MOTION-RTL05 underflow disables
+PASS MOTION-RTL06 overflow
+PASS MOTION-RTL07 STOP mid-load remains disabled until reset
+PASS MOTION-RTL08 reset mid-trajectory
+PASS MOTION-RTL09 invalid frame/sequence reject
+PASS MOTION-RTL10 reset and new complete map recover safely
+PASS MOTION extra lost ACK timeout
+E:\Codex_project\AMD-SonoField-FPGA\v5\build\standalone_workspace\v5\tb\tb_motion_faults.sv:86: $finish called at 79226806000 (1ps)

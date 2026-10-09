@@ -1,0 +1,57 @@
+Zynq7020/
+v1/hardware/transducers/references/
+.venv/
+__pycache__/
+*.pyc
+build/
+tmp/
+.Xil/
+*.jou
+*.wdb
+*.vcd
+*.xpr
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+
+# Preserve user originals locally; canonical project import lives in v2.
+BOM/*.xlsx
+v2/hardware/transducers/references/
+
+# Raw desktop captures can contain account and unrelated local workspace information.
+PCB/V1/log/screenshots/*.png
+PCB/V1/log/datasheet/vendor_files/
+
+# Reproducible local simulation products; retain summaries, logs, canonical gzip traces.
+v2/evidence/core_timing_real_loop/*regression/gui_*/rtl/
+v2/evidence/core_timing_real_loop/*regression/gui_*/trajectory_*.json
+v2/evidence/core_timing_real_loop/*regression/gui_*/*_motion_ack.txt
+v2/evidence/core_timing_real_loop/*regression/faults/*.vvp
+v2/evidence/core_timing_real_loop/*regression/faults/xsim.dir/
+
+# Model-continuity recovery run: retain real summaries/logs and compressed canonical traces.
+v2/evidence/core_timing_real_loop/recovery_*/regression*/gui_*/rtl/
+v2/evidence/core_timing_real_loop/recovery_*/regression*/gui_*/trajectory_*.json
+v2/evidence/core_timing_real_loop/recovery_*/regression*/gui_*/*_motion_ack.txt
+v2/evidence/core_timing_real_loop/recovery_*/regression*/faults/*.vvp
+v2/evidence/core_timing_real_loop/recovery_*/regression*/faults/xsim.dir/
+v2/hardware/board/references/**/local_raw/
+
+# Live Vivado GUI-generated runtime files.
+vivado_pid*.str
+
+# Vivado runtime state retained locally, excluded from delivery.
+dfx_runtime.txt
+
+# Private board identities, vendor original documents and EDA/runtime captures.
+v5/**/local_raw/
+v5/hardware/bom/working/2026-10-09/preview/
+
+# Retain v5 baseline summaries and canonical compressed traces, not simulator products.
+v5/evidence/baseline/*/gui_*/rtl/
+v5/evidence/baseline/*/gui_*/trajectory_*.json
+v5/evidence/baseline/*/gui_*/*_motion_ack.txt
+v5/evidence/baseline/*/faults/*.vvp
+v5/evidence/baseline/*/faults/xsim.dir/

@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "active_version": "v5",
+  "source_hashes_identical": true,
+  "fixed_input_behavior_hashes_identical": true,
+  "python_tests_each": 115,
+  "frames_each": 3696,
+  "simulator_runs_each": 4,
+  "baseline_names": [
+    "before_migration_complete",
+    "after_migration",
+    "standalone"
+  ],
+  "historical_files_preserved": 3343,
+  "history_moves": 0,
+  "history_deletions": 0,
+  "hardware_verified": false,
+  "full_board_timing": "NOT_RUN",
+  "classification": "ORGANIZATION_AND_DIGITAL_BASELINE_ONLY",
+  "recovery_commit": "4cd42172dbbb1b4a2fc45d8f0d33d28f2efcc0fe",
+  "checked_at": "2026-10-08T09:04:30.639280+00:00",
+  "independent_fixed_inputs": {
+    "waveform_TB15": [
+      "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054",
+      "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054",
+      "63bfad4c5c08fa75d5b2b3b95b37fed7276a5a51052c091b71c9d94544a58054"
+    ],
+    "ADC_roundtrip_sha256": [
+      "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97",
+      "16adec3b360b796a6206b2f280832160df59da96181df8c6609b51baf08fec97"
+    ],
+    "calibration_repeated_numerical_artifacts": [
+      {
+        "channel_health.csv": "f842f60ea64e208177753ca0603dc2589f8782b2a575751f4806f8f2365d9229",
+        "path_quality.csv": "f7cb1428ad3ea12e7040f851406adf99adfe949f9ace725767f764529e24a413",
+        "phase_lut.csv": "ebc787f769351d3cc167fb39a1d2e3b00370348516e8c5fb64c01fc6339b6ba3",
+        "quality_summary.json": "c3c7499c6e79be2b8e59dde2052e5de06bcb7942e829bd595e1338b314154693"
+      },
+      {
+        "channel_health.csv": "f842f60ea64e208177753ca0603dc2589f8782b2a575751f4806f8f2365d9229",
+        "path_quality.csv": "f7cb1428ad3ea12e7040f851406adf99adfe949f9ace725767f764529e24a413",
+        "phase_lut.csv": "ebc787f769351d3cc167fb39a1d2e3b00370348516e8c5fb64c01fc6339b6ba3",
+        "quality_summary.json": "c3c7499c6e79be2b8e59dde2052e5de06bcb7942e829bd595e1338b314154693"
+      },
+      {
+        "channel_health.csv": "f842f60ea64e208177753ca0603dc2589f8782b2a575751f4806f8f2365d9229",
+        "path_quality.csv": "f7cb1428ad3ea12e7040f851406adf99adfe949f9ace725767f764529e24a413",
+        "phase_lut.csv": "ebc787f769351d3cc167fb39a1d2e3b00370348516e8c5fb64c01fc6339b6ba3",
+        "quality_summary.json": "c3c7499c6e79be2b8e59dde2052e5de06bcb7942e829bd595e1338b314154693"
+      }
+    ],
+    "calibration_all_fields_except_git_commit_sha256": "87021e8d5b8b64cd99c6012b22de6a51fd14206c9149e2bf94b1d65f31fc0d19"
+  },
+  "calibration_raw_json": "DIFFERENT_ONLY_EXPECTED_GIT_COMMIT; see CALIBRATION_PROVENANCE_DIFF.json"
+}

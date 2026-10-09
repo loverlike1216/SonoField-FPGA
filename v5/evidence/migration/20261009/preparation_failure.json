@@ -1,0 +1,13 @@
+{
+  "phase": "PHASE_2_PRE_FREEZE",
+  "status": "RESOLVED",
+  "observed_error": "Windows OSError errno22 on in-place truncation of candidate v5/evidence/synthesis/utilization.rpt",
+  "old_workspace_changed": false,
+  "main_changed": false,
+  "archive_frozen_at_failure": false,
+  "partial_archive_files": 3707,
+  "diagnosis": "Report was not read-only; exact lock owner was not established. Same-volume atomic replacement succeeded. No user GUI/process was closed.",
+  "resolution": "Resume only the unfinished archive, retain fresh BASE evidence, verify preexisting archived bytes, atomically restore active original BASE blobs.",
+  "restored_utilization_sha256": "2f743a21ede8a630d14808580a9100b21696c45698b90bbf20de03017f72d4f7",
+  "baseline_failure": false
+}
