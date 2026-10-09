@@ -48,3 +48,13 @@ v5/evidence/repository_cleanup/**/*.dll
 v5/evidence/repository_cleanup/**/*.so
 v5/evidence/repository_cleanup/**/*.pb
 v5/evidence/repository_cleanup/**/webtalk*
+
+# Current next-stage evidence retains reports/maps/logs, excludes executables/private inputs.
+v5/evidence/next_stage/**/xsim.dir/
+v5/evidence/next_stage/**/*.vvp
+v5/evidence/next_stage/**/*.exe
+v5/evidence/next_stage/**/*.dll
+v5/evidence/next_stage/**/*.so
+v5/evidence/next_stage/**/*.pb
+v5/evidence/next_stage/**/webtalk*
+v5/hardware/bom/working/2026-10-10/*.inspect.ndjson

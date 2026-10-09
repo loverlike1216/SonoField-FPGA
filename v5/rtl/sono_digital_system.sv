@@ -1,7 +1,8 @@
 `timescale 1ns/1ps
 // Register-bus integration, deliberately independent of PS, pins and a board PLL.
 module sono_digital_system #(
- parameter integer CLOCK_HZ=132000000, POWER_WAIT_CYCLES=2*CLOCK_HZ+1
+ parameter integer CLOCK_HZ=132000000, POWER_WAIT_CYCLES=2*CLOCK_HZ+1,
+ parameter integer ADC_C16=0
 )(input wire clk,rst_n,hardware_enable,
  input wire bus_valid,bus_write,input wire[7:0] bus_address,input wire[31:0] bus_wdata,
  output reg[31:0] bus_rdata,output wire bus_ready,output reg bus_error,
@@ -39,11 +40,21 @@ module sono_digital_system #(
  wire fault=adc_error||scan_error||bus_error||serializer_fault||map_error||map_fault_latched;
  wire kill=!software_enable||!enable_sync[1]||fault||mode==MODE_SAFE_DISABLED;
  wire cal_abort=abort||kill||!calibrating;
+ // The default preserves the original executable B reference; the current
+ // nextstage_pl production candidate explicitly selects C-16.
+ generate if(ADC_C16)begin:c16
+ ad7606c16_if #(.CLOCK_HZ(CLOCK_HZ),.POWER_WAIT_CYCLES(POWER_WAIT_CYCLES)) adc(
+  .clk(clk),.rst_n(core_rst),.sample_request(sample_request&&!cal_abort),.time_now(time_now),
+  .busy_async(adc_busy),.dout(adc_dout),.adc_reset(adc_reset),.convst(adc_convst),
+  .cs_n(adc_cs_n),.sclk(adc_sclk),.sdi(adc_sdi),.ready(adc_ready),.error(adc_error),
+  .frame_valid(frame_valid),.frame(frame),.frame_timestamp(frame_timestamp),.idle(adc_idle));
+ end else begin:legacy_b
  ad7606b_if #(.CLOCK_HZ(CLOCK_HZ),.POWER_WAIT_CYCLES(POWER_WAIT_CYCLES)) adc(
   .clk(clk),.rst_n(core_rst),.sample_request(sample_request&&!cal_abort),.time_now(time_now),
   .busy_async(adc_busy),.dout(adc_dout),.adc_reset(adc_reset),.convst(adc_convst),
   .cs_n(adc_cs_n),.sclk(adc_sclk),.sdi(adc_sdi),.ready(adc_ready),.error(adc_error),
   .frame_valid(frame_valid),.frame(frame),.frame_timestamp(frame_timestamp),.idle(adc_idle));
+ end endgenerate
  calibration_scheduler #(.DEPTH(SYS_BUFFER_DEPTH)) scheduler(
   .clk(clk),.rst_n(core_rst),.start(start&&calibrating&&!kill),.abort(cal_abort),.ack(ack),
   .adc_ready(adc_ready),.adc_idle(adc_idle),.adc_error(adc_error),.frame_valid(frame_valid),

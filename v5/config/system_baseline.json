@@ -49,7 +49,7 @@
     "LOWER_RX3"
   ],
   "adc": {
-    "part": "AD7606BBSTZ-RL",
+    "part": "AD7606C-16BSTZ-RL",
     "sample_rate_hz": 800000,
     "bits": 16,
     "channels": 8,
@@ -76,7 +76,13 @@
     ],
     "oversampling": 1,
     "crc": false,
-    "status_header": false
+    "status_header": false,
+    "bandwidth_register": 7,
+    "bandwidth_mask": 255,
+    "configuration_register_value": 16,
+    "production_top": "nextstage_pl",
+    "device_approval": "USER_20261010",
+    "electrical_qualification": "HOLD"
   },
   "clock_hz": 132000000,
   "carrier_hz": 40000,

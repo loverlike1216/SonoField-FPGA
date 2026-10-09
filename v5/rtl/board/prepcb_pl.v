@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 // Candidate module-reference top. All I/O are logical; never a production pinout.
-module prepcb_pl(input wire clk,rst_n,
+module prepcb_pl #(parameter integer ADC_C16=0)(input wire clk,rst_n,
  input wire [31:0] S_AXI_awaddr,input wire S_AXI_awvalid,output wire S_AXI_awready,
  input wire [31:0] S_AXI_wdata,input wire [3:0] S_AXI_wstrb,input wire S_AXI_wvalid,output wire S_AXI_wready,
  output wire [1:0] S_AXI_bresp,output wire S_AXI_bvalid,input wire S_AXI_bready,
@@ -50,7 +50,7 @@ module prepcb_pl(input wire clk,rst_n,
  // alive during SAFE for ADC setup and safe prefill; physical OE/eFuse stay
  // dominated by supervisor_disable above. Fault/STOP resets the whole core.
  // Mailbox uses task sequence1..N; original queue/ACK use0..N-1.
- sono_axi_system core(.clk(clk),.rst_n(core_reset_n),.hardware_enable(1'b1),.motion_arm(control[8]&emit_permit),.motion_stop(1'b0),
+ sono_axi_system #(.ADC_C16(ADC_C16)) core(.clk(clk),.rst_n(core_reset_n),.hardware_enable(1'b1),.motion_arm(control[8]&emit_permit),.motion_stop(1'b0),
  .frame_valid(frame_valid&task_allowed),.frame_data(frame_data),.frame_sequence(frame_sequence-1),.frame_last(frame_last),.frame_ready(core_frame_ready),
  .buffered_count(buffered_count),.acknowledged_sequence(acknowledged_sequence),.motion_running(motion_running),.motion_done(motion_done),
  .motion_underflow(motion_underflow),.motion_overflow(motion_overflow),.motion_invalid(motion_invalid),.motion_timeout(motion_timeout),

@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // Offline integration top, NOT a board pinout or a downloadable smoke-test top.
 // One synchronous AXI/native clock. Physical PS clock conversion/CDC is not inferred.
-module sono_axi_system #(parameter integer POWER_WAIT_CYCLES=264000001)(
+module sono_axi_system #(parameter integer POWER_WAIT_CYCLES=264000001,ADC_C16=0)(
  input wire clk,rst_n,hardware_enable,motion_arm,motion_stop,
  input wire frame_valid,input wire[2175:0]frame_data,input wire[31:0]frame_sequence,input wire frame_last,
  output wire frame_ready,output wire[31:0]buffered_count,acknowledged_sequence,
@@ -19,5 +19,5 @@ module sono_axi_system #(parameter integer POWER_WAIT_CYCLES=264000001)(
  wire bus_valid,bus_write,bus_ready,bus_error,native_irq;
  wire[7:0]bus_address;wire[31:0]bus_wdata,bus_rdata;
  axi_native_bridge bridge(.*);
- sono_motion_system #(.POWER_WAIT_CYCLES(POWER_WAIT_CYCLES)) native_system(.*, .irq(native_irq));
+ sono_motion_system #(.POWER_WAIT_CYCLES(POWER_WAIT_CYCLES),.ADC_C16(ADC_C16)) native_system(.*, .irq(native_irq));
 endmodule

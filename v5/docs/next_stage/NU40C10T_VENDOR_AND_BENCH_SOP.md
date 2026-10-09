@@ -1,0 +1,11 @@
+# Supplier inputs and bounded bench SOP
+
+Both original supplied images were inspected; their hashes and exact transcription are in `../../hardware/next_stage/20261010/VENDOR_PARAMETERS.json`. Private source photos and private paths are excluded from the public repository. The combined NU40C10T/R-2 sheet gives40.0+/-1.0kHz,110dBmin TX/-68dBmin RX (test reference conditions unknown),2200pF+/-20%,40Vp-p maximum,80+/-15deg at-6dB, work-20..80C/store-40..85C.40Vp-p is not a continuous recommended drive level. RX complete order code remains HOLD.
+
+Mechanical image: body9.8+/-0.5mm, height7.0+/-0.5mm, lead pitch5.0+/-0.5mm, diameter0.7+/-0.1mm, lead length7.0+/-0.5mm, marked polarity. At12mm pitch theoretical maximum-body clearance is1.7mm; eccentricity, tilt, solder, fixture and RX/mounting clearance must be measured. No footprint is released. Supplier ranging distance/accuracy does not establish levitation force, field quality or working volume.
+
+1. Preserve actual generator40kHz setting and measure its loaded output on CH1; measure RX on CH2 with common trigger. Record50ohm/Hi-Z, probe attenuation, actual Vpp, sample rate, record length, coupling, threshold, frequency-counter/FFT settings and SNR. A normal multimeter is not an impedance sweep.
+2. Fix the pair near5cm in a repeatable fixture with known orientation/polarity/room temperature. The39.68/40.00/40.32kHz step of0.32kHz suggests checking frequency measurement quantization/low SNR first; it is not evidence of changed resonance or a Doppler result.
+3. Use a controlled short burst at the same measured voltage and adequate settling. Sweep39..41kHz;38.5..41.5kHz optional exploration. First hold reference T and compare R units, then reference R and compare T. Keep a known pair to detect instrument drift.
+4. Record unit/batch identifiers, dimensions, measured capacitance if LCR available, voltage/current, amplitude/phase/repeats, resonance estimate and outliers. Predefine acceptable spread with independent electrical review. Do not change system carrier after a single frequency display.
+5. Begin power characterization at1/4/16channels; capture startup/peak/steady current, ringing, case/driver temperature and fault cutoff.64channels/board continuous operation and protection limits stay HOLD until measured. No such experiment was run in this session.

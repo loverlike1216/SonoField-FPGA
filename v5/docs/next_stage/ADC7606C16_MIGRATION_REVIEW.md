@@ -1,0 +1,15 @@
+# AD7606C-16 migration review
+
+Formal device direction is AD7606C-16, explicitly approved by the user. Candidate ordering string AD7606C-16BSTZ-RL and ST-64-2 native footprint still need procurement/package verification. The original B driver, B model, tests, goldens, thresholds and historical BOM/evidence remain provenance, never relabelled as C measurements.
+
+New `rtl/acquisition/ad7606c16_if.sv`, independent `tb/ad7606c16_model.sv`, Python profile and portable C adapter use ADI Rev.A software mode: OS111, PAR/SER1, STBY1, REFSEL1, RANGE0, WR1. CONFIG0x02=0x10 selects four lanes and normal conversion with status off; range registers03..06=0x11 select +/-5V single-ended; bandwidth07=0xff selects high bandwidth independently on all channels; OS08=0 and interface21=0 disable oversampling and CRC. Device ID2f device nibble2 and every setting are read back before ready. CRC-enabled acquisition is deliberately unsupported and a readback showing unexpected CRC is rejected; this is not a CRC-corruption detector.
+
+Production reset is >=4us, post-reset setup275us, initial wait2s+1cycle. Standalone and integrated digital tests may accelerate startup only; their timing is not a physical power-sequencing measurement. Four lanes map CH1/2,3/4,5/6,7/8, signed16bit, snapshot/timestamp/ACK semantics remain unchanged. 132MHz core/33MHz SCLK and800kSPS are the initial digital profile; BUSY min/max and DOUT/CS access delays in the independent device model exercise digital margins. External PVT/FPGA IO/cable timing remains HOLD.
+
+The ADC64 contract explicitly leaves pins19..22 (unused DOUT E-H) unconnected per Table23 footnote2. DB0..2 and DB12..15 tie AGND; REGCAP36/39 have separate1uF, REFCAP44/45 join and use10uF lowESR, REFIN42 uses100nF, and four AVCC pins require local bypass. These are proposed nets, not native CAD/ERC proof.
+
+Fault coverage includes wrong ID, absent/all-ones response, bandwidth mismatch, bad configuration/reserved/status, unexpected CRC enable, BUSY stuck, overlapping request, logic reset, signed edge words/channel order, timestamp and continuous32frames800kSPS. C driver additionally executes all256 bandwidth masks against an explicit host fixture. ADC-only brownout, hardware PGOOD, real CRC frames, analog anti-alias/40kHz phase/SNR, reference noise, physical power loss and supply sequencing remain NOT_VERIFIED. Acquisition cannot be released until those electrical gates close.
+
+160 temperature maps and20480 C/Python words, existing coarseTOF/phase-unwrapping/sparse solver and original capture/ACK chain are preserved. The16KiB Snapshot class is an ownership reference; existing production RAW requests are bounded240bytes and the new reference is not advertised as a hardware DMA service. At1152008N1 a16KiB payload alone takes >=1.422s, before framing; continuous800kSPS*8*16bit (12.8MB/s) is not a UART streaming claim.
+
+Sources: [ADI Rev.A](https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf), [ADI no-OS driver protocol reference](https://raw.githubusercontent.com/analogdevicesinc/no-OS/main/drivers/adc/ad7606/ad7606.c). No third-party driver implementation was copied.

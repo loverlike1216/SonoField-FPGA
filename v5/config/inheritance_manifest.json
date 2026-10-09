@@ -41,7 +41,15 @@
       "source_sha256_bytes": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
       "initial_copy_sha256_bytes": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b"
+      "v5_expected_sha256": "591030453cf86cd2c823f774a6ba4d0999ca45c16bc0c7abad2e9723b1717ab2",
+      "reviewed_adaptations": [
+        {
+          "reason": "User20261010 approved C16; parameter selects additive adapter; original B default/bench/goldens unchanged",
+          "prior_sha256": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
+          "after_sha256": "591030453cf86cd2c823f774a6ba4d0999ca45c16bc0c7abad2e9723b1717ab2",
+          "decision": "P-20261008-001"
+        }
+      ]
     },
     {
       "source": "v2/config/motion_profile.json",
@@ -71,7 +79,15 @@
       "source_sha256_bytes": "609d59d5b498e8de1f7258e465b5254a373a657338b788e808fa0cfb2fb6fd41",
       "initial_copy_sha256_bytes": "609d59d5b498e8de1f7258e465b5254a373a657338b788e808fa0cfb2fb6fd41",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "cd6ae558b5104b23b2949ac84eba608787d95d7d4658f4737c86dc3c7cf148b8"
+      "v5_expected_sha256": "a0e8322593ef61c90f90de8b601e3c8e13048b337a5bffea7f6648b62cb1051e",
+      "reviewed_adaptations": [
+        {
+          "reason": "User20261010 approved C16; parameter selects additive adapter; original B default/bench/goldens unchanged",
+          "prior_sha256": "cd6ae558b5104b23b2949ac84eba608787d95d7d4658f4737c86dc3c7cf148b8",
+          "after_sha256": "a0e8322593ef61c90f90de8b601e3c8e13048b337a5bffea7f6648b62cb1051e",
+          "decision": "P-20261008-001"
+        }
+      ]
     },
     {
       "source": "v2/config/transport_protocol.json",
@@ -967,7 +983,15 @@
       "source_sha256_bytes": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd",
       "initial_copy_sha256_bytes": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd"
+      "v5_expected_sha256": "da19bd32431a8f810d140ea0411fe26e3648d6c20fb333d8f548dfc7bdbab0f8",
+      "reviewed_adaptations": [
+        {
+          "reason": "User20261010 approved C16; parameter selects additive adapter; original B default/bench/goldens unchanged",
+          "prior_sha256": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd",
+          "after_sha256": "da19bd32431a8f810d140ea0411fe26e3648d6c20fb333d8f548dfc7bdbab0f8",
+          "decision": "P-20261008-001"
+        }
+      ]
     },
     {
       "source": "v2/rtl/sono_core.sv",
@@ -987,7 +1011,15 @@
       "source_sha256_bytes": "9e94bc2195610ea9a754f9d5b9923ef8610e061578d8db06f858086ce0b44a5b",
       "initial_copy_sha256_bytes": "9e94bc2195610ea9a754f9d5b9923ef8610e061578d8db06f858086ce0b44a5b",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "781d483af8b9b050c86f3c3806d9754fcc5629fc9ce4a9ecaba0c970bd7241de"
+      "v5_expected_sha256": "3722c029eff6bf1ba22e6a2ed41d3cf82bd9b804ef2dadf30f863d0f1b50296d",
+      "reviewed_adaptations": [
+        {
+          "reason": "User20261010 approved C16; parameter selects additive adapter; original B default/bench/goldens unchanged",
+          "prior_sha256": "781d483af8b9b050c86f3c3806d9754fcc5629fc9ce4a9ecaba0c970bd7241de",
+          "after_sha256": "3722c029eff6bf1ba22e6a2ed41d3cf82bd9b804ef2dadf30f863d0f1b50296d",
+          "decision": "P-20261008-001"
+        }
+      ]
     },
     {
       "source": "v2/rtl/sono_motion_system.sv",
@@ -997,7 +1029,15 @@
       "source_sha256_bytes": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148",
       "initial_copy_sha256_bytes": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148",
       "hash_policy": "CANONICAL_LF_UTF8",
-      "v5_expected_sha256": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148"
+      "v5_expected_sha256": "d1fdd11eaf57c0c8b0dc21a9d223ee198af16f6794a4296fb6da58f4b4824452",
+      "reviewed_adaptations": [
+        {
+          "reason": "User20261010 approved C16; parameter selects additive adapter; original B default/bench/goldens unchanged",
+          "prior_sha256": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148",
+          "after_sha256": "d1fdd11eaf57c0c8b0dc21a9d223ee198af16f6794a4296fb6da58f4b4824452",
+          "decision": "P-20261008-001"
+        }
+      ]
     },
     {
       "source": "v2/rtl/sono_top.sv",
