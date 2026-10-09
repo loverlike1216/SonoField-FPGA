@@ -4,7 +4,9 @@
 
 继承128通道/8bit相位、独立校准、原子提交、确定性共同时基、采集/校准调度、运动轨迹、PS协议/C服务/AXI桥和安全控制。算法、接口、寄存器、测试阈值不因目录整理改变。10mm换能器、12mm辐射面中心间距、100mm上下辐射面间距（90–115mm可调）、双8×8与中心原点保持不变。
 
-当前数字基线和真实工具结果见[evidence/BASELINE_VALIDATION.md](evidence/BASELINE_VALIDATION.md)。硬件事实见[hardware/ax7020](hardware/ax7020/README.md)。制造商资料描述XC7Z020-2CLG400I、PL50MHz U18、PS33.333MHz E7、1GiB DDR；这不等于本机实板/修订版已核验。132MHz是继承的内部设计目标，不是板载晶振。内部OOC时序报告不能作为整板时序验收。
+2026-10-09最新结果：[实板只读检测与BOM](evidence/board_bringup/20261009/RESULT.md)、[本次完整数字回归](evidence/baseline/board_integration_20261009/summary.json)、[BOM工作副本](hardware/bom/working/2026-10-09/README.md)、[三板原理图准备](hardware/integration_candidates/20261009/SCHEMATIC_PREPARATION.md)。确认实板AX701020.3.0、XC7Z020 JTAG、CLG400照片；DDR控制器32bit配置已读到，但容量/稳定性未知。现有SD/PL/PS程序保持原样；UART/DDR内存/PS-PL实测未运行。
+
+原数字基线与OOC结果见[evidence/BASELINE_VALIDATION.md](evidence/BASELINE_VALIDATION.md)。制造商资料描述XC7Z020-2CLG400I、PL50MHz U18、PS33.333MHz E7、1GiB DDR；完整器件等级、Rev3匹配PS配置、VCCO仍待核验。132MHz是继承的内部设计目标，不是板载晶振。内部OOC时序报告不能作为整板时序验收。
 
 ## 从任意克隆路径运行
 
@@ -38,6 +40,6 @@ $env:CC='D:/DevC++/Dev-Cpp/TDM-GCC-64/bin/gcc.exe'   # 改为本机C编译器
 
 rtl/software/firmware/tb/tests为当前源；config为配置及继承清单；simulation为显式测试输入；scripts为自包含工具；hardware/ax7020为官方来源与待核验事实；hardware/bom为未冻结的继承BOM；hardware/pcb只保留边界说明，无生产发布；build是可再生成本地工程；evidence是实际运行证据。依赖环境可位于仓库根.venv，也可用入口-Python传入绝对解释器路径。
 
-下一步先核对实际AX7020板号、修订版、器件、VCCO、官方匹配PS/DDR/时钟/XSA/BSP及接口分配，再定义单板PS-PL集成合同。不得直接下载此OOC工程，或驱动未知GPIO/外部负载。本轮没有进行板卡访问、程序下载、PCB修改或声学实测。
+下一步依据已确认的Rev3.0，获得厂家匹配PS/DDR/时钟/IO参考、完整器件等级与VCCO，说明当前运行镜像和可用内存范围；接板上UART口并资格确认ARM BSP/工具链，再做无外部负载的临时PS-PL测试。独立审核ADC/本地安全/浪涌候选，保持制造HOLD。不得下载OOC工程或驱动未知GPIO；本次只进行实板只读检测，没有程序下载、PCB修改或声学实测。
 
 默认只检索v5/shared/当前有效决策；历史仅在回归或用户要求时查看。全工程验收仍未完成。

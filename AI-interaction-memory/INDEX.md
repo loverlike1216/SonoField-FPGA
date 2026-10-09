@@ -63,3 +63,14 @@ Current checkpoint capture — 2026-10-03 / GPT-6.1 Sol High / v2: 13 actual vis
 [User-authorized v5 instruction](codex/instructions/ax7020_v5_safe_organization.md) · [actual tool flow T-20261008-001](tool-flow/T-20261008-001__v5-organization.md): VALIDATION_INPUT. Sole active version v5, AX7020; older index entries preserve original version/model provenance. External ChatGPT source SonoField-FPGA remains BLOCKED. No Work/other-agent consultation invented. Secret/privacy scan passed for this export; private raw logs/documents/backup remain local.
 
 [Updated BOM review T-20261008-002](tool-flow/T-20261008-002__bom-review.md): VALIDATION_INPUT, v5 unchanged;72-row static arithmetic PASS, electrical review REVISE/HOLD, P-20261008-001 OPEN. [GitHub byte-identity receipt](../v5/hardware/bom/submissions/2026-10-08/github_sync.json) verifies actual uploaded workbook at231ed4e. No board/PCB implementation.
+
+
+
+
+<!-- AX7020_BOARD_BOM_20261009 -->
+## Current AX7020 board/BOM integration — 2026-10-09
+
+Active v5; Stage AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT; OpenAI / GPT-6.1 Sol High (user-declared). [Session S-20261009-codex-001](codex/S-20261009-codex-001.md) · [manifest](sessions/S-20261009-codex-001.json) · [observable tool register](tool-flow/S-20261009-codex-001.md). 20 actual visible messages; cutoff 2026-10-09T02:25:35.424Z; PARTIAL. Canonical sanitized transcript SHA256 fa1c5d2d530a05f7581cd6e890822c837a3fb5b8bf738971f130bdbabe4924a5. Impact IMPLEMENTATION_INPUT.
+
+[Formal user instruction](codex/instructions/ax7020_v5_board_bom_integration.md) · [curated tool flow T-20261009-001](tool-flow/T-20261009-001__ax7020-board-bom.md), VALIDATION_INPUT, PARTIAL. No external ChatGPT/Work/other-agent consultation occurred. ChatGPT source remains BLOCKED; independent review PENDING. Original device identities/photos stay private local_raw. Current state/checkpoint supersedes older recovery scope, preserving original history.
+<!-- END_AX7020_BOARD_BOM_20261009 -->

@@ -1,13 +1,13 @@
 # Current plan — AX7020 v5
 
-1. DONE read-only directory/state/Git audit and explicit user authorization reconciliation.
-2. DONE copy186 reviewed reusable assets; isolate all runtime sources/configs/fixtures in v5.
-3. DONE full115-test digital baseline, two simulators, C/AXI, native OOC synthesis before archival.
-4. DONE recoverable Git point, original byte inventories, private untracked backup; low-risk governance snapshot archive and indexes, originals kept in place.
-5. DONE repeat full baseline after archival and in standalone v5-only workspace; exact source/behavior hashes match,3343 original non-cache files preserved.
-6. DONE reconcile CP-20261008-002 and observable AI records; engineering/checkpoint commit 39426ea96d2dd495474a7ec0db4e6b9ebc13b8cf pushed and remote verified. Delivery receipt follows as a normal commit.
-7. NEXT verify actual AX7020 revision/device/VCCO/clock and matching official PS/DDR/preset/XSA/BSP, allocate reviewed IO/transport and integration contract. No bitstream or unknown GPIO allowed before qualification.
+Stage:AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT. Model:GPT-6.1 Sol High (user-declared). Only v5 active.
 
-Do Not Change: stable core/protocol/registers/calibration separation/atomic update/safety/geometry/test criteria; frozen histories; no new version without explicit approval; do not import Robei board configurations or historical PASS. Stop if new facts require core architectural change. Default read scope v5/shared/current valid decisions only.
+1. DONE organization/standalone baseline and historical preservation from2026-10-08; no old evidence overwritten.
+2. DONE current user-authorized read-only Windows/Vivado/XSDB identification and official PS/reference inspection. Actual revision/photo+JTAG confirmed; precise grade/DDR capacity/Rev3 reference/VCCO remain open.
+3. DONE separate original-preserving BOM working copy; ADC/safety/power/I²C/63GPIO candidates and72-row audit. No formalADC substitution.
+4. DONE115Python/3696frames×4/full existing gates; candidate Icarus+XSim256frames and15offline checks. Native schematic/ ERC NOT_RUN because no live v5 EasyEDA project.
+5. CURRENT reconcile public-safe evidence, interaction records/checkpoint, normalcommit/push and byte-identity verification; leave real HardwareManager open.
+6. NEXT obtain board-matchedRev3 PS/DDR/clock/IO evidence and safe running-image ownership; connectUART1/CP2102; qualify ARM BSP/compiler; then execute conditionally authorized bounded volatile board tests.
+7. NEXT independent ADC/safety/surge/AFE/interface review and exactTX/RX datasheets/samples; approvedADC adapter must implement bandwidth init/readback without core/protocol changes. Open native v5 project for candidate schematics/realERC after facts are sufficient.
 
-2026-10-08 scoped side task: DONE review and import updated72-row AX7020/NU40C10T BOM without edits; BOM/checkpoint commit231ed4ea85a7092fc131373d24e9cb386fb57eb6 pushed; remote workbook downloaded through GitHub API and exact SHA256 verified. Receipt:v5/hardware/bom/submissions/2026-10-08/github_sync.json. Resolve package/protection/safety/passive/interface findings and OPEN P-20261008-001 before electrical release. This does not authorize implementing the companion PCB proposal or changing the retained ADC. Prior board qualification next action stays applicable.
+Do Not Change:128TX/8RX/32lanes×4used/8bit/sharedphase/calibration separation/atomic maps/registers/protocol/motion/geometry/test thresholds; frozen history/originalBOM; no permanent boot/storage/driver changes, unknownGPIO or manufacturing.132MHz is internal target, not board oscillator. Existing running image is preserved. No newversion and no externalAI approval fabricated.

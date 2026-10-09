@@ -1,136 +1,133 @@
 {
-  "checkpoint_id": "CP-20261008-003",
+  "checkpoint_id": "CP-20261009-001",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex_project\\AMD-SonoField-FPGA",
   "branch": "main",
-  "base_commit": "0f42f49443bf001a147b2d58e2ae939bbcac38ce",
-  "head_commit": "0f42f49443bf001a147b2d58e2ae939bbcac38ce",
-  "commit_scope": "Evidence-bearing source/recovery HEAD observed before this checkpoint commit; not a self-referential checkpoint commit",
+  "base_commit": "4dc8e765403561e9aff9980a54390cdbb01ea0ed",
+  "head_commit": "4dc8e765403561e9aff9980a54390cdbb01ea0ed",
+  "commit_scope": "Observed source HEAD before this evidence/checkpoint commit; reviewed working delta described below, receipt resolves checkpoint commit",
   "active_version": "v5",
-  "authorized_target_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "AX7020_V5_SAFE_ORGANIZATION_AND_STANDALONE_BASELINE",
+  "current_stage": "AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT",
   "current_model": "GPT-6.1 Sol High",
-  "created_at": "2026-10-08T11:16:56.427509+00:00",
+  "created_at": "2026-10-09T02:16:17.071733+00:00",
   "created_by": "Codex",
-  "checkpoint_reason": "BOM-only review produced sourced analog/package/protection findings; no stage/version/architecture change",
+  "checkpoint_reason": "Real AX7020 identification, full regression and original-preserving BOM/candidate milestone; hardware safety gates remain open",
   "source_of_truth": "repository",
   "status": "VALID",
   "architecture_ref": "v5/docs/architecture/SELF_CALIBRATION.md",
-  "architecture": "Host solver/trajectory -> PS C/transport boundary -> AXI PL ->128 coherent 8bit phase channels with independent calibration and atomic commits ->serializer -> future qualified drivers/TX; central ADC/calibration feedback currently simulated",
+  "architecture": "Host model/trajectory -> PS transport/C -> AXI PL -> coherent128TX 8bit requested+calibration atomic phase ->32lanes/four outputs -> future qualified drivers;8RX ADC/calibration simulated",
   "completed": [
     {
-      "item": "186 selective source/reference copies and local fixture/path isolation",
-      "status": "IMPLEMENTED"
+      "item": "AX7020 JTAG/Revision/package and existing PS/PL read-only state",
+      "status": "HARDWARE_VERIFIED",
+      "scope": "IDENTIFICATION_AND_READ_ONLY_REGISTERS_ONLY"
     },
     {
-      "item": "115Python tests/full waveform/calibration/motion3696frames×4 and C/AXI/safety/equivalence",
+      "item": "115Python/3696frames×4/waveform/calibration/C+AXI/safety/equivalence",
       "status": "SIMULATED"
     },
     {
-      "item": "Documented xc7z020clg400-2, native Vivado2025.2 own-source OOC project",
-      "status": "SYNTHESIZED"
+      "item": "IsolatedADC256frames two simulators and15candidate checks",
+      "status": "SIMULATED"
     },
     {
-      "item": "Historical original byte preservation",
+      "item": "Original-preserving BOMworkingcopy,72row package audit,63GPIO candidate/68bankchecks",
       "status": "TESTED",
-      "files": 3343
+      "scope": "OFFLINE_NOT_ELECTRICAL_RELEASE"
     },
     {
-      "item": "2026-10-08 new BOM72-row static quantity/formula checks and unchanged import",
-      "status": "TESTED",
-      "scope": "Static workbook checks only; electrical review REVISE"
+      "item": "Earlier documented-part OOC synthesis",
+      "status": "SYNTHESIZED",
+      "scope": "HISTORICAL_V5_OOC_NOT_RERUN_NO_BOARD_ROUTING"
     }
   ],
   "next_actions": [
-    "Finish scoped BOM normal GitHub sync and verify workbook bytes",
-    "Resolve reviewed BOM electrical/package/ADC issues in a separately authorized implementation task",
-    "Verify actual AX7020 revision/PS DDR/clock/XSA/BSP/IO before board integration"
+    "Finish normal commit/push and byte verification receipt",
+    "Obtain manufacturer Rev3 matched PS/DDR/clock/IO/grade and current running-image ownership",
+    "ConnectUART/qualifyARM BSP and boundedvolatilePSPL tests onlyaftergates",
+    "IndependentADC/safety/surge/interface review andTX/RXsamples",
+    "Livev5schematic/netlist/realERC afterfacts"
   ],
   "active_decisions": [
-    "Explicit user v5 authorization e8213cac-ae60-4eee-bb3e-6461d16eaf66; no v4",
-    "Preserve core behavior/interfaces/acceptance; historical board decisions do not apply automatically"
+    "ADR-035 User-approvedv5",
+    "ADR-036 currentread-only/candidateexecutionboundary"
   ],
   "blockers": [
-    "AX7020_PHYSICAL_REVISION",
-    "MATCHED_PS_DDR_XSA_BSP",
-    "PRODUCTION_IO_EXTERNAL_TIMING",
-    "REAL_TRANSPORT_AND_ACOUSTICS",
+    "V5-B01",
+    "V5-B03",
+    "V5-B04",
+    "V5-B05",
     "CHAT_MEMORY_ACCESS_BLOCKED",
-    "V5-BOM_REVIEW"
+    "V5-BOM_REVIEW",
+    "NATIVE_SCHEMATIC_ENVIRONMENT",
+    "RUNNING_IMAGE_OWNERSHIP"
   ],
   "critical_issues": [],
   "latest_validation": [
     {
-      "evidence": "v5/evidence/baseline/before_migration_complete/summary.json",
-      "status": "PASS"
+      "evidence": "v5/evidence/board_bringup/20261009/RESULT.md",
+      "status": "READ_ONLY_IDENTIFICATION_PASS",
+      "date": "2026-10-09"
     },
     {
-      "evidence": "v5/evidence/synthesis/",
-      "status": "SYNTHESIZED",
-      "scope": "OOC; not routed board timing"
+      "evidence": "v5/evidence/baseline/board_integration_20261009/summary.json",
+      "status": "PASS",
+      "date": "2026-10-09"
     },
     {
-      "evidence": "v5/evidence/baseline/COMPARISON.json",
-      "status": "PASS"
+      "evidence": "v5/evidence/board_bringup/20261009/candidate_checks.json",
+      "status": "PASS_15_OFFLINE_CHECKS",
+      "date": "2026-10-09"
+    },
+    {
+      "evidence": "v5/evidence/board_bringup/20261009/adc_candidate_xsim.log",
+      "status": "PASS_256_SIMULATED_FRAMES",
+      "date": "2026-10-09"
     }
   ],
   "known_limitations": [
-    "No physical board/PS initialization/programming/UART/GPIO/PCB test this iteration",
-    "Full-board implementation/bitstream NOT_RUN",
-    "Standalone uses same installed dependencies, not another computer",
-    "External ChatGPT BLOCKED; observable Codex transcript PARTIAL",
-    "Untracked/private originals remain local; not all local data is published",
-    "New candidate BOM not electrically released; inherited runtime hardware_parts unchanged",
-    "AD7606B analog bandwidth qualification and package/protection fixes pending; no new physical evidence"
+    "CompleteFPGAgrade/actualDDRcapacity/VCCOunknown",
+    "V2schematicvsRev3 andHynixmanualvsMicronpresetnotmatched",
+    "ExistingimageRunning,ownershipunknown;B/C/DNOT_RUN",
+    "UARTnotconnected;targetARMcompiler/BSPnotqualified",
+    "NoactualADC/safety/externaltiming/thermal/acoustics",
+    "Nativev5schematicNOT_CREATED/ ERCNOT_RUN",
+    "IndependentReviewPENDING/ChatGPTreaderBLOCKED",
+    "BOMworkingcandidateNOTreleased"
   ],
   "do_not_change": [
-    "Frozen original versions/byte hashes/history",
-    "Core algorithms/protocol/registers/calibration/atomic/safety/geometry/test thresholds",
-    "Do not import old Robei board constraints or historical PASS",
-    "No new version without explicit user approval",
-    "No board programming without reviewed integration facts"
+    "Frozenhistory/originalBOM/currentrunningimage",
+    "128TX/8RX/32lanes×4used/8bit/sharedphase/requested-calibration/atomicmap",
+    "Protocol/registers/motion/geometry/acceptance",
+    "No permanentstorage/driver/bootchange,unknownGPIO,PCBfabrication/newversion"
   ],
   "invariants": [
-    "128channels;PHASE_BITS8;common master phase",
-    "Separate requested+calibration mod256;atomic map switch",
-    "10mm candidate;12mm radiating-center pitch;100mm face gap adjustable90..115mm;dual8x8;origin center",
-    "Default Windows shell pwsh7",
-    "All runtime inputs local to v5; tool binaries/interpreter may be external"
+    "132MHz internaltarget distinctfromphysical50MHzreference",
+    "Twoindependentarraypowerbranches;AXGPIOneverpowersTX",
+    "Center/radiatingfacecoordinates12mmpitch/100mmnominal90-115gap",
+    "CandidateADCnotproductionselection",
+    "Controllerconfigurationnottopologyproof"
   ],
   "open_ai_problems": [
-    "P-20261008-001"
+    "P-20261008-001",
+    "P-20261009-001"
   ],
-  "historical_ai_problems": "AI-problem (retained original version provenance, no automatic execution)",
+  "repository_delta": [
+    "Read-onlyboardevidence",
+    "BOMworkingcopyandisolatedcandidates",
+    "CurrentstateandnewProblem/interactioncapture"
+  ],
   "evidence_refs": [
-    "shared/organization/DIRECTORY_AUDIT.md",
-    "shared/organization/VERSION_MIGRATION_PLAN.json",
-    "v5/config/inheritance_manifest.json",
-    "shared/organization/HISTORICAL_INTEGRITY.json",
-    "v5/evidence/baseline/before_migration_complete/summary.json",
-    "v5/evidence/synthesis/loaded_sources.txt",
-    "v5/hardware/bom/submissions/2026-10-08/submission.json",
-    "AI-problem/problem/P-20261008-001__adc-40khz-bandwidth.md"
+    "v5/evidence/board_bringup/20261009/RESULT.md",
+    "v5/evidence/board_bringup/20261009/windows_public.json",
+    "v5/evidence/board_bringup/20261009/photo_provenance.json",
+    "v5/evidence/baseline/board_integration_20261009/summary.json",
+    "v5/hardware/integration_candidates/20261009/official_ps_reference.json",
+    "v5/hardware/integration_candidates/20261009/connector_pinmap_candidate.csv",
+    "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx"
   ],
-  "resume_from": "Read v5/README.md and current shared state/checkpoint/plan; verify current Git then actual AX7020 platform preflight; do not scan all history",
-  "repository_delta_since_previous_checkpoint": "Unchanged new user BOM import;72-row arithmetic PASS; official ADC40kHz/package/protection findings; OPEN P-20261008-001; no source/PCB/board operation. Existing digital validation entries retained with their original evidence scope.",
-  "state_conflicts": [
-    {
-      "old": "shared activev2 and pausedv3",
-      "new": "Direct user explicitly authorizes existingv5 for AX7020",
-      "resolution": "Retain prior governance snapshot, advance only after available gates; no fabricatedv4"
-    }
-  ],
-  "provenance": [
-    "actual formal user instruction",
-    "repository source/config reviewed hashes",
-    "fresh tool outputs",
-    "original historical byte inventory",
-    "Git observed HEAD"
-  ],
-  "organization_result": "ACCEPT WITH LIMITATIONS",
-  "whole_platform_result": "REVISE",
-  "previous_checkpoint": "CP-20261008-002"
+  "resume_from": "ReadAGENTS/PROJECT_STATE/VERSION_STATE/thischeckpoint/CURRENT_PLAN/DECISIONS/BLOCKERS/ACCEPTANCE/currentevidence. VerifyGit statusandreceipt;continuev5withmatchedboardfacts,notolderboardpresets."
 }

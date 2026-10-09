@@ -6,7 +6,9 @@ Start here: [v5开发入口](v5/README.md) · [完整运行指南](指南.md) ·
 
 128-channel40kHz acoustic field with8bit programmable phase, separate per-channel calibration, atomic maps, acquisition/calibration, trajectory and PS/PL protocol infrastructure. Geometry: opposed8×8+8×8,10mm candidate emitters,12mm radiating-center pitch, nominal100mm face-to-face gap adjustable90–115mm, origin at geometric center. 50mg EPS remains a staged final physical target, not a demonstrated result.
 
-Current available digital gates pass; native documented-part OOC synthesis is complete. Actual AX7020 revision, production IO/PS platform, full board timing, host-board runtime and physical levitation remain unverified. Organization result ACCEPT WITH LIMITATIONS; whole platform REVISE.
+2026-10-09: actual AX7020 PCB AX701020.3.0, XC7Z020 JTAG and CLG400 photo confirmed. The existing PL/PS/SD image was preserved. Full 115-test/four-run digital baseline passes again. Full FPGA grade, DDR capacity, revision-matched PS platform, VCCO, actual UART/PS-PL and acoustic operation remain unverified; whole platform REVISE, electrical/manufacturing HOLD.
+
+Latest [board/BOM results](v5/evidence/board_bringup/20261009/RESULT.md) · [separate BOM working copy](v5/hardware/bom/working/2026-10-09/) · [three-board preparation](v5/hardware/integration_candidates/20261009/SCHEMATIC_PREPARATION.md). No core RTL or formal ADC selection changed. Native v5 schematic and ERC have not run.
 
 Root shared/ and AI records hold cross-version governance/provenance; v5/ is the sole active implementation; archive/ is frozen indexed history. v1/v2 and referenced old hardware/PCB/evidence remain at original locations to preserve history, excluded from default v5 builds/search. Paused v3 is incomplete local history and is not claimed published/validated; no v4 exists. Original private/local assets and generated caches are intentionally not mirrored to public GitHub.
 

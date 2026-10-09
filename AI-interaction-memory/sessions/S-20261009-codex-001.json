@@ -1,0 +1,165 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "thread_id": "01a0b538-9430-7561-9ba4-623f57501f43",
+  "session_id": "S-20261009-codex-001",
+  "current_stage": "AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT",
+  "model": "GPT-6.1 Sol High",
+  "model_provenance": "USER_DECLARED",
+  "sync_status": "PARTIAL",
+  "source_file": "rollout-2026-09-18T23-52-59-01a0b538-9430-7561-9ba4-623f57501f43.jsonl",
+  "started_at": "2026-10-08T11:20:45.157Z",
+  "previous_cutoff": "2026-10-08T11:19:15.042Z",
+  "cutoff": "2026-10-09T02:25:35.424Z",
+  "compaction_present": true,
+  "incomplete_tail": false,
+  "source_line_count": 10492,
+  "message_count": 20,
+  "tool_call_count": 84,
+  "messages": [
+    {
+      "id": "msg_0eb371c764fa1166016ac77c5aa75c87d09ef3160e27ad0d34",
+      "role": "assistant",
+      "time": "2026-10-08T11:20:45.157Z",
+      "source_line": 9767,
+      "sha256": "4ea1cf733b82769f3f149420685447f22ef755a5eddac89bbbacbff6a41f1d19"
+    },
+    {
+      "id": "msg_01a11e44-4954-7d92-8b41-c370f0c81b9d",
+      "role": "user",
+      "time": "2026-10-09T01:25:54.134Z",
+      "source_line": 9786,
+      "sha256": "8b04faecac8230e5f4a98a4352e1f3f6c9392aae72ab77ab32bcf654b1f83eef"
+    },
+    {
+      "id": "msg_01a11e44-4961-7ba0-adf9-7fcb4c462aaa",
+      "role": "user",
+      "time": "2026-10-09T01:25:54.145Z",
+      "source_line": 9790,
+      "sha256": "fd02e491279cf3f5e7a5cf100143825b838ad36806ebb221e657bdc3efe61ef7"
+    },
+    {
+      "id": "msg_01a11e44-4964-7c52-ae91-e58e8648ea7e",
+      "role": "user",
+      "time": "2026-10-09T01:25:54.148Z",
+      "source_line": 9792,
+      "sha256": "e1c1393c7284094ec0d9401ec6863ccb6c70a16e9f87c34e2d86e524197d3aa1"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac842ab27b087d0bf7b124533c96f31",
+      "role": "assistant",
+      "time": "2026-10-09T01:26:04.232Z",
+      "source_line": 9795,
+      "sha256": "94993f9a40f7e3b0e48940ce241caa27f5963d7987039edc060e8681141f4b54"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac842ff653087d0b9c7f63aca61ea80",
+      "role": "assistant",
+      "time": "2026-10-09T01:27:28.945Z",
+      "source_line": 9827,
+      "sha256": "b938e62d74b30ec4ad35a8d03ca628498c277b4fb52f4c335c7276036baefc15"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac843d23eb887d0bac3bb0132e87cb7",
+      "role": "assistant",
+      "time": "2026-10-09T01:30:59.416Z",
+      "source_line": 9855,
+      "sha256": "7074e7091d6644e5b4baec754ff3289b4f308b190a13088d0796532ae0e894fb"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac8441d02a487d08ecd76ed923517c8",
+      "role": "assistant",
+      "time": "2026-10-09T01:32:14.800Z",
+      "source_line": 9894,
+      "sha256": "981c2396e4b1f7b0f9e73086c471323135c3d575ed65967e7106c1eb71953709"
+    },
+    {
+      "id": "msg_01a11e4a-83a0-7a42-b6af-8dbfbb34588d",
+      "role": "user",
+      "time": "2026-10-09T01:32:42.272Z",
+      "source_line": 9913,
+      "sha256": "931e77410a433fd89d07feb997234fd2140f53710ec3b10d5bd0e0a7360775e8"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac8443e0ee087d0a3f7c84a9adc95fe",
+      "role": "assistant",
+      "time": "2026-10-09T01:32:47.351Z",
+      "source_line": 9918,
+      "sha256": "a326e72ed56fe592d44002dea1f8aae679793dfd5b479053e0015fe57253ddf2"
+    },
+    {
+      "id": "msg_01a11e4b-2504-7742-819e-dddeb5f52b5f",
+      "role": "user",
+      "time": "2026-10-09T01:33:23.588Z",
+      "source_line": 9931,
+      "sha256": "fd02e491279cf3f5e7a5cf100143825b838ad36806ebb221e657bdc3efe61ef7"
+    },
+    {
+      "id": "msg_01a11e4b-2676-76e2-bbba-ed97ccba3952",
+      "role": "user",
+      "time": "2026-10-09T01:33:23.961Z",
+      "source_line": 9933,
+      "sha256": "fa5bc84579ec33d3d7e816121c9f3271b462f2beb3405c1a140c1ea6b0f428f4"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac8448f580887d088a036e160a9a46c",
+      "role": "assistant",
+      "time": "2026-10-09T01:34:09.523Z",
+      "source_line": 9955,
+      "sha256": "b8e1c69d880bfd77b56d8562ab6f6338d4aa49d956421d067d6d08096e6068b0"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac845aa729c87d0892a850ba4232147",
+      "role": "assistant",
+      "time": "2026-10-09T01:38:52.767Z",
+      "source_line": 10011,
+      "sha256": "918d4871f352072bcbe0f07e6a155fa6cb249e64f671a69b522d07ee391b354f"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac846d803f087d0aa86704558a14de1",
+      "role": "assistant",
+      "time": "2026-10-09T01:43:54.093Z",
+      "source_line": 10065,
+      "sha256": "c8a8212210eec7d367a2cea14d8b77b67042b6e605660e8b3fbc4a36f215e072"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac84aae16f487d0a8681982e91f9b0f",
+      "role": "assistant",
+      "time": "2026-10-09T02:00:16.231Z",
+      "source_line": 10130,
+      "sha256": "643fdda81da8476f2459f77a09b5cd20cc44c482419d7c9c67cf5569b2e5c57f"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac84c070cc487d08b6ded64556d5d5d",
+      "role": "assistant",
+      "time": "2026-10-09T02:06:00.841Z",
+      "source_line": 10191,
+      "sha256": "781060b14c73da5447b9e5b993d541f823aa6d476cf222c5073a1049f806c704"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac84c71699487d08fd811b909b0f562",
+      "role": "assistant",
+      "time": "2026-10-09T02:07:47.098Z",
+      "source_line": 10247,
+      "sha256": "7b7eeb225ad2a163810ec0d4e278df5d83141c76407246ed39680de7d4b8c75b"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac84dcc524487d0acac98c6341da6a4",
+      "role": "assistant",
+      "time": "2026-10-09T02:13:34.130Z",
+      "source_line": 10345,
+      "sha256": "d5baa24eefc57466a2ed39f740d5b6828207b1d068177158e624b83818e8e66e"
+    },
+    {
+      "id": "msg_0eb371c764fa1166016ac850618fb887d0be3059681f978e72",
+      "role": "assistant",
+      "time": "2026-10-09T02:24:36.424Z",
+      "source_line": 10467,
+      "sha256": "b203445c2bfd564e4891554347d2f67af0d95e89b38276e1f2097559b5e3d104"
+    }
+  ],
+  "files": {
+    "codex/S-20261009-codex-001.md": "fa1c5d2d530a05f7581cd6e890822c837a3fb5b8bf738971f130bdbabe4924a5",
+    "tool-flow/S-20261009-codex-001.md": "e4a1ceb07c59863504d0a6dfc6eb29d181b268004ec8ed5a76644d265d2e9158"
+  }
+}

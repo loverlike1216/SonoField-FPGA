@@ -78,3 +78,10 @@ Additional DDR evidence gate from direct user requirement; no existing Acceptanc
 ## Current AX7020 v5 organization gate — 2026-10-08
 
 The preceding criteria/results retain historical version scope. New user-authorized scope: safe organization and available AX7020 v5 baseline, without lowering inherited algorithm/protocol tests. Required:115 Python tests/full motion4runs3696frames/waveform+calibration/C+AXI/safety+equivalence pass before and after archival; isolated v5-only run and exact source/behavior hashes; native documented-part OOC synthesis/reopen; historical hashes and recoverable commit; state/search scope and Git sync. Evidence: v5/evidence/BASELINE_VALIDATION.md and baseline/COMPARISON.json. Available gates PASS. Independent tool cross-check Icarus+XSim, no external AI review fabricated. Physical PS/IO/UART/route/levitation NOT_VERIFIED; full-project ACCEPT forbidden. Organization ACCEPT WITH LIMITATIONS; whole platform REVISE.
+
+
+## Current AX7020 v5 board/BOM integration gate — 2026-10-09
+
+User-authorized task scope (attachment4b78522d) supplements, never lowers inherited core criteria. Read-only actualJTAG/PSregister identification complete; full115test/3696frame×4 regressionPASS; isolatedADC256frames withIcarus+XSim and15offline checksPASS; originalBOM unchanged,workingcopy/source/audit prepared. Detailed outcomes:v5/evidence/board_bringup/20261009/RESULT.md.
+
+ActualDDR memory/UART/PSPL/AXIboardloop,fullboardroute/externaltiming,analog/safety/thermal/acoustic andnativeERC NOT_RUN. Nativev5schematicnotcreated. Independentreviewpending. V5-B01/B03/B04/B05/BOM_REVIEW remainpartially/open; no full-projectACCEPT. Whole platform REVISE; PCB electrical/manufacturingHOLD. An original-preserving offline candidate is not an electrical freeze.

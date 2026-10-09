@@ -44,3 +44,14 @@ vivado_pid*.str
 
 # Vivado runtime state retained locally, excluded from delivery.
 dfx_runtime.txt
+
+# Private board identities, vendor original documents and EDA/runtime captures.
+v5/**/local_raw/
+v5/hardware/bom/working/2026-10-09/preview/
+
+# Retain v5 baseline summaries and canonical compressed traces, not simulator products.
+v5/evidence/baseline/*/gui_*/rtl/
+v5/evidence/baseline/*/gui_*/trajectory_*.json
+v5/evidence/baseline/*/gui_*/*_motion_ack.txt
+v5/evidence/baseline/*/faults/*.vvp
+v5/evidence/baseline/*/faults/xsim.dir/

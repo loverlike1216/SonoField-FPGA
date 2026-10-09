@@ -8,7 +8,7 @@
   "active_version": "v5",
   "current_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "AX7020_V5_SAFE_ORGANIZATION_AND_STANDALONE_BASELINE",
+  "current_stage": "AX7020_BOARD_DETECTION_BOM_REVISION_AND_INTEGRATION_PREFLIGHT",
   "status": "PROJECT_ACTIVE",
   "execution": "PROJECT_ACTIVE",
   "current_model": "GPT-6.1 Sol High",
@@ -17,7 +17,8 @@
   "chat_access_status": "CHAT_MEMORY_ACCESS_BLOCKED",
   "chat_sync_status": "BLOCKED",
   "open_ai_problems": [
-    "P-20261008-001"
+    "P-20261008-001",
+    "P-20261009-001"
   ],
   "historical_problem_index": "AI-problem/",
   "problem_revalidation": "No historical board-specific decision automatically executed on AX7020",
@@ -34,7 +35,7 @@
   "organization_result": "ACCEPT WITH LIMITATIONS",
   "whole_platform_result": "REVISE",
   "digital_validation": "PASS",
-  "digital_evidence": "v5/evidence/BASELINE_VALIDATION.md",
+  "digital_evidence": "v5/evidence/baseline/board_integration_20261009/summary.json",
   "reproducibility": "PASS_OLD_WORKTREE_INDEPENDENCE_SAME_INSTALLED_DEPENDENCIES",
   "hardware_verified": false,
   "board": "ALINX AX7020",
@@ -73,12 +74,12 @@
       "evidence": "Same Git origin, HEAD and preserved staged changes found under renamed parent; original path absent"
     }
   ],
-  "latest_context_checkpoint": "CP-20261008-003",
+  "latest_context_checkpoint": "CP-20261009-001",
   "checkpoint_status": "VALID",
-  "next_action": "Verify actual AX7020 revision and official matching PS/DDR/clock/IO platform; define board integration contract before implementation or programming",
-  "updated_at": "2026-10-08T11:19:17.264443+00:00",
-  "checkpoint_commit": "231ed4ea85a7092fc131373d24e9cb386fb57eb6",
-  "checkpoint_evidence_base_commit": "0f42f49443bf001a147b2d58e2ae939bbcac38ce",
+  "next_action": "Obtain manufacturer revision-matched PS/DDR/clock/IO facts and current running-image ownership; connect real UART, qualify target BSP before safe volatile integration; independently review ADC/safety candidates",
+  "updated_at": "2026-10-09T02:16:17.071733+00:00",
+  "checkpoint_commit": null,
+  "checkpoint_evidence_base_commit": "4dc8e765403561e9aff9980a54390cdbb01ea0ed",
   "last_remote_verified_source_commit": "231ed4ea85a7092fc131373d24e9cb386fb57eb6",
   "last_remote_verified_at": "2026-10-08T11:19:17.264443+00:00",
   "git_sync_receipt": "shared/organization/GIT_SYNC.json",
@@ -86,5 +87,16 @@
   "latest_bom_review": "v5/hardware/bom/submissions/2026-10-08/submission.json",
   "latest_bom_review_status": "REVISE",
   "bom_electrical_release": "HOLD",
-  "latest_bom_git_sync": "v5/hardware/bom/submissions/2026-10-08/github_sync.json"
+  "latest_bom_git_sync": "v5/hardware/bom/submissions/2026-10-08/github_sync.json",
+  "checkpoint_commit_scope": "Resolved by the post-push receipt; current checkpoint observes base commit and uncommitted reviewed delta",
+  "board_readonly_verified": true,
+  "board_readonly_evidence": "v5/evidence/board_bringup/20261009/RESULT.md",
+  "latest_bom_working_copy": "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx",
+  "latest_bom_working_status": "WORKING_CANDIDATE_NOT_PROCUREMENT_RELEASE",
+  "hardware_scope": "v5/hardware/integration_candidates/20261009/current_hardware_scope.json",
+  "production_adc": "AD7606BBSTZ-RL",
+  "recommended_adc": "AD7606C-16BSTZ-RL_PENDING_REVIEW_AND_USER_APPROVAL",
+  "native_schematic": "NOT_CREATED_NO_LIVE_V5_PROJECT",
+  "native_erc": "NOT_RUN",
+  "independent_review": "PENDING"
 }

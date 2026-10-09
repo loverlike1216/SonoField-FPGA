@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "model": "GPT-6.1 Sol High",
+  "checks": [
+    {
+      "name": "version_stage_continuity",
+      "status": "PASS",
+      "detail": "No version upgrade or architecture change"
+    },
+    {
+      "name": "full_baseline_pass",
+      "status": "PASS",
+      "detail": "Actual archived full baseline outcomes"
+    },
+    {
+      "name": "production_sources_unchanged_after_baseline",
+      "status": "PASS",
+      "detail": {
+        "files": 90,
+        "hash_scope": "UTF-8 LF-normalized text, identical to run_baseline.py"
+      }
+    },
+    {
+      "name": "unverified_physical_fields_not_promoted",
+      "status": "PASS",
+      "detail": "JTAG/controller width does not prove grade, topology, capacity or VCCO"
+    },
+    {
+      "name": "original_bom_unchanged",
+      "status": "PASS",
+      "detail": "Original submission byte identity"
+    },
+    {
+      "name": "candidate_package_rows_complete",
+      "status": "PASS",
+      "detail": "All rows have explicit package/procurement disposition; native library check still absent"
+    },
+    {
+      "name": "adc_candidate_icarus.log",
+      "status": "PASS",
+      "detail": "Actual self-checking simulator marker"
+    },
+    {
+      "name": "adc_candidate_xsim.log",
+      "status": "PASS",
+      "detail": "Actual self-checking simulator marker"
+    },
+    {
+      "name": "candidate_checks_and_release_scope",
+      "status": "PASS",
+      "detail": "Offline tests do not release hardware"
+    },
+    {
+      "name": "open_problem_hash",
+      "status": "PASS",
+      "detail": "No fabricated Decision or stale body hash"
+    },
+    {
+      "name": "checkpoint_snapshot_matches",
+      "status": "PASS",
+      "detail": "Latest and archived checkpoint agree at publication"
+    },
+    {
+      "name": "frozen_tracked_history_unchanged",
+      "status": "PASS",
+      "detail": "No frozen tracked source/PCB change; untracked preexisting user assets excluded"
+    },
+    {
+      "name": "ax7020_readonly.tcl_no_mutating_command",
+      "status": "PASS",
+      "detail": "Read-only audit only; not a general Tcl safety verifier"
+    },
+    {
+      "name": "ax7020_ps_readonly.tcl_no_mutating_command",
+      "status": "PASS",
+      "detail": "Read-only audit only; not a general Tcl safety verifier"
+    },
+    {
+      "name": "ax7020_results_gui.tcl_no_mutating_command",
+      "status": "PASS",
+      "detail": "Read-only audit only; not a general Tcl safety verifier"
+    },
+    {
+      "name": "checkpoint_evidence_exists",
+      "status": "PASS",
+      "detail": "All explicit current evidence references resolve"
+    }
+  ],
+  "scope": "REPOSITORY_INTEGRITY_ONLY",
+  "hardware_acceptance": "REVISE",
+  "manufacturing": "HOLD",
+  "fake_implementation_review": {
+    "scope": "Current rtl/software/firmware/candidate source grep",
+    "findings": [
+      "No new TODO/FIXME/stub/fake implementation found in active production sources.",
+      "disabled matches are safety/UI states; real serial map capability intentionally disabled until board integration, not a passed runtime feature.",
+      "Candidate ROM and functional safety abstraction explicitly incomplete as electrical/production implementation; native schematic/real hardware remain NOT_RUN."
+    ]
+  }
+}

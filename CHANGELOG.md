@@ -128,3 +128,13 @@ Added user-designated parameter_detection report/scripts/public query responses/
 ## 2026-10-08 — authorized AX7020 v5 safe organization
 
 Copied186 reviewed source/reference assets; isolated paths and explicit synthetic fixtures; full115 tests and dual-simulator digital gates pass before/after and standalone. Native documented-part OOC synthesis completed. Original3343 non-cache files unchanged; prior governance snapshots/indexes archived, no source move/deletion. v5 is active, v1/v2 frozen, v3 paused, v4 absent. Physical integration NOT_VERIFIED. Current model GPT-6.1 Sol High.
+
+
+## v5 — AX7020 read-only board/BOM integration (2026-10-09)
+
+- Confirm actualRev3.0/XC7Z020/CLG400/JTAG; retain unknown grade/capacity/VCCO and reference conflicts.
+- Preserve existing runningSD/PL/PS; no download,reset,init,RAMwrite,drivers,boot orPCB edits.
+- Repeat full115test/3696frames×4 baseline; add isolatedADC256frame/two-simulator and15offline candidatechecks.
+- Keep originalBOM byte-identical; export separate workingcopy,72-row package audit,63/68GPIO map,ADC/safety/power/interface preparation.
+- No formalADCchange/nativev5schematic/ERC/physicalfeedback result claimed; electricalreleaseHOLD; wholeplatformREVISE.
+- Persist source/provenance/observableAI/checkpoint and normalGitHub sync. Stagechanges,version remainsv5.

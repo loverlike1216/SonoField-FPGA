@@ -1,11 +1,11 @@
 {
   "board": "ALINX AX7020",
   "active_version": "v5",
-  "classification": "MANUFACTURER_DOCUMENTATION_NOT_PHYSICAL_VERIFICATION",
+  "classification": "MIXED_EVIDENCE_EACH_FIELD_SCOPED",
   "documented_part": "XC7Z020-2CLG400I",
   "engineering_ooc_part": "xc7z020clg400-2",
   "physical_part": null,
-  "physical_board_revision": null,
+  "physical_board_revision": "AX701020.3.0 / PCB Revision 3.0",
   "documented_pl_clock_hz": 50000000,
   "documented_pl_clock_pin": "U18",
   "documented_ps_clock_hz": 33333000,
@@ -16,7 +16,7 @@
   "actual_io_voltage": null,
   "production_xdc": null,
   "uart_com": null,
-  "hardware_access_authorized_this_task": false,
+  "hardware_access_authorized_this_task": true,
   "source": "https://github.com/alinxalinx/AX7020_2023.1/tree/fcf1e4a239b0f47e8ee95dfde7c2eedc5685c327",
   "manual": "https://ax7020-20231-v101.readthedocs.io/zh-cn/latest/AX7020UserManual_CN/AX7020UserManual.html",
   "not_inherited": [
@@ -25,5 +25,24 @@
     "512MiB D9PSK board candidate",
     "J3-J6 connector assignments",
     "old board XDC/preset"
-  ]
+  ],
+  "revision_evidence": "USER_DECLARATION_AND_BACK_PHOTO",
+  "physical_package": "CLG400_PHOTO",
+  "observed_family": "Zynq-7000 / XC7Z020",
+  "observed_jtag_idcode": "0x23727093",
+  "observed_arm_dap_idcode": "0x4BA00477",
+  "observed_jtag_adapter": "Digilent JTAG-HS1 / FTDI VID0403 PID6014",
+  "ft2232_confirmed": false,
+  "observed_pl_done": true,
+  "observed_cpu_state": "BOTH_CORTEX_A9_RUNNING",
+  "observed_boot_mode": "0x5_SD",
+  "observed_ddrc_ctrl": "0x00000081",
+  "observed_ddrc_ctrl_reg1": "0x0000003E",
+  "observed_controller_bus_width_bits": 32,
+  "actual_speed_temperature_grade": null,
+  "hardware_scope": "READ_ONLY_NO_INITIALIZATION_DOWNLOAD_OR_RAM_ACCESS",
+  "reference_revision_match": "NOT_VERIFIED_V2_SCHEMATIC_VS_REV3_PHOTO",
+  "reference_ddr_part_conflict": "Manual H5TQ4G63AFR-PBC vs hello XSA MT41J256M16 RE-125; actual topology not matched",
+  "sysmon_measurement_valid": false,
+  "evidence": "v5/evidence/board_bringup/20261009/RESULT.md"
 }

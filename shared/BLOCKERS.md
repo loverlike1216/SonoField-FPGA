@@ -136,3 +136,18 @@ No organization/source-path blocker remains after real gates. These blockers pre
 ## Current v5 BOM review — 2026-10-08
 
 V5-BOM_REVIEW: REVISE / electrical release HOLD. Source and findings:v5/hardware/bom/submissions/2026-10-08/submission.json. ADP7118 wrong package; TVS/eFuse surge coordination; AD7606B40kHz bandwidth(P-20261008-001 OPEN); exactTX/RX specifications; external timing/pin map/powered-off safety and passive-net qualification. No new hardware/PCB test. Earlier v2 blockers above retain historical board scope.
+
+
+## Current AX7020 v5 board/BOM integration — 2026-10-09
+
+This section supersedes earlier AX7020 task statuses only; historical Robei/v2 facts above remain in their original scope. Recording model GPT-6.1 Sol High.
+
+- V5-B01 PARTIALLY_RESOLVED: real AX7020/Rev3.0,XC7Z020 JTAG andCLG400 photo confirmed. Complete speed/temp grade, measuredVCCO,Rev3connector/clock match remain open. No productionXDC.
+- V5-B03 OPEN: DDR controller currently32bit/released, actual capacity/stability unknown. OfficialV2.0schematic versusRev3.0, Hynixmanual versusMicronpreset and unowned runningSDimage require qualification. NoCOM; UART/ARM BSP/realPSPL NOT_RUN. P-20261009-001 OPEN.
+- V5-B04 OPEN: external66MHz min/max/clockfanout/cable,ADC analog response,localdefault-off/powercut/rearm/surge/thermal not measured. Functional candidates are not electrical acceptance.
+- V5-B05 OPEN: NU40C10T batch and exactRX model,polarity/gain/phase/physicaltrap/mass milestones absent.
+- V5-BOM_REVIEW OPEN: workingcopy fixesADPtext/source/duplication, proposesADCC/softwarehighbandwidth andAXC4+4+2; ADCformalapproval pending P-20261008-001. Surge remainsunqualified,completeMPNs/nativepin-levelnetlist/safety review missing.
+- NATIVE_SCHEMATIC_ENVIRONMENT OPEN: no EasyEDA process/bridge/v5 project; offline preparation done,ERC NOT_RUN. No legacyPCB edit.
+- CHAT_MEMORY_ACCESS_BLOCKED / INDEPENDENT_REVIEW_PENDING: no real externalreader/reviewer; no fabricatedapproval.
+
+Evidence:v5/evidence/board_bringup/20261009/RESULT.md; v5/evidence/baseline/board_integration_20261009/summary.json; v5/hardware/integration_candidates/20261009/. No driver fault/board defect inferred. Real HardwareManager left connected. B/C/D volatile gates were not passed by the read-only results.
