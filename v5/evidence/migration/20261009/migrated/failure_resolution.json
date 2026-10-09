@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_ATTEMPT_PRESERVED",
+  "source_snapshot": "fa3b019c29a927a9fd41c8e4b54496ead5ed1ee1",
+  "failed_gate": "motion_full/python_tests",
+  "test_count": 115,
+  "failure_assertions": 9,
+  "root_cause": "New config-only Tcl path guard rejected original test fixtures in this same v5 build scratch before established device/provenance gates",
+  "resolution": "Allow only this-clone config OR build scratch; no acceptance/test/golden/core changes",
+  "retry_output": "evidence/migration/20261009/migrated_retry1",
+  "original_test_files_changed": false
+}

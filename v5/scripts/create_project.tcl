@@ -5,7 +5,10 @@ if {[llength $argv] < 1 || [llength $argv] > 3 || ![file exists [lindex $argv 0]
 }
 set root [file normalize [file join [file dirname [info script]] ..]]
 set configuration [file normalize [lindex $argv 0]]
-if {[string first "${root}/config/" $configuration] != 0} {error "Configuration must belong to this v5 clone"}
+# Temporary validation configurations also live in this clone's build scratch.
+# This preserves the original negative part/provenance checks without loading
+# any configuration from another workspace or from the frozen archive.
+if {[string first "${root}/config/" $configuration] != 0 && [string first "${root}/build/" $configuration] != 0} {error "Configuration must belong to this v5 clone config or build scratch"}
 set run_id [clock seconds]
 set report_dir [file normalize [file join $root evidence migration manual_ooc_$run_id]]
 set build_dir [file normalize [file join $root build vivado_$run_id]]
