@@ -68,7 +68,7 @@
   "checkpoint_status": "VALID",
   "next_action": "User reviews concrete Draft PR, evidence, rollback and permanent path; after explicit approval reconcile remote, ordinary merge and independently verify remote main before promotion",
   "updated_at": "2026-10-09T13:53:22.176049+08:00",
-  "checkpoint_commit": null,
+  "checkpoint_commit": "04947ce7a1724af28abbfc23dc9fb0aca50ac975",
   "latest_bom_submission": "v5/hardware/bom/submissions/2026-10-08/BOM_AX7020_NU40C10T_2026-10-08.xlsx",
   "latest_bom_review": "v5/hardware/bom/submissions/2026-10-08/submission.json",
   "bom_electrical_release": "HOLD",
@@ -101,5 +101,6 @@
   "online_ci": "PASS_PUSH_AND_PR_UBUNTU_STRUCTURAL_ONLY",
   "publication_receipt": "shared/migration/PUBLICATION_RECEIPT.json",
   "checkpoint_base_commit": "f014214fb8db554fb3df9ac971ac759d683447a5",
-  "checkpoint_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json"
+  "checkpoint_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
+  "checkpoint_commit_scope": "Commit containing exact current CP-004 machine JSON; Markdown header typo corrected subsequently with immutable-snapshot errata"
 }
