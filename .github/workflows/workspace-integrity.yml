@@ -2,7 +2,7 @@ name: v5 workspace integrity
 on:
   pull_request:
   push:
-    branches: [main, chore/v5-ax7020-workspace-isolation, 'feat/v5-*', 'codex/v5-historical-*', 'codex/v5-ad7606c16-*']
+    branches: [main, chore/v5-ax7020-workspace-isolation, 'feat/v5-*', 'codex/v5-historical-*', 'codex/v5-ad7606c16-*', 'codex/v5-hardware-*']
 permissions:
   contents: read
 jobs:
@@ -29,6 +29,12 @@ jobs:
           python v5/scripts/check_structure.py
           python v5/scripts/check_migration.py
           python v5/scripts/check_prepcb_preservation.py
+      - name: Hardware design models and independent contract audit (offline)
+        env:
+          PYTHONPATH: v5
+        run: |
+          python -m unittest discover -s v5/tests -p test_hardware_design.py -v
+          python v5/scripts/validate_hardware_design.py --output v5/build/hardware_ci_validation.json
       - name: Frozen Git metadata and current scope (no historical source read)
         env:
           FREEZE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}

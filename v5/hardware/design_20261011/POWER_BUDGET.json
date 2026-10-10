@@ -1,0 +1,863 @@
+{
+  "budgets": [
+    {
+      "source": "ARRAY_12V_40W",
+      "rated_w": 40.0,
+      "headroom": 0.2,
+      "derating_assumption": 1.0,
+      "allowed_w": 33.333333333333336,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "ARRAY_12V_40W",
+      "rated_w": 40.0,
+      "headroom": 0.2,
+      "derating_assumption": 0.8,
+      "allowed_w": 26.666666666666668,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "ARRAY_12V_40W",
+      "rated_w": 40.0,
+      "headroom": 0.3,
+      "derating_assumption": 1.0,
+      "allowed_w": 30.769230769230766,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "ARRAY_12V_40W",
+      "rated_w": 40.0,
+      "headroom": 0.3,
+      "derating_assumption": 0.8,
+      "allowed_w": 24.615384615384613,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "ARRAY_12V_60W",
+      "rated_w": 60.0,
+      "headroom": 0.2,
+      "derating_assumption": 1.0,
+      "allowed_w": 50.0,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "ARRAY_12V_60W",
+      "rated_w": 60.0,
+      "headroom": 0.2,
+      "derating_assumption": 0.8,
+      "allowed_w": 40.0,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "ARRAY_12V_60W",
+      "rated_w": 60.0,
+      "headroom": 0.3,
+      "derating_assumption": 1.0,
+      "allowed_w": 46.15384615384615,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "ARRAY_12V_60W",
+      "rated_w": 60.0,
+      "headroom": 0.3,
+      "derating_assumption": 0.8,
+      "allowed_w": 36.92307692307692,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "CENTRAL_USB_5V3A",
+      "rated_w": 15.0,
+      "headroom": 0.2,
+      "derating_assumption": 1.0,
+      "allowed_w": 12.5,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "CENTRAL_USB_5V3A",
+      "rated_w": 15.0,
+      "headroom": 0.2,
+      "derating_assumption": 0.8,
+      "allowed_w": 10.0,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "CENTRAL_USB_5V3A",
+      "rated_w": 15.0,
+      "headroom": 0.3,
+      "derating_assumption": 1.0,
+      "allowed_w": 11.538461538461538,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    },
+    {
+      "source": "CENTRAL_USB_5V3A",
+      "rated_w": 15.0,
+      "headroom": 0.3,
+      "derating_assumption": 0.8,
+      "allowed_w": 9.23076923076923,
+      "total_w": null,
+      "motional_w": null,
+      "status": "HOLD_MISSING_CONTINUOUS_LOAD_AND_TEMPERATURE_DERATING"
+    }
+  ],
+  "sensitivity": [
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.12809871360000002
+    },
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.25619742720000005
+    },
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 0.5123948544000001
+    },
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.13138329600000004
+    },
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.2627665920000001
+    },
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 0.5255331840000002
+    },
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.13466787840000002
+    },
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.26933575680000005
+    },
+    {
+      "C_nf": 1.76,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 0.5386715136000001
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.15814656000000002
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.31629312000000004
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 0.6325862400000001
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.16220160000000003
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.32440320000000006
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 0.6488064000000001
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.16625664
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.33251328
+    },
+    {
+      "C_nf": 1.76,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 0.66502656
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.19135733759999998
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.38271467519999997
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 0.7654293503999999
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.196263936
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.392527872
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 0.785055744
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.2011705344
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.4023410688
+    },
+    {
+      "C_nf": 1.76,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 0.8046821376
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.16012339200000003
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.32024678400000006
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 0.6404935680000001
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.16422912000000003
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.32845824000000007
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 0.6569164800000001
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.16833484800000004
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.3366696960000001
+    },
+    {
+      "C_nf": 2.2,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 0.6733393920000001
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.19768320000000003
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.39536640000000006
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 0.7907328000000001
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.20275200000000002
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.40550400000000003
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 0.8110080000000001
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.20782080000000003
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.41564160000000006
+    },
+    {
+      "C_nf": 2.2,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 0.8312832000000001
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.239196672
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.478393344
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 0.956786688
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.24532991999999998
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.49065983999999996
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 0.9813196799999999
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.25146316799999996
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.5029263359999999
+    },
+    {
+      "C_nf": 2.2,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 1.0058526719999998
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.19214807040000004
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.3842961408000001
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 0.7685922816000001
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.19707494400000003
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.39414988800000006
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 0.7882997760000001
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.20200181760000005
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.4040036352000001
+    },
+    {
+      "C_nf": 2.64,
+      "V": 10.8,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 0.8080072704000002
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.23721984000000002
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.47443968000000003
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 0.9488793600000001
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.24330240000000003
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.48660480000000006
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 0.9732096000000001
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.24938496000000002
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.49876992000000003
+    },
+    {
+      "C_nf": 2.64,
+      "V": 12.0,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 0.9975398400000001
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 0.25,
+      "capacitive_w": 0.2870360064
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 0.5,
+      "capacitive_w": 0.5740720128
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 39000.0,
+      "active": 1.0,
+      "capacitive_w": 1.1481440256
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 0.25,
+      "capacitive_w": 0.294395904
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 0.5,
+      "capacitive_w": 0.588791808
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 40000.0,
+      "active": 1.0,
+      "capacitive_w": 1.177583616
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 0.25,
+      "capacitive_w": 0.3017558016
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 0.5,
+      "capacitive_w": 0.6035116032
+    },
+    {
+      "C_nf": 2.64,
+      "V": 13.2,
+      "f_hz": 41000.0,
+      "active": 1.0,
+      "capacitive_w": 1.2070232064
+    }
+  ],
+  "array_unknown": {
+    "capacitive_w": 0.9732096000000001,
+    "total_w": null,
+    "status": "HOLD",
+    "unknown": [
+      "motional_w",
+      "driver_extra_w",
+      "auxiliary_w",
+      "cable_loop_ohm",
+      "efficiency"
+    ]
+  },
+  "connector_5a_loss_w_at_30mohm": 0.75,
+  "efuse_5a_nominal_loss_w": 0.775,
+  "limits": "Loss estimates, not thermal proof; PJ5A and eFuse pulse/short coordination HOLD",
+  "usb_voltage_sweep": [
+    {
+      "delivered_v": 4.675,
+      "direct_path_valid": false,
+      "avcc_min_v": 4.75,
+      "regulator": "BUCK_BOOST_REVIEW_REQUIRED"
+    },
+    {
+      "delivered_v": 4.625,
+      "direct_path_valid": false,
+      "avcc_min_v": 4.75,
+      "regulator": "BUCK_BOOST_REVIEW_REQUIRED"
+    },
+    {
+      "delivered_v": 4.65,
+      "direct_path_valid": false,
+      "avcc_min_v": 4.75,
+      "regulator": "BUCK_BOOST_REVIEW_REQUIRED"
+    },
+    {
+      "delivered_v": 4.55,
+      "direct_path_valid": false,
+      "avcc_min_v": 4.75,
+      "regulator": "BUCK_BOOST_REVIEW_REQUIRED"
+    },
+    {
+      "delivered_v": 4.6000000000000005,
+      "direct_path_valid": false,
+      "avcc_min_v": 4.75,
+      "regulator": "BUCK_BOOST_REVIEW_REQUIRED"
+    },
+    {
+      "delivered_v": 4.4,
+      "direct_path_valid": false,
+      "avcc_min_v": 4.75,
+      "regulator": "BUCK_BOOST_REVIEW_REQUIRED"
+    },
+    {
+      "delivered_v": 4.925,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 4.875,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 4.9,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 4.8,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 4.8500000000000005,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 4.65,
+      "direct_path_valid": false,
+      "avcc_min_v": 4.75,
+      "regulator": "BUCK_BOOST_REVIEW_REQUIRED"
+    },
+    {
+      "delivered_v": 5.175,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 5.125,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 5.15,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 5.05,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 5.1000000000000005,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    },
+    {
+      "delivered_v": 4.9,
+      "direct_path_valid": true,
+      "avcc_min_v": 4.75,
+      "regulator": "DIRECT_PATH"
+    }
+  ],
+  "i2c": [
+    {
+      "capacitance_pf": 100,
+      "r_min_ohm": 966.6666666666666,
+      "r_max_ohm": 11802.195208308747,
+      "feasible": true
+    },
+    {
+      "capacitance_pf": 200,
+      "r_min_ohm": 966.6666666666666,
+      "r_max_ohm": 5901.097604154374,
+      "feasible": true
+    },
+    {
+      "capacitance_pf": 400,
+      "r_min_ohm": 966.6666666666666,
+      "r_max_ohm": 2950.548802077187,
+      "feasible": true
+    },
+    {
+      "capacitance_pf": 800,
+      "r_min_ohm": 966.6666666666666,
+      "r_max_ohm": 1475.2744010385934,
+      "feasible": true
+    }
+  ],
+  "adc_serial": {
+    "data_only_min_sclk_hz": 25600000.0,
+    "shift_ns": 969.6969696969697,
+    "serial_total_ns": 1949.6969696969697,
+    "period_ns": 1250.0,
+    "sequential_feasible": false,
+    "status": "TIMING_HYPOTHESIS_REQUIRES_DATASHEET_AND_RTL_PROOF"
+  },
+  "uart_raw_stream_bytes_per_second": 12800000,
+  "uart_115200_8n1_payload_ceiling_Bps": 11520,
+  "central_allocations_w": {
+    "ADC_AVCC_design_cap": 1.0,
+    "ADC_digital_reference_design_cap": 0.3,
+    "AFE8_design_cap": 2.0,
+    "buffers_clock_design_cap": 1.5,
+    "monitor_safety_design_cap": 0.5,
+    "conversion_loss_reserve": 1.5
+  },
+  "central_allocations_status": "ENGINEERING_ALLOCATION_6P8W_NOT_TYPICAL_OR_WORST_CASE_PROOF"
+}

@@ -16,6 +16,14 @@ def audit():
     snapshot = json.loads((EVIDENCE/'S0_PROTECTED_HASHES.json').read_text(encoding='utf-8'))
     reviewed = json.loads((ROOT/'v5/config/nextstage_reviewed_changes.json').read_text(encoding='utf-8'))['files']
     pinned = {'v5/'+name: value['after_raw_sha256'] for name,value in reviewed.items()}
+    # The 20261011 hardware instruction changes exactly these review contracts.
+    # No source/test/golden/BOM/evidence path may be exempted by this manifest.
+    hardware_review = ROOT/'v5/config/hardware_design_reviewed_changes.json'
+    if hardware_review.exists():
+        extra = json.loads(hardware_review.read_text(encoding='utf-8'))['files']
+        if set(extra) != {'v5/config/SIGNAL_CONTRACT.json', 'v5/config/board_facts.json'}:
+            raise ValueError('Hardware review can pin only the two explicit design contracts')
+        pinned.update({name: item['after_raw_sha256'] for name,item in extra.items()})
     changed, errors = [], []
     immutable = 0
     for rel, old in snapshot.items():
