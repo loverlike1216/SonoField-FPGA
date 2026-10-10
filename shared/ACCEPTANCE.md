@@ -1,3 +1,22 @@
+# UART continuation amendment — 2026-10-10
+
+Current result: offline ACCEPT WITH LIMITATIONS; real-board/whole-platform REVISE.
+COM3 now Code0 with driver11.6.0.420; pyserial3.5 locked. New read-only SLCR check
+kept both CPUs Running, originalVivado retained; no UARTopen/TX/boardwrite.
+Actual2025.2nativeSDT/BSP+ArmGNU13.2 linked safe/status ARMELF and OCM audit PASS
+in current/newcleanclone;203+203tests PASS. FullELF is not claimed bit-exact;
+application .text matches. Vitis platformAPI missingQEMU failure and RWX warning
+remain. Prior1160sealedfiles and original criteria preserved.
+User correction: recovery files are remote references only, no local verified
+backup. Rev3 DTR/RTS A0 and image/platform/recovery/isolation/permission A2 gates
+remain open. PC-B08 logicalbuild subgate closed; physical13PC-B scopes/BRAMProblem
+and independentreview stay open. Samev5/mainunmerged/Draft4 update authorized.
+See v5/docs/uart_resume/RESULT.md, v5/evidence/uart_resume/20261010_01/FINAL_VERIFICATION.json,
+CP-20261010-002 and shared/uart_resume/PUBLICATION_RECEIPT.json. Prior snapshots
+below retain provenance; this amendment supersedes only their stale current facts.
+
+---
+
 # 2026-10-10 current next-stage acceptance amendment
 
 Actual user approval supersedes older B-formal/pending-C16 wording below: formal direction AD7606C-16; electrical/ordering/analog gates remain HOLD. No other inherited criterion is lowered. Required original171+new32=203, original3696frames×3Icarus+1XSim and canonicalhash equality, allC/AXI/safety/calibration/equivalence; newC16two-tool signed/timing/readback/fault/full1024capture/ACK/actualtop; temperature160maps20480words,10sparsefits5seeds5starts384holdouts,5dynamicGUIcases375frames; native2025.2 source/BD/XSA/reopen/STA/DRC/CDC; actualARMtargetarchitecture; history-absentclone/freshlockedvenv/rawS0/filehash audit. Current and clean203PASS; fullafterinitialdiscovery199 plus four later contract tests separately executed. Exact source/report/functional hashes and EOL policy are recorded, not assumed.

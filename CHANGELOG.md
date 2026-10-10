@@ -1,3 +1,14 @@
+# 2026-10-10 v5 UART continuation
+
+Close UART driver enumeration blocker (COM3Code0), add lockedpyserial3.5,
+bounded nonintrusive SLCR check, real2025.2SDT/BSP+ArmGNU13.2 OCM-linked existing
+safe/status service, independent newclone/freshvenv203tests/build/audit.
+Preserve all prior digital/BOM/evidence/archive hashes and failure logs.
+No serial open/boardwrite/deployment/mainmerge; Rev3/recovery/A0/A2 gates open.
+See docs/uart_resume and CP-20261010-002.
+
+---
+
 # 2026-10-10 — v5 AD7606C-16 next-stage candidate
 
 Actual user-approved C16 direction; separate digital adapter/model and full signed1024capture/ACK two-tool tests, portable C/TMP117, existing temperature/sparse/dynamicGUI preserved. Original171+32new203; full3696×4 before/after/clean and native2025.2 C16route/reopen reproduced. Full DRC346BRAMwarnings retained as P-20261010-001OPEN.7sheet80typeworkingBOM/ADC64/connector/net/SVG contracts; nativeERC/manufacturing/realUART/ADC/boardapplication HOLD. Freshclone rawEOL mismatch diagnosed and exactS0Git-derived bytes verified without relaxing gates. Samev5/repo; Draft onPR3 only, main/oldworkspace/frozenarchive/board state untouched. See currentFINAL_REPORT and CP-20261010-001.

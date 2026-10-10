@@ -1,0 +1,51 @@
+2026-10-10 13:30:48,463 - [INFO]: Starting Application build process
+2026-10-10 13:30:48,510 - [INFO]: Building BSP
+2026-10-10 13:30:49,002 - [DEBUG]: Building BSP took 0.49 seconds
+2026-10-10 13:30:49,002 - [INFO]: Copying headers and built archives
+2026-10-10 13:30:49,363 - [DEBUG]: Copying headers and built archives took 0.36 seconds
+2026-10-10 13:30:49,363 - [INFO]: Successfully built BSP. Generated libxil.a, libxilstandalone.a, libxiltimer.a
+2026-10-10 13:30:51,832 - [DEBUG]: Configuring CMake for the Application took 2.44 seconds
+2026-10-10 13:30:51,833 - [INFO]: Building Application
+2026-10-10 13:30:52,513 - [DEBUG]: Building Application took 0.68 seconds
+[1/2] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+[2/2] ========== BSP Build Information ==========
+
+Compiler PATH: E:/Codex_project/AMD_Sonofield/.portability/uart_resume_clean_20261010/v5/build/uart_resume_clean/arm_gnu/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+
+Compiler FLAGS:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=E:/Codex_projec
+t/AMD_Sonofield/.portability/uart_resume_clean_20261010/v5/build/uart_resume_clean/ocm/bsp/Xilinx.sp
+
+ec -IE:/Codex_project/AMD_Sonofield/.portability/uart_resume_clean_20261010/v5/build/uart_resume_cle
+
+an/ocm/bsp/include  -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DNDEBUG
+
+
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[1/4] ==========Application Build Information ==========
+
+Compiler Flags:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=E:/Codex_projec
+t/AMD_Sonofield/.portability/uart_resume_clean_20261010/v5/build/uart_resume_clean/ocm/bsp/Xilinx.sp
+ec -IE:/Codex_project/AMD_Sonofield/.portability/uart_resume_clean_20261010/v5/build/uart_resume_cle
+an/ocm/bsp/include -Wall -Wextra -Werror     -O0  -g3     -U__clang__  SF_UART_DEVICE_ID=0xE0001000U
+SF_UART_BAUD=115200U
+SF_PL_BASE=0x40000000U
+
+Linker Flags:      -Wl,-Map=sonofield_ocm_candidate.map -Wl,-T -Wl,"E:/Codex_project/AMD_Sonofield/.
+portability/uart_resume_clean_20261010/v5/build/uart_resume_clean/ocm/app/src/lscript.ld" -L"E:/Code
+x_project/AMD_Sonofield/.portability/uart_resume_clean_20261010/v5/build/uart_resume_clean/ocm/app/s
+rc/" -L"E:/Codex_project/AMD_Sonofield/.portability/uart_resume_clean_20261010/v5/build/uart_resume_
+clean/ocm/bsp/lib/" -L"/" -Wl,--start-group,-lxilstandalone,-lxiltimer,-lxil,-lgcc,-lc -Wl,--end-gro
+up
+
+===========================================
+[2/4] Building C object CMakeFiles/empty_application.elf.dir/service.c.obj
+[3/4] Building C object CMakeFiles/empty_application.elf.dir/zynq_service_main.c.obj
+[4/4] Linking C executable empty_application.elf
+E:/Codex_project/AMD_Sonofield/.portability/uart_resume_clean_20261010/v5/build/uart_resume_clean/arm_gnu/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: empty_application.elf has a LOAD segment with RWX permissions
+
+   text	   data	    bss	    dec	    hex	filename
+
+  32924	   1492	  23484	  57900	   e22c	empty_application.elf
+

@@ -1,0 +1,29 @@
+{
+  "classification": "HARDWARE_READONLY_SLCR_ONLY",
+  "time": "2026-10-10T13:12:00+08:00",
+  "timestamp_scope": "Minute approximation; exact cleanup timestamp in readonly_after.json",
+  "cpu_before": [
+    "Running",
+    "Running"
+  ],
+  "cpu_after": [
+    "Running",
+    "Running"
+  ],
+  "boot_mode": "0x00000005",
+  "uart_clock_ctrl": "0x00000A02",
+  "uart_rst_ctrl": "0x00000000",
+  "mio48": "0x000012E0",
+  "mio49": "0x000012E1",
+  "serial_opened": false,
+  "serial_tx": false,
+  "hardware_written": false,
+  "ram_read_or_written": false,
+  "fifo_read": false,
+  "image_identity": "UNKNOWN",
+  "recovery_backup": "REMOTE_REFERENCE_ONLY_NOT_VERIFIED",
+  "rev3_uart_reset_wiring": "NOT_VERIFIED",
+  "board_control_chain": "NOT_RUN_A2_STOP",
+  "evidence": "uart_slcr_readonly.log",
+  "cleanup": "readonly_after.json"
+}

@@ -1,0 +1,177 @@
+{
+  "classification": "OFFLINE_LOGICAL_CANDIDATE_NOT_DEPLOYABLE",
+  "hardware_access": false,
+  "serial_opened": false,
+  "physical_board_qualified": false,
+  "xsa_sha256": "e3648112eb1bea363eb6b63eb9724c0d31c5bbcce6003107e8be8f4f1777a430",
+  "commands": [
+    {
+      "name": "vivado_version",
+      "argv": [
+        "D:/Vivado/2025.2/2025.2/Vivado/bin/vivado.bat",
+        "-mode",
+        "batch",
+        "-nolog",
+        "-nojournal",
+        "-source",
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/ocm_script_verified/version_check.tcl"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "compiler",
+      "argv": [
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/arm_gnu/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "sdt",
+      "argv": [
+        "D:/Vivado/2025.2/2025.2/Vivado/bin/sdtgen.bat",
+        "-xsa",
+        "E:/Codex_project/AMD_Sonofield/v5/evidence/next_stage/20261010/clean_reproduction/nextstage_platform_clean/prepcb_logical_candidate.xsa",
+        "-dir",
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/ocm_script_verified/sdt"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "repo",
+      "argv": [
+        "D:/Vivado/2025.2/2025.2/Vivado/bin/empyro.bat",
+        "repo",
+        "-st",
+        "D:/Vivado/2025.2/2025.2/data/embeddedsw"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "create_bsp",
+      "argv": [
+        "D:/Vivado/2025.2/2025.2/Vivado/bin/empyro.bat",
+        "create_bsp",
+        "-w",
+        "bsp",
+        "-s",
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/ocm_script_verified/sdt/system-top.dts",
+        "-p",
+        "ps7_cortexa9_0",
+        "-o",
+        "standalone",
+        "-t",
+        "empty_application",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "build_bsp",
+      "argv": [
+        "D:/Vivado/2025.2/2025.2/Vivado/bin/empyro.bat",
+        "build_bsp",
+        "-d",
+        "bsp",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "create_app",
+      "argv": [
+        "D:/Vivado/2025.2/2025.2/Vivado/bin/empyro.bat",
+        "create_app",
+        "-d",
+        "bsp",
+        "-t",
+        "empty_application",
+        "-w",
+        "app",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "build_app",
+      "argv": [
+        "D:/Vivado/2025.2/2025.2/Vivado/bin/empyro.bat",
+        "build_app",
+        "-w",
+        "app",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "elf_readelf",
+      "argv": [
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/arm_gnu/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-readelf.exe",
+        "-h",
+        "-l",
+        "-A",
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/ocm_script_verified/app/build/empty_application.elf"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "elf_size",
+      "argv": [
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/arm_gnu/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-size.exe",
+        "-A",
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/ocm_script_verified/app/build/empty_application.elf"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "elf_symbols",
+      "argv": [
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/arm_gnu/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-nm.exe",
+        "-n",
+        "E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/ocm_script_verified/app/build/empty_application.elf"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "status": "PASS",
+  "application_sources": {
+    "service.c": "0dc7029ca988dac2f09f0d4071e83183d81669c33be4be593b974aabd1efee96",
+    "service.h": "9fe9c818efcd59ce9336cdce6c43d104b3d858a07f2c41a23abbb1ae1fdab4bf",
+    "generated.h": "92cccb596cde1def1896cc230a13397d19f9b6100694e1e516886b31f4c0d369",
+    "zynq_service_main.c": "dea278401f204e01da0b78f54ad1f304c9151beb1811a6d746f645a7b4d9ea52"
+  },
+  "elf_sha256": "6cdf71bdfef3acd3188294df949db28ca61ab56ea3608ab170460c8b3fcf8dce",
+  "elf_bytes": 197092,
+  "elf_audit": {
+    "status": "PASS",
+    "elf_type": "ELF32_ARM_EXECUTABLE",
+    "entry": "0x0",
+    "load_segments": [
+      {
+        "address": "0x0",
+        "file_bytes": 17924,
+        "memory_bytes": 17924,
+        "flags": 7,
+        "alignment": 4096
+      },
+      {
+        "address": "0x8000",
+        "file_bytes": 16468,
+        "memory_bytes": 39952,
+        "flags": 6,
+        "alignment": 4096
+      }
+    ],
+    "load_segments_ocm_only": true,
+    "ddr_load_segments": 0,
+    "physical_ram_ownership": "UNKNOWN_NOT_AUTHORIZED"
+  },
+  "bsp_libraries": {
+    "libxil.a": "831857d5c0cfe069ad2855fe52533a1e3694678cf7a33c6e6de69beea322d2ea",
+    "libxilstandalone.a": "ddc170c287b7b0b81dc4871511661784f130a14b4d39a610fc208af58bb480b7",
+    "libxiltimer.a": "d2c63e3652ef632fe52226e7f33ab9c79eee45536a001275555096c19e4e2e8c"
+  },
+  "application_scope": "SAFE_STATUS_PROTOCOL_ONLY_NO_MOTION_OR_SENSOR_RUNTIME",
+  "deployed": false,
+  "rwx_load_segment": true
+}

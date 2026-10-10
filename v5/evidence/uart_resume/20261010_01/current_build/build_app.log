@@ -1,0 +1,54 @@
+2026-10-10 13:28:00,629 - [INFO]: Starting Application build process
+2026-10-10 13:28:00,675 - [INFO]: Building BSP
+2026-10-10 13:28:01,159 - [DEBUG]: Building BSP took 0.48 seconds
+2026-10-10 13:28:01,159 - [INFO]: Copying headers and built archives
+2026-10-10 13:28:01,436 - [DEBUG]: Copying headers and built archives took 0.28 seconds
+2026-10-10 13:28:01,436 - [INFO]: Successfully built BSP. Generated libxil.a, libxilstandalone.a, libxiltimer.a
+2026-10-10 13:28:03,903 - [DEBUG]: Configuring CMake for the Application took 2.44 seconds
+2026-10-10 13:28:03,903 - [INFO]: Building Application
+2026-10-10 13:28:04,636 - [DEBUG]: Building Application took 0.73 seconds
+[1/2] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+[2/2] ========== BSP Build Information ==========
+
+Compiler PATH: E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/arm_gnu/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+
+Compiler FLAGS:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=E:/Codex_projec
+t/AMD_Sonofield/v5/build/uart_resume_01/ocm_script_verified/bsp/Xilinx.spec -IE:/Codex_project/AMD_S
+onofield/v5/build/uart_resume_01/ocm_script_verified/bsp/include  -O2 -g -Wall -Wextra -fno-tree-loo
+
+p-distribute-patterns -DNDEBUG
+
+
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[1/4] ==========Application Build Information ==========
+
+Compiler Flags:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=E:/Codex_projec
+t/AMD_Sonofield/v5/build/uart_resume_01/ocm_script_verified/bsp/Xilinx.spec -IE:/Codex_project/AMD_S
+onofield/v5/build/uart_resume_01/ocm_script_verified/bsp/include -Wall -Wextra -Werror     -O0  -g3 
+    -U__clang__  SF_UART_DEVICE_ID=0xE0001000U
+SF_UART_BAUD=115200U
+SF_PL_BASE=0x40000000U
+
+Linker Flags:      -Wl,-Map=sonofield_ocm_candidate.map -Wl,-T -Wl,"E:/Codex_project/AMD_Sonofield/v
+
+5/build/uart_resume_01/ocm_script_verified/app/src/lscript.ld" -L"E:/Codex_project/AMD_Sonofield/v5/
+
+build/uart_resume_01/ocm_script_verified/app/src/" -L"E:/Codex_project/AMD_Sonofield/v5/build/uart_r
+
+esume_01/ocm_script_verified/bsp/lib/" -L"/" -Wl,--start-group,-lxilstandalone,-lxiltimer,-lxil,-lgc
+
+c,-lc -Wl,--end-group
+
+
+===========================================
+[2/4] Building C object CMakeFiles/empty_application.elf.dir/service.c.obj
+[3/4] Building C object CMakeFiles/empty_application.elf.dir/zynq_service_main.c.obj
+[4/4] Linking C executable empty_application.elf
+E:/Codex_project/AMD_Sonofield/v5/build/uart_resume_01/arm_gnu/arm-gnu-toolchain-13.2.Rel1-mingw-w64-i686-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld.exe: warning: empty_application.elf has a LOAD segment with RWX permissions
+
+   text	   data	    bss	    dec	    hex	filename
+
+  32896	   1492	  23484	  57872	   e210	empty_application.elf
+

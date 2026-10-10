@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "source_commit": "7d4dd090aac29331166d72aa50d2a0c5a6068101",
+  "independent_clone": ".portability\\uart_resume_clean_20261010",
+  "no_hardlinks": true,
+  "fresh_venv": true,
+  "archive_worktree_present": false,
+  "same_os_eda": true,
+  "same_pinned_arm_archive": true,
+  "current_elf_sha256": "6cdf71bdfef3acd3188294df949db28ca61ab56ea3608ab170460c8b3fcf8dce",
+  "clean_elf_sha256": "8eac70eca1519d2a92336a7bfab76dfbd84684752916d1c6ddcea70fb028c914",
+  "full_elf_byte_identical": false,
+  "comparison_scope": "Both complete builds and OCM audits PASS; unchanged application object .text sections match. Full debug ELF/BSP path-dependent bytes are not claimed bit-exact.",
+  "application_sections": [
+    {
+      "object": "service.c.obj",
+      "section": ".text",
+      "current_sha256": "3ee64bb8cb921567586d7312e5f5b37c7328042c0dc2503a26eb3de506f39f78",
+      "clean_sha256": "3ee64bb8cb921567586d7312e5f5b37c7328042c0dc2503a26eb3de506f39f78",
+      "identical": true
+    },
+    {
+      "object": "zynq_service_main.c.obj",
+      "section": ".text",
+      "current_sha256": "364cf9ee974818115df68ea91e4c9caa0bc7a573608f51d6c35c30939af1d7cd",
+      "clean_sha256": "364cf9ee974818115df68ea91e4c9caa0bc7a573608f51d6c35c30939af1d7cd",
+      "identical": true
+    }
+  ],
+  "real_board": false
+}

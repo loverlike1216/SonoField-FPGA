@@ -71,3 +71,21 @@ User authorizes reversible adapters/models/config/C/Python/GUI/BOM/netcontract/o
 Full nativeDRC enumerates346REQP-1839BRAM asynchronous control warnings plus1OOCZPS7-1. Exact current/clean routedreport bodies agree. Positive OOCslack and emptyCDC do not close reset or unqualifiedIO risk. ProblembodySHA9cc8f62962b6ed42c4f282cd239303fe01faefb1fd670d9a0fbaef61e7171d3d; OPEN for real independent/user architectural decision. No reset architecture change, waiver or severity reduction. This is a Codex evidence finding, not an approved architectural Decision. Evidence expanded_current2 and clean expanded reports in next_stage/20261010. Preserve async emergencykill and signedcapture/ownership constraints while reviewer selects a validated RAM-facing reset strategy.
 
 2026-10-10 subsequent actual user instruction "我已将jtag插稳" triggered fresh read-only detection: After the actual user reseated JTAG, dedicated localhost3122 XSDB/Vivado2025.2 read-only identification PASS: xc7z020 ID0x23727093; both Cortex-A9 Running before/after; BOOT_MODE0x05, DDRC0x81/0x3e; PL DONE/EOS1, existing image identity UNKNOWN. Sysmon zero/-273.1 values INVALID, no voltage/temperature claim. Original Vivado GUI retained; owned server disconnected/stopped. CP2102N remains Code28/0COM. No halt/reset/init/download/memory/DDR-RAM/GPIO/driver/serial write. Real UART->PS->AXI->PL and A2 write gate remain STOP. This is an observed fact update, not authorization to overwrite the running image.
+
+
+## ADR-041 — Actual UART continuation facts and offline BSP build (2026-10-10)
+
+Source: actual user reports UART driver installed, board USB-UART COM3, empty
+J10/J11, GitHub synchronization requested; later correction says no local
+factory/SD recovery files, remote links only. Current OS confirms COM3Code0.
+These facts authorize safe continuation and ordinary Draft publication, not
+CPU halt/reset/init/programming/RAM/boot writes. Exact Rev3 line control,
+platform/image/ownership/recovery/output and operation approval gates remain.
+
+Native installed2025.2SDT/empyro/EmbeddedSW + official hash-pinned ArmGNU13.2
+compile the unchanged safe/status service via an additive xiltimer compatibility
+include. Independent freshclone203tests+BSP/ELF/OCMaudit PASS. No core interface,
+algorithm/ADC/version/platform choice changed; physical matching still HOLD.
+Vitis platformAPI missingQEMU and RWX ELF warning preserved. This is a user-fact
+record and verified implementation finding, not an external ChatGPT Decision.
+Evidence: v5/evidence/uart_resume/20261010_01; CP-20261010-002.

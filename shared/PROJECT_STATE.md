@@ -1,3 +1,22 @@
+# UART continuation amendment — 2026-10-10
+
+Current result: offline ACCEPT WITH LIMITATIONS; real-board/whole-platform REVISE.
+COM3 now Code0 with driver11.6.0.420; pyserial3.5 locked. New read-only SLCR check
+kept both CPUs Running, originalVivado retained; no UARTopen/TX/boardwrite.
+Actual2025.2nativeSDT/BSP+ArmGNU13.2 linked safe/status ARMELF and OCM audit PASS
+in current/newcleanclone;203+203tests PASS. FullELF is not claimed bit-exact;
+application .text matches. Vitis platformAPI missingQEMU failure and RWX warning
+remain. Prior1160sealedfiles and original criteria preserved.
+User correction: recovery files are remote references only, no local verified
+backup. Rev3 DTR/RTS A0 and image/platform/recovery/isolation/permission A2 gates
+remain open. PC-B08 logicalbuild subgate closed; physical13PC-B scopes/BRAMProblem
+and independentreview stay open. Samev5/mainunmerged/Draft4 update authorized.
+See v5/docs/uart_resume/RESULT.md, v5/evidence/uart_resume/20261010_01/FINAL_VERIFICATION.json,
+CP-20261010-002 and shared/uart_resume/PUBLICATION_RECEIPT.json. Prior snapshots
+below retain provenance; this amendment supersedes only their stale current facts.
+
+---
+
 # SonoField-FPGA v5 current engineering state — 2026-10-10
 
 SONOFIELD_FPGA; same repository; `codex/v5-ad7606c16-nextstage-20261010`; workspace `E:\Codex_project\AMD_Sonofield`; v5ACTIVE/highestv5. Current ADC direction AD7606C-16 is explicitly user-approved, electrical/package/analog release HOLD. CP `CP-20261010-001` records the current candidate, not a main merge or version upgrade. Runtime implementation6274330f, final audit/tool sourcefeb97ad5c95088affaf075cb034fe29d4b5aeda0; PR3baseb08ccf58, main ecd32e76 unchanged.

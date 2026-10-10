@@ -1,0 +1,15 @@
+gate,status,evidence,scope
+UART driver,PASS,windows_uart_status.json,COM3 Code0; enumeration only
+Port discovery,PASS,port_discovery.json,No open calls
+JTAG SLCR,HARDWARE_READONLY,hardware_summary.json,No halt/reset/init/write/RAM/FIFO/UART traffic
+Current unit suite,PASS,unit203_scoped.log,203 tests
+Independent unit suite,PASS,clean_environment/unit203.log,203 tests; new clone/venv
+Native SDT/BSP/ELF,PASS,current_build/candidate_result.json,2025.2native + ArmGNU13.2; safe/status only
+Independent native build,PASS,clean_build/candidate_result.json,Same OS/EDA; new source checkout and build
+ELF OCM audit,PASS,elf_audit_negative_cases.json,Actual ELF +3rejected mutants; not physical RAM ownership
+Application text equality,PASS,target_reproduction.json,Two application object .text hashes; not fullELFbitexact
+Prior sealed files,PASS,prior_seal_audit.json,1160files raw SHA unchanged
+Preservation,PASS,preservation_final.json,3324originalcurrent/3026immutable/3918frozenmetadata
+Vitis platform API,BLOCKED_BY_ENVIRONMENT,attempts/vitis_candidate_04.log,Missing Zynq QEMU resource; separate native CLI build passes
+Vendor recovery/Rev3,NOT_VERIFIED,vendor_hardware_inventory.json,V2.0 listing; no verified local recovery
+Real UART control,NOT_VERIFIED,hardware_summary.json,A0/A2 STOP; serial not opened

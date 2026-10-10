@@ -50,3 +50,14 @@ Current transcript SHA256: `1d563e793287e58cbabc6b0eda0516e665e010e3a6b0bcbe9340
 | Source cutoff / public LF hashes | [session manifest](sessions/S-20261010-nextstage-001.json) | PARTIAL | AUDIT |
 
 Samev5; actual user C16 direction approved. ExternalChatGPT reader BLOCKED, no invented decision/reviewer/old transcript. Only actual visible messages/tool payload hashes recorded, no hidden reasoning. Original private photos/userhome/device identities are excluded/redacted. Final publication receipt records actual GitHub actions after this cutoff.
+
+
+## v5 UART continuation — 2026-10-10
+
+| ID / source | Record | Status | Impact |
+|---|---|---|---|
+| S-20261010-uart-resume-002 / actual Codex | [visible conversation](codex/S-20261010-uart-resume-002.md) | PARTIAL | IMPLEMENTATION_INPUT |
+| Observable CLI/EDA/Git events | [payload hashes](codex/S-20261010-uart-resume-002.tools.json) / [tool flow](tool-flow/T-20261010-002__uart-resume.json) | PARTIAL | VALIDATION_INPUT |
+| Actual source cutoff and hashes | [session](sessions/S-20261010-uart-resume-002.json) | PARTIAL | AUDIT |
+
+No inaccessible ChatGPT history or hidden reasoning captured. User-home paths, device serials and share access codes redacted. Raw private logs/HTML/cookies are excluded. Source cutoff and public hashes are in the session manifest; final remote publication is recorded separately.

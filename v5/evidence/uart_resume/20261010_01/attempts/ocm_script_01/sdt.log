@@ -1,0 +1,16 @@
+The system cannot find the path specified.
+could not read "E:Codex_projectAMD_Sonofield5evidence
+ext_stage?61010clean_reproduction
+extstage_platform_cleanprepcb_logical_candidate.xsa": no such file or directory
+    while executing
+"file type $xsa_file"
+    ("-xsa" arm line 3)
+    invoked from within
+"switch -glob -- [lindex $args 0] {
+				-force {set force_create 1}
+				-xsa {
+					set xsa_file [Pop args 1]
+					if {![regexp {^(file|link)$} [file t..."
+    (procedure "set_dt_param" line 11)
+    invoked from within
+"set_dt_param  -xsa E:\Codex_project\AMD_Sonofield\v5\evidence\next_stage\20261010\clean_reproduction\nextstage_platform_clean\prepcb_logical_candidate..."

@@ -1,3 +1,22 @@
+# UART continuation amendment — 2026-10-10
+
+Current result: offline ACCEPT WITH LIMITATIONS; real-board/whole-platform REVISE.
+COM3 now Code0 with driver11.6.0.420; pyserial3.5 locked. New read-only SLCR check
+kept both CPUs Running, originalVivado retained; no UARTopen/TX/boardwrite.
+Actual2025.2nativeSDT/BSP+ArmGNU13.2 linked safe/status ARMELF and OCM audit PASS
+in current/newcleanclone;203+203tests PASS. FullELF is not claimed bit-exact;
+application .text matches. Vitis platformAPI missingQEMU failure and RWX warning
+remain. Prior1160sealedfiles and original criteria preserved.
+User correction: recovery files are remote references only, no local verified
+backup. Rev3 DTR/RTS A0 and image/platform/recovery/isolation/permission A2 gates
+remain open. PC-B08 logicalbuild subgate closed; physical13PC-B scopes/BRAMProblem
+and independentreview stay open. Samev5/mainunmerged/Draft4 update authorized.
+See v5/docs/uart_resume/RESULT.md, v5/evidence/uart_resume/20261010_01/FINAL_VERIFICATION.json,
+CP-20261010-002 and shared/uart_resume/PUBLICATION_RECEIPT.json. Prior snapshots
+below retain provenance; this amendment supersedes only their stale current facts.
+
+---
+
 # Current v5 handoff
 
 Goal: current user-approvedAD7606C-16 nextstage candidate; samev5/repository and independentnewworkspace. Inputs exactinstruction/userphotos/currentGitPR1/2/3/currentcode/state and officialsources. Changes: separateC16adapter/model/C-Python-TMP117/lockedGUI/BOM/netcontracts; originalcore/defaultB/tests/goldens/criteria preserved. Tests: fullbefore/after/clean3696x4;final203both;new2048capture/37mapC16top/ADCnegative two-tool;160temperaturemaps/10sparsefits/5GUIcases;actualARMobject;native2025.2logicalplatform/reopen/reportmatch. Evidence FINAL_VERIFICATION and TEST_MATRIX in v5/evidence/next_stage/20261010.
