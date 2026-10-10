@@ -1,33 +1,52 @@
-# UART continuation amendment — 2026-10-10
+# CP-20261011-001 — v5 hardware design recovery
 
-Current result: offline ACCEPT WITH LIMITATIONS; real-board/whole-platform REVISE.
-COM3 now Code0 with driver11.6.0.420; pyserial3.5 locked. New read-only SLCR check
-kept both CPUs Running, originalVivado retained; no UARTopen/TX/boardwrite.
-Actual2025.2nativeSDT/BSP+ArmGNU13.2 linked safe/status ARMELF and OCM audit PASS
-in current/newcleanclone;203+203tests PASS. FullELF is not claimed bit-exact;
-application .text matches. Vitis platformAPI missingQEMU failure and RWX warning
-remain. Prior1160sealedfiles and original criteria preserved.
-User correction: recovery files are remote references only, no local verified
-backup. Rev3 DTR/RTS A0 and image/platform/recovery/isolation/permission A2 gates
-remain open. PC-B08 logicalbuild subgate closed; physical13PC-B scopes/BRAMProblem
-and independentreview stay open. Samev5/mainunmerged/Draft4 update authorized.
-See v5/docs/uart_resume/RESULT.md, v5/evidence/uart_resume/20261010_01/FINAL_VERIFICATION.json,
-CP-20261010-002 and shared/uart_resume/PUBLICATION_RECEIPT.json. Prior snapshots
-below retain provenance; this amendment supersedes only their stale current facts.
+Current identity: SONOFIELD_FPGA, same official SonoField-FPGA repository and
+E:\Codex_project\AMD_Sonofield, codex/v5-hardware-design-20261011, v5 ACTIVE.
+Base618b6f1; validated source6ba6314; containing checkpoint commit resolves with
+`git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json`. No circular SHA invented.
 
----
+Goal: manufacturing-preparation candidate for one central/two symmetric arrays;
+whole physical system is REVISE, scoped offline candidate ACCEPT WITH LIMITATIONS.
+Architecture:128TX8RX, C16,3TMP117; independentUSB-C central/independent12V arrays,
+AX7020headerpowerNC, fixedgeometry, sharedI2C63GPIO candidate. ADR042 supersedes
+older centralheaderpower/50mg active-target wording, retaining original artifacts.
 
-# Current v5 handoff
+Completed:243current+243clean tests,3696frames x3Icarus+1XSim full digital gate,
+C16/temp/sparse/GUI/C/AXI/safety/equivalence;68nativepackage/80manual pins,
+404BOMformula rows and12byteequal generated files. No current boardprogram or
+hardware acceptance. Previous OOC/ARMlinked safe-status evidence retains its scope.
 
-Goal: current user-approvedAD7606C-16 nextstage candidate; samev5/repository and independentnewworkspace. Inputs exactinstruction/userphotos/currentGitPR1/2/3/currentcode/state and officialsources. Changes: separateC16adapter/model/C-Python-TMP117/lockedGUI/BOM/netcontracts; originalcore/defaultB/tests/goldens/criteria preserved. Tests: fullbefore/after/clean3696x4;final203both;new2048capture/37mapC16top/ADCnegative two-tool;160temperaturemaps/10sparsefits/5GUIcases;actualARMobject;native2025.2logicalplatform/reopen/reportmatch. Evidence FINAL_VERIFICATION and TEST_MATRIX in v5/evidence/next_stage/20261010.
+Plan position:Gate0-7 offline artifacts and available checks complete; nativeCAD,
+electrical/physical gates remain HOLD. Next verify publication receipt and CI,
+connect real EasyEDA/libraries, complete63GPIO runtime wrapper and independent
+safety circuit, resolve BRAM Problem, measure power/AFE/ADC/sensors and qualified
+board platform/SDrecovery before real control/acoustic tests.
 
-Failures: FAILURE_REGISTER preserves model/bench/BD/reportflag/cwdTMP/EOL/DRC/Vitis issues, not discarded. Unresolved:13PC-Bgates and P-20261010-001BRAMresetrisk; realUART/ADC/TMP117/cutoff/acoustics/boardapplication/nativeERC NOT_RUN/BLOCKED. Risks: missingRev3ownership/power/IO/PSDDRfacts and346DRC warnings; offlinepositiveWNS notphysicalproof. Decisions: actualUserC16direction approved, importantresetarchitecture pending independentdecision; ChatGPT readerBLOCKED. Next actualDraftpublicationreceipt, independent/userreview, no mainmerge/hardwarewrite/manufacturing. Resume CP-20261010-001 and FINAL_REPORT, no archivebodyreads or oldsandboxfallback.
+Active decisions:ADR035-041 in scope and current actual-user ADR042. Open Problems
+P-20261008-001/P-20261009-001/P-20261010-001; do not invent ChatGPT Decision or
+automatically cross hardware assumptions. Critical design gaps and PC-B01..13
+current meanings are in BLOCKERS and v5/docs/hardware/RISKS.md.
 
+Latest validation: v5/evidence/hardware_design_20261011/FINAL_VERIFICATION.json,
+digital_full_retry2/summary.json, clean_clone/REPRODUCTION.json,
+CONTRACT_VALIDATION_portable.json, PRESERVATION_final.json and FILE_HASHES.json.
+This round clean clone reran243unit/contract/generation/package, not full digital;
+current clone reran full digital. Same Windows/EDA, not independent hardware.
 
-Current JTAG update after actual user reseat: After the actual user reseated JTAG, dedicated localhost3122 XSDB/Vivado2025.2 read-only identification PASS: xc7z020 ID0x23727093; both Cortex-A9 Running before/after; BOOT_MODE0x05, DDRC0x81/0x3e; PL DONE/EOS1, existing image identity UNKNOWN. Sysmon zero/-273.1 values INVALID, no voltage/temperature claim. Original Vivado GUI retained; owned server disconnected/stopped. CP2102N remains Code28/0COM. No halt/reset/init/download/memory/DDR-RAM/GPIO/driver/serial write. Real UART->PS->AXI->PL and A2 write gate remain STOP. Evidence: v5/evidence/next_stage/20261010/jtag_reseated/summary.json.
+Do not change:originalRTL/firmware/tests/goldens/35dB/oldBOM/evidence; solev5;
+no historybody/oldworkspace reads, forcepush, unknownimage writes or productionXDC.
+Invariants:commonclock/atomiccomplete maps/separate8bitrequestedcal/signedcaptureACK,
+32lanesx4/50Hz/12mm/90-115gap/origin and fail-off/manualrearm requirements.
 
+Delta:four-source direction andEPS2-5mm target adopted, new101typeBOM/newmodels40tests,
+new80contact review/nativepackageDB, realEasyEDA0window result and retained failures.
+Conflicts:V2filename/internalREV1.0 vsV3 usercompatibility; UARTGM vspriorOSN;
+SDbackup intention has no image/hash. Keep unknowns explicit. User sync permission
+is granted; unresolved technical gates prevent main promotion/manufacturing.
 
-Publication milestone: DraftPR4 https://github.com/loverlike1216/SonoField-FPGA/pull/4 is OPEN/Draft onPR3. Evidencecommit24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c remote verified; push+pull_request Ubuntu structural CI PASS. PR1/2/3 and main unchanged/unmerged. Actual containingreceiptcommit resolves through Git; latest CI remains observable in GitHub. Review candidate/BRAMreset/physical gates; no additional runtime optimization or main/board/manufacturing operation. See next_stage/PUBLICATION_RECEIPT.json (under shared).
+Resume:read current shared state/plan/decisions/acceptance and hardware docs/evidence;
+verify liveGit remote/PR chain before action. Never fall back to frozen source.
+Provenance:actual user instructionSHA8b1fdbfe...; source manifests, native tool logs,
+unit/simulation reports, independent clean clone, before/after hashes and Git metadata.
 
-
-UART publication milestone: evidence commit d76999c658c32be2ccb1602353054b7bf2c953cd remote verified; DraftPR4 updated and remains OPEN/Draft onPR3. Push+PR Ubuntu structural CI PASS at that commit. Main ecd32e76 unchanged. See shared/uart_resume/PUBLICATION_RECEIPT.json for exact source/CI/rollback/review boundary. A0/A2 and physical gates remain open.
+See hardware FINAL_REPORT, FAILURE_REGISTER and publication receipt.

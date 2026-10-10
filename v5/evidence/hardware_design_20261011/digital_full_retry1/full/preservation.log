@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "protected_files": 112,
+  "changed": [
+    {
+      "file": "rtl/sono_axi_system.sv",
+      "before": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd",
+      "after": "da19bd32431a8f810d140ea0411fe26e3648d6c20fb333d8f548dfc7bdbab0f8"
+    },
+    {
+      "file": "rtl/sono_digital_system.sv",
+      "before": "781d483af8b9b050c86f3c3806d9754fcc5629fc9ce4a9ecaba0c970bd7241de",
+      "after": "3722c029eff6bf1ba22e6a2ed41d3cf82bd9b804ef2dadf30f863d0f1b50296d"
+    },
+    {
+      "file": "rtl/sono_motion_system.sv",
+      "before": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148",
+      "after": "d1fdd11eaf57c0c8b0dc21a9d223ee198af16f6794a4296fb6da58f4b4824452"
+    },
+    {
+      "file": "firmware/ps_service/service.c",
+      "before": "65656588d9a349fac18e424fe4ef8761af34559ac36b97e24346e724c7a4c957",
+      "after": "0dc7029ca988dac2f09f0d4071e83183d81669c33be4be593b974aabd1efee96"
+    },
+    {
+      "file": "firmware/ps_service/service.h",
+      "before": "e8c3a65ea2c34d1faa12a8b98a13b379bb33e9b4c4955d301e73730568d5ae55",
+      "after": "9fe9c818efcd59ce9336cdce6c43d104b3d858a07f2c41a23abbb1ae1fdab4bf"
+    },
+    {
+      "file": "config/board_facts.json",
+      "before": "253c3a1b098dfe03f9d0d68d5ddc1a02f2390da24a5417d435358e3a2906bbd4",
+      "after": "645b7e6c92b8a6b52119cd3460767c2bab8e5e40d84a669b2b44e30123abdbd3"
+    },
+    {
+      "file": "config/hardware_parts.json",
+      "before": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
+      "after": "591030453cf86cd2c823f774a6ba4d0999ca45c16bc0c7abad2e9723b1717ab2"
+    },
+    {
+      "file": "config/inheritance_manifest.json",
+      "before": "a5c067b9312d3d96ce3a329b4a46b839b883a6d4968faf583d8fc844a2272139",
+      "after": "c40b26cff85ecde81a9fdb32e58a2a8080699092d6cc956ab41b195542427800"
+    },
+    {
+      "file": "config/system_baseline.json",
+      "before": "cd6ae558b5104b23b2949ac84eba608787d95d7d4658f4737c86dc3c7cf148b8",
+      "after": "a0e8322593ef61c90f90de8b601e3c8e13048b337a5bffea7f6648b62cb1051e"
+    }
+  ],
+  "errors": [],
+  "authorization": "Original optional C adapters plus exact pinned current user-approved C16 parameter/config adaptations; tests/goldens/thresholds never exempted",
+  "original_tests_goldens_thresholds_unchanged": true
+}

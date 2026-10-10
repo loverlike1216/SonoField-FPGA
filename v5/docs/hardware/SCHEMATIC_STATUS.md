@@ -3,7 +3,7 @@
 NATIVE_SCHEMATIC_NOT_CREATED；ERC_NOT_RUN；MANUFACTURING_HOLD。
 真实EasyEDA桥GET /health返回edaConnected=false、窗口数0。可用Node桥不等于
 可用编辑器，JSON/CSV/SVG不冒充.epro2/.eprj2或原生Netlist。
-使用技能：`C:/Users/loverlike/.codex/skills/easyeda-api/SKILL.md`，
+使用技能：`easyeda-api/SKILL.md`（本机安装技能），
 真实编辑器应加载run-api-gateway扩展，先选唯一项目，再执行原生建图与ERC。
 本轮没有编辑/安装用户CAD工程，也没有对制造接口发出操作。
 
