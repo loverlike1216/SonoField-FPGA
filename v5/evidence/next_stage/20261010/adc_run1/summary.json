@@ -1,0 +1,16 @@
+{
+  "status": "FAIL",
+  "error": "icarus/run: FATAL: E:\\Codex_project\\AMD_Sonofield\\v5\\tb\\ad7606c16_model.sv:32: C16 read crosses BUSY data replacement\n       Time: 171394100  Scope: tb_ad7606c16.model\n",
+  "commands": [
+    {
+      "simulator": "icarus",
+      "step": "compile",
+      "exit_code": 0
+    },
+    {
+      "simulator": "icarus",
+      "step": "run",
+      "exit_code": 1
+    }
+  ]
+}

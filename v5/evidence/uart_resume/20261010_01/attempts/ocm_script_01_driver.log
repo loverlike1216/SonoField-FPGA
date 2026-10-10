@@ -1,0 +1,12 @@
+compiler 0
+sdt 0
+repo 0
+create_bsp 1
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\build_uart_ocm_candidate.py", line 130, in <module>
+    main()
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\build_uart_ocm_candidate.py", line 90, in main
+    run("create_bsp", [empyro, "create_bsp", "-w", "bsp", "-s", work / "sdt/system-top.dts", "-p", "ps7_cortexa9_0", "-o", "standalone", "-t", "empty_application", "-v"])
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\build_uart_ocm_candidate.py", line 83, in run
+    raise RuntimeError(name + " failed; logs retained")
+RuntimeError: create_bsp failed; logs retained

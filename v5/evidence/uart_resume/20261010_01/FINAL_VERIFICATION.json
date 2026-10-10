@@ -1,0 +1,61 @@
+{
+  "status": "PASS_WITH_PHYSICAL_LIMITATIONS",
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "source_commit": "7d4dd090aac29331166d72aa50d2a0c5a6068101",
+  "prior_candidate": "daa0e82e08d1459206fde50af2186bca879ba24c",
+  "created_at": "2026-10-10T05:36:22.595758+00:00",
+  "current_tests": {
+    "count": 203,
+    "status": "PASS",
+    "evidence": "unit203_scoped.log"
+  },
+  "clean_tests": {
+    "count": 203,
+    "status": "PASS",
+    "evidence": "clean_environment/unit203.log"
+  },
+  "driver": {
+    "port": "COM3",
+    "problem_code": 0,
+    "version": "11.6.0.420",
+    "status": "CLOSED"
+  },
+  "serial_opened": false,
+  "hardware_written": false,
+  "target_build": "NATIVE_2025_2_SDT_EMPYRO_BSP_LINKED_ARM_ELF_OCM_AUDIT_PASS_CURRENT_AND_CLEAN",
+  "target_application_scope": "SAFE_STATUS_ONLY_NOT_DEPLOYABLE",
+  "vitis_platform_api": "FAILED_MISSING_ZYNQ_QEMU_RESOURCE_RETAINED",
+  "same_os_eda": true,
+  "full_elf_bit_exact": false,
+  "old_sealed_files": 1160,
+  "s0_files": 3324,
+  "immutable_files": 3026,
+  "frozen_metadata_files": 3918,
+  "historical_bodies_read": false,
+  "old_physical_workspace_accessed": false,
+  "original_rtl_changed": false,
+  "full_3696x4_rtl_rerun_this_round": false,
+  "prior_full_digital_evidence": "v5/evidence/next_stage/20261010/FINAL_VERIFICATION.json",
+  "physical_gates": [
+    "Rev3 UART DTR/RTS reset wiring before A0 serial open",
+    "Matched part/VCCO/clock/platform and current image/CPU/RAM ownership",
+    "Verified recovery image; remote references only so far",
+    "Independent default-off output safety and explicit affected-operation approval before A2",
+    "Existing13PC-B gates/BRAMProblem/analog/nativeERC/manufacturing/independentreview"
+  ],
+  "known_limitations": [
+    "RWX ELF LOAD warning retained",
+    "Application is safe/status protocol only; not complete PS runtime",
+    "Complete ELF/BSP build-path differences retained; application object .text matches",
+    "No real UART packets or physical control loop",
+    "External ChatGPT reader BLOCKED; independent/user review PENDING",
+    "Main unmerged"
+  ],
+  "quality_gate": {
+    "offline": "ACCEPT WITH LIMITATIONS",
+    "real_board": "REVISE",
+    "whole_platform": "REVISE",
+    "final_independent_review": "PENDING"
+  }
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "main.py", line 125, in <module>
+  File "main.py", line 118, in main
+  File "create_bsp.py", line 961, in main
+  File "utils.py", line 37, in wrapper
+  File "create_bsp.py", line 502, in create_domain
+  File "create_bsp.py", line 40, in __init__
+  File "create_bsp.py", line 62, in _get_family
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\Codex_project\\AMD_Sonofield\\v5\\build\\uart_resume_01\\ocm_script_01\\sdt\\system-top.dts'
+[PYI-47112:ERROR] Failed to execute script 'main' due to unhandled exception!

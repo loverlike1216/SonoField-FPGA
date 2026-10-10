@@ -1,3 +1,34 @@
+# UART continuation amendment — 2026-10-10
+
+Current result: offline ACCEPT WITH LIMITATIONS; real-board/whole-platform REVISE.
+COM3 now Code0 with driver11.6.0.420; pyserial3.5 locked. New read-only SLCR check
+kept both CPUs Running, originalVivado retained; no UARTopen/TX/boardwrite.
+Actual2025.2nativeSDT/BSP+ArmGNU13.2 linked safe/status ARMELF and OCM audit PASS
+in current/newcleanclone;203+203tests PASS. FullELF is not claimed bit-exact;
+application .text matches. Vitis platformAPI missingQEMU failure and RWX warning
+remain. Prior1160sealedfiles and original criteria preserved.
+User correction: recovery files are remote references only, no local verified
+backup. Rev3 DTR/RTS A0 and image/platform/recovery/isolation/permission A2 gates
+remain open. PC-B08 logicalbuild subgate closed; physical13PC-B scopes/BRAMProblem
+and independentreview stay open. Samev5/mainunmerged/Draft4 update authorized.
+See v5/docs/uart_resume/RESULT.md, v5/evidence/uart_resume/20261010_01/FINAL_VERIFICATION.json,
+CP-20261010-002 and shared/uart_resume/PUBLICATION_RECEIPT.json. Prior snapshots
+below retain provenance; this amendment supersedes only their stale current facts.
+
+---
+
+# Current next-stage v5 candidate (2026-10-10)
+
+Formal ADC direction **AD7606C-16**, approved by the user; active top `v5/rtl/board/nextstage_pl.v`. Original B top/model and old BOM are regression provenance. Current instruction: `AI-interaction-memory/codex/instructions/v5_nextstage_20261010.md`. Branch stacks on unmerged PR3 (which includes PR1/PR2), main is unchanged. No new version.
+
+Current completed evidence: [final report](v5/docs/next_stage/FINAL_REPORT.md), [test matrix](v5/evidence/next_stage/20261010/TEST_MATRIX.csv), [reproduction](v5/docs/next_stage/REPRODUCE.md), [open gates](v5/docs/next_stage/OPEN_GATES.md) and [publication receipt](shared/next_stage/PUBLICATION_RECEIPT.json). Offline ACCEPT WITH LIMITATIONS; real-board/whole-platform REVISE.
+
+See [current contract](v5/docs/next_stage/EXECUTION_CONTRACT.md), [decisions](v5/docs/next_stage/ARCHITECTURE_DECISIONS.md), [hardware STOP](v5/docs/next_stage/AX7020_JTAG_UART_BRINGUP.md) and [GUI guide](v5/docs/next_stage/GUI_REAL_BOARD_USER_GUIDE.md). Native CAD/ERC and manufacturing remain HOLD.
+
+From the repository root in PowerShell7, after installing `v5/requirements-lock.txt` in a local venv and setting VIVADO_BIN/IVERILOG_BIN/CC, run `.venv/Scripts/python.exe v5/scripts/run_nextstage.py --output v5/evidence/next_stage/reproduction_unique`. Run native offline EDA with `vivado.bat -mode batch -log <fresh-log> -nojournal -source v5/scripts/build_nextstage_platform.tcl -tclargs <fresh_label>`. No command opens/programs board hardware. Do not reuse an output label. The Vitis preflight is not a board application build.
+
+The section below preserves prior candidate delivery provenance; its prior B pending-approval text is superseded by the actual2026-10-10 user decision.
+
 # SonoField-FPGA — AX7020 v5
 
 **SONOFIELD_FPGA · v5 ACTIVE · ALINX AX7020 · Vivado/Vitis 2025.2**

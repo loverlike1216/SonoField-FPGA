@@ -1,0 +1,1198 @@
+{
+  "status": "FAIL",
+  "s0_files": 3324,
+  "immutable_tests_goldens_evidence_bom_files": 3026,
+  "changed": [
+    {
+      "path": "AGENTS.md",
+      "before": "e700963ec252bb59df70d770330d1ee6391bd9469a5e092859c6ca63e8cb61fe",
+      "after": "8f7c6dff106824f928e44fe8007330b5ce01fb6ae82db4cddbae4bd9f5d03d19",
+      "authorized": true
+    },
+    {
+      "path": "README.md",
+      "before": "332dd8ea069a4d58d3bb4b9ef2a897383076a10d9d88e5f4481293edf1749b4a",
+      "after": "178b535f84d4c7b7953d6b0f9f44cade98939c1e8b2faacabaa2176529829ed5",
+      "authorized": true
+    },
+    {
+      "path": "shared/DECISIONS.md",
+      "before": "a20cc597d0762f15e0e375c552546c8a178a3b0869fa2e1bdfbd835ce35cc961",
+      "after": "022e0a59d595460ff6dc95742b47b4fee4d4f00ef2523f907254bc34f696fde0",
+      "authorized": true
+    },
+    {
+      "path": "shared/VERSION_STATE.json",
+      "before": "f7cb9ebf3e26ed757059b8ad0efe8dc6d66d0e8ce9a5805e12dfbbfcc770d793",
+      "after": "b47747cc7c7ab68a3db3e6e193def0298772959f0f8e321b0743b715702c01ab",
+      "authorized": true
+    },
+    {
+      "path": "shared/migration/ACTIVE_TREE_ALLOWLIST.json",
+      "before": "5cc6e14a85d88c98e5ad9ce8cc773b5fedab69f083acf98d63a5a4150dfe5cf0",
+      "after": "960e06c716e08aa84469047339f98587407be280c8ee1d7decf1c50fad88a144",
+      "authorized": false
+    },
+    {
+      "path": "shared/migration/RUNBOOK.md",
+      "before": "f815960de2e53dfa5d21fb0ec8428fe0eda2fa1a303835fe3bb75b55812effa6",
+      "after": "87b7160cbd2a9ce801b74aa2fa008baaddbb2d18f4d72655f208a45b5ac2f4ba",
+      "authorized": false
+    },
+    {
+      "path": "shared/repository_cleanup/ARCHIVE_INDEX_IDENTITIES.json",
+      "before": "a135b7b61d00bdb8adba3b64f4d1ee7c9ad0cb756c75f9ca097dfd0371d03fbd",
+      "after": "5a7561ca0d742afae80f14f73b9bb2654e4c6cfa67b4bbce034c63f98d496c3c",
+      "authorized": false
+    },
+    {
+      "path": "shared/repository_cleanup/ARCHIVE_PATH_MAP.json",
+      "before": "45094ab465078d3523dacc684a7c524a8ff7f8b3468cc29f58133c25a3c9f286",
+      "after": "50643655e3d8cd1d7df446323f92ac4b94185a672524ed0e5ffc64243ff60a1c",
+      "authorized": false
+    },
+    {
+      "path": "v5/.gitignore",
+      "before": "d50eed86ad79aeee401d81bcd1a27a45ac4be0d805a3b3abfafc8a97de28d6ed",
+      "after": "857d9d0bca44a7d64e2a5758ff9878f3b019cb56d493178dc8e40ab1f2c6cb82",
+      "authorized": false
+    },
+    {
+      "path": "v5/README.md",
+      "before": "be76f17bf3bf40a3cdc198cd981830d424121239c58f1f5176c9b3cfc2391281",
+      "after": "8a11a8110ff513b289b0c5c79a73e3583094c82a22822c42512852f52ab62da5",
+      "authorized": false
+    },
+    {
+      "path": "v5/config/hardware_parts.json",
+      "before": "b9198fbe71daf089d3d518b667329bae597ed5abc86ee8853113de2d4f7c883b",
+      "after": "591030453cf86cd2c823f774a6ba4d0999ca45c16bc0c7abad2e9723b1717ab2",
+      "authorized": true
+    },
+    {
+      "path": "v5/config/inheritance_manifest.json",
+      "before": "e998fd9597128b9647855c92f41273528499f130abd7743527dfa68a59217a9c",
+      "after": "c40b26cff85ecde81a9fdb32e58a2a8080699092d6cc956ab41b195542427800",
+      "authorized": true
+    },
+    {
+      "path": "v5/config/system_baseline.json",
+      "before": "cd6ae558b5104b23b2949ac84eba608787d95d7d4658f4737c86dc3c7cf148b8",
+      "after": "a0e8322593ef61c90f90de8b601e3c8e13048b337a5bffea7f6648b62cb1051e",
+      "authorized": true
+    },
+    {
+      "path": "v5/evidence/baseline/after_migration/motion/gui_icarus_0/commands.jsonl",
+      "before": "57c39022a1a3d552e27dc1608e08658cb37b6b5fe45d2b78208f9f9bcb88037f",
+      "after": "8d613775c44f35915ac302bf2169b1b9733e4e31e9b7017d853f0de5f4f66bf7",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/after_migration/motion/gui_icarus_1/commands.jsonl",
+      "before": "e20bea91adc435ad6233bf7bc8bf3e11fbd4275a7b3dec012ca0c4e4c2914f12",
+      "after": "c3c4b29e9af65c0f79476e2db9b0f3699875bf660836b3cc54b5c084a96c7846",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/after_migration/motion/gui_icarus_2/commands.jsonl",
+      "before": "081dc288dc094337f3420bdee7349ff4bcc35141950e3a37ff56417fa489fdad",
+      "after": "fdc6f2e1d45931070cae81d42a822fd94e91087febc55eab4a173e4128fc8a46",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/after_migration/motion/gui_xsim/commands.jsonl",
+      "before": "03386465121ed9f4ece88cbf9c3afc4cb17db354e3e526ba73d6a91d4bb1139b",
+      "after": "f8df7ac86fc8569b9b3772674ba35e4e80a8498154a07daac0511c18bd985f4e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/before_migration_complete/motion/gui_icarus_0/commands.jsonl",
+      "before": "9e377ad3ef2d5ff4f7b7c133f25b4351daf62e3ede241d7201a45efe70305ff0",
+      "after": "eff95690a88c78ad82e71251375dda0f03430c49973652d11bd6077d4716afc4",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/before_migration_complete/motion/gui_icarus_1/commands.jsonl",
+      "before": "9e377ad3ef2d5ff4f7b7c133f25b4351daf62e3ede241d7201a45efe70305ff0",
+      "after": "eff95690a88c78ad82e71251375dda0f03430c49973652d11bd6077d4716afc4",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/before_migration_complete/motion/gui_icarus_2/commands.jsonl",
+      "before": "15fc8daee2f70571a14dee835572f1b3c875fe884c56c9f0623cee704ee844ef",
+      "after": "e422a0eee039f24a52234107334fcc1f0c8349efcf34a09bc5a0c73b6de9c146",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/before_migration_complete/motion/gui_xsim/commands.jsonl",
+      "before": "2bf10fa404bfa4dc81a585bcde57c762ed743a7d43b68fe0fe49ae4b6c713297",
+      "after": "e4f92d90d76941aca319da3922dbeb71b57a24ead987d94d6a383f2c25cc3fbc",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_0/commands.jsonl",
+      "before": "8061404bda7dd9e96bfe0e7d4bddeeddb0e09d1ece65bbcea4b691dded8fdb4f",
+      "after": "74779c43e330c894e969f220e601fe53e21cb86e99e789e32040b2ad3f0b127c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_1/commands.jsonl",
+      "before": "8061404bda7dd9e96bfe0e7d4bddeeddb0e09d1ece65bbcea4b691dded8fdb4f",
+      "after": "74779c43e330c894e969f220e601fe53e21cb86e99e789e32040b2ad3f0b127c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_2/commands.jsonl",
+      "before": "7b9804b3898e528786af256ba8f3a04997d946126714a46e0ea19e643fd78760",
+      "after": "e3d6d708c4c709757042b88a5c39745fd826a614d39c5e74c17d81fefbca2846",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/board_integration_20261009/motion/gui_xsim/commands.jsonl",
+      "before": "d7a3d51ebe838e9e6843416bab89adf5f01704552306ff9a870084578471c280",
+      "after": "7253de234cf498a617793760c3c0da703a984decb3f3d67cff6da47808e223f2",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/standalone/motion/gui_icarus_0/commands.jsonl",
+      "before": "894a69fd95c192bd628b134f67f18b46eb245d202b11c880fd1061cd08ed260c",
+      "after": "90a10ca06303c62d6ddf748a5e376663a3187c0e52fb67e848f075202374e83b",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/standalone/motion/gui_icarus_1/commands.jsonl",
+      "before": "6c12bda9cfb40da6138c94dd3482f0aad63d47ef03b70ad5b4874229187fbb5f",
+      "after": "12bad099965a87dd686f3aa4f8e2a8b826d519d2b369ef1068d7fd0aed55c205",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/standalone/motion/gui_icarus_2/commands.jsonl",
+      "before": "d93b0faeac2dabdb92d327edc3bda1699c777768c9cf10e29ac2d233e35e8875",
+      "after": "ffc7b59c8acede513012de37d0d294e71405697da6735b7500c2eaef3b2225e7",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/baseline/standalone/motion/gui_xsim/commands.jsonl",
+      "before": "d6ed5d36251dc245c6d1ab0e8fb65d1bdedbfa9717ad4cffcd6e55b797313e0f",
+      "after": "876a044d763cd2942f00343e36b87cd99403e5d9312f380773aadd63beb6ddab",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/board_bringup/20261009/adc_vectors.mem",
+      "before": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "after": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/candidates/adc_vectors.mem",
+      "before": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "after": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/motion/gui_icarus_0/commands.jsonl",
+      "before": "f0c7bc27526f1183ae814d4696e1dce36c4643a298ee074615d6e4a4833078d8",
+      "after": "cd65618dc56a11882787141b4534118f349d07c431ccc62513e34e310a93a609",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/motion/gui_icarus_1/commands.jsonl",
+      "before": "5d83077432acc37c368f863d3c90a2341b38e1c7a6d9898b89f308a55e8e58fd",
+      "after": "16c4fff4d965e0b1d9afe0169bd67c88ca2fd51c52ef2a23a4f78fc797f5dd9c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/motion/gui_icarus_2/commands.jsonl",
+      "before": "b9d58860d18e65b07255a5ba7af22df19c967983b63239dd9284211b6a6e54f5",
+      "after": "e6f4fa1997dfe2bc852dd6483f35755b606b0cfc091d5ad1c44e179121439c10",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/motion/gui_xsim/commands.jsonl",
+      "before": "4f98151b4b1cf4087b2cd401ea80a93850a52fce8e053c8638617583d67ec663",
+      "after": "afeefddccdd822e49dbc06e2f4bee7f20a9ad1feebb22d675e48f1e95d58a7f1",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/candidates/adc_vectors.mem",
+      "before": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "after": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_0/commands.jsonl",
+      "before": "63d6650184f6d9cd8dda56800d38fcf63ac35367db429c3b0afea0badb0ee07e",
+      "after": "83ef58368d3ec55d20d04b97e5e02fe4b556a5103c1b09d06e32f9c008e2a347",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_1/commands.jsonl",
+      "before": "f54eed259479c82e283737807e02864c6abf9ee7c7d2e7a53d84f39b7514c5b2",
+      "after": "a4ec4d82845a3b661ab9fada2d76b0a7cc86edccaa898d502aa2a13838b6a949",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_2/commands.jsonl",
+      "before": "171fdee0b9bb06fa78c56f33ac0ac0f14c11fd51e2d6724445fe4d6ea9d89daf",
+      "after": "65147c6f482bb2de510a1cc7a2ee5d450efda63b65925c8ae5d8b7fd97a8dc96",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/motion/gui_xsim/commands.jsonl",
+      "before": "23ad13c0398aaeec315a3d96affc1f49dfcb1c4ef5719bf1d986c79a841c4d3d",
+      "after": "bbc19d3471f607edbec22310751316e83221cad78162c6ac10e6b14731863491",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated/candidates/adc_vectors.mem",
+      "before": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "after": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/candidates/adc_vectors.mem",
+      "before": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "after": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_0/commands.jsonl",
+      "before": "04d98d75412dd95d6fa293b7fcdb031271c1918e0a08bc0de3409cc6ee10ff50",
+      "after": "180e5af235a276ec6a949f81485ec1d524cefe931b94cf0cc4decfa6d6b8bdf5",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_1/commands.jsonl",
+      "before": "e6c97142254745d96bd4136c7d1e804c99655dc0e351cecf65220969a4686b01",
+      "after": "67233cee2967ef6e351d97bb834c973bf50799216274a72b7aaf315c9e7f0aed",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_2/commands.jsonl",
+      "before": "5bcb8bd82be41ac36702307012abd470daf9dd61075703b38ea575e9b5959042",
+      "after": "b8b41a0439205713450b899690e5d74cd305a0128bc4ba223b556902a67428a0",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_xsim/commands.jsonl",
+      "before": "099df2aeecd1480737999b3aa46c3702f9f5ce23100e45d9c7e0829a80409524",
+      "after": "8424e372781d4db7aec2a6566283d8a5095cb782a0d150ef62c19e9fc603af31",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/bom/inspection.ndjson",
+      "before": "01e4262e318af050fe5d11d3ece403fc8552202c483d4cf7582c93744f82975b",
+      "after": "7d30398457c348249d62a84d043d96209efb500dae49c84fbbc3d3646dc36447",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/bom/workbook_inspection.ndjson",
+      "before": "04a8ca1522bcd866a3221435cd6d8850f115849d7f335e0b17879d33c06e68a9",
+      "after": "bf0ea0b897f4156d2b2e0a9054cfbbce2c9879ff2fb1590d8e0ca6ecacc66c8f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/bom/workbook_inspection_final.ndjson",
+      "before": "955b121ab1b92e1d74c37765befaf9344cbd700333dfbee16c51891090e0be2d",
+      "after": "e0b9a1c208a0a29bb21dd782814a29c15e868830307bd118d14febcc2e80fa11",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/drc_expanded/actual_violations.tsv",
+      "before": "ced42d7f367f0877e6a5a8afdac7d90927e52bb769491a665d3a40857d918896",
+      "after": "c75b5f40c933e69a1d70cb9062f1662525607c3b7c35d5853961c9985aa33fc3",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_0/commands.jsonl",
+      "before": "8a5cd6aeae9d90f861e74755bfd2accd607aeb06ae774ce0f82b2516f7c8f390",
+      "after": "674bcf62c7ce8d05e786734ddb167f6f242426d531fcc94b62661ce6591eba88",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_1/commands.jsonl",
+      "before": "3490b4b0290c3e556ce36030cd2fdd91943174da1dade59ab15fd625183906a9",
+      "after": "9da4037cb48ad33dd26211fff5cdae9e5ec2934e0d8137b03098df9fd2086b01",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_2/commands.jsonl",
+      "before": "0a62e095c77b35d7950821a5a9d5d45804d34196de56d209dcc34c651c3e6ab2",
+      "after": "c6d3ed20d329cd9955281f89d62e156c5c20824423ccf1c74c156eefe1d918df",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_xsim/commands.jsonl",
+      "before": "046fa4454548693de846a55285b8afc6a4799249b6d68fa95113903863661fff",
+      "after": "a3aaaccc317875c19b72b3d7f203dba567aeeaaff257f18c596eb9d55fc924f0",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/platform_verified/ps_address_map.tsv",
+      "before": "87f6d651f0a52401b8e33d04fa50f50c86da99efb2ee76f23a4c6948d0529e18",
+      "after": "b5a0355c63d442a430f39a2358f19f5eb29ebaf80f79447ce59de56d927e7d8f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/icarus/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/xsim/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/icarus/motion_maps.hex",
+      "before": "626bf32c1ccbfd346862c5550814415a6731727620a24bcd3732f3951a51880c",
+      "after": "1f9d17e8c1f03bf9dca5403e1139fc3e64bc8e3e724c1056b08d2ad996b4bcd1",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/xsim/motion_maps.hex",
+      "before": "626bf32c1ccbfd346862c5550814415a6731727620a24bcd3732f3951a51880c",
+      "after": "1f9d17e8c1f03bf9dca5403e1139fc3e64bc8e3e724c1056b08d2ad996b4bcd1",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/icarus/motion_maps.hex",
+      "before": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "after": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/xsim/motion_maps.hex",
+      "before": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "after": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/icarus/motion_maps.hex",
+      "before": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "after": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/xsim/motion_maps.hex",
+      "before": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "after": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/icarus/motion_maps.hex",
+      "before": "1a8418d4da2ec18dab5bf637daa48343f655e03bbd563d67afd2fbd50768fde7",
+      "after": "3b17c51f73016aeda56fff57076bb9970a63c7d928d4cef3e71d2e66e1c8b74a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/xsim/motion_maps.hex",
+      "before": "1a8418d4da2ec18dab5bf637daa48343f655e03bbd563d67afd2fbd50768fde7",
+      "after": "3b17c51f73016aeda56fff57076bb9970a63c7d928d4cef3e71d2e66e1c8b74a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/icarus/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/xsim/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/icarus/motion_maps.hex",
+      "before": "28e08aaf1f5fb01dec7c21443d05c7f2400c4355f471ec187abdb0056b7c9f72",
+      "after": "f00243075ac7a37fc4b7faecff5a821fab033a42a34d8c907ac5085bc2bfa87b",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/xsim/motion_maps.hex",
+      "before": "28e08aaf1f5fb01dec7c21443d05c7f2400c4355f471ec187abdb0056b7c9f72",
+      "after": "f00243075ac7a37fc4b7faecff5a821fab033a42a34d8c907ac5085bc2bfa87b",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/icarus/motion_maps.hex",
+      "before": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "after": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/xsim/motion_maps.hex",
+      "before": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "after": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/icarus/motion_maps.hex",
+      "before": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "after": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/xsim/motion_maps.hex",
+      "before": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "after": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/icarus/motion_maps.hex",
+      "before": "ae872279396d9ede6f49d7d53a9034fb16a83d82448596f763a1685893c7cafc",
+      "after": "59771b6ea83611428edf4308c13ae36e3a03779b5f78bf650ef14ca07c3e7f1d",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/xsim/motion_maps.hex",
+      "before": "ae872279396d9ede6f49d7d53a9034fb16a83d82448596f763a1685893c7cafc",
+      "after": "59771b6ea83611428edf4308c13ae36e3a03779b5f78bf650ef14ca07c3e7f1d",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/icarus/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/xsim/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_0/commands.jsonl",
+      "before": "c64927c33fc642507d49e4694fe93db354b03daad636fbf1eb6bd463c5d16ae9",
+      "after": "3c999537fb79ac1aeb2128830507593aae984a688c32e929bab04bec62c6e28f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_1/commands.jsonl",
+      "before": "e295429f573819e5aafff4a664c4739442317a05191f55651339419966cb9dd7",
+      "after": "19c23a82f8f11622c89622eaa52d66c7e0fb3e32a8c980c512102939de46968a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_2/commands.jsonl",
+      "before": "611239d33a1f1d65d8b8571f7807fcf9e72b0f503e6af01277fb40e17ab83146",
+      "after": "efc9ed927e8153d2bb72a1b008424cb60ab802e87262329f191f234a97a69219",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_xsim/commands.jsonl",
+      "before": "6d7c6bd3080c1a1d10dc3107987dee3d646b2f5ed9f401caced6a612f85dc237",
+      "after": "89c9472eedd04d5a90adb224337c42e7a722c88bdbfb54a01968d97b02776011",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/platform_addressed/ps_address_map.tsv",
+      "before": "87f6d651f0a52401b8e33d04fa50f50c86da99efb2ee76f23a4c6948d0529e18",
+      "after": "b5a0355c63d442a430f39a2358f19f5eb29ebaf80f79447ce59de56d927e7d8f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_1/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_1/icarus/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_1/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_1/xsim/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_2/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_2/icarus/motion_maps.hex",
+      "before": "626bf32c1ccbfd346862c5550814415a6731727620a24bcd3732f3951a51880c",
+      "after": "1f9d17e8c1f03bf9dca5403e1139fc3e64bc8e3e724c1056b08d2ad996b4bcd1",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_2/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_2/xsim/motion_maps.hex",
+      "before": "626bf32c1ccbfd346862c5550814415a6731727620a24bcd3732f3951a51880c",
+      "after": "1f9d17e8c1f03bf9dca5403e1139fc3e64bc8e3e724c1056b08d2ad996b4bcd1",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_3/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_3/icarus/motion_maps.hex",
+      "before": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "after": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_3/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_3/xsim/motion_maps.hex",
+      "before": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "after": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_4/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_4/icarus/motion_maps.hex",
+      "before": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "after": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_4/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_4/xsim/motion_maps.hex",
+      "before": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "after": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_5/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_5/icarus/motion_maps.hex",
+      "before": "1a8418d4da2ec18dab5bf637daa48343f655e03bbd563d67afd2fbd50768fde7",
+      "after": "3b17c51f73016aeda56fff57076bb9970a63c7d928d4cef3e71d2e66e1c8b74a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_5/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_5/xsim/motion_maps.hex",
+      "before": "1a8418d4da2ec18dab5bf637daa48343f655e03bbd563d67afd2fbd50768fde7",
+      "after": "3b17c51f73016aeda56fff57076bb9970a63c7d928d4cef3e71d2e66e1c8b74a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top1/icarus/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top1/xsim/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top2/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top2/icarus/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top2/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top2/xsim/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_final/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_final/icarus/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_final/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_final/xsim/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_verified/icarus/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_verified/icarus/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_verified/xsim/adc_vectors.hex",
+      "before": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "after": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "authorized": false
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_verified/xsim/motion_maps.hex",
+      "before": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "after": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "authorized": false
+    },
+    {
+      "path": "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx.inspect.ndjson",
+      "before": "dad69991357251068f1b51ca34eaef729ec66c66a70b901521d9cd4d0ae79b38",
+      "after": "14bafe6d6f3b114624c705d0e359442c5aad2e8a795338f07d3d310566270694",
+      "authorized": false
+    },
+    {
+      "path": "v5/hardware/bom/working/2026-10-09/artifact_inspection.ndjson",
+      "before": "f9a35431d6f006411938eab8389a3e565d7f39172106c30a0e174ce6fbffb2f5",
+      "after": "36f87047ed7cb08ef5875805c093a1e6b0cd90a75cc0d3b71b7ac27d00c81570",
+      "authorized": false
+    },
+    {
+      "path": "v5/hardware/constraints/ax7020_candidate.xdc",
+      "before": "edbbf3c20b5ea76d6259232bfa2ef70f75c1d19a9b290fd5be5d47d8edecf628",
+      "after": "a479ac3c633cb05819bdfb46d24f1b5b6b505334fd66a20fdd583912f7ebc173",
+      "authorized": false
+    },
+    {
+      "path": "v5/hardware/constraints/core_ooc.xdc",
+      "before": "129d4ce22ba376857fe3039ac040ebb8eb7e74f2e4fbc85a2db9a98b4f859ed1",
+      "after": "9eba2a2734cb8da8f630bfcc0fad28826d4214a570b271fc4bc93a5b18c1493f",
+      "authorized": false
+    },
+    {
+      "path": "v5/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+      "before": "7f4570c5eaecdfbb338975eabdb46f62ab0c7a344ad59f3bb86c123b13f2201a",
+      "after": "8e5642c4108aeeaa0b8a9c007af22dc0576f18762bf91a0803a6d8776c254ae9",
+      "authorized": false
+    },
+    {
+      "path": "v5/rtl/board/prepcb_pl.v",
+      "before": "aa0b34a3ea6360105e9a4b1702a23b413af4ae8c5bf67b3c3683bdbc786ef323",
+      "after": "12e91fe73c6b96aca953342a8e29482fc51e03bcea4ad6191f6c687153ced997",
+      "authorized": true
+    },
+    {
+      "path": "v5/rtl/sono_axi_system.sv",
+      "before": "2d85637b2448186d90d1a7b3527f72e4b8a497adcf206d2c72dc9adf15368ccd",
+      "after": "da19bd32431a8f810d140ea0411fe26e3648d6c20fb333d8f548dfc7bdbab0f8",
+      "authorized": true
+    },
+    {
+      "path": "v5/rtl/sono_digital_system.sv",
+      "before": "781d483af8b9b050c86f3c3806d9754fcc5629fc9ce4a9ecaba0c970bd7241de",
+      "after": "3722c029eff6bf1ba22e6a2ed41d3cf82bd9b804ef2dadf30f863d0f1b50296d",
+      "authorized": true
+    },
+    {
+      "path": "v5/rtl/sono_motion_system.sv",
+      "before": "690179c1faf9ff954343f36b8faaacf18fec55dbf14c4d0a3f9c8632e3290148",
+      "after": "d1fdd11eaf57c0c8b0dc21a9d223ee198af16f6794a4296fb6da58f4b4824452",
+      "authorized": true
+    },
+    {
+      "path": "v5/scripts/build_prepcb_bom.mjs",
+      "before": "09ba068dee22b8c61be910698ba43109047cbe0a67005c3ca2713e3b4a4c5ec5",
+      "after": "8b1f7bd170ca752cad0f60e991ee7b38c1b9a2189a56da88804b25be5a2c41fa",
+      "authorized": false
+    },
+    {
+      "path": "v5/scripts/check_prepcb_preservation.py",
+      "before": "938ab4977f6e1b82f30c2f10666cc5ca684fa55fde4df2594bd1b433b1756584",
+      "after": "ebc46d31bd18e078bc2cee13477483d84f68f81fc1a6c70935b5232c504869b2",
+      "authorized": true
+    },
+    {
+      "path": "v5/scripts/check_workspace_migration.py",
+      "before": "d258e8a0a873c148c5630e73dd65923e8c70aeb37922778e4cd913835073c3f9",
+      "after": "0d7f0b3a3802af997279e911908f6b4cd1472121191716a39e378851284ed2e4",
+      "authorized": false
+    },
+    {
+      "path": "v5/scripts/revise_ax7020_bom.mjs",
+      "before": "e863244c41f21b9c07246627b73da710fa3230e68184b0090289586359df1cc8",
+      "after": "0ec26c68271bf86620ba7a594bc133c0e178abe3617ca44b29a1e0c1714cf5a5",
+      "authorized": false
+    },
+    {
+      "path": "v5/scripts/run_baseline.ps1",
+      "before": "fc2628d204521dac03c6a2958fae2b7c37ec02d334bc1203cb3c56b9fb0c63fd",
+      "after": "3aa150cb3f4d555d0b91015ce8c38b45cd5d34a24efac60562d86136da8b28b4",
+      "authorized": false
+    },
+    {
+      "path": "v5/scripts/run_motion_app.ps1",
+      "before": "a2490523c157096177f3653644920ba7900157780480cc189f68d91d515d43ec",
+      "after": "fed8de6d87ce3ffa8fd22844073ebe9c1df4e0cacc61597ddcb6efb9556631c3",
+      "authorized": false
+    }
+  ],
+  "errors": [
+    "Unreviewed S0 change: shared/migration/ACTIVE_TREE_ALLOWLIST.json",
+    "Unreviewed S0 change: shared/migration/RUNBOOK.md",
+    "Unreviewed S0 change: shared/repository_cleanup/ARCHIVE_INDEX_IDENTITIES.json",
+    "Unreviewed S0 change: shared/repository_cleanup/ARCHIVE_PATH_MAP.json",
+    "Unreviewed S0 change: v5/.gitignore",
+    "Unreviewed S0 change: v5/README.md",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/after_migration/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/after_migration/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/after_migration/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/after_migration/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/after_migration/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/after_migration/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/after_migration/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/after_migration/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/before_migration_complete/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/before_migration_complete/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/before_migration_complete/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/before_migration_complete/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/before_migration_complete/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/before_migration_complete/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/before_migration_complete/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/before_migration_complete/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/board_integration_20261009/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/board_integration_20261009/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/standalone/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/standalone/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/standalone/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/standalone/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/standalone/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/standalone/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/baseline/standalone/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/baseline/standalone/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/board_bringup/20261009/adc_vectors.mem",
+    "Unreviewed S0 change: v5/evidence/board_bringup/20261009/adc_vectors.mem",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/base/candidates/adc_vectors.mem",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/base/candidates/adc_vectors.mem",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/base/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/base/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/base/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/base/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/base/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/base/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/base/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/base/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/clean_clone/candidates/adc_vectors.mem",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/clean_clone/candidates/adc_vectors.mem",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/clean_clone/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/clean_clone/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/migrated/candidates/adc_vectors.mem",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/migrated/candidates/adc_vectors.mem",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/migrated_retry1/candidates/adc_vectors.mem",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/migrated_retry1/candidates/adc_vectors.mem",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/migration/20261009/migrated_retry1/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/migration/20261009/migrated_retry1/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/bom/inspection.ndjson",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/bom/inspection.ndjson",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/bom/workbook_inspection.ndjson",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/bom/workbook_inspection.ndjson",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/bom/workbook_inspection_final.ndjson",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/bom/workbook_inspection_final.ndjson",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/drc_expanded/actual_violations.tsv",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/drc_expanded/actual_violations.tsv",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/platform_verified/ps_address_map.tsv",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/platform_verified/ps_address_map.tsv",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_0/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_0/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_1/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_1/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_2/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_2/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_xsim/commands.jsonl",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_xsim/commands.jsonl",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/platform_addressed/ps_address_map.tsv",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/platform_addressed/ps_address_map.tsv",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_1/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_1/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_1/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_1/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_1/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_1/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_1/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_1/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_2/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_2/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_2/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_2/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_2/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_2/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_2/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_2/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_3/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_3/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_3/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_3/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_3/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_3/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_3/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_3/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_4/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_4/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_4/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_4/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_4/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_4/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_4/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_4/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_5/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_5/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_5/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_5/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_5/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_5/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/system3/gui/case_5/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/system3/gui/case_5/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top1/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top1/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top1/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top1/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top2/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top2/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top2/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top2/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top2/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top2/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top2/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top2/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top_final/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top_final/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top_final/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top_final/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top_final/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top_final/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top_final/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top_final/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top_verified/icarus/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top_verified/icarus/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top_verified/icarus/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top_verified/icarus/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top_verified/xsim/adc_vectors.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top_verified/xsim/adc_vectors.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/evidence/pre_pcb_20261009/top_verified/xsim/motion_maps.hex",
+    "Unreviewed S0 change: v5/evidence/pre_pcb_20261009/top_verified/xsim/motion_maps.hex",
+    "Immutable test/golden/evidence/BOM changed: v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx.inspect.ndjson",
+    "Unreviewed S0 change: v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx.inspect.ndjson",
+    "Immutable test/golden/evidence/BOM changed: v5/hardware/bom/working/2026-10-09/artifact_inspection.ndjson",
+    "Unreviewed S0 change: v5/hardware/bom/working/2026-10-09/artifact_inspection.ndjson",
+    "Unreviewed S0 change: v5/hardware/constraints/ax7020_candidate.xdc",
+    "Unreviewed S0 change: v5/hardware/constraints/core_ooc.xdc",
+    "Unreviewed S0 change: v5/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+    "Unreviewed S0 change: v5/scripts/build_prepcb_bom.mjs",
+    "Unreviewed S0 change: v5/scripts/check_workspace_migration.py",
+    "Unreviewed S0 change: v5/scripts/revise_ax7020_bom.mjs",
+    "Unreviewed S0 change: v5/scripts/run_baseline.ps1",
+    "Unreviewed S0 change: v5/scripts/run_motion_app.ps1"
+  ],
+  "frozen_metadata_files": 3918,
+  "frozen_body_read": false,
+  "old_physical_workspace_accessed": false
+}

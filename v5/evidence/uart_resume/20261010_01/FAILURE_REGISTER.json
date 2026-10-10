@@ -1,0 +1,59 @@
+{
+  "status": "FAILURES_PRESERVED",
+  "items": [
+    {
+      "id": "UR-F01",
+      "cause": "Unit invocation from repository root omitted v5 import context and scoped scratch",
+      "evidence": "failures/unit203.log",
+      "resolution": "Existing documented v5 cwd/hostCC/cloneTMP invocation; no test change"
+    },
+    {
+      "id": "UR-F02",
+      "cause": "Unit invocation used v5 cwd but omitted actual hostCC and clone-local TMP",
+      "evidence": "failures/unit203_v5cwd.log",
+      "resolution": "Existing documented environment; all203 pass current and clean"
+    },
+    {
+      "id": "UR-F03",
+      "cause": "Vitis default backend startup EOF/hang and Java loopback socket failure",
+      "evidence": "attempts/vitis_candidate_02.log",
+      "resolution": "Owned offline server started with clone-local short temp and IPv4 JVM option; no global system change"
+    },
+    {
+      "id": "UR-F04",
+      "cause": "Vitis SDT helper unavailable on process PATH",
+      "evidence": "attempts/vitis_candidate_03.log",
+      "resolution": "Add installed Vivado/bin for this process; SDT then generated successfully"
+    },
+    {
+      "id": "UR-F05",
+      "cause": "Vitis platform postprocessing requires absent Zynq QEMU software directory",
+      "evidence": "attempts/vitis_candidate_04.log",
+      "resolution": "Platform API remains FAILED; separate installed2025.2 native BSP/application flow verified, no fake empty resource"
+    },
+    {
+      "id": "UR-F06",
+      "cause": "empyro -m32-bit applies to A53 rather than intrinsically32-bit A9; build_bsp argument is -d not -w",
+      "evidence": "attempts/empyro",
+      "resolution": "Use actual tool help/contracts; real BSP artifact audit"
+    },
+    {
+      "id": "UR-F07",
+      "cause": "Native backslashes passed through sdtgen Tcl were interpreted as escapes; launcher misleadingly returned0",
+      "evidence": "attempts/ocm_script_01/sdt.log",
+      "resolution": "Forward-slash path arguments and required device-tree artifact check; complete corrected flow passes"
+    },
+    {
+      "id": "UR-F08",
+      "cause": "vivado -version wrapper returned1 despite banner; direct executable requires full initialized environment",
+      "evidence": "attempts/ocm_script_final/vivado_version.log",
+      "resolution": "Native batch interpreter emits version and exits0; no return-code threshold relaxation"
+    },
+    {
+      "id": "UR-F09",
+      "cause": "Evidence helper default Windows text codec and repeated move; then negative-case harness initially mutated EXIDX rather than LOAD",
+      "evidence": "Observable current tool events",
+      "resolution": "UTF8/idempotent private staging; locate actual PT_LOAD and rerun all three rejection cases. Auditor unchanged; all cases rejected"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+The system cannot find the path specified.
+
+****** Xilinx Vitis Development Environment
+****** Vitis v2025.2 (64-bit)
+The system cannot find the path specified.
+****** SW Build 6295257 on 2025-11-13-08:29:30
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+The system cannot find the path specified.
+IMPORTING_VITIS_2025_2
+STARTING_OFFLINE_VITIS_SERVER
+Vitis Server started on port '56789'.
+Platform sonofield_ocm_candidate creation started.
+SDT generated successfully.
+Shutting down Vitis server running on port '56789'
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\build_uart_candidate.py", line 40, in <module>
+    platform = client.create_platform_component(
+        name="sonofield_ocm_candidate", hw_design=str(xsa),
+        os="standalone", cpu="ps7_cortexa9_0", domain_name="standalone_a9",
+        no_boot_bsp=True, generate_dtb=False,
+    )
+  File "D:\Vivado\2025.2\2025.2\Vitis\cli\vitis\cli_client.py", line 1751, in create_platform_component
+    raise exc_type(f"{exc_value}") from None
+Exception: Cannot create platform, status = StatusCode.UNKNOWN,
+                    
+            details = 'Application error processing RPC''

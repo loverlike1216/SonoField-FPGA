@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "classification": "DIGITAL_ADAPTER_SIMULATED_ANALOG_UNVERIFIED",
+  "signed_frames": 64,
+  "negative_readback_cases": 5,
+  "hashes": {
+    "icarus": "11a9e2c3f9e601b616a7053db0b79efd098730a0fd2a9c76446bd19ba12a9ecb",
+    "xsim": "11a9e2c3f9e601b616a7053db0b79efd098730a0fd2a9c76446bd19ba12a9ecb"
+  },
+  "commands": [
+    {
+      "simulator": "icarus",
+      "step": "compile",
+      "exit_code": 0
+    },
+    {
+      "simulator": "icarus",
+      "step": "run",
+      "exit_code": 0
+    },
+    {
+      "simulator": "xsim",
+      "step": "xvlog",
+      "exit_code": 0
+    },
+    {
+      "simulator": "xsim",
+      "step": "xelab",
+      "exit_code": 0
+    },
+    {
+      "simulator": "xsim",
+      "step": "run",
+      "exit_code": 0
+    }
+  ],
+  "crc": "DISABLED_AND_READBACK_CHECKED; unexpected-enable rejected; CRC-enabled frames unsupported"
+}

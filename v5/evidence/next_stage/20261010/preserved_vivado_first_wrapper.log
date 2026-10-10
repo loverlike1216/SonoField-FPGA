@@ -1,0 +1,79 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 10 01:50:49 2026
+# Process ID         : 52116
+# Current directory  : E:/Codex_project/AMD_Sonofield
+# Command line       : vivado.exe -mode batch -source v5/scripts/build_nextstage_platform.tcl -tclargs nextstage_platform_run1 -log v5/evidence/next_stage/20261010/vivado_platform_run1.log -nojournal
+# Log file           : E:/Codex_project/AMD_Sonofield/vivado.log
+# Journal file       : E:/Codex_project/AMD_Sonofield\vivado.jou
+# Running On         : [REDACTED_WINDOWS_HOST]
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 23622 MB
+# Total Virtual      : 40396 MB
+# Available Virtual  : 16241 MB
+#-----------------------------------------------------------
+source v5/scripts/build_nextstage_platform.tcl
+# if {![string match "2025.2*" [version -short]]} {error "Vivado2025.2 required"}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set label [expr {[llength $argv] ? [lindex $argv 0] : "platform_final"}]
+# if {![regexp {^[A-Za-z0-9_]+$} $label]} {error "Invalid build label"}
+# set work [file join $root build $label]
+# set out [file join $root evidence next_stage 20261010 $label]
+# file mkdir $out
+# if {[file exists [file join $work platform.xpr]]} {error "Use a fresh build directory"}
+# set parts [get_parts -quiet xc7z020*clg400*]
+# set f [open [file join $out parts.txt] w]
+# puts $f $parts
+# close $f
+# if {[llength [get_parts -quiet xc7z020clg400-2]] != 1} {error "Required documented candidate part unavailable"}
+# create_project platform $work -part xc7z020clg400-2
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 532.418 ; gain = 219.449
+# set f [open [file join $root config nextstage_source_list.txt] r]
+# foreach rel [split [string trim [read $f]] \n] {read_verilog -sv [file join $root [string trim $rel]]}
+# close $f
+# set_property include_dirs [list [file join $root rtl generated]] [current_fileset]
+# add_files -norecurse [list [file join $root rtl generated transport_valid.svh] [file join $root rtl generated registers.svh]]
+# create_bd_design prepcb_ps
+Wrote  : <E:\Codex_project\AMD_Sonofield\v5\build\nextstage_platform_run1\platform.srcs\sources_1\bd\prepcb_ps\prepcb_ps.bd> 
+# set ps [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:* ps7]
+# set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_EN_CLK0_PORT {1} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {132} CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1} CONFIG.PCW_UIPARAM_DDR_ENABLE {0} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART1_UART1_IO {MIO 48 .. 49}] $ps
+# set f [open [file join $out ps7_properties.txt] w]
+# puts $f [report_property -return_string $ps]
+# close $f
+# set inter [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:* interconnect]
+# set_property CONFIG.NUM_MI 6 $inter
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] prepcb_ps_task_bram_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] prepcb_ps_task_bram_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+# set bram [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:* task_bram]
+# set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1} CONFIG.DATA_WIDTH {32}] $bram
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] prepcb_ps_task_bram_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] prepcb_ps_task_bram_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+# set mem [create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:* task_memory]
+# set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Use_Byte_Write_Enable {true} CONFIG.Byte_Size {8} CONFIG.Register_PortB_Output_of_Memory_Primitives {false}] $mem
+# set gpio [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:* service_io]
+# set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_ALL_OUTPUTS {1} CONFIG.C_IS_DUAL {1} CONFIG.C_GPIO2_WIDTH {32} CONFIG.C_ALL_INPUTS_2 {1} CONFIG.C_INTERRUPT_PRESENT {1}] $gpio
+# set reset [create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:* reset]
+# connect_bd_intf_net [get_bd_intf_pins ps7/M_AXI_GP0] [get_bd_intf_pins interconnect/S00_AXI]
+# connect_bd_intf_net [get_bd_intf_pins interconnect/M00_AXI] [get_bd_intf_pins task_bram/S_AXI]
+# connect_bd_intf_net [get_bd_intf_pins interconnect/M01_AXI] [get_bd_intf_pins service_io/S_AXI]
+# connect_bd_intf_net [get_bd_intf_pins task_bram/BRAM_PORTA] [get_bd_intf_pins task_memory/BRAM_PORTA]
+ERROR: [filemgmt 56-195] Reference 'nextstage_pl' contains top file 'E:/Codex_project/AMD_Sonofield/v5/rtl/board/nextstage_pl.v' of type SystemVerilog. This type is not allowed as the top file in the reference.
+ERROR: [BD 41-1690] Unable to resolve module-source based on inputs: nextstage_pl
+ERROR: [BD 5-7] Error: running create_bd_cell  -type module -reference nextstage_pl -name pl_core .
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+
+    while executing
+"create_bd_cell -type module -reference nextstage_pl pl_core"
+    invoked from within
+"set core [create_bd_cell -type module -reference nextstage_pl pl_core]"
+    (file "v5/scripts/build_nextstage_platform.tcl" line 37)
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 10 01:51:06 2026...

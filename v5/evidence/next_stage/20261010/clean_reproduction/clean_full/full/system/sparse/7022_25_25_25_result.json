@@ -1,0 +1,1056 @@
+{
+  "classification": "ALTERNATIVE_VALIDATION",
+  "grade": "GEOMETRY_SPARSITY_CALIBRATED",
+  "pose": [
+    0.0007004404082446182,
+    -0.0004981454929680697,
+    0.10080112745383507,
+    0.3487695165023467,
+    -0.20068983377545743,
+    0.15040346224313114
+  ],
+  "receiver_delay_us": [
+    0.0,
+    0.19935861753779685,
+    -0.15261989494919018,
+    0.09449939766023555,
+    0.0,
+    -0.10001925910947958,
+    0.1477502139286748,
+    -0.20240275008873584
+  ],
+  "gauges": {
+    "RX0_delay_us": 0,
+    "RX4_delay_us": 0,
+    "basis": "EXPLICIT_FIXED_REFERENCE_ASSUMPTION_REQUIRES_MEASURED_ALIGNMENT"
+  },
+  "covariance": [
+    [
+      2.4582090557711787e-12,
+      -8.193479317384134e-13,
+      5.100042873118568e-13,
+      5.170687646203833e-11,
+      1.1996175588086382e-09,
+      1.0057146127694555e-11,
+      -5.588589215403437e-11,
+      -1.7433939542774077e-09,
+      -2.330638230195807e-09,
+      -5.075815976520603e-09,
+      -3.186779093309012e-09,
+      2.710276219126063e-09
+    ],
+    [
+      -8.193479317376974e-13,
+      2.453842216671379e-12,
+      5.426746869143834e-13,
+      -1.1979881726865069e-09,
+      -4.0045577427276694e-11,
+      2.4382261815108933e-12,
+      -2.332628926282893e-09,
+      -1.7759694622237598e-09,
+      -1.3947483342694606e-11,
+      2.6955546477348152e-09,
+      -3.1711610637629193e-09,
+      -5.083165022143377e-09
+    ],
+    [
+      5.100042873121245e-13,
+      5.426746869140635e-13,
+      9.846972323797955e-13,
+      -6.074049670240903e-10,
+      5.983156780440056e-10,
+      3.4279574014354e-12,
+      -2.2380974715150653e-09,
+      -3.5759158139080114e-09,
+      -2.1886894878035106e-09,
+      -2.17760732404859e-09,
+      -3.5388655565893803e-09,
+      -2.256804664939448e-09
+    ],
+    [
+      5.170687646191062e-11,
+      -1.1979881726865007e-09,
+      -6.074049670241564e-10,
+      1.3619437467566896e-06,
+      5.549514887600522e-08,
+      -1.5291641931680194e-09,
+      -2.1584041833793508e-07,
+      2.821048907930743e-06,
+      2.898528012436667e-06,
+      -2.293795338957348e-07,
+      2.789187046325388e-06,
+      2.9250991903450854e-06
+    ],
+    [
+      1.199617558808838e-09,
+      -4.0045577427868826e-11,
+      5.98315678043848e-10,
+      5.54951488761645e-08,
+      1.3664344288515636e-06,
+      6.396119468586526e-10,
+      -2.9514174425810673e-06,
+      -2.8203384172085677e-06,
+      2.1304832759206884e-07,
+      -2.9345563384027392e-06,
+      -2.8221656620288847e-06,
+      2.0079440830025e-07
+    ],
+    [
+      1.0057146127697192e-11,
+      2.438226181505355e-12,
+      3.427957401436152e-12,
+      -1.529164193168527e-09,
+      6.396119468600102e-10,
+      9.522354903434191e-07,
+      1.5659423957202674e-09,
+      -1.107531927503346e-08,
+      -1.9269270930709088e-08,
+      -1.7105862799979463e-08,
+      -2.0790971270917445e-08,
+      -9.894029575729436e-09
+    ],
+    [
+      -5.5885892155287186e-11,
+      -2.3326289262821644e-09,
+      -2.238097471515256e-09,
+      -2.1584041833821156e-07,
+      -2.951417442581899e-06,
+      1.565942395718078e-09,
+      1.894576055201164e-05,
+      8.099002643961935e-06,
+      -4.3307249082602755e-06,
+      2.743856258409532e-06,
+      8.021105286239628e-06,
+      7.35980015767016e-06
+    ],
+    [
+      -1.7433939542783309e-09,
+      -1.7759694622222022e-09,
+      -3.5759158139078113e-09,
+      2.821048907930307e-06,
+      -2.820338417209011e-06,
+      -1.1075319275028986e-08,
+      8.099002643960578e-06,
+      2.0733850557957426e-05,
+      7.97933410157149e-06,
+      8.011136477027501e-06,
+      1.2614790971839597e-05,
+      8.078745133597564e-06
+    ],
+    [
+      -2.330638230195806e-09,
+      -1.3947483342082675e-11,
+      -2.1886894878033754e-09,
+      2.8985280124366855e-06,
+      2.1304832759211326e-07,
+      -1.9269270930705034e-08,
+      -4.330724908260916e-06,
+      7.979334101571317e-06,
+      1.8785677376591417e-05,
+      7.272226669220249e-06,
+      7.891507577820852e-06,
+      2.5633927631846396e-06
+    ],
+    [
+      -5.07581597652076e-09,
+      2.6955546477367512e-09,
+      -2.177607324047939e-09,
+      -2.2937953389609382e-07,
+      -2.934556338402328e-06,
+      -1.7105862799970725e-08,
+      2.743856258406347e-06,
+      8.011136477025317e-06,
+      7.272226669220365e-06,
+      1.8880378756413347e-05,
+      7.99224819951558e-06,
+      -4.2710643398992474e-06
+    ],
+    [
+      -3.1867790933102336e-09,
+      -3.171161063761428e-09,
+      -3.538865556589393e-09,
+      2.789187046325172e-06,
+      -2.822165662029599e-06,
+      -2.0790971270914357e-08,
+      8.021105286238676e-06,
+      1.2614790971840602e-05,
+      7.891507577821633e-06,
+      7.99224819951853e-06,
+      2.0434838237186363e-05,
+      7.96064075663392e-06
+    ],
+    [
+      2.710276219124905e-09,
+      -5.083165022143768e-09,
+      -2.2568046649401087e-09,
+      2.925099190345098e-06,
+      2.0079440829904997e-07,
+      -9.894029575732015e-09,
+      7.359800157672494e-06,
+      8.078745133600751e-06,
+      2.5633927631851428e-06,
+      -4.271064339896011e-06,
+      7.960640756636797e-06,
+      1.887729812471907e-05
+    ]
+  ],
+  "rank": 12,
+  "singular_values": [
+    1.5950661302504847,
+    1.4913029032849268,
+    1.359746759950211,
+    1.13160006296307,
+    1.057609256930141,
+    1.0010483647463926,
+    0.9988338189036372,
+    0.7025436571058346,
+    0.5219269120706904,
+    0.34676489501556446,
+    0.24477333978056773,
+    0.1947059280849471
+  ],
+  "condition": 8.192180617914122,
+  "rms_s": 8.036757380638651e-09,
+  "accepted": 128,
+  "rejected": [],
+  "initial_guesses": 5,
+  "channels": [
+    {
+      "channel": 0,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 1,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 2,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 3,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 4,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 5,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 6,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 7,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 8,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 9,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 10,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 11,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 12,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 13,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 14,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 15,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 16,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 17,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 18,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 19,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 20,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 21,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 22,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 23,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 24,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 25,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 26,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 27,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 28,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 29,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 30,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 31,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 32,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 33,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 34,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 35,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 36,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 37,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 38,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 39,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 40,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 41,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 42,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 43,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 44,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 45,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 46,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 47,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 48,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 49,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 50,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 51,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 52,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 53,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 54,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 55,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 56,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 57,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 58,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 59,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 60,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 61,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 62,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 63,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 64,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 65,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 66,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 67,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 68,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 69,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 70,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 71,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 72,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 73,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 74,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 75,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 76,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 77,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 78,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 79,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 80,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 81,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 82,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 83,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 84,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 85,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 86,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 87,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 88,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 89,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 90,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 91,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 92,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 93,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 94,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 95,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 96,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 97,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 98,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 99,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 100,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 101,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 102,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 103,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 104,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 105,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 106,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 107,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 108,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 109,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 110,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 111,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 112,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 113,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 114,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 115,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 116,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 117,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 118,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 119,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 120,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 121,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 122,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 123,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 124,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 125,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 126,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    },
+    {
+      "channel": 127,
+      "phase_offset": null,
+      "gain": null,
+      "status": "UNMEASURED"
+    }
+  ],
+  "temperature": {
+    "model": "dry_linear_Tz_v1",
+    "pressure_assumed": true,
+    "humidity_percent": null,
+    "humidity_applied": false,
+    "uncertainty": "sensor accuracy plus unmeasured air/board bias",
+    "temperature_confidence": "THREE_LOCAL_POINTS_NOT_3D_THERMOMETRY",
+    "readings": [
+      {
+        "sensor_id": "TMP117_CENTER",
+        "location": "center",
+        "timestamp": 0,
+        "reading_C": 25,
+        "uncertainty": 0.15,
+        "status": "OK",
+        "staleness_ms": 0,
+        "calibration_offset": 0,
+        "provenance": "SYNTHETIC_REFERENCE"
+      },
+      {
+        "sensor_id": "TMP117_UPPER",
+        "location": "upper",
+        "timestamp": 0,
+        "reading_C": 25,
+        "uncertainty": 0.15,
+        "status": "OK",
+        "staleness_ms": 0,
+        "calibration_offset": 0,
+        "provenance": "SYNTHETIC_REFERENCE"
+      },
+      {
+        "sensor_id": "TMP117_LOWER",
+        "location": "lower",
+        "timestamp": 0,
+        "reading_C": 25,
+        "uncertainty": 0.15,
+        "status": "OK",
+        "staleness_ms": 0,
+        "calibration_offset": 0,
+        "provenance": "SYNTHETIC_REFERENCE"
+      }
+    ]
+  },
+  "actual_levitation_bounds": null,
+  "suggested_extra_tx": [
+    1,
+    6,
+    8,
+    15,
+    48,
+    55,
+    57,
+    62
+  ],
+  "rx_coordinate_provenance": "NOMINAL_MECHANICAL_NOT_MEASURED",
+  "seed": 7022,
+  "translation_error_mm": [
+    0.0004404082446182213,
+    0.0018545070319303568,
+    0.0011274538350702912
+  ],
+  "rotation_error_deg": [
+    0.0012304834976532564,
+    0.0006898337754574213,
+    0.0004034622431311474
+  ],
+  "holdout_paths": 384,
+  "holdout_max_error_ns": 5.678289284735335,
+  "observation_sha256": "934a31861eabe33bcfae6d0e9e9c7e8cf089988261c8b3dc3cb07dc8792acbda"
+}

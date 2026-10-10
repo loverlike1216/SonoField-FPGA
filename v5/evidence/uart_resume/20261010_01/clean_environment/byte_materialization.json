@@ -1,0 +1,854 @@
+{
+  "status": "PASS",
+  "source": "THIS_CLONE_OWN_GIT_OBJECTS",
+  "historical_body_read": false,
+  "root_or_original_sandbox_source_copied": false,
+  "files": [
+    {
+      "path": "shared/migration/ACTIVE_TREE_ALLOWLIST.json",
+      "before": "960e06c716e08aa84469047339f98587407be280c8ee1d7decf1c50fad88a144",
+      "after": "5cc6e14a85d88c98e5ad9ce8cc773b5fedab69f083acf98d63a5a4150dfe5cf0",
+      "git_blob": "c2ea8de75f122c8e0f5d5ac1a1b53fd317f9d40f"
+    },
+    {
+      "path": "shared/migration/RUNBOOK.md",
+      "before": "87b7160cbd2a9ce801b74aa2fa008baaddbb2d18f4d72655f208a45b5ac2f4ba",
+      "after": "f815960de2e53dfa5d21fb0ec8428fe0eda2fa1a303835fe3bb75b55812effa6",
+      "git_blob": "f067459757010d4f389eff7db9e0d4366ea95e3a"
+    },
+    {
+      "path": "shared/repository_cleanup/ARCHIVE_INDEX_IDENTITIES.json",
+      "before": "5a7561ca0d742afae80f14f73b9bb2654e4c6cfa67b4bbce034c63f98d496c3c",
+      "after": "a135b7b61d00bdb8adba3b64f4d1ee7c9ad0cb756c75f9ca097dfd0371d03fbd",
+      "git_blob": "da150d77e4852db67b113ea0afc2ae44cc8e2584"
+    },
+    {
+      "path": "shared/repository_cleanup/ARCHIVE_PATH_MAP.json",
+      "before": "50643655e3d8cd1d7df446323f92ac4b94185a672524ed0e5ffc64243ff60a1c",
+      "after": "45094ab465078d3523dacc684a7c524a8ff7f8b3468cc29f58133c25a3c9f286",
+      "git_blob": "31a3e93b5e77db056a43db8b801e0311ec3439a6"
+    },
+    {
+      "path": "v5/.gitignore",
+      "before": "857d9d0bca44a7d64e2a5758ff9878f3b019cb56d493178dc8e40ab1f2c6cb82",
+      "after": "d50eed86ad79aeee401d81bcd1a27a45ac4be0d805a3b3abfafc8a97de28d6ed",
+      "git_blob": "113f1eed5c5cfcafb26f0d773877f0263375c084"
+    },
+    {
+      "path": "v5/README.md",
+      "before": "8a11a8110ff513b289b0c5c79a73e3583094c82a22822c42512852f52ab62da5",
+      "after": "be76f17bf3bf40a3cdc198cd981830d424121239c58f1f5176c9b3cfc2391281",
+      "git_blob": "c9fff773ac776033d4df7f7728570b0e20339d39"
+    },
+    {
+      "path": "v5/evidence/baseline/after_migration/motion/gui_icarus_0/commands.jsonl",
+      "before": "8d613775c44f35915ac302bf2169b1b9733e4e31e9b7017d853f0de5f4f66bf7",
+      "after": "57c39022a1a3d552e27dc1608e08658cb37b6b5fe45d2b78208f9f9bcb88037f",
+      "git_blob": "e15d37580ff56b76430c121661419f6088faf28b"
+    },
+    {
+      "path": "v5/evidence/baseline/after_migration/motion/gui_icarus_1/commands.jsonl",
+      "before": "c3c4b29e9af65c0f79476e2db9b0f3699875bf660836b3cc54b5c084a96c7846",
+      "after": "e20bea91adc435ad6233bf7bc8bf3e11fbd4275a7b3dec012ca0c4e4c2914f12",
+      "git_blob": "2fea548932387c80175fad7d6e4b067f56d14b35"
+    },
+    {
+      "path": "v5/evidence/baseline/after_migration/motion/gui_icarus_2/commands.jsonl",
+      "before": "fdc6f2e1d45931070cae81d42a822fd94e91087febc55eab4a173e4128fc8a46",
+      "after": "081dc288dc094337f3420bdee7349ff4bcc35141950e3a37ff56417fa489fdad",
+      "git_blob": "4341184149734c37b58c2a35b5805c0f7a397f56"
+    },
+    {
+      "path": "v5/evidence/baseline/after_migration/motion/gui_xsim/commands.jsonl",
+      "before": "f8df7ac86fc8569b9b3772674ba35e4e80a8498154a07daac0511c18bd985f4e",
+      "after": "03386465121ed9f4ece88cbf9c3afc4cb17db354e3e526ba73d6a91d4bb1139b",
+      "git_blob": "fad58d9c9025fd0e1029f90d18bb691fa4b043f8"
+    },
+    {
+      "path": "v5/evidence/baseline/before_migration_complete/motion/gui_icarus_0/commands.jsonl",
+      "before": "eff95690a88c78ad82e71251375dda0f03430c49973652d11bd6077d4716afc4",
+      "after": "9e377ad3ef2d5ff4f7b7c133f25b4351daf62e3ede241d7201a45efe70305ff0",
+      "git_blob": "2e0d114749132ecf82c12d1c65c4b9b2c27e68d5"
+    },
+    {
+      "path": "v5/evidence/baseline/before_migration_complete/motion/gui_icarus_1/commands.jsonl",
+      "before": "eff95690a88c78ad82e71251375dda0f03430c49973652d11bd6077d4716afc4",
+      "after": "9e377ad3ef2d5ff4f7b7c133f25b4351daf62e3ede241d7201a45efe70305ff0",
+      "git_blob": "2e0d114749132ecf82c12d1c65c4b9b2c27e68d5"
+    },
+    {
+      "path": "v5/evidence/baseline/before_migration_complete/motion/gui_icarus_2/commands.jsonl",
+      "before": "e422a0eee039f24a52234107334fcc1f0c8349efcf34a09bc5a0c73b6de9c146",
+      "after": "15fc8daee2f70571a14dee835572f1b3c875fe884c56c9f0623cee704ee844ef",
+      "git_blob": "ed581eb2074e7f6f2e655e5a952d94a49c77d8d0"
+    },
+    {
+      "path": "v5/evidence/baseline/before_migration_complete/motion/gui_xsim/commands.jsonl",
+      "before": "e4f92d90d76941aca319da3922dbeb71b57a24ead987d94d6a383f2c25cc3fbc",
+      "after": "2bf10fa404bfa4dc81a585bcde57c762ed743a7d43b68fe0fe49ae4b6c713297",
+      "git_blob": "e8515c54a0ea08824c5156b8adf3457407e9ea74"
+    },
+    {
+      "path": "v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_0/commands.jsonl",
+      "before": "74779c43e330c894e969f220e601fe53e21cb86e99e789e32040b2ad3f0b127c",
+      "after": "8061404bda7dd9e96bfe0e7d4bddeeddb0e09d1ece65bbcea4b691dded8fdb4f",
+      "git_blob": "ca39240d2af0357b185b673f76a124b2d037fe58"
+    },
+    {
+      "path": "v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_1/commands.jsonl",
+      "before": "74779c43e330c894e969f220e601fe53e21cb86e99e789e32040b2ad3f0b127c",
+      "after": "8061404bda7dd9e96bfe0e7d4bddeeddb0e09d1ece65bbcea4b691dded8fdb4f",
+      "git_blob": "ca39240d2af0357b185b673f76a124b2d037fe58"
+    },
+    {
+      "path": "v5/evidence/baseline/board_integration_20261009/motion/gui_icarus_2/commands.jsonl",
+      "before": "e3d6d708c4c709757042b88a5c39745fd826a614d39c5e74c17d81fefbca2846",
+      "after": "7b9804b3898e528786af256ba8f3a04997d946126714a46e0ea19e643fd78760",
+      "git_blob": "52952a44b6510fc0eff4df251758fdd87d86cfc6"
+    },
+    {
+      "path": "v5/evidence/baseline/board_integration_20261009/motion/gui_xsim/commands.jsonl",
+      "before": "7253de234cf498a617793760c3c0da703a984decb3f3d67cff6da47808e223f2",
+      "after": "d7a3d51ebe838e9e6843416bab89adf5f01704552306ff9a870084578471c280",
+      "git_blob": "f0332f22fce4edc9addde346e8f3195749d36b7c"
+    },
+    {
+      "path": "v5/evidence/baseline/standalone/motion/gui_icarus_0/commands.jsonl",
+      "before": "90a10ca06303c62d6ddf748a5e376663a3187c0e52fb67e848f075202374e83b",
+      "after": "894a69fd95c192bd628b134f67f18b46eb245d202b11c880fd1061cd08ed260c",
+      "git_blob": "50f36c5e35a4e804843a614fc1c9b795884264f6"
+    },
+    {
+      "path": "v5/evidence/baseline/standalone/motion/gui_icarus_1/commands.jsonl",
+      "before": "12bad099965a87dd686f3aa4f8e2a8b826d519d2b369ef1068d7fd0aed55c205",
+      "after": "6c12bda9cfb40da6138c94dd3482f0aad63d47ef03b70ad5b4874229187fbb5f",
+      "git_blob": "8338c0bd1524305ffc1b144a96e07925d8a5bd49"
+    },
+    {
+      "path": "v5/evidence/baseline/standalone/motion/gui_icarus_2/commands.jsonl",
+      "before": "ffc7b59c8acede513012de37d0d294e71405697da6735b7500c2eaef3b2225e7",
+      "after": "d93b0faeac2dabdb92d327edc3bda1699c777768c9cf10e29ac2d233e35e8875",
+      "git_blob": "c1a6939ef1e1637e7738d1d6f368c5dd39537a2e"
+    },
+    {
+      "path": "v5/evidence/baseline/standalone/motion/gui_xsim/commands.jsonl",
+      "before": "876a044d763cd2942f00343e36b87cd99403e5d9312f380773aadd63beb6ddab",
+      "after": "d6ed5d36251dc245c6d1ab0e8fb65d1bdedbfa9717ad4cffcd6e55b797313e0f",
+      "git_blob": "206d50440d050319aa482a50de41d5f245c8dd6b"
+    },
+    {
+      "path": "v5/evidence/board_bringup/20261009/adc_vectors.mem",
+      "before": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "after": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "git_blob": "3517a94e9314ed1e969ba9a587e7b6592e15b333"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/candidates/adc_vectors.mem",
+      "before": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "after": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "git_blob": "3517a94e9314ed1e969ba9a587e7b6592e15b333"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/motion/gui_icarus_0/commands.jsonl",
+      "before": "cd65618dc56a11882787141b4534118f349d07c431ccc62513e34e310a93a609",
+      "after": "f0c7bc27526f1183ae814d4696e1dce36c4643a298ee074615d6e4a4833078d8",
+      "git_blob": "d303cba49bdaa8fd9c201a43cec8ded9c447dbd2"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/motion/gui_icarus_1/commands.jsonl",
+      "before": "16c4fff4d965e0b1d9afe0169bd67c88ca2fd51c52ef2a23a4f78fc797f5dd9c",
+      "after": "5d83077432acc37c368f863d3c90a2341b38e1c7a6d9898b89f308a55e8e58fd",
+      "git_blob": "6f86dc8475d990378fdd5217a854e72ddefe550d"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/motion/gui_icarus_2/commands.jsonl",
+      "before": "e6f4fa1997dfe2bc852dd6483f35755b606b0cfc091d5ad1c44e179121439c10",
+      "after": "b9d58860d18e65b07255a5ba7af22df19c967983b63239dd9284211b6a6e54f5",
+      "git_blob": "a9533ad58fa3a99fc5ea58b4a5cf42621908f29d"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/base/motion/gui_xsim/commands.jsonl",
+      "before": "afeefddccdd822e49dbc06e2f4bee7f20a9ad1feebb22d675e48f1e95d58a7f1",
+      "after": "4f98151b4b1cf4087b2cd401ea80a93850a52fce8e053c8638617583d67ec663",
+      "git_blob": "2e6df300b1a7dfd6f19834877f732978ee8fe659"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/candidates/adc_vectors.mem",
+      "before": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "after": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "git_blob": "3517a94e9314ed1e969ba9a587e7b6592e15b333"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_0/commands.jsonl",
+      "before": "83ef58368d3ec55d20d04b97e5e02fe4b556a5103c1b09d06e32f9c008e2a347",
+      "after": "63d6650184f6d9cd8dda56800d38fcf63ac35367db429c3b0afea0badb0ee07e",
+      "git_blob": "f1b6701e1384b9bc23efe4d8a1e7fc252ce3c32a"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_1/commands.jsonl",
+      "before": "a4ec4d82845a3b661ab9fada2d76b0a7cc86edccaa898d502aa2a13838b6a949",
+      "after": "f54eed259479c82e283737807e02864c6abf9ee7c7d2e7a53d84f39b7514c5b2",
+      "git_blob": "807bfbeb4ca74c13317730bc8a9f4abfb0f5446c"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/motion/gui_icarus_2/commands.jsonl",
+      "before": "65147c6f482bb2de510a1cc7a2ee5d450efda63b65925c8ae5d8b7fd97a8dc96",
+      "after": "171fdee0b9bb06fa78c56f33ac0ac0f14c11fd51e2d6724445fe4d6ea9d89daf",
+      "git_blob": "e996d27fa03c539d26da6dc6e718e91cd14a81d1"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/clean_clone/motion/gui_xsim/commands.jsonl",
+      "before": "bbc19d3471f607edbec22310751316e83221cad78162c6ac10e6b14731863491",
+      "after": "23ad13c0398aaeec315a3d96affc1f49dfcb1c4ef5719bf1d986c79a841c4d3d",
+      "git_blob": "c2ad66bbd488ac9540256d3577abee374f85c389"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated/candidates/adc_vectors.mem",
+      "before": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "after": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "git_blob": "3517a94e9314ed1e969ba9a587e7b6592e15b333"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/candidates/adc_vectors.mem",
+      "before": "32a5e4052ca86519e60ed98e08b0216526a23faf706d86ceda06a418278c49b2",
+      "after": "a082aa754afcec9e05953464bf1a1557ccbed8e9671918a6d3c2fc85bbd45c6e",
+      "git_blob": "3517a94e9314ed1e969ba9a587e7b6592e15b333"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_0/commands.jsonl",
+      "before": "180e5af235a276ec6a949f81485ec1d524cefe931b94cf0cc4decfa6d6b8bdf5",
+      "after": "04d98d75412dd95d6fa293b7fcdb031271c1918e0a08bc0de3409cc6ee10ff50",
+      "git_blob": "cf85ee10d69b34d6596d689ede29e57d62e77778"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_1/commands.jsonl",
+      "before": "67233cee2967ef6e351d97bb834c973bf50799216274a72b7aaf315c9e7f0aed",
+      "after": "e6c97142254745d96bd4136c7d1e804c99655dc0e351cecf65220969a4686b01",
+      "git_blob": "a396497e2e3af223680e1190ce4a89f2fd70c0bc"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_icarus_2/commands.jsonl",
+      "before": "b8b41a0439205713450b899690e5d74cd305a0128bc4ba223b556902a67428a0",
+      "after": "5bcb8bd82be41ac36702307012abd470daf9dd61075703b38ea575e9b5959042",
+      "git_blob": "5ccfe2f6b2e84fcbd140161c5a7dced7b147609a"
+    },
+    {
+      "path": "v5/evidence/migration/20261009/migrated_retry1/motion/gui_xsim/commands.jsonl",
+      "before": "8424e372781d4db7aec2a6566283d8a5095cb782a0d150ef62c19e9fc603af31",
+      "after": "099df2aeecd1480737999b3aa46c3702f9f5ce23100e45d9c7e0829a80409524",
+      "git_blob": "f39fd0451b6d027c5f3c072f90cd302faf247696"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/bom/inspection.ndjson",
+      "before": "7d30398457c348249d62a84d043d96209efb500dae49c84fbbc3d3646dc36447",
+      "after": "01e4262e318af050fe5d11d3ece403fc8552202c483d4cf7582c93744f82975b",
+      "git_blob": "c87b2516eb1da2511329f81efabd0b254e167c9d"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/bom/workbook_inspection.ndjson",
+      "before": "bf0ea0b897f4156d2b2e0a9054cfbbce2c9879ff2fb1590d8e0ca6ecacc66c8f",
+      "after": "04a8ca1522bcd866a3221435cd6d8850f115849d7f335e0b17879d33c06e68a9",
+      "git_blob": "bbb6037af092f9d37665e95ab5677bbd8210b3dd"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/bom/workbook_inspection_final.ndjson",
+      "before": "e0b9a1c208a0a29bb21dd782814a29c15e868830307bd118d14febcc2e80fa11",
+      "after": "955b121ab1b92e1d74c37765befaf9344cbd700333dfbee16c51891090e0be2d",
+      "git_blob": "afa5b81b9edca913ac0c6dcfc9878996ccab086e"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/drc_expanded/actual_violations.tsv",
+      "before": "c75b5f40c933e69a1d70cb9062f1662525607c3b7c35d5853961c9985aa33fc3",
+      "after": "ced42d7f367f0877e6a5a8afdac7d90927e52bb769491a665d3a40857d918896",
+      "git_blob": "3459e47b4fdced1d50c29eb6de8b6b2664217392"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_0/commands.jsonl",
+      "before": "674bcf62c7ce8d05e786734ddb167f6f242426d531fcc94b62661ce6591eba88",
+      "after": "8a5cd6aeae9d90f861e74755bfd2accd607aeb06ae774ce0f82b2516f7c8f390",
+      "git_blob": "c7e3edf33799cf016f34cf769716387c25638f09"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_1/commands.jsonl",
+      "before": "9da4037cb48ad33dd26211fff5cdae9e5ec2934e0d8137b03098df9fd2086b01",
+      "after": "3490b4b0290c3e556ce36030cd2fdd91943174da1dade59ab15fd625183906a9",
+      "git_blob": "0cd56a4da865920a716ec112f7ad143e29e5d3d9"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_icarus_2/commands.jsonl",
+      "before": "c6d3ed20d329cd9955281f89d62e156c5c20824423ccf1c74c156eefe1d918df",
+      "after": "0a62e095c77b35d7950821a5a9d5d45804d34196de56d209dcc34c651c3e6ab2",
+      "git_blob": "59324fa7c5e2108c3c74bb6385cb03303232b133"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/full1/motion/gui_xsim/commands.jsonl",
+      "before": "a3aaaccc317875c19b72b3d7f203dba567aeeaaff257f18c596eb9d55fc924f0",
+      "after": "046fa4454548693de846a55285b8afc6a4799249b6d68fa95113903863661fff",
+      "git_blob": "fc7df3b3fd2c9d63e4fddc35fd8a8f422a741be3"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/platform_verified/ps_address_map.tsv",
+      "before": "b5a0355c63d442a430f39a2358f19f5eb29ebaf80f79447ce59de56d927e7d8f",
+      "after": "87f6d651f0a52401b8e33d04fa50f50c86da99efb2ee76f23a4c6948d0529e18",
+      "git_blob": "1a42ab2e72b22fb175be185c6be39d6967815a1a"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/icarus/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_1/xsim/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/icarus/motion_maps.hex",
+      "before": "1f9d17e8c1f03bf9dca5403e1139fc3e64bc8e3e724c1056b08d2ad996b4bcd1",
+      "after": "626bf32c1ccbfd346862c5550814415a6731727620a24bcd3732f3951a51880c",
+      "git_blob": "a30e214b683a8369c76a5b0e3890c2bc810f3852"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_2/xsim/motion_maps.hex",
+      "before": "1f9d17e8c1f03bf9dca5403e1139fc3e64bc8e3e724c1056b08d2ad996b4bcd1",
+      "after": "626bf32c1ccbfd346862c5550814415a6731727620a24bcd3732f3951a51880c",
+      "git_blob": "a30e214b683a8369c76a5b0e3890c2bc810f3852"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/icarus/motion_maps.hex",
+      "before": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "after": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "git_blob": "79fa67e911c4908498f918cfe2b736c5adcf7027"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_3/xsim/motion_maps.hex",
+      "before": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "after": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "git_blob": "79fa67e911c4908498f918cfe2b736c5adcf7027"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/icarus/motion_maps.hex",
+      "before": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "after": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "git_blob": "73875d60bb1b45e582be8f98c6dd9a19096d4440"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_4/xsim/motion_maps.hex",
+      "before": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "after": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "git_blob": "73875d60bb1b45e582be8f98c6dd9a19096d4440"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/icarus/motion_maps.hex",
+      "before": "3b17c51f73016aeda56fff57076bb9970a63c7d928d4cef3e71d2e66e1c8b74a",
+      "after": "1a8418d4da2ec18dab5bf637daa48343f655e03bbd563d67afd2fbd50768fde7",
+      "git_blob": "3edd1f51d594457bf6fb1ce4ae180e985e9f4725"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system1/gui/case_5/xsim/motion_maps.hex",
+      "before": "3b17c51f73016aeda56fff57076bb9970a63c7d928d4cef3e71d2e66e1c8b74a",
+      "after": "1a8418d4da2ec18dab5bf637daa48343f655e03bbd563d67afd2fbd50768fde7",
+      "git_blob": "3edd1f51d594457bf6fb1ce4ae180e985e9f4725"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/icarus/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_1/xsim/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/icarus/motion_maps.hex",
+      "before": "f00243075ac7a37fc4b7faecff5a821fab033a42a34d8c907ac5085bc2bfa87b",
+      "after": "28e08aaf1f5fb01dec7c21443d05c7f2400c4355f471ec187abdb0056b7c9f72",
+      "git_blob": "e7d89e81f798cef5044faf93cc3e922c179004f0"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_2/xsim/motion_maps.hex",
+      "before": "f00243075ac7a37fc4b7faecff5a821fab033a42a34d8c907ac5085bc2bfa87b",
+      "after": "28e08aaf1f5fb01dec7c21443d05c7f2400c4355f471ec187abdb0056b7c9f72",
+      "git_blob": "e7d89e81f798cef5044faf93cc3e922c179004f0"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/icarus/motion_maps.hex",
+      "before": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "after": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "git_blob": "79fa67e911c4908498f918cfe2b736c5adcf7027"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_3/xsim/motion_maps.hex",
+      "before": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "after": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "git_blob": "79fa67e911c4908498f918cfe2b736c5adcf7027"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/icarus/motion_maps.hex",
+      "before": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "after": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "git_blob": "73875d60bb1b45e582be8f98c6dd9a19096d4440"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_4/xsim/motion_maps.hex",
+      "before": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "after": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "git_blob": "73875d60bb1b45e582be8f98c6dd9a19096d4440"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/icarus/motion_maps.hex",
+      "before": "59771b6ea83611428edf4308c13ae36e3a03779b5f78bf650ef14ca07c3e7f1d",
+      "after": "ae872279396d9ede6f49d7d53a9034fb16a83d82448596f763a1685893c7cafc",
+      "git_blob": "d7d9e6e9751c97fa4ee9cb703612e203942dcc6f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/system_verified/gui/case_5/xsim/motion_maps.hex",
+      "before": "59771b6ea83611428edf4308c13ae36e3a03779b5f78bf650ef14ca07c3e7f1d",
+      "after": "ae872279396d9ede6f49d7d53a9034fb16a83d82448596f763a1685893c7cafc",
+      "git_blob": "d7d9e6e9751c97fa4ee9cb703612e203942dcc6f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/icarus/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/clean_reproduction/top_verified/xsim/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_0/commands.jsonl",
+      "before": "3c999537fb79ac1aeb2128830507593aae984a688c32e929bab04bec62c6e28f",
+      "after": "c64927c33fc642507d49e4694fe93db354b03daad636fbf1eb6bd463c5d16ae9",
+      "git_blob": "de225936b0e423ae3c0ba9dfdb97aa54437189f3"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_1/commands.jsonl",
+      "before": "19c23a82f8f11622c89622eaa52d66c7e0fb3e32a8c980c512102939de46968a",
+      "after": "e295429f573819e5aafff4a664c4739442317a05191f55651339419966cb9dd7",
+      "git_blob": "4a58941843247aaffaf3da487f90ef9d62f1bf99"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_icarus_2/commands.jsonl",
+      "before": "efc9ed927e8153d2bb72a1b008424cb60ab802e87262329f191f234a97a69219",
+      "after": "611239d33a1f1d65d8b8571f7807fcf9e72b0f503e6af01277fb40e17ab83146",
+      "git_blob": "7810790bd96ce40a9d7fa82427ed865b5556cfa0"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/inherited_full1/motion/gui_xsim/commands.jsonl",
+      "before": "89c9472eedd04d5a90adb224337c42e7a722c88bdbfb54a01968d97b02776011",
+      "after": "6d7c6bd3080c1a1d10dc3107987dee3d646b2f5ed9f401caced6a612f85dc237",
+      "git_blob": "47bb3cea5373cf8341d77222fadfe7e6d2e81c7b"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/platform_addressed/ps_address_map.tsv",
+      "before": "b5a0355c63d442a430f39a2358f19f5eb29ebaf80f79447ce59de56d927e7d8f",
+      "after": "87f6d651f0a52401b8e33d04fa50f50c86da99efb2ee76f23a4c6948d0529e18",
+      "git_blob": "1a42ab2e72b22fb175be185c6be39d6967815a1a"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_1/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_1/icarus/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_1/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_1/xsim/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_2/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_2/icarus/motion_maps.hex",
+      "before": "1f9d17e8c1f03bf9dca5403e1139fc3e64bc8e3e724c1056b08d2ad996b4bcd1",
+      "after": "626bf32c1ccbfd346862c5550814415a6731727620a24bcd3732f3951a51880c",
+      "git_blob": "a30e214b683a8369c76a5b0e3890c2bc810f3852"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_2/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_2/xsim/motion_maps.hex",
+      "before": "1f9d17e8c1f03bf9dca5403e1139fc3e64bc8e3e724c1056b08d2ad996b4bcd1",
+      "after": "626bf32c1ccbfd346862c5550814415a6731727620a24bcd3732f3951a51880c",
+      "git_blob": "a30e214b683a8369c76a5b0e3890c2bc810f3852"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_3/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_3/icarus/motion_maps.hex",
+      "before": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "after": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "git_blob": "79fa67e911c4908498f918cfe2b736c5adcf7027"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_3/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_3/xsim/motion_maps.hex",
+      "before": "b8ba2a2f1756a5a7e173d34711a00c5012cd44bb988e6d37c198b561a8e6a70f",
+      "after": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea",
+      "git_blob": "79fa67e911c4908498f918cfe2b736c5adcf7027"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_4/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_4/icarus/motion_maps.hex",
+      "before": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "after": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "git_blob": "73875d60bb1b45e582be8f98c6dd9a19096d4440"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_4/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_4/xsim/motion_maps.hex",
+      "before": "da56afa82a17fed62b31a1991d4b8882749163c944f1763f58a8f39971bae32c",
+      "after": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a",
+      "git_blob": "73875d60bb1b45e582be8f98c6dd9a19096d4440"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_5/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_5/icarus/motion_maps.hex",
+      "before": "3b17c51f73016aeda56fff57076bb9970a63c7d928d4cef3e71d2e66e1c8b74a",
+      "after": "1a8418d4da2ec18dab5bf637daa48343f655e03bbd563d67afd2fbd50768fde7",
+      "git_blob": "3edd1f51d594457bf6fb1ce4ae180e985e9f4725"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_5/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/system3/gui/case_5/xsim/motion_maps.hex",
+      "before": "3b17c51f73016aeda56fff57076bb9970a63c7d928d4cef3e71d2e66e1c8b74a",
+      "after": "1a8418d4da2ec18dab5bf637daa48343f655e03bbd563d67afd2fbd50768fde7",
+      "git_blob": "3edd1f51d594457bf6fb1ce4ae180e985e9f4725"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top1/icarus/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top1/xsim/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top2/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top2/icarus/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top2/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top2/xsim/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_final/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_final/icarus/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_final/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_final/xsim/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_verified/icarus/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_verified/icarus/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_verified/xsim/adc_vectors.hex",
+      "before": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e",
+      "after": "99671e9fcc0aa7a71ce7b2165d5e262863f5f77ff3bd71455252df7415a844b9",
+      "git_blob": "2dd5c544ce244544e6b021e430ceef45fff01b31"
+    },
+    {
+      "path": "v5/evidence/pre_pcb_20261009/top_verified/xsim/motion_maps.hex",
+      "before": "20840b5c112ced05cd2222a4609c3868700a868290b728eb01202070892b353a",
+      "after": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea",
+      "git_blob": "8c34c28e9108cdebdc0609f77f29f874f2c7f01f"
+    },
+    {
+      "path": "v5/hardware/bom/working/2026-10-09/BOM_AX7020_NU40C10T_WORKING_2026-10-09.xlsx.inspect.ndjson",
+      "before": "14bafe6d6f3b114624c705d0e359442c5aad2e8a795338f07d3d310566270694",
+      "after": "dad69991357251068f1b51ca34eaef729ec66c66a70b901521d9cd4d0ae79b38",
+      "git_blob": "4fa31df895551b47ec7111dd1bcb1e1a05c98ad4"
+    },
+    {
+      "path": "v5/hardware/bom/working/2026-10-09/artifact_inspection.ndjson",
+      "before": "36f87047ed7cb08ef5875805c093a1e6b0cd90a75cc0d3b71b7ac27d00c81570",
+      "after": "f9a35431d6f006411938eab8389a3e565d7f39172106c30a0e174ce6fbffb2f5",
+      "git_blob": "ab6cab7dadea42217022f4eb7d91ac5abf03d454"
+    },
+    {
+      "path": "v5/hardware/constraints/ax7020_candidate.xdc",
+      "before": "a479ac3c633cb05819bdfb46d24f1b5b6b505334fd66a20fdd583912f7ebc173",
+      "after": "edbbf3c20b5ea76d6259232bfa2ef70f75c1d19a9b290fd5be5d47d8edecf628",
+      "git_blob": "0595db6409c2cbea46bdced5d0cecb69b4d56e88"
+    },
+    {
+      "path": "v5/hardware/constraints/core_ooc.xdc",
+      "before": "9eba2a2734cb8da8f630bfcc0fad28826d4214a570b271fc4bc93a5b18c1493f",
+      "after": "129d4ce22ba376857fe3039ac040ebb8eb7e74f2e4fbc85a2db9a98b4f859ed1",
+      "git_blob": "72ccc9b8ce613822983447e9817ba6b1c48e2a88"
+    },
+    {
+      "path": "v5/hardware/mechanical/geometry_10mm/array_dimensions.svg",
+      "before": "8e5642c4108aeeaa0b8a9c007af22dc0576f18762bf91a0803a6d8776c254ae9",
+      "after": "7f4570c5eaecdfbb338975eabdb46f62ab0c7a344ad59f3bb86c123b13f2201a",
+      "git_blob": "d4d39693aa38c3b6a9c55a706b8a20b9c9a32f26"
+    },
+    {
+      "path": "v5/scripts/build_prepcb_bom.mjs",
+      "before": "8b1f7bd170ca752cad0f60e991ee7b38c1b9a2189a56da88804b25be5a2c41fa",
+      "after": "09ba068dee22b8c61be910698ba43109047cbe0a67005c3ca2713e3b4a4c5ec5",
+      "git_blob": "2acae4183768f2052d2d57574635f9af29e861ea"
+    },
+    {
+      "path": "v5/scripts/check_workspace_migration.py",
+      "before": "0d7f0b3a3802af997279e911908f6b4cd1472121191716a39e378851284ed2e4",
+      "after": "d258e8a0a873c148c5630e73dd65923e8c70aeb37922778e4cd913835073c3f9",
+      "git_blob": "13016c73c85fb5ea1ec868b0ac02b09d193c3d8b"
+    },
+    {
+      "path": "v5/scripts/revise_ax7020_bom.mjs",
+      "before": "0ec26c68271bf86620ba7a594bc133c0e178abe3617ca44b29a1e0c1714cf5a5",
+      "after": "e863244c41f21b9c07246627b73da710fa3230e68184b0090289586359df1cc8",
+      "git_blob": "92d231d5e15e3bfae518a63f343edc4187e171ff"
+    },
+    {
+      "path": "v5/scripts/run_baseline.ps1",
+      "before": "3aa150cb3f4d555d0b91015ce8c38b45cd5d34a24efac60562d86136da8b28b4",
+      "after": "fc2628d204521dac03c6a2958fae2b7c37ec02d334bc1203cb3c56b9fb0c63fd",
+      "git_blob": "93828640dff5953fcc691515b541dbfdc80cb126"
+    },
+    {
+      "path": "v5/scripts/run_motion_app.ps1",
+      "before": "fed8de6d87ce3ffa8fd22844073ebe9c1df4e0cacc61597ddcb6efb9556631c3",
+      "after": "a2490523c157096177f3653644920ba7900157780480cc189f68d91d515d43ec",
+      "git_blob": "8e9116493359492ba9a9235386593b8f5a9ac192"
+    }
+  ]
+}

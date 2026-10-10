@@ -1,0 +1,1691 @@
+{
+  "status": "PASS",
+  "initial_source_commit": "6274330f98955fa0d4c4703a90d31bc1421104fb",
+  "final_source_commit": "227f85f2b7f300b0cdaefba7e24d40ee6bcf1050",
+  "independent_git_clone_no_hardlinks": true,
+  "fresh_locked_venv": true,
+  "same_os_and_eda": true,
+  "historical_worktree_present": false,
+  "files": [
+    {
+      "path": "capture_final.log",
+      "raw_sha256": "4d5a2c2026c71f3c3b287a96b18870e864b90e00872e8fda1a767991d6620143"
+    },
+    {
+      "path": "checkout_eol_receipt.json",
+      "raw_sha256": "88c5c61b917cd91f3f887e0ff0d8be4c742711a76471ff972a774addaefea762"
+    },
+    {
+      "path": "checkout_policy_final.json",
+      "raw_sha256": "9671aa36ece91896987af77d0512357afdf552aef84f2a37bb75c7323823e24b"
+    },
+    {
+      "path": "clean_final203.log",
+      "raw_sha256": "10c610711a035f24814531bde5786d9a72cf3e5c1c9a792b953193fc68fd3c18"
+    },
+    {
+      "path": "clean_preservation_final.json",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_preservation_final2.json",
+      "raw_sha256": "b70e6e3f0dbff1e9cbdc4c2b9170984b94cc2a7022d4704a082d7db79aead680"
+    },
+    {
+      "path": "clean_preservation_final3.json",
+      "raw_sha256": "f8097af3a9bd7448aabb9dba11335ffc03a4d0dcc1b1576cb92aa9953dc78bd6"
+    },
+    {
+      "path": "clean_preservation_sealed.json",
+      "raw_sha256": "0cd079353f42cb03bf72d0df1e8c4fa796c4c7d014f70b067306965968d5f033"
+    },
+    {
+      "path": "clean_structure_sealed.json",
+      "raw_sha256": "f71711edfa8c6d88c5530208a644afabf5b1c3abbf1083ca741dccf2127d7cb4"
+    },
+    {
+      "path": "clean_vivado.log",
+      "raw_sha256": "5465c7c11470419abbd96645731720bcff759dad636ebcb73e4b2290937d2590"
+    },
+    {
+      "path": "S0_PROTECTED_HASHES.json",
+      "raw_sha256": "0fae6cfa4827b68587b7b8d1aa4066a1bc53f27e5ddd16ccddb122753ded34e2"
+    },
+    {
+      "path": "capture_final/summary.json",
+      "raw_sha256": "4d5a2c2026c71f3c3b287a96b18870e864b90e00872e8fda1a767991d6620143"
+    },
+    {
+      "path": "capture_final/icarus/capture_trace.txt",
+      "raw_sha256": "9220d22a1ded5b48fc160dc4cd16a722ccac9267209ab238c13fda04bf357c2f"
+    },
+    {
+      "path": "capture_final/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "capture_final/icarus/run.log",
+      "raw_sha256": "ef33ddfc7b245c892ea6c7b007fb7163faca8041375887f67841e9945b4a2eb3"
+    },
+    {
+      "path": "capture_final/xsim/capture_trace.txt",
+      "raw_sha256": "9220d22a1ded5b48fc160dc4cd16a722ccac9267209ab238c13fda04bf357c2f"
+    },
+    {
+      "path": "capture_final/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "capture_final/xsim/run.log",
+      "raw_sha256": "1a23dfea975512101aab9b1ba03a5a3e22f0d3a5a84e8fcf3dcb1f76b4a13166"
+    },
+    {
+      "path": "capture_final/xsim/xelab.log",
+      "raw_sha256": "3558b06c0ae5b2e43484f76013ceeed805679d771ecd42f5b25ad6ab249abe69"
+    },
+    {
+      "path": "capture_final/xsim/xsim.log",
+      "raw_sha256": "b21fe5754a84eefccd7c466894a9d2e934a9ab3ced8511f06ca12bce9f55c7b4"
+    },
+    {
+      "path": "capture_final/xsim/xvlog.log",
+      "raw_sha256": "d8fec877bf7cfff705d6bf8f469a00aa2cea921cd5f195643365f359a497cb09"
+    },
+    {
+      "path": "clean_full/adc_c16.log",
+      "raw_sha256": "51db423b95902d5cf0741fe9f8a34aa98fc265fefa29bb2858079735d8d6c1e6"
+    },
+    {
+      "path": "clean_full/c16_actual_top.log",
+      "raw_sha256": "a8baa24a5deb599af4a9119e2a9aac6d26585367a7065cd3add1925990e9dfec"
+    },
+    {
+      "path": "clean_full/prepcb_full.log",
+      "raw_sha256": "7c39c6a7bafe84a7330ff88d490ad9f77af642ab4db0c97cb32cd60eb899b3af"
+    },
+    {
+      "path": "clean_full/software_target.log",
+      "raw_sha256": "cf78e93c49bff8815d70654f78f296db3890f521fc8af4e66279bd34b1685d32"
+    },
+    {
+      "path": "clean_full/summary.json",
+      "raw_sha256": "d824f7e963e7c8d30864d8b9e38b8a25d3e0612199609970569686a015ab6e40"
+    },
+    {
+      "path": "clean_full/adc/summary.json",
+      "raw_sha256": "51db423b95902d5cf0741fe9f8a34aa98fc265fefa29bb2858079735d8d6c1e6"
+    },
+    {
+      "path": "clean_full/adc/icarus/c16_trace.txt",
+      "raw_sha256": "25b915f3856dc2490a2b0e67530954e9fe9addf2e245be5c67c19bb05fe15864"
+    },
+    {
+      "path": "clean_full/adc/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/adc/icarus/run.log",
+      "raw_sha256": "608d08c33619d80318ff076c780519e0f9e954d4867069d5dfde2a38ac9345a0"
+    },
+    {
+      "path": "clean_full/adc/xsim/c16_trace.txt",
+      "raw_sha256": "25b915f3856dc2490a2b0e67530954e9fe9addf2e245be5c67c19bb05fe15864"
+    },
+    {
+      "path": "clean_full/adc/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/adc/xsim/run.log",
+      "raw_sha256": "b44d45ea4f2fc8bc6267641498f0657f967bb14e937705646f3b0f29939394b8"
+    },
+    {
+      "path": "clean_full/adc/xsim/xelab.log",
+      "raw_sha256": "eefade0cb0145de7c93a70ec51049e039305f944a30030f3a4e36509db8a8a4f"
+    },
+    {
+      "path": "clean_full/adc/xsim/xsim.log",
+      "raw_sha256": "80bc5fecd25d52f0b4f512fc08b5bdf9ab6525bd6a205a390777305c51c20f8a"
+    },
+    {
+      "path": "clean_full/adc/xsim/xvlog.log",
+      "raw_sha256": "e79fdb046f0b5c0f90813462ee1061e879dbf13db6e5d4f3a34d94b9d09d6330"
+    },
+    {
+      "path": "clean_full/full/actual_top.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full.log",
+      "raw_sha256": "d0a7bcb140f5a5325ecb67dea65fa0a70ce8d2583b9593869b154e30c425b9d4"
+    },
+    {
+      "path": "clean_full/full/preservation.log",
+      "raw_sha256": "56e86f8b0f7def1123a73e1c9755a2bb135c7e14ecd45e87994b02762dc3a2c2"
+    },
+    {
+      "path": "clean_full/full/summary.json",
+      "raw_sha256": "e77c768c5dd4c46659bdcf1facb55c1225c6c8c0c42ca6c1fe0c2d3518f665bd"
+    },
+    {
+      "path": "clean_full/full/supervisor_mailbox.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/temperature_sparse_gui.log",
+      "raw_sha256": "5f3a9f5a18ebaf4ca4e1863c4c0e8bc1d5ee2708829cdf6bf8855729a1fdbb97"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi_offline.log",
+      "raw_sha256": "a9054c7f01c154cd2c34aa74ba98d8644d8ce8441c73e92051654fd69f247b44"
+    },
+    {
+      "path": "clean_full/full/inherited_full/generated_system.log",
+      "raw_sha256": "3d01da7a528a924879c4410ff54c6b0cbbe6acd637d858ab98f231eafa0fb688"
+    },
+    {
+      "path": "clean_full/full/inherited_full/generated_transport.log",
+      "raw_sha256": "d014e7734451d0add4a91c0bc7f5fbe11fae7f38834bc9ed49160e032583c75a"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent_safety.log",
+      "raw_sha256": "cee860fd5b58e095bfd4abbd4c58a247be3fa147e45bbe6c8a1f5a0d323f8509"
+    },
+    {
+      "path": "clean_full/full/inherited_full/inheritance.log",
+      "raw_sha256": "05d23c075d7060ad2bc17d6991a87d091abad7a3862acbbec5766daad409703b"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion_full.log",
+      "raw_sha256": "78cabda9dd45565b335b566d03c87306f81d966c9478e7f2afd859d4459b1f24"
+    },
+    {
+      "path": "clean_full/full/inherited_full/structure.log",
+      "raw_sha256": "2542414165256e236eeb4b0b8962b6dee21e5c8c5ce6ad47649b0f04ba275361"
+    },
+    {
+      "path": "clean_full/full/inherited_full/summary.json",
+      "raw_sha256": "d2936ee4070f92c748a7dfaca06db69bd1d6a7a75624346d96ad8217bda77bda"
+    },
+    {
+      "path": "clean_full/full/inherited_full/timing_equivalence.log",
+      "raw_sha256": "3f993848eb06f235b530c83b1e0797fcfa1cdd187253ff05331a8b9aed2343d4"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/axi_bridge_tests.json",
+      "raw_sha256": "cbc3e0a4f9575728f1b2bd16723b163e9c913dc5d42672b3d803df5f8f4face7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/generated_transport.log",
+      "raw_sha256": "d014e7734451d0add4a91c0bc7f5fbe11fae7f38834bc9ed49160e032583c75a"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/icarus.log",
+      "raw_sha256": "bdfa5fce49aa3a5606bacca3c10af88209fc1037a7b1e45e7bdf2cbbeedb54d9"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/icarus_tb_axi_native_bridge.log",
+      "raw_sha256": "20acbb39adc7b10bb61efa6d88ed75177001aa154a9626f6c6ab27ff1572252b"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/icarus_tb_axi_system.log",
+      "raw_sha256": "553dc5773e3eeff5cfc038a6622e9d55c8e96882dd34b03dc7508e4bcc33dcd8"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/icarus_tb_board_smoke_pl.log",
+      "raw_sha256": "7e21eb37f81d4e6f27f39d7394a4eb3dcca469dc1df76f689fb498e7b5c7926e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/protocol_tests.json",
+      "raw_sha256": "788ec33dedcf06e7faed1c4684bd27c495b80ad4ec6b2266e26039c91f09add4"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/ps_service_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/python_tests.log",
+      "raw_sha256": "dd20b0572a92dfbb09a7c347b90f7ea61996686c7babd1f249295bab06a00480"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/tb_axi_native_bridge_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/tb_axi_system_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/tb_board_smoke_pl_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/xelab_tb_axi_native_bridge.log",
+      "raw_sha256": "e42838a614d74f8ae4f11c27c30590e440b433b28b56de10a69bed3fecb2d4e8"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/xelab_tb_axi_system.log",
+      "raw_sha256": "6e333f97f94d47fbc342e9b1344543d8c9c376b3e7f5676c2be3bbe63fb3717b"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/xelab_tb_board_smoke_pl.log",
+      "raw_sha256": "bb622c683f4fb3499fc1f57da4b700ef359256008b33f2d2e15b596b34a6865c"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/xsim.log",
+      "raw_sha256": "c56485dcb3befe68bb91352de87ea33051de1d955a6bbc10c2166e0badeb43bc"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/xsim_tb_axi_native_bridge.log",
+      "raw_sha256": "3767d51f5be8a134c2785d964a34d504dd0df2d758aafd8445026d71f731a5d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/xsim_tb_axi_system.log",
+      "raw_sha256": "6c4816b9a98267825487d4815d9afab38f5c2776bde23deaea805668dbb947fd"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/xsim_tb_board_smoke_pl.log",
+      "raw_sha256": "e40264a47d7d2f3dd1771de777a8015c6c1ebcb9f1f2b3adb12149cb7df89654"
+    },
+    {
+      "path": "clean_full/full/inherited_full/axi/xvlog.log",
+      "raw_sha256": "760b92b1b4bd103e0fef6d2b89fcb6882a7d88a4497f20275fab0ef6b1910cb3"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/equivalence.json",
+      "raw_sha256": "dc235250293192d6bc2f029ef8502ed8d99d1ad423eac58d2c2d7e9ce55b9934"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_burst_equivalence_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_burst_equivalence_icarus.log",
+      "raw_sha256": "1c15f94f1203dd90551e016b5cb389f89b4a7ea6e38cd5999812940921a41fa0"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_burst_equivalence_xelab.log",
+      "raw_sha256": "766b252dd03ce65c6e54427585d08c0e96473f590fe5c2a9fd34920593d13cc5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_burst_equivalence_xsim.log",
+      "raw_sha256": "4c2fbf14b7723291297b2c3391a33b99466bcf4e216a66b032d8175ee7b43d03"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_burst_equivalence_xvlog.log",
+      "raw_sha256": "9630020307e2d15a1a7f07a8d850dc53f5dc29574bedc21f7216c93d012b481d"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_phase_equivalence_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_phase_equivalence_icarus.log",
+      "raw_sha256": "f650c1a2f505aab6b2d28477aef95ed1b290057f6ec68bf944fda1f919214751"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_phase_equivalence_xelab.log",
+      "raw_sha256": "c92598f1d5fcf87fe606fe338337b3f95cf57813e68872b84aa551ca84a3650f"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_phase_equivalence_xsim.log",
+      "raw_sha256": "e75f9c61a5e983be39b3a4c7fac6f1f47736e3d5029122321df849e1f3140bcd"
+    },
+    {
+      "path": "clean_full/full/inherited_full/equivalence/tb_phase_equivalence_xvlog.log",
+      "raw_sha256": "2c410634e6d9ede5dd1e4b2e19545a56781f26bd884a6b5076f15cd05a87c350"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/summary.json",
+      "raw_sha256": "a630415d7a16e52056d85891602a37431070a89af4b69e88602d612cfc2aea8d"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_array_interface_0.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_array_interface_1.log",
+      "raw_sha256": "421b625ac0b1ae4ad852f170d4d9bf6cf2e206801e98c1f02c0929b121453025"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_array_interface_2.log",
+      "raw_sha256": "ada2a886a20345172b39c66b98f8ff334cea604c924a2655d2ec75c83095f5a5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_array_interface_3.log",
+      "raw_sha256": "396e0b5349dc41ff01154f84eb5a249485e644a8eb6fc35b42d8454f75635e3f"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_array_interface_4.log",
+      "raw_sha256": "e781d2b531052b8035d3357f89f44db44e7610018abe75cbf9a7df9333c75b2c"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_motion_queue_equivalence_0.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_motion_queue_equivalence_1.log",
+      "raw_sha256": "3a5b5f4af2c6ff22a14f6135afd1051b2f25ba5f4e76ea1933a62dc9251deabe"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_motion_queue_equivalence_2.log",
+      "raw_sha256": "31a86b16f3043800f5f29f5b471473817e49cc3831ca0f252d2555395e2382d8"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_motion_queue_equivalence_3.log",
+      "raw_sha256": "1900d6597ce48393d7e3f32a81ff407ca36e3860a6bb22a52e6edf0c3f195ae3"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_motion_queue_equivalence_4.log",
+      "raw_sha256": "403f101e62e77ab5dbe7fa48fb116257270ded8fc1a44f31faa314401251e296"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_scheduler_equivalence_0.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_scheduler_equivalence_1.log",
+      "raw_sha256": "4c160a9e0cd92a87ccc6da474719fc49a6415c9d88c3e81a6837c135d93b16ea"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_scheduler_equivalence_2.log",
+      "raw_sha256": "987c232c39670ecf028c41008bf5e62e3348fa169377d0eb45b2d05a2abb9ae2"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_scheduler_equivalence_3.log",
+      "raw_sha256": "7340a3b2832990f0a5bbf41d453a40bfc92ae30a19b5fb2e0219d513d2ee6b1e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_scheduler_equivalence_4.log",
+      "raw_sha256": "986d908d49f75e504b4204fc29ff13b71d6977657dce6fc41284cdeabc1dd8b3"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_serializer_throughput_0.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_serializer_throughput_1.log",
+      "raw_sha256": "4ab0ed468679656b240d89aae5f999bf9bfe735882c85c96143c413f1e5a7c45"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_serializer_throughput_2.log",
+      "raw_sha256": "5ed5ba32ab2890f64ee27bebd156cc8925234236e9d949b0a9a819c4b7771447"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_serializer_throughput_3.log",
+      "raw_sha256": "44fa88d4466c44dd1e8b1dd37cf3bc19bad6e3c3c1a355cd543f9648f44cfff5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/independent/tb_serializer_throughput_4.log",
+      "raw_sha256": "4c1fdd3d98048f260bff6576a3e7533c29c176cfa373ec102ebdd183051b412f"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/compile_faults_1200.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/compile_faults_2640000.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults_xelab_1200.log",
+      "raw_sha256": "af1bda9beeacb7087e3e0c37c51cd9a6b487a9a6000bc61bb1a60ce63237f557"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults_xelab_2640000.log",
+      "raw_sha256": "777d83dc671aef21f2f21abc993ac1a419fde46b61c136b4d8e8f151b1bec377"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults_xsim_1200.log",
+      "raw_sha256": "38b18cc2e7cd4286cd5de3407fdbd4af7eb1c8757cdb5fb8d0dfd2cfceece27d"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults_xsim_2640000.log",
+      "raw_sha256": "fbc2189154b521ad067fe20e3f58145777558df083bd91ea02f739d6e3cb1950"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults_xvlog.log",
+      "raw_sha256": "86f2bedda4b35b8a6ba862682e69034b1802ba1dc6b8f5460e74e8d8ee1fa8bb"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/frozen_parent.log",
+      "raw_sha256": "05d23c075d7060ad2bc17d6991a87d091abad7a3862acbbec5766daad409703b"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/icarus_faults_1200.log",
+      "raw_sha256": "1d308193ebde2c801e9ed77ede99dbc642c4e134e7f621c6aea2187e40a6db0b"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/icarus_faults_2640000.log",
+      "raw_sha256": "76fec75038a2087352e5ae9e14f47fc99796c651a14d74afcc965795ed245b1a"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/phase_map_hashes.txt",
+      "raw_sha256": "46c650ca7ba916dc0830eaf55f2d4295e72533b2dafacbce807326d16259d6eb"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/python_tests.log",
+      "raw_sha256": "6858b58c33151b2fc916a404f0d6a6b7a3b9426b1f637bc1cd59f1ca50a5e1d9"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression.log",
+      "raw_sha256": "d8817ee25f1f73319a3b7abe6ecac54a148cf45fd161aa7e251ece01db0565fe"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/summary.json",
+      "raw_sha256": "ddd56cca9b7e6abd2db4c5ffdcbe068b50ae18529ac5c0bedc9aa983625e9dce"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults/xelab.log",
+      "raw_sha256": "4bffbd860730ca196e4770b4c6a71bbce1d75123ab7c7db3c0030be9e9450622"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults/xsim.log",
+      "raw_sha256": "69a6a4284f156f367c04cbb07908f1f1e9a0310496ba3e13f07b18656327b2c9"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults/xsim_40672.backup.log",
+      "raw_sha256": "a9dcc4a994bac171736d6b67952f01ec4625804c6401914f2f566c5d811cc8ae"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/faults/xvlog.log",
+      "raw_sha256": "049754cc66f559a0970997d722559da306c67844f8474e243808e07cd286f98a"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/00_motion_ack.txt",
+      "raw_sha256": "9c6f86c68d039a2106740c84fe02370a8c33872eefdb6c56f46f8c8d592924b1"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/00_run.log",
+      "raw_sha256": "f16b577bdfdcd2fd598a9e75f2bdcec5a5f0450db8c4fd2dee0b6dbb58632b5c"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/01_motion_ack.txt",
+      "raw_sha256": "a589fc877ec33dc4e192d81cfd368a55a42a2d8ab4db05008ba11afbb245d69e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/01_run.log",
+      "raw_sha256": "89ad44ce44cc9475a056cb650a4834322c103c53edc8b095293b5c50e6b02245"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/commands.jsonl",
+      "raw_sha256": "48345228b9dba519c08eb8dc24670002a8978f261d4d69251090552c8ce53c40"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/commands.txt",
+      "raw_sha256": "bc5a622b640a2f2aafde00bd4f5ae3b19a948cda5527e9c27c6a6a1ae6f8c8d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/gui_result.json",
+      "raw_sha256": "616aa891fe23ed42882145e97a328dc5043a7ca413653e4a709572404bc836f4"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/gui_simulation.png",
+      "raw_sha256": "e6839485e1ca8b2e1c8767d31142b94c932204e5e35eaf90597f2ad8dfbdb46a"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/trajectory_01.json",
+      "raw_sha256": "d50753865cec73f887669c401c0501001b2e0ea6db2440c5abf8d277150180d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/rtl/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/rtl/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/rtl/motion_ack.txt",
+      "raw_sha256": "a589fc877ec33dc4e192d81cfd368a55a42a2d8ab4db05008ba11afbb245d69e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/rtl/motion_maps.hex",
+      "raw_sha256": "873d9338816476ff6847a4b570c68080b6fa30fe92d5e899c98f25a47e47f68e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_0/rtl/run.log",
+      "raw_sha256": "89ad44ce44cc9475a056cb650a4834322c103c53edc8b095293b5c50e6b02245"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/00_motion_ack.txt",
+      "raw_sha256": "9c6f86c68d039a2106740c84fe02370a8c33872eefdb6c56f46f8c8d592924b1"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/00_run.log",
+      "raw_sha256": "f16b577bdfdcd2fd598a9e75f2bdcec5a5f0450db8c4fd2dee0b6dbb58632b5c"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/01_motion_ack.txt",
+      "raw_sha256": "a589fc877ec33dc4e192d81cfd368a55a42a2d8ab4db05008ba11afbb245d69e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/01_run.log",
+      "raw_sha256": "89ad44ce44cc9475a056cb650a4834322c103c53edc8b095293b5c50e6b02245"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/commands.jsonl",
+      "raw_sha256": "0dca52afea743972c86970ea7e869f718927353f193ec1b7a0ea028f34a0d5c4"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/commands.txt",
+      "raw_sha256": "bc5a622b640a2f2aafde00bd4f5ae3b19a948cda5527e9c27c6a6a1ae6f8c8d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/gui_result.json",
+      "raw_sha256": "616aa891fe23ed42882145e97a328dc5043a7ca413653e4a709572404bc836f4"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/gui_simulation.png",
+      "raw_sha256": "aa3a3a48df9bf6fa090373a4a3c244a7f9dbc6022af127c66f619dbbdc316827"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/trajectory_01.json",
+      "raw_sha256": "d50753865cec73f887669c401c0501001b2e0ea6db2440c5abf8d277150180d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/rtl/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/rtl/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/rtl/motion_ack.txt",
+      "raw_sha256": "a589fc877ec33dc4e192d81cfd368a55a42a2d8ab4db05008ba11afbb245d69e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/rtl/motion_maps.hex",
+      "raw_sha256": "873d9338816476ff6847a4b570c68080b6fa30fe92d5e899c98f25a47e47f68e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_1/rtl/run.log",
+      "raw_sha256": "89ad44ce44cc9475a056cb650a4834322c103c53edc8b095293b5c50e6b02245"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/00_motion_ack.txt",
+      "raw_sha256": "9c6f86c68d039a2106740c84fe02370a8c33872eefdb6c56f46f8c8d592924b1"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/00_run.log",
+      "raw_sha256": "f16b577bdfdcd2fd598a9e75f2bdcec5a5f0450db8c4fd2dee0b6dbb58632b5c"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/01_motion_ack.txt",
+      "raw_sha256": "a589fc877ec33dc4e192d81cfd368a55a42a2d8ab4db05008ba11afbb245d69e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/01_run.log",
+      "raw_sha256": "89ad44ce44cc9475a056cb650a4834322c103c53edc8b095293b5c50e6b02245"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/commands.jsonl",
+      "raw_sha256": "f4d9e86078bb3247ba7686114818362ae842e9859f394605ce01fd0d51b545ad"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/commands.txt",
+      "raw_sha256": "bc5a622b640a2f2aafde00bd4f5ae3b19a948cda5527e9c27c6a6a1ae6f8c8d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/gui_result.json",
+      "raw_sha256": "616aa891fe23ed42882145e97a328dc5043a7ca413653e4a709572404bc836f4"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/gui_simulation.png",
+      "raw_sha256": "f4eb51fd7463e16e40f5a8df44f6f6b4f469b89f60fc1100630df31ca8cd6dfb"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/trajectory_01.json",
+      "raw_sha256": "d50753865cec73f887669c401c0501001b2e0ea6db2440c5abf8d277150180d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/rtl/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/rtl/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/rtl/motion_ack.txt",
+      "raw_sha256": "a589fc877ec33dc4e192d81cfd368a55a42a2d8ab4db05008ba11afbb245d69e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/rtl/motion_maps.hex",
+      "raw_sha256": "873d9338816476ff6847a4b570c68080b6fa30fe92d5e899c98f25a47e47f68e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_icarus_2/rtl/run.log",
+      "raw_sha256": "89ad44ce44cc9475a056cb650a4834322c103c53edc8b095293b5c50e6b02245"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/00_motion_ack.txt",
+      "raw_sha256": "9c6f86c68d039a2106740c84fe02370a8c33872eefdb6c56f46f8c8d592924b1"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/00_xsim.log",
+      "raw_sha256": "229966fd40c5a0a889cbb225f4bdd41f1561857c688ce897007ea04c968b147c"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/01_motion_ack.txt",
+      "raw_sha256": "a589fc877ec33dc4e192d81cfd368a55a42a2d8ab4db05008ba11afbb245d69e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/01_xsim.log",
+      "raw_sha256": "1dcef8154cdf68f27f5a5453d9421a79cdda0495ad72f93852cea35c30cc1c79"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/commands.jsonl",
+      "raw_sha256": "3153195ced8db931bed2185bf7311c34ca746bb780111610a0a17519a5c3555a"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/commands.txt",
+      "raw_sha256": "bc5a622b640a2f2aafde00bd4f5ae3b19a948cda5527e9c27c6a6a1ae6f8c8d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/gui_result.json",
+      "raw_sha256": "b5944ecfaf5aa0676b7b60450d091acd7e373fbbb0aaec12c5e700bec4b42625"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/gui_simulation.png",
+      "raw_sha256": "698c21dc101a1fc17197f3d395538b81fac498a5017418099cb166d0b00bf23f"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/trajectory_01.json",
+      "raw_sha256": "d50753865cec73f887669c401c0501001b2e0ea6db2440c5abf8d277150180d7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/rtl/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/rtl/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/rtl/motion_ack.txt",
+      "raw_sha256": "a589fc877ec33dc4e192d81cfd368a55a42a2d8ab4db05008ba11afbb245d69e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/rtl/motion_maps.hex",
+      "raw_sha256": "873d9338816476ff6847a4b570c68080b6fa30fe92d5e899c98f25a47e47f68e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/rtl/xelab.log",
+      "raw_sha256": "539beb4a7833ba4e885c650710c07f573da51bde31bd1391f59f727551508136"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/rtl/xsim.log",
+      "raw_sha256": "1dcef8154cdf68f27f5a5453d9421a79cdda0495ad72f93852cea35c30cc1c79"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/rtl/xsim_55508.backup.log",
+      "raw_sha256": "229966fd40c5a0a889cbb225f4bdd41f1561857c688ce897007ea04c968b147c"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/gui_xsim/rtl/xvlog.log",
+      "raw_sha256": "c67ae88c8625677e723934bc8689c9551a782a507cf4969ac293967a45295d4e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/bandwidth_guard.log",
+      "raw_sha256": "0574ba67600bc698cdfc884578c04578e121a77b80f41094aed837852fc1b8ff"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_bandwidth_guard.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_core_1.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_core_128.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_core_2.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_core_32.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_core_7.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_core_72.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_model_map.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_tb_serializer_fault.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/compile_tb_system.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/iverilog_version.log",
+      "raw_sha256": "afe39246ebea2fc44b4de97450548f6e0b4281f87666efc2d35d2cf11968b282"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_128_focus_100mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_128_focus_115mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_128_focus_90mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_128_standing_wave_100mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_128_standing_wave_115mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_128_standing_wave_90mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_2_standing_wave_100mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_32_standing_wave_100mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/model_map_72_standing_wave_100mm.log",
+      "raw_sha256": "da844da32c4efb57e63b820236494436513b4ab9064c09216cd18ea4cc7105e5"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/python_tests.log",
+      "raw_sha256": "303ccf5777220de75b6df5a3e22f9dd530c2fc4dd6bd89fcf6e9bb1b277d66e9"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_core_128_0.log",
+      "raw_sha256": "d8dfaef939153273fe713679a4ce9554975aac0f6770081ec42e67e7c52429e1"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_core_128_1.log",
+      "raw_sha256": "d8dfaef939153273fe713679a4ce9554975aac0f6770081ec42e67e7c52429e1"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_core_128_2.log",
+      "raw_sha256": "d8dfaef939153273fe713679a4ce9554975aac0f6770081ec42e67e7c52429e1"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_core_1_0.log",
+      "raw_sha256": "8c65cfbb53553e9db505ab36ceff4173164331650d9e5e784b127e0810023104"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_core_2_0.log",
+      "raw_sha256": "51cf4070ca7079dd6b95862c7e71a9cc42eaa54f303aa0c93a0c32a493e71c29"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_core_32_0.log",
+      "raw_sha256": "480f0d2f0d8d1fde27fd3358be86729c24dfaf0b2c20579cdbf865ff6cee5ec2"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_core_72_0.log",
+      "raw_sha256": "d923e1c4ef7887a85a58ab1e69f99d9fee2ad0c2e10dc58745a1a613c3ee37bf"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_core_7_0.log",
+      "raw_sha256": "4f847e7c8deab4e0070a4567d1cac96fd946b880aa34900d0c6d14aebb53efda"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_tb_serializer_fault.log",
+      "raw_sha256": "b7f92ab256cce203e63971d1fb99c145c5441fc9d6693192f326be7237a1f336"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/run_tb_system.log",
+      "raw_sha256": "2b866e484f7c3e4596748cd5108bb3cd403b243d428f0fa6a0b0f005b7b9e24e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration_gate.log",
+      "raw_sha256": "d0020c13ce146c2e9cac0499008b1a7a4f04104894331118eca452abcbb6197c"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/summary.json",
+      "raw_sha256": "5a37490402127766c71a145f6267e73cc64c09bbe57895543efafdf5f187edd8"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xelab_tb_core.log",
+      "raw_sha256": "7468aa4f15ccc20ab869a70557c8ea454466c084af544da7d6316da19fba3099"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xelab_tb_phase_map.log",
+      "raw_sha256": "d7c4e51b70de039ed343db25f51ab1a6e004fc9d53997abab904673b304ff4a3"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xelab_tb_serializer_fault.log",
+      "raw_sha256": "78c6ca566490bff248cae9c55b17c6a510eee7c840a173cac9746553e1f8bcbc"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xelab_tb_system.log",
+      "raw_sha256": "131ed9c14ff73a727c90602e68a216c16e97f9a8e9a13296388e6d8852fb2f27"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_model_map_128_focus_100mm.log",
+      "raw_sha256": "7e414b025cdc93bd4a85be4f85f074eb44471ed610bc3cc92d85a923a5a3deda"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_model_map_128_focus_115mm.log",
+      "raw_sha256": "96425bacc996fea7bbe871423cb8abc897d3f00176c54c9f0c3720b5c5b71ff6"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_model_map_128_focus_90mm.log",
+      "raw_sha256": "0fc09b9208a5d4fb4e2c5ae15a9903f32590461a18c0dcad037ef131756e9511"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_model_map_128_standing_wave_100mm.log",
+      "raw_sha256": "921c9f08be4d451783d0ccca8bb8d3e7cf6d96f1b5917cac6263a6f8612c78a1"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_model_map_128_standing_wave_115mm.log",
+      "raw_sha256": "9cbb45766b320c5f287aabca3c79a67384db1bd8c48ade8d3dc013f312a1f086"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_model_map_128_standing_wave_90mm.log",
+      "raw_sha256": "811ba641c43a1a169dee0f1064e9890df66aeea50098f7612b071573dca0e540"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_tb_core_0.log",
+      "raw_sha256": "3a15692123f2817ceb8944da325defd58b87292ceae2aff365ae67bf5e5b4f2b"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_tb_core_1.log",
+      "raw_sha256": "01f4a8874d1800f10b3fa62632826e4f5a77968faad11965e281dfa735974ac4"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_tb_core_2.log",
+      "raw_sha256": "59af5dcb33f9c54b8ce462eb9ef6b13564adcfde892aecdd614b4f1d2d0f099e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_tb_serializer_fault_0.log",
+      "raw_sha256": "61c25c6370e544fcaf9a0823a8cb404eac74ff920d23a6a3c1573a79b7bb3769"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xsim_tb_system_0.log",
+      "raw_sha256": "d26f5a7954a9342a94727ea07fd4885ea94a491522d02b5fb041b2c6ad35290d"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/xvlog.log",
+      "raw_sha256": "8f17b7e56293bf110e2efdfb491ac1cec32aad2d6dc307b9c61f2f1661beea07"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/calibration.json",
+      "raw_sha256": "3f57424c47388a52289ea832d40dd1e61d537854243c08fbc730ff85c986df67"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/channel_health.csv",
+      "raw_sha256": "f842f60ea64e208177753ca0603dc2589f8782b2a575751f4806f8f2365d9229"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/generated_config.log",
+      "raw_sha256": "3d01da7a528a924879c4410ff54c6b0cbbe6acd637d858ab98f231eafa0fb688"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/icarus_0.log",
+      "raw_sha256": "043d07a329b0d6387ac6132b9c8dbf5f42da77d104be0362752fad48b76df142"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/icarus_1.log",
+      "raw_sha256": "043d07a329b0d6387ac6132b9c8dbf5f42da77d104be0362752fad48b76df142"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/icarus_2.log",
+      "raw_sha256": "043d07a329b0d6387ac6132b9c8dbf5f42da77d104be0362752fad48b76df142"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/iverilog_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/metrics.json",
+      "raw_sha256": "1b3bb33b87bd098ad9b4436a5aabb52e67ce16bd30311a8e417af7507f9a8075"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/path_quality.csv",
+      "raw_sha256": "f7cb1428ad3ea12e7040f851406adf99adfe949f9ace725767f764529e24a413"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/phase_lut.csv",
+      "raw_sha256": "ebc787f769351d3cc167fb39a1d2e3b00370348516e8c5fb64c01fc6339b6ba3"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/quality_summary.json",
+      "raw_sha256": "c3c7499c6e79be2b8e59dde2052e5de06bcb7942e829bd595e1338b314154693"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/report.md",
+      "raw_sha256": "f73ec586f3e8f513fcb847504b4a2cc7ba6a4432b211d77d465c508f96377382"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/robustness.json",
+      "raw_sha256": "1160fb31155d845774ae101bf9d0db2437696234cdca5bba4d93fc28c1ec59f4"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/summary.json",
+      "raw_sha256": "3cb1deb79361be281dfbe16aa6623f418276fb40d2e12da7d384def285eb1a63"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/xelab.log",
+      "raw_sha256": "1ffa27293e0a4cf34703ef8ff7ca3b92cc761d89f2e4e6ff296b9ebd31a696c7"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/xsim.log",
+      "raw_sha256": "5a02bdcb793cb80128cd9f5c670ff62704c62ccd5cd7830122d323f511318eaf"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/xvlog.log",
+      "raw_sha256": "82931847a6e3e516af622e37d31d79eed8b2aedb640d77065b991c9297951b62"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/plots/channel_heatmaps.png",
+      "raw_sha256": "edf3f29b18a63b2559ed433e992f2139265aa891b62da67e2feda21d6b79b2ef"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/plots/field_focus.png",
+      "raw_sha256": "784e0abecfa5c6578e49edf33d27831b1553d32328e012dda0ceda0a45290a1f"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/plots/field_metrics.json",
+      "raw_sha256": "9ceed16af68650e644558035e3f2f7781f8ede148407a211e07049fbc9a1044e"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/plots/field_standing_wave.png",
+      "raw_sha256": "06e156e1ca499b2a7a96a6c4039574cf260cde8485d7a6f6c52cf8bef0c51c35"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/plots/pose_residuals.png",
+      "raw_sha256": "5376d5ceb95cb290fb57ffb63fecef46952c9893bce04515ab6d2db3d7a1fa1d"
+    },
+    {
+      "path": "clean_full/full/inherited_full/motion/regression/self_calibration/plots/resonance.png",
+      "raw_sha256": "653ccc1d63b94ad7d38f25845292ef3250d782e36b4bcf8cce6bbe098d9ffe90"
+    },
+    {
+      "path": "clean_full/full/supervisor/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/supervisor/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/supervisor/icarus.log",
+      "raw_sha256": "af9eb361c79d59961078bb3d2cdf7433a934bf3b6d83b6aa10606906215238db"
+    },
+    {
+      "path": "clean_full/full/supervisor/summary.json",
+      "raw_sha256": "e539686f007130cc6dc60269dd14fb51debfd4b6a4d467a633935e2f9a1c670d"
+    },
+    {
+      "path": "clean_full/full/supervisor/xelab.log",
+      "raw_sha256": "e709ecafea2865ee40d546af65a8402ebb2aff57755d084adf04b6043edd58ad"
+    },
+    {
+      "path": "clean_full/full/supervisor/xsim.log",
+      "raw_sha256": "67a5795fb5edd95acd2e894a4c10a8860c5a0869f178e7e2a37d49f763434891"
+    },
+    {
+      "path": "clean_full/full/supervisor/xvlog.log",
+      "raw_sha256": "86d87a1528d7b104315cab3b4106150b31ef6626bc59bf4b32dc5f44170c651e"
+    },
+    {
+      "path": "clean_full/full/system/c_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/system/summary.json",
+      "raw_sha256": "0294134182d966baa3dd1fb0fee00aaee4804fb12cc74457786cb1f46971d293"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/preview_traps.json",
+      "raw_sha256": "4aa09b1b23fce50fd110950c6bd39143e2629c31fb83bcaf88e223621497b973"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/runtime_user_input.json",
+      "raw_sha256": "803daf021c2a80d87a5dbc5c6412530076cfcb0790354583d220497691477427"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/summary.json",
+      "raw_sha256": "e70e4c74eb5a8e2c1c45bd26a89ff892fdb34bc75a1b5d0b4ca1800702c13224"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/icarus/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/icarus/motion_ack.txt",
+      "raw_sha256": "f5e7bd57cb6385bc9b892e684e08c3822ab70ab55241440c70316230472ee628"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/icarus/motion_maps.hex",
+      "raw_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/icarus/run.log",
+      "raw_sha256": "b2988efe311feea9db41b95e92350fea3d9dfedcfed2f8c3c42fd5ba985a93da"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/xsim/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/xsim/motion_ack.txt",
+      "raw_sha256": "f5e7bd57cb6385bc9b892e684e08c3822ab70ab55241440c70316230472ee628"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/xsim/motion_maps.hex",
+      "raw_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/xsim/xelab.log",
+      "raw_sha256": "539beb4a7833ba4e885c650710c07f573da51bde31bd1391f59f727551508136"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/xsim/xsim.log",
+      "raw_sha256": "b4b28471a998d90c1c18a73caa930dbfa9acf0d0211bc10a8e858a734a519087"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_1/xsim/xvlog.log",
+      "raw_sha256": "d25655f1194939bcc9fd6c9b6090b24cc9c8eaa8120d27283c966e6f73a1acd9"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/preview_traps.json",
+      "raw_sha256": "7d368de96e97488f984792cb46e488bed34e91189dae66bc1dfff8755f94b085"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/runtime_user_input.json",
+      "raw_sha256": "5d3b5049b67c9e8dd85911c22f9660496b3a2ce6a60579d2a44abd3d0e780a43"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/summary.json",
+      "raw_sha256": "1a6010e1792e64ac074b9415d8c5351711cd73eb764c81e6a961029d0ed0746f"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/icarus/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/icarus/motion_ack.txt",
+      "raw_sha256": "87ceb1075c2c8a0cff69b96197f7bc80f737db4b6d803a0e1fa1f4bd69ef3198"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/icarus/motion_maps.hex",
+      "raw_sha256": "28e08aaf1f5fb01dec7c21443d05c7f2400c4355f471ec187abdb0056b7c9f72"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/icarus/run.log",
+      "raw_sha256": "cce0a76201f01b53176c06fc21703466c369e650f2f6b84cfa7548d07fbb0961"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/xsim/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/xsim/motion_ack.txt",
+      "raw_sha256": "87ceb1075c2c8a0cff69b96197f7bc80f737db4b6d803a0e1fa1f4bd69ef3198"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/xsim/motion_maps.hex",
+      "raw_sha256": "28e08aaf1f5fb01dec7c21443d05c7f2400c4355f471ec187abdb0056b7c9f72"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/xsim/xelab.log",
+      "raw_sha256": "539beb4a7833ba4e885c650710c07f573da51bde31bd1391f59f727551508136"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/xsim/xsim.log",
+      "raw_sha256": "f9189859167dda2c377ede4dc06cf505d4b6423acdcdc0c41455867acc4b2275"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_2/xsim/xvlog.log",
+      "raw_sha256": "c4deaea5e57050b774b23ce00339134df050daaf594b5d4ea83eced6a5029445"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/gui.capture.json",
+      "raw_sha256": "a9a75258d7162df12393e256361b208f47178d1e9add0d7c23254c790a1596c8"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/gui.png",
+      "raw_sha256": "f81545c8007926174f82598ffa1edda18d6286ab776063c797994b445c5acf19"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/preview_traps.json",
+      "raw_sha256": "158d7409cc6c00283aebcc27878440da3d728ba2eeb86c11596c12b933533244"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/runtime_user_input.json",
+      "raw_sha256": "aa2197731f44bc8ab889ee8001acc0b615094b1be442b66222a9e0adba303de2"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/summary.json",
+      "raw_sha256": "5851435664e1f0a57b8076f60650ca0f05fa192518efcbbccc6478bb92496dad"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/icarus/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/icarus/motion_ack.txt",
+      "raw_sha256": "2f683d3059537fabd44c0b755837018589ecb40a0359ad9dcbcefbe3898fa4b9"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/icarus/motion_maps.hex",
+      "raw_sha256": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/icarus/run.log",
+      "raw_sha256": "e2fcefe6a10156521d0b75110f7b3ed0c3fbe98d8c8b8a059d5a9a6e4fdd1f75"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/xsim/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/xsim/motion_ack.txt",
+      "raw_sha256": "2f683d3059537fabd44c0b755837018589ecb40a0359ad9dcbcefbe3898fa4b9"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/xsim/motion_maps.hex",
+      "raw_sha256": "02705f24673337e825937561bfd276f73ae7f86e2e73152513ae2f9ba20a74ea"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/xsim/xelab.log",
+      "raw_sha256": "539beb4a7833ba4e885c650710c07f573da51bde31bd1391f59f727551508136"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/xsim/xsim.log",
+      "raw_sha256": "243376812e2f72ff9893c86b5a829f22726d8cea9c77b4390912c986ac10182c"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_3/xsim/xvlog.log",
+      "raw_sha256": "00b5ba76ec1cd1e90a1d610d8aafedc3eca6e22dca1f7f440fece6ed2f138cad"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/preview_traps.json",
+      "raw_sha256": "9e7b1ba711d0450019a6c969497138ea16c097ee7a62bc8e3a634c2e2151ddff"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/runtime_user_input.json",
+      "raw_sha256": "167a0188257bdf44f99999a2be5aee8c5e1cd3b74735786765a9ccfe3efa90b7"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/summary.json",
+      "raw_sha256": "95631b4eec61baffdce4b93a8ec370243b2ad5f6b4c02ab97e0dcc4e430a41db"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/icarus/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/icarus/motion_ack.txt",
+      "raw_sha256": "67cf5359c5188154cf8b87a458420fecfbd0abb54c6c473648433297bd61604a"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/icarus/motion_maps.hex",
+      "raw_sha256": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/icarus/run.log",
+      "raw_sha256": "8198da016aa314acb4c848b7a3da269c165e0b32d12dd6ac54a6795b49e7e46f"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/xsim/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/xsim/motion_ack.txt",
+      "raw_sha256": "67cf5359c5188154cf8b87a458420fecfbd0abb54c6c473648433297bd61604a"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/xsim/motion_maps.hex",
+      "raw_sha256": "437a50dce1a14e863e474173d2cb8509185f8eb26ae6af7ca120ce0253594e0a"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/xsim/xelab.log",
+      "raw_sha256": "539beb4a7833ba4e885c650710c07f573da51bde31bd1391f59f727551508136"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/xsim/xsim.log",
+      "raw_sha256": "3709efff1f089bed19f808c8a5f0585b9fd524bbcbca7970fcb570513519c744"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_4/xsim/xvlog.log",
+      "raw_sha256": "658fcdda8b4b779fe698e21cb9d10e4a6aa0ee696eb02b1b1e9dee976efeb9bc"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/preview_traps.json",
+      "raw_sha256": "b5deb7760c2c3acdec190593b055e81de325e486e6663b1a68d8e508fb1431f2"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/runtime_user_input.json",
+      "raw_sha256": "b12bc633a54bf3b51246f222cc6c132fb97bca2ec4bb798d03cbfbe0a862732f"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/summary.json",
+      "raw_sha256": "71782eb1a594f4cb4d768c85926e5f4eb90d1d6dd49cfa906ad5c980e6403d6f"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/icarus/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/icarus/motion_ack.txt",
+      "raw_sha256": "df69849932caff16ad76ba994095ce1e89dff812bc0c61fbba4b2168aa07054c"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/icarus/motion_maps.hex",
+      "raw_sha256": "ae872279396d9ede6f49d7d53a9034fb16a83d82448596f763a1685893c7cafc"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/icarus/run.log",
+      "raw_sha256": "c36eb909a4b0947f6a81f456f1c41aa31e1382583647dc0799f6b619ca24df55"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/xsim/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/xsim/motion_ack.txt",
+      "raw_sha256": "df69849932caff16ad76ba994095ce1e89dff812bc0c61fbba4b2168aa07054c"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/xsim/motion_maps.hex",
+      "raw_sha256": "ae872279396d9ede6f49d7d53a9034fb16a83d82448596f763a1685893c7cafc"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/xsim/xelab.log",
+      "raw_sha256": "539beb4a7833ba4e885c650710c07f573da51bde31bd1391f59f727551508136"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/xsim/xsim.log",
+      "raw_sha256": "16927865dfc4b24fa7dd263153e98896d69741bda752fe29e94035753b952750"
+    },
+    {
+      "path": "clean_full/full/system/gui/case_5/xsim/xvlog.log",
+      "raw_sha256": "a9d127bbbce65d2f0dffad30529bf6539675a883b216e7a0ed06cc19e000239d"
+    },
+    {
+      "path": "clean_full/full/system/phase/summary.json",
+      "raw_sha256": "b736e7091cf6680631669c76ed3b84d31476d0e98c4807ff4df84b0d000b6c47"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7020_25_25_25_observations.json",
+      "raw_sha256": "0aefac59da927472388b2c014b7b2990e79691e7f3860c5bba06ddf7f05fb9c4"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7020_25_25_25_result.json",
+      "raw_sha256": "a1adba62adec8b2c84d9cd6f20a7e40aebb96be98a6299bb6360e674001bf33b"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7020_25_31_19_observations.json",
+      "raw_sha256": "fb31746b354cab00571edc8fd372202890eeaf87e4d89b8a36b84fc89b64b0fb"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7020_25_31_19_result.json",
+      "raw_sha256": "f601915fc088c97dba8df64b7e62cf5e85c1015178bc9eb2b22459186b5c3239"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7021_25_25_25_observations.json",
+      "raw_sha256": "c2c235ff1f399edb49c86b5e8da370a43edbb5ac437098a14319e30ca6ea99b1"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7021_25_25_25_result.json",
+      "raw_sha256": "32902fdf29521d139df9cba8c586dc56215788cc12344fa7c97ed2ac2f90847b"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7021_25_31_19_observations.json",
+      "raw_sha256": "f46eadec1cae5ec01d47aea3b20e3db0ab34f6b309d3833577500bb1156b6691"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7021_25_31_19_result.json",
+      "raw_sha256": "5083961d65822c0db4d305dd709b07d6d2069b47b3ea3238da4ed76e61ebcb10"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7022_25_25_25_observations.json",
+      "raw_sha256": "f8eaf1644817e4682dd2cbc207ea16327f1e6c0cfb58bce0d6ed5617f7bda13b"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7022_25_25_25_result.json",
+      "raw_sha256": "c0f3936b8edc6be60628b3a89dcd6db2202cc588db29bc11038e448a3018743e"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7022_25_31_19_observations.json",
+      "raw_sha256": "da1048f1c08318a3618ced9c42348b5611d0e4f10f09df6fe80deb196916a664"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7022_25_31_19_result.json",
+      "raw_sha256": "aff87cd65d133cc67f10d17827797ff9ae7b798936cdf9f9cfa9653fcbf850ec"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7023_25_25_25_observations.json",
+      "raw_sha256": "69b4cca3391e9155f06d473a7150fa2a10af8afb0c814ae5b614bebe8951f872"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7023_25_25_25_result.json",
+      "raw_sha256": "3a4fbf26ebc82b916d6c8bdf69f2e7154cb3970ce3a4092604f80974a2531cf9"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7023_25_31_19_observations.json",
+      "raw_sha256": "7d1c8c425985af23cffcb84e6f85c39ceb4ef97cae44ff3d82afde7265bd7e82"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7023_25_31_19_result.json",
+      "raw_sha256": "0e56af1399ef3a5ae6fec99cd4d60f297422a25629ed2844c8c6a4b122fb531f"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7024_25_25_25_observations.json",
+      "raw_sha256": "07d844e5f5866a26d819ba7584e5052ac879bd5b113103e3b90697b2877e2dde"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7024_25_25_25_result.json",
+      "raw_sha256": "3573ca738d43f9f1670542ceab629feabadcc780e3b6691f347dba5ca746998e"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7024_25_31_19_observations.json",
+      "raw_sha256": "9aa47ca434e4b1d53bcf2c51f435cac9a28029f8de5216fe558f9ac6fd02c340"
+    },
+    {
+      "path": "clean_full/full/system/sparse/7024_25_31_19_result.json",
+      "raw_sha256": "7b1fa565132f33b5c0a5e3a4113f89d3012451dbba6a9025ad05eb8f47e9b663"
+    },
+    {
+      "path": "clean_full/full/system/sparse/robust_result.json",
+      "raw_sha256": "4e3cb4ea6a625a9305b005465db246734f259e2893ae8128beda1ed4342555d1"
+    },
+    {
+      "path": "clean_full/full/top/summary.json",
+      "raw_sha256": "7c8f64c676adbd83a38398891ce8c611daf7df60953f208bb72fe683ffb0cf32"
+    },
+    {
+      "path": "clean_full/full/top/icarus/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/top/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/full/top/icarus/integrated_ack.txt",
+      "raw_sha256": "52fcbf31efe4fc05cff1e94ae4266b3166e0e413c30265ff0235fa32bc9b3083"
+    },
+    {
+      "path": "clean_full/full/top/icarus/motion_maps.hex",
+      "raw_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea"
+    },
+    {
+      "path": "clean_full/full/top/icarus/run.log",
+      "raw_sha256": "0f48f8f22170d9877cac50a2b5a5754c6fdf6d5b8c2edb5af57c39ee0103049a"
+    },
+    {
+      "path": "clean_full/full/top/xsim/adc_vectors.hex",
+      "raw_sha256": "0bf7ebb4e65625b03a787ca53e92c7160465fc42fb180a267ad7bcc46f19d53e"
+    },
+    {
+      "path": "clean_full/full/top/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/full/top/xsim/integrated_ack.txt",
+      "raw_sha256": "52fcbf31efe4fc05cff1e94ae4266b3166e0e413c30265ff0235fa32bc9b3083"
+    },
+    {
+      "path": "clean_full/full/top/xsim/motion_maps.hex",
+      "raw_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea"
+    },
+    {
+      "path": "clean_full/full/top/xsim/xelab.log",
+      "raw_sha256": "36005aa70ac0338e6e5f4f56efd4b04f04299dae26da98ae8493dc190c87ef16"
+    },
+    {
+      "path": "clean_full/full/top/xsim/xsim.log",
+      "raw_sha256": "8fe47b8b1fb958469d66541528a8bfd1f8812ac07fcddb8779cabad8194f16cc"
+    },
+    {
+      "path": "clean_full/full/top/xsim/xvlog.log",
+      "raw_sha256": "faa60627b4c23c3ca83ad924a389cb49af5b5114357864390e1ceb3bc664e1e8"
+    },
+    {
+      "path": "clean_full/software/arm_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/software/arm_compiler_version.log",
+      "raw_sha256": "16d9ab648d0bda39e4e212c09ecc225553a700c6c388f15ea1bbd102aca1ddab"
+    },
+    {
+      "path": "clean_full/software/arm_readelf.log",
+      "raw_sha256": "eeb838ce7d07b98eae259abdf52d15c826b7e9d7684ed06225daa3a5f06516b1"
+    },
+    {
+      "path": "clean_full/software/host_compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/software/host_execute.log",
+      "raw_sha256": "8b41019e67db82a834d25f688836fe8abd18af010d6ed6092db8c37999ee24fa"
+    },
+    {
+      "path": "clean_full/software/ping_latency_us.json",
+      "raw_sha256": "3cb6cb4bf471b9b392ea72c988ff9ae68b527f301ded1377f82cf2c7ef8218cc"
+    },
+    {
+      "path": "clean_full/software/protocol_trace.json",
+      "raw_sha256": "1d034ffb5b75ffdcfabf42fa29241cb30911c40fad4623a19eb3b86788c925b1"
+    },
+    {
+      "path": "clean_full/software/summary.json",
+      "raw_sha256": "cf78e93c49bff8815d70654f78f296db3890f521fc8af4e66279bd34b1685d32"
+    },
+    {
+      "path": "clean_full/top_c16/summary.json",
+      "raw_sha256": "a8baa24a5deb599af4a9119e2a9aac6d26585367a7065cd3add1925990e9dfec"
+    },
+    {
+      "path": "clean_full/top_c16/icarus/compile.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_full/top_c16/icarus/integrated_ack.txt",
+      "raw_sha256": "52fcbf31efe4fc05cff1e94ae4266b3166e0e413c30265ff0235fa32bc9b3083"
+    },
+    {
+      "path": "clean_full/top_c16/icarus/motion_maps.hex",
+      "raw_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea"
+    },
+    {
+      "path": "clean_full/top_c16/icarus/run.log",
+      "raw_sha256": "ab117094e6bd6ae4db36740eed396dcfb61a71102b57d330f57def52de39ecba"
+    },
+    {
+      "path": "clean_full/top_c16/xsim/dfx_runtime.txt",
+      "raw_sha256": "398361591b57b6e989320060693b33c7a147d7ab7114c847cf421c46acb8987e"
+    },
+    {
+      "path": "clean_full/top_c16/xsim/integrated_ack.txt",
+      "raw_sha256": "52fcbf31efe4fc05cff1e94ae4266b3166e0e413c30265ff0235fa32bc9b3083"
+    },
+    {
+      "path": "clean_full/top_c16/xsim/motion_maps.hex",
+      "raw_sha256": "d81c77db0b464d3e8a7af276e362192f998c5e6d93835745271a5ed078765dea"
+    },
+    {
+      "path": "clean_full/top_c16/xsim/run.log",
+      "raw_sha256": "f159b2d3e9ea5e299bf834253be1d2169d60ed29e0727d8229981588a95418f1"
+    },
+    {
+      "path": "clean_full/top_c16/xsim/xelab.log",
+      "raw_sha256": "2a5431d8ddf9268b9cdbd3602eb6ac5515b2eba46485065448e4ae4b36e7ff35"
+    },
+    {
+      "path": "clean_full/top_c16/xsim/xsim.log",
+      "raw_sha256": "13a1880abb34084f14d1d09bc48ceadd0fb39a14fca400fba5ce09740f066725"
+    },
+    {
+      "path": "clean_full/top_c16/xsim/xvlog.log",
+      "raw_sha256": "6acf5757bcc4fbbc19f851788a589c1a1319e920b44d0ead5740e1087007e6f0"
+    },
+    {
+      "path": "expanded_clean/all_drc_violation_properties.txt",
+      "raw_sha256": "743b12be9efb6c97898c6f2028bf40fed7736c5bbaa824af6e8be3aefdf8899a"
+    },
+    {
+      "path": "expanded_clean/bram_rule_properties.txt",
+      "raw_sha256": "ce192a266f7fd882897e9f46f79ac54c0dd3d86fdb69f9182a4291214221930c"
+    },
+    {
+      "path": "expanded_clean/cdc_reopened.rpt",
+      "raw_sha256": "1477df417e914aca60da9f1a1cf6d51c63264e1b027476ae0ac5408d9234bf15"
+    },
+    {
+      "path": "expanded_clean/drc_reopened.rpt",
+      "raw_sha256": "d9f1f525f4d2ec4900948ba9f0c36ffe8e95818433181b165960ed1fbed40dd1"
+    },
+    {
+      "path": "expanded_clean/ps7_reopened_properties.txt",
+      "raw_sha256": "a49b6aebfec0202b917aa2105f2ee24bcbe5081abe1bfc1d443c2f28ba3b48a0"
+    },
+    {
+      "path": "expanded_clean/scope.txt",
+      "raw_sha256": "47d97d80f70e2ce3c2397309f65f630f0d8b543e8d61d28542fad0919221cf43"
+    },
+    {
+      "path": "expanded_clean/source_audit.tsv",
+      "raw_sha256": "bf3d3d07e172d7a691cdc0289a7f2b0ccac3b53b54af68a0e0d24e1b62ca7c63"
+    },
+    {
+      "path": "expanded_clean/timing_reopened.rpt",
+      "raw_sha256": "5cd9635132c08de5ee6776f3b70f36ea21486edf34000a5da641926e50fc3694"
+    },
+    {
+      "path": "nextstage_platform_clean/drc_all_objects.txt",
+      "raw_sha256": "ef2e50140abc36f898f376953d9599658648a6cbcb5baba8f22985c740601a88"
+    },
+    {
+      "path": "nextstage_platform_clean/loaded_sources.txt",
+      "raw_sha256": "01bc9f3450624f44b107f5360de6635bc9df28cd1b32277389e1c37231099f29"
+    },
+    {
+      "path": "nextstage_platform_clean/parts.txt",
+      "raw_sha256": "0ed7c9b6b286dff7eedf9b4073fea0de7a8962dcadf5c61bc19e232ea1563a09"
+    },
+    {
+      "path": "nextstage_platform_clean/pl_cdc.rpt",
+      "raw_sha256": "01129b70a9df4b5fb84e1cb1b88729ea608b6c09cdcbf3b6325abb34acbf28d2"
+    },
+    {
+      "path": "nextstage_platform_clean/pl_drc_full.rpt",
+      "raw_sha256": "ff5282546fee218994e5a94e10421f2aa591aa345f4c257735f01297ebda5276"
+    },
+    {
+      "path": "nextstage_platform_clean/pl_routed_drc.rpt",
+      "raw_sha256": "8f605ce83e243fefdefde2e2f8b2c24ffa0e02aaa0275db75f86b0e8e1f99eb0"
+    },
+    {
+      "path": "nextstage_platform_clean/pl_routed_timing.rpt",
+      "raw_sha256": "e52eba9a9929c5e1e03e96e4bdaffcf9ef511c8e92661934164c2feea2747bc6"
+    },
+    {
+      "path": "nextstage_platform_clean/pl_routed_utilization.rpt",
+      "raw_sha256": "c5000547cce8501bc0f94d12746bc15c3cf23a0a1867c97c6e11681a7c8578df"
+    },
+    {
+      "path": "nextstage_platform_clean/prepcb_logical_candidate.xsa",
+      "raw_sha256": "e3648112eb1bea363eb6b63eb9724c0d31c5bbcce6003107e8be8f4f1777a430"
+    },
+    {
+      "path": "nextstage_platform_clean/ps7_properties.txt",
+      "raw_sha256": "0211d5288c5f6b5ccea12cf5f171b2fcb047f06425333b11776b88698a32068c"
+    },
+    {
+      "path": "nextstage_platform_clean/ps_address_map.tsv",
+      "raw_sha256": "b5a0355c63d442a430f39a2358f19f5eb29ebaf80f79447ce59de56d927e7d8f"
+    },
+    {
+      "path": "nextstage_platform_clean/ps_irq_count.txt",
+      "raw_sha256": "7fb2aaeaf3eef66b52db104118c30f62899f5f0df520350a94a8fcb843c0dfdf"
+    },
+    {
+      "path": "nextstage_platform_clean/recreate_ps_bd.tcl",
+      "raw_sha256": "55604cc074dba3aef98835e40098e656b09e7ad865305521c2c97e23c1be85e9"
+    }
+  ]
+}

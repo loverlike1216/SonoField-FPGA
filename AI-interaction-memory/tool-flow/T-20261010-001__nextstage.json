@@ -1,0 +1,70 @@
+{
+  "id": "T-20261010-001",
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "stage": "NEXTSTAGE_S0_S7",
+  "source": "CLI_EDA_OS_GIT_OBSERVABLE_RESULTS",
+  "status": "PARTIAL",
+  "trigger": "Actual nextstage user request + canonical instruction + subsequent continue; user explicitly approves AD7606C-16; actual user JTAG reseat",
+  "instruction": "AI-interaction-memory/codex/instructions/v5_nextstage_20261010.md",
+  "instruction_sha256": "2f4390c8e15d1425297c689781956ef3a4056e757bd353c5fa132d8d7683db68",
+  "event_payload_hash_record": "AI-interaction-memory/codex/S-20261010-nextstage-001.tools.json",
+  "event_payload_hash_record_sha256": "bb20ddf4e986dee5a94036c2f2f6fabdc143db40184af461cc124afb924f4228",
+  "sequence": [
+    {
+      "tool": "git/gh/PowerShell",
+      "action": "Remote PR1/2/3/main ancestry and current state reconciliation; new codex branch on PR3",
+      "evidence": "v5/evidence/next_stage/20261010/RECONCILIATION.json"
+    },
+    {
+      "tool": "PowerShell WindowsPnP/process/TCP",
+      "action": "Initial OS-only noJTAG; actual user reseatedJTAG; dedicated localhost3122 read-only XSDB/Vivado identifiesxc7z020 and runningCPUs/PSstatus/DONE+EOS; clients disconnected and ownedserver stopped; originalGUI retained; UARTCode28/0COM; no writes",
+      "evidence": "v5/evidence/next_stage/20261010/jtag_reseated/summary.json"
+    },
+    {
+      "tool": "Python/GCC/Icarus/XSim",
+      "action": "Full before/after/clean baseline/prePCB runners, final203, all original golden/35dB/AXI/C/safety/equivalence",
+      "evidence": "v5/evidence/next_stage/20261010/FINAL_VERIFICATION.json"
+    },
+    {
+      "tool": "Icarus/XSim/Clang/readelf",
+      "action": "C16 register/fault/timing/signed adapter/fullBRAMcapture/integratedtop and actual ARM object build",
+      "evidence": "v5/evidence/next_stage/20261010/adc_final/summary.json; c16_capture_run1/summary.json; c16_top_final/summary.json; software_run1/summary.json"
+    },
+    {
+      "tool": "Vivado2025.2",
+      "action": "Native offline PS BD/XSA/PL OOC build and current/clean checkpoint reopening; complete unwaived DRC",
+      "evidence": "v5/evidence/next_stage/20261010/native_reproduction.json"
+    },
+    {
+      "tool": "git clone/venv/pip",
+      "action": "No-hardlinks history-absent independent clone/freshlockedvenv; sourcehash and exactS0 audit; EOL failure preserved and own-Git bytes rematerialized",
+      "evidence": "v5/evidence/next_stage/20261010/clean_reproduction"
+    },
+    {
+      "tool": "Official web sources/local image view",
+      "action": "ADIRevA/TIRevD/ALINX/Microsoft/Silabs primary references; fully inspect two user vendor images; retain hashes only",
+      "evidence": "v5/hardware/next_stage/20261010/SOURCE_REFERENCES.json;VENDOR_PARAMETERS.json"
+    },
+    {
+      "tool": "artifact_tool/ExcelXML/PNGview",
+      "action": "Build7sheet80typeworkingBOM, calculate formulas, inspect all previews and independent XML/contract tests; no procurement",
+      "evidence": "v5/hardware/bom/working/2026-10-10/BOM_AX7020_NU40C10T_AD7606C16_WORKING.xlsx"
+    },
+    {
+      "tool": "EasyEDAbridge readonlyhealth",
+      "action": "Probe existing service only; no native connection/CAD/ERC/write fabricated",
+      "evidence": "v5/evidence/next_stage/20261010/easyeda_probe.json"
+    },
+    {
+      "tool": "git/gh",
+      "action": "Normalpush evidence24c2056; actual OPEN/DraftPR4 onPR3; push+PRUbuntu integrity CI SUCCESS; priorPRs/main unchanged; actual receipt normalfollowup pending at this cutoff",
+      "evidence": "shared/next_stage/PUBLICATION_RECEIPT.json"
+    }
+  ],
+  "failures": "v5/evidence/next_stage/20261010/FAILURE_REGISTER.json",
+  "decision_source": "USER; no externalChatGPT output fabricated",
+  "architecture_issue": "AI-problem/problem/P-20261010-001__bram-async-reset-release.md OPEN; no approved reset architecture change",
+  "privacy": "Tool payloads only hashes, private paths redacted, raw private evidence ignoredlocal_raw; credential/identity scan before push",
+  "limitations": "HARDWARE_READONLY identification only; no board-write/programming/driver/serial/boot/manufacturing/mainmerge; no subagents/hidden reasoning, externalChatGPTBLOCKED"
+}

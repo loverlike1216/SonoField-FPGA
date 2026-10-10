@@ -1,0 +1,222 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 10 02:04:55 2026
+# Process ID         : 2680
+# Current directory  : E:/Codex_project/AMD_Sonofield
+# Command line       : vivado.exe -mode batch -log v5/evidence/next_stage/20261010/drc_help.log -nojournal -source v5/build/next_stage/drc_help.tcl
+# Log file           : E:/Codex_project/AMD_Sonofield/v5/evidence/next_stage/20261010/drc_help.log
+# Journal file       : 
+# Running On         : [REDACTED_WINDOWS_HOST]
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 29081 MB
+# Total Virtual      : 45855 MB
+# Available Virtual  : 4237 MB
+#-----------------------------------------------------------
+source v5/build/next_stage/drc_help.tcl
+# report_drc -help
+report_drc
+
+Description: 
+Run DRC
+
+Syntax: 
+report_drc  [-name <arg>] [-upgrade_cw] [-checks <args>] [-ruledecks <args>]
+            [-file <arg>] [-rpx <arg>] [-append] [-waived] [-no_waivers]
+            [-return_string] [-quiet] [-verbose]
+
+Usage: 
+  Name              Description
+  -----------------------------
+  [-name]           Output the results to GUI panel with this name
+  [-upgrade_cw]     Specifies if report_drc should upgrade all 
+                    CRITICAL_WARNING violations to ERROR.
+  [-checks]         DRC checks (see get_drc_checks for available checks)
+  [-ruledecks]      Containers of DRC rule checks
+                    Default: default
+  [-file]           Filename to output results to. (send output to console if
+                    -file is not used)
+  [-rpx]            Report filename for persisted results.
+  [-append]         Append the results to file, do not overwrite the results 
+                    file
+  [-waived]         Output result is Waived checks
+  [-no_waivers]     Disable waivers for checks
+  [-return_string]  Return report as string
+  [-quiet]          Ignore command errors
+  [-verbose]        Suspend message limits during command execution
+
+Categories: 
+DRC, Report, Timing
+
+Description:
+
+  Check the current design against a specified set of design rule checks, or
+  rule decks, and report any errors or violations that are found.
+
+  The report_drc command requires an open design to check the design rules
+  against. The command returns a report with the results of violations found
+  by the design rule checks. Violations are returned as AMD Vivado objects
+  that can be listed with the get_drc_violations command, and are associated
+  with cells, pins, ports, nets, and sites in the current design. You can get
+  the cells, nets, and other design objects that are associated with DRC
+  violation objects, using the -of_objects option of the get_cells command
+  for instance.
+
+  Tip: The report_drc can be multi-threaded to speed the process. Refer to
+  the set_param command for more information on setting the
+  general.maxThreads parameter.
+
+  The Vivado tools include a large number of predefined design rule checks to
+  be used by the report_drc command. Use the get_drc_checks command to list
+  the currently defined design rule checks. You can also create new custom
+  design rule checks using the create_drc_check command.
+
+  A rule deck is a collection of design rule checks grouped for convenience,
+  to be run at different stages of the FPGA design flow, such as during I/O
+  planning or placement. The tool comes with a set of factory defined rule
+  decks, but you can also create new user-defined rule decks with the
+  create_drc_ruledeck command. Use the get_drc_ruledecks command to return a
+  list of the currently defined rule decks available for use in the
+  report_drc command.
+
+  The report_drc command runs a default rule deck when the -checks or
+  -ruledeck options are not specified. Creating a user-defined DRC
+  automatically adds the new design rule check to the default rule deck.
+
+  DRC rules can be enabled or disabled using the IS_ENABLED property on the
+  rule check object. If a rule IS_ENABLED false, the rule will not be run by
+  the report_drc command, whether it is specified directly using -checks, or
+  indirectly with -ruledeck.
+
+  Tip: You can reset the properties of a DRC rule to the factory default
+  settings using the reset_drc_check command.
+
+  You can reset the current results of the report_drc command, clearing any
+  found violations, using the reset_drc command.
+
+Arguments:
+
+  -name <arg> - (Optional) The name to assign to the results when run in GUI
+  mode.
+
+  -upgrade_cw <arg> - (Optional) Report all found Critical Warnings as Errors
+  for this report.
+
+  -checks <args> - (Optional) A list of rule checks to run the DRC report
+  against. All specified rules will be checked against the current design.
+  Rules are listed by their group name or full key. Using the -checks option
+  creates a temporary user-defined rule deck, with the specified design rule
+  checks, and uses the temporary rule deck for the run.
+
+  Note: -ruledeck and -checks cannot be used together.
+
+  -ruledecks <arg> - (Optional) The name of one or more DRC rule decks. A
+  rule deck is a list of DRC rule check names. You can provide the name of a
+  factory DRC rule deck or a user-defined rule deck. The report_drc command
+  checks the design against the rules that are added to the given rule deck.
+  Custom rule decks can be defined using the create_drc_ruledeck command. Use
+  the get_drc_ruledecks command to list the currently defined rule decks.
+
+  -file <arg> - (Optional) Write the DRC report into the specified file. The
+  specified file will be overwritten if one already exists, unless -append is
+  also specified.
+
+  Note: If the path is not specified as part of the file name, the file will
+  be written into the current working directory, or the directory from which
+  the tool was launched.
+
+  -append - (Optional) Append the output of the command to the specified file
+  rather than overwriting it.
+
+  Note: The -append option can only be used with the -file option.
+
+  -return_string - (Optional) Directs the output to a Tcl string rather than
+  to the standard output. The Tcl string can be captured by a variable
+  definition and parsed or otherwise processed.
+
+  Note: This argument cannot be used with the -file option.
+
+  -rpx <arg> - (Optional) Specify the file name and path of the report file
+  (RPX) to write. This is different from writing the report results to a file
+  using the -file argument. The RPX file is an interactive report that
+  contains all the report information and can be reloaded into memory in the
+  AMD Vivado Design Suite using the open_report command. You should add a
+  .rpx file extension to the specified file name, as the Vivado tool will not
+  automatically assign a file extension.
+
+  Note: If the path is not specified as part of the file name, the file will
+  be written into the current working directory, or the directory from which
+  the tool was launched.
+
+  -waived - (Optional) Causes only the DRC checks waived by the create_waiver
+  command to be run and reported. This returns the actual violation rather
+  than the definition of the waiver, which can be reported by the
+  report_waivers command.
+
+  -no_waivers - (Optional) Ignore the waivers defined by the create_waivers
+  command and report all DRC violations.
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+Examples:
+
+  The following example lists the available rule decks. The results include
+  all factory rule decks and all user-defined rule decks.
+
+    get_drc_ruledecks
+
+  The following example returns the list of DRC rules defined in the
+  specified rule deck:
+
+    get_drc_checks -of_objects [get_drc_ruledecks placer_checks]
+
+  The following examples run the specified DRC rule deck and rules against
+  the current design, and writes the results to the specified file:
+
+    report_drc -ruledecks placer_checks -file C:/Data/DRC_Rpt1.txt
+    report_drc -checks {IOCNT-1 IOPCPR-1 IOPCMGT-1 IOCTMGT-1 IODIR-1}  \
+       -file C:/Data/DRC_Rpt1.txt -append
+
+  Note: The -append option adds the result of the second report_drc command
+  to the specified file.
+
+See Also:
+
+   *  create_drc_check
+   *  create_drc_ruledeck
+   *  create_drc_violation
+   *  create_waiver
+   *  get_cells
+   *  get_drc_checks
+   *  get_drc_ruledecks
+   *  get_drc_violations
+   *  get_nets
+   *  get_pins
+   *  get_ports
+   *  get_sites
+   *  open_report
+   *  reset_drc
+   *  reset_drc_check
+   *  set_param
+# list_param drc.*
+ERROR: [Common 17-165] Too many positional options when parsing 'drc.*', please type 'list_param -help' for usage info.
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 10 02:05:00 2026...

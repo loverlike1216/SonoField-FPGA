@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-10-09T17:25:56.410436+00:00",
+  "project_id": "SONOFIELD_FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace": "E:\\Codex_project\\AMD_Sonofield",
+  "branch": "codex/v5-ad7606c16-nextstage-20261010",
+  "base_commit": "b08ccf58c984ca7e6250d9e8489a24bc0789c4b0",
+  "main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "prs": [
+    {
+      "baseRefName": "main",
+      "headRefName": "codex/v5-historical-project-isolation-20261009",
+      "headRefOid": "b08ccf58c984ca7e6250d9e8489a24bc0789c4b0",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 3,
+      "state": "OPEN",
+      "title": "chore(v5): isolate frozen history in Historical project with full regression",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/3"
+    },
+    {
+      "baseRefName": "chore/v5-ax7020-workspace-isolation",
+      "headRefName": "feat/v5-prepcb-full-system",
+      "headRefOid": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 2,
+      "state": "OPEN",
+      "title": "feat(v5): deliver pre-PCB temperature calibration safety and runtime trajectory candidate",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/2"
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "chore/v5-ax7020-workspace-isolation",
+      "headRefOid": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 1,
+      "state": "OPEN",
+      "title": "chore(v5): isolate AX7020 workspace and freeze old repository tree",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/1"
+    }
+  ],
+  "version": {
+    "active_version": "v5",
+    "highest_version": "v5",
+    "status": "ACTIVE",
+    "version_status": "ACTIVE",
+    "upgrade_pending": false,
+    "pending_target": null,
+    "version_directory": "v5",
+    "frozen_versions": [
+      "v1",
+      "v2"
+    ],
+    "paused_versions": [
+      "v3"
+    ],
+    "legacy_versions": [],
+    "absent_versions": [
+      "v4"
+    ],
+    "approval_source": "User actual attachment e8213cac-ae60-4eee-bb3e-6461d16eaf66, explicit existing v5 AX7020 development authorization",
+    "v3_baseline": "INCOMPLETE_USER_PAUSED_UNTRACKED_LOCAL_HISTORY",
+    "updated_at": "2026-10-09T13:22:17.304120+08:00",
+    "workspace_migration": true,
+    "historical_version_locations": {
+      "v1": "Historical project/legacy-versions/v1",
+      "v2": "Historical project/legacy-versions/v2",
+      "v3": "PRIVATE_OLD_WORKSPACE_ONLY_NOT_PUBLISHED"
+    },
+    "historical_archive_root": "Historical project"
+  },
+  "history_policy": "NO_BODY_READS",
+  "previous_physical_workspace": "NOT_ACCESSED",
+  "chat_access": "BLOCKED",
+  "hardware_write_authorization": false
+}

@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "classification": "OFFLINE_ONLY",
+  "source_root": "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5",
+  "python": "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+  "started_at": "2026-10-09T17:59:40.560257+00:00",
+  "commands": [
+    {
+      "name": "prepcb_full",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\run_prepcb.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\full"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "adc_c16",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\adc7606c16_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\adc"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "c16_actual_top",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\nextstage_top_gate.py",
+        "--maps",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\full\\system\\gui\\case_1\\icarus\\motion_maps.hex",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\top_c16"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "software_target",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\nextstage_software_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\evidence\\next_stage\\20261010\\clean_full\\software"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

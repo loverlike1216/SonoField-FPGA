@@ -1,0 +1,22 @@
+stage,item,status,classification,detail,evidence
+S0,Repository and ADC user decision,PASS,RECONCILED,PR1/2 ancestors of unmerged PR3; current branch on PR3; actual user direction/hash verified,RECONCILIATION.json;decision_verified.json
+S1,OS USB/COM/process readonly,PASS,READ_ONLY_OS,FTDI JTAG present/driverOK after actual reseat; CP2102NCode28/0COM; originalGUI retained,jtag_reseated_os.json;jtag_after_readonly_os.json
+S1,New JTAG ID and safe register reads,PASS,HARDWARE_READONLY,xc7z020 ID23727093; bothCPUs Running before/after; BOOT05/DDRC81/3e; DONE/EOS1; no write; sysmon invalid,jtag_reseated/summary.json;jtag_reseated/xsdb.log;jtag_reseated/vivado_readonly.log
+S2,C16 profile/readback/timing/faults,PASS,SIMULATED,"64signed+32continuous frames;5badreadbacks, busy/overlap/reset, two tools; CRC enabled rejected not decoded",adc_final/summary.json
+S2,C16 capture BRAM bounded reads ACK,PASS,SIMULATED,"2x1024signed frames, timestamp/burst, 4words/frame, ownership/abort, two tools and fresh clone",c16_capture_run1/summary.json;clean_reproduction/capture_final/summary.json
+S2,C16 actual integrated top,PASS,SIMULATED,37maps through supervisor/BRAM/AXI/core/ACK two tools,c16_top_final/summary.json
+S2,ADC analog/real power loss/CRC frames,NOT_RUN,NOT_VERIFIED,"No physical ADC/AFE, enabledCRC profile unsupported",../../../docs/next_stage/ADC7606C16_MIGRATION_REVIEW.md
+S3,C/Python temperature and sparse geometry,PASS,SYNTHETIC,160maps20480words;10fits5seeds5starts384holdouts; rejection cases preserved,after/system/summary.json
+S3,Runtime user trajectory GUI,PASS,AUTOMATED_GUI_HOST_C_RTL,5cases375frames+original3696 x4; hashes equal; no human manual/real particle claim,after/system/summary.json;after/inherited_full/motion/summary.json
+S3,Portable C sensors/profile host1000PING,PASS,HOST_FIXTURE,"256bandwidth masks, faults/TMP117 checks,1000/1000 in-process only",software_run1/summary.json
+S4,Native Vivado BD route reopen,PASS,SYNTHESIZED_OOC_ROUTED,132MHz internalWNS+.038WHS+.068;6windows5IRQs3IICDDRoff; exact report bodies match,native_reproduction.json;clean_reproduction/nextstage_platform_clean
+S4,Full DRC/production IO/CDC,BLOCKED,RELEASE_HOLD,346REQP-1839+1ZPS7-1;161in148outmissingdelays; no waiver,expanded_current2/drc_reopened.rpt;expanded_current2/timing_reopened.rpt
+S4,CortexA9 actual portable object,PASS,TARGET_OBJECT,"ARMv7a ELF32 relocatable, same objectSHA both clones",software_run1/arm_readelf.log
+S4,Vitis BSP linked application,BLOCKED,NOT_BUILT,Launcher exit0 contains traceback; no qualified XSA/BSP/linker/board facts,vitis_preflight.log
+S5,Real UART PS AXI PL 100/1000,NOT_RUN,A2_STOP,No board-write approval/safe ownership/qualified outputs/platform; no serial opened,windows_readonly_after_continue.json
+S6,BOM7sheets ADC64/connector/net contracts,PASS,PROPOSED_CONTRACT_TESTED,80types/3TMP/oneADC/symmetry/quantities/formula caches checked; all pricesUNKNOWN,unit_final_scoped203.log;../../../hardware/next_stage/20261010
+S6,Native schematic/ERC/power thermal/SI,BLOCKED,ELECTRICAL_MANUFACTURING_HOLD,No connected EasyEDA; unqualified rail capacity/protection/AFE/MPN/pins,easyeda_probe.json;../../../docs/next_stage/OPEN_GATES.md
+S7,Full original regression and203tests,PASS,TESTED_SIMULATED,"171before,199after discovery+final203;clean203;3696x4 each with exact canonical hashes",before/summary.json;after/summary.json;clean_reproduction/clean_full/summary.json
+S7,Clean clone source/hash/environment,PASS,INDEPENDENT_CLONE_SAME_OS_EDA,"freshlockedvenv;202canonical/200raw sources,2reportedEOL-only;strictS0raw audit passes",SOURCE_REPRODUCTION.json;clean_reproduction/clean_preservation_sealed.json
+S7,Frozen archive/current originals,PASS,RAW_SHA_AND_GIT_METADATA,3324S0files;3026immutable currenttests/goldens/evidence/BOM;3918archiveentries,preservation_sealed.json
+S7,Main merge and manufacturing,NOT_RUN,USER_GATE,Candidate normal commits/Draft only; main unchanged,../../../../shared/next_stage/PUBLICATION_RECEIPT.json

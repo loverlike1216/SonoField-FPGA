@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "real_elf_sha256": "6cdf71bdfef3acd3188294df949db28ca61ab56ea3608ab170460c8b3fcf8dce",
+  "cases": {
+    "DDR_load": {
+      "status": "REJECTED",
+      "reason": "Load segment outside candidate OCM"
+    },
+    "entry_outside_load": {
+      "status": "REJECTED",
+      "reason": "No executable load segment contains entry"
+    },
+    "oversized_segment": {
+      "status": "REJECTED",
+      "reason": "Load segment outside candidate OCM"
+    }
+  },
+  "hardware_execution": false
+}

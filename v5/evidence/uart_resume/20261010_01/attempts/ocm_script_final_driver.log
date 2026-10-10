@@ -1,0 +1,9 @@
+vivado_version 1
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\build_uart_ocm_candidate.py", line 140, in <module>
+    main()
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\build_uart_ocm_candidate.py", line 89, in main
+    run("vivado_version", [vivado / "bin/vivado.bat", "-version"])
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\build_uart_ocm_candidate.py", line 86, in run
+    raise RuntimeError(name + " failed; logs retained")
+RuntimeError: vivado_version failed; logs retained

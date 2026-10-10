@@ -1,0 +1,11 @@
+{
+  "classification": "OFFLINE_LOGICAL_CANDIDATE_NOT_DEPLOYABLE",
+  "xsa": "evidence/next_stage/20261010/clean_reproduction/nextstage_platform_clean/prepcb_logical_candidate.xsa",
+  "xsa_sha256": "e3648112eb1bea363eb6b63eb9724c0d31c5bbcce6003107e8be8f4f1777a430",
+  "hardware_access": false,
+  "ddr_enabled": false,
+  "physical_board_qualified": false,
+  "bsp": "FAILED",
+  "application": "NOT_RUN",
+  "exception": "Traceback (most recent call last):\n  File \"E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\build_uart_candidate.py\", line 40, in <module>\n    platform = client.create_platform_component(\n        name=\"sonofield_ocm_candidate\", hw_design=str(xsa),\n        os=\"standalone\", cpu=\"ps7_cortexa9_0\", domain_name=\"standalone_a9\",\n        no_boot_bsp=True, generate_dtb=False,\n    )\n  File \"D:\\Vivado\\2025.2\\2025.2\\Vitis\\cli\\vitis\\cli_client.py\", line 1751, in create_platform_component\n    raise exc_type(f\"{exc_value}\") from None\nException: \u001b[31m\u001b[31mCannot create platform, status = StatusCode.INVALID_ARGUMENT,\n                    \r            details = 'Invalid project location 'E:\\Codex_project\\AMD_Sonofield\\v5\\build\\uart_resume_01\\vitis_candidate_03\\sonofield_ocm_candidate'.'\u001b[0m'\u001b[0m\n"
+}

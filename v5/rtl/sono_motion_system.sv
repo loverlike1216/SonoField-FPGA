@@ -3,7 +3,7 @@
 // are internal PL/PS interfaces; no physical pin assignment is implied.
 module sono_motion_system #(
  parameter integer CLOCK_HZ=132000000,POWER_WAIT_CYCLES=2*CLOCK_HZ+1,
- parameter integer INTERVAL_CYCLES=CLOCK_HZ/50,QUEUE_DEPTH=4
+ parameter integer INTERVAL_CYCLES=CLOCK_HZ/50,QUEUE_DEPTH=4,ADC_C16=0
 )(input wire clk,rst_n,hardware_enable,motion_arm,motion_stop,
  input wire frame_valid,input wire [2175:0] frame_data,input wire [31:0] frame_sequence,input wire frame_last,
  output wire frame_ready,output wire [31:0] buffered_count,acknowledged_sequence,
@@ -28,7 +28,7 @@ module sono_motion_system #(
  .running(motion_running),.done(motion_done),.underflow(motion_underflow),.overflow(motion_overflow),
  .invalid_frame(motion_invalid),.ack_timeout(motion_timeout),.disable_request(kill),
  .acknowledged_sequence(acknowledged_sequence),.request_pulse(motion_request_pulse),.ack_pulse(motion_ack_pulse));
- sono_digital_system #(.CLOCK_HZ(CLOCK_HZ),.POWER_WAIT_CYCLES(POWER_WAIT_CYCLES)) digital(
+ sono_digital_system #(.CLOCK_HZ(CLOCK_HZ),.POWER_WAIT_CYCLES(POWER_WAIT_CYCLES),.ADC_C16(ADC_C16)) digital(
  .clk(clk),.rst_n(rst_n),.hardware_enable(hardware_enable&&!kill),
  .bus_valid(owned?qvalid:bus_valid),.bus_write(owned?qwrite:bus_write),
  .bus_address(owned?qaddress:bus_address),.bus_wdata(owned?qdata:bus_wdata),

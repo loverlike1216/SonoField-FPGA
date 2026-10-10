@@ -1,0 +1,9 @@
+# Runtime user path editor and transport modes
+
+From the current new clone, set tool variables as in README and run `.venv/Scripts/python.exe v5/software/ui/nextstage_app.py --mode HOST_FIXTURE`. `--mode SIMULATION` runs the same explicit compiled C host fixture with a simulation label. `--mode REAL_BOARD` stops with a locked message until A2 transport/ownership/electrical gates close; no serial port is opened by diagnostics. A moving cursor is commanded motion, not measured particle position.
+
+The unchanged real editor supports runtime-created XYZ points, dragging inXY/XZ/YZ/3D projections, Bezier control handles, insertion/deletion/reorder, undo/redo, closed paths, speed/acceleration/jerk limits, preview, save/load, upload/start/pause/resume/stop. Paths are created by user callbacks, not predefined demo point sets. Original3696-frame GUI-driven motion gate and five additional dynamic cases375frames exercise those callbacks and compiled C maps against actual RTL in two tools.
+
+Three TMP117 segments supply timestamped validated readings through the adapter. Synthetic reference readings are visibly classified. Three temperatures estimate a vertical air model; they are not measured3D thermal tomography. Humidity remains diagnostic. Sparse scanning includes both diagonals and required user1-index points(1,1),(2,2),(3,3),(4,4),(8,1),(7,2); code maps these explicitly to0-index. Sparse16+16 scans do not replace all128TX amplitude/phase/polarity/frequency/temperature characterization, which remains UNMEASURED without array hardware.
+
+PS/PL local scheduling remains50Hz/40kHz. Slow UART uses bounded framed snapshot reads and flow control;115200cannot carry continuous eight-channel800kSPS raw data. The standalone Snapshot ownership reference does not claim a hardware DMA integration. Real-board protocol controls remain locked; compiled-C in-process1000PING latency is HOST_FIXTURE only.

@@ -1,0 +1,268 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "name": "generated_transport",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\scripts\\generate_transport.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "python_tests",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_axi_native_bridge_compile",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\generated",
+        "-s",
+        "tb_axi_native_bridge",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\board_transport\\sim\\tb_axi_native_bridge.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\ad7606c16_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\board\\sono_board_smoke_pl.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\prepcb_supervisor.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_motion_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\timing\\board_clock_candidate.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_board_smoke_pl.sv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "icarus_tb_axi_native_bridge",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\board_transport\\sim\\tb_axi_native_bridge.vvp"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_axi_system_compile",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\generated",
+        "-s",
+        "tb_axi_system",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\board_transport\\sim\\tb_axi_system.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\ad7606c16_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\board\\sono_board_smoke_pl.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\prepcb_supervisor.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_motion_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\timing\\board_clock_candidate.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_board_smoke_pl.sv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "icarus_tb_axi_system",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\board_transport\\sim\\tb_axi_system.vvp"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tb_board_smoke_pl_compile",
+      "command": [
+        "C:\\iverilog\\bin\\iverilog.exe",
+        "-g2012",
+        "-I",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\generated",
+        "-s",
+        "tb_board_smoke_pl",
+        "-o",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\board_transport\\sim\\tb_board_smoke_pl.vvp",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\ad7606c16_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\board\\sono_board_smoke_pl.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\prepcb_supervisor.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_motion_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\timing\\board_clock_candidate.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_board_smoke_pl.sv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "icarus_tb_board_smoke_pl",
+      "command": [
+        "C:\\iverilog\\bin\\vvp.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\build\\board_transport\\sim\\tb_board_smoke_pl.vvp"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "xvlog",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+        "--sv",
+        "-i",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\generated",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\ad7606c16_if.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\acquisition\\adc_serial.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\board\\sono_board_smoke_pl.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\calibration\\burst_generator.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\prepcb_supervisor.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\control\\safety_controller.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\motion\\motion_queue.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\channel_waveform.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\serializer.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\output\\sono_array_interface.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\phase\\phase_bank.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_core.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_digital_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_motion_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\sono_top.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\timing\\board_clock_candidate.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_axi_native_bridge.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_axi_system.sv",
+        "E:\\Codex_project\\AMD_Sonofield\\.portability\\nextstage_clean_20261010\\v5\\tb\\tb_board_smoke_pl.sv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "xelab_tb_axi_native_bridge",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_axi_native_bridge",
+        "--snapshot",
+        "tb_axi_native_bridge",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "xsim_tb_axi_native_bridge",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_axi_native_bridge",
+        "--runall"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "xelab_tb_axi_system",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_axi_system",
+        "--snapshot",
+        "tb_axi_system",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "xsim_tb_axi_system",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_axi_system",
+        "--runall"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "xelab_tb_board_smoke_pl",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+        "tb_board_smoke_pl",
+        "--snapshot",
+        "tb_board_smoke_pl",
+        "--debug",
+        "typical"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "xsim_tb_board_smoke_pl",
+      "command": [
+        "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+        "tb_board_smoke_pl",
+        "--runall"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "classification": "OFFLINE_SIMULATION",
+  "hardware_programmed": false
+}
