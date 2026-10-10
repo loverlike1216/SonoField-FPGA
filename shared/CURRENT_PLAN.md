@@ -14,3 +14,5 @@ optimization. Next meaningful work requires actual nativeCAD/electrical inputs,
 complete63GPIO wrapper/safety circuits and BRAM reset review, then qualified hardware.
 See v5/docs/hardware/MISSING_FACTS_AND_NEXT_MEASUREMENTS.md and RISKS.md.
 Main remains unpromoted due engineering gaps; routine publication needs no new approval.
+
+Publication: DraftPR5 https://github.com/loverlike1216/SonoField-FPGA/pull/5; evidence commit 09201d34d15b21c4956f2d2377cc4daea33b1f71; push+PR CI success;417remote SHA256 checked;main unchanged. Receipt:shared/hardware_design/PUBLICATION_RECEIPT.json.

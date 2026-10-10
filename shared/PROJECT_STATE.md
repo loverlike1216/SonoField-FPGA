@@ -52,3 +52,5 @@ Provenance:actual user instructionSHA8b1fdbfe...; source manifests, native tool 
 unit/simulation reports, independent clean clone, before/after hashes and Git metadata.
 
 Machine authority: PROJECT_STATE.json. Actual publication receipt records remote SHA/CI.
+
+Publication: DraftPR5 https://github.com/loverlike1216/SonoField-FPGA/pull/5; evidence commit 09201d34d15b21c4956f2d2377cc4daea33b1f71; push+PR CI success;417remote SHA256 checked;main unchanged. Receipt:shared/hardware_design/PUBLICATION_RECEIPT.json.
