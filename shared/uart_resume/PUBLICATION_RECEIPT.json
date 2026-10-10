@@ -1,0 +1,96 @@
+{
+  "status": "PUBLISHED_DRAFT_REMOTE_VERIFIED_EVIDENCE_CI_PASS",
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace": "E:\\Codex_project\\AMD_Sonofield",
+  "branch": "codex/v5-ad7606c16-nextstage-20261010",
+  "source_commit": "7d4dd090aac29331166d72aa50d2a0c5a6068101",
+  "evidence_commit": "d76999c658c32be2ccb1602353054b7bf2c953cd",
+  "verified_remote_evidence_commit": "d76999c658c32be2ccb1602353054b7bf2c953cd",
+  "publication_receipt_commit": null,
+  "publication_receipt_commit_resolution": "git log -1 --format=%H -- shared/uart_resume/PUBLICATION_RECEIPT.json",
+  "last_verified_main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "main_merge": false,
+  "pull_request": {
+    "baseRefName": "codex/v5-historical-project-isolation-20261009",
+    "headRefOid": "d76999c658c32be2ccb1602353054b7bf2c953cd",
+    "isDraft": true,
+    "mergedAt": null,
+    "number": 4,
+    "state": "OPEN",
+    "title": "v5 AX7020：C-16 数字适配、UART 恢复与原生 BSP 候选验证",
+    "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/4"
+  },
+  "all_prs": [
+    {
+      "headRefOid": "d76999c658c32be2ccb1602353054b7bf2c953cd",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 4,
+      "state": "OPEN",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/4"
+    },
+    {
+      "headRefOid": "b08ccf58c984ca7e6250d9e8489a24bc0789c4b0",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 3,
+      "state": "OPEN",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/3"
+    },
+    {
+      "headRefOid": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 2,
+      "state": "OPEN",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/2"
+    },
+    {
+      "headRefOid": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 1,
+      "state": "OPEN",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/1"
+    }
+  ],
+  "ci": [
+    {
+      "conclusion": "success",
+      "databaseId": 38028367939,
+      "event": "pull_request",
+      "headSha": "d76999c658c32be2ccb1602353054b7bf2c953cd",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38028367939"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38028365082,
+      "event": "push",
+      "headSha": "d76999c658c32be2ccb1602353054b7bf2c953cd",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38028365082"
+    }
+  ],
+  "ci_scope": "Ubuntu current structure/inheritance/preservation/frozen Git metadata only. Full203/current+freshclone and native2025.2BSP/ARMELF audited locally in sealed evidence.",
+  "latest_receipt_ci_scope": "Recorded CI belongs to evidence commit; inspect latest GitHub run after receipt push. No recursive future CI claim.",
+  "evidence": "v5/evidence/uart_resume/20261010_01/FILE_HASHES.json",
+  "sealed_files": 99,
+  "prior_sealed_files": 1160,
+  "checkpoint": "CP-20261010-002",
+  "hardware_written": false,
+  "serial_opened": false,
+  "board_transport": "NOT_RUN_A0_REV3_RESET_WIRING_AND_A2_STOP",
+  "target_build": "NATIVE2025_2_BSP_LINKED_SAFE_STATUS_ARM_ELF_OCM_AUDIT_PASS_CURRENT_CLEAN_NOT_DEPLOYABLE",
+  "recovery": "REMOTE_REFERENCES_ONLY_NOT_VERIFIED",
+  "quality_gate": {
+    "final_independent_review": "PENDING",
+    "whole_platform": "REVISE",
+    "real_board": "REVISE",
+    "offline": "ACCEPT WITH LIMITATIONS"
+  },
+  "created_at": "2026-10-10T13:43:09.7569403+08:00",
+  "next_action": "User/independent review updatedDraft4 and existing PR1/2/3. Obtain exact Rev3 UART/reset/platform/image ownership/recovery and concrete board permission before affected writes. Resolve original BRAM/electrical gates; main/manufacturing HOLD."
+}

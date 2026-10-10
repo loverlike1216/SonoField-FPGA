@@ -32,3 +32,6 @@ After publication, stop optimization and deliver concrete review package. User/i
 
 
 Publication milestone: DraftPR4 https://github.com/loverlike1216/SonoField-FPGA/pull/4 is OPEN/Draft onPR3. Evidencecommit24c2056870db092ec1fd4b8d1ac679d6b7bc9d6c remote verified; push+pull_request Ubuntu structural CI PASS. PR1/2/3 and main unchanged/unmerged. Actual containingreceiptcommit resolves through Git; latest CI remains observable in GitHub. Review candidate/BRAMreset/physical gates; no additional runtime optimization or main/board/manufacturing operation. See next_stage/PUBLICATION_RECEIPT.json (under shared).
+
+
+UART publication milestone: evidence commit d76999c658c32be2ccb1602353054b7bf2c953cd remote verified; DraftPR4 updated and remains OPEN/Draft onPR3. Push+PR Ubuntu structural CI PASS at that commit. Main ecd32e76 unchanged. See shared/uart_resume/PUBLICATION_RECEIPT.json for exact source/CI/rollback/review boundary. A0/A2 and physical gates remain open.
