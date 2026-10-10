@@ -10,6 +10,8 @@ def digest(data):
 def redact(text):
     text = re.sub(r'(?i)[A-Z]:[\\/](?:Users|wechat)[\\/][^\n<>"\r]+', '[REDACTED_PRIVATE_PATH]', text)
     text = re.sub(r'\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})\b', '[REDACTED_SECRET]', text)
+    text = re.sub(r'(?i)([?&]pwd=)[^\s&<>]+', r'\1[REDACTED_SECRET]', text)
+    text = re.sub(r'(提取码\s*[:：]?\s*)[A-Za-z0-9]{4}\b', r'\1[REDACTED_SECRET]', text)
     return text
 
 def main():
@@ -17,6 +19,7 @@ def main():
     parser.add_argument('--session', type=Path, required=True)
     parser.add_argument('--start', required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--record-id', default='S-20261010-nextstage-001')
     args = parser.parse_args()
     out = args.output.resolve()
     if not out.is_relative_to(ROOT/'AI-interaction-memory/codex'):
@@ -53,7 +56,7 @@ def main():
             events.append(dict(type=kind, name=payload.get('name'), call_id=payload.get('call_id'),
                 timestamp=timestamp, source_line=number, observable_payload_sha256=digest(observed.encode())))
     meta = dict(project_id='SONOFIELD_FPGA', active_version='v5', current_stage='S0-S7_NEXTSTAGE',
-        session_id='S-20261010-nextstage-001', thread_id=session_id, sync_status='PARTIAL',
+        session_id=args.record_id, thread_id=session_id, sync_status='PARTIAL',
         scope='Actual new request and subsequent visible messages up to source snapshot; no hidden reasoning; no inaccessible history',
         source_basename=args.session.name, source_snapshot_sha256=digest(raw), source_line_cutoff=len(lines),
         timestamp_cutoff=datetime.datetime.now(datetime.timezone.utc).isoformat(), message_count=len(messages),
