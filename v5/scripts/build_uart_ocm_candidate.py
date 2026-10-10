@@ -86,8 +86,10 @@ def main():
             raise RuntimeError(name + " failed; logs retained")
 
     try:
-        run("vivado_version", [vivado / "bin/vivado.bat", "-version"])
-        if not re.search(r"Vivado v2025\.2\b", (work / "vivado_version.log").read_text()):
+        version_check = work / "version_check.tcl"
+        version_check.write_text('puts "SF_TOOL_VERSION=[version -short]"\nexit\n', encoding="utf-8")
+        run("vivado_version", [vivado / "bin/vivado.bat", "-mode", "batch", "-nolog", "-nojournal", "-source", version_check])
+        if not re.search(r"SF_TOOL_VERSION=2025\.2\b", (work / "vivado_version.log").read_text()):
             raise RuntimeError("Vivado 2025.2 required")
         run("compiler", [arm / "arm-none-eabi-gcc.exe", "--version"])
         run("sdt", [sdtgen, "-xsa", XSA, "-dir", work / "sdt"])
