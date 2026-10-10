@@ -12,6 +12,10 @@ python -m venv .venv
 $env:PYTHONUTF8='1'
 $env:PYTHONIOENCODING='utf-8'
 $env:PYTHONPATH=(Join-Path (Get-Location) 'v5')
+$env:CC='<actual C compiler executable>'
+New-Item -ItemType Directory -Path v5/build/unit_scratch -Force | Out-Null
+$env:TMP=(Join-Path (Get-Location) 'v5/build/unit_scratch')
+$env:TEMP=$env:TMP
 .venv/Scripts/python.exe -m unittest discover -s v5/tests -v
 .venv/Scripts/python.exe v5/scripts/generate_hardware_design.py --output v5/build/reproduce_hardware_unique
 .venv/Scripts/python.exe v5/scripts/validate_hardware_design.py --output v5/build/reproduce_contract_unique.json
