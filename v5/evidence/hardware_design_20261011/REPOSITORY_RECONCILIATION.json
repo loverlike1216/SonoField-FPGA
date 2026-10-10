@@ -1,0 +1,73 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "head": "618b6f1ffe3dae9b98c59bf1c981349e48644662",
+  "branch": "codex/v5-hardware-design-20261011",
+  "main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "prs": [
+    {
+      "baseRefName": "codex/v5-historical-project-isolation-20261009",
+      "headRefName": "codex/v5-ad7606c16-nextstage-20261010",
+      "headRefOid": "618b6f1ffe3dae9b98c59bf1c981349e48644662",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 4,
+      "state": "OPEN",
+      "title": "v5 AX7020：C-16 数字适配、UART 恢复与原生 BSP 候选验证",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/4"
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "codex/v5-historical-project-isolation-20261009",
+      "headRefOid": "b08ccf58c984ca7e6250d9e8489a24bc0789c4b0",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 3,
+      "state": "OPEN",
+      "title": "chore(v5): isolate frozen history in Historical project with full regression",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/3"
+    },
+    {
+      "baseRefName": "chore/v5-ax7020-workspace-isolation",
+      "headRefName": "feat/v5-prepcb-full-system",
+      "headRefOid": "7dda49f00983c57d06ac639ad70bdaff9696e900",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 2,
+      "state": "OPEN",
+      "title": "feat(v5): deliver pre-PCB temperature calibration safety and runtime trajectory candidate",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/2"
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "chore/v5-ax7020-workspace-isolation",
+      "headRefOid": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743",
+      "isDraft": true,
+      "mergedAt": null,
+      "number": 1,
+      "state": "OPEN",
+      "title": "chore(v5): isolate AX7020 workspace and freeze old repository tree",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/1"
+    }
+  ],
+  "ancestry": [
+    {
+      "ancestor_pr": 1,
+      "descendant_pr": 2,
+      "is_ancestor": true,
+      "merge_base": "d7f7b60ae8ed9ed8bdee34c8738ce68aacd81743"
+    },
+    {
+      "ancestor_pr": 2,
+      "descendant_pr": 3,
+      "is_ancestor": true,
+      "merge_base": "7dda49f00983c57d06ac639ad70bdaff9696e900"
+    },
+    {
+      "ancestor_pr": 3,
+      "descendant_pr": 4,
+      "is_ancestor": true,
+      "merge_base": "b08ccf58c984ca7e6250d9e8489a24bc0789c4b0"
+    }
+  ]
+}

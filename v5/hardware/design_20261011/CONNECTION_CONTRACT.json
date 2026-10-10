@@ -1,0 +1,2671 @@
+{
+  "status": "NOT_NATIVE_NETLIST_NOT_ERC",
+  "connections": [
+    {
+      "net": "SIGNAL_GND",
+      "from_endpoint": "AX7020_J10.1",
+      "central_endpoint": "CENTRAL_AX_J10.1",
+      "direction": "GROUND",
+      "buffering": "GROUND_RETURN_REVIEW",
+      "rtl": "",
+      "binding": "CONTROLLED_REFERENCE_RETURN"
+    },
+    {
+      "net": "TX_DATA_UP[0]",
+      "from_endpoint": "AX7020_J10.3",
+      "central_endpoint": "CENTRAL_AX_J10.3",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[0]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[1]",
+      "from_endpoint": "AX7020_J10.4",
+      "central_endpoint": "CENTRAL_AX_J10.4",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[1]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[2]",
+      "from_endpoint": "AX7020_J10.5",
+      "central_endpoint": "CENTRAL_AX_J10.5",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[2]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[3]",
+      "from_endpoint": "AX7020_J10.6",
+      "central_endpoint": "CENTRAL_AX_J10.6",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[3]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[4]",
+      "from_endpoint": "AX7020_J10.7",
+      "central_endpoint": "CENTRAL_AX_J10.7",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[4]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[5]",
+      "from_endpoint": "AX7020_J10.8",
+      "central_endpoint": "CENTRAL_AX_J10.8",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[5]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[6]",
+      "from_endpoint": "AX7020_J10.9",
+      "central_endpoint": "CENTRAL_AX_J10.9",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[6]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[7]",
+      "from_endpoint": "AX7020_J10.10",
+      "central_endpoint": "CENTRAL_AX_J10.10",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[7]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[8]",
+      "from_endpoint": "AX7020_J10.11",
+      "central_endpoint": "CENTRAL_AX_J10.11",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[8]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[9]",
+      "from_endpoint": "AX7020_J10.12",
+      "central_endpoint": "CENTRAL_AX_J10.12",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[9]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[10]",
+      "from_endpoint": "AX7020_J10.13",
+      "central_endpoint": "CENTRAL_AX_J10.13",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[10]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[11]",
+      "from_endpoint": "AX7020_J10.14",
+      "central_endpoint": "CENTRAL_AX_J10.14",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[11]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[12]",
+      "from_endpoint": "AX7020_J10.15",
+      "central_endpoint": "CENTRAL_AX_J10.15",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[12]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[13]",
+      "from_endpoint": "AX7020_J10.16",
+      "central_endpoint": "CENTRAL_AX_J10.16",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[13]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[14]",
+      "from_endpoint": "AX7020_J10.17",
+      "central_endpoint": "CENTRAL_AX_J10.17",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[14]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[15]",
+      "from_endpoint": "AX7020_J10.18",
+      "central_endpoint": "CENTRAL_AX_J10.18",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[15]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "UP_SRCLK",
+      "from_endpoint": "AX7020_J10.19",
+      "central_endpoint": "CENTRAL_AX_J10.19",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "shift_clock",
+      "binding": "SHARED_PORT_FANOUT_BUFFER_REQUIRED"
+    },
+    {
+      "net": "UP_RCLK",
+      "from_endpoint": "AX7020_J10.20",
+      "central_endpoint": "CENTRAL_AX_J10.20",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "latch_clock",
+      "binding": "SHARED_PORT_FANOUT_BUFFER_REQUIRED"
+    },
+    {
+      "net": "UP_OE_N",
+      "from_endpoint": "AX7020_J10.21",
+      "central_endpoint": "CENTRAL_AX_J10.21",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "output_disable",
+      "binding": "SAME_LEVEL_ACTIVE_HIGH_DISABLE_NO_INVERSION"
+    },
+    {
+      "net": "UP_RESET_N",
+      "from_endpoint": "AX7020_J10.22",
+      "central_endpoint": "CENTRAL_AX_J10.22",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "",
+      "binding": "NOT_EXPOSED_BY_CURRENT_TOP_REVIEW_REQUIRED"
+    },
+    {
+      "net": "UP_SYNC",
+      "from_endpoint": "AX7020_J10.23",
+      "central_endpoint": "CENTRAL_AX_J10.23",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "",
+      "binding": "NOT_EXPOSED_BY_CURRENT_TOP_REVIEW_REQUIRED"
+    },
+    {
+      "net": "UP_RX_BLANK",
+      "from_endpoint": "AX7020_J10.24",
+      "central_endpoint": "CENTRAL_AX_J10.24",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "rx_blank[0]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "UP_HEARTBEAT",
+      "from_endpoint": "AX7020_J10.25",
+      "central_endpoint": "CENTRAL_AX_J10.25",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "heartbeat",
+      "binding": "SHARED_PORT_FANOUT_BUFFER_REQUIRED"
+    },
+    {
+      "net": "UP_PGOOD",
+      "from_endpoint": "AX7020_J10.26",
+      "central_endpoint": "CENTRAL_AX_J10.26",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "health[1]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "UP_FAULT_N",
+      "from_endpoint": "AX7020_J10.27",
+      "central_endpoint": "CENTRAL_AX_J10.27",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "",
+      "binding": "HARDWARE_FAULT_AGGREGATION_TO_HEALTH_REQUIRED"
+    },
+    {
+      "net": "ADC_DOUT[0]",
+      "from_endpoint": "AX7020_J10.28",
+      "central_endpoint": "CENTRAL_AX_J10.28",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_dout[0]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "ADC_DOUT[1]",
+      "from_endpoint": "AX7020_J10.29",
+      "central_endpoint": "CENTRAL_AX_J10.29",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_dout[1]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "ADC_DOUT[2]",
+      "from_endpoint": "AX7020_J10.30",
+      "central_endpoint": "CENTRAL_AX_J10.30",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_dout[2]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "ADC_DOUT[3]",
+      "from_endpoint": "AX7020_J10.31",
+      "central_endpoint": "CENTRAL_AX_J10.31",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_dout[3]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "ADC_BUSY",
+      "from_endpoint": "AX7020_J10.32",
+      "central_endpoint": "CENTRAL_AX_J10.32",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_busy",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "ADC_SCLK",
+      "from_endpoint": "AX7020_J10.33",
+      "central_endpoint": "CENTRAL_AX_J10.33",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_sclk",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "ADC_CONVST",
+      "from_endpoint": "AX7020_J10.34",
+      "central_endpoint": "CENTRAL_AX_J10.34",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_convst",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "ADC_CS_N",
+      "from_endpoint": "AX7020_J10.35",
+      "central_endpoint": "CENTRAL_AX_J10.35",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_cs_n",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "ADC_SDI",
+      "from_endpoint": "AX7020_J10.36",
+      "central_endpoint": "CENTRAL_AX_J10.36",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_sdi",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "SIGNAL_GND",
+      "from_endpoint": "AX7020_J10.37",
+      "central_endpoint": "CENTRAL_AX_J10.37",
+      "direction": "GROUND",
+      "buffering": "GROUND_RETURN_REVIEW",
+      "rtl": "",
+      "binding": "CONTROLLED_REFERENCE_RETURN"
+    },
+    {
+      "net": "SIGNAL_GND",
+      "from_endpoint": "AX7020_J10.38",
+      "central_endpoint": "CENTRAL_AX_J10.38",
+      "direction": "GROUND",
+      "buffering": "GROUND_RETURN_REVIEW",
+      "rtl": "",
+      "binding": "CONTROLLED_REFERENCE_RETURN"
+    },
+    {
+      "net": "SIGNAL_GND",
+      "from_endpoint": "AX7020_J11.1",
+      "central_endpoint": "CENTRAL_AX_J11.1",
+      "direction": "GROUND",
+      "buffering": "GROUND_RETURN_REVIEW",
+      "rtl": "",
+      "binding": "CONTROLLED_REFERENCE_RETURN"
+    },
+    {
+      "net": "TX_DATA_DN[0]",
+      "from_endpoint": "AX7020_J11.3",
+      "central_endpoint": "CENTRAL_AX_J11.3",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[16]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[1]",
+      "from_endpoint": "AX7020_J11.4",
+      "central_endpoint": "CENTRAL_AX_J11.4",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[17]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[2]",
+      "from_endpoint": "AX7020_J11.5",
+      "central_endpoint": "CENTRAL_AX_J11.5",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[18]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[3]",
+      "from_endpoint": "AX7020_J11.6",
+      "central_endpoint": "CENTRAL_AX_J11.6",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[19]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[4]",
+      "from_endpoint": "AX7020_J11.7",
+      "central_endpoint": "CENTRAL_AX_J11.7",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[20]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[5]",
+      "from_endpoint": "AX7020_J11.8",
+      "central_endpoint": "CENTRAL_AX_J11.8",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[21]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[6]",
+      "from_endpoint": "AX7020_J11.9",
+      "central_endpoint": "CENTRAL_AX_J11.9",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[22]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[7]",
+      "from_endpoint": "AX7020_J11.10",
+      "central_endpoint": "CENTRAL_AX_J11.10",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[23]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[8]",
+      "from_endpoint": "AX7020_J11.11",
+      "central_endpoint": "CENTRAL_AX_J11.11",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[24]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[9]",
+      "from_endpoint": "AX7020_J11.12",
+      "central_endpoint": "CENTRAL_AX_J11.12",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[25]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[10]",
+      "from_endpoint": "AX7020_J11.13",
+      "central_endpoint": "CENTRAL_AX_J11.13",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[26]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[11]",
+      "from_endpoint": "AX7020_J11.14",
+      "central_endpoint": "CENTRAL_AX_J11.14",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[27]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[12]",
+      "from_endpoint": "AX7020_J11.15",
+      "central_endpoint": "CENTRAL_AX_J11.15",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[28]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[13]",
+      "from_endpoint": "AX7020_J11.16",
+      "central_endpoint": "CENTRAL_AX_J11.16",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[29]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[14]",
+      "from_endpoint": "AX7020_J11.17",
+      "central_endpoint": "CENTRAL_AX_J11.17",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[30]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[15]",
+      "from_endpoint": "AX7020_J11.18",
+      "central_endpoint": "CENTRAL_AX_J11.18",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "serial_data[31]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "DN_SRCLK",
+      "from_endpoint": "AX7020_J11.19",
+      "central_endpoint": "CENTRAL_AX_J11.19",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "shift_clock",
+      "binding": "SHARED_PORT_FANOUT_BUFFER_REQUIRED"
+    },
+    {
+      "net": "DN_RCLK",
+      "from_endpoint": "AX7020_J11.20",
+      "central_endpoint": "CENTRAL_AX_J11.20",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "latch_clock",
+      "binding": "SHARED_PORT_FANOUT_BUFFER_REQUIRED"
+    },
+    {
+      "net": "DN_OE_N",
+      "from_endpoint": "AX7020_J11.21",
+      "central_endpoint": "CENTRAL_AX_J11.21",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "output_disable",
+      "binding": "SAME_LEVEL_ACTIVE_HIGH_DISABLE_NO_INVERSION"
+    },
+    {
+      "net": "DN_RESET_N",
+      "from_endpoint": "AX7020_J11.22",
+      "central_endpoint": "CENTRAL_AX_J11.22",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "",
+      "binding": "NOT_EXPOSED_BY_CURRENT_TOP_REVIEW_REQUIRED"
+    },
+    {
+      "net": "DN_SYNC",
+      "from_endpoint": "AX7020_J11.23",
+      "central_endpoint": "CENTRAL_AX_J11.23",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "",
+      "binding": "NOT_EXPOSED_BY_CURRENT_TOP_REVIEW_REQUIRED"
+    },
+    {
+      "net": "DN_RX_BLANK",
+      "from_endpoint": "AX7020_J11.24",
+      "central_endpoint": "CENTRAL_AX_J11.24",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "rx_blank[1]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "DN_HEARTBEAT",
+      "from_endpoint": "AX7020_J11.25",
+      "central_endpoint": "CENTRAL_AX_J11.25",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "heartbeat",
+      "binding": "SHARED_PORT_FANOUT_BUFFER_REQUIRED"
+    },
+    {
+      "net": "DN_PGOOD",
+      "from_endpoint": "AX7020_J11.26",
+      "central_endpoint": "CENTRAL_AX_J11.26",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "health[2]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "DN_FAULT_N",
+      "from_endpoint": "AX7020_J11.27",
+      "central_endpoint": "CENTRAL_AX_J11.27",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "",
+      "binding": "HARDWARE_FAULT_AGGREGATION_TO_HEALTH_REQUIRED"
+    },
+    {
+      "net": "ADC_RESET",
+      "from_endpoint": "AX7020_J11.28",
+      "central_endpoint": "CENTRAL_AX_J11.28",
+      "direction": "OUT",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "adc_reset",
+      "binding": "ACTIVE_HIGH_RESET"
+    },
+    {
+      "net": "I2C_SCL",
+      "from_endpoint": "AX7020_J11.29",
+      "central_endpoint": "CENTRAL_AX_J11.29",
+      "direction": "OPEN_DRAIN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "",
+      "binding": "NEW_MUX_CONTROLLER_NOT_CONNECTED_TO_CURRENT_TOP"
+    },
+    {
+      "net": "I2C_SDA",
+      "from_endpoint": "AX7020_J11.30",
+      "central_endpoint": "CENTRAL_AX_J11.30",
+      "direction": "OPEN_DRAIN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "",
+      "binding": "NEW_MUX_CONTROLLER_NOT_CONNECTED_TO_CURRENT_TOP"
+    },
+    {
+      "net": "ESTOP_STATUS",
+      "from_endpoint": "AX7020_J11.31",
+      "central_endpoint": "CENTRAL_AX_J11.31",
+      "direction": "IN",
+      "buffering": "IOFF_QUALIFICATION_HOLD",
+      "rtl": "health[0]",
+      "binding": "DIRECT_LOGICAL_PORT_NOT_SAFETY_CUTOFF"
+    },
+    {
+      "net": "SIGNAL_GND",
+      "from_endpoint": "AX7020_J11.37",
+      "central_endpoint": "CENTRAL_AX_J11.37",
+      "direction": "GROUND",
+      "buffering": "GROUND_RETURN_REVIEW",
+      "rtl": "",
+      "binding": "CONTROLLED_REFERENCE_RETURN"
+    },
+    {
+      "net": "SIGNAL_GND",
+      "from_endpoint": "AX7020_J11.38",
+      "central_endpoint": "CENTRAL_AX_J11.38",
+      "direction": "GROUND",
+      "buffering": "GROUND_RETURN_REVIEW",
+      "rtl": "",
+      "binding": "CONTROLLED_REFERENCE_RETURN"
+    },
+    {
+      "net": "TX_DATA_UP[0]",
+      "from_endpoint": "CENTRAL_UP.DATA0",
+      "central_endpoint": "UP_595_0.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[0]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[1]",
+      "from_endpoint": "CENTRAL_UP.DATA1",
+      "central_endpoint": "UP_595_1.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[1]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[2]",
+      "from_endpoint": "CENTRAL_UP.DATA2",
+      "central_endpoint": "UP_595_2.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[2]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[3]",
+      "from_endpoint": "CENTRAL_UP.DATA3",
+      "central_endpoint": "UP_595_3.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[3]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[4]",
+      "from_endpoint": "CENTRAL_UP.DATA4",
+      "central_endpoint": "UP_595_4.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[4]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[5]",
+      "from_endpoint": "CENTRAL_UP.DATA5",
+      "central_endpoint": "UP_595_5.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[5]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[6]",
+      "from_endpoint": "CENTRAL_UP.DATA6",
+      "central_endpoint": "UP_595_6.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[6]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[7]",
+      "from_endpoint": "CENTRAL_UP.DATA7",
+      "central_endpoint": "UP_595_7.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[7]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[8]",
+      "from_endpoint": "CENTRAL_UP.DATA8",
+      "central_endpoint": "UP_595_8.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[8]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[9]",
+      "from_endpoint": "CENTRAL_UP.DATA9",
+      "central_endpoint": "UP_595_9.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[9]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[10]",
+      "from_endpoint": "CENTRAL_UP.DATA10",
+      "central_endpoint": "UP_595_10.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[10]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[11]",
+      "from_endpoint": "CENTRAL_UP.DATA11",
+      "central_endpoint": "UP_595_11.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[11]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[12]",
+      "from_endpoint": "CENTRAL_UP.DATA12",
+      "central_endpoint": "UP_595_12.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[12]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[13]",
+      "from_endpoint": "CENTRAL_UP.DATA13",
+      "central_endpoint": "UP_595_13.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[13]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[14]",
+      "from_endpoint": "CENTRAL_UP.DATA14",
+      "central_endpoint": "UP_595_14.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[14]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_UP[15]",
+      "from_endpoint": "CENTRAL_UP.DATA15",
+      "central_endpoint": "UP_595_15.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[15]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "UP_TX0",
+      "from_endpoint": "UP_595_0.Q0",
+      "central_endpoint": "UP_TC4427A_0.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX1",
+      "from_endpoint": "UP_595_0.Q1",
+      "central_endpoint": "UP_TC4427A_0.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX2",
+      "from_endpoint": "UP_595_0.Q2",
+      "central_endpoint": "UP_TC4427A_1.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX3",
+      "from_endpoint": "UP_595_0.Q3",
+      "central_endpoint": "UP_TC4427A_1.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX4",
+      "from_endpoint": "UP_595_1.Q0",
+      "central_endpoint": "UP_TC4427A_2.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX5",
+      "from_endpoint": "UP_595_1.Q1",
+      "central_endpoint": "UP_TC4427A_2.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX6",
+      "from_endpoint": "UP_595_1.Q2",
+      "central_endpoint": "UP_TC4427A_3.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX7",
+      "from_endpoint": "UP_595_1.Q3",
+      "central_endpoint": "UP_TC4427A_3.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX8",
+      "from_endpoint": "UP_595_2.Q0",
+      "central_endpoint": "UP_TC4427A_4.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX9",
+      "from_endpoint": "UP_595_2.Q1",
+      "central_endpoint": "UP_TC4427A_4.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX10",
+      "from_endpoint": "UP_595_2.Q2",
+      "central_endpoint": "UP_TC4427A_5.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX11",
+      "from_endpoint": "UP_595_2.Q3",
+      "central_endpoint": "UP_TC4427A_5.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX12",
+      "from_endpoint": "UP_595_3.Q0",
+      "central_endpoint": "UP_TC4427A_6.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX13",
+      "from_endpoint": "UP_595_3.Q1",
+      "central_endpoint": "UP_TC4427A_6.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX14",
+      "from_endpoint": "UP_595_3.Q2",
+      "central_endpoint": "UP_TC4427A_7.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX15",
+      "from_endpoint": "UP_595_3.Q3",
+      "central_endpoint": "UP_TC4427A_7.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX16",
+      "from_endpoint": "UP_595_4.Q0",
+      "central_endpoint": "UP_TC4427A_8.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX17",
+      "from_endpoint": "UP_595_4.Q1",
+      "central_endpoint": "UP_TC4427A_8.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX18",
+      "from_endpoint": "UP_595_4.Q2",
+      "central_endpoint": "UP_TC4427A_9.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX19",
+      "from_endpoint": "UP_595_4.Q3",
+      "central_endpoint": "UP_TC4427A_9.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX20",
+      "from_endpoint": "UP_595_5.Q0",
+      "central_endpoint": "UP_TC4427A_10.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX21",
+      "from_endpoint": "UP_595_5.Q1",
+      "central_endpoint": "UP_TC4427A_10.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX22",
+      "from_endpoint": "UP_595_5.Q2",
+      "central_endpoint": "UP_TC4427A_11.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX23",
+      "from_endpoint": "UP_595_5.Q3",
+      "central_endpoint": "UP_TC4427A_11.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX24",
+      "from_endpoint": "UP_595_6.Q0",
+      "central_endpoint": "UP_TC4427A_12.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX25",
+      "from_endpoint": "UP_595_6.Q1",
+      "central_endpoint": "UP_TC4427A_12.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX26",
+      "from_endpoint": "UP_595_6.Q2",
+      "central_endpoint": "UP_TC4427A_13.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX27",
+      "from_endpoint": "UP_595_6.Q3",
+      "central_endpoint": "UP_TC4427A_13.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX28",
+      "from_endpoint": "UP_595_7.Q0",
+      "central_endpoint": "UP_TC4427A_14.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX29",
+      "from_endpoint": "UP_595_7.Q1",
+      "central_endpoint": "UP_TC4427A_14.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX30",
+      "from_endpoint": "UP_595_7.Q2",
+      "central_endpoint": "UP_TC4427A_15.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX31",
+      "from_endpoint": "UP_595_7.Q3",
+      "central_endpoint": "UP_TC4427A_15.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX32",
+      "from_endpoint": "UP_595_8.Q0",
+      "central_endpoint": "UP_TC4427A_16.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX33",
+      "from_endpoint": "UP_595_8.Q1",
+      "central_endpoint": "UP_TC4427A_16.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX34",
+      "from_endpoint": "UP_595_8.Q2",
+      "central_endpoint": "UP_TC4427A_17.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX35",
+      "from_endpoint": "UP_595_8.Q3",
+      "central_endpoint": "UP_TC4427A_17.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX36",
+      "from_endpoint": "UP_595_9.Q0",
+      "central_endpoint": "UP_TC4427A_18.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX37",
+      "from_endpoint": "UP_595_9.Q1",
+      "central_endpoint": "UP_TC4427A_18.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX38",
+      "from_endpoint": "UP_595_9.Q2",
+      "central_endpoint": "UP_TC4427A_19.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX39",
+      "from_endpoint": "UP_595_9.Q3",
+      "central_endpoint": "UP_TC4427A_19.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX40",
+      "from_endpoint": "UP_595_10.Q0",
+      "central_endpoint": "UP_TC4427A_20.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX41",
+      "from_endpoint": "UP_595_10.Q1",
+      "central_endpoint": "UP_TC4427A_20.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX42",
+      "from_endpoint": "UP_595_10.Q2",
+      "central_endpoint": "UP_TC4427A_21.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX43",
+      "from_endpoint": "UP_595_10.Q3",
+      "central_endpoint": "UP_TC4427A_21.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX44",
+      "from_endpoint": "UP_595_11.Q0",
+      "central_endpoint": "UP_TC4427A_22.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX45",
+      "from_endpoint": "UP_595_11.Q1",
+      "central_endpoint": "UP_TC4427A_22.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX46",
+      "from_endpoint": "UP_595_11.Q2",
+      "central_endpoint": "UP_TC4427A_23.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX47",
+      "from_endpoint": "UP_595_11.Q3",
+      "central_endpoint": "UP_TC4427A_23.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX48",
+      "from_endpoint": "UP_595_12.Q0",
+      "central_endpoint": "UP_TC4427A_24.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX49",
+      "from_endpoint": "UP_595_12.Q1",
+      "central_endpoint": "UP_TC4427A_24.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX50",
+      "from_endpoint": "UP_595_12.Q2",
+      "central_endpoint": "UP_TC4427A_25.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX51",
+      "from_endpoint": "UP_595_12.Q3",
+      "central_endpoint": "UP_TC4427A_25.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX52",
+      "from_endpoint": "UP_595_13.Q0",
+      "central_endpoint": "UP_TC4427A_26.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX53",
+      "from_endpoint": "UP_595_13.Q1",
+      "central_endpoint": "UP_TC4427A_26.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX54",
+      "from_endpoint": "UP_595_13.Q2",
+      "central_endpoint": "UP_TC4427A_27.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX55",
+      "from_endpoint": "UP_595_13.Q3",
+      "central_endpoint": "UP_TC4427A_27.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX56",
+      "from_endpoint": "UP_595_14.Q0",
+      "central_endpoint": "UP_TC4427A_28.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX57",
+      "from_endpoint": "UP_595_14.Q1",
+      "central_endpoint": "UP_TC4427A_28.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX58",
+      "from_endpoint": "UP_595_14.Q2",
+      "central_endpoint": "UP_TC4427A_29.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX59",
+      "from_endpoint": "UP_595_14.Q3",
+      "central_endpoint": "UP_TC4427A_29.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX60",
+      "from_endpoint": "UP_595_15.Q0",
+      "central_endpoint": "UP_TC4427A_30.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX61",
+      "from_endpoint": "UP_595_15.Q1",
+      "central_endpoint": "UP_TC4427A_30.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX62",
+      "from_endpoint": "UP_595_15.Q2",
+      "central_endpoint": "UP_TC4427A_31.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "UP_TX63",
+      "from_endpoint": "UP_595_15.Q3",
+      "central_endpoint": "UP_TC4427A_31.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "RX_0_SIGNAL",
+      "from_endpoint": "UP_RX0.AFE_OUTPUT",
+      "central_endpoint": "ADC.V1P",
+      "direction": "ANALOG",
+      "buffering": "PROTECTION_RC_SHIELDED_RETURN_HOLD",
+      "rtl": "8CHANNEL_SIGNED_CAPTURE",
+      "binding": "ADC_ANALOG_CONTRACT"
+    },
+    {
+      "net": "RX_1_SIGNAL",
+      "from_endpoint": "UP_RX1.AFE_OUTPUT",
+      "central_endpoint": "ADC.V2P",
+      "direction": "ANALOG",
+      "buffering": "PROTECTION_RC_SHIELDED_RETURN_HOLD",
+      "rtl": "8CHANNEL_SIGNED_CAPTURE",
+      "binding": "ADC_ANALOG_CONTRACT"
+    },
+    {
+      "net": "RX_2_SIGNAL",
+      "from_endpoint": "UP_RX2.AFE_OUTPUT",
+      "central_endpoint": "ADC.V3P",
+      "direction": "ANALOG",
+      "buffering": "PROTECTION_RC_SHIELDED_RETURN_HOLD",
+      "rtl": "8CHANNEL_SIGNED_CAPTURE",
+      "binding": "ADC_ANALOG_CONTRACT"
+    },
+    {
+      "net": "RX_3_SIGNAL",
+      "from_endpoint": "UP_RX3.AFE_OUTPUT",
+      "central_endpoint": "ADC.V4P",
+      "direction": "ANALOG",
+      "buffering": "PROTECTION_RC_SHIELDED_RETURN_HOLD",
+      "rtl": "8CHANNEL_SIGNED_CAPTURE",
+      "binding": "ADC_ANALOG_CONTRACT"
+    },
+    {
+      "net": "TX_DATA_DN[0]",
+      "from_endpoint": "CENTRAL_DN.DATA0",
+      "central_endpoint": "DN_595_0.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[16]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[1]",
+      "from_endpoint": "CENTRAL_DN.DATA1",
+      "central_endpoint": "DN_595_1.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[17]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[2]",
+      "from_endpoint": "CENTRAL_DN.DATA2",
+      "central_endpoint": "DN_595_2.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[18]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[3]",
+      "from_endpoint": "CENTRAL_DN.DATA3",
+      "central_endpoint": "DN_595_3.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[19]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[4]",
+      "from_endpoint": "CENTRAL_DN.DATA4",
+      "central_endpoint": "DN_595_4.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[20]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[5]",
+      "from_endpoint": "CENTRAL_DN.DATA5",
+      "central_endpoint": "DN_595_5.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[21]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[6]",
+      "from_endpoint": "CENTRAL_DN.DATA6",
+      "central_endpoint": "DN_595_6.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[22]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[7]",
+      "from_endpoint": "CENTRAL_DN.DATA7",
+      "central_endpoint": "DN_595_7.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[23]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[8]",
+      "from_endpoint": "CENTRAL_DN.DATA8",
+      "central_endpoint": "DN_595_8.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[24]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[9]",
+      "from_endpoint": "CENTRAL_DN.DATA9",
+      "central_endpoint": "DN_595_9.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[25]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[10]",
+      "from_endpoint": "CENTRAL_DN.DATA10",
+      "central_endpoint": "DN_595_10.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[26]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[11]",
+      "from_endpoint": "CENTRAL_DN.DATA11",
+      "central_endpoint": "DN_595_11.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[27]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[12]",
+      "from_endpoint": "CENTRAL_DN.DATA12",
+      "central_endpoint": "DN_595_12.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[28]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[13]",
+      "from_endpoint": "CENTRAL_DN.DATA13",
+      "central_endpoint": "DN_595_13.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[29]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[14]",
+      "from_endpoint": "CENTRAL_DN.DATA14",
+      "central_endpoint": "DN_595_14.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[30]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "TX_DATA_DN[15]",
+      "from_endpoint": "CENTRAL_DN.DATA15",
+      "central_endpoint": "DN_595_15.SER",
+      "direction": "OUT",
+      "buffering": "LOCAL_LOGIC_3V3",
+      "rtl": "serial_data[31]",
+      "binding": "DIRECT_LOGICAL_PORT"
+    },
+    {
+      "net": "DN_TX0",
+      "from_endpoint": "DN_595_0.Q0",
+      "central_endpoint": "DN_TC4427A_0.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX1",
+      "from_endpoint": "DN_595_0.Q1",
+      "central_endpoint": "DN_TC4427A_0.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX2",
+      "from_endpoint": "DN_595_0.Q2",
+      "central_endpoint": "DN_TC4427A_1.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX3",
+      "from_endpoint": "DN_595_0.Q3",
+      "central_endpoint": "DN_TC4427A_1.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX4",
+      "from_endpoint": "DN_595_1.Q0",
+      "central_endpoint": "DN_TC4427A_2.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX5",
+      "from_endpoint": "DN_595_1.Q1",
+      "central_endpoint": "DN_TC4427A_2.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX6",
+      "from_endpoint": "DN_595_1.Q2",
+      "central_endpoint": "DN_TC4427A_3.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX7",
+      "from_endpoint": "DN_595_1.Q3",
+      "central_endpoint": "DN_TC4427A_3.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX8",
+      "from_endpoint": "DN_595_2.Q0",
+      "central_endpoint": "DN_TC4427A_4.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX9",
+      "from_endpoint": "DN_595_2.Q1",
+      "central_endpoint": "DN_TC4427A_4.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX10",
+      "from_endpoint": "DN_595_2.Q2",
+      "central_endpoint": "DN_TC4427A_5.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX11",
+      "from_endpoint": "DN_595_2.Q3",
+      "central_endpoint": "DN_TC4427A_5.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX12",
+      "from_endpoint": "DN_595_3.Q0",
+      "central_endpoint": "DN_TC4427A_6.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX13",
+      "from_endpoint": "DN_595_3.Q1",
+      "central_endpoint": "DN_TC4427A_6.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX14",
+      "from_endpoint": "DN_595_3.Q2",
+      "central_endpoint": "DN_TC4427A_7.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX15",
+      "from_endpoint": "DN_595_3.Q3",
+      "central_endpoint": "DN_TC4427A_7.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX16",
+      "from_endpoint": "DN_595_4.Q0",
+      "central_endpoint": "DN_TC4427A_8.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX17",
+      "from_endpoint": "DN_595_4.Q1",
+      "central_endpoint": "DN_TC4427A_8.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX18",
+      "from_endpoint": "DN_595_4.Q2",
+      "central_endpoint": "DN_TC4427A_9.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX19",
+      "from_endpoint": "DN_595_4.Q3",
+      "central_endpoint": "DN_TC4427A_9.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX20",
+      "from_endpoint": "DN_595_5.Q0",
+      "central_endpoint": "DN_TC4427A_10.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX21",
+      "from_endpoint": "DN_595_5.Q1",
+      "central_endpoint": "DN_TC4427A_10.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX22",
+      "from_endpoint": "DN_595_5.Q2",
+      "central_endpoint": "DN_TC4427A_11.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX23",
+      "from_endpoint": "DN_595_5.Q3",
+      "central_endpoint": "DN_TC4427A_11.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX24",
+      "from_endpoint": "DN_595_6.Q0",
+      "central_endpoint": "DN_TC4427A_12.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX25",
+      "from_endpoint": "DN_595_6.Q1",
+      "central_endpoint": "DN_TC4427A_12.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX26",
+      "from_endpoint": "DN_595_6.Q2",
+      "central_endpoint": "DN_TC4427A_13.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX27",
+      "from_endpoint": "DN_595_6.Q3",
+      "central_endpoint": "DN_TC4427A_13.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX28",
+      "from_endpoint": "DN_595_7.Q0",
+      "central_endpoint": "DN_TC4427A_14.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX29",
+      "from_endpoint": "DN_595_7.Q1",
+      "central_endpoint": "DN_TC4427A_14.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX30",
+      "from_endpoint": "DN_595_7.Q2",
+      "central_endpoint": "DN_TC4427A_15.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX31",
+      "from_endpoint": "DN_595_7.Q3",
+      "central_endpoint": "DN_TC4427A_15.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX32",
+      "from_endpoint": "DN_595_8.Q0",
+      "central_endpoint": "DN_TC4427A_16.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX33",
+      "from_endpoint": "DN_595_8.Q1",
+      "central_endpoint": "DN_TC4427A_16.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX34",
+      "from_endpoint": "DN_595_8.Q2",
+      "central_endpoint": "DN_TC4427A_17.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX35",
+      "from_endpoint": "DN_595_8.Q3",
+      "central_endpoint": "DN_TC4427A_17.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX36",
+      "from_endpoint": "DN_595_9.Q0",
+      "central_endpoint": "DN_TC4427A_18.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX37",
+      "from_endpoint": "DN_595_9.Q1",
+      "central_endpoint": "DN_TC4427A_18.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX38",
+      "from_endpoint": "DN_595_9.Q2",
+      "central_endpoint": "DN_TC4427A_19.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX39",
+      "from_endpoint": "DN_595_9.Q3",
+      "central_endpoint": "DN_TC4427A_19.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX40",
+      "from_endpoint": "DN_595_10.Q0",
+      "central_endpoint": "DN_TC4427A_20.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX41",
+      "from_endpoint": "DN_595_10.Q1",
+      "central_endpoint": "DN_TC4427A_20.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX42",
+      "from_endpoint": "DN_595_10.Q2",
+      "central_endpoint": "DN_TC4427A_21.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX43",
+      "from_endpoint": "DN_595_10.Q3",
+      "central_endpoint": "DN_TC4427A_21.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX44",
+      "from_endpoint": "DN_595_11.Q0",
+      "central_endpoint": "DN_TC4427A_22.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX45",
+      "from_endpoint": "DN_595_11.Q1",
+      "central_endpoint": "DN_TC4427A_22.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX46",
+      "from_endpoint": "DN_595_11.Q2",
+      "central_endpoint": "DN_TC4427A_23.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX47",
+      "from_endpoint": "DN_595_11.Q3",
+      "central_endpoint": "DN_TC4427A_23.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX48",
+      "from_endpoint": "DN_595_12.Q0",
+      "central_endpoint": "DN_TC4427A_24.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX49",
+      "from_endpoint": "DN_595_12.Q1",
+      "central_endpoint": "DN_TC4427A_24.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX50",
+      "from_endpoint": "DN_595_12.Q2",
+      "central_endpoint": "DN_TC4427A_25.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX51",
+      "from_endpoint": "DN_595_12.Q3",
+      "central_endpoint": "DN_TC4427A_25.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX52",
+      "from_endpoint": "DN_595_13.Q0",
+      "central_endpoint": "DN_TC4427A_26.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX53",
+      "from_endpoint": "DN_595_13.Q1",
+      "central_endpoint": "DN_TC4427A_26.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX54",
+      "from_endpoint": "DN_595_13.Q2",
+      "central_endpoint": "DN_TC4427A_27.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX55",
+      "from_endpoint": "DN_595_13.Q3",
+      "central_endpoint": "DN_TC4427A_27.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX56",
+      "from_endpoint": "DN_595_14.Q0",
+      "central_endpoint": "DN_TC4427A_28.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX57",
+      "from_endpoint": "DN_595_14.Q1",
+      "central_endpoint": "DN_TC4427A_28.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX58",
+      "from_endpoint": "DN_595_14.Q2",
+      "central_endpoint": "DN_TC4427A_29.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX59",
+      "from_endpoint": "DN_595_14.Q3",
+      "central_endpoint": "DN_TC4427A_29.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX60",
+      "from_endpoint": "DN_595_15.Q0",
+      "central_endpoint": "DN_TC4427A_30.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX61",
+      "from_endpoint": "DN_595_15.Q1",
+      "central_endpoint": "DN_TC4427A_30.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX62",
+      "from_endpoint": "DN_595_15.Q2",
+      "central_endpoint": "DN_TC4427A_31.IN0",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "DN_TX63",
+      "from_endpoint": "DN_595_15.Q3",
+      "central_endpoint": "DN_TC4427A_31.IN1",
+      "direction": "OUT",
+      "buffering": "PULLDOWN_REQUIRED",
+      "rtl": "serializer4used",
+      "binding": "CHANNEL_INDEX_NO_MIRROR"
+    },
+    {
+      "net": "RX_4_SIGNAL",
+      "from_endpoint": "DN_RX0.AFE_OUTPUT",
+      "central_endpoint": "ADC.V5P",
+      "direction": "ANALOG",
+      "buffering": "PROTECTION_RC_SHIELDED_RETURN_HOLD",
+      "rtl": "8CHANNEL_SIGNED_CAPTURE",
+      "binding": "ADC_ANALOG_CONTRACT"
+    },
+    {
+      "net": "RX_5_SIGNAL",
+      "from_endpoint": "DN_RX1.AFE_OUTPUT",
+      "central_endpoint": "ADC.V6P",
+      "direction": "ANALOG",
+      "buffering": "PROTECTION_RC_SHIELDED_RETURN_HOLD",
+      "rtl": "8CHANNEL_SIGNED_CAPTURE",
+      "binding": "ADC_ANALOG_CONTRACT"
+    },
+    {
+      "net": "RX_6_SIGNAL",
+      "from_endpoint": "DN_RX2.AFE_OUTPUT",
+      "central_endpoint": "ADC.V7P",
+      "direction": "ANALOG",
+      "buffering": "PROTECTION_RC_SHIELDED_RETURN_HOLD",
+      "rtl": "8CHANNEL_SIGNED_CAPTURE",
+      "binding": "ADC_ANALOG_CONTRACT"
+    },
+    {
+      "net": "RX_7_SIGNAL",
+      "from_endpoint": "DN_RX3.AFE_OUTPUT",
+      "central_endpoint": "ADC.V8P",
+      "direction": "ANALOG",
+      "buffering": "PROTECTION_RC_SHIELDED_RETURN_HOLD",
+      "rtl": "8CHANNEL_SIGNED_CAPTURE",
+      "binding": "ADC_ANALOG_CONTRACT"
+    }
+  ],
+  "adc_pins": [
+    {
+      "component": "CE_B014_001",
+      "pin": 1,
+      "name": "AVCC",
+      "net": "ADC_AVCC5V_FILTERED",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 2,
+      "name": "AGND",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 3,
+      "name": "OS0",
+      "net": "CENTRAL_3V3",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 4,
+      "name": "OS1",
+      "net": "CENTRAL_3V3",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 5,
+      "name": "OS2",
+      "net": "CENTRAL_3V3",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 6,
+      "name": "PAR_SER",
+      "net": "CENTRAL_3V3",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 7,
+      "name": "STBY",
+      "net": "CENTRAL_3V3",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 8,
+      "name": "RANGE",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 9,
+      "name": "CONVST",
+      "net": "ADC_CONVST",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 10,
+      "name": "WR",
+      "net": "CENTRAL_3V3",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 11,
+      "name": "RESET",
+      "net": "ADC_RESET",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 12,
+      "name": "SCLK",
+      "net": "ADC_SCLK",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 13,
+      "name": "CS_N",
+      "net": "ADC_CS_N",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 14,
+      "name": "BUSY",
+      "net": "ADC_BUSY",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 15,
+      "name": "FRSTDATA",
+      "net": "ADC_FRSTDATA",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 16,
+      "name": "DB0",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 17,
+      "name": "DB1",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 18,
+      "name": "DB2",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 19,
+      "name": "DB3",
+      "net": "NC_UNUSED_DOUT_E",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 20,
+      "name": "DB4",
+      "net": "NC_UNUSED_DOUT_F",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 21,
+      "name": "DB5",
+      "net": "NC_UNUSED_DOUT_G",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 22,
+      "name": "DB6",
+      "net": "NC_UNUSED_DOUT_H",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 23,
+      "name": "VDRIVE",
+      "net": "CENTRAL_3V3",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 24,
+      "name": "DOUTA",
+      "net": "ADC_DOUTA",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 25,
+      "name": "DOUTB",
+      "net": "ADC_DOUTB",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 26,
+      "name": "AGND",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 27,
+      "name": "DOUTC",
+      "net": "ADC_DOUTC",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 28,
+      "name": "DOUTD",
+      "net": "ADC_DOUTD",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 29,
+      "name": "SDI",
+      "net": "ADC_SDI",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 30,
+      "name": "DB12",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 31,
+      "name": "DB13",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 32,
+      "name": "DB14",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 33,
+      "name": "DB15",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 34,
+      "name": "REF_SELECT",
+      "net": "CENTRAL_3V3",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 35,
+      "name": "AGND",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 36,
+      "name": "REGCAP_A",
+      "net": "ADC_REGCAP_A",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 37,
+      "name": "AVCC",
+      "net": "ADC_AVCC5V_FILTERED",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 38,
+      "name": "AVCC",
+      "net": "ADC_AVCC5V_FILTERED",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 39,
+      "name": "REGCAP_D",
+      "net": "ADC_REGCAP_D",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 40,
+      "name": "AGND",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 41,
+      "name": "AGND",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 42,
+      "name": "REFIN_REFOUT",
+      "net": "ADC_REF2V5",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 43,
+      "name": "REFGND",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 44,
+      "name": "REFCAPA",
+      "net": "ADC_REFCAP4V4",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 45,
+      "name": "REFCAPB",
+      "net": "ADC_REFCAP4V4",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 46,
+      "name": "REFGND",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 47,
+      "name": "AGND",
+      "net": "AGND",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 48,
+      "name": "AVCC",
+      "net": "ADC_AVCC5V_FILTERED",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 49,
+      "name": "V1P",
+      "net": "RX_0_SIGNAL",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 50,
+      "name": "V1N",
+      "net": "RX_0_ANALOG_RETURN",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 51,
+      "name": "V2P",
+      "net": "RX_1_SIGNAL",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 52,
+      "name": "V2N",
+      "net": "RX_1_ANALOG_RETURN",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 53,
+      "name": "V3P",
+      "net": "RX_2_SIGNAL",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 54,
+      "name": "V3N",
+      "net": "RX_2_ANALOG_RETURN",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 55,
+      "name": "V4P",
+      "net": "RX_3_SIGNAL",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 56,
+      "name": "V4N",
+      "net": "RX_3_ANALOG_RETURN",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 57,
+      "name": "V5P",
+      "net": "RX_4_SIGNAL",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 58,
+      "name": "V5N",
+      "net": "RX_4_ANALOG_RETURN",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 59,
+      "name": "V6P",
+      "net": "RX_5_SIGNAL",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 60,
+      "name": "V6N",
+      "net": "RX_5_ANALOG_RETURN",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 61,
+      "name": "V7P",
+      "net": "RX_6_SIGNAL",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 62,
+      "name": "V7N",
+      "net": "RX_6_ANALOG_RETURN",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 63,
+      "name": "V8P",
+      "net": "RX_7_SIGNAL",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    },
+    {
+      "component": "CE_B014_001",
+      "pin": 64,
+      "name": "V8N",
+      "net": "RX_7_ANALOG_RETURN",
+      "status": "DATASHEET_PIN_MAP_PROPOSED_NOT_NATIVE_CAD",
+      "source": "ADI Rev.A Table9 pp15-17"
+    }
+  ],
+  "power_sources": [
+    "AX7020_FACTORY5V",
+    "CENTRAL_USB5V",
+    "UPPER_DC12V",
+    "LOWER_DC12V"
+  ],
+  "current_top_unconnected": [
+    "UP_RESET_N",
+    "UP_SYNC",
+    "UP_FAULT_N",
+    "DN_RESET_N",
+    "DN_SYNC",
+    "DN_FAULT_N",
+    "I2C_SCL",
+    "I2C_SDA"
+  ],
+  "native_schematic": "NOT_CREATED",
+  "erc": "NOT_RUN",
+  "manufacturing": "HOLD"
+}

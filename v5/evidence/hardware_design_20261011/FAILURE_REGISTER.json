@@ -1,0 +1,54 @@
+{
+  "status": "RESOLVED_OFFLINE_FAILURES_WITH_LOGS_PRESERVED",
+  "cases": [
+    {
+      "case": "full_attempt1",
+      "status": "FAIL_PRESERVED",
+      "cause": "Original preservation refused user-authorized board contract before exact two-file review pin",
+      "evidence": "digital_full",
+      "resolution": "Exact2path SHA allowlist; immutable tests/RTL/goldens/BOM/evidence still enforced"
+    },
+    {
+      "case": "full_attempt2",
+      "status": "FAIL_PRESERVED",
+      "cause": "VIVADO_BIN not declared; explicit environment requirement",
+      "evidence": "digital_full_retry1",
+      "resolution": "Declare VIVADO_BIN/IVERILOG_BIN/CC; fresh retry2 PASS"
+    },
+    {
+      "case": "native_package_attempt1",
+      "status": "FAIL_PRESERVED",
+      "cause": "No open elaborated design in packageDB command",
+      "evidence": "package_review_raw.log",
+      "resolution": "link_design only, no hardware; retry1 PASS"
+    },
+    {
+      "case": "pin_identity_attempt1",
+      "status": "FAIL_PRESERVED",
+      "cause": "Manual short names omitted native function suffixes,41string mismatches",
+      "evidence": "CONTRACT_VALIDATION_attempt1.json",
+      "resolution": "Strict lane/PN/tile/bank identity; raw names retained;8negativecases reject"
+    },
+    {
+      "case": "clean_command_attempt0",
+      "status": "FAIL_PRESERVED",
+      "cause": "Missing ignored build output directory before redirection",
+      "resolution": "Create scoped build directory; no test skipped"
+    },
+    {
+      "case": "clean_unit_attempt1",
+      "status": "FAIL_PRESERVED",
+      "cause": "Direct unit command omitted CC and clone-local TMP/TEMP;226ran/9failures/2classerrors",
+      "evidence": "clean_clone/attempt1_unit_failed.log",
+      "resolution": "Exact baseline prerequisites;243PASS"
+    },
+    {
+      "case": "clean_regeneration_attempt1",
+      "status": "FAIL_PRESERVED",
+      "cause": "SVG/XDC Git auto checkout CRLF;10others identical; failed to rematerialize existing files after new attributes",
+      "evidence": "clean_eol_failure.json",
+      "resolution": "ExplicitLF attributes plus genuinely fresh clone6ba6314;12byteequal"
+    }
+  ],
+  "unresolved_physical": "RISKS.md; not counted as closed by model PASS"
+}

@@ -1,88 +1,78 @@
 {
-  "checkpoint_id": "CP-20261010-002",
+  "checkpoint_id": "CP-20261011-001",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex_project\\AMD_Sonofield",
-  "branch": "codex/v5-ad7606c16-nextstage-20261010",
-  "base_commit": "7d4dd090aac29331166d72aa50d2a0c5a6068101",
+  "branch": "codex/v5-hardware-design-20261011",
+  "base_commit": "618b6f1ffe3dae9b98c59bf1c981349e48644662",
   "head_commit": null,
   "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
-  "source_commit": "7d4dd090aac29331166d72aa50d2a0c5a6068101",
-  "final_tools_source_commit": "7d4dd090aac29331166d72aa50d2a0c5a6068101",
+  "source_commit": "6ba6314",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "V5_UART_RESUME_OFFLINE_BSP_BUILT_A0_A2_STOP_DRAFT_REVIEW",
-  "created_at": "2026-10-10T05:36:22.595758+00:00",
+  "current_stage": "V5_HARDWARE_GATE7_OFFLINE_DELIVERED_ELECTRICAL_HOLD",
+  "created_at": "2026-10-10T19:00:47.016059+00:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Actual user UART-driver continuation, corrected recovery fact, new read-only SLCR evidence, native BSP-linked ARM service and independent clean reproduction",
+  "checkpoint_reason": "Actual user four-source design direction; full243 digital regression; clean243/12byteexact/nativepackage/BOM audit; source/pin/revision reconciliation",
   "source_of_truth": "repository",
   "status": "VALID_CANDIDATE_WITH_LIMITATIONS",
-  "architecture_ref": "v5/docs/next_stage/ARCHITECTURE_DECISIONS.md",
+  "architecture_ref": "v5/docs/hardware/DESIGN_REVIEW.md",
   "completed": [
-    "TESTED203current+203newclean; all existing criteria retained",
-    "BUILT real2025.2SDT/BSP+ArmGNU13.2 safe/statusELF; OCMload audit and3negativecasesPASS",
-    "TESTEDapplication .text equality current/clean; completeELFbitexactNOT_CLAIMED",
-    "HARDWARE_READONLY SLCR; CPU0/1Runningbeforeafter; originalVivado preserved; ownedserverstopped",
-    "OS_ENUMERATION COM3Code0driver11.6.0.420; pyserial3.5 locked; no serial open",
-    "PRIOR1160sealedfiles/S03324/immutable3026/frozen3918 preserved; prior fullsim/native evidence retained"
+    "IMPLEMENTED four-source/63GPIO review contracts and101type five-sheet workingBOM",
+    "TESTED243current+243freshclone; original203 unchanged",
+    "SIMULATED3696x3Icarus+1XSim;full C16/temp/sparse/GUI/AXI/safety/equivalence PASS",
+    "TESTED68nativepackage/80manual/8negativepin cases/404formula rows/12byteequal outputs",
+    "SYNTHESIZED_OOC only prior sealed scope retained; no new synthesis/board claim",
+    "HARDWARE_CURRENT OS COM3Code0 only; prior readonly scope retained"
   ],
   "next_actions": [
-    "Review updated Draft4; obtain exact Rev3 UART/reset/platform and validated recovery/image ownership. Keep A0 serial-open/A2 board-write STOP. Resolve existing BRAM/electrical gates through real review; no main merge without concrete approval.",
-    "Verify latest publication receipt/remote SHA/CI and main before resuming",
-    "Do not rerun archived moves or download candidate to current unknown image"
+    "Verify publication receipt/remote SHA/CI",
+    "Obtain real EasyEDA/native libraries; close electrical unknowns and63GPIO wrapper integration",
+    "Resolve P-20261010-001 through real architecture review; obtain validated image/SDbackup before boardwrites",
+    "Run actual power/cutoff/AFE/ADC/TMP117/fullTX/EPS tests after qualified hardware"
   ],
   "active_decisions": [
-    "ADR035-039 historical current scope preserved",
-    "ADR040 actual user-approvedC16direction and authorizedoffline nextstage",
-    "ADR041 actual UART/site/recovery facts and safe offline nativeBSP continuation"
+    "ADR035-041 retained in scope",
+    "ADR042 actual user four-source/USB-C/63GPIO/EPS2-5mm/autonomousGitHub sync"
   ],
   "blockers": [
-    "PC-B01",
-    "PC-B02",
-    "PC-B03",
-    "PC-B04",
-    "PC-B05",
-    "PC-B06",
-    "PC-B07",
-    "PC-B08",
-    "PC-B09",
-    "PC-B10",
-    "PC-B11",
-    "PC-B12",
-    "PC-B13"
+    "PC-B01..13 with current meanings in BLOCKERS.md"
   ],
   "critical_issues": [
-    "P-20261010-001_BRAM_ASYNC_RESET_PHYSICAL_RELEASE_RISK"
+    "63GPIOwrapper_RESET_SYNC_mux_FAULT_not_integrated",
+    "NativeSafetyCircuit_not_created_or_physicallyverified",
+    "LowVBUS_AVCC_regulation_unqualified",
+    "BRAM_asyncreset_OPEN",
+    "AFE_load_VCCO_externalSTA_nativeCAD_ERC_unqualified"
   ],
   "latest_validation": [
-    "v5/evidence/uart_resume/20261010_01/FINAL_VERIFICATION.json",
-    "v5/evidence/uart_resume/20261010_01/target_reproduction.json",
-    "v5/evidence/uart_resume/20261010_01/hardware_summary.json",
-    "v5/evidence/uart_resume/20261010_01/prior_seal_audit.json"
+    "digital_full_retry2/summary.json",
+    "clean_clone/REPRODUCTION.json",
+    "CONTRACT_VALIDATION_portable.json",
+    "REGENERATION_FINAL.json",
+    "PRESERVATION_final.json",
+    "PRIVACY_SCAN.json",
+    "FILE_HASHES.json"
   ],
   "known_limitations": [
-    "RWX ELF LOAD warning retained",
-    "Application is safe/status protocol only; not complete PS runtime",
-    "Complete ELF/BSP build-path differences retained; application object .text matches",
-    "No real UART packets or physical control loop",
-    "External ChatGPT reader BLOCKED; independent/user review PENDING",
-    "Main unmerged",
-    "Rev3DTR/RTS+currentimage/recovery/platform still unqualified; remote share contains V2.0 schematic",
-    "13physical/electricalgates and P-20261010-001 remain OPEN"
+    "NativeCADNOT_CREATED/ERCNOT_RUN",
+    "No actualUARTPSAXIPL control loop or ultrasound",
+    "Unknownworstpower/VCCO/SDbackup/nativeelectrical",
+    "SameOS/EDA clean reproduction; full current digital, cleanunit/contract/package this round",
+    "No independent ChatGPT/electrical review; mainunmerged"
   ],
   "do_not_change": [
-    "Frozenarchive blob/mode/path and originalphysicalsandbox; no default historybodyreads",
-    "Original171tests/goldens/35dBthresholds/protocol/safety/ownership/invariants",
-    "No hardwarewrite/reset/init/programming/unknownIO/driver/boot/mainmerge/forcepush without actual approved gates"
+    "v5 soleactive; originalRTL/tests/thresholds/goldens/BOM/evidence",
+    "Frozenarchive bodies/oldphysicalworkspace notread",
+    "No forcepush/historyrewrite",
+    "No unknownimage/productionXDC/realultrasound from candidate"
   ],
   "invariants": [
-    "v5only",
-    "128TX8RX/32lanesx4",
-    "independent8bitrequested/calibration/commonclock/fullatomicmapsACK",
-    "50Hz localmotion/40kHz localcarrier",
-    "12mmpitch/100mmnominal90-115mmradiatingfacegap/geometriccenter",
-    "One8chC16ADC/3TMP117/twoindependentarray12V/centralprotectedAX7020single-source"
+    "128TX8RX/32lanesx4/commonclock/8bitrequestedcal/atomicmaps",
+    "50Hz/12mmpitch/100mm90-115gap/geometricorigin",
+    "C16 direction; threeTMP117; independentfour-source/noheaderbackfeed",
+    "DefaultOFF/latchedfault/manualrearm and35dB criterion"
   ],
   "open_ai_problems": [
     "P-20261008-001",
@@ -90,18 +80,14 @@
     "P-20261010-001"
   ],
   "evidence_refs": [
-    "v5/evidence/uart_resume/20261010_01",
-    "v5/docs/uart_resume/RESULT.md",
-    "v5/docs/uart_resume/REPRODUCE.md",
-    "v5/docs/next_stage/OPEN_GATES.md",
-    "shared/uart_resume/PUBLICATION_RECEIPT.json"
+    "v5/evidence/hardware_design_20261011/FINAL_VERIFICATION.json",
+    "v5/docs/hardware/FINAL_REPORT.md"
   ],
-  "delta_since_previous": "CP001 UARTCode28/0COM and no linkedBSP are superseded by actual COM3Code0 + real native linked service; A0/A2 remainSTOP; remote backup correction persisted",
-  "provenance": [
-    "Actual current user driver instruction, COM/header confirmation, later no-local-backup correction",
-    "Live OS/XSDB actual outputs; installed2025.2SDT/BSP tools; official pinned Arm archive",
-    "Independent current-only clone/freshvenv/full203/BSPbuild/ELF/source/hash evidence",
-    "Git current state; no historical body reads or old physical sandbox access"
-  ],
-  "resume_from": "Read current states/CP002 then uart_resume RESULT/FINAL_VERIFICATION and actual publication receipt; respect A0/A2 STOP and exact physical gates. Samev5; safe/status ELF is not complete/deployed system."
+  "resume_from": "README -> current PROJECT_STATE/VERSION_STATE/CHECKPOINT -> CURRENT_PLAN -> current hardware docs/evidence; never defaultreadhistory",
+  "state_conflicts": [
+    "ADR042 supersedes centralheaderpower and50mgactive target, old artifacts retained",
+    "UserV2V3compatibility statement retained but internalPDFREV/UARTbridge mismatch not independently resolved",
+    "SDbackup expressedintention not verified",
+    "AutonomousGitHub sync authorized; mainquality not met"
+  ]
 }

@@ -61,3 +61,17 @@ Samev5; actual user C16 direction approved. ExternalChatGPT reader BLOCKED, no i
 | Actual source cutoff and hashes | [session](sessions/S-20261010-uart-resume-002.json) | PARTIAL | AUDIT |
 
 No inaccessible ChatGPT history or hidden reasoning captured. User-home paths, device serials and share access codes redacted. Raw private logs/HTML/cookies are excluded. Source cutoff and public hashes are in the session manifest; final remote publication is recorded separately.
+
+
+## v5 hardware design — 2026-10-11
+
+| ID / source | Record | Status | Impact |
+|---|---|---|---|
+| S-20261011-hardware-design-001 / Codex | [visible conversation](codex/S-20261011-hardware-design-001.md) | PARTIAL | IMPLEMENTATION_INPUT |
+| Observable tool payloads | [hashes](codex/S-20261011-hardware-design-001.tools.json) | PARTIAL | VALIDATION_INPUT |
+| Actual complete instruction | [canonical document](codex/instructions/v5_hardware_design_20261011.md) | ACTUAL_DOCUMENT | DESIGN_INPUT |
+| T-20261011-001 | [tool flow](tool-flow/T-20261011-001__hardware-design.json) | PARTIAL | VALIDATION_INPUT |
+
+Only actually accessible user/commentary/tool events captured from this request through
+the recorded cutoff. No reasoning, inaccessible ChatGPT output or independent review
+invented. User private paths and credential patterns redacted; publication recorded separately.

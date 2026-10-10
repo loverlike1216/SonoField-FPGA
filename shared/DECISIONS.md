@@ -89,3 +89,23 @@ algorithm/ADC/version/platform choice changed; physical matching still HOLD.
 Vitis platformAPI missingQEMU and RWX ELF warning preserved. This is a user-fact
 record and verified implementation finding, not an external ChatGPT Decision.
 Evidence: v5/evidence/uart_resume/20261010_01; CP-20261010-002.
+
+
+## ADR-042 — Actual user four-source v5 hardware-design direction (2026-10-11)
+
+Source: actual current user request and canonical v5_hardware_design_20261011.md
+SHA2568b1fdbfe351b789241afc8abb644179f19b9075b5152f4953a0555545a8d22d4.
+Same project/repository/workspace/v5; not a version upgrade or ChatGPT Decision.
+Adopt central independentUSB-C5V, AX7020headerpowerNC, upper/lower independent12V
+DC5.5x2.5center-positive,60Wpathcandidate/40Walternative,20%minimum30%targetheadroom,
+shared2wireI2C/TCA9548Athree domains,63GPIOcandidate5spare, fixed10x10virtualgeometry
+and EPSdiameter2-5mm current physical target. Supersedes central-header-power wording
+in ADR038/040 only; other architecture/criteria and original evidence remain protected.
+C16RESETactive-high correction preserves actual RTL; TPS3431standardwatchdog rejected
+as a substitute for required windowwatchdog. User authorizes autonomous normalGitHub
+synchronization and reports bareboard/JTAG/UART, V2/V3compatibility and intendedSDbackup.
+These user facts are recorded as such; real backup/VCCO/image/safety/electrical facts
+remain unqualified. Manufacturing/procurement/unknown-image operations remain HOLD;
+main promotion is not acceptable with unresolved P0 engineering gates. No duplicate
+request for routine publication permission. Source contracts, primary sources and
+independent audit paths: v5/docs/hardware and v5/evidence/hardware_design_20261011.

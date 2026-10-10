@@ -58,3 +58,14 @@ v5/evidence/next_stage/**/*.so
 v5/evidence/next_stage/**/*.pb
 v5/evidence/next_stage/**/webtalk*
 v5/hardware/bom/working/2026-10-10/*.inspect.ndjson
+
+# User-supplied vendor packages are local input; publish source hashes only.
+/AX7020/
+
+v5/evidence/hardware_design_20261011/**/xsim.dir/
+v5/evidence/hardware_design_20261011/**/*.vvp
+v5/evidence/hardware_design_20261011/**/*.exe
+v5/evidence/hardware_design_20261011/**/*.dll
+v5/evidence/hardware_design_20261011/**/*.pb
+v5/evidence/hardware_design_20261011/**/webtalk*
+v5/hardware/bom/working/2026-10-11/*.inspect.ndjson

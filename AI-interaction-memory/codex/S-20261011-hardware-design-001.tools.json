@@ -1,0 +1,1053 @@
+{
+  "metadata": {
+    "project_id": "SONOFIELD_FPGA",
+    "active_version": "v5",
+    "current_stage": "GATE0-GATE7_HARDWARE_DESIGN",
+    "session_id": "S-20261011-hardware-design-001",
+    "thread_id": "01a11f01-ebbe-76f3-ac92-b3e04e67b27a",
+    "sync_status": "PARTIAL",
+    "scope": "Actual new request and subsequent visible messages up to source snapshot; no hidden reasoning; no inaccessible history",
+    "source_basename": "rollout-2026-10-09T12-53-02-01a11f01-ebbe-76f3-ac92-b3e04e67b27a.jsonl",
+    "source_snapshot_sha256": "e5fc8c04c4d3b07a21b27fc50abbcd1d1255bb8acdeb9dba0381b64f24f4db87",
+    "source_line_cutoff": 6485,
+    "timestamp_cutoff": "2026-10-10T18:54:32.183071+00:00",
+    "message_count": 9,
+    "tool_event_count": 129,
+    "start": "2026-10-10T18:16:48.494Z",
+    "privacy": "Private user paths and credential patterns redacted; tool payloads stored as hashes only"
+  },
+  "events": [
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_85eb8136107347a4aa005cd377c316b6",
+      "timestamp": "2026-10-10T18:20:36.628Z",
+      "source_line": 5961,
+      "observable_payload_sha256": "81278a84ad4cdc195623892d2a34290b019365dd710434c049392b73e6ccdc3a"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_85eb8136107347a4aa005cd377c316b6",
+      "timestamp": "2026-10-10T18:20:37.726Z",
+      "source_line": 5967,
+      "observable_payload_sha256": "a990e1f738a3dcb7f2a0c0bddf56d8fed275393e10ba9dce55de5a32b1d2db7a"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_a0a5373e7a5e4f2aa0bd41e88b9a928d",
+      "timestamp": "2026-10-10T18:20:48.242Z",
+      "source_line": 5969,
+      "observable_payload_sha256": "aa0156d75eaa2d715c5bdaa519436bb6526db6d0fc492fcbbdbb8bf66f165e12"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_a0a5373e7a5e4f2aa0bd41e88b9a928d",
+      "timestamp": "2026-10-10T18:20:55.510Z",
+      "source_line": 5975,
+      "observable_payload_sha256": "3527377d7e332a5bddd8818e2d0ffea2c4bcb33879a855763452aefd784008ca"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_08200747134649e4a38f41c9c97ca769",
+      "timestamp": "2026-10-10T18:21:02.316Z",
+      "source_line": 5979,
+      "observable_payload_sha256": "c98bd922a5549e8586c5042451989324930b7b6431dd2bef7527aea8d6d7f61b"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_08200747134649e4a38f41c9c97ca769",
+      "timestamp": "2026-10-10T18:21:03.065Z",
+      "source_line": 5983,
+      "observable_payload_sha256": "6b497785fddcef3082fe277ae45dab374125cb96c5c304a43b146f8074d64674"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_e59ea23387564fcbb4ab8924820aec4d",
+      "timestamp": "2026-10-10T18:21:17.094Z",
+      "source_line": 5989,
+      "observable_payload_sha256": "75f0d4c2094b81bac891d33d9121d37dc65c254c005ce926866ba7f8b84b2650"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_e59ea23387564fcbb4ab8924820aec4d",
+      "timestamp": "2026-10-10T18:21:19.796Z",
+      "source_line": 5994,
+      "observable_payload_sha256": "ee53564439d42921f34e2a4010e77faedd937309853b13b43140cb6083622439"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_e4b28ae7e2a84c7d80d9a0d7bfe9c48a",
+      "timestamp": "2026-10-10T18:21:30.213Z",
+      "source_line": 5998,
+      "observable_payload_sha256": "66f5cf13cbcb6073ddc365490e54ea22ed70310f174b344a34452f2b67c669ab"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_e4b28ae7e2a84c7d80d9a0d7bfe9c48a",
+      "timestamp": "2026-10-10T18:21:42.192Z",
+      "source_line": 6001,
+      "observable_payload_sha256": "8868de857aa01b0cac88fd1ba63ceaba93b510def6ac698ec41a4343e46d0bdd"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_d5293de86a8e4a8daa8f0fc0c7f58017",
+      "timestamp": "2026-10-10T18:21:51.059Z",
+      "source_line": 6006,
+      "observable_payload_sha256": "60aa38240156e93959a316a3cbfa9084dc11e7e835dccb396e97d3b7ef73957c"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_d5293de86a8e4a8daa8f0fc0c7f58017",
+      "timestamp": "2026-10-10T18:21:53.227Z",
+      "source_line": 6010,
+      "observable_payload_sha256": "0dab29604457859935c16e816d7aff7954ab92638851bb324f2e7622afd8f814"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_2a779b00fd064ee59a02622fd86a4093",
+      "timestamp": "2026-10-10T18:22:07.526Z",
+      "source_line": 6014,
+      "observable_payload_sha256": "802da7372e9a9bab17c551e122edea83e8b78910a9814b0df7211cc8fbced269"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_2a779b00fd064ee59a02622fd86a4093",
+      "timestamp": "2026-10-10T18:22:11.389Z",
+      "source_line": 6018,
+      "observable_payload_sha256": "019ff40196ee2c8f0efd3d78f52c084e9fd668ab8b36e173202d6e6981ccece7"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_63d3ef72ab6d403ca8177160fd8576a0",
+      "timestamp": "2026-10-10T18:22:20.286Z",
+      "source_line": 6022,
+      "observable_payload_sha256": "95f2d549522c53541c98999fc9967a29d49bd191f409778bb4ff04ae6447e970"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_63d3ef72ab6d403ca8177160fd8576a0",
+      "timestamp": "2026-10-10T18:22:20.780Z",
+      "source_line": 6027,
+      "observable_payload_sha256": "790dfc3d53174d62b734155196cda98a53666d48c2247a17b617ac19ae078efb"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_0930b255fc34462db83ce4c2750eff95",
+      "timestamp": "2026-10-10T18:22:39.145Z",
+      "source_line": 6031,
+      "observable_payload_sha256": "a3be86f211352f685e151735ef46ed18139b34542738dfda8273267f2e96e97c"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_0930b255fc34462db83ce4c2750eff95",
+      "timestamp": "2026-10-10T18:22:39.587Z",
+      "source_line": 6038,
+      "observable_payload_sha256": "482879c9b61000a75b82629c143f5a7a27e95d4209fabfaf2c21a18d61359997"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_3b63992c90dc47268ea29a9b12c062eb",
+      "timestamp": "2026-10-10T18:22:57.287Z",
+      "source_line": 6046,
+      "observable_payload_sha256": "b25a13a28a488b2e47cdb5af7b30d05bf05e41a6b5a4c8eb8fd6b45256830c2a"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_3b63992c90dc47268ea29a9b12c062eb",
+      "timestamp": "2026-10-10T18:22:59.461Z",
+      "source_line": 6050,
+      "observable_payload_sha256": "cc9c166db1ae23e33651984125530d69e8b730a5916593548f04a6dfded5af41"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_49d713a47a1240bf83fde9ff4955074e",
+      "timestamp": "2026-10-10T18:23:06.267Z",
+      "source_line": 6054,
+      "observable_payload_sha256": "0766487ac76acf4ea27b34b4a4c064fc353b036a5e1ba0b55a704b2382908ade"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_49d713a47a1240bf83fde9ff4955074e",
+      "timestamp": "2026-10-10T18:23:06.724Z",
+      "source_line": 6057,
+      "observable_payload_sha256": "5332fc1156576151a879262759d0b18bdbed10c27367452fc458296fc27a2ccf"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_20ee497500a847838839aa9fe933bcef",
+      "timestamp": "2026-10-10T18:23:20.710Z",
+      "source_line": 6061,
+      "observable_payload_sha256": "5358be7c69c8f084a5b1b5d0c5717a3a86abb739c3c1569221762b808850164c"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_20ee497500a847838839aa9fe933bcef",
+      "timestamp": "2026-10-10T18:23:22.694Z",
+      "source_line": 6064,
+      "observable_payload_sha256": "b9546695ffbe9e9cb7a86233c0fa2e1d18fa5b498bbf80d96d3d2d8227042ed4"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ac6ebb9743cf4e28ab5460fe160e962e",
+      "timestamp": "2026-10-10T18:23:32.277Z",
+      "source_line": 6069,
+      "observable_payload_sha256": "34810e196f86eea2054425238e3a784e7f380643bbaef41acc7680e8b121ad67"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_ac6ebb9743cf4e28ab5460fe160e962e",
+      "timestamp": "2026-10-10T18:23:36.639Z",
+      "source_line": 6073,
+      "observable_payload_sha256": "11f6e72f3ab8a0008c3a894031d585a1a012a2271be66637a4b214641ad83e1f"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_11ccbcd88bda4df984609e6b7b0bd64c",
+      "timestamp": "2026-10-10T18:23:53.646Z",
+      "source_line": 6077,
+      "observable_payload_sha256": "d9cbe4e80de0e0c4d043a6f5a1400d18bb0c7db37ee417d519dc6f31340c140a"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_11ccbcd88bda4df984609e6b7b0bd64c",
+      "timestamp": "2026-10-10T18:23:54.611Z",
+      "source_line": 6081,
+      "observable_payload_sha256": "d822e911541da625d419731ee443d64f1ae1fb6021cebca192f7013aa1dac81d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_fc63a796d73647eaa96020b10fea2ef0",
+      "timestamp": "2026-10-10T18:24:13.724Z",
+      "source_line": 6085,
+      "observable_payload_sha256": "6bf326850b0b386e9280208e6b21a0aeccf120b0e858d8563f3b956855a3ff90"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_fc63a796d73647eaa96020b10fea2ef0",
+      "timestamp": "2026-10-10T18:24:14.468Z",
+      "source_line": 6089,
+      "observable_payload_sha256": "6ec5152c8796ec1d9298b0ef607f41cec7526b65bc3c719ffb3523fbf778bad2"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ce27474375884bb19076c5fffd3a8264",
+      "timestamp": "2026-10-10T18:24:55.171Z",
+      "source_line": 6093,
+      "observable_payload_sha256": "d2400de4fa6af418ec638219330b98a3db54dbef98e3c1ce3cf0392a9b3806d3"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_ce27474375884bb19076c5fffd3a8264",
+      "timestamp": "2026-10-10T18:24:55.221Z",
+      "source_line": 6096,
+      "observable_payload_sha256": "5a154456a8c968956c451279cb1ee1263e0d9d96be26d84f06299426e722567d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_09bb4a68e2ce4fcea06de415871e83f2",
+      "timestamp": "2026-10-10T18:25:00.556Z",
+      "source_line": 6100,
+      "observable_payload_sha256": "ebf077580b31b6a04990007f2ebd08a1bb77079a6e00f51969105cfb83583fb0"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_09bb4a68e2ce4fcea06de415871e83f2",
+      "timestamp": "2026-10-10T18:25:00.939Z",
+      "source_line": 6103,
+      "observable_payload_sha256": "959e12d2b3e1f7d6d65251b2419e0a428bd4e6ab87ef6987d62e699706856d68"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ff02f7f4fe3a4f98b08f66398173238c",
+      "timestamp": "2026-10-10T18:25:04.476Z",
+      "source_line": 6107,
+      "observable_payload_sha256": "964cce7fd14c477f51d6e6419811203efb4c23af26f79bef26ef84291b101b72"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_ff02f7f4fe3a4f98b08f66398173238c",
+      "timestamp": "2026-10-10T18:25:04.900Z",
+      "source_line": 6110,
+      "observable_payload_sha256": "960d8812cf50ac5903029650d98425e38d066fe2dac3b91bb34fe2bd2a52f1f8"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_37dd0be6b9c14fa4ba5a12e81c307a6b",
+      "timestamp": "2026-10-10T18:25:09.270Z",
+      "source_line": 6114,
+      "observable_payload_sha256": "84ad97ff47b8c559826fae8d2e8ed2ce3d12a016c9928e0c66f853b5b7299530"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_37dd0be6b9c14fa4ba5a12e81c307a6b",
+      "timestamp": "2026-10-10T18:25:09.636Z",
+      "source_line": 6117,
+      "observable_payload_sha256": "3f5f1ecf9ac44d9cf6485c9a7b277e58645c84c6a903200a2b263c8b0fd6669d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_90c757a3e9904c6baf3e47368aee94a9",
+      "timestamp": "2026-10-10T18:27:41.503Z",
+      "source_line": 6123,
+      "observable_payload_sha256": "a81bcf311bfd46af5802c7f815d1ea14116d322e4082bb1bde51eece6f110403"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_90c757a3e9904c6baf3e47368aee94a9",
+      "timestamp": "2026-10-10T18:27:43.489Z",
+      "source_line": 6127,
+      "observable_payload_sha256": "d2bb99bec88e06ce5bdc4bdb3fb70e497465991fcd212219e6f5563dbfa1442c"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_90cc4edb1c074c588d3a973f50b42569",
+      "timestamp": "2026-10-10T18:27:53.210Z",
+      "source_line": 6131,
+      "observable_payload_sha256": "f61c0a34047788fc42075668168f3d351fdac97c27712a47594fb3b83dd47cb4"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_90cc4edb1c074c588d3a973f50b42569",
+      "timestamp": "2026-10-10T18:27:53.794Z",
+      "source_line": 6134,
+      "observable_payload_sha256": "15ce67c8f26e120232a66dfb1b4eef48fa89686c4cd2b667b281237d59cabb3b"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_b9d4069b5dca4632b412252485986f5a",
+      "timestamp": "2026-10-10T18:27:59.578Z",
+      "source_line": 6138,
+      "observable_payload_sha256": "db86fc8c6540359a3bb09ac878a7a330ddfc22c35d757a87ddd0b0a88091ac8d"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_b9d4069b5dca4632b412252485986f5a",
+      "timestamp": "2026-10-10T18:27:59.966Z",
+      "source_line": 6141,
+      "observable_payload_sha256": "a2755abf929e83a84538f70cfa98f367d6d5864e93ccb48f763a43a5efab3992"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_9776967e49714483a3a10017360c3cc8",
+      "timestamp": "2026-10-10T18:29:38.038Z",
+      "source_line": 6147,
+      "observable_payload_sha256": "dfbf4475ed14eb1e119925d9b3373e7523b99fd854c4ebacb1f5be3c612a7bcd"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_9776967e49714483a3a10017360c3cc8",
+      "timestamp": "2026-10-10T18:29:46.842Z",
+      "source_line": 6151,
+      "observable_payload_sha256": "f6de924557df6a4d01e6ad2b95732b4c64f39e7f0f5e7805a3e3985402b8027f"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_155edef2aa7048b49a552ce282fbcc17",
+      "timestamp": "2026-10-10T18:30:09.433Z",
+      "source_line": 6155,
+      "observable_payload_sha256": "413c30680d3326ec1fc23f1327f7580b5ae11f1c523b62ddd69d333cc0697af7"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_155edef2aa7048b49a552ce282fbcc17",
+      "timestamp": "2026-10-10T18:30:20.052Z",
+      "source_line": 6158,
+      "observable_payload_sha256": "c20458462dbb9b1c5a7ea244759bc0ffec1afab6d162d4eb8d892450748bfc06"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_9ad062d5480446eeb7725668f025e22e",
+      "timestamp": "2026-10-10T18:30:34.649Z",
+      "source_line": 6162,
+      "observable_payload_sha256": "21eb97c584e9a3fff8751e651d4d0a19e66f481f43d3bd25c8a9e731ad6a0b54"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_9ad062d5480446eeb7725668f025e22e",
+      "timestamp": "2026-10-10T18:30:38.002Z",
+      "source_line": 6166,
+      "observable_payload_sha256": "e56ec1544cca26693c52c4bfc09cd4eb5cb390f54358c29788ad7d884c7b3329"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_1d77581b745642b79866f28130f97aea",
+      "timestamp": "2026-10-10T18:30:49.605Z",
+      "source_line": 6170,
+      "observable_payload_sha256": "a5aa38c5cf526c29fd63dedb69fdd160110bd31b3d71e90b2afb5a2b527f9911"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_1d77581b745642b79866f28130f97aea",
+      "timestamp": "2026-10-10T18:30:51.470Z",
+      "source_line": 6174,
+      "observable_payload_sha256": "442b7e67d7c5051c8e4d35bd1bc5e0a13de000ef3f9f3a3ad446c9cd54dd9293"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_8350933cf761411a98ea1e90268b25e7",
+      "timestamp": "2026-10-10T18:31:59.455Z",
+      "source_line": 6178,
+      "observable_payload_sha256": "47627eb5631533176f3633b5438b60011d72e4137b43674fe1e3fe7c518df13c"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_8350933cf761411a98ea1e90268b25e7",
+      "timestamp": "2026-10-10T18:32:09.640Z",
+      "source_line": 6181,
+      "observable_payload_sha256": "909a8768771c31ca8f7e36d3b5993b1c0b3676f569fca94329d9ee4f6a58cfe7"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_e69a2fa1a33e4a70a7097ddf40f11776",
+      "timestamp": "2026-10-10T18:32:48.359Z",
+      "source_line": 6186,
+      "observable_payload_sha256": "f4aef4d9f3a985a34617b25352ad7bee6c328941f32d27ad8120a6d065cd5538"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_e69a2fa1a33e4a70a7097ddf40f11776",
+      "timestamp": "2026-10-10T18:32:53.977Z",
+      "source_line": 6191,
+      "observable_payload_sha256": "82cd6455548be6b9de343d466d9df95386dbf59e35558a10cc049c9e85585018"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_4ed33265cfef40adbd2ef8304880160a",
+      "timestamp": "2026-10-10T18:32:59.775Z",
+      "source_line": 6195,
+      "observable_payload_sha256": "10ed9b34367d2c40b4adb5dc5b68c1e59d2573bce1660764da07b122c3008e85"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_4ed33265cfef40adbd2ef8304880160a",
+      "timestamp": "2026-10-10T18:33:00.158Z",
+      "source_line": 6200,
+      "observable_payload_sha256": "411c411ff6ab275fcf843d6f27211ca25cc6753ac49ec9074f517f7a01b52254"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_a3aa8b30fb444ff2bd2ad4121341acd0",
+      "timestamp": "2026-10-10T18:33:19.592Z",
+      "source_line": 6204,
+      "observable_payload_sha256": "2cf671146c3501b53bc03c6dbb5d58bd78d71467b39579277dc959c2005dbbdc"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_a3aa8b30fb444ff2bd2ad4121341acd0",
+      "timestamp": "2026-10-10T18:33:30.877Z",
+      "source_line": 6209,
+      "observable_payload_sha256": "737ce7958f0961da9efa87036628484caab1b8158a2237d5cb4688e65a8f8865"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_2fe96804189a4dce8a25ff909d79c38c",
+      "timestamp": "2026-10-10T18:33:36.687Z",
+      "source_line": 6214,
+      "observable_payload_sha256": "e4ba857c666c77e40af5a9da60e835112c50ab4c8d9bbc8a3a5351e86eb0c3f3"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_2fe96804189a4dce8a25ff909d79c38c",
+      "timestamp": "2026-10-10T18:33:37.107Z",
+      "source_line": 6217,
+      "observable_payload_sha256": "acd112a24f1f0ea7d0a0f8a0f42f715783b590d674b91174b7bd519f74887999"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_30c73c2693144433ad157a33b0d3852e",
+      "timestamp": "2026-10-10T18:33:51.944Z",
+      "source_line": 6223,
+      "observable_payload_sha256": "15726757cb8e33fe6599c61f97650df27c53038122ecaf6ee04eafba55db84b9"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_30c73c2693144433ad157a33b0d3852e",
+      "timestamp": "2026-10-10T18:34:02.572Z",
+      "source_line": 6226,
+      "observable_payload_sha256": "d3b922ecd0e52ab9a77c291c956c5d79c521dbfc8a35a088e1d665e915b0b80b"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_6d3e231e2e4e41b28c296a244b515681",
+      "timestamp": "2026-10-10T18:35:56.170Z",
+      "source_line": 6230,
+      "observable_payload_sha256": "ca6331bb4f89ce0ae2a8b37f2b8e194550b82d3095bcbbb54d07fc39ca0d73ee"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_6d3e231e2e4e41b28c296a244b515681",
+      "timestamp": "2026-10-10T18:35:56.704Z",
+      "source_line": 6234,
+      "observable_payload_sha256": "a8d82769c762861bbcde28371c8a34b943f1da04a519ff64d6d2a14500c9147d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c04e4c6b3fa145d6a89e10a0b9e6f9b4",
+      "timestamp": "2026-10-10T18:37:29.214Z",
+      "source_line": 6238,
+      "observable_payload_sha256": "1b005ae84486ceab3adf53a5cb8d52e872b0d68bd8768bbfc0b6937a888b4d97"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_c04e4c6b3fa145d6a89e10a0b9e6f9b4",
+      "timestamp": "2026-10-10T18:37:30.728Z",
+      "source_line": 6242,
+      "observable_payload_sha256": "a711588c417937e82c676e923f66d3393760410be54a4b801b40caefec8ee840"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_249c5954472a44358164fd2c7450a922",
+      "timestamp": "2026-10-10T18:38:27.005Z",
+      "source_line": 6246,
+      "observable_payload_sha256": "a48b9ccf9dd78cba2bfd65667da48b4e2197e221d046ed8db7bcfeeb263eedfd"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_249c5954472a44358164fd2c7450a922",
+      "timestamp": "2026-10-10T18:38:28.806Z",
+      "source_line": 6250,
+      "observable_payload_sha256": "043a31023a721dd3b5a4ce1bc9011b9a920975ff644e4937bab4af0d7c8beb10"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_60de332e4af1424183c445c36151d8d1",
+      "timestamp": "2026-10-10T18:39:16.714Z",
+      "source_line": 6254,
+      "observable_payload_sha256": "ecee4863543764dacb3d6668ce4b6c2f7eab6335616d6fa35a774aa8abb8416c"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_60de332e4af1424183c445c36151d8d1",
+      "timestamp": "2026-10-10T18:39:20.822Z",
+      "source_line": 6259,
+      "observable_payload_sha256": "1b0360c582b258130fbde73912fdbecef07458862a9d040ef090ef0360de8700"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_8cf50261ac21469d85e9cc741ea71c46",
+      "timestamp": "2026-10-10T18:42:40.008Z",
+      "source_line": 6268,
+      "observable_payload_sha256": "d9cfd16b2ffb0b52b7f1ea73d80c8040509418240162657d28d3c226860c2189"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_8cf50261ac21469d85e9cc741ea71c46",
+      "timestamp": "2026-10-10T18:42:45.452Z",
+      "source_line": 6271,
+      "observable_payload_sha256": "29d5ad1f3724ac4099ed5f8599d7f64b2d22589ef22ecd73991c08f904dbe553"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_277415ed8fe44bb39fb9e42ae95b0a74",
+      "timestamp": "2026-10-10T18:42:58.983Z",
+      "source_line": 6277,
+      "observable_payload_sha256": "4769cd2931165687260a6edef85816efa636d3db117f500b70bddff8aef7d071"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_277415ed8fe44bb39fb9e42ae95b0a74",
+      "timestamp": "2026-10-10T18:42:59.517Z",
+      "source_line": 6281,
+      "observable_payload_sha256": "f434a9d7f59afd55c0e4aa2dde159b3786e7d6123ef6610306266e29b85d9fb4"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_c6fd6f81ab6446b2ae045af9cf347bc9",
+      "timestamp": "2026-10-10T18:43:18.598Z",
+      "source_line": 6285,
+      "observable_payload_sha256": "34ca5b6baa1bc3fab0d9d5245739e7da0ce3b67237d2d9633da2e702e306ce30"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_c6fd6f81ab6446b2ae045af9cf347bc9",
+      "timestamp": "2026-10-10T18:43:19.179Z",
+      "source_line": 6289,
+      "observable_payload_sha256": "49b9ca482bc37beae673a8cf557e9ba4aa4d401f3c51518680a7528c27b2674a"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_d8dc2e3384c4470591ca428dfe015876",
+      "timestamp": "2026-10-10T18:43:37.652Z",
+      "source_line": 6293,
+      "observable_payload_sha256": "40177ef33977a956d95b08d43caf6f46977b628865969dc9acfe2edaf8d03754"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_d8dc2e3384c4470591ca428dfe015876",
+      "timestamp": "2026-10-10T18:43:38.615Z",
+      "source_line": 6297,
+      "observable_payload_sha256": "d53174eb466e3207e4046bd63f234a62d8ddeb26d24d3660a6a042b5663b82cb"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_141b564e01174d22a0ec1dcb807f4862",
+      "timestamp": "2026-10-10T18:43:52.941Z",
+      "source_line": 6301,
+      "observable_payload_sha256": "21b152846a456bc45a2ca99caf389514ee36e20d001693d687466e7f26ce9c45"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_141b564e01174d22a0ec1dcb807f4862",
+      "timestamp": "2026-10-10T18:43:53.378Z",
+      "source_line": 6304,
+      "observable_payload_sha256": "f07b12cdf20131da32a4d61b9e92939bd0696b8428773d296948330e5d473792"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_281efd5b2a0a4a56ae207b7bbe619a2d",
+      "timestamp": "2026-10-10T18:44:04.121Z",
+      "source_line": 6308,
+      "observable_payload_sha256": "b1bd42fe1c685b6e60196ba2fa2a41a934d6a85cb6db3483676c76a89bb06f0f"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_281efd5b2a0a4a56ae207b7bbe619a2d",
+      "timestamp": "2026-10-10T18:44:04.527Z",
+      "source_line": 6311,
+      "observable_payload_sha256": "0a8669f4a465360824528a6093c193ea9298eec57826aeec155e07f5540d3dc6"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ae65ce2c53e04058a51f3feb278611e9",
+      "timestamp": "2026-10-10T18:44:24.902Z",
+      "source_line": 6315,
+      "observable_payload_sha256": "99b047c388a230e9226dcee96b6868092769883b94154dd50ef1a616eff25988"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_ae65ce2c53e04058a51f3feb278611e9",
+      "timestamp": "2026-10-10T18:44:25.534Z",
+      "source_line": 6319,
+      "observable_payload_sha256": "ca16086bc8d9e52d7f23356914624aaf5dbba17c20e5a209a25318180e4a02cd"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_f995598a50244c12bdebd2a8c465b0d2",
+      "timestamp": "2026-10-10T18:44:43.301Z",
+      "source_line": 6325,
+      "observable_payload_sha256": "498a228cb21c08292527b92fc82e05c91ea06940e06384e4a1499c3870faf6e1"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_f995598a50244c12bdebd2a8c465b0d2",
+      "timestamp": "2026-10-10T18:44:43.697Z",
+      "source_line": 6328,
+      "observable_payload_sha256": "0fd409a0f55de5ffaa2299a365b6c602aad809615123d23a6fb9f017d19859b9"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_4e0e35b422cd4371b5633f710d2e9e12",
+      "timestamp": "2026-10-10T18:44:58.132Z",
+      "source_line": 6332,
+      "observable_payload_sha256": "ec10999bccd857446d90f92145546e7002db1f740449045276633d504981304d"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_4e0e35b422cd4371b5633f710d2e9e12",
+      "timestamp": "2026-10-10T18:44:58.718Z",
+      "source_line": 6336,
+      "observable_payload_sha256": "45bc0b84642b4678cd551e5b3a75c6cf95b64816022adce1580b71214a4a63f2"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_7a9d9ad9b1be46b3bfc28f1418b2d25a",
+      "timestamp": "2026-10-10T18:45:10.494Z",
+      "source_line": 6340,
+      "observable_payload_sha256": "31be85282da0c1a9011b39fc2e1a1d07a341537a445f16ec7fb404fbb286e759"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_7a9d9ad9b1be46b3bfc28f1418b2d25a",
+      "timestamp": "2026-10-10T18:45:11.030Z",
+      "source_line": 6343,
+      "observable_payload_sha256": "9e6d4fdd0f319b4d0b7967434588492f9f3aa06d6bc92d9a6e6a62b07a36512c"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_12d0ee51796b47559b258fd24ecf586b",
+      "timestamp": "2026-10-10T18:45:15.100Z",
+      "source_line": 6347,
+      "observable_payload_sha256": "5223caff6b13bb6794acee0574bce76053264396abb62132efa9c864091eacda"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_12d0ee51796b47559b258fd24ecf586b",
+      "timestamp": "2026-10-10T18:45:15.164Z",
+      "source_line": 6353,
+      "observable_payload_sha256": "f7842214d0f4ec361549aca955f10f70d9c95c91d581b50f683e61fab723a366"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_1ea82401db5d43dd9531ff862f08eb65",
+      "timestamp": "2026-10-10T18:47:11.630Z",
+      "source_line": 6357,
+      "observable_payload_sha256": "0da8b83c4f22225bcbfe7746d41c0d75822c7f5df9fb3c93a127c06228715485"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_1ea82401db5d43dd9531ff862f08eb65",
+      "timestamp": "2026-10-10T18:47:11.670Z",
+      "source_line": 6360,
+      "observable_payload_sha256": "5a154456a8c968956c451279cb1ee1263e0d9d96be26d84f06299426e722567d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_10eb74797cdc42e0ba31734eadc6ff07",
+      "timestamp": "2026-10-10T18:48:04.086Z",
+      "source_line": 6364,
+      "observable_payload_sha256": "9b3b2c268934f2b4572d6d027aa62c764477eb66f2c0c403b122acc1cc21569c"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_10eb74797cdc42e0ba31734eadc6ff07",
+      "timestamp": "2026-10-10T18:48:04.133Z",
+      "source_line": 6367,
+      "observable_payload_sha256": "5a154456a8c968956c451279cb1ee1263e0d9d96be26d84f06299426e722567d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_80a1e39f6d2b44f387d5bea496468d4d",
+      "timestamp": "2026-10-10T18:48:16.827Z",
+      "source_line": 6371,
+      "observable_payload_sha256": "5664ccadee6b0f657d3e304b2cd10f749266963e8900f80901ab8a36b9ded9e1"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_80a1e39f6d2b44f387d5bea496468d4d",
+      "timestamp": "2026-10-10T18:48:17.217Z",
+      "source_line": 6374,
+      "observable_payload_sha256": "4c605175aa6b37e5328326b1466b1bb5010bfdfb3b933f0e23a005ca5ab065c2"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_e0291a78ebfc4404b7082a9d84391f81",
+      "timestamp": "2026-10-10T18:49:11.604Z",
+      "source_line": 6378,
+      "observable_payload_sha256": "0db79e66769e47b4aac4e3a4b3bffcaebac54b4245282355a09bac7b33bdd3ee"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_e0291a78ebfc4404b7082a9d84391f81",
+      "timestamp": "2026-10-10T18:49:12.082Z",
+      "source_line": 6381,
+      "observable_payload_sha256": "4e93d6193033063abfdcf1643174ec07d232ea63e3ab5dcbe700b4dff33c9521"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ce4352e2d6c54a1b992c6d4897bf4d29",
+      "timestamp": "2026-10-10T18:49:47.111Z",
+      "source_line": 6385,
+      "observable_payload_sha256": "79c8fcf69d5db09589ff0106b84b5662275908cc6c85d02fdb8234989060f255"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_ce4352e2d6c54a1b992c6d4897bf4d29",
+      "timestamp": "2026-10-10T18:49:50.109Z",
+      "source_line": 6389,
+      "observable_payload_sha256": "3439cd95d815a33814146b9f028969918e12200e24aae403fb86b27aa6dc7603"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_471ae7e5c08d4f7ba4aa34d6791ebda6",
+      "timestamp": "2026-10-10T18:49:59.536Z",
+      "source_line": 6393,
+      "observable_payload_sha256": "d4acd1e58ae328a09cd70507574b39813626b4815d5e5931a9964e04f4efbe4b"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_471ae7e5c08d4f7ba4aa34d6791ebda6",
+      "timestamp": "2026-10-10T18:50:00.062Z",
+      "source_line": 6396,
+      "observable_payload_sha256": "1cd4af99a682b9e7e1c2670a0a9d45bc7b9303f9eaecd1a6168277bc43d23d77"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_6cb2482d3c1846efa877de56e1fe1987",
+      "timestamp": "2026-10-10T18:50:32.105Z",
+      "source_line": 6400,
+      "observable_payload_sha256": "3fa113800dcde2f2491e4e328c15e800387ceda2a7c6274f94f7c8bc0576e654"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_6cb2482d3c1846efa877de56e1fe1987",
+      "timestamp": "2026-10-10T18:50:34.774Z",
+      "source_line": 6404,
+      "observable_payload_sha256": "f053c48504b57a123130ddbdd020ccc5a8cdceb10f46ee6d800bef580ad25078"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ecb3465336fb4a7fabf8190257d9e4ab",
+      "timestamp": "2026-10-10T18:50:45.235Z",
+      "source_line": 6408,
+      "observable_payload_sha256": "ceef9304a6adc8ed847b49582c11a81e383582fef3ac6b3d921f85831ace518b"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_ecb3465336fb4a7fabf8190257d9e4ab",
+      "timestamp": "2026-10-10T18:51:00.438Z",
+      "source_line": 6410,
+      "observable_payload_sha256": "2bdf1cd826aa399462f3fa6ceab86b57e37dc0e642c59f3bea64dcde9db59d5d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_aadb213c350e43378a7eae94c5018233",
+      "timestamp": "2026-10-10T18:51:26.094Z",
+      "source_line": 6414,
+      "observable_payload_sha256": "e8f75fdfa34c7717fb1c995fbe20ec966219d938d2b4b37703240fdb3ea9f9f1"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_aadb213c350e43378a7eae94c5018233",
+      "timestamp": "2026-10-10T18:51:27.123Z",
+      "source_line": 6418,
+      "observable_payload_sha256": "ce170bf2a5488ab2904f6abaec9a35f33f92825047ea51c50ec03148840f277d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_116ed212ef3e43dca6b8d6663456af36",
+      "timestamp": "2026-10-10T18:51:42.696Z",
+      "source_line": 6425,
+      "observable_payload_sha256": "ca08144d81d868befa7600ffeb6cd81077aa7606cd5d0175ac0c01c2fbc59101"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_116ed212ef3e43dca6b8d6663456af36",
+      "timestamp": "2026-10-10T18:51:43.209Z",
+      "source_line": 6428,
+      "observable_payload_sha256": "a2405f366d36d10c69f77b2b102b5d03ab7cacecef080d867f93b14b05d8846d"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_fc7e0060319248f0bdcfa941324b008e",
+      "timestamp": "2026-10-10T18:51:56.388Z",
+      "source_line": 6432,
+      "observable_payload_sha256": "3ad553f087318cf99bee5f344ad99ca1f08c6709f1e14f5fdab8136d6cac5ae2"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_fc7e0060319248f0bdcfa941324b008e",
+      "timestamp": "2026-10-10T18:52:11.592Z",
+      "source_line": 6435,
+      "observable_payload_sha256": "e51ea139455dc6950b120c65e8d27dceac9d26040cabf7de94e84442ffa8a918"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_28db1be650da47d4b60a343881d9aa56",
+      "timestamp": "2026-10-10T18:52:22.209Z",
+      "source_line": 6439,
+      "observable_payload_sha256": "cb98019b4f19621ae606220d8f8de9f2e60efbb20f565669b3c58f8a2a1a0134"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_28db1be650da47d4b60a343881d9aa56",
+      "timestamp": "2026-10-10T18:52:32.406Z",
+      "source_line": 6441,
+      "observable_payload_sha256": "b58eec0a2e14363793ef3dda61c79f814ae6a32f4e2c419187eabcc34f3d07ce"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_048d2377341a4869b0384b47955e5631",
+      "timestamp": "2026-10-10T18:52:36.913Z",
+      "source_line": 6445,
+      "observable_payload_sha256": "94f2177901a4b7262a9a69314a164afa6034f43194ffac6f32331bf0747004c9"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_048d2377341a4869b0384b47955e5631",
+      "timestamp": "2026-10-10T18:52:37.384Z",
+      "source_line": 6448,
+      "observable_payload_sha256": "0acb39db4e33e99c1519c9c20f5437ccd3a1bdcbae4263c776513d02b95e52c5"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_d2e8b5eefb6c4941abefed76b85657d0",
+      "timestamp": "2026-10-10T18:52:45.197Z",
+      "source_line": 6453,
+      "observable_payload_sha256": "6f54df47f47ad972d7b1d1f571610d19ba8fa5bbc86c021307067855feef549b"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_d2e8b5eefb6c4941abefed76b85657d0",
+      "timestamp": "2026-10-10T18:52:45.723Z",
+      "source_line": 6456,
+      "observable_payload_sha256": "f2d2e19f65a426adb786d107aeedf258390492048e868d7db19ba27ecb8b4247"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_fcbd80c909c841f8bffd34824bd75948",
+      "timestamp": "2026-10-10T18:52:53.112Z",
+      "source_line": 6460,
+      "observable_payload_sha256": "a4cd9c2bf96179a3b2889119c99376a41e40bea9a12e5bfe38464fcdf67a67f0"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_fcbd80c909c841f8bffd34824bd75948",
+      "timestamp": "2026-10-10T18:52:53.522Z",
+      "source_line": 6463,
+      "observable_payload_sha256": "bca550e271785f81bf2a78ddaa05be14cdd4c0464d126f61bb3e68c1371a49d0"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_8aa9a21650e14415a253a7f020e3c683",
+      "timestamp": "2026-10-10T18:53:15.985Z",
+      "source_line": 6467,
+      "observable_payload_sha256": "aa7ab746a45d9b41f590b31f2ef57af6d63b3e5f3eeef343def159d5d17f9124"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_8aa9a21650e14415a253a7f020e3c683",
+      "timestamp": "2026-10-10T18:53:30.684Z",
+      "source_line": 6470,
+      "observable_payload_sha256": "8924a01cc00342c538ca015eacdf5d5ab84c27b793791064a070141322d464c3"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_200cf70054e542b992c4489602c8c8eb",
+      "timestamp": "2026-10-10T18:53:56.571Z",
+      "source_line": 6474,
+      "observable_payload_sha256": "ee03661880c66861124812dbd4081279eeeacdbebdb5214479b6ab44e4196656"
+    },
+    {
+      "type": "custom_tool_call_output",
+      "name": null,
+      "call_id": "call_200cf70054e542b992c4489602c8c8eb",
+      "timestamp": "2026-10-10T18:53:58.187Z",
+      "source_line": 6479,
+      "observable_payload_sha256": "78d9e669e5386b4957af42bf58a9103d14a6c8a5d1722fe79d704583a312d4d9"
+    },
+    {
+      "type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_6ddc63e3fec343709abff5957f9bfe5d",
+      "timestamp": "2026-10-10T18:54:30.761Z",
+      "source_line": 6483,
+      "observable_payload_sha256": "57b39044b7150c475af36b112d1dc3b29d0afd1f4385517d505d4227f068fb13"
+    }
+  ]
+}

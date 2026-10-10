@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "classification": "OFFLINE_ONLY",
+  "source_root": "E:\\Codex_project\\AMD_Sonofield\\v5",
+  "python": "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+  "started_at": "2026-10-10T18:33:52.345280+00:00",
+  "commands": [
+    {
+      "name": "prepcb_full",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\run_prepcb.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry2\\full"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "adc_c16",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\adc7606c16_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry2\\adc"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "c16_capture_chain",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\c16_capture_chain_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry2\\capture_c16"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "c16_actual_top",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\nextstage_top_gate.py",
+        "--maps",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry2\\full\\system\\gui\\case_1\\icarus\\motion_maps.hex",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry2\\top_c16"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "software_target",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\nextstage_software_gate.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry2\\software"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

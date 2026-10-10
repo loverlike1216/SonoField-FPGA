@@ -1,3 +1,9 @@
+# 2026-10-11 v5 hardware design candidate
+
+Four-source/63GPIO candidate,40newtests,5sheet101typeBOM,real2025.2packageaudit,
+full243digitalgate andclean243/12assetreproduction; nativeCAD/ERC/physicalHOLD.
+No versionupgrade/historybody/coretest/threshold change. CP-20261011-001.
+
 # 2026-10-10 v5 UART continuation
 
 Close UART driver enumeration blocker (COM3Code0), add lockedpyserial3.5,
