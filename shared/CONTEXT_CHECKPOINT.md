@@ -35,7 +35,6 @@ v5/hardware/pcb/reviews/20261011_s2/02_THREE_BOARD_ARCHITECTURE_REVIEW.md
 
 ## Current Plan / Next Actions
 
-- Publish normal Draft stacked on PR5 and verify remote
 - Obtain real decisions to P-20261011-001
 - Resolve protection/load/AVCC/AFE/IO gates before S2-C/native/BOMrelease
 
@@ -106,3 +105,7 @@ README/AGENTS->shared state->this checkpoint->10_EXECUTIVE_SUMMARY->P-20261011-0
 ## Provenance
 
 Actual approved instructions, baseline8c27b58 current contracts/RTL/workbook, fixed-source manifest, fresh243/fulloffline gates, review calculations and source facts; all current repository paths. HEAD resolves from containing checkpoint commit, not self-referential guessed hash. No old archive body/ChatGPT history inferred.
+
+## Publication update
+
+Draft PR #6 https://github.com/loverlike1216/SonoField-FPGA/pull/6 targets PR5; review content commit a6935a1fc7170a7b3ccb2ad649a4d6c1e82cfdb4 remote verified and workspace integrity CI SUCCESS. Main/base unchanged. Receipt: v5/evidence/pcb_s2_20261011/PUBLICATION_RECEIPT.json. Historical CP002 snapshot retained unchanged.

@@ -16,3 +16,5 @@ Trigger: actual user authorization “按文件执行，并批准上述工作树
 9. Secret/privacy scan then explicit reviewed-file stage, commit/push and DraftPR target#5. Actual commit/remote/PR/CI receipt recorded separately, never presumed before tool success. Main unchanged; no purchasing/boardwrites/ultrasound/merging.
 
 Commands are in calc scripts, original digital summary commands and session tool-payload hashes. Exact tool outputs and scope in FINAL_VERIFICATION.json, REVIEW_VERIFICATION.json, SOURCE_FETCH_MANIFEST.json, BOM_RECOUNT.json. Final publication receipt added after remote verification. Tool transcript remainsPARTIAL; no inaccessible old messages reconstructed.
+
+Publication observed: content commit a6935a1fc7170a7b3ccb2ad649a4d6c1e82cfdb4 pushed, Draft PR #6 created against PR5, remote SHA and canonical input bytes verified, workspace integrity CI SUCCESS. Main/base unchanged. Actual receipt in v5/evidence/pcb_s2_20261011/PUBLICATION_RECEIPT.json; subsequent receipt-commit head/CI require live verification.
