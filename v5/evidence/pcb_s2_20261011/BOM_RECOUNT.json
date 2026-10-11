@@ -1,0 +1,41 @@
+{
+  "workbook_sha256": "a55b38dab4ce6004ac542e2c5fc0a09a365616ebbe9b3ec2bdf603f7a1726b1c",
+  "item_types": 101,
+  "installed_by_sheet": {
+    "Upper": 551,
+    "Lower": 551,
+    "Central": 83,
+    "External": 20
+  },
+  "total_installed": 1205,
+  "spare_column_order": "BOM_INPUTS quantities: Upper,Lower,Central,Spare,External",
+  "formula_checks": 1010,
+  "formula_errors": [],
+  "exact_ref_duplicates": {},
+  "functional_duplicates": "B054 vs H020 unresolved; no actual nets, artificial unique names do not disprove overlap",
+  "passive_counts": {
+    "R": 554,
+    "L": 4,
+    "C": 302
+  },
+  "passive_inventory_rows": 860,
+  "new_total_with_only_supervisor_change": 1203,
+  "approved_new_passive_additions": 0,
+  "approved_passive_deletions": 0,
+  "conditional_change_groups": [
+    "B-022",
+    "B-030",
+    "B-062",
+    "H-020"
+  ],
+  "conditional_change_inventory_quantities": {
+    "L": 4,
+    "R": 134
+  },
+  "functional_duplicate_suspect_inventory": {
+    "B-054": 180,
+    "B-061": 136
+  },
+  "full_RCL_status": "S2_C_BLOCKED; no final procurement counts",
+  "new_total_not_final": true
+}

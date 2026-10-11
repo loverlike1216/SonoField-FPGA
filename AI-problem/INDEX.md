@@ -7,3 +7,6 @@
 | P-20261010-001 | [BRAM async reset controls](problem/P-20261010-001__bram-async-reset-release.md) | OPEN / independent architecture decision needed |9cc8f62962b6ed42c4f282cd239303fe01faefb1fd670d9a0fbaef61e7171d3d |
 
 Both original Problem files remain unchanged, at the same active relative paths; the complete old problem/decision tree is frozen history. The new ADC Decision is from the actual current user, not an invented ChatGPT response. New BRAM Problem is a Codex evidence-backed consultation package, with no fabricated Decision. No earlier board Decision becomes current AX7020 authority. Canonical body policy: LF UTF-8 text.split("---\n\n",1)[1], excluding front matter and its following blank separator. Verify ID/body hash/version before executing any future decision.
+
+
+| P-20261011-001 | [PCB safety/electrical](problem/P-20261011-001__pcb-safety-and-electrical-gates.md) / [actual user direction](decision/P-20261011-001__pcb-supervisor-user-direction.md) | TPSx2 direction approved; new safety/engineering decisions OPEN | ff10749ee46342eae17ecc5eff632b9131055199be6eb2cfb0583c16d79ec77f |

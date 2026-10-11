@@ -66,6 +66,14 @@ v5/evidence/uart_resume/20261010_01/** -text -filter -ident -whitespace
 
 v5/evidence/hardware_design_20261011/** -text -filter -ident -whitespace
 AI-interaction-memory/codex/instructions/v5_hardware_design_20261011.md -text -whitespace
+v5/evidence/pcb_s2_20261011/** -text -filter -ident -whitespace
+AI-interaction-memory/codex/instructions/v5_pcb_task_start_20261011.md -text -whitespace
+AI-interaction-memory/codex/instructions/v5_pcb_architecture_parameter_review_20261011.md -text -whitespace
 v5/hardware/design_20261011/*.svg text eol=lf
 v5/hardware/design_20261011/*.xdc text eol=lf
 v5/hardware/constraints/ax7020_design_review_only.xdc text eol=lf
+
+# S3 received instruction and auditable generated tables preserve exact hashes.
+AI-interaction-memory/codex/instructions/v5_pcb_s3_engineering_20261011.md -text -whitespace
+v5/evidence/pcb_s3_20261011/** -text -filter -ident whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+v5/hardware/pcb/reviews/20261011_s3/** -text -filter -ident whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

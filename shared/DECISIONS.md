@@ -109,3 +109,14 @@ remain unqualified. Manufacturing/procurement/unknown-image operations remain HO
 main promotion is not acceptable with unresolved P0 engineering gates. No duplicate
 request for routine publication permission. Source contracts, primary sources and
 independent audit paths: v5/docs/hardware and v5/evidence/hardware_design_20261011.
+
+
+## ADR-043 — Actual user PCB-S2 / TPS3851 combined supervisor direction
+
+2026-10-11, v5, source actual user reply and canonical S2 instruction. Worktree/branch/base authorized as recorded above. B008/B009 physical4->TPS3851H33EDRBR2 total, not2perboard. Native/electrical/safety acceptance remains HOLD. Existing window requirement is not withdrawn; new gaps P-20261011-001 OPEN, body SHA256 ff10749ee46342eae17ecc5eff632b9131055199be6eb2cfb0583c16d79ec77f. No external ChatGPT decision. Extra protection/heartbeat architecture is a proposal, not approved by this record.
+
+## ADR-044 — User-approved PCB-S3 device-level candidate and power selection
+
+Date2026-10-11;Versionv5;source actual user reply quoted in P-20261011-001 decision addendum;instruction SHA256 b3a33a2b0541e8626ea952f2c6c8288ae0a78b8133f024c1cd05c42036475e44;Problem body hash verified ff10749ee46342eae17ecc5eff632b9131055199be6eb2cfb0583c16d79ec77f. This supersedes ADR042 fixedarray60Wpath/40Walternative and20%minimum/30%target only. Central5V3A USB-C remains fixed;upper/lower independent12V,Codex selects12V3A36W GST36E12 within reviewedseries. TPS3851H33EDRBR exactlyone/array,totaltwo;TPS3430 extraonlywindowfunction,noTLV803. Defaultoff latch/thermal/currentlimit and fullpin/netcandidate allowed. TC4427AEOA industrialtemperature suffix is componentselection within theapprovedTC4427Afamily;no driverarchitecturechange. TXsingleended128/8RX/AX7020Rev3/C16/geometry/timebase/protocol/35dB remain. Candidateinputlimits are29.36W/array and12.35Wcentral,not measuredload or allfaultenergy guarantees.
+
+Native schematic NOT_CREATED/ERC NOT_RUN;strictnetlist andpin-labelledSVG fallback delivered. Independentreview remains pending. This is not aChatGPTDecision/versionupgrade/manufacturing/procurement/boardwrite/mainapproval. Evidence: v5/evidence/pcb_s3_20261011 and currentreview11;contentcommit resolved by Git history and publicationreceipt.

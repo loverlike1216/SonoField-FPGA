@@ -1,0 +1,787 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="21980" viewBox="0 0 1950 21980">
+<style>text{font:12px monospace;fill:#172a3a}.title{font:bold 22px sans-serif}.net{fill:#176a47}.nc{fill:#b64d18}</style>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="22" y="35" class="title">v5 PCB-S3 CENTRAL / IO_ADC — PIN / NET REVIEW CANDIDATE</text>
+<text x="22" y="65">Equal board-qualified labels are electrically common. NC = unconnected. Not native CAD / ERC NOT RUN.</text>
+<rect x="20" y="90" width="620" height="1074" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="108" style="font-weight:bold">CENTRAL_UADC  AD7606C-16BSTZ-RL</text>
+<text x="30" y="125">adc / LQFP64</text>
+<line x1="30" y1="138" x2="75" y2="138" stroke="#607587"/><text x="35" y="136">1</text><text x="85" y="142" class="net">CENTRAL:AVCC5</text>
+<line x1="30" y1="154" x2="75" y2="154" stroke="#607587"/><text x="35" y="152">2</text><text x="85" y="158" class="net">CENTRAL:GND</text>
+<line x1="30" y1="170" x2="75" y2="170" stroke="#607587"/><text x="35" y="168">3</text><text x="85" y="174" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="186" x2="75" y2="186" stroke="#607587"/><text x="35" y="184">4</text><text x="85" y="190" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="202" x2="75" y2="202" stroke="#607587"/><text x="35" y="200">5</text><text x="85" y="206" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="218" x2="75" y2="218" stroke="#607587"/><text x="35" y="216">6</text><text x="85" y="222" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="234" x2="75" y2="234" stroke="#607587"/><text x="35" y="232">7</text><text x="85" y="238" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="250" x2="75" y2="250" stroke="#607587"/><text x="35" y="248">8</text><text x="85" y="254" class="net">CENTRAL:GND</text>
+<line x1="30" y1="266" x2="75" y2="266" stroke="#607587"/><text x="35" y="264">9</text><text x="85" y="270" class="net">CENTRAL:ADC_CONVST</text>
+<line x1="30" y1="282" x2="75" y2="282" stroke="#607587"/><text x="35" y="280">10</text><text x="85" y="286" class="net">CENTRAL:GND</text>
+<line x1="30" y1="298" x2="75" y2="298" stroke="#607587"/><text x="35" y="296">11</text><text x="85" y="302" class="net">CENTRAL:ADC_RESET</text>
+<line x1="30" y1="314" x2="75" y2="314" stroke="#607587"/><text x="35" y="312">12</text><text x="85" y="318" class="net">CENTRAL:ADC_SCLK</text>
+<line x1="30" y1="330" x2="75" y2="330" stroke="#607587"/><text x="35" y="328">13</text><text x="85" y="334" class="net">CENTRAL:ADC_CS_N</text>
+<line x1="30" y1="346" x2="75" y2="346" stroke="#607587"/><text x="35" y="344">14</text><text x="85" y="350" class="net">CENTRAL:ADC_BUSY</text>
+<line x1="30" y1="362" x2="75" y2="362" stroke="#607587"/><text x="35" y="360">15</text><text x="85" y="366" class="nc">NC:CENTRAL_UADC:15</text>
+<line x1="30" y1="378" x2="75" y2="378" stroke="#607587"/><text x="35" y="376">23</text><text x="85" y="382" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="394" x2="75" y2="394" stroke="#607587"/><text x="35" y="392">24</text><text x="85" y="398" class="net">CENTRAL:ADC_DOUT[0]</text>
+<line x1="30" y1="410" x2="75" y2="410" stroke="#607587"/><text x="35" y="408">25</text><text x="85" y="414" class="net">CENTRAL:ADC_DOUT[1]</text>
+<line x1="30" y1="426" x2="75" y2="426" stroke="#607587"/><text x="35" y="424">26</text><text x="85" y="430" class="net">CENTRAL:GND</text>
+<line x1="30" y1="442" x2="75" y2="442" stroke="#607587"/><text x="35" y="440">27</text><text x="85" y="446" class="net">CENTRAL:ADC_DOUT[2]</text>
+<line x1="30" y1="458" x2="75" y2="458" stroke="#607587"/><text x="35" y="456">28</text><text x="85" y="462" class="net">CENTRAL:ADC_DOUT[3]</text>
+<line x1="30" y1="474" x2="75" y2="474" stroke="#607587"/><text x="35" y="472">29</text><text x="85" y="478" class="net">CENTRAL:ADC_SDI</text>
+<line x1="30" y1="490" x2="75" y2="490" stroke="#607587"/><text x="35" y="488">34</text><text x="85" y="494" class="net">CENTRAL:GND</text>
+<line x1="30" y1="506" x2="75" y2="506" stroke="#607587"/><text x="35" y="504">35</text><text x="85" y="510" class="net">CENTRAL:GND</text>
+<line x1="30" y1="522" x2="75" y2="522" stroke="#607587"/><text x="35" y="520">36</text><text x="85" y="526" class="net">CENTRAL:REGCAP_A</text>
+<line x1="30" y1="538" x2="75" y2="538" stroke="#607587"/><text x="35" y="536">37</text><text x="85" y="542" class="net">CENTRAL:AVCC5</text>
+<line x1="30" y1="554" x2="75" y2="554" stroke="#607587"/><text x="35" y="552">38</text><text x="85" y="558" class="net">CENTRAL:AVCC5</text>
+<line x1="30" y1="570" x2="75" y2="570" stroke="#607587"/><text x="35" y="568">39</text><text x="85" y="574" class="net">CENTRAL:REGCAP_D</text>
+<line x1="30" y1="586" x2="75" y2="586" stroke="#607587"/><text x="35" y="584">40</text><text x="85" y="590" class="net">CENTRAL:GND</text>
+<line x1="30" y1="602" x2="75" y2="602" stroke="#607587"/><text x="35" y="600">41</text><text x="85" y="606" class="net">CENTRAL:GND</text>
+<line x1="30" y1="618" x2="75" y2="618" stroke="#607587"/><text x="35" y="616">42</text><text x="85" y="622" class="net">CENTRAL:REF2V5</text>
+<line x1="30" y1="634" x2="75" y2="634" stroke="#607587"/><text x="35" y="632">43</text><text x="85" y="638" class="net">CENTRAL:GND</text>
+<line x1="30" y1="650" x2="75" y2="650" stroke="#607587"/><text x="35" y="648">44</text><text x="85" y="654" class="net">CENTRAL:REFCAP</text>
+<line x1="30" y1="666" x2="75" y2="666" stroke="#607587"/><text x="35" y="664">45</text><text x="85" y="670" class="net">CENTRAL:REFCAP</text>
+<line x1="30" y1="682" x2="75" y2="682" stroke="#607587"/><text x="35" y="680">46</text><text x="85" y="686" class="net">CENTRAL:GND</text>
+<line x1="30" y1="698" x2="75" y2="698" stroke="#607587"/><text x="35" y="696">47</text><text x="85" y="702" class="net">CENTRAL:GND</text>
+<line x1="30" y1="714" x2="75" y2="714" stroke="#607587"/><text x="35" y="712">48</text><text x="85" y="718" class="net">CENTRAL:AVCC5</text>
+<line x1="30" y1="730" x2="75" y2="730" stroke="#607587"/><text x="35" y="728">16</text><text x="85" y="734" class="net">CENTRAL:GND</text>
+<line x1="30" y1="746" x2="75" y2="746" stroke="#607587"/><text x="35" y="744">17</text><text x="85" y="750" class="net">CENTRAL:GND</text>
+<line x1="30" y1="762" x2="75" y2="762" stroke="#607587"/><text x="35" y="760">18</text><text x="85" y="766" class="net">CENTRAL:GND</text>
+<line x1="30" y1="778" x2="75" y2="778" stroke="#607587"/><text x="35" y="776">30</text><text x="85" y="782" class="net">CENTRAL:GND</text>
+<line x1="30" y1="794" x2="75" y2="794" stroke="#607587"/><text x="35" y="792">31</text><text x="85" y="798" class="net">CENTRAL:GND</text>
+<line x1="30" y1="810" x2="75" y2="810" stroke="#607587"/><text x="35" y="808">32</text><text x="85" y="814" class="net">CENTRAL:GND</text>
+<line x1="30" y1="826" x2="75" y2="826" stroke="#607587"/><text x="35" y="824">33</text><text x="85" y="830" class="net">CENTRAL:GND</text>
+<line x1="30" y1="842" x2="75" y2="842" stroke="#607587"/><text x="35" y="840">19</text><text x="85" y="846" class="nc">NC:CENTRAL_UADC:19</text>
+<line x1="30" y1="858" x2="75" y2="858" stroke="#607587"/><text x="35" y="856">20</text><text x="85" y="862" class="nc">NC:CENTRAL_UADC:20</text>
+<line x1="30" y1="874" x2="75" y2="874" stroke="#607587"/><text x="35" y="872">21</text><text x="85" y="878" class="nc">NC:CENTRAL_UADC:21</text>
+<line x1="30" y1="890" x2="75" y2="890" stroke="#607587"/><text x="35" y="888">22</text><text x="85" y="894" class="nc">NC:CENTRAL_UADC:22</text>
+<line x1="30" y1="906" x2="75" y2="906" stroke="#607587"/><text x="35" y="904">49</text><text x="85" y="910" class="net">CENTRAL:ADCIN0</text>
+<line x1="30" y1="922" x2="75" y2="922" stroke="#607587"/><text x="35" y="920">50</text><text x="85" y="926" class="net">CENTRAL:GND</text>
+<line x1="30" y1="938" x2="75" y2="938" stroke="#607587"/><text x="35" y="936">51</text><text x="85" y="942" class="net">CENTRAL:ADCIN1</text>
+<line x1="30" y1="954" x2="75" y2="954" stroke="#607587"/><text x="35" y="952">52</text><text x="85" y="958" class="net">CENTRAL:GND</text>
+<line x1="30" y1="970" x2="75" y2="970" stroke="#607587"/><text x="35" y="968">53</text><text x="85" y="974" class="net">CENTRAL:ADCIN2</text>
+<line x1="30" y1="986" x2="75" y2="986" stroke="#607587"/><text x="35" y="984">54</text><text x="85" y="990" class="net">CENTRAL:GND</text>
+<line x1="30" y1="1002" x2="75" y2="1002" stroke="#607587"/><text x="35" y="1000">55</text><text x="85" y="1006" class="net">CENTRAL:ADCIN3</text>
+<line x1="30" y1="1018" x2="75" y2="1018" stroke="#607587"/><text x="35" y="1016">56</text><text x="85" y="1022" class="net">CENTRAL:GND</text>
+<line x1="30" y1="1034" x2="75" y2="1034" stroke="#607587"/><text x="35" y="1032">57</text><text x="85" y="1038" class="net">CENTRAL:ADCIN4</text>
+<line x1="30" y1="1050" x2="75" y2="1050" stroke="#607587"/><text x="35" y="1048">58</text><text x="85" y="1054" class="net">CENTRAL:GND</text>
+<line x1="30" y1="1066" x2="75" y2="1066" stroke="#607587"/><text x="35" y="1064">59</text><text x="85" y="1070" class="net">CENTRAL:ADCIN5</text>
+<line x1="30" y1="1082" x2="75" y2="1082" stroke="#607587"/><text x="35" y="1080">60</text><text x="85" y="1086" class="net">CENTRAL:GND</text>
+<line x1="30" y1="1098" x2="75" y2="1098" stroke="#607587"/><text x="35" y="1096">61</text><text x="85" y="1102" class="net">CENTRAL:ADCIN6</text>
+<line x1="30" y1="1114" x2="75" y2="1114" stroke="#607587"/><text x="35" y="1112">62</text><text x="85" y="1118" class="net">CENTRAL:GND</text>
+<line x1="30" y1="1130" x2="75" y2="1130" stroke="#607587"/><text x="35" y="1128">63</text><text x="85" y="1134" class="net">CENTRAL:ADCIN7</text>
+<line x1="30" y1="1146" x2="75" y2="1146" stroke="#607587"/><text x="35" y="1144">64</text><text x="85" y="1150" class="net">CENTRAL:GND</text>
+<rect x="670" y="90" width="620" height="178" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="108" style="font-weight:bold">CENTRAL_UREF  REF5025AIDR</text>
+<text x="680" y="125">adc_reference / SOIC8</text>
+<line x1="680" y1="138" x2="725" y2="138" stroke="#607587"/><text x="685" y="136">1</text><text x="735" y="142" class="nc">NC:CENTRAL_UREF:1</text>
+<line x1="680" y1="154" x2="725" y2="154" stroke="#607587"/><text x="685" y="152">2</text><text x="735" y="158" class="net">CENTRAL:AVCC5</text>
+<line x1="680" y1="170" x2="725" y2="170" stroke="#607587"/><text x="685" y="168">3</text><text x="735" y="174" class="nc">NC:CENTRAL_UREF:3</text>
+<line x1="680" y1="186" x2="725" y2="186" stroke="#607587"/><text x="685" y="184">4</text><text x="735" y="190" class="net">CENTRAL:GND</text>
+<line x1="680" y1="202" x2="725" y2="202" stroke="#607587"/><text x="685" y="200">5</text><text x="735" y="206" class="net">CENTRAL:REF_NR</text>
+<line x1="680" y1="218" x2="725" y2="218" stroke="#607587"/><text x="685" y="216">6</text><text x="735" y="222" class="net">CENTRAL:REF2V5</text>
+<line x1="680" y1="234" x2="725" y2="234" stroke="#607587"/><text x="685" y="232">7</text><text x="735" y="238" class="nc">NC:CENTRAL_UREF:7</text>
+<line x1="680" y1="250" x2="725" y2="250" stroke="#607587"/><text x="685" y="248">8</text><text x="735" y="254" class="nc">NC:CENTRAL_UREF:8</text>
+<rect x="1320" y="90" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="108" style="font-weight:bold">CENTRAL_RAI0  499</text>
+<text x="1330" y="125">adc_input_filter / 0603;0.1W;50V</text>
+<line x1="1330" y1="138" x2="1375" y2="138" stroke="#607587"/><text x="1335" y="136">1</text><text x="1385" y="142" class="net">CENTRAL:UP_RX0_OUT</text>
+<line x1="1330" y1="154" x2="1375" y2="154" stroke="#607587"/><text x="1335" y="152">2</text><text x="1385" y="158" class="net">CENTRAL:ADCIN0</text>
+<rect x="20" y="1184" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1202" style="font-weight:bold">CENTRAL_CAI0  1nF</text>
+<text x="30" y="1219">adc_input_filter / 0603;C0G;50V</text>
+<line x1="30" y1="1232" x2="75" y2="1232" stroke="#607587"/><text x="35" y="1230">1</text><text x="85" y="1236" class="net">CENTRAL:ADCIN0</text>
+<line x1="30" y1="1248" x2="75" y2="1248" stroke="#607587"/><text x="35" y="1246">2</text><text x="85" y="1252" class="net">CENTRAL:GND</text>
+<rect x="670" y="1184" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1202" style="font-weight:bold">CENTRAL_RAI1  499</text>
+<text x="680" y="1219">adc_input_filter / 0603;0.1W;50V</text>
+<line x1="680" y1="1232" x2="725" y2="1232" stroke="#607587"/><text x="685" y="1230">1</text><text x="735" y="1236" class="net">CENTRAL:UP_RX1_OUT</text>
+<line x1="680" y1="1248" x2="725" y2="1248" stroke="#607587"/><text x="685" y="1246">2</text><text x="735" y="1252" class="net">CENTRAL:ADCIN1</text>
+<rect x="1320" y="1184" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1202" style="font-weight:bold">CENTRAL_CAI1  1nF</text>
+<text x="1330" y="1219">adc_input_filter / 0603;C0G;50V</text>
+<line x1="1330" y1="1232" x2="1375" y2="1232" stroke="#607587"/><text x="1335" y="1230">1</text><text x="1385" y="1236" class="net">CENTRAL:ADCIN1</text>
+<line x1="1330" y1="1248" x2="1375" y2="1248" stroke="#607587"/><text x="1335" y="1246">2</text><text x="1385" y="1252" class="net">CENTRAL:GND</text>
+<rect x="20" y="2278" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2296" style="font-weight:bold">CENTRAL_RAI2  499</text>
+<text x="30" y="2313">adc_input_filter / 0603;0.1W;50V</text>
+<line x1="30" y1="2326" x2="75" y2="2326" stroke="#607587"/><text x="35" y="2324">1</text><text x="85" y="2330" class="net">CENTRAL:UP_RX2_OUT</text>
+<line x1="30" y1="2342" x2="75" y2="2342" stroke="#607587"/><text x="35" y="2340">2</text><text x="85" y="2346" class="net">CENTRAL:ADCIN2</text>
+<rect x="670" y="2278" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2296" style="font-weight:bold">CENTRAL_CAI2  1nF</text>
+<text x="680" y="2313">adc_input_filter / 0603;C0G;50V</text>
+<line x1="680" y1="2326" x2="725" y2="2326" stroke="#607587"/><text x="685" y="2324">1</text><text x="735" y="2330" class="net">CENTRAL:ADCIN2</text>
+<line x1="680" y1="2342" x2="725" y2="2342" stroke="#607587"/><text x="685" y="2340">2</text><text x="735" y="2346" class="net">CENTRAL:GND</text>
+<rect x="1320" y="2278" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2296" style="font-weight:bold">CENTRAL_RAI3  499</text>
+<text x="1330" y="2313">adc_input_filter / 0603;0.1W;50V</text>
+<line x1="1330" y1="2326" x2="1375" y2="2326" stroke="#607587"/><text x="1335" y="2324">1</text><text x="1385" y="2330" class="net">CENTRAL:UP_RX3_OUT</text>
+<line x1="1330" y1="2342" x2="1375" y2="2342" stroke="#607587"/><text x="1335" y="2340">2</text><text x="1385" y="2346" class="net">CENTRAL:ADCIN3</text>
+<rect x="20" y="3372" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3390" style="font-weight:bold">CENTRAL_CAI3  1nF</text>
+<text x="30" y="3407">adc_input_filter / 0603;C0G;50V</text>
+<line x1="30" y1="3420" x2="75" y2="3420" stroke="#607587"/><text x="35" y="3418">1</text><text x="85" y="3424" class="net">CENTRAL:ADCIN3</text>
+<line x1="30" y1="3436" x2="75" y2="3436" stroke="#607587"/><text x="35" y="3434">2</text><text x="85" y="3440" class="net">CENTRAL:GND</text>
+<rect x="670" y="3372" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3390" style="font-weight:bold">CENTRAL_RAI4  499</text>
+<text x="680" y="3407">adc_input_filter / 0603;0.1W;50V</text>
+<line x1="680" y1="3420" x2="725" y2="3420" stroke="#607587"/><text x="685" y="3418">1</text><text x="735" y="3424" class="net">CENTRAL:DN_RX0_OUT</text>
+<line x1="680" y1="3436" x2="725" y2="3436" stroke="#607587"/><text x="685" y="3434">2</text><text x="735" y="3440" class="net">CENTRAL:ADCIN4</text>
+<rect x="1320" y="3372" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3390" style="font-weight:bold">CENTRAL_CAI4  1nF</text>
+<text x="1330" y="3407">adc_input_filter / 0603;C0G;50V</text>
+<line x1="1330" y1="3420" x2="1375" y2="3420" stroke="#607587"/><text x="1335" y="3418">1</text><text x="1385" y="3424" class="net">CENTRAL:ADCIN4</text>
+<line x1="1330" y1="3436" x2="1375" y2="3436" stroke="#607587"/><text x="1335" y="3434">2</text><text x="1385" y="3440" class="net">CENTRAL:GND</text>
+<rect x="20" y="4466" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4484" style="font-weight:bold">CENTRAL_RAI5  499</text>
+<text x="30" y="4501">adc_input_filter / 0603;0.1W;50V</text>
+<line x1="30" y1="4514" x2="75" y2="4514" stroke="#607587"/><text x="35" y="4512">1</text><text x="85" y="4518" class="net">CENTRAL:DN_RX1_OUT</text>
+<line x1="30" y1="4530" x2="75" y2="4530" stroke="#607587"/><text x="35" y="4528">2</text><text x="85" y="4534" class="net">CENTRAL:ADCIN5</text>
+<rect x="670" y="4466" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4484" style="font-weight:bold">CENTRAL_CAI5  1nF</text>
+<text x="680" y="4501">adc_input_filter / 0603;C0G;50V</text>
+<line x1="680" y1="4514" x2="725" y2="4514" stroke="#607587"/><text x="685" y="4512">1</text><text x="735" y="4518" class="net">CENTRAL:ADCIN5</text>
+<line x1="680" y1="4530" x2="725" y2="4530" stroke="#607587"/><text x="685" y="4528">2</text><text x="735" y="4534" class="net">CENTRAL:GND</text>
+<rect x="1320" y="4466" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4484" style="font-weight:bold">CENTRAL_RAI6  499</text>
+<text x="1330" y="4501">adc_input_filter / 0603;0.1W;50V</text>
+<line x1="1330" y1="4514" x2="1375" y2="4514" stroke="#607587"/><text x="1335" y="4512">1</text><text x="1385" y="4518" class="net">CENTRAL:DN_RX2_OUT</text>
+<line x1="1330" y1="4530" x2="1375" y2="4530" stroke="#607587"/><text x="1335" y="4528">2</text><text x="1385" y="4534" class="net">CENTRAL:ADCIN6</text>
+<rect x="20" y="5560" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="5578" style="font-weight:bold">CENTRAL_CAI6  1nF</text>
+<text x="30" y="5595">adc_input_filter / 0603;C0G;50V</text>
+<line x1="30" y1="5608" x2="75" y2="5608" stroke="#607587"/><text x="35" y="5606">1</text><text x="85" y="5612" class="net">CENTRAL:ADCIN6</text>
+<line x1="30" y1="5624" x2="75" y2="5624" stroke="#607587"/><text x="35" y="5622">2</text><text x="85" y="5628" class="net">CENTRAL:GND</text>
+<rect x="670" y="5560" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="5578" style="font-weight:bold">CENTRAL_RAI7  499</text>
+<text x="680" y="5595">adc_input_filter / 0603;0.1W;50V</text>
+<line x1="680" y1="5608" x2="725" y2="5608" stroke="#607587"/><text x="685" y="5606">1</text><text x="735" y="5612" class="net">CENTRAL:DN_RX3_OUT</text>
+<line x1="680" y1="5624" x2="725" y2="5624" stroke="#607587"/><text x="685" y="5622">2</text><text x="735" y="5628" class="net">CENTRAL:ADCIN7</text>
+<rect x="1320" y="5560" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="5578" style="font-weight:bold">CENTRAL_CAI7  1nF</text>
+<text x="1330" y="5595">adc_input_filter / 0603;C0G;50V</text>
+<line x1="1330" y1="5608" x2="1375" y2="5608" stroke="#607587"/><text x="1335" y="5606">1</text><text x="1385" y="5612" class="net">CENTRAL:ADCIN7</text>
+<line x1="1330" y1="5624" x2="1375" y2="5624" stroke="#607587"/><text x="1335" y="5622">2</text><text x="1385" y="5628" class="net">CENTRAL:GND</text>
+<rect x="20" y="6654" width="620" height="690" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="6672" style="font-weight:bold">CENTRAL_AX_J10  AX7020_2x20_INTERFACE</text>
+<text x="30" y="6689">ax7020_interface / 40pin_MAPPING_HOLD</text>
+<line x1="30" y1="6702" x2="75" y2="6702" stroke="#607587"/><text x="35" y="6700">1</text><text x="85" y="6706" class="net">CENTRAL:GND</text>
+<line x1="30" y1="6718" x2="75" y2="6718" stroke="#607587"/><text x="35" y="6716">2</text><text x="85" y="6722" class="nc">NC:CENTRAL_AX_J10:2</text>
+<line x1="30" y1="6734" x2="75" y2="6734" stroke="#607587"/><text x="35" y="6732">3</text><text x="85" y="6738" class="net">CENTRAL:TX_DATA_UP[0]</text>
+<line x1="30" y1="6750" x2="75" y2="6750" stroke="#607587"/><text x="35" y="6748">4</text><text x="85" y="6754" class="net">CENTRAL:TX_DATA_UP[1]</text>
+<line x1="30" y1="6766" x2="75" y2="6766" stroke="#607587"/><text x="35" y="6764">5</text><text x="85" y="6770" class="net">CENTRAL:TX_DATA_UP[2]</text>
+<line x1="30" y1="6782" x2="75" y2="6782" stroke="#607587"/><text x="35" y="6780">6</text><text x="85" y="6786" class="net">CENTRAL:TX_DATA_UP[3]</text>
+<line x1="30" y1="6798" x2="75" y2="6798" stroke="#607587"/><text x="35" y="6796">7</text><text x="85" y="6802" class="net">CENTRAL:TX_DATA_UP[4]</text>
+<line x1="30" y1="6814" x2="75" y2="6814" stroke="#607587"/><text x="35" y="6812">8</text><text x="85" y="6818" class="net">CENTRAL:TX_DATA_UP[5]</text>
+<line x1="30" y1="6830" x2="75" y2="6830" stroke="#607587"/><text x="35" y="6828">9</text><text x="85" y="6834" class="net">CENTRAL:TX_DATA_UP[6]</text>
+<line x1="30" y1="6846" x2="75" y2="6846" stroke="#607587"/><text x="35" y="6844">10</text><text x="85" y="6850" class="net">CENTRAL:TX_DATA_UP[7]</text>
+<line x1="30" y1="6862" x2="75" y2="6862" stroke="#607587"/><text x="35" y="6860">11</text><text x="85" y="6866" class="net">CENTRAL:TX_DATA_UP[8]</text>
+<line x1="30" y1="6878" x2="75" y2="6878" stroke="#607587"/><text x="35" y="6876">12</text><text x="85" y="6882" class="net">CENTRAL:TX_DATA_UP[9]</text>
+<line x1="30" y1="6894" x2="75" y2="6894" stroke="#607587"/><text x="35" y="6892">13</text><text x="85" y="6898" class="net">CENTRAL:TX_DATA_UP[10]</text>
+<line x1="30" y1="6910" x2="75" y2="6910" stroke="#607587"/><text x="35" y="6908">14</text><text x="85" y="6914" class="net">CENTRAL:TX_DATA_UP[11]</text>
+<line x1="30" y1="6926" x2="75" y2="6926" stroke="#607587"/><text x="35" y="6924">15</text><text x="85" y="6930" class="net">CENTRAL:TX_DATA_UP[12]</text>
+<line x1="30" y1="6942" x2="75" y2="6942" stroke="#607587"/><text x="35" y="6940">16</text><text x="85" y="6946" class="net">CENTRAL:TX_DATA_UP[13]</text>
+<line x1="30" y1="6958" x2="75" y2="6958" stroke="#607587"/><text x="35" y="6956">17</text><text x="85" y="6962" class="net">CENTRAL:TX_DATA_UP[14]</text>
+<line x1="30" y1="6974" x2="75" y2="6974" stroke="#607587"/><text x="35" y="6972">18</text><text x="85" y="6978" class="net">CENTRAL:TX_DATA_UP[15]</text>
+<line x1="30" y1="6990" x2="75" y2="6990" stroke="#607587"/><text x="35" y="6988">19</text><text x="85" y="6994" class="net">CENTRAL:UP_SRCLK</text>
+<line x1="30" y1="7006" x2="75" y2="7006" stroke="#607587"/><text x="35" y="7004">20</text><text x="85" y="7010" class="net">CENTRAL:UP_RCLK</text>
+<line x1="30" y1="7022" x2="75" y2="7022" stroke="#607587"/><text x="35" y="7020">21</text><text x="85" y="7026" class="net">CENTRAL:UP_OE_N</text>
+<line x1="30" y1="7038" x2="75" y2="7038" stroke="#607587"/><text x="35" y="7036">22</text><text x="85" y="7042" class="net">CENTRAL:UP_RESET_N</text>
+<line x1="30" y1="7054" x2="75" y2="7054" stroke="#607587"/><text x="35" y="7052">23</text><text x="85" y="7058" class="net">CENTRAL:UP_SYNC</text>
+<line x1="30" y1="7070" x2="75" y2="7070" stroke="#607587"/><text x="35" y="7068">24</text><text x="85" y="7074" class="net">CENTRAL:UP_RX_BLANK</text>
+<line x1="30" y1="7086" x2="75" y2="7086" stroke="#607587"/><text x="35" y="7084">25</text><text x="85" y="7090" class="net">CENTRAL:UP_HEARTBEAT</text>
+<line x1="30" y1="7102" x2="75" y2="7102" stroke="#607587"/><text x="35" y="7100">26</text><text x="85" y="7106" class="net">CENTRAL:UP_PGOOD</text>
+<line x1="30" y1="7118" x2="75" y2="7118" stroke="#607587"/><text x="35" y="7116">27</text><text x="85" y="7122" class="net">CENTRAL:UP_FAULT_N</text>
+<line x1="30" y1="7134" x2="75" y2="7134" stroke="#607587"/><text x="35" y="7132">28</text><text x="85" y="7138" class="net">CENTRAL:ADC_DOUT[0]</text>
+<line x1="30" y1="7150" x2="75" y2="7150" stroke="#607587"/><text x="35" y="7148">29</text><text x="85" y="7154" class="net">CENTRAL:ADC_DOUT[1]</text>
+<line x1="30" y1="7166" x2="75" y2="7166" stroke="#607587"/><text x="35" y="7164">30</text><text x="85" y="7170" class="net">CENTRAL:ADC_DOUT[2]</text>
+<line x1="30" y1="7182" x2="75" y2="7182" stroke="#607587"/><text x="35" y="7180">31</text><text x="85" y="7186" class="net">CENTRAL:ADC_DOUT[3]</text>
+<line x1="30" y1="7198" x2="75" y2="7198" stroke="#607587"/><text x="35" y="7196">32</text><text x="85" y="7202" class="net">CENTRAL:ADC_BUSY</text>
+<line x1="30" y1="7214" x2="75" y2="7214" stroke="#607587"/><text x="35" y="7212">33</text><text x="85" y="7218" class="net">CENTRAL:ADC_SCLK</text>
+<line x1="30" y1="7230" x2="75" y2="7230" stroke="#607587"/><text x="35" y="7228">34</text><text x="85" y="7234" class="net">CENTRAL:ADC_CONVST</text>
+<line x1="30" y1="7246" x2="75" y2="7246" stroke="#607587"/><text x="35" y="7244">35</text><text x="85" y="7250" class="net">CENTRAL:ADC_CS_N</text>
+<line x1="30" y1="7262" x2="75" y2="7262" stroke="#607587"/><text x="35" y="7260">36</text><text x="85" y="7266" class="net">CENTRAL:ADC_SDI</text>
+<line x1="30" y1="7278" x2="75" y2="7278" stroke="#607587"/><text x="35" y="7276">37</text><text x="85" y="7282" class="net">CENTRAL:GND</text>
+<line x1="30" y1="7294" x2="75" y2="7294" stroke="#607587"/><text x="35" y="7292">38</text><text x="85" y="7298" class="net">CENTRAL:GND</text>
+<line x1="30" y1="7310" x2="75" y2="7310" stroke="#607587"/><text x="35" y="7308">39</text><text x="85" y="7314" class="nc">NC:CENTRAL_AX_J10:39</text>
+<line x1="30" y1="7326" x2="75" y2="7326" stroke="#607587"/><text x="35" y="7324">40</text><text x="85" y="7330" class="nc">NC:CENTRAL_AX_J10:40</text>
+<rect x="670" y="6654" width="620" height="690" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="6672" style="font-weight:bold">CENTRAL_AX_J11  AX7020_2x20_INTERFACE</text>
+<text x="680" y="6689">ax7020_interface / 40pin_MAPPING_HOLD</text>
+<line x1="680" y1="6702" x2="725" y2="6702" stroke="#607587"/><text x="685" y="6700">1</text><text x="735" y="6706" class="net">CENTRAL:GND</text>
+<line x1="680" y1="6718" x2="725" y2="6718" stroke="#607587"/><text x="685" y="6716">2</text><text x="735" y="6722" class="nc">NC:CENTRAL_AX_J11:2</text>
+<line x1="680" y1="6734" x2="725" y2="6734" stroke="#607587"/><text x="685" y="6732">3</text><text x="735" y="6738" class="net">CENTRAL:TX_DATA_DN[0]</text>
+<line x1="680" y1="6750" x2="725" y2="6750" stroke="#607587"/><text x="685" y="6748">4</text><text x="735" y="6754" class="net">CENTRAL:TX_DATA_DN[1]</text>
+<line x1="680" y1="6766" x2="725" y2="6766" stroke="#607587"/><text x="685" y="6764">5</text><text x="735" y="6770" class="net">CENTRAL:TX_DATA_DN[2]</text>
+<line x1="680" y1="6782" x2="725" y2="6782" stroke="#607587"/><text x="685" y="6780">6</text><text x="735" y="6786" class="net">CENTRAL:TX_DATA_DN[3]</text>
+<line x1="680" y1="6798" x2="725" y2="6798" stroke="#607587"/><text x="685" y="6796">7</text><text x="735" y="6802" class="net">CENTRAL:TX_DATA_DN[4]</text>
+<line x1="680" y1="6814" x2="725" y2="6814" stroke="#607587"/><text x="685" y="6812">8</text><text x="735" y="6818" class="net">CENTRAL:TX_DATA_DN[5]</text>
+<line x1="680" y1="6830" x2="725" y2="6830" stroke="#607587"/><text x="685" y="6828">9</text><text x="735" y="6834" class="net">CENTRAL:TX_DATA_DN[6]</text>
+<line x1="680" y1="6846" x2="725" y2="6846" stroke="#607587"/><text x="685" y="6844">10</text><text x="735" y="6850" class="net">CENTRAL:TX_DATA_DN[7]</text>
+<line x1="680" y1="6862" x2="725" y2="6862" stroke="#607587"/><text x="685" y="6860">11</text><text x="735" y="6866" class="net">CENTRAL:TX_DATA_DN[8]</text>
+<line x1="680" y1="6878" x2="725" y2="6878" stroke="#607587"/><text x="685" y="6876">12</text><text x="735" y="6882" class="net">CENTRAL:TX_DATA_DN[9]</text>
+<line x1="680" y1="6894" x2="725" y2="6894" stroke="#607587"/><text x="685" y="6892">13</text><text x="735" y="6898" class="net">CENTRAL:TX_DATA_DN[10]</text>
+<line x1="680" y1="6910" x2="725" y2="6910" stroke="#607587"/><text x="685" y="6908">14</text><text x="735" y="6914" class="net">CENTRAL:TX_DATA_DN[11]</text>
+<line x1="680" y1="6926" x2="725" y2="6926" stroke="#607587"/><text x="685" y="6924">15</text><text x="735" y="6930" class="net">CENTRAL:TX_DATA_DN[12]</text>
+<line x1="680" y1="6942" x2="725" y2="6942" stroke="#607587"/><text x="685" y="6940">16</text><text x="735" y="6946" class="net">CENTRAL:TX_DATA_DN[13]</text>
+<line x1="680" y1="6958" x2="725" y2="6958" stroke="#607587"/><text x="685" y="6956">17</text><text x="735" y="6962" class="net">CENTRAL:TX_DATA_DN[14]</text>
+<line x1="680" y1="6974" x2="725" y2="6974" stroke="#607587"/><text x="685" y="6972">18</text><text x="735" y="6978" class="net">CENTRAL:TX_DATA_DN[15]</text>
+<line x1="680" y1="6990" x2="725" y2="6990" stroke="#607587"/><text x="685" y="6988">19</text><text x="735" y="6994" class="net">CENTRAL:DN_SRCLK</text>
+<line x1="680" y1="7006" x2="725" y2="7006" stroke="#607587"/><text x="685" y="7004">20</text><text x="735" y="7010" class="net">CENTRAL:DN_RCLK</text>
+<line x1="680" y1="7022" x2="725" y2="7022" stroke="#607587"/><text x="685" y="7020">21</text><text x="735" y="7026" class="net">CENTRAL:DN_OE_N</text>
+<line x1="680" y1="7038" x2="725" y2="7038" stroke="#607587"/><text x="685" y="7036">22</text><text x="735" y="7042" class="net">CENTRAL:DN_RESET_N</text>
+<line x1="680" y1="7054" x2="725" y2="7054" stroke="#607587"/><text x="685" y="7052">23</text><text x="735" y="7058" class="net">CENTRAL:DN_SYNC</text>
+<line x1="680" y1="7070" x2="725" y2="7070" stroke="#607587"/><text x="685" y="7068">24</text><text x="735" y="7074" class="net">CENTRAL:DN_RX_BLANK</text>
+<line x1="680" y1="7086" x2="725" y2="7086" stroke="#607587"/><text x="685" y="7084">25</text><text x="735" y="7090" class="net">CENTRAL:DN_HEARTBEAT</text>
+<line x1="680" y1="7102" x2="725" y2="7102" stroke="#607587"/><text x="685" y="7100">26</text><text x="735" y="7106" class="net">CENTRAL:DN_PGOOD</text>
+<line x1="680" y1="7118" x2="725" y2="7118" stroke="#607587"/><text x="685" y="7116">27</text><text x="735" y="7122" class="net">CENTRAL:DN_FAULT_N</text>
+<line x1="680" y1="7134" x2="725" y2="7134" stroke="#607587"/><text x="685" y="7132">28</text><text x="735" y="7138" class="net">CENTRAL:ADC_RESET</text>
+<line x1="680" y1="7150" x2="725" y2="7150" stroke="#607587"/><text x="685" y="7148">29</text><text x="735" y="7154" class="net">CENTRAL:I2C_SCL</text>
+<line x1="680" y1="7166" x2="725" y2="7166" stroke="#607587"/><text x="685" y="7164">30</text><text x="735" y="7170" class="net">CENTRAL:I2C_SDA</text>
+<line x1="680" y1="7182" x2="725" y2="7182" stroke="#607587"/><text x="685" y="7180">31</text><text x="735" y="7186" class="net">CENTRAL:ESTOP_STATUS</text>
+<line x1="680" y1="7198" x2="725" y2="7198" stroke="#607587"/><text x="685" y="7196">32</text><text x="735" y="7202" class="nc">NC:CENTRAL_AX_J11:32</text>
+<line x1="680" y1="7214" x2="725" y2="7214" stroke="#607587"/><text x="685" y="7212">33</text><text x="735" y="7218" class="nc">NC:CENTRAL_AX_J11:33</text>
+<line x1="680" y1="7230" x2="725" y2="7230" stroke="#607587"/><text x="685" y="7228">34</text><text x="735" y="7234" class="nc">NC:CENTRAL_AX_J11:34</text>
+<line x1="680" y1="7246" x2="725" y2="7246" stroke="#607587"/><text x="685" y="7244">35</text><text x="735" y="7250" class="nc">NC:CENTRAL_AX_J11:35</text>
+<line x1="680" y1="7262" x2="725" y2="7262" stroke="#607587"/><text x="685" y="7260">36</text><text x="735" y="7266" class="nc">NC:CENTRAL_AX_J11:36</text>
+<line x1="680" y1="7278" x2="725" y2="7278" stroke="#607587"/><text x="685" y="7276">37</text><text x="735" y="7282" class="net">CENTRAL:GND</text>
+<line x1="680" y1="7294" x2="725" y2="7294" stroke="#607587"/><text x="685" y="7292">38</text><text x="735" y="7298" class="net">CENTRAL:GND</text>
+<line x1="680" y1="7310" x2="725" y2="7310" stroke="#607587"/><text x="685" y="7308">39</text><text x="735" y="7314" class="nc">NC:CENTRAL_AX_J11:39</text>
+<line x1="680" y1="7326" x2="725" y2="7326" stroke="#607587"/><text x="685" y="7324">40</text><text x="735" y="7330" class="nc">NC:CENTRAL_AX_J11:40</text>
+<rect x="1320" y="6654" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="6672" style="font-weight:bold">CENTRAL_UX0  SN74AXC8T245PWR</text>
+<text x="1330" y="6689">ax_domain_interface / PW24</text>
+<line x1="1330" y1="6702" x2="1375" y2="6702" stroke="#607587"/><text x="1335" y="6700">1</text><text x="1385" y="6706" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="6718" x2="1375" y2="6718" stroke="#607587"/><text x="1335" y="6716">2</text><text x="1385" y="6722" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="6734" x2="1375" y2="6734" stroke="#607587"/><text x="1335" y="6732">11</text><text x="1385" y="6738" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="6750" x2="1375" y2="6750" stroke="#607587"/><text x="1335" y="6748">12</text><text x="1385" y="6754" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="6766" x2="1375" y2="6766" stroke="#607587"/><text x="1335" y="6764">13</text><text x="1385" y="6770" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="6782" x2="1375" y2="6782" stroke="#607587"/><text x="1335" y="6780">22</text><text x="1385" y="6786" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="1330" y1="6798" x2="1375" y2="6798" stroke="#607587"/><text x="1335" y="6796">23</text><text x="1385" y="6802" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="6814" x2="1375" y2="6814" stroke="#607587"/><text x="1335" y="6812">24</text><text x="1385" y="6818" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="6830" x2="1375" y2="6830" stroke="#607587"/><text x="1335" y="6828">3</text><text x="1385" y="6834" class="net">CENTRAL:TX_DATA_UP[0]</text>
+<line x1="1330" y1="6846" x2="1375" y2="6846" stroke="#607587"/><text x="1335" y="6844">21</text><text x="1385" y="6850" class="net">CENTRAL:IO_TX_DATA_UP[0]</text>
+<line x1="1330" y1="6862" x2="1375" y2="6862" stroke="#607587"/><text x="1335" y="6860">4</text><text x="1385" y="6866" class="net">CENTRAL:TX_DATA_UP[1]</text>
+<line x1="1330" y1="6878" x2="1375" y2="6878" stroke="#607587"/><text x="1335" y="6876">20</text><text x="1385" y="6882" class="net">CENTRAL:IO_TX_DATA_UP[1]</text>
+<line x1="1330" y1="6894" x2="1375" y2="6894" stroke="#607587"/><text x="1335" y="6892">5</text><text x="1385" y="6898" class="net">CENTRAL:TX_DATA_UP[2]</text>
+<line x1="1330" y1="6910" x2="1375" y2="6910" stroke="#607587"/><text x="1335" y="6908">19</text><text x="1385" y="6914" class="net">CENTRAL:IO_TX_DATA_UP[2]</text>
+<line x1="1330" y1="6926" x2="1375" y2="6926" stroke="#607587"/><text x="1335" y="6924">6</text><text x="1385" y="6930" class="net">CENTRAL:TX_DATA_UP[3]</text>
+<line x1="1330" y1="6942" x2="1375" y2="6942" stroke="#607587"/><text x="1335" y="6940">18</text><text x="1385" y="6946" class="net">CENTRAL:IO_TX_DATA_UP[3]</text>
+<line x1="1330" y1="6958" x2="1375" y2="6958" stroke="#607587"/><text x="1335" y="6956">7</text><text x="1385" y="6962" class="net">CENTRAL:TX_DATA_UP[4]</text>
+<line x1="1330" y1="6974" x2="1375" y2="6974" stroke="#607587"/><text x="1335" y="6972">17</text><text x="1385" y="6978" class="net">CENTRAL:IO_TX_DATA_UP[4]</text>
+<line x1="1330" y1="6990" x2="1375" y2="6990" stroke="#607587"/><text x="1335" y="6988">8</text><text x="1385" y="6994" class="net">CENTRAL:TX_DATA_UP[5]</text>
+<line x1="1330" y1="7006" x2="1375" y2="7006" stroke="#607587"/><text x="1335" y="7004">16</text><text x="1385" y="7010" class="net">CENTRAL:IO_TX_DATA_UP[5]</text>
+<line x1="1330" y1="7022" x2="1375" y2="7022" stroke="#607587"/><text x="1335" y="7020">9</text><text x="1385" y="7026" class="net">CENTRAL:TX_DATA_UP[6]</text>
+<line x1="1330" y1="7038" x2="1375" y2="7038" stroke="#607587"/><text x="1335" y="7036">15</text><text x="1385" y="7042" class="net">CENTRAL:IO_TX_DATA_UP[6]</text>
+<line x1="1330" y1="7054" x2="1375" y2="7054" stroke="#607587"/><text x="1335" y="7052">10</text><text x="1385" y="7058" class="net">CENTRAL:TX_DATA_UP[7]</text>
+<line x1="1330" y1="7070" x2="1375" y2="7070" stroke="#607587"/><text x="1335" y="7068">14</text><text x="1385" y="7074" class="net">CENTRAL:IO_TX_DATA_UP[7]</text>
+<rect x="20" y="7748" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="7766" style="font-weight:bold">CENTRAL_UX1  SN74AXC8T245PWR</text>
+<text x="30" y="7783">ax_domain_interface / PW24</text>
+<line x1="30" y1="7796" x2="75" y2="7796" stroke="#607587"/><text x="35" y="7794">1</text><text x="85" y="7800" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="7812" x2="75" y2="7812" stroke="#607587"/><text x="35" y="7810">2</text><text x="85" y="7816" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="7828" x2="75" y2="7828" stroke="#607587"/><text x="35" y="7826">11</text><text x="85" y="7832" class="net">CENTRAL:GND</text>
+<line x1="30" y1="7844" x2="75" y2="7844" stroke="#607587"/><text x="35" y="7842">12</text><text x="85" y="7848" class="net">CENTRAL:GND</text>
+<line x1="30" y1="7860" x2="75" y2="7860" stroke="#607587"/><text x="35" y="7858">13</text><text x="85" y="7864" class="net">CENTRAL:GND</text>
+<line x1="30" y1="7876" x2="75" y2="7876" stroke="#607587"/><text x="35" y="7874">22</text><text x="85" y="7880" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="30" y1="7892" x2="75" y2="7892" stroke="#607587"/><text x="35" y="7890">23</text><text x="85" y="7896" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="7908" x2="75" y2="7908" stroke="#607587"/><text x="35" y="7906">24</text><text x="85" y="7912" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="7924" x2="75" y2="7924" stroke="#607587"/><text x="35" y="7922">3</text><text x="85" y="7928" class="net">CENTRAL:TX_DATA_UP[8]</text>
+<line x1="30" y1="7940" x2="75" y2="7940" stroke="#607587"/><text x="35" y="7938">21</text><text x="85" y="7944" class="net">CENTRAL:IO_TX_DATA_UP[8]</text>
+<line x1="30" y1="7956" x2="75" y2="7956" stroke="#607587"/><text x="35" y="7954">4</text><text x="85" y="7960" class="net">CENTRAL:TX_DATA_UP[9]</text>
+<line x1="30" y1="7972" x2="75" y2="7972" stroke="#607587"/><text x="35" y="7970">20</text><text x="85" y="7976" class="net">CENTRAL:IO_TX_DATA_UP[9]</text>
+<line x1="30" y1="7988" x2="75" y2="7988" stroke="#607587"/><text x="35" y="7986">5</text><text x="85" y="7992" class="net">CENTRAL:TX_DATA_UP[10]</text>
+<line x1="30" y1="8004" x2="75" y2="8004" stroke="#607587"/><text x="35" y="8002">19</text><text x="85" y="8008" class="net">CENTRAL:IO_TX_DATA_UP[10]</text>
+<line x1="30" y1="8020" x2="75" y2="8020" stroke="#607587"/><text x="35" y="8018">6</text><text x="85" y="8024" class="net">CENTRAL:TX_DATA_UP[11]</text>
+<line x1="30" y1="8036" x2="75" y2="8036" stroke="#607587"/><text x="35" y="8034">18</text><text x="85" y="8040" class="net">CENTRAL:IO_TX_DATA_UP[11]</text>
+<line x1="30" y1="8052" x2="75" y2="8052" stroke="#607587"/><text x="35" y="8050">7</text><text x="85" y="8056" class="net">CENTRAL:TX_DATA_UP[12]</text>
+<line x1="30" y1="8068" x2="75" y2="8068" stroke="#607587"/><text x="35" y="8066">17</text><text x="85" y="8072" class="net">CENTRAL:IO_TX_DATA_UP[12]</text>
+<line x1="30" y1="8084" x2="75" y2="8084" stroke="#607587"/><text x="35" y="8082">8</text><text x="85" y="8088" class="net">CENTRAL:TX_DATA_UP[13]</text>
+<line x1="30" y1="8100" x2="75" y2="8100" stroke="#607587"/><text x="35" y="8098">16</text><text x="85" y="8104" class="net">CENTRAL:IO_TX_DATA_UP[13]</text>
+<line x1="30" y1="8116" x2="75" y2="8116" stroke="#607587"/><text x="35" y="8114">9</text><text x="85" y="8120" class="net">CENTRAL:TX_DATA_UP[14]</text>
+<line x1="30" y1="8132" x2="75" y2="8132" stroke="#607587"/><text x="35" y="8130">15</text><text x="85" y="8136" class="net">CENTRAL:IO_TX_DATA_UP[14]</text>
+<line x1="30" y1="8148" x2="75" y2="8148" stroke="#607587"/><text x="35" y="8146">10</text><text x="85" y="8152" class="net">CENTRAL:TX_DATA_UP[15]</text>
+<line x1="30" y1="8164" x2="75" y2="8164" stroke="#607587"/><text x="35" y="8162">14</text><text x="85" y="8168" class="net">CENTRAL:IO_TX_DATA_UP[15]</text>
+<rect x="670" y="7748" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="7766" style="font-weight:bold">CENTRAL_UX2  SN74AXC8T245PWR</text>
+<text x="680" y="7783">ax_domain_interface / PW24</text>
+<line x1="680" y1="7796" x2="725" y2="7796" stroke="#607587"/><text x="685" y="7794">1</text><text x="735" y="7800" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="7812" x2="725" y2="7812" stroke="#607587"/><text x="685" y="7810">2</text><text x="735" y="7816" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="7828" x2="725" y2="7828" stroke="#607587"/><text x="685" y="7826">11</text><text x="735" y="7832" class="net">CENTRAL:GND</text>
+<line x1="680" y1="7844" x2="725" y2="7844" stroke="#607587"/><text x="685" y="7842">12</text><text x="735" y="7848" class="net">CENTRAL:GND</text>
+<line x1="680" y1="7860" x2="725" y2="7860" stroke="#607587"/><text x="685" y="7858">13</text><text x="735" y="7864" class="net">CENTRAL:GND</text>
+<line x1="680" y1="7876" x2="725" y2="7876" stroke="#607587"/><text x="685" y="7874">22</text><text x="735" y="7880" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="680" y1="7892" x2="725" y2="7892" stroke="#607587"/><text x="685" y="7890">23</text><text x="735" y="7896" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="7908" x2="725" y2="7908" stroke="#607587"/><text x="685" y="7906">24</text><text x="735" y="7912" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="7924" x2="725" y2="7924" stroke="#607587"/><text x="685" y="7922">3</text><text x="735" y="7928" class="net">CENTRAL:UP_SRCLK</text>
+<line x1="680" y1="7940" x2="725" y2="7940" stroke="#607587"/><text x="685" y="7938">21</text><text x="735" y="7944" class="net">CENTRAL:IO_UP_SRCLK</text>
+<line x1="680" y1="7956" x2="725" y2="7956" stroke="#607587"/><text x="685" y="7954">4</text><text x="735" y="7960" class="net">CENTRAL:UP_RCLK</text>
+<line x1="680" y1="7972" x2="725" y2="7972" stroke="#607587"/><text x="685" y="7970">20</text><text x="735" y="7976" class="net">CENTRAL:IO_UP_RCLK</text>
+<line x1="680" y1="7988" x2="725" y2="7988" stroke="#607587"/><text x="685" y="7986">5</text><text x="735" y="7992" class="net">CENTRAL:UP_OE_N</text>
+<line x1="680" y1="8004" x2="725" y2="8004" stroke="#607587"/><text x="685" y="8002">19</text><text x="735" y="8008" class="net">CENTRAL:IO_UP_OE_N</text>
+<line x1="680" y1="8020" x2="725" y2="8020" stroke="#607587"/><text x="685" y="8018">6</text><text x="735" y="8024" class="net">CENTRAL:UP_RESET_N</text>
+<line x1="680" y1="8036" x2="725" y2="8036" stroke="#607587"/><text x="685" y="8034">18</text><text x="735" y="8040" class="net">CENTRAL:IO_UP_RESET_N</text>
+<line x1="680" y1="8052" x2="725" y2="8052" stroke="#607587"/><text x="685" y="8050">7</text><text x="735" y="8056" class="net">CENTRAL:UP_SYNC</text>
+<line x1="680" y1="8068" x2="725" y2="8068" stroke="#607587"/><text x="685" y="8066">17</text><text x="735" y="8072" class="net">CENTRAL:IO_UP_SYNC</text>
+<line x1="680" y1="8084" x2="725" y2="8084" stroke="#607587"/><text x="685" y="8082">8</text><text x="735" y="8088" class="net">CENTRAL:UP_RX_BLANK</text>
+<line x1="680" y1="8100" x2="725" y2="8100" stroke="#607587"/><text x="685" y="8098">16</text><text x="735" y="8104" class="net">CENTRAL:IO_UP_RX_BLANK</text>
+<line x1="680" y1="8116" x2="725" y2="8116" stroke="#607587"/><text x="685" y="8114">9</text><text x="735" y="8120" class="net">CENTRAL:UP_HEARTBEAT</text>
+<line x1="680" y1="8132" x2="725" y2="8132" stroke="#607587"/><text x="685" y="8130">15</text><text x="735" y="8136" class="net">CENTRAL:IO_UP_HEARTBEAT</text>
+<line x1="680" y1="8148" x2="725" y2="8148" stroke="#607587"/><text x="685" y="8146">10</text><text x="735" y="8152" class="net">CENTRAL:ADC_SCLK</text>
+<line x1="680" y1="8164" x2="725" y2="8164" stroke="#607587"/><text x="685" y="8162">14</text><text x="735" y="8168" class="net">CENTRAL:IO_ADC_SCLK</text>
+<rect x="1320" y="7748" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="7766" style="font-weight:bold">CENTRAL_UX3  SN74AXC8T245PWR</text>
+<text x="1330" y="7783">ax_domain_interface / PW24</text>
+<line x1="1330" y1="7796" x2="1375" y2="7796" stroke="#607587"/><text x="1335" y="7794">1</text><text x="1385" y="7800" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="7812" x2="1375" y2="7812" stroke="#607587"/><text x="1335" y="7810">2</text><text x="1385" y="7816" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="7828" x2="1375" y2="7828" stroke="#607587"/><text x="1335" y="7826">11</text><text x="1385" y="7832" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="7844" x2="1375" y2="7844" stroke="#607587"/><text x="1335" y="7842">12</text><text x="1385" y="7848" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="7860" x2="1375" y2="7860" stroke="#607587"/><text x="1335" y="7858">13</text><text x="1385" y="7864" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="7876" x2="1375" y2="7876" stroke="#607587"/><text x="1335" y="7874">22</text><text x="1385" y="7880" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="1330" y1="7892" x2="1375" y2="7892" stroke="#607587"/><text x="1335" y="7890">23</text><text x="1385" y="7896" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="7908" x2="1375" y2="7908" stroke="#607587"/><text x="1335" y="7906">24</text><text x="1385" y="7912" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="7924" x2="1375" y2="7924" stroke="#607587"/><text x="1335" y="7922">3</text><text x="1385" y="7928" class="net">CENTRAL:ADC_CONVST</text>
+<line x1="1330" y1="7940" x2="1375" y2="7940" stroke="#607587"/><text x="1335" y="7938">21</text><text x="1385" y="7944" class="net">CENTRAL:IO_ADC_CONVST</text>
+<line x1="1330" y1="7956" x2="1375" y2="7956" stroke="#607587"/><text x="1335" y="7954">4</text><text x="1385" y="7960" class="net">CENTRAL:ADC_CS_N</text>
+<line x1="1330" y1="7972" x2="1375" y2="7972" stroke="#607587"/><text x="1335" y="7970">20</text><text x="1385" y="7976" class="net">CENTRAL:IO_ADC_CS_N</text>
+<line x1="1330" y1="7988" x2="1375" y2="7988" stroke="#607587"/><text x="1335" y="7986">5</text><text x="1385" y="7992" class="net">CENTRAL:ADC_SDI</text>
+<line x1="1330" y1="8004" x2="1375" y2="8004" stroke="#607587"/><text x="1335" y="8002">19</text><text x="1385" y="8008" class="net">CENTRAL:IO_ADC_SDI</text>
+<line x1="1330" y1="8020" x2="1375" y2="8020" stroke="#607587"/><text x="1335" y="8018">6</text><text x="1385" y="8024" class="net">CENTRAL:TX_DATA_DN[0]</text>
+<line x1="1330" y1="8036" x2="1375" y2="8036" stroke="#607587"/><text x="1335" y="8034">18</text><text x="1385" y="8040" class="net">CENTRAL:IO_TX_DATA_DN[0]</text>
+<line x1="1330" y1="8052" x2="1375" y2="8052" stroke="#607587"/><text x="1335" y="8050">7</text><text x="1385" y="8056" class="net">CENTRAL:TX_DATA_DN[1]</text>
+<line x1="1330" y1="8068" x2="1375" y2="8068" stroke="#607587"/><text x="1335" y="8066">17</text><text x="1385" y="8072" class="net">CENTRAL:IO_TX_DATA_DN[1]</text>
+<line x1="1330" y1="8084" x2="1375" y2="8084" stroke="#607587"/><text x="1335" y="8082">8</text><text x="1385" y="8088" class="net">CENTRAL:TX_DATA_DN[2]</text>
+<line x1="1330" y1="8100" x2="1375" y2="8100" stroke="#607587"/><text x="1335" y="8098">16</text><text x="1385" y="8104" class="net">CENTRAL:IO_TX_DATA_DN[2]</text>
+<line x1="1330" y1="8116" x2="1375" y2="8116" stroke="#607587"/><text x="1335" y="8114">9</text><text x="1385" y="8120" class="net">CENTRAL:TX_DATA_DN[3]</text>
+<line x1="1330" y1="8132" x2="1375" y2="8132" stroke="#607587"/><text x="1335" y="8130">15</text><text x="1385" y="8136" class="net">CENTRAL:IO_TX_DATA_DN[3]</text>
+<line x1="1330" y1="8148" x2="1375" y2="8148" stroke="#607587"/><text x="1335" y="8146">10</text><text x="1385" y="8152" class="net">CENTRAL:TX_DATA_DN[4]</text>
+<line x1="1330" y1="8164" x2="1375" y2="8164" stroke="#607587"/><text x="1335" y="8162">14</text><text x="1385" y="8168" class="net">CENTRAL:IO_TX_DATA_DN[4]</text>
+<rect x="20" y="8842" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="8860" style="font-weight:bold">CENTRAL_UX4  SN74AXC8T245PWR</text>
+<text x="30" y="8877">ax_domain_interface / PW24</text>
+<line x1="30" y1="8890" x2="75" y2="8890" stroke="#607587"/><text x="35" y="8888">1</text><text x="85" y="8894" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="8906" x2="75" y2="8906" stroke="#607587"/><text x="35" y="8904">2</text><text x="85" y="8910" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="8922" x2="75" y2="8922" stroke="#607587"/><text x="35" y="8920">11</text><text x="85" y="8926" class="net">CENTRAL:GND</text>
+<line x1="30" y1="8938" x2="75" y2="8938" stroke="#607587"/><text x="35" y="8936">12</text><text x="85" y="8942" class="net">CENTRAL:GND</text>
+<line x1="30" y1="8954" x2="75" y2="8954" stroke="#607587"/><text x="35" y="8952">13</text><text x="85" y="8958" class="net">CENTRAL:GND</text>
+<line x1="30" y1="8970" x2="75" y2="8970" stroke="#607587"/><text x="35" y="8968">22</text><text x="85" y="8974" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="30" y1="8986" x2="75" y2="8986" stroke="#607587"/><text x="35" y="8984">23</text><text x="85" y="8990" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="9002" x2="75" y2="9002" stroke="#607587"/><text x="35" y="9000">24</text><text x="85" y="9006" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="9018" x2="75" y2="9018" stroke="#607587"/><text x="35" y="9016">3</text><text x="85" y="9022" class="net">CENTRAL:TX_DATA_DN[5]</text>
+<line x1="30" y1="9034" x2="75" y2="9034" stroke="#607587"/><text x="35" y="9032">21</text><text x="85" y="9038" class="net">CENTRAL:IO_TX_DATA_DN[5]</text>
+<line x1="30" y1="9050" x2="75" y2="9050" stroke="#607587"/><text x="35" y="9048">4</text><text x="85" y="9054" class="net">CENTRAL:TX_DATA_DN[6]</text>
+<line x1="30" y1="9066" x2="75" y2="9066" stroke="#607587"/><text x="35" y="9064">20</text><text x="85" y="9070" class="net">CENTRAL:IO_TX_DATA_DN[6]</text>
+<line x1="30" y1="9082" x2="75" y2="9082" stroke="#607587"/><text x="35" y="9080">5</text><text x="85" y="9086" class="net">CENTRAL:TX_DATA_DN[7]</text>
+<line x1="30" y1="9098" x2="75" y2="9098" stroke="#607587"/><text x="35" y="9096">19</text><text x="85" y="9102" class="net">CENTRAL:IO_TX_DATA_DN[7]</text>
+<line x1="30" y1="9114" x2="75" y2="9114" stroke="#607587"/><text x="35" y="9112">6</text><text x="85" y="9118" class="net">CENTRAL:TX_DATA_DN[8]</text>
+<line x1="30" y1="9130" x2="75" y2="9130" stroke="#607587"/><text x="35" y="9128">18</text><text x="85" y="9134" class="net">CENTRAL:IO_TX_DATA_DN[8]</text>
+<line x1="30" y1="9146" x2="75" y2="9146" stroke="#607587"/><text x="35" y="9144">7</text><text x="85" y="9150" class="net">CENTRAL:TX_DATA_DN[9]</text>
+<line x1="30" y1="9162" x2="75" y2="9162" stroke="#607587"/><text x="35" y="9160">17</text><text x="85" y="9166" class="net">CENTRAL:IO_TX_DATA_DN[9]</text>
+<line x1="30" y1="9178" x2="75" y2="9178" stroke="#607587"/><text x="35" y="9176">8</text><text x="85" y="9182" class="net">CENTRAL:TX_DATA_DN[10]</text>
+<line x1="30" y1="9194" x2="75" y2="9194" stroke="#607587"/><text x="35" y="9192">16</text><text x="85" y="9198" class="net">CENTRAL:IO_TX_DATA_DN[10]</text>
+<line x1="30" y1="9210" x2="75" y2="9210" stroke="#607587"/><text x="35" y="9208">9</text><text x="85" y="9214" class="net">CENTRAL:TX_DATA_DN[11]</text>
+<line x1="30" y1="9226" x2="75" y2="9226" stroke="#607587"/><text x="35" y="9224">15</text><text x="85" y="9230" class="net">CENTRAL:IO_TX_DATA_DN[11]</text>
+<line x1="30" y1="9242" x2="75" y2="9242" stroke="#607587"/><text x="35" y="9240">10</text><text x="85" y="9246" class="net">CENTRAL:TX_DATA_DN[12]</text>
+<line x1="30" y1="9258" x2="75" y2="9258" stroke="#607587"/><text x="35" y="9256">14</text><text x="85" y="9262" class="net">CENTRAL:IO_TX_DATA_DN[12]</text>
+<rect x="670" y="8842" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="8860" style="font-weight:bold">CENTRAL_UX5  SN74AXC8T245PWR</text>
+<text x="680" y="8877">ax_domain_interface / PW24</text>
+<line x1="680" y1="8890" x2="725" y2="8890" stroke="#607587"/><text x="685" y="8888">1</text><text x="735" y="8894" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="8906" x2="725" y2="8906" stroke="#607587"/><text x="685" y="8904">2</text><text x="735" y="8910" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="8922" x2="725" y2="8922" stroke="#607587"/><text x="685" y="8920">11</text><text x="735" y="8926" class="net">CENTRAL:GND</text>
+<line x1="680" y1="8938" x2="725" y2="8938" stroke="#607587"/><text x="685" y="8936">12</text><text x="735" y="8942" class="net">CENTRAL:GND</text>
+<line x1="680" y1="8954" x2="725" y2="8954" stroke="#607587"/><text x="685" y="8952">13</text><text x="735" y="8958" class="net">CENTRAL:GND</text>
+<line x1="680" y1="8970" x2="725" y2="8970" stroke="#607587"/><text x="685" y="8968">22</text><text x="735" y="8974" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="680" y1="8986" x2="725" y2="8986" stroke="#607587"/><text x="685" y="8984">23</text><text x="735" y="8990" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="9002" x2="725" y2="9002" stroke="#607587"/><text x="685" y="9000">24</text><text x="735" y="9006" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="9018" x2="725" y2="9018" stroke="#607587"/><text x="685" y="9016">3</text><text x="735" y="9022" class="net">CENTRAL:TX_DATA_DN[13]</text>
+<line x1="680" y1="9034" x2="725" y2="9034" stroke="#607587"/><text x="685" y="9032">21</text><text x="735" y="9038" class="net">CENTRAL:IO_TX_DATA_DN[13]</text>
+<line x1="680" y1="9050" x2="725" y2="9050" stroke="#607587"/><text x="685" y="9048">4</text><text x="735" y="9054" class="net">CENTRAL:TX_DATA_DN[14]</text>
+<line x1="680" y1="9066" x2="725" y2="9066" stroke="#607587"/><text x="685" y="9064">20</text><text x="735" y="9070" class="net">CENTRAL:IO_TX_DATA_DN[14]</text>
+<line x1="680" y1="9082" x2="725" y2="9082" stroke="#607587"/><text x="685" y="9080">5</text><text x="735" y="9086" class="net">CENTRAL:TX_DATA_DN[15]</text>
+<line x1="680" y1="9098" x2="725" y2="9098" stroke="#607587"/><text x="685" y="9096">19</text><text x="735" y="9102" class="net">CENTRAL:IO_TX_DATA_DN[15]</text>
+<line x1="680" y1="9114" x2="725" y2="9114" stroke="#607587"/><text x="685" y="9112">6</text><text x="735" y="9118" class="net">CENTRAL:DN_SRCLK</text>
+<line x1="680" y1="9130" x2="725" y2="9130" stroke="#607587"/><text x="685" y="9128">18</text><text x="735" y="9134" class="net">CENTRAL:IO_DN_SRCLK</text>
+<line x1="680" y1="9146" x2="725" y2="9146" stroke="#607587"/><text x="685" y="9144">7</text><text x="735" y="9150" class="net">CENTRAL:DN_RCLK</text>
+<line x1="680" y1="9162" x2="725" y2="9162" stroke="#607587"/><text x="685" y="9160">17</text><text x="735" y="9166" class="net">CENTRAL:IO_DN_RCLK</text>
+<line x1="680" y1="9178" x2="725" y2="9178" stroke="#607587"/><text x="685" y="9176">8</text><text x="735" y="9182" class="net">CENTRAL:DN_OE_N</text>
+<line x1="680" y1="9194" x2="725" y2="9194" stroke="#607587"/><text x="685" y="9192">16</text><text x="735" y="9198" class="net">CENTRAL:IO_DN_OE_N</text>
+<line x1="680" y1="9210" x2="725" y2="9210" stroke="#607587"/><text x="685" y="9208">9</text><text x="735" y="9214" class="net">CENTRAL:DN_RESET_N</text>
+<line x1="680" y1="9226" x2="725" y2="9226" stroke="#607587"/><text x="685" y="9224">15</text><text x="735" y="9230" class="net">CENTRAL:IO_DN_RESET_N</text>
+<line x1="680" y1="9242" x2="725" y2="9242" stroke="#607587"/><text x="685" y="9240">10</text><text x="735" y="9246" class="net">CENTRAL:DN_SYNC</text>
+<line x1="680" y1="9258" x2="725" y2="9258" stroke="#607587"/><text x="685" y="9256">14</text><text x="735" y="9262" class="net">CENTRAL:IO_DN_SYNC</text>
+<rect x="1320" y="8842" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="8860" style="font-weight:bold">CENTRAL_UX6  SN74AXC8T245PWR</text>
+<text x="1330" y="8877">ax_domain_interface / PW24</text>
+<line x1="1330" y1="8890" x2="1375" y2="8890" stroke="#607587"/><text x="1335" y="8888">1</text><text x="1385" y="8894" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="8906" x2="1375" y2="8906" stroke="#607587"/><text x="1335" y="8904">2</text><text x="1385" y="8910" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="8922" x2="1375" y2="8922" stroke="#607587"/><text x="1335" y="8920">11</text><text x="1385" y="8926" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="8938" x2="1375" y2="8938" stroke="#607587"/><text x="1335" y="8936">12</text><text x="1385" y="8942" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="8954" x2="1375" y2="8954" stroke="#607587"/><text x="1335" y="8952">13</text><text x="1385" y="8958" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="8970" x2="1375" y2="8970" stroke="#607587"/><text x="1335" y="8968">22</text><text x="1385" y="8974" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="1330" y1="8986" x2="1375" y2="8986" stroke="#607587"/><text x="1335" y="8984">23</text><text x="1385" y="8990" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="9002" x2="1375" y2="9002" stroke="#607587"/><text x="1335" y="9000">24</text><text x="1385" y="9006" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="9018" x2="1375" y2="9018" stroke="#607587"/><text x="1335" y="9016">3</text><text x="1385" y="9022" class="net">CENTRAL:DN_RX_BLANK</text>
+<line x1="1330" y1="9034" x2="1375" y2="9034" stroke="#607587"/><text x="1335" y="9032">21</text><text x="1385" y="9038" class="net">CENTRAL:IO_DN_RX_BLANK</text>
+<line x1="1330" y1="9050" x2="1375" y2="9050" stroke="#607587"/><text x="1335" y="9048">4</text><text x="1385" y="9054" class="net">CENTRAL:DN_HEARTBEAT</text>
+<line x1="1330" y1="9066" x2="1375" y2="9066" stroke="#607587"/><text x="1335" y="9064">20</text><text x="1385" y="9070" class="net">CENTRAL:IO_DN_HEARTBEAT</text>
+<line x1="1330" y1="9082" x2="1375" y2="9082" stroke="#607587"/><text x="1335" y="9080">5</text><text x="1385" y="9086" class="net">CENTRAL:ADC_RESET</text>
+<line x1="1330" y1="9098" x2="1375" y2="9098" stroke="#607587"/><text x="1335" y="9096">19</text><text x="1385" y="9102" class="net">CENTRAL:IO_ADC_RESET</text>
+<line x1="1330" y1="9114" x2="1375" y2="9114" stroke="#607587"/><text x="1335" y="9112">6</text><text x="1385" y="9118" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="9130" x2="1375" y2="9130" stroke="#607587"/><text x="1335" y="9128">18</text><text x="1385" y="9134" class="nc">NC:CENTRAL_UX6:18</text>
+<line x1="1330" y1="9146" x2="1375" y2="9146" stroke="#607587"/><text x="1335" y="9144">7</text><text x="1385" y="9150" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="9162" x2="1375" y2="9162" stroke="#607587"/><text x="1335" y="9160">17</text><text x="1385" y="9166" class="nc">NC:CENTRAL_UX6:17</text>
+<line x1="1330" y1="9178" x2="1375" y2="9178" stroke="#607587"/><text x="1335" y="9176">8</text><text x="1385" y="9182" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="9194" x2="1375" y2="9194" stroke="#607587"/><text x="1335" y="9192">16</text><text x="1385" y="9198" class="nc">NC:CENTRAL_UX6:16</text>
+<line x1="1330" y1="9210" x2="1375" y2="9210" stroke="#607587"/><text x="1335" y="9208">9</text><text x="1385" y="9214" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="9226" x2="1375" y2="9226" stroke="#607587"/><text x="1335" y="9224">15</text><text x="1385" y="9230" class="nc">NC:CENTRAL_UX6:15</text>
+<line x1="1330" y1="9242" x2="1375" y2="9242" stroke="#607587"/><text x="1335" y="9240">10</text><text x="1385" y="9246" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="9258" x2="1375" y2="9258" stroke="#607587"/><text x="1335" y="9256">14</text><text x="1385" y="9262" class="nc">NC:CENTRAL_UX6:14</text>
+<rect x="20" y="9936" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="9954" style="font-weight:bold">CENTRAL_UX7  SN74AXC8T245PWR</text>
+<text x="30" y="9971">ax_domain_interface / PW24</text>
+<line x1="30" y1="9984" x2="75" y2="9984" stroke="#607587"/><text x="35" y="9982">1</text><text x="85" y="9988" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="10000" x2="75" y2="10000" stroke="#607587"/><text x="35" y="9998">2</text><text x="85" y="10004" class="net">CENTRAL:GND</text>
+<line x1="30" y1="10016" x2="75" y2="10016" stroke="#607587"/><text x="35" y="10014">11</text><text x="85" y="10020" class="net">CENTRAL:GND</text>
+<line x1="30" y1="10032" x2="75" y2="10032" stroke="#607587"/><text x="35" y="10030">12</text><text x="85" y="10036" class="net">CENTRAL:GND</text>
+<line x1="30" y1="10048" x2="75" y2="10048" stroke="#607587"/><text x="35" y="10046">13</text><text x="85" y="10052" class="net">CENTRAL:GND</text>
+<line x1="30" y1="10064" x2="75" y2="10064" stroke="#607587"/><text x="35" y="10062">22</text><text x="85" y="10068" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="30" y1="10080" x2="75" y2="10080" stroke="#607587"/><text x="35" y="10078">23</text><text x="85" y="10084" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="10096" x2="75" y2="10096" stroke="#607587"/><text x="35" y="10094">24</text><text x="85" y="10100" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="10112" x2="75" y2="10112" stroke="#607587"/><text x="35" y="10110">3</text><text x="85" y="10116" class="net">CENTRAL:UP_PGOOD</text>
+<line x1="30" y1="10128" x2="75" y2="10128" stroke="#607587"/><text x="35" y="10126">21</text><text x="85" y="10132" class="net">CENTRAL:IO_UP_PGOOD</text>
+<line x1="30" y1="10144" x2="75" y2="10144" stroke="#607587"/><text x="35" y="10142">4</text><text x="85" y="10148" class="net">CENTRAL:UP_FAULT_N</text>
+<line x1="30" y1="10160" x2="75" y2="10160" stroke="#607587"/><text x="35" y="10158">20</text><text x="85" y="10164" class="net">CENTRAL:IO_UP_FAULT_N</text>
+<line x1="30" y1="10176" x2="75" y2="10176" stroke="#607587"/><text x="35" y="10174">5</text><text x="85" y="10180" class="net">CENTRAL:ADC_DOUT[0]</text>
+<line x1="30" y1="10192" x2="75" y2="10192" stroke="#607587"/><text x="35" y="10190">19</text><text x="85" y="10196" class="net">CENTRAL:IO_ADC_DOUT[0]</text>
+<line x1="30" y1="10208" x2="75" y2="10208" stroke="#607587"/><text x="35" y="10206">6</text><text x="85" y="10212" class="net">CENTRAL:ADC_DOUT[1]</text>
+<line x1="30" y1="10224" x2="75" y2="10224" stroke="#607587"/><text x="35" y="10222">18</text><text x="85" y="10228" class="net">CENTRAL:IO_ADC_DOUT[1]</text>
+<line x1="30" y1="10240" x2="75" y2="10240" stroke="#607587"/><text x="35" y="10238">7</text><text x="85" y="10244" class="net">CENTRAL:ADC_DOUT[2]</text>
+<line x1="30" y1="10256" x2="75" y2="10256" stroke="#607587"/><text x="35" y="10254">17</text><text x="85" y="10260" class="net">CENTRAL:IO_ADC_DOUT[2]</text>
+<line x1="30" y1="10272" x2="75" y2="10272" stroke="#607587"/><text x="35" y="10270">8</text><text x="85" y="10276" class="net">CENTRAL:ADC_DOUT[3]</text>
+<line x1="30" y1="10288" x2="75" y2="10288" stroke="#607587"/><text x="35" y="10286">16</text><text x="85" y="10292" class="net">CENTRAL:IO_ADC_DOUT[3]</text>
+<line x1="30" y1="10304" x2="75" y2="10304" stroke="#607587"/><text x="35" y="10302">9</text><text x="85" y="10308" class="net">CENTRAL:ADC_BUSY</text>
+<line x1="30" y1="10320" x2="75" y2="10320" stroke="#607587"/><text x="35" y="10318">15</text><text x="85" y="10324" class="net">CENTRAL:IO_ADC_BUSY</text>
+<line x1="30" y1="10336" x2="75" y2="10336" stroke="#607587"/><text x="35" y="10334">10</text><text x="85" y="10340" class="net">CENTRAL:DN_PGOOD</text>
+<line x1="30" y1="10352" x2="75" y2="10352" stroke="#607587"/><text x="35" y="10350">14</text><text x="85" y="10356" class="net">CENTRAL:IO_DN_PGOOD</text>
+<rect x="670" y="9936" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="9954" style="font-weight:bold">CENTRAL_UX8  SN74AXC8T245PWR</text>
+<text x="680" y="9971">ax_domain_interface / PW24</text>
+<line x1="680" y1="9984" x2="725" y2="9984" stroke="#607587"/><text x="685" y="9982">1</text><text x="735" y="9988" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="10000" x2="725" y2="10000" stroke="#607587"/><text x="685" y="9998">2</text><text x="735" y="10004" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10016" x2="725" y2="10016" stroke="#607587"/><text x="685" y="10014">11</text><text x="735" y="10020" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10032" x2="725" y2="10032" stroke="#607587"/><text x="685" y="10030">12</text><text x="735" y="10036" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10048" x2="725" y2="10048" stroke="#607587"/><text x="685" y="10046">13</text><text x="735" y="10052" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10064" x2="725" y2="10064" stroke="#607587"/><text x="685" y="10062">22</text><text x="735" y="10068" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="680" y1="10080" x2="725" y2="10080" stroke="#607587"/><text x="685" y="10078">23</text><text x="735" y="10084" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="10096" x2="725" y2="10096" stroke="#607587"/><text x="685" y="10094">24</text><text x="735" y="10100" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="10112" x2="725" y2="10112" stroke="#607587"/><text x="685" y="10110">3</text><text x="735" y="10116" class="net">CENTRAL:DN_FAULT_N</text>
+<line x1="680" y1="10128" x2="725" y2="10128" stroke="#607587"/><text x="685" y="10126">21</text><text x="735" y="10132" class="net">CENTRAL:IO_DN_FAULT_N</text>
+<line x1="680" y1="10144" x2="725" y2="10144" stroke="#607587"/><text x="685" y="10142">4</text><text x="735" y="10148" class="net">CENTRAL:ESTOP_STATUS</text>
+<line x1="680" y1="10160" x2="725" y2="10160" stroke="#607587"/><text x="685" y="10158">20</text><text x="735" y="10164" class="net">CENTRAL:IO_ESTOP_STATUS</text>
+<line x1="680" y1="10176" x2="725" y2="10176" stroke="#607587"/><text x="685" y="10174">5</text><text x="735" y="10180" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10192" x2="725" y2="10192" stroke="#607587"/><text x="685" y="10190">19</text><text x="735" y="10196" class="nc">NC:CENTRAL_UX8:19</text>
+<line x1="680" y1="10208" x2="725" y2="10208" stroke="#607587"/><text x="685" y="10206">6</text><text x="735" y="10212" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10224" x2="725" y2="10224" stroke="#607587"/><text x="685" y="10222">18</text><text x="735" y="10228" class="nc">NC:CENTRAL_UX8:18</text>
+<line x1="680" y1="10240" x2="725" y2="10240" stroke="#607587"/><text x="685" y="10238">7</text><text x="735" y="10244" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10256" x2="725" y2="10256" stroke="#607587"/><text x="685" y="10254">17</text><text x="735" y="10260" class="nc">NC:CENTRAL_UX8:17</text>
+<line x1="680" y1="10272" x2="725" y2="10272" stroke="#607587"/><text x="685" y="10270">8</text><text x="735" y="10276" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10288" x2="725" y2="10288" stroke="#607587"/><text x="685" y="10286">16</text><text x="735" y="10292" class="nc">NC:CENTRAL_UX8:16</text>
+<line x1="680" y1="10304" x2="725" y2="10304" stroke="#607587"/><text x="685" y="10302">9</text><text x="735" y="10308" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10320" x2="725" y2="10320" stroke="#607587"/><text x="685" y="10318">15</text><text x="735" y="10324" class="nc">NC:CENTRAL_UX8:15</text>
+<line x1="680" y1="10336" x2="725" y2="10336" stroke="#607587"/><text x="685" y="10334">10</text><text x="735" y="10340" class="net">CENTRAL:GND</text>
+<line x1="680" y1="10352" x2="725" y2="10352" stroke="#607587"/><text x="685" y="10350">14</text><text x="735" y="10356" class="nc">NC:CENTRAL_UX8:14</text>
+<rect x="1320" y="9936" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="9954" style="font-weight:bold">CENTRAL_JHOSTEN  NORMALLY_OPEN_JUMPER</text>
+<text x="1330" y="9971">manual_host_io_enable / 2pin_NO_DEFAULT_SHUNT</text>
+<line x1="1330" y1="9984" x2="1375" y2="9984" stroke="#607587"/><text x="1335" y="9982">1</text><text x="1385" y="9988" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="1330" y1="10000" x2="1375" y2="10000" stroke="#607587"/><text x="1335" y="9998">2</text><text x="1385" y="10004" class="net">CENTRAL:GND</text>
+<rect x="20" y="11030" width="620" height="1074" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="11048" style="font-weight:bold">CENTRAL_JUP  SIGNAL_2x32_MPN_HOLD</text>
+<text x="30" y="11065">array_signal_connector / 64pin_keyed_ground_interleaved</text>
+<line x1="30" y1="11078" x2="75" y2="11078" stroke="#607587"/><text x="35" y="11076">2</text><text x="85" y="11082" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11094" x2="75" y2="11094" stroke="#607587"/><text x="35" y="11092">4</text><text x="85" y="11098" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11110" x2="75" y2="11110" stroke="#607587"/><text x="35" y="11108">6</text><text x="85" y="11114" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11126" x2="75" y2="11126" stroke="#607587"/><text x="35" y="11124">8</text><text x="85" y="11130" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11142" x2="75" y2="11142" stroke="#607587"/><text x="35" y="11140">10</text><text x="85" y="11146" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11158" x2="75" y2="11158" stroke="#607587"/><text x="35" y="11156">12</text><text x="85" y="11162" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11174" x2="75" y2="11174" stroke="#607587"/><text x="35" y="11172">14</text><text x="85" y="11178" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11190" x2="75" y2="11190" stroke="#607587"/><text x="35" y="11188">16</text><text x="85" y="11194" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11206" x2="75" y2="11206" stroke="#607587"/><text x="35" y="11204">18</text><text x="85" y="11210" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11222" x2="75" y2="11222" stroke="#607587"/><text x="35" y="11220">20</text><text x="85" y="11226" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11238" x2="75" y2="11238" stroke="#607587"/><text x="35" y="11236">22</text><text x="85" y="11242" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11254" x2="75" y2="11254" stroke="#607587"/><text x="35" y="11252">24</text><text x="85" y="11258" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11270" x2="75" y2="11270" stroke="#607587"/><text x="35" y="11268">26</text><text x="85" y="11274" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11286" x2="75" y2="11286" stroke="#607587"/><text x="35" y="11284">28</text><text x="85" y="11290" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11302" x2="75" y2="11302" stroke="#607587"/><text x="35" y="11300">30</text><text x="85" y="11306" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11318" x2="75" y2="11318" stroke="#607587"/><text x="35" y="11316">32</text><text x="85" y="11322" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11334" x2="75" y2="11334" stroke="#607587"/><text x="35" y="11332">34</text><text x="85" y="11338" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11350" x2="75" y2="11350" stroke="#607587"/><text x="35" y="11348">36</text><text x="85" y="11354" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11366" x2="75" y2="11366" stroke="#607587"/><text x="35" y="11364">38</text><text x="85" y="11370" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11382" x2="75" y2="11382" stroke="#607587"/><text x="35" y="11380">40</text><text x="85" y="11386" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11398" x2="75" y2="11398" stroke="#607587"/><text x="35" y="11396">42</text><text x="85" y="11402" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11414" x2="75" y2="11414" stroke="#607587"/><text x="35" y="11412">44</text><text x="85" y="11418" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11430" x2="75" y2="11430" stroke="#607587"/><text x="35" y="11428">46</text><text x="85" y="11434" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11446" x2="75" y2="11446" stroke="#607587"/><text x="35" y="11444">48</text><text x="85" y="11450" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11462" x2="75" y2="11462" stroke="#607587"/><text x="35" y="11460">50</text><text x="85" y="11466" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11478" x2="75" y2="11478" stroke="#607587"/><text x="35" y="11476">52</text><text x="85" y="11482" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11494" x2="75" y2="11494" stroke="#607587"/><text x="35" y="11492">54</text><text x="85" y="11498" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11510" x2="75" y2="11510" stroke="#607587"/><text x="35" y="11508">56</text><text x="85" y="11514" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11526" x2="75" y2="11526" stroke="#607587"/><text x="35" y="11524">58</text><text x="85" y="11530" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11542" x2="75" y2="11542" stroke="#607587"/><text x="35" y="11540">60</text><text x="85" y="11546" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11558" x2="75" y2="11558" stroke="#607587"/><text x="35" y="11556">62</text><text x="85" y="11562" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11574" x2="75" y2="11574" stroke="#607587"/><text x="35" y="11572">64</text><text x="85" y="11578" class="net">CENTRAL:GND</text>
+<line x1="30" y1="11590" x2="75" y2="11590" stroke="#607587"/><text x="35" y="11588">63</text><text x="85" y="11594" class="nc">NC:CENTRAL_JUP:63</text>
+<line x1="30" y1="11606" x2="75" y2="11606" stroke="#607587"/><text x="35" y="11604">1</text><text x="85" y="11610" class="net">CENTRAL:IO_TX_DATA_UP[0]</text>
+<line x1="30" y1="11622" x2="75" y2="11622" stroke="#607587"/><text x="35" y="11620">3</text><text x="85" y="11626" class="net">CENTRAL:IO_TX_DATA_UP[1]</text>
+<line x1="30" y1="11638" x2="75" y2="11638" stroke="#607587"/><text x="35" y="11636">5</text><text x="85" y="11642" class="net">CENTRAL:IO_TX_DATA_UP[2]</text>
+<line x1="30" y1="11654" x2="75" y2="11654" stroke="#607587"/><text x="35" y="11652">7</text><text x="85" y="11658" class="net">CENTRAL:IO_TX_DATA_UP[3]</text>
+<line x1="30" y1="11670" x2="75" y2="11670" stroke="#607587"/><text x="35" y="11668">9</text><text x="85" y="11674" class="net">CENTRAL:IO_TX_DATA_UP[4]</text>
+<line x1="30" y1="11686" x2="75" y2="11686" stroke="#607587"/><text x="35" y="11684">11</text><text x="85" y="11690" class="net">CENTRAL:IO_TX_DATA_UP[5]</text>
+<line x1="30" y1="11702" x2="75" y2="11702" stroke="#607587"/><text x="35" y="11700">13</text><text x="85" y="11706" class="net">CENTRAL:IO_TX_DATA_UP[6]</text>
+<line x1="30" y1="11718" x2="75" y2="11718" stroke="#607587"/><text x="35" y="11716">15</text><text x="85" y="11722" class="net">CENTRAL:IO_TX_DATA_UP[7]</text>
+<line x1="30" y1="11734" x2="75" y2="11734" stroke="#607587"/><text x="35" y="11732">17</text><text x="85" y="11738" class="net">CENTRAL:IO_TX_DATA_UP[8]</text>
+<line x1="30" y1="11750" x2="75" y2="11750" stroke="#607587"/><text x="35" y="11748">19</text><text x="85" y="11754" class="net">CENTRAL:IO_TX_DATA_UP[9]</text>
+<line x1="30" y1="11766" x2="75" y2="11766" stroke="#607587"/><text x="35" y="11764">21</text><text x="85" y="11770" class="net">CENTRAL:IO_TX_DATA_UP[10]</text>
+<line x1="30" y1="11782" x2="75" y2="11782" stroke="#607587"/><text x="35" y="11780">23</text><text x="85" y="11786" class="net">CENTRAL:IO_TX_DATA_UP[11]</text>
+<line x1="30" y1="11798" x2="75" y2="11798" stroke="#607587"/><text x="35" y="11796">25</text><text x="85" y="11802" class="net">CENTRAL:IO_TX_DATA_UP[12]</text>
+<line x1="30" y1="11814" x2="75" y2="11814" stroke="#607587"/><text x="35" y="11812">27</text><text x="85" y="11818" class="net">CENTRAL:IO_TX_DATA_UP[13]</text>
+<line x1="30" y1="11830" x2="75" y2="11830" stroke="#607587"/><text x="35" y="11828">29</text><text x="85" y="11834" class="net">CENTRAL:IO_TX_DATA_UP[14]</text>
+<line x1="30" y1="11846" x2="75" y2="11846" stroke="#607587"/><text x="35" y="11844">31</text><text x="85" y="11850" class="net">CENTRAL:IO_TX_DATA_UP[15]</text>
+<line x1="30" y1="11862" x2="75" y2="11862" stroke="#607587"/><text x="35" y="11860">33</text><text x="85" y="11866" class="net">CENTRAL:IO_UP_SRCLK</text>
+<line x1="30" y1="11878" x2="75" y2="11878" stroke="#607587"/><text x="35" y="11876">35</text><text x="85" y="11882" class="net">CENTRAL:IO_UP_RCLK</text>
+<line x1="30" y1="11894" x2="75" y2="11894" stroke="#607587"/><text x="35" y="11892">37</text><text x="85" y="11898" class="net">CENTRAL:IO_UP_OE_N</text>
+<line x1="30" y1="11910" x2="75" y2="11910" stroke="#607587"/><text x="35" y="11908">39</text><text x="85" y="11914" class="net">CENTRAL:IO_UP_RESET_N</text>
+<line x1="30" y1="11926" x2="75" y2="11926" stroke="#607587"/><text x="35" y="11924">41</text><text x="85" y="11930" class="net">CENTRAL:IO_UP_SYNC</text>
+<line x1="30" y1="11942" x2="75" y2="11942" stroke="#607587"/><text x="35" y="11940">43</text><text x="85" y="11946" class="net">CENTRAL:IO_UP_RX_BLANK</text>
+<line x1="30" y1="11958" x2="75" y2="11958" stroke="#607587"/><text x="35" y="11956">45</text><text x="85" y="11962" class="net">CENTRAL:IO_UP_HEARTBEAT</text>
+<line x1="30" y1="11974" x2="75" y2="11974" stroke="#607587"/><text x="35" y="11972">47</text><text x="85" y="11978" class="net">CENTRAL:IO_UP_FAULT_N</text>
+<line x1="30" y1="11990" x2="75" y2="11990" stroke="#607587"/><text x="35" y="11988">49</text><text x="85" y="11994" class="net">CENTRAL:IO_UP_PGOOD</text>
+<line x1="30" y1="12006" x2="75" y2="12006" stroke="#607587"/><text x="35" y="12004">51</text><text x="85" y="12010" class="net">CENTRAL:UP_I2C_SCL</text>
+<line x1="30" y1="12022" x2="75" y2="12022" stroke="#607587"/><text x="35" y="12020">53</text><text x="85" y="12026" class="net">CENTRAL:UP_I2C_SDA</text>
+<line x1="30" y1="12038" x2="75" y2="12038" stroke="#607587"/><text x="35" y="12036">55</text><text x="85" y="12042" class="net">CENTRAL:UP_RX0_OUT</text>
+<line x1="30" y1="12054" x2="75" y2="12054" stroke="#607587"/><text x="35" y="12052">57</text><text x="85" y="12058" class="net">CENTRAL:UP_RX1_OUT</text>
+<line x1="30" y1="12070" x2="75" y2="12070" stroke="#607587"/><text x="35" y="12068">59</text><text x="85" y="12074" class="net">CENTRAL:UP_RX2_OUT</text>
+<line x1="30" y1="12086" x2="75" y2="12086" stroke="#607587"/><text x="35" y="12084">61</text><text x="85" y="12090" class="net">CENTRAL:UP_RX3_OUT</text>
+<rect x="670" y="11030" width="620" height="1074" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="11048" style="font-weight:bold">CENTRAL_JDN  SIGNAL_2x32_MPN_HOLD</text>
+<text x="680" y="11065">array_signal_connector / 64pin_keyed_ground_interleaved</text>
+<line x1="680" y1="11078" x2="725" y2="11078" stroke="#607587"/><text x="685" y="11076">2</text><text x="735" y="11082" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11094" x2="725" y2="11094" stroke="#607587"/><text x="685" y="11092">4</text><text x="735" y="11098" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11110" x2="725" y2="11110" stroke="#607587"/><text x="685" y="11108">6</text><text x="735" y="11114" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11126" x2="725" y2="11126" stroke="#607587"/><text x="685" y="11124">8</text><text x="735" y="11130" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11142" x2="725" y2="11142" stroke="#607587"/><text x="685" y="11140">10</text><text x="735" y="11146" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11158" x2="725" y2="11158" stroke="#607587"/><text x="685" y="11156">12</text><text x="735" y="11162" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11174" x2="725" y2="11174" stroke="#607587"/><text x="685" y="11172">14</text><text x="735" y="11178" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11190" x2="725" y2="11190" stroke="#607587"/><text x="685" y="11188">16</text><text x="735" y="11194" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11206" x2="725" y2="11206" stroke="#607587"/><text x="685" y="11204">18</text><text x="735" y="11210" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11222" x2="725" y2="11222" stroke="#607587"/><text x="685" y="11220">20</text><text x="735" y="11226" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11238" x2="725" y2="11238" stroke="#607587"/><text x="685" y="11236">22</text><text x="735" y="11242" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11254" x2="725" y2="11254" stroke="#607587"/><text x="685" y="11252">24</text><text x="735" y="11258" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11270" x2="725" y2="11270" stroke="#607587"/><text x="685" y="11268">26</text><text x="735" y="11274" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11286" x2="725" y2="11286" stroke="#607587"/><text x="685" y="11284">28</text><text x="735" y="11290" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11302" x2="725" y2="11302" stroke="#607587"/><text x="685" y="11300">30</text><text x="735" y="11306" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11318" x2="725" y2="11318" stroke="#607587"/><text x="685" y="11316">32</text><text x="735" y="11322" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11334" x2="725" y2="11334" stroke="#607587"/><text x="685" y="11332">34</text><text x="735" y="11338" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11350" x2="725" y2="11350" stroke="#607587"/><text x="685" y="11348">36</text><text x="735" y="11354" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11366" x2="725" y2="11366" stroke="#607587"/><text x="685" y="11364">38</text><text x="735" y="11370" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11382" x2="725" y2="11382" stroke="#607587"/><text x="685" y="11380">40</text><text x="735" y="11386" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11398" x2="725" y2="11398" stroke="#607587"/><text x="685" y="11396">42</text><text x="735" y="11402" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11414" x2="725" y2="11414" stroke="#607587"/><text x="685" y="11412">44</text><text x="735" y="11418" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11430" x2="725" y2="11430" stroke="#607587"/><text x="685" y="11428">46</text><text x="735" y="11434" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11446" x2="725" y2="11446" stroke="#607587"/><text x="685" y="11444">48</text><text x="735" y="11450" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11462" x2="725" y2="11462" stroke="#607587"/><text x="685" y="11460">50</text><text x="735" y="11466" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11478" x2="725" y2="11478" stroke="#607587"/><text x="685" y="11476">52</text><text x="735" y="11482" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11494" x2="725" y2="11494" stroke="#607587"/><text x="685" y="11492">54</text><text x="735" y="11498" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11510" x2="725" y2="11510" stroke="#607587"/><text x="685" y="11508">56</text><text x="735" y="11514" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11526" x2="725" y2="11526" stroke="#607587"/><text x="685" y="11524">58</text><text x="735" y="11530" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11542" x2="725" y2="11542" stroke="#607587"/><text x="685" y="11540">60</text><text x="735" y="11546" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11558" x2="725" y2="11558" stroke="#607587"/><text x="685" y="11556">62</text><text x="735" y="11562" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11574" x2="725" y2="11574" stroke="#607587"/><text x="685" y="11572">64</text><text x="735" y="11578" class="net">CENTRAL:GND</text>
+<line x1="680" y1="11590" x2="725" y2="11590" stroke="#607587"/><text x="685" y="11588">63</text><text x="735" y="11594" class="nc">NC:CENTRAL_JDN:63</text>
+<line x1="680" y1="11606" x2="725" y2="11606" stroke="#607587"/><text x="685" y="11604">1</text><text x="735" y="11610" class="net">CENTRAL:IO_TX_DATA_DN[0]</text>
+<line x1="680" y1="11622" x2="725" y2="11622" stroke="#607587"/><text x="685" y="11620">3</text><text x="735" y="11626" class="net">CENTRAL:IO_TX_DATA_DN[1]</text>
+<line x1="680" y1="11638" x2="725" y2="11638" stroke="#607587"/><text x="685" y="11636">5</text><text x="735" y="11642" class="net">CENTRAL:IO_TX_DATA_DN[2]</text>
+<line x1="680" y1="11654" x2="725" y2="11654" stroke="#607587"/><text x="685" y="11652">7</text><text x="735" y="11658" class="net">CENTRAL:IO_TX_DATA_DN[3]</text>
+<line x1="680" y1="11670" x2="725" y2="11670" stroke="#607587"/><text x="685" y="11668">9</text><text x="735" y="11674" class="net">CENTRAL:IO_TX_DATA_DN[4]</text>
+<line x1="680" y1="11686" x2="725" y2="11686" stroke="#607587"/><text x="685" y="11684">11</text><text x="735" y="11690" class="net">CENTRAL:IO_TX_DATA_DN[5]</text>
+<line x1="680" y1="11702" x2="725" y2="11702" stroke="#607587"/><text x="685" y="11700">13</text><text x="735" y="11706" class="net">CENTRAL:IO_TX_DATA_DN[6]</text>
+<line x1="680" y1="11718" x2="725" y2="11718" stroke="#607587"/><text x="685" y="11716">15</text><text x="735" y="11722" class="net">CENTRAL:IO_TX_DATA_DN[7]</text>
+<line x1="680" y1="11734" x2="725" y2="11734" stroke="#607587"/><text x="685" y="11732">17</text><text x="735" y="11738" class="net">CENTRAL:IO_TX_DATA_DN[8]</text>
+<line x1="680" y1="11750" x2="725" y2="11750" stroke="#607587"/><text x="685" y="11748">19</text><text x="735" y="11754" class="net">CENTRAL:IO_TX_DATA_DN[9]</text>
+<line x1="680" y1="11766" x2="725" y2="11766" stroke="#607587"/><text x="685" y="11764">21</text><text x="735" y="11770" class="net">CENTRAL:IO_TX_DATA_DN[10]</text>
+<line x1="680" y1="11782" x2="725" y2="11782" stroke="#607587"/><text x="685" y="11780">23</text><text x="735" y="11786" class="net">CENTRAL:IO_TX_DATA_DN[11]</text>
+<line x1="680" y1="11798" x2="725" y2="11798" stroke="#607587"/><text x="685" y="11796">25</text><text x="735" y="11802" class="net">CENTRAL:IO_TX_DATA_DN[12]</text>
+<line x1="680" y1="11814" x2="725" y2="11814" stroke="#607587"/><text x="685" y="11812">27</text><text x="735" y="11818" class="net">CENTRAL:IO_TX_DATA_DN[13]</text>
+<line x1="680" y1="11830" x2="725" y2="11830" stroke="#607587"/><text x="685" y="11828">29</text><text x="735" y="11834" class="net">CENTRAL:IO_TX_DATA_DN[14]</text>
+<line x1="680" y1="11846" x2="725" y2="11846" stroke="#607587"/><text x="685" y="11844">31</text><text x="735" y="11850" class="net">CENTRAL:IO_TX_DATA_DN[15]</text>
+<line x1="680" y1="11862" x2="725" y2="11862" stroke="#607587"/><text x="685" y="11860">33</text><text x="735" y="11866" class="net">CENTRAL:IO_DN_SRCLK</text>
+<line x1="680" y1="11878" x2="725" y2="11878" stroke="#607587"/><text x="685" y="11876">35</text><text x="735" y="11882" class="net">CENTRAL:IO_DN_RCLK</text>
+<line x1="680" y1="11894" x2="725" y2="11894" stroke="#607587"/><text x="685" y="11892">37</text><text x="735" y="11898" class="net">CENTRAL:IO_DN_OE_N</text>
+<line x1="680" y1="11910" x2="725" y2="11910" stroke="#607587"/><text x="685" y="11908">39</text><text x="735" y="11914" class="net">CENTRAL:IO_DN_RESET_N</text>
+<line x1="680" y1="11926" x2="725" y2="11926" stroke="#607587"/><text x="685" y="11924">41</text><text x="735" y="11930" class="net">CENTRAL:IO_DN_SYNC</text>
+<line x1="680" y1="11942" x2="725" y2="11942" stroke="#607587"/><text x="685" y="11940">43</text><text x="735" y="11946" class="net">CENTRAL:IO_DN_RX_BLANK</text>
+<line x1="680" y1="11958" x2="725" y2="11958" stroke="#607587"/><text x="685" y="11956">45</text><text x="735" y="11962" class="net">CENTRAL:IO_DN_HEARTBEAT</text>
+<line x1="680" y1="11974" x2="725" y2="11974" stroke="#607587"/><text x="685" y="11972">47</text><text x="735" y="11978" class="net">CENTRAL:IO_DN_FAULT_N</text>
+<line x1="680" y1="11990" x2="725" y2="11990" stroke="#607587"/><text x="685" y="11988">49</text><text x="735" y="11994" class="net">CENTRAL:IO_DN_PGOOD</text>
+<line x1="680" y1="12006" x2="725" y2="12006" stroke="#607587"/><text x="685" y="12004">51</text><text x="735" y="12010" class="net">CENTRAL:DN_I2C_SCL</text>
+<line x1="680" y1="12022" x2="725" y2="12022" stroke="#607587"/><text x="685" y="12020">53</text><text x="735" y="12026" class="net">CENTRAL:DN_I2C_SDA</text>
+<line x1="680" y1="12038" x2="725" y2="12038" stroke="#607587"/><text x="685" y="12036">55</text><text x="735" y="12042" class="net">CENTRAL:DN_RX0_OUT</text>
+<line x1="680" y1="12054" x2="725" y2="12054" stroke="#607587"/><text x="685" y="12052">57</text><text x="735" y="12058" class="net">CENTRAL:DN_RX1_OUT</text>
+<line x1="680" y1="12070" x2="725" y2="12070" stroke="#607587"/><text x="685" y="12068">59</text><text x="735" y="12074" class="net">CENTRAL:DN_RX2_OUT</text>
+<line x1="680" y1="12086" x2="725" y2="12086" stroke="#607587"/><text x="685" y="12084">61</text><text x="735" y="12090" class="net">CENTRAL:DN_RX3_OUT</text>
+<rect x="1320" y="11030" width="620" height="434" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="11048" style="font-weight:bold">CENTRAL_UMUX  TCA9548APWR</text>
+<text x="1330" y="11065">i2c_mux / PW24</text>
+<line x1="1330" y1="11078" x2="1375" y2="11078" stroke="#607587"/><text x="1335" y="11076">1</text><text x="1385" y="11082" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="11094" x2="1375" y2="11094" stroke="#607587"/><text x="1335" y="11092">2</text><text x="1385" y="11098" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="11110" x2="1375" y2="11110" stroke="#607587"/><text x="1335" y="11108">3</text><text x="1385" y="11114" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="11126" x2="1375" y2="11126" stroke="#607587"/><text x="1335" y="11124">12</text><text x="1385" y="11130" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="11142" x2="1375" y2="11142" stroke="#607587"/><text x="1335" y="11140">23</text><text x="1385" y="11146" class="net">CENTRAL:I2C_SDA_HOST</text>
+<line x1="1330" y1="11158" x2="1375" y2="11158" stroke="#607587"/><text x="1335" y="11156">24</text><text x="1385" y="11162" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="11174" x2="1375" y2="11174" stroke="#607587"/><text x="1335" y="11172">22</text><text x="1385" y="11178" class="net">CENTRAL:I2C_SCL_HOST</text>
+<line x1="1330" y1="11190" x2="1375" y2="11190" stroke="#607587"/><text x="1335" y="11188">21</text><text x="1385" y="11194" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="11206" x2="1375" y2="11206" stroke="#607587"/><text x="1335" y="11204">4</text><text x="1385" y="11210" class="net">CENTRAL:UP_I2C_SDA</text>
+<line x1="1330" y1="11222" x2="1375" y2="11222" stroke="#607587"/><text x="1335" y="11220">5</text><text x="1385" y="11226" class="net">CENTRAL:UP_I2C_SCL</text>
+<line x1="1330" y1="11238" x2="1375" y2="11238" stroke="#607587"/><text x="1335" y="11236">6</text><text x="1385" y="11242" class="net">CENTRAL:DN_I2C_SDA</text>
+<line x1="1330" y1="11254" x2="1375" y2="11254" stroke="#607587"/><text x="1335" y="11252">7</text><text x="1385" y="11258" class="net">CENTRAL:DN_I2C_SCL</text>
+<line x1="1330" y1="11270" x2="1375" y2="11270" stroke="#607587"/><text x="1335" y="11268">8</text><text x="1385" y="11274" class="net">CENTRAL:LOCAL_SDA</text>
+<line x1="1330" y1="11286" x2="1375" y2="11286" stroke="#607587"/><text x="1335" y="11284">9</text><text x="1385" y="11290" class="net">CENTRAL:LOCAL_SCL</text>
+<line x1="1330" y1="11302" x2="1375" y2="11302" stroke="#607587"/><text x="1335" y="11300">10</text><text x="1385" y="11306" class="nc">NC:CENTRAL_UMUX:10</text>
+<line x1="1330" y1="11318" x2="1375" y2="11318" stroke="#607587"/><text x="1335" y="11316">11</text><text x="1385" y="11322" class="nc">NC:CENTRAL_UMUX:11</text>
+<line x1="1330" y1="11334" x2="1375" y2="11334" stroke="#607587"/><text x="1335" y="11332">13</text><text x="1385" y="11338" class="nc">NC:CENTRAL_UMUX:13</text>
+<line x1="1330" y1="11350" x2="1375" y2="11350" stroke="#607587"/><text x="1335" y="11348">14</text><text x="1385" y="11354" class="nc">NC:CENTRAL_UMUX:14</text>
+<line x1="1330" y1="11366" x2="1375" y2="11366" stroke="#607587"/><text x="1335" y="11364">15</text><text x="1385" y="11370" class="nc">NC:CENTRAL_UMUX:15</text>
+<line x1="1330" y1="11382" x2="1375" y2="11382" stroke="#607587"/><text x="1335" y="11380">16</text><text x="1385" y="11386" class="nc">NC:CENTRAL_UMUX:16</text>
+<line x1="1330" y1="11398" x2="1375" y2="11398" stroke="#607587"/><text x="1335" y="11396">17</text><text x="1385" y="11402" class="nc">NC:CENTRAL_UMUX:17</text>
+<line x1="1330" y1="11414" x2="1375" y2="11414" stroke="#607587"/><text x="1335" y="11412">18</text><text x="1385" y="11418" class="nc">NC:CENTRAL_UMUX:18</text>
+<line x1="1330" y1="11430" x2="1375" y2="11430" stroke="#607587"/><text x="1335" y="11428">19</text><text x="1385" y="11434" class="nc">NC:CENTRAL_UMUX:19</text>
+<line x1="1330" y1="11446" x2="1375" y2="11446" stroke="#607587"/><text x="1335" y="11444">20</text><text x="1385" y="11450" class="nc">NC:CENTRAL_UMUX:20</text>
+<rect x="20" y="12124" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="12142" style="font-weight:bold">CENTRAL_JI2C  I2C_HOST_ASSIGNMENT_HOLD</text>
+<text x="30" y="12159">i2c_handoff / 3pin</text>
+<line x1="30" y1="12172" x2="75" y2="12172" stroke="#607587"/><text x="35" y="12170">1</text><text x="85" y="12176" class="net">CENTRAL:I2C_SDA_HOST</text>
+<line x1="30" y1="12188" x2="75" y2="12188" stroke="#607587"/><text x="35" y="12186">2</text><text x="85" y="12192" class="net">CENTRAL:I2C_SCL_HOST</text>
+<line x1="30" y1="12204" x2="75" y2="12204" stroke="#607587"/><text x="35" y="12202">3</text><text x="85" y="12208" class="net">CENTRAL:GND</text>
+<rect x="670" y="12124" width="620" height="114" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="12142" style="font-weight:bold">CENTRAL_JHOSTI2C  TWO_NORMALLY_OPEN_SHUNTS</text>
+<text x="680" y="12159">manual_host_i2c_isolation / 2x2_NO_DEFAULT_SHUNTS</text>
+<line x1="680" y1="12172" x2="725" y2="12172" stroke="#607587"/><text x="685" y="12170">1</text><text x="735" y="12176" class="net">CENTRAL:I2C_SCL</text>
+<line x1="680" y1="12188" x2="725" y2="12188" stroke="#607587"/><text x="685" y="12186">2</text><text x="735" y="12192" class="net">CENTRAL:I2C_SCL_HOST</text>
+<line x1="680" y1="12204" x2="725" y2="12204" stroke="#607587"/><text x="685" y="12202">3</text><text x="735" y="12208" class="net">CENTRAL:I2C_SDA</text>
+<line x1="680" y1="12220" x2="725" y2="12220" stroke="#607587"/><text x="685" y="12218">4</text><text x="735" y="12224" class="net">CENTRAL:I2C_SDA_HOST</text>
+<rect x="1320" y="12124" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="12142" style="font-weight:bold">CENTRAL_RPI2C_SDA_HOST  2.2k</text>
+<text x="1330" y="12159">i2c_pullup / 0603;0.1W;50V</text>
+<line x1="1330" y1="12172" x2="1375" y2="12172" stroke="#607587"/><text x="1335" y="12170">1</text><text x="1385" y="12176" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="12188" x2="1375" y2="12188" stroke="#607587"/><text x="1335" y="12186">2</text><text x="1385" y="12192" class="net">CENTRAL:I2C_SDA_HOST</text>
+<rect x="20" y="13218" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="13236" style="font-weight:bold">CENTRAL_RPI2C_SCL_HOST  2.2k</text>
+<text x="30" y="13253">i2c_pullup / 0603;0.1W;50V</text>
+<line x1="30" y1="13266" x2="75" y2="13266" stroke="#607587"/><text x="35" y="13264">1</text><text x="85" y="13270" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="13282" x2="75" y2="13282" stroke="#607587"/><text x="35" y="13280">2</text><text x="85" y="13286" class="net">CENTRAL:I2C_SCL_HOST</text>
+<rect x="670" y="13218" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="13236" style="font-weight:bold">CENTRAL_RPUP_I2C_SDA  2.2k</text>
+<text x="680" y="13253">i2c_pullup / 0603;0.1W;50V</text>
+<line x1="680" y1="13266" x2="725" y2="13266" stroke="#607587"/><text x="685" y="13264">1</text><text x="735" y="13270" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="13282" x2="725" y2="13282" stroke="#607587"/><text x="685" y="13280">2</text><text x="735" y="13286" class="net">CENTRAL:UP_I2C_SDA</text>
+<rect x="1320" y="13218" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="13236" style="font-weight:bold">CENTRAL_RPUP_I2C_SCL  2.2k</text>
+<text x="1330" y="13253">i2c_pullup / 0603;0.1W;50V</text>
+<line x1="1330" y1="13266" x2="1375" y2="13266" stroke="#607587"/><text x="1335" y="13264">1</text><text x="1385" y="13270" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="13282" x2="1375" y2="13282" stroke="#607587"/><text x="1335" y="13280">2</text><text x="1385" y="13286" class="net">CENTRAL:UP_I2C_SCL</text>
+<rect x="20" y="14312" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="14330" style="font-weight:bold">CENTRAL_RPDN_I2C_SDA  2.2k</text>
+<text x="30" y="14347">i2c_pullup / 0603;0.1W;50V</text>
+<line x1="30" y1="14360" x2="75" y2="14360" stroke="#607587"/><text x="35" y="14358">1</text><text x="85" y="14364" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="14376" x2="75" y2="14376" stroke="#607587"/><text x="35" y="14374">2</text><text x="85" y="14380" class="net">CENTRAL:DN_I2C_SDA</text>
+<rect x="670" y="14312" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="14330" style="font-weight:bold">CENTRAL_RPDN_I2C_SCL  2.2k</text>
+<text x="680" y="14347">i2c_pullup / 0603;0.1W;50V</text>
+<line x1="680" y1="14360" x2="725" y2="14360" stroke="#607587"/><text x="685" y="14358">1</text><text x="735" y="14364" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="14376" x2="725" y2="14376" stroke="#607587"/><text x="685" y="14374">2</text><text x="735" y="14380" class="net">CENTRAL:DN_I2C_SCL</text>
+<rect x="1320" y="14312" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="14330" style="font-weight:bold">CENTRAL_RPLOCAL_SDA  2.2k</text>
+<text x="1330" y="14347">i2c_pullup / 0603;0.1W;50V</text>
+<line x1="1330" y1="14360" x2="1375" y2="14360" stroke="#607587"/><text x="1335" y="14358">1</text><text x="1385" y="14364" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="14376" x2="1375" y2="14376" stroke="#607587"/><text x="1335" y="14374">2</text><text x="1385" y="14380" class="net">CENTRAL:LOCAL_SDA</text>
+<rect x="20" y="15406" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="15424" style="font-weight:bold">CENTRAL_RPLOCAL_SCL  2.2k</text>
+<text x="30" y="15441">i2c_pullup / 0603;0.1W;50V</text>
+<line x1="30" y1="15454" x2="75" y2="15454" stroke="#607587"/><text x="35" y="15452">1</text><text x="85" y="15458" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="15470" x2="75" y2="15470" stroke="#607587"/><text x="35" y="15468">2</text><text x="85" y="15474" class="net">CENTRAL:LOCAL_SCL</text>
+<rect x="670" y="15406" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="15424" style="font-weight:bold">CENTRAL_RIO_ADC_CONVST  33</text>
+<text x="680" y="15441">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="680" y1="15454" x2="725" y2="15454" stroke="#607587"/><text x="685" y="15452">1</text><text x="735" y="15458" class="net">CENTRAL:ADC_CONVST</text>
+<line x1="680" y1="15470" x2="725" y2="15470" stroke="#607587"/><text x="685" y="15468">2</text><text x="735" y="15474" class="net">CENTRAL:IO_ADC_CONVST</text>
+<rect x="1320" y="15406" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="15424" style="font-weight:bold">CENTRAL_RIO_ADC_RESET  33</text>
+<text x="1330" y="15441">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="1330" y1="15454" x2="1375" y2="15454" stroke="#607587"/><text x="1335" y="15452">1</text><text x="1385" y="15458" class="net">CENTRAL:ADC_RESET</text>
+<line x1="1330" y1="15470" x2="1375" y2="15470" stroke="#607587"/><text x="1335" y="15468">2</text><text x="1385" y="15474" class="net">CENTRAL:IO_ADC_RESET</text>
+<rect x="20" y="16500" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="16518" style="font-weight:bold">CENTRAL_RIO_ADC_SCLK  33</text>
+<text x="30" y="16535">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="30" y1="16548" x2="75" y2="16548" stroke="#607587"/><text x="35" y="16546">1</text><text x="85" y="16552" class="net">CENTRAL:ADC_SCLK</text>
+<line x1="30" y1="16564" x2="75" y2="16564" stroke="#607587"/><text x="35" y="16562">2</text><text x="85" y="16568" class="net">CENTRAL:IO_ADC_SCLK</text>
+<rect x="670" y="16500" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="16518" style="font-weight:bold">CENTRAL_RIO_ADC_CS_N  33</text>
+<text x="680" y="16535">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="680" y1="16548" x2="725" y2="16548" stroke="#607587"/><text x="685" y="16546">1</text><text x="735" y="16552" class="net">CENTRAL:ADC_CS_N</text>
+<line x1="680" y1="16564" x2="725" y2="16564" stroke="#607587"/><text x="685" y="16562">2</text><text x="735" y="16568" class="net">CENTRAL:IO_ADC_CS_N</text>
+<rect x="1320" y="16500" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="16518" style="font-weight:bold">CENTRAL_RIO_ADC_SDI  33</text>
+<text x="1330" y="16535">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="1330" y1="16548" x2="1375" y2="16548" stroke="#607587"/><text x="1335" y="16546">1</text><text x="1385" y="16552" class="net">CENTRAL:ADC_SDI</text>
+<line x1="1330" y1="16564" x2="1375" y2="16564" stroke="#607587"/><text x="1335" y="16562">2</text><text x="1385" y="16568" class="net">CENTRAL:IO_ADC_SDI</text>
+<rect x="20" y="17594" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="17612" style="font-weight:bold">CENTRAL_RIO_ADC_BUSY  33</text>
+<text x="30" y="17629">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="30" y1="17642" x2="75" y2="17642" stroke="#607587"/><text x="35" y="17640">1</text><text x="85" y="17646" class="net">CENTRAL:ADC_BUSY</text>
+<line x1="30" y1="17658" x2="75" y2="17658" stroke="#607587"/><text x="35" y="17656">2</text><text x="85" y="17662" class="net">CENTRAL:IO_ADC_BUSY</text>
+<rect x="670" y="17594" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="17612" style="font-weight:bold">CENTRAL_RIO_ADC_DOUT[0]  33</text>
+<text x="680" y="17629">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="680" y1="17642" x2="725" y2="17642" stroke="#607587"/><text x="685" y="17640">1</text><text x="735" y="17646" class="net">CENTRAL:ADC_DOUT[0]</text>
+<line x1="680" y1="17658" x2="725" y2="17658" stroke="#607587"/><text x="685" y="17656">2</text><text x="735" y="17662" class="net">CENTRAL:IO_ADC_DOUT[0]</text>
+<rect x="1320" y="17594" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="17612" style="font-weight:bold">CENTRAL_RIO_ADC_DOUT[1]  33</text>
+<text x="1330" y="17629">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="1330" y1="17642" x2="1375" y2="17642" stroke="#607587"/><text x="1335" y="17640">1</text><text x="1385" y="17646" class="net">CENTRAL:ADC_DOUT[1]</text>
+<line x1="1330" y1="17658" x2="1375" y2="17658" stroke="#607587"/><text x="1335" y="17656">2</text><text x="1385" y="17662" class="net">CENTRAL:IO_ADC_DOUT[1]</text>
+<rect x="20" y="18688" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="18706" style="font-weight:bold">CENTRAL_RIO_ADC_DOUT[2]  33</text>
+<text x="30" y="18723">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="30" y1="18736" x2="75" y2="18736" stroke="#607587"/><text x="35" y="18734">1</text><text x="85" y="18740" class="net">CENTRAL:ADC_DOUT[2]</text>
+<line x1="30" y1="18752" x2="75" y2="18752" stroke="#607587"/><text x="35" y="18750">2</text><text x="85" y="18756" class="net">CENTRAL:IO_ADC_DOUT[2]</text>
+<rect x="670" y="18688" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="18706" style="font-weight:bold">CENTRAL_RIO_ADC_DOUT[3]  33</text>
+<text x="680" y="18723">adc_digital_series / 0603;0.1W;50V</text>
+<line x1="680" y1="18736" x2="725" y2="18736" stroke="#607587"/><text x="685" y="18734">1</text><text x="735" y="18740" class="net">CENTRAL:ADC_DOUT[3]</text>
+<line x1="680" y1="18752" x2="725" y2="18752" stroke="#607587"/><text x="685" y="18750">2</text><text x="735" y="18756" class="net">CENTRAL:IO_ADC_DOUT[3]</text>
+<rect x="1320" y="18688" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="18706" style="font-weight:bold">CENTRAL_RDEFAULT_ADC_CONVST  10k</text>
+<text x="1330" y="18723">adc_default / 0603;0.1W;50V</text>
+<line x1="1330" y1="18736" x2="1375" y2="18736" stroke="#607587"/><text x="1335" y="18734">1</text><text x="1385" y="18740" class="net">CENTRAL:ADC_CONVST</text>
+<line x1="1330" y1="18752" x2="1375" y2="18752" stroke="#607587"/><text x="1335" y="18750">2</text><text x="1385" y="18756" class="net">CENTRAL:GND</text>
+<rect x="20" y="19782" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="19800" style="font-weight:bold">CENTRAL_RDEFAULT_ADC_RESET  10k</text>
+<text x="30" y="19817">adc_default / 0603;0.1W;50V</text>
+<line x1="30" y1="19830" x2="75" y2="19830" stroke="#607587"/><text x="35" y="19828">1</text><text x="85" y="19834" class="net">CENTRAL:ADC_RESET</text>
+<line x1="30" y1="19846" x2="75" y2="19846" stroke="#607587"/><text x="35" y="19844">2</text><text x="85" y="19850" class="net">CENTRAL:GND</text>
+<rect x="670" y="19782" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="19800" style="font-weight:bold">CENTRAL_RDEFAULT_ADC_SCLK  10k</text>
+<text x="680" y="19817">adc_default / 0603;0.1W;50V</text>
+<line x1="680" y1="19830" x2="725" y2="19830" stroke="#607587"/><text x="685" y="19828">1</text><text x="735" y="19834" class="net">CENTRAL:ADC_SCLK</text>
+<line x1="680" y1="19846" x2="725" y2="19846" stroke="#607587"/><text x="685" y="19844">2</text><text x="735" y="19850" class="net">CENTRAL:GND</text>
+<rect x="1320" y="19782" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="19800" style="font-weight:bold">CENTRAL_RDEFAULT_ADC_CS_N  10k</text>
+<text x="1330" y="19817">adc_default / 0603;0.1W;50V</text>
+<line x1="1330" y1="19830" x2="1375" y2="19830" stroke="#607587"/><text x="1335" y="19828">1</text><text x="1385" y="19834" class="net">CENTRAL:ADC_CS_N</text>
+<line x1="1330" y1="19846" x2="1375" y2="19846" stroke="#607587"/><text x="1335" y="19844">2</text><text x="1385" y="19850" class="net">CENTRAL:3V3</text>
+<rect x="20" y="20876" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="20894" style="font-weight:bold">CENTRAL_RDEFAULT_ADC_SDI  10k</text>
+<text x="30" y="20911">adc_default / 0603;0.1W;50V</text>
+<line x1="30" y1="20924" x2="75" y2="20924" stroke="#607587"/><text x="35" y="20922">1</text><text x="85" y="20928" class="net">CENTRAL:ADC_SDI</text>
+<line x1="30" y1="20940" x2="75" y2="20940" stroke="#607587"/><text x="35" y="20938">2</text><text x="85" y="20944" class="net">CENTRAL:GND</text>
+</svg>

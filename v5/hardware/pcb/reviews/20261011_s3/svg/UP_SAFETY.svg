@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="2068" viewBox="0 0 1950 2068">
+<style>text{font:12px monospace;fill:#172a3a}.title{font:bold 22px sans-serif}.net{fill:#176a47}.nc{fill:#b64d18}</style>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="22" y="35" class="title">v5 PCB-S3 UP / SAFETY — PIN / NET REVIEW CANDIDATE</text>
+<text x="22" y="65">Equal board-qualified labels are electrically common. NC = unconnected. Not native CAD / ERC NOT RUN.</text>
+<rect x="20" y="90" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="108" style="font-weight:bold">UP_U1R2  10k</text>
+<text x="30" y="125">fault_pullup / 0603;0.1W;50V</text>
+<line x1="30" y1="138" x2="75" y2="138" stroke="#607587"/><text x="35" y="136">1</text><text x="85" y="142" class="net">UP:MAIN_FLT_N</text>
+<line x1="30" y1="154" x2="75" y2="154" stroke="#607587"/><text x="35" y="152">2</text><text x="85" y="158" class="net">UP:3V3</text>
+<rect x="670" y="90" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="108" style="font-weight:bold">UP_U5R2  10k</text>
+<text x="680" y="125">fault_pullup / 0603;0.1W;50V</text>
+<line x1="680" y1="138" x2="725" y2="138" stroke="#607587"/><text x="685" y="136">1</text><text x="735" y="142" class="net">UP:TX_FLT_N</text>
+<line x1="680" y1="154" x2="725" y2="154" stroke="#607587"/><text x="685" y="152">2</text><text x="735" y="158" class="net">UP:3V3</text>
+<rect x="1320" y="90" width="620" height="194" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="108" style="font-weight:bold">UP_U10  TPS3851H33EDRBR</text>
+<text x="1330" y="125">uv_and_backup_watchdog / DRB8+EP</text>
+<line x1="1330" y1="138" x2="1375" y2="138" stroke="#607587"/><text x="1335" y="136">1</text><text x="1385" y="142" class="net">UP:3V3</text>
+<line x1="1330" y1="154" x2="1375" y2="154" stroke="#607587"/><text x="1335" y="152">2</text><text x="1385" y="158" class="net">UP:WD_CWD</text>
+<line x1="1330" y1="170" x2="1375" y2="170" stroke="#607587"/><text x="1335" y="168">3</text><text x="1385" y="174" class="net">UP:3V3</text>
+<line x1="1330" y1="186" x2="1375" y2="186" stroke="#607587"/><text x="1335" y="184">4</text><text x="1385" y="190" class="net">UP:GND</text>
+<line x1="1330" y1="202" x2="1375" y2="202" stroke="#607587"/><text x="1335" y="200">5</text><text x="1385" y="206" class="net">UP:3V3</text>
+<line x1="1330" y1="218" x2="1375" y2="218" stroke="#607587"/><text x="1335" y="216">6</text><text x="1385" y="222" class="net">UP:HB</text>
+<line x1="1330" y1="234" x2="1375" y2="234" stroke="#607587"/><text x="1335" y="232">7</text><text x="1385" y="238" class="net">UP:FAULT_N</text>
+<line x1="1330" y1="250" x2="1375" y2="250" stroke="#607587"/><text x="1335" y="248">8</text><text x="1385" y="254" class="net">UP:FAULT_N</text>
+<line x1="1330" y1="266" x2="1375" y2="266" stroke="#607587"/><text x="1335" y="264">9</text><text x="1385" y="270" class="net">UP:GND</text>
+<rect x="20" y="336" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="354" style="font-weight:bold">UP_R10  10k</text>
+<text x="30" y="371">watchdog_factory_select / 0603;0.1W;50V</text>
+<line x1="30" y1="384" x2="75" y2="384" stroke="#607587"/><text x="35" y="382">1</text><text x="85" y="388" class="net">UP:WD_CWD</text>
+<line x1="30" y1="400" x2="75" y2="400" stroke="#607587"/><text x="35" y="398">2</text><text x="85" y="404" class="net">UP:3V3</text>
+<rect x="670" y="336" width="620" height="226" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="354" style="font-weight:bold">UP_U11  TPS3430DRCR</text>
+<text x="680" y="371">early_late_watchdog / DRC10+EP</text>
+<line x1="680" y1="384" x2="725" y2="384" stroke="#607587"/><text x="685" y="382">1</text><text x="735" y="388" class="net">UP:3V3</text>
+<line x1="680" y1="400" x2="725" y2="400" stroke="#607587"/><text x="685" y="398">2</text><text x="735" y="404" class="nc">NC:UP_U11:2</text>
+<line x1="680" y1="416" x2="725" y2="416" stroke="#607587"/><text x="685" y="414">3</text><text x="735" y="420" class="net">UP:GND</text>
+<line x1="680" y1="432" x2="725" y2="432" stroke="#607587"/><text x="685" y="430">4</text><text x="735" y="436" class="nc">NC:UP_U11:4</text>
+<line x1="680" y1="448" x2="725" y2="448" stroke="#607587"/><text x="685" y="446">5</text><text x="735" y="452" class="net">UP:GND</text>
+<line x1="680" y1="464" x2="725" y2="464" stroke="#607587"/><text x="685" y="462">6</text><text x="735" y="468" class="net">UP:3V3</text>
+<line x1="680" y1="480" x2="725" y2="480" stroke="#607587"/><text x="685" y="478">7</text><text x="735" y="484" class="net">UP:HB</text>
+<line x1="680" y1="496" x2="725" y2="496" stroke="#607587"/><text x="685" y="494">8</text><text x="735" y="500" class="net">UP:FAULT_N</text>
+<line x1="680" y1="512" x2="725" y2="512" stroke="#607587"/><text x="685" y="510">9</text><text x="735" y="516" class="nc">NC:UP_U11:9</text>
+<line x1="680" y1="528" x2="725" y2="528" stroke="#607587"/><text x="685" y="526">10</text><text x="735" y="532" class="net">UP:3V3</text>
+<line x1="680" y1="544" x2="725" y2="544" stroke="#607587"/><text x="685" y="542">11</text><text x="735" y="548" class="net">UP:GND</text>
+<rect x="1320" y="336" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="354" style="font-weight:bold">UP_R11  10k</text>
+<text x="1330" y="371">heartbeat_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="384" x2="1375" y2="384" stroke="#607587"/><text x="1335" y="382">1</text><text x="1385" y="388" class="net">UP:HB</text>
+<line x1="1330" y1="400" x2="1375" y2="400" stroke="#607587"/><text x="1335" y="398">2</text><text x="1385" y="404" class="net">UP:GND</text>
+<rect x="20" y="582" width="620" height="146" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="600" style="font-weight:bold">UP_U12  TMP302ADRLR</text>
+<text x="30" y="617">independent_thermal_trip / DRL6</text>
+<line x1="30" y1="630" x2="75" y2="630" stroke="#607587"/><text x="35" y="628">1</text><text x="85" y="634" class="net">UP:3V3</text>
+<line x1="30" y1="646" x2="75" y2="646" stroke="#607587"/><text x="35" y="644">2</text><text x="85" y="650" class="net">UP:GND</text>
+<line x1="30" y1="662" x2="75" y2="662" stroke="#607587"/><text x="35" y="660">3</text><text x="85" y="666" class="net">UP:FAULT_N</text>
+<line x1="30" y1="678" x2="75" y2="678" stroke="#607587"/><text x="35" y="676">4</text><text x="85" y="682" class="net">UP:3V3</text>
+<line x1="30" y1="694" x2="75" y2="694" stroke="#607587"/><text x="35" y="692">5</text><text x="85" y="698" class="net">UP:3V3</text>
+<line x1="30" y1="710" x2="75" y2="710" stroke="#607587"/><text x="35" y="708">6</text><text x="85" y="714" class="net">UP:3V3</text>
+<rect x="670" y="582" width="620" height="178" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="600" style="font-weight:bold">UP_U13  SN74LVC1G74DCUR</text>
+<text x="680" y="617">fault_latch / DCU8</text>
+<line x1="680" y1="630" x2="725" y2="630" stroke="#607587"/><text x="685" y="628">1</text><text x="735" y="634" class="net">UP:ARM_CLK</text>
+<line x1="680" y1="646" x2="725" y2="646" stroke="#607587"/><text x="685" y="644">2</text><text x="735" y="650" class="net">UP:3V3</text>
+<line x1="680" y1="662" x2="725" y2="662" stroke="#607587"/><text x="685" y="660">3</text><text x="735" y="666" class="net">UP:NOT_ARMED</text>
+<line x1="680" y1="678" x2="725" y2="678" stroke="#607587"/><text x="685" y="676">4</text><text x="735" y="682" class="net">UP:GND</text>
+<line x1="680" y1="694" x2="725" y2="694" stroke="#607587"/><text x="685" y="692">5</text><text x="735" y="698" class="net">UP:ARMED</text>
+<line x1="680" y1="710" x2="725" y2="710" stroke="#607587"/><text x="685" y="708">6</text><text x="735" y="714" class="net">UP:FAULT_N</text>
+<line x1="680" y1="726" x2="725" y2="726" stroke="#607587"/><text x="685" y="724">7</text><text x="735" y="730" class="net">UP:3V3</text>
+<line x1="680" y1="742" x2="725" y2="742" stroke="#607587"/><text x="685" y="740">8</text><text x="735" y="746" class="net">UP:3V3</text>
+<rect x="1320" y="582" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="600" style="font-weight:bold">UP_R13  10k</text>
+<text x="1330" y="617">fault_pullup / 0603;0.1W;50V</text>
+<line x1="1330" y1="630" x2="1375" y2="630" stroke="#607587"/><text x="1335" y="628">1</text><text x="1385" y="634" class="net">UP:FAULT_N</text>
+<line x1="1330" y1="646" x2="1375" y2="646" stroke="#607587"/><text x="1335" y="644">2</text><text x="1385" y="650" class="net">UP:3V3</text>
+<rect x="20" y="828" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="846" style="font-weight:bold">UP_SW1  MOMENTARY_NO</text>
+<text x="30" y="863">manual_rearm / QUALIFY_SWITCH</text>
+<line x1="30" y1="876" x2="75" y2="876" stroke="#607587"/><text x="35" y="874">1</text><text x="85" y="880" class="net">UP:3V3</text>
+<line x1="30" y1="892" x2="75" y2="892" stroke="#607587"/><text x="35" y="890">2</text><text x="85" y="896" class="net">UP:ARM_RAW</text>
+<rect x="670" y="828" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="846" style="font-weight:bold">UP_R14  100k</text>
+<text x="680" y="863">debounce / 0603;0.1W;50V</text>
+<line x1="680" y1="876" x2="725" y2="876" stroke="#607587"/><text x="685" y="874">1</text><text x="735" y="880" class="net">UP:ARM_RAW</text>
+<line x1="680" y1="892" x2="725" y2="892" stroke="#607587"/><text x="685" y="890">2</text><text x="735" y="896" class="net">UP:GND</text>
+<rect x="1320" y="828" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="846" style="font-weight:bold">UP_C14  100nF</text>
+<text x="1330" y="863">debounce / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="876" x2="1375" y2="876" stroke="#607587"/><text x="1335" y="874">1</text><text x="1385" y="880" class="net">UP:ARM_RAW</text>
+<line x1="1330" y1="892" x2="1375" y2="892" stroke="#607587"/><text x="1335" y="890">2</text><text x="1385" y="896" class="net">UP:GND</text>
+<rect x="20" y="1074" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1092" style="font-weight:bold">UP_U14  SN74LVC1G17DBVR</text>
+<text x="30" y="1109">safety_logic / DBV5</text>
+<line x1="30" y1="1122" x2="75" y2="1122" stroke="#607587"/><text x="35" y="1120">1</text><text x="85" y="1126" class="nc">NC:UP_U14:1</text>
+<line x1="30" y1="1138" x2="75" y2="1138" stroke="#607587"/><text x="35" y="1136">2</text><text x="85" y="1142" class="net">UP:ARM_RAW</text>
+<line x1="30" y1="1154" x2="75" y2="1154" stroke="#607587"/><text x="35" y="1152">3</text><text x="85" y="1158" class="net">UP:GND</text>
+<line x1="30" y1="1170" x2="75" y2="1170" stroke="#607587"/><text x="35" y="1168">4</text><text x="85" y="1174" class="net">UP:ARM_CLK</text>
+<line x1="30" y1="1186" x2="75" y2="1186" stroke="#607587"/><text x="35" y="1184">5</text><text x="85" y="1190" class="net">UP:3V3</text>
+<rect x="670" y="1074" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1092" style="font-weight:bold">UP_JESTOP  NC_LOOP</text>
+<text x="680" y="1109">normally_closed_estop / keyed_2pin</text>
+<line x1="680" y1="1122" x2="725" y2="1122" stroke="#607587"/><text x="685" y="1120">1</text><text x="735" y="1126" class="net">UP:3V3</text>
+<line x1="680" y1="1138" x2="725" y2="1138" stroke="#607587"/><text x="685" y="1136">2</text><text x="735" y="1142" class="net">UP:ESTOP_OK</text>
+<rect x="1320" y="1074" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1092" style="font-weight:bold">UP_R15  10k</text>
+<text x="1330" y="1109">open_cable_fault / 0603;0.1W;50V</text>
+<line x1="1330" y1="1122" x2="1375" y2="1122" stroke="#607587"/><text x="1335" y="1120">1</text><text x="1385" y="1126" class="net">UP:ESTOP_OK</text>
+<line x1="1330" y1="1138" x2="1375" y2="1138" stroke="#607587"/><text x="1335" y="1136">2</text><text x="1385" y="1142" class="net">UP:GND</text>
+<rect x="20" y="1320" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1338" style="font-weight:bold">UP_U15  SN74LVC1G04DBVR</text>
+<text x="30" y="1355">safety_logic / DBV5</text>
+<line x1="30" y1="1368" x2="75" y2="1368" stroke="#607587"/><text x="35" y="1366">1</text><text x="85" y="1372" class="nc">NC:UP_U15:1</text>
+<line x1="30" y1="1384" x2="75" y2="1384" stroke="#607587"/><text x="35" y="1382">2</text><text x="85" y="1388" class="net">UP:ESTOP_OK</text>
+<line x1="30" y1="1400" x2="75" y2="1400" stroke="#607587"/><text x="35" y="1398">3</text><text x="85" y="1404" class="net">UP:GND</text>
+<line x1="30" y1="1416" x2="75" y2="1416" stroke="#607587"/><text x="35" y="1414">4</text><text x="85" y="1420" class="net">UP:ESTOP_BAD</text>
+<line x1="30" y1="1432" x2="75" y2="1432" stroke="#607587"/><text x="35" y="1430">5</text><text x="85" y="1436" class="net">UP:3V3</text>
+<rect x="670" y="1320" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1338" style="font-weight:bold">UP_R16  10k</text>
+<text x="680" y="1355">fault_sink_base / 0603;0.1W;50V</text>
+<line x1="680" y1="1368" x2="725" y2="1368" stroke="#607587"/><text x="685" y="1366">1</text><text x="735" y="1372" class="net">UP:ESTOP_BAD</text>
+<line x1="680" y1="1384" x2="725" y2="1384" stroke="#607587"/><text x="685" y="1382">2</text><text x="735" y="1388" class="net">UP:ESTOP_BASE</text>
+<rect x="1320" y="1320" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1338" style="font-weight:bold">UP_QSAFE  MMBT3904LT1G</text>
+<text x="1330" y="1355">estop_fault_sink / SOT23</text>
+<line x1="1330" y1="1368" x2="1375" y2="1368" stroke="#607587"/><text x="1335" y="1366">1</text><text x="1385" y="1372" class="net">UP:ESTOP_BASE</text>
+<line x1="1330" y1="1384" x2="1375" y2="1384" stroke="#607587"/><text x="1335" y="1382">2</text><text x="1385" y="1388" class="net">UP:GND</text>
+<line x1="1330" y1="1400" x2="1375" y2="1400" stroke="#607587"/><text x="1335" y="1398">3</text><text x="1385" y="1404" class="net">UP:FAULT_N</text>
+<rect x="20" y="1566" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1584" style="font-weight:bold">UP_R17  100k</text>
+<text x="30" y="1601">kill_enable_divider / 0603;0.1W;50V</text>
+<line x1="30" y1="1614" x2="75" y2="1614" stroke="#607587"/><text x="35" y="1612">1</text><text x="85" y="1618" class="net">UP:ARMED</text>
+<line x1="30" y1="1630" x2="75" y2="1630" stroke="#607587"/><text x="35" y="1628">2</text><text x="85" y="1634" class="net">UP:KILL_EN</text>
+<rect x="670" y="1566" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1584" style="font-weight:bold">UP_R18  100k</text>
+<text x="680" y="1601">kill_enable_divider / 0603;0.1W;50V</text>
+<line x1="680" y1="1614" x2="725" y2="1614" stroke="#607587"/><text x="685" y="1612">1</text><text x="735" y="1618" class="net">UP:KILL_EN</text>
+<line x1="680" y1="1630" x2="725" y2="1630" stroke="#607587"/><text x="685" y="1628">2</text><text x="735" y="1634" class="net">UP:GND</text>
+<rect x="1320" y="1566" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1584" style="font-weight:bold">UP_U16  SN74LVC1G32DBVR</text>
+<text x="1330" y="1601">safety_logic / DBV5</text>
+<line x1="1330" y1="1614" x2="1375" y2="1614" stroke="#607587"/><text x="1335" y="1612">1</text><text x="1385" y="1618" class="net">UP:NOT_ARMED</text>
+<line x1="1330" y1="1630" x2="1375" y2="1630" stroke="#607587"/><text x="1335" y="1628">2</text><text x="1385" y="1634" class="net">UP:B_OE_N</text>
+<line x1="1330" y1="1646" x2="1375" y2="1646" stroke="#607587"/><text x="1335" y="1644">3</text><text x="1385" y="1650" class="net">UP:GND</text>
+<line x1="1330" y1="1662" x2="1375" y2="1662" stroke="#607587"/><text x="1335" y="1660">4</text><text x="1385" y="1666" class="net">UP:DISABLE_A</text>
+<line x1="1330" y1="1678" x2="1375" y2="1678" stroke="#607587"/><text x="1335" y="1676">5</text><text x="1385" y="1682" class="net">UP:3V3</text>
+<rect x="20" y="1812" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1830" style="font-weight:bold">UP_U17  SN74LVC1G04DBVR</text>
+<text x="30" y="1847">safety_logic / DBV5</text>
+<line x1="30" y1="1860" x2="75" y2="1860" stroke="#607587"/><text x="35" y="1858">1</text><text x="85" y="1864" class="nc">NC:UP_U17:1</text>
+<line x1="30" y1="1876" x2="75" y2="1876" stroke="#607587"/><text x="35" y="1874">2</text><text x="85" y="1880" class="net">UP:FAULT_N</text>
+<line x1="30" y1="1892" x2="75" y2="1892" stroke="#607587"/><text x="35" y="1890">3</text><text x="85" y="1896" class="net">UP:GND</text>
+<line x1="30" y1="1908" x2="75" y2="1908" stroke="#607587"/><text x="35" y="1906">4</text><text x="85" y="1912" class="net">UP:FAULT_BAD</text>
+<line x1="30" y1="1924" x2="75" y2="1924" stroke="#607587"/><text x="35" y="1922">5</text><text x="85" y="1928" class="net">UP:3V3</text>
+<rect x="670" y="1812" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1830" style="font-weight:bold">UP_U18  SN74LVC1G32DBVR</text>
+<text x="680" y="1847">safety_logic / DBV5</text>
+<line x1="680" y1="1860" x2="725" y2="1860" stroke="#607587"/><text x="685" y="1858">1</text><text x="735" y="1864" class="net">UP:FAULT_BAD</text>
+<line x1="680" y1="1876" x2="725" y2="1876" stroke="#607587"/><text x="685" y="1874">2</text><text x="735" y="1880" class="net">UP:DISABLE_A</text>
+<line x1="680" y1="1892" x2="725" y2="1892" stroke="#607587"/><text x="685" y="1890">3</text><text x="735" y="1896" class="net">UP:GND</text>
+<line x1="680" y1="1908" x2="725" y2="1908" stroke="#607587"/><text x="685" y="1906">4</text><text x="735" y="1912" class="net">UP:595_OE_N</text>
+<line x1="680" y1="1924" x2="725" y2="1924" stroke="#607587"/><text x="685" y="1922">5</text><text x="735" y="1928" class="net">UP:3V3</text>
+<rect x="1320" y="1812" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1830" style="font-weight:bold">UP_R19  10k</text>
+<text x="1330" y="1847">disable_default / 0603;0.1W;50V</text>
+<line x1="1330" y1="1860" x2="1375" y2="1860" stroke="#607587"/><text x="1335" y="1858">1</text><text x="1385" y="1864" class="net">UP:595_OE_N</text>
+<line x1="1330" y1="1876" x2="1375" y2="1876" stroke="#607587"/><text x="1335" y="1874">2</text><text x="1385" y="1880" class="net">UP:3V3</text>
+</svg>

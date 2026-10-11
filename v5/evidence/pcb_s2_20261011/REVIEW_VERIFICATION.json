@@ -1,0 +1,205 @@
+{
+  "status": "PASS",
+  "classification": "TESTED_REVIEW_ARTIFACTS_ALTERNATIVE_VALIDATION_NO_HARDWARE",
+  "checks": [
+    {
+      "name": "RC_TIME_DOMAIN_ENERGY",
+      "status": "PASS",
+      "detail": {
+        "numerical_W": 0.01267833914371245,
+        "closed_form_W": 0.012672,
+        "relative_error": 0.0005002480833689038
+      }
+    },
+    {
+      "name": "BUCK_SWITCHED_VOLTAGE_INTEGRAL",
+      "status": "PASS",
+      "detail": {
+        "numerical_delta_A": 0.3605769230769984,
+        "closed_form_delta_A": 0.360576923076923,
+        "end_current_A": -5.10506079683809e-14
+      }
+    },
+    {
+      "name": "WORKBOOK_FORMULAS",
+      "status": "PASS",
+      "detail": 1010
+    },
+    {
+      "name": "OLD_INSTALLED_COUNTS",
+      "status": "PASS",
+      "detail": {
+        "Upper": 551,
+        "Lower": 551,
+        "Central": 83,
+        "External": 20
+      }
+    },
+    {
+      "name": "WORKBOOK_VS_CONTRACT_EVERY_ITEM",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "SUPERVISOR_EXACT_2",
+      "status": "PASS",
+      "detail": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "OLD_SUPERVISOR_INSTALLED_ZERO",
+      "status": "PASS",
+      "detail": "provenance retained"
+    },
+    {
+      "name": "ONLY_APPROVED_BOM_CHANGE",
+      "status": "PASS",
+      "detail": "Not final purchase count"
+    },
+    {
+      "name": "ALL_860_PASSIVE_ITEMS_BLOCKED",
+      "status": "PASS",
+      "detail": 860
+    },
+    {
+      "name": "NO_DUPLICATE_INVENTORY_REF",
+      "status": "PASS",
+      "detail": "does not prove functional deduplication"
+    },
+    {
+      "name": "KNOWN_INVALID_1P65K_REJECTED",
+      "status": "PASS",
+      "detail": {
+        "R_ohm": 1650,
+        "I_nom_A": 10.909090909090908,
+        "I_lo_7percent_plus_Rtol_A": 10.045004500450045,
+        "I_hi_7percent_plus_Rtol_A": 11.790633608815426,
+        "status": "INVALID_LT_3K"
+      }
+    },
+    {
+      "name": "INA_RANGE_FAILURE_RECORDED",
+      "status": "PASS",
+      "detail": "100mV >81.92mV; REVISE"
+    },
+    {
+      "name": "DELIVERABLE_0",
+      "status": "PASS",
+      "detail": [
+        "00_BASELINE_AND_RECONCILIATION.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_1",
+      "status": "PASS",
+      "detail": [
+        "01_OPEN_SOURCE_EVIDENCE.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_2",
+      "status": "PASS",
+      "detail": [
+        "02_THREE_BOARD_ARCHITECTURE_REVIEW.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_3",
+      "status": "PASS",
+      "detail": [
+        "03_POWER_DRIVER_AND_THERMAL_BUDGET.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_4",
+      "status": "PASS",
+      "detail": [
+        "04_TPS3851_SUPERVISOR_AND_KILL_CHAIN.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_5",
+      "status": "PASS",
+      "detail": [
+        "05_ADC_RX_AFE_ANALOG_REVIEW.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_6",
+      "status": "PASS",
+      "detail": [
+        "06_PASSIVE_CALC_REGISTER.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_7",
+      "status": "PASS",
+      "detail": [
+        "07_BOM_AUDIT_REPORT.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_8",
+      "status": "PASS",
+      "detail": [
+        "08_RISK_BLOCKERS_AND_DECISION_REQUESTS.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_9",
+      "status": "PASS",
+      "detail": [
+        "09_VERIFICATION_MATRIX.md"
+      ]
+    },
+    {
+      "name": "DELIVERABLE_10",
+      "status": "PASS",
+      "detail": [
+        "10_EXECUTIVE_SUMMARY.md"
+      ]
+    },
+    {
+      "name": "PROTECTED_SCOPE_v5/rtl",
+      "status": "PASS",
+      "detail": "Git diff only; no archive read"
+    },
+    {
+      "name": "PROTECTED_SCOPE_v5/ps",
+      "status": "PASS",
+      "detail": "Git diff only; no archive read"
+    },
+    {
+      "name": "PROTECTED_SCOPE_v5/config",
+      "status": "PASS",
+      "detail": "Git diff only; no archive read"
+    },
+    {
+      "name": "PROTECTED_SCOPE_v5/tests",
+      "status": "PASS",
+      "detail": "Git diff only; no archive read"
+    },
+    {
+      "name": "PROTECTED_SCOPE_v5/scripts",
+      "status": "PASS",
+      "detail": "Git diff only; no archive read"
+    },
+    {
+      "name": "PROTECTED_SCOPE_v5/golden",
+      "status": "PASS",
+      "detail": "Git diff only; no archive read"
+    },
+    {
+      "name": "PROTECTED_SCOPE_v5/constraints",
+      "status": "PASS",
+      "detail": "Git diff only; no archive read"
+    }
+  ],
+  "calculation_sha256": "e0fc122318507f4058c6266b23efd2c3eabae02dbf6dfca105d76ff43ee05096",
+  "unit_test_claim": "Existing243 remains243; review checks are separate"
+}

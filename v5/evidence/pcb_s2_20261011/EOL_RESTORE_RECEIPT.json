@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "restored": [
+    {
+      "path": "shared/migration/ACTIVE_TREE_ALLOWLIST.json",
+      "sha256": "960e06c716e08aa84469047339f98587407be280c8ee1d7decf1c50fad88a144"
+    },
+    {
+      "path": "shared/migration/RUNBOOK.md",
+      "sha256": "87b7160cbd2a9ce801b74aa2fa008baaddbb2d18f4d72655f208a45b5ac2f4ba"
+    },
+    {
+      "path": "shared/repository_cleanup/ARCHIVE_INDEX_IDENTITIES.json",
+      "sha256": "5a7561ca0d742afae80f14f73b9bb2654e4c6cfa67b4bbce034c63f98d496c3c"
+    },
+    {
+      "path": "shared/repository_cleanup/ARCHIVE_PATH_MAP.json",
+      "sha256": "50643655e3d8cd1d7df446323f92ac4b94185a672524ed0e5ffc64243ff60a1c"
+    },
+    {
+      "path": "shared/repository_cleanup/search_current.ps1",
+      "sha256": "408633b88be96cd2cde90c2f9eaa2cdd5f9248a8d19dc090d54e5f27d32fc74e"
+    },
+    {
+      "path": "v5/README.md",
+      "sha256": "8a11a8110ff513b289b0c5c79a73e3583094c82a22822c42512852f52ab62da5"
+    },
+    {
+      "path": "v5/scripts/check_workspace_migration.py",
+      "sha256": "0d7f0b3a3802af997279e911908f6b4cd1472121191716a39e378851284ed2e4"
+    }
+  ],
+  "scope": "only documented current-worktree preparation; original workspace unchanged"
+}

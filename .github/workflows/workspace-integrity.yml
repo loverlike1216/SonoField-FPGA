@@ -43,3 +43,9 @@ jobs:
             FREEZE_BASE=$(python -c "import json; print(json.load(open('shared/migration/OLD_TRACKED_MANIFEST.json'))['base_commit'])")
           fi
           python v5/scripts/check_workspace_migration.py --freeze-base "$FREEZE_BASE"
+      - name: PCB-S3 static candidate and power envelopes (not native ERC)
+        if: hashFiles('v5/hardware/pcb/reviews/20261011_s3/calc/inputs.json') != ''
+        run: |
+          python v5/hardware/pcb/reviews/20261011_s3/calc/power_worst_case.py
+          python v5/hardware/pcb/reviews/20261011_s3/calc/review_candidate.py
+          python v5/hardware/pcb/reviews/20261011_s3/calc/verify_workbooks.py

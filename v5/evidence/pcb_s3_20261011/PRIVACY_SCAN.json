@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "Explicit staged current files only; no frozen archive body access",
+  "files_scanned": 111,
+  "rules": [
+    "credential",
+    "private_key",
+    "personal_home_path",
+    "assigned_secret"
+  ],
+  "findings": [],
+  "public_repo": true,
+  "recorded_at": "2026-10-11T06:45:15.345086+00:00",
+  "boundary": "Pattern scan plus manual privacy review, not a guarantee of all possible secrets; raw vendor/media/personal inputs excluded"
+}

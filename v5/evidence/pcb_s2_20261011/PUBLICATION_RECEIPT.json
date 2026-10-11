@@ -1,0 +1,47 @@
+{
+  "status": "PUBLISHED_DRAFT_REMOTE_VERIFIED",
+  "recorded_at": "2026-10-11T04:26:55.617745+00:00",
+  "review_content_commit": "a6935a1fc7170a7b3ccb2ad649a4d6c1e82cfdb4",
+  "pr": {
+    "baseRefName": "codex/v5-hardware-design-20261011",
+    "headRefName": "feat/v5-pcb-design",
+    "headRefOid": "a6935a1fc7170a7b3ccb2ad649a4d6c1e82cfdb4",
+    "isDraft": true,
+    "number": 6,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-11T04:26:12Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38111565737/job/114388040506",
+        "name": "integrity",
+        "startedAt": "2026-10-11T04:26:05Z",
+        "status": "COMPLETED",
+        "workflowName": "v5 workspace integrity"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-11T04:25:44Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38111537401/job/114387956846",
+        "name": "integrity",
+        "startedAt": "2026-10-11T04:25:34Z",
+        "status": "COMPLETED",
+        "workflowName": "v5 workspace integrity"
+      }
+    ],
+    "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/6"
+  },
+  "remote_refs": {
+    "refs/heads/codex/v5-hardware-design-20261011": "8c27b5841b5494c3761ab211881a3ea2be63e8c8",
+    "refs/heads/feat/v5-pcb-design": "a6935a1fc7170a7b3ccb2ad649a4d6c1e82cfdb4",
+    "refs/heads/main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570"
+  },
+  "canonical_input_remote_sha256": "d14eb709d7b625158ba40af32b2b0c56166101dc6e4beeb68b485d5d2da35e2e",
+  "note": "Observed content commit and CI before this receipt commit. The containing receipt commit resolves via git log -1 --format=%H -- v5/evidence/pcb_s2_20261011/PUBLICATION_RECEIPT.json. Final head checks require a later live snapshot; no self-referential guessed commit.",
+  "main_merge": "NOT_PERFORMED",
+  "manufacturing": "HOLD",
+  "electrical_result": "REVISE",
+  "S2_C": "BLOCKED"
+}

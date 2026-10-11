@@ -1,0 +1,27 @@
+# PCB workstream state
+
+{
+  "project_id": "SONOFIELD_FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace": "E:\\Codex_project\\AMD_Sonofield_PCB_v5",
+  "branch": "feat/v5-pcb-design",
+  "base_commit": "8c27b5841b5494c3761ab211881a3ea2be63e8c8",
+  "dependency_pr": 5,
+  "active_version": "v5",
+  "current_stage": "V5_PCB_S2_REVIEW_DELIVERED_ELECTRICAL_HOLD",
+  "S2_A": "DELIVERED",
+  "S2_B": "REVISE",
+  "S2_C": "BLOCKED",
+  "native_schematic": "NOT_CREATED",
+  "ERC": "NOT_RUN",
+  "manufacturing": "HOLD",
+  "BOM": "HOLD",
+  "problem_id": "P-20261011-001",
+  "problem_hash": "ff10749ee46342eae17ecc5eff632b9131055199be6eb2cfb0583c16d79ec77f",
+  "pr_url": "https://github.com/loverlike1216/SonoField-FPGA/pull/6",
+  "review_content_commit": "a6935a1fc7170a7b3ccb2ad649a4d6c1e82cfdb4",
+  "publication_status": "PUBLISHED_DRAFT_REMOTE_VERIFIED",
+  "publication_receipt": "v5/evidence/pcb_s2_20261011/PUBLICATION_RECEIPT.json"
+}
+
+Read reviews/20261011_s2/10_EXECUTIVE_SUMMARY.md then the open problem. Preserve v5 and main HOLD.

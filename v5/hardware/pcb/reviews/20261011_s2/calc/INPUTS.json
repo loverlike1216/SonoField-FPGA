@@ -1,0 +1,30 @@
+{
+  "classification": "ENGINEERING_ASSUMPTIONS_UNLESS_SPECIFICALLY_SOURCED",
+  "C0_F": 2.2e-09,
+  "C0_tolerance": 0.2,
+  "frequency_Hz": 40000,
+  "voltage_step_V": 12,
+  "Vrail_corners_V": [
+    10.8,
+    12,
+    13.2
+  ],
+  "buck_fsw_min_Hz": 390000,
+  "buck_L_tolerance": 0.2,
+  "buck_load_A": 0.5,
+  "buck_stress_load_A": 2,
+  "ambient_assumption_C": 60,
+  "buck_Vref_bounds_V": [
+    0.581,
+    0.596,
+    0.611
+  ],
+  "feedback_R_tolerance": 0.001,
+  "charge_model": "fully settled non-energy-recovering ideal capacitor; excludes motional branch and driver cross conduction",
+  "sources": {
+    "C0": "User S2 instruction section4 GateA, assumption only; no vendor validation",
+    "buck": "TPS54202 RevC sections5.5/7.2.3; 390kHz min; 2A rated",
+    "watchdog": "TPS3851 RevB sections5.5/5.6/7.1.1.2",
+    "efuse": "TPS2663 RevG table6.5 and eq8 p30; 18 A*kOhm/RkOhm"
+  }
+}

@@ -1,0 +1,561 @@
+{
+  "scope": "Staged S3 content at f23e17b excluding manifest/scan receipt; later publication/state/interaction updates are outside this frozen content snapshot",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "sha256": "393c44e8f84ae6b31f363d9a7db3ae9c1e9759bc890d19877f89d4680f2ce9fc",
+      "bytes": 3761
+    },
+    {
+      "path": ".github/workflows/workspace-integrity.yml",
+      "sha256": "210345c73789f44e23e97f1f39b5386007d5a279ae902abdbbb647fa33f1d09a",
+      "bytes": 2202
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "4fc181ab057aff2bd396bd84f9074e0c11750bb5a165048805d0f01f46afe8b2",
+      "bytes": 7279
+    },
+    {
+      "path": "AI-interaction-memory/INDEX.md",
+      "sha256": "c58871626c2385ed2174c6aec27a5b8daac3a3cd0a4c3c8f447c1241635bf719",
+      "bytes": 7899
+    },
+    {
+      "path": "AI-interaction-memory/codex/S-20261011-pcb-s3-001.md",
+      "sha256": "c0553f4361c2945ff5d567fd2dc2a9900bf438c3c2cdcf2ecc007ca828e06951",
+      "bytes": 6427
+    },
+    {
+      "path": "AI-interaction-memory/codex/S-20261011-pcb-s3-001.tools.json",
+      "sha256": "17acdf934355b3ca26588dd389aa99e8b17a4c74fed3dddd14ba3c5e92be8e22",
+      "bytes": 38022
+    },
+    {
+      "path": "AI-interaction-memory/codex/instructions/v5_pcb_s3_engineering_20261011.md",
+      "sha256": "b3a33a2b0541e8626ea952f2c6c8288ae0a78b8133f024c1cd05c42036475e44",
+      "bytes": 28532
+    },
+    {
+      "path": "AI-interaction-memory/tool-flow/T-20261011-PCB-S3__device-candidate.md",
+      "sha256": "b868645d2adcd9adb30a64e5d29c879ae6cbc790eb88addd581083245cde836a",
+      "bytes": 4520
+    },
+    {
+      "path": "AI-problem/decision/P-20261011-001__pcb-supervisor-user-direction.md",
+      "sha256": "bcaa592be42d297e93cb6b7e802c27a3a93313cba15b8060914f2ca0748485cf",
+      "bytes": 2805
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "556c010b97aa69a88695900f0a153c5b70274bec74e8d72b83f148f074fc1e90",
+      "bytes": 5024
+    },
+    {
+      "path": "README.md",
+      "sha256": "1323ed4204e569858277bcaefa77b216c66c8c797b37195dc9ff51e745d6f5af",
+      "bytes": 4564
+    },
+    {
+      "path": "shared/ACCEPTANCE.md",
+      "sha256": "c0658eefb215e53b461e6768c1dac3ade960cdc6eeb7c28d36786c27ca59f085",
+      "bytes": 2607
+    },
+    {
+      "path": "shared/BLOCKERS.md",
+      "sha256": "9d90dacb97c33ed2053c8ee971816b2fa8a0ece9e377e555195ad394d54c12f2",
+      "bytes": 3264
+    },
+    {
+      "path": "shared/CONTEXT_CHECKPOINT.json",
+      "sha256": "b3f16884ccc6ea91c3071d1afe9db53480f52e7a3921c3376d0771f0b4b6613d",
+      "bytes": 3575
+    },
+    {
+      "path": "shared/CONTEXT_CHECKPOINT.md",
+      "sha256": "08c4cff10acc5caaee9a108abb375cb4989e66a5c50ef7fcb2e2adbb57ddef85",
+      "bytes": 5662
+    },
+    {
+      "path": "shared/CURRENT_PLAN.md",
+      "sha256": "07bcb4996f20c45156ab8337929cae7d862e7bfd6e278495373fef11329f72a2",
+      "bytes": 3041
+    },
+    {
+      "path": "shared/DECISIONS.md",
+      "sha256": "bb483f1b141ad42f839f1c55ac2ff097abb1f6749183a4f7c848951aa87322c7",
+      "bytes": 13249
+    },
+    {
+      "path": "shared/HANDOFF.md",
+      "sha256": "dc52d82a19be4d49631a6ee1d11ab3abfd14edeb30e1a2ea113511df1986b975",
+      "bytes": 1263
+    },
+    {
+      "path": "shared/PROJECT_STATE.json",
+      "sha256": "ed8ad3049ddd1699d9d95351d92851c3c029fa32b1da6d944eb4e7063c0de249",
+      "bytes": 10618
+    },
+    {
+      "path": "shared/PROJECT_STATE.md",
+      "sha256": "e5abc61b4ff21336e3de45ab49cf5b0bc3093bc8ae8f28b1fbaca938001b304f",
+      "bytes": 4535
+    },
+    {
+      "path": "shared/context-checkpoints/CP-20261011-003__v5__pcb-s3.md",
+      "sha256": "08c4cff10acc5caaee9a108abb375cb4989e66a5c50ef7fcb2e2adbb57ddef85",
+      "bytes": 5662
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/.gitignore",
+      "sha256": "2fae2521d3672a78c8f5f5283b8b029d67c5389fc05c18c4da36b16f60058ad8",
+      "bytes": 41
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/AFE_FREQUENCY_SWEEP.csv",
+      "sha256": "fb8869b5121a6965e0c2438b71ed9f3c5cfe6dfe6f758ee57ef862e2784e58b6",
+      "bytes": 1687
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/CANDIDATE_COUNTS.json",
+      "sha256": "fc2ba413e49f2a62bcf17510a8324032d1ec4dd16843961ea8e6e28267114ac5",
+      "bytes": 405
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/DECISION_VALIDATION.json",
+      "sha256": "9407b3645e3e773468a489244914ac50be06b86b3724c1cf184297a450cfe696",
+      "bytes": 523
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/FINAL_VERIFICATION.json",
+      "sha256": "e1f20760778da65e5d6a8ccbd920b105e61ff192133e72b5ec026e8e78d4ad91",
+      "bytes": 3375
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/HARDWARE_MODEL_CHECK.json",
+      "sha256": "445d23719282794a5dcd8d06658dae5a1299d60e44eb37407deeab28243df3fd",
+      "bytes": 8693
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/INHERITANCE_CHECK.json",
+      "sha256": "05d23c075d7060ad2bc17d6991a87d091abad7a3862acbbec5766daad409703b",
+      "bytes": 274
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/POWER_RESULTS.json",
+      "sha256": "38933d96311c1fee88bc965dd6d482ee6ae502b918cb681520282c905f8f9d42",
+      "bytes": 1330
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/PREFLIGHT.json",
+      "sha256": "ba09f266485b20f45472e6033976a8a65185869b5562c9a7b7e0ffe5e412cc9a",
+      "bytes": 800
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/PROTECTED_HASH_CHECK.json",
+      "sha256": "3c26482218e94ada68cd09118754bb5a9fa6a1cd814712f6a75b82c4bd4ac8a6",
+      "bytes": 2370
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/SAFETY_TRUTH_TABLE.csv",
+      "sha256": "a39656328dc994693129c2ed5f4dcb7a37ac4632dfdf11da26aad3b827885fa7",
+      "bytes": 4933
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/SEMANTIC_REVIEW.json",
+      "sha256": "16a310a37f0f7fed83de96fd4c453c9c48567fe4f0db2cbb1253cf170b220b8a",
+      "bytes": 5997
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/SEMANTIC_REVIEW_FAILED_01.json",
+      "sha256": "90e6ebc7d2fb2a4d9cba4f5f234b52a9c03942e2f38ff0c9b3df3bae1c3139ac",
+      "bytes": 5663
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/SESSION_MANIFEST.json",
+      "sha256": "6e37b5725f99cabb93755e934ef323c0bd9b0088c07458da5fb0ef3d53fbe30b",
+      "bytes": 1022
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/SINGLE_ENDPOINT_NET_REVIEW.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "bytes": 4
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/SOURCE_MANIFEST.json",
+      "sha256": "2a1f0ff9f76de579389d5d6595e74e39e9c4809de0382396162d9018b37b85d8",
+      "bytes": 10369
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/SOURCE_MANIFEST_FIRST_PASS.json",
+      "sha256": "613041a5d0cd83587fedb5a4562e2949cd4c2bb05a789f2a9e7cd5bcbd2eac95",
+      "bytes": 9435
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/STRUCTURE_CHECK.json",
+      "sha256": "997c0b0be5d22400572fa4f0c637aacad9f3374f154c95791876319b6c5e1566",
+      "bytes": 181
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/WORKBOOK_BOM_INSPECT.json",
+      "sha256": "7f724151a45debc1df7b819434e2f89c24c585f298a304a22c7fce9cc614831b",
+      "bytes": 382
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/WORKBOOK_POWER_INSPECT.json",
+      "sha256": "eaba7addb34bf4ebaf8a99ad6c9d3f0303377f5b59d07d4c82018f4b2bb95875",
+      "bytes": 382
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/WORKBOOK_VERIFICATION.json",
+      "sha256": "428fd6de8bba3079fd8499023a11ef61ac3dbbd13edafd9515211ee64ce0e164",
+      "bytes": 619
+    },
+    {
+      "path": "v5/evidence/pcb_s3_20261011/WORKSPACE_INTEGRITY.json",
+      "sha256": "52d78a08b92bddd15701f7feae20c10a3e14e5a0d582d2f59bbbd280779a9503",
+      "bytes": 2052
+    },
+    {
+      "path": "v5/hardware/pcb/PCB_PROJECT_STATE.json",
+      "sha256": "65f33f2032578c6a73cfe3b21fb64360cb1361c5780faf7a7cb30780ff3abb04",
+      "bytes": 1342
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/.gitignore",
+      "sha256": "f62d22ff7e8b2ed18b32e19a788a62c5949c86aeda548809586b303ec4a061ff",
+      "bytes": 22
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/00_BASELINE_AND_EXECUTION_SCOPE.md",
+      "sha256": "88996d93cb449fdcdfb8d28891b1dd862012aa5ef908cf103eda8779f647ddf9",
+      "bytes": 2340
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/01_DATASHEET_MAX_RATINGS_REGISTER.csv",
+      "sha256": "7ed3a6bdb7d2e7109d8226630245d73213b67043259bcbe56f90b683e0114b34",
+      "bytes": 31283
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/02_OPERATING_CONDITIONS.csv",
+      "sha256": "ec791618925189c233ab21a565f69c8423e0206ef92de48e6bd7684c6184b17d",
+      "bytes": 2475
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/02_THREE_BOARD_POWER_BUDGET.csv",
+      "sha256": "1200db6af1f04ec421b2900d6ff1b46a8b318ba594bb96a45036682522753c80",
+      "bytes": 118524
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/02_THREE_BOARD_POWER_BUDGET.xlsx",
+      "sha256": "3845ae1a9cae767405118360356debc285d6827a18013cb0fed044f86b23aa38",
+      "bytes": 100404
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/03_POWER_SELECTION_FINAL_RECOMMENDATION.md",
+      "sha256": "45c2afb47782aa5da2905e25b5b925d969f80c3c63ff3f125b2c49e8e7bbeae7",
+      "bytes": 3116
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/04_TX_POWER_ENABLE_AND_SAFETY_SCHEMATIC.md",
+      "sha256": "ae5c2a61242b9a30d2b46de3572889ca9bdd6f6bf460b3450fce5f207ddd67c2",
+      "bytes": 2978
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/05_TX_CHANNEL_MAPPING.csv",
+      "sha256": "ccf69405366974d12961a03a71c808e7082ab04da3bf9fd7dad829a5f10afd22",
+      "bytes": 7119
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/05_TX_DRIVER_64CH_SCHEMA_AND_THERMAL.md",
+      "sha256": "1baf356eb1ea420ccd9a62417552d2c09b6637d990a07973aef3fb5e9b7c8c0a",
+      "bytes": 2530
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/06_RX_AFE_ADC_AND_CENTRAL_USB_C.md",
+      "sha256": "4a120dac60bce3130930514afee5b5029463048355c4252325f8cbf2e971796c",
+      "bytes": 2930
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/07_PASSIVE_VALUE_REGISTER.csv",
+      "sha256": "b19830345ff9ff26d6e33fd8f4abe4118632174270fad45f877bf2469043a071",
+      "bytes": 290062
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/08_CONNECTOR_SI_GROUND_MECHANICAL_REVIEW.md",
+      "sha256": "3e34d1948009cf63dd869a34b286a9f879030440c0f9411d19ddfdd1a3a628ff",
+      "bytes": 2096
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/08_INTERBOARD_CONNECTIONS.csv",
+      "sha256": "56963f170a347965ecc4ae4680b24ec3c1276543b6bf6cc3c4f629172b8d647a",
+      "bytes": 13212
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/08_NOMINAL_TX_GEOMETRY.csv",
+      "sha256": "8e7ee2dbf65a9bcc5b8ee3eea082db543c22db860129858ce1ebbfb19c703493",
+      "bytes": 9386
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/09_SCHEMATIC_NETLIST_ERC_AND_REVIEW.md",
+      "sha256": "2a587a87417e2a0a6cf73af1dcd5b1ea6bdb9d7a78267a10abd690b5912174c6",
+      "bytes": 1953
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/10_BOM_RECONCILIATION.md",
+      "sha256": "c1579894d98666aba44ac6f650caf04a2814cd5395d332e2aac38859ba0a32c0",
+      "bytes": 1804
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/10_BOM_RELEASE_CANDIDATE_DELTA.csv",
+      "sha256": "1d30f6edd3802529f34a25a06df6191f6f1cebb02a045d214ad78d6c7a348ab9",
+      "bytes": 60764
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/10_BOM_RELEASE_CANDIDATE_DELTA.xlsx",
+      "sha256": "9a4ef1f6040d175fdcea1110ebf2ece3ed1e48481cf4431e7f65d8d1243c31e3",
+      "bytes": 96487
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/11_FINAL_ENGINEERING_REVIEW_AND_REMAINING_GATES.md",
+      "sha256": "91086e2a2d6f509d5683a86d796b696643532934c4b7ad623b3ec9c15af4ea20",
+      "bytes": 3245
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/HW_SW_HANDOFF.md",
+      "sha256": "45bfe28d86884dbe02a64af3d99587aec6c6d72ab4ad211566060655fef41921",
+      "bytes": 1868
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/LOAD_AND_POWER_BUDGET.csv",
+      "sha256": "1200db6af1f04ec421b2900d6ff1b46a8b318ba594bb96a45036682522753c80",
+      "bytes": 118524
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/REVIEW.html",
+      "sha256": "47ae851cf2ec9a6156df2d327d13bf3f65241067334863c58ef150824f3e85ee",
+      "bytes": 1332523
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/build_candidate.py",
+      "sha256": "9418d0d904dbaf1f9b37d44a2d6cf1b5cc6550d8beb62bff848426a5ec66fb66",
+      "bytes": 29520
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/build_reports.py",
+      "sha256": "bc86dd990856b198e30dbf541ac7043c7eee94a94f54ca09d7f062f1a51e734c",
+      "bytes": 43250
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/build_workbooks.mjs",
+      "sha256": "513343439c6b56fe8f9e3fdd1965dcfa8e3c01dd751d61fe6c8d39fb17580cd8",
+      "bytes": 9409
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/fetch_s3_sources.py",
+      "sha256": "5b7e2a0659f64f978d3d3827be2b112b20a54d00eeafb7668fbc3fafef1f12d4",
+      "bytes": 2923
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/finalize_s3.py",
+      "sha256": "cd7d0e5968e3d500933811da9601f383cd0016108a62ffedc6696229232a551b",
+      "bytes": 15228
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/inputs.json",
+      "sha256": "f54c4b853d1ffa47ffcd34d1c69850d9bdc98aa2988be0eaa147c8d81d3fb291",
+      "bytes": 972
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/power_worst_case.py",
+      "sha256": "09dd8228a964e68c9609518f8727bf6939cb5ad035f9301bb87cf02934e3c555",
+      "bytes": 3081
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/record_validation.py",
+      "sha256": "9c424dab449cf060362372ede33630e4436d77d35a0150c07a39a647deacd783",
+      "bytes": 4017
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/review_candidate.py",
+      "sha256": "0a2568718ebab6869fc9f783f71a1d99c7822b64cedaf4648f4bdb18cfe53388",
+      "bytes": 8214
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/save_interactions.py",
+      "sha256": "6adf0559b31a4c8a41de0c0daef1d1e21f13e2109cacae71b77bcbb41b475120",
+      "bytes": 6134
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/verify_workbooks.py",
+      "sha256": "a8054952e7c78703ddf0389ef58d1330b3923adeb194627bfde23aacc3411d38",
+      "bytes": 3500
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/calc/workbook_data.json",
+      "sha256": "9ebf1685680ff5f42a0c2ed0988f43af88d514d8c7b16d138d755cfda16fa031",
+      "bytes": 389030
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/netlist/COMPONENTS.csv",
+      "sha256": "d13735e2a41b00cbbd1bfb4df74df48971694da10beddfd76ec9d3114f35cf49",
+      "bytes": 227420
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/netlist/PIN_NET.csv",
+      "sha256": "75df48738731533c19ff6a37efa6f3871983d4848198a268b20df52a167ab222",
+      "bytes": 334667
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/netlist/THREE_BOARD_CANDIDATE.json",
+      "sha256": "8d7f91e3c7b1a60d0824cce6e875ba1d507b7107873f91bfccaa7b823c429399",
+      "bytes": 1833068
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/netlist/THREE_BOARD_GENERIC_NETLIST.xml",
+      "sha256": "ad2e82529f4513ca460d1a8f9ba86fcd9e9a10b510afcb235c47832d1696f553",
+      "bytes": 442420
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/CENTRAL_IO_ADC.svg",
+      "sha256": "b5bc15850876bf10cd4ba7815da2b88fca2838829dd8fac707cc76dc3659c222",
+      "bytes": 107430
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/CENTRAL_POWER_OTHER.svg",
+      "sha256": "6c17d73841029ab822e05794fce4911d7a5beda51b5454af8e50de3e45870980",
+      "bytes": 52137
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/CENTRAL_SAFETY.svg",
+      "sha256": "61497aa9209c49ea1609dc54c2074f2fb33111713577382a2b838400b7402a1f",
+      "bytes": 1963
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_AFE.svg",
+      "sha256": "db8943e98504f263253a251711cf90134b49e93bc12f016927fd2cca46337dfe",
+      "bytes": 28931
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_IO_ADC.svg",
+      "sha256": "2337aa52416c8e3ee87a9eaa6d80697ca2c1badd008aea6a17b071b48188b8d0",
+      "bytes": 29953
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_POWER_OTHER.svg",
+      "sha256": "e3af31d691c54b6477d23c0af76a5ed3e34eab4213ba243a193254d67e24dccd",
+      "bytes": 41549
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_SAFETY.svg",
+      "sha256": "53584919a7c45645d30bc14c452f080e719e98039b75a88dc9ba9dbc67b1d90b",
+      "bytes": 18515
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_TX_00.svg",
+      "sha256": "32d5e32bb55b03a549b21068a3a52bb03822010049189c82f77174876d8c3642",
+      "bytes": 63389
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_TX_01.svg",
+      "sha256": "374677c7aa89b77ca6ab35df9abd092708ce0163ece2df108dd8b320ca063e23",
+      "bytes": 63569
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_TX_02.svg",
+      "sha256": "b9fd02166a094bec7e6b28a34c69d046e19b68c7026e565b44aa8cc53244d9be",
+      "bytes": 63639
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_TX_03.svg",
+      "sha256": "c738cf53d01e8ff6e7c8d7193192684badc3a6248ff41f11b2d76f6fefce3244",
+      "bytes": 63649
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_TX_04.svg",
+      "sha256": "f5472628f89680d1595138cf8b8d0b3df914cddfa00f366930f6c1a50b39d0c5",
+      "bytes": 63649
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_TX_05.svg",
+      "sha256": "abfe0a730fadefc597e46babf514f3185087e770ddf3847ad2c0ad54875312c8",
+      "bytes": 63665
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_TX_06.svg",
+      "sha256": "7500228402d3edb61ba21820401244de2f480beb6c3b928ed7fb268101964e14",
+      "bytes": 63665
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/DN_TX_07.svg",
+      "sha256": "5e89d7def52c1404cb33378dbc95688111ebb9d5f7dee96da806d69b805b9681",
+      "bytes": 63665
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/INDEX.json",
+      "sha256": "d4347c71d121066df347f74b6c54d73f467fc7072eec8630f480ec18519a674b",
+      "bytes": 3060
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_AFE.svg",
+      "sha256": "9220bfdf6336b3f6a6789967af858253f65af71b64a67cd9d78efc7352524840",
+      "bytes": 28931
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_IO_ADC.svg",
+      "sha256": "c968a32e493e32ca1cac30fae2f66e691ed34614b17cd549604a9b4025be353d",
+      "bytes": 29953
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_POWER_OTHER.svg",
+      "sha256": "ea8bbaf098e01a4f54e073ebae69c255215b7c6e067a5b065dc02a1fc44018ba",
+      "bytes": 41549
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_SAFETY.svg",
+      "sha256": "d8ffab9324693001968a9e97ef97700780b2dfd5db233946ed6e7fe216380c8c",
+      "bytes": 18515
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_TX_00.svg",
+      "sha256": "d2d229476c8d43ad8dab804f7c51190ff0db966897cf77c78ab63c3056b67e4f",
+      "bytes": 63389
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_TX_01.svg",
+      "sha256": "18302cf01350ad63666a4c940b7a1910e7b0a289cddfc29961b95f10be36d6ae",
+      "bytes": 63569
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_TX_02.svg",
+      "sha256": "d9c2ffff22fba38f7d6be6334e9950fde3acd01c31b938244e128a9f8d128298",
+      "bytes": 63639
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_TX_03.svg",
+      "sha256": "26975035f948fc257c7a633580907a523f98a94145ef68e8c69f920967c18f5e",
+      "bytes": 63649
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_TX_04.svg",
+      "sha256": "41dcbba6eb7793f9a6693ba8ee48229c65fbba7d8a732705b57c63784e8129b8",
+      "bytes": 63649
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_TX_05.svg",
+      "sha256": "0800c75f350841425ad56bfdade9744e90036ec91b0d7a2bd0712a24cf17ff33",
+      "bytes": 63665
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_TX_06.svg",
+      "sha256": "a26f85fa4846e63ead0acbc8e9998a6c92f7840367c1f05c7146ab583e650eb6",
+      "bytes": 63665
+    },
+    {
+      "path": "v5/hardware/pcb/reviews/20261011_s3/svg/UP_TX_07.svg",
+      "sha256": "8853924b9fd30be6e04fb8d0afdd9ecf27d0a419911cf9b3440bd48aac9d0669",
+      "bytes": 63665
+    }
+  ],
+  "content_commit": "f23e17bfa005d1d496dc99af2c05712acc89c390"
+}

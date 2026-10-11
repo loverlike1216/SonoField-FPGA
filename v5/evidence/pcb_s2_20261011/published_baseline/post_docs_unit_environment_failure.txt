@@ -1,0 +1,111 @@
+======================================================================
+ERROR: setUpClass (test_prepcb.CExtensionTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_prepcb.py", line 184, in setUpClass
+    cls.library=build(ROOT/'build/prepcb_unit_c')
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\software\prepcb\c_session.py", line 18, in build
+    proc=subprocess.run(cmd,capture_output=True,text=True)
+  File "[REDACTED_PERSONAL_USER_DIR]\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "[REDACTED_PERSONAL_USER_DIR]\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "[REDACTED_PERSONAL_USER_DIR]\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+======================================================================
+ERROR: setUpClass (test_prepcb_transfer.TransferTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_prepcb_transfer.py", line 10, in setUpClass
+    cls.lib=build(Path(__file__).resolve().parents[1]/'build/prepcb_transfer_tests')
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\software\prepcb\c_session.py", line 18, in build
+    proc=subprocess.run(cmd,capture_output=True,text=True)
+  File "[REDACTED_PERSONAL_USER_DIR]\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "[REDACTED_PERSONAL_USER_DIR]\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "[REDACTED_PERSONAL_USER_DIR]\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+======================================================================
+FAIL: test_complete_fixture_reaches_boundary_only (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 52, in test_complete_fixture_reaches_boundary_only
+    self.assertEqual('REACHED_PROJECT_BOUNDARY', self.invoke('xc7z020clg400-1'))
+AssertionError: 'REACHED_PROJECT_BOUNDARY' != 'Configuration must belong to this v5 clone config or build scratch'
+- REACHED_PROJECT_BOUNDARY
++ Configuration must belong to this v5 clone config or build scratch
+
+
+======================================================================
+FAIL: test_family_only_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 32, in test_family_only_rejected
+    self.assertIn('full documented', self.invoke('xc7z020'))
+AssertionError: 'full documented' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_missing_provenance_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 41, in test_missing_provenance_rejected
+    self.assertIn('missing PART_SOURCE', self.invoke('xc7z020clg400-1', source=''))
+AssertionError: 'missing PART_SOURCE' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_unknown_or_mismatched_part_rejected (test_board_project_gate.BoardProjectGateTests) (resolved='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 46, in test_unknown_or_mismatched_part_rejected
+    self.assertIn('non-exact', self.invoke('xc7z020clg400-1', resolved))
+AssertionError: 'non-exact' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_unknown_or_mismatched_part_rejected (test_board_project_gate.BoardProjectGateTests) (resolved='xc7z020clg484-1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 46, in test_unknown_or_mismatched_part_rejected
+    self.assertIn('non-exact', self.invoke('xc7z020clg400-1', resolved))
+AssertionError: 'non-exact' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_unknown_or_mismatched_part_rejected (test_board_project_gate.BoardProjectGateTests) (resolved='xc7z020clg400-1 xc7z020clg400-2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 46, in test_unknown_or_mismatched_part_rejected
+    self.assertIn('non-exact', self.invoke('xc7z020clg400-1', resolved))
+AssertionError: 'non-exact' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_wildcard_rejected_even_single_resolution (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 38, in test_wildcard_rejected_even_single_resolution
+    self.assertIn('full documented', self.invoke('xc7z020clg400-*', 'xc7z020clg400-1'))
+AssertionError: 'full documented' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_wrong_silicon_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 35, in test_wrong_silicon_rejected
+    self.assertIn('full documented', self.invoke('xc7z010clg400-1'))
+AssertionError: 'full documented' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+======================================================================
+FAIL: test_wrong_tool_rejected (test_board_project_gate.BoardProjectGateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield_PCB_v5\v5\tests\test_board_project_gate.py", line 49, in test_wrong_tool_rejected
+    self.assertIn('2025.2', self.invoke('xc7z020clg400-1', version='2024.2'))
+AssertionError: '2025.2' not found in 'Configuration must belong to this v5 clone config or build scratch'
+
+----------------------------------------------------------------------
+Ran 226 tests in 5.138s
+
+FAILED (failures=9, errors=2)
