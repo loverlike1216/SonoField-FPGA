@@ -1,3 +1,11 @@
+# Current v5 PCB-S3 plan
+
+PCB-S3 user-authorized candidate delivered on feat/v5-pcb-design / PR6,base23f8d4c;soleactivev5. Central5V3A USB-C,candidate12.343Wsteadyinput envelope;upper/lower each12V3A36W GST36E12,candidate29.360Wsteadyinput envelope. Theseare limitdefined conditionaldesignbounds,not measuredload/allfaultguarantees. TPS3851one/array,two total;additionalwindow/thermal/latch/cutoff. Strict2126component/6390pin candidate,1541RCL,128TXmapping/8RX/64ADCpins. Fresh243tests,45staticchecks,256booleanstates,485cachedformulas/252numericcrosschecksPASS;S2fullframes inherited,not rerun. NativeNOT_CREATED/ERCNOT_RUN/hardwareNOT_VERIFIED. G1native/independent,G2powerfaultthermal,G3AFEandpoweroff,G4digitalintegration,VCCO,STA,BRAM,G5mechanical/SKUs. Manufacturing/procurement/boardwrite/main HOLD. ExternalChatGPT BLOCKED. See CP-20261011-003 and review11.
+
+Next: complete normalDraftPR6publication and verifyCI/remote;then independentreview/nativeCAD/electricalqualification/actualdigitaltaskhandoff. Do not reopenadapternominal choice or rerun low-value simulation without new digitalchanges. No version upgrade.
+
+## Earlier stages — provenance only
+
 # Current v5 hardware plan
 
 Gate0 reconciliation/sourceaudit COMPLETE; Gate1 formal direction/geometry COMPLETE;

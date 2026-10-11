@@ -1,0 +1,460 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="8992" viewBox="0 0 1950 8992">
+<style>text{font:12px monospace;fill:#172a3a}.title{font:bold 22px sans-serif}.net{fill:#176a47}.nc{fill:#b64d18}</style>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="22" y="35" class="title">v5 PCB-S3 CENTRAL / POWER_OTHER — PIN / NET REVIEW CANDIDATE</text>
+<text x="22" y="65">Equal board-qualified labels are electrically common. NC = unconnected. Not native CAD / ERC NOT RUN.</text>
+<rect x="20" y="90" width="620" height="322" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="108" style="font-weight:bold">CENTRAL_JUSB  USB4500-03-0-A</text>
+<text x="30" y="125">usb_power_connector / USB_C_16pin_MID_MOUNT_FOOTPRINT_HOLD</text>
+<line x1="30" y1="138" x2="75" y2="138" stroke="#607587"/><text x="35" y="136">A1</text><text x="85" y="142" class="net">CENTRAL:GND</text>
+<line x1="30" y1="154" x2="75" y2="154" stroke="#607587"/><text x="35" y="152">A12</text><text x="85" y="158" class="net">CENTRAL:GND</text>
+<line x1="30" y1="170" x2="75" y2="170" stroke="#607587"/><text x="35" y="168">B1</text><text x="85" y="174" class="net">CENTRAL:GND</text>
+<line x1="30" y1="186" x2="75" y2="186" stroke="#607587"/><text x="35" y="184">B12</text><text x="85" y="190" class="net">CENTRAL:GND</text>
+<line x1="30" y1="202" x2="75" y2="202" stroke="#607587"/><text x="35" y="200">A4</text><text x="85" y="206" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="30" y1="218" x2="75" y2="218" stroke="#607587"/><text x="35" y="216">A9</text><text x="85" y="222" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="30" y1="234" x2="75" y2="234" stroke="#607587"/><text x="35" y="232">B4</text><text x="85" y="238" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="30" y1="250" x2="75" y2="250" stroke="#607587"/><text x="35" y="248">B9</text><text x="85" y="254" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="30" y1="266" x2="75" y2="266" stroke="#607587"/><text x="35" y="264">A5</text><text x="85" y="270" class="net">CENTRAL:CC1</text>
+<line x1="30" y1="282" x2="75" y2="282" stroke="#607587"/><text x="35" y="280">B5</text><text x="85" y="286" class="net">CENTRAL:CC2</text>
+<line x1="30" y1="298" x2="75" y2="298" stroke="#607587"/><text x="35" y="296">A6</text><text x="85" y="302" class="nc">NC:CENTRAL_JUSB:A6</text>
+<line x1="30" y1="314" x2="75" y2="314" stroke="#607587"/><text x="35" y="312">A7</text><text x="85" y="318" class="nc">NC:CENTRAL_JUSB:A7</text>
+<line x1="30" y1="330" x2="75" y2="330" stroke="#607587"/><text x="35" y="328">A8</text><text x="85" y="334" class="nc">NC:CENTRAL_JUSB:A8</text>
+<line x1="30" y1="346" x2="75" y2="346" stroke="#607587"/><text x="35" y="344">B6</text><text x="85" y="350" class="nc">NC:CENTRAL_JUSB:B6</text>
+<line x1="30" y1="362" x2="75" y2="362" stroke="#607587"/><text x="35" y="360">B7</text><text x="85" y="366" class="nc">NC:CENTRAL_JUSB:B7</text>
+<line x1="30" y1="378" x2="75" y2="378" stroke="#607587"/><text x="35" y="376">B8</text><text x="85" y="382" class="nc">NC:CENTRAL_JUSB:B8</text>
+<line x1="30" y1="394" x2="75" y2="394" stroke="#607587"/><text x="35" y="392">SHIELD</text><text x="85" y="398" class="net">CENTRAL:SHIELD</text>
+<rect x="670" y="90" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="108" style="font-weight:bold">CENTRAL_CSH  1nF</text>
+<text x="680" y="125">shield_ac / 0603;C0G;1kV</text>
+<line x1="680" y1="138" x2="725" y2="138" stroke="#607587"/><text x="685" y="136">1</text><text x="735" y="142" class="net">CENTRAL:SHIELD</text>
+<line x1="680" y1="154" x2="725" y2="154" stroke="#607587"/><text x="685" y="152">2</text><text x="735" y="158" class="net">CENTRAL:GND</text>
+<rect x="1320" y="90" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="108" style="font-weight:bold">CENTRAL_RSH  1Meg</text>
+<text x="1330" y="125">shield_bleed / 0603;0.1W;50V</text>
+<line x1="1330" y1="138" x2="1375" y2="138" stroke="#607587"/><text x="1335" y="136">1</text><text x="1385" y="142" class="net">CENTRAL:SHIELD</text>
+<line x1="1330" y1="154" x2="1375" y2="154" stroke="#607587"/><text x="1335" y="152">2</text><text x="1385" y="158" class="net">CENTRAL:GND</text>
+<rect x="20" y="432" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="450" style="font-weight:bold">CENTRAL_UBOOT  TPS7A2033PDBVR</text>
+<text x="30" y="467">cc_bootstrap / DBV5</text>
+<line x1="30" y1="480" x2="75" y2="480" stroke="#607587"/><text x="35" y="478">1</text><text x="85" y="484" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="30" y1="496" x2="75" y2="496" stroke="#607587"/><text x="35" y="494">2</text><text x="85" y="500" class="net">CENTRAL:GND</text>
+<line x1="30" y1="512" x2="75" y2="512" stroke="#607587"/><text x="35" y="510">3</text><text x="85" y="516" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="30" y1="528" x2="75" y2="528" stroke="#607587"/><text x="35" y="526">4</text><text x="85" y="532" class="nc">NC:CENTRAL_UBOOT:4</text>
+<line x1="30" y1="544" x2="75" y2="544" stroke="#607587"/><text x="35" y="542">5</text><text x="85" y="548" class="net">CENTRAL:BOOT3V3</text>
+<rect x="670" y="432" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="450" style="font-weight:bold">CENTRAL_CBI  1uF</text>
+<text x="680" y="467">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="480" x2="725" y2="480" stroke="#607587"/><text x="685" y="478">1</text><text x="735" y="484" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="680" y1="496" x2="725" y2="496" stroke="#607587"/><text x="685" y="494">2</text><text x="735" y="500" class="net">CENTRAL:GND</text>
+<rect x="1320" y="432" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="450" style="font-weight:bold">CENTRAL_CBO  1uF</text>
+<text x="1330" y="467">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="480" x2="1375" y2="480" stroke="#607587"/><text x="1335" y="478">1</text><text x="1385" y="484" class="net">CENTRAL:BOOT3V3</text>
+<line x1="1330" y1="496" x2="1375" y2="496" stroke="#607587"/><text x="1335" y="494">2</text><text x="1385" y="500" class="net">CENTRAL:GND</text>
+<rect x="20" y="774" width="620" height="258" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="792" style="font-weight:bold">CENTRAL_UCC  TUSB321AIRWBR</text>
+<text x="30" y="809">usb_current_advertisement / RWB12+EP</text>
+<line x1="30" y1="822" x2="75" y2="822" stroke="#607587"/><text x="35" y="820">1</text><text x="85" y="826" class="net">CENTRAL:CC1</text>
+<line x1="30" y1="838" x2="75" y2="838" stroke="#607587"/><text x="35" y="836">2</text><text x="85" y="842" class="net">CENTRAL:CC2</text>
+<line x1="30" y1="854" x2="75" y2="854" stroke="#607587"/><text x="35" y="852">3</text><text x="85" y="858" class="net">CENTRAL:GND</text>
+<line x1="30" y1="870" x2="75" y2="870" stroke="#607587"/><text x="35" y="868">4</text><text x="85" y="874" class="net">CENTRAL:GND</text>
+<line x1="30" y1="886" x2="75" y2="886" stroke="#607587"/><text x="35" y="884">5</text><text x="85" y="890" class="net">CENTRAL:VBUS_DET</text>
+<line x1="30" y1="902" x2="75" y2="902" stroke="#607587"/><text x="35" y="900">6</text><text x="85" y="906" class="nc">NC:CENTRAL_UCC:6</text>
+<line x1="30" y1="918" x2="75" y2="918" stroke="#607587"/><text x="35" y="916">7</text><text x="85" y="922" class="nc">NC:CENTRAL_UCC:7</text>
+<line x1="30" y1="934" x2="75" y2="934" stroke="#607587"/><text x="35" y="932">8</text><text x="85" y="938" class="net">CENTRAL:CC3A_N</text>
+<line x1="30" y1="950" x2="75" y2="950" stroke="#607587"/><text x="35" y="948">9</text><text x="85" y="954" class="nc">NC:CENTRAL_UCC:9</text>
+<line x1="30" y1="966" x2="75" y2="966" stroke="#607587"/><text x="35" y="964">10</text><text x="85" y="970" class="net">CENTRAL:GND</text>
+<line x1="30" y1="982" x2="75" y2="982" stroke="#607587"/><text x="35" y="980">11</text><text x="85" y="986" class="nc">NC:CENTRAL_UCC:11</text>
+<line x1="30" y1="998" x2="75" y2="998" stroke="#607587"/><text x="35" y="996">12</text><text x="85" y="1002" class="net">CENTRAL:BOOT3V3</text>
+<line x1="30" y1="1014" x2="75" y2="1014" stroke="#607587"/><text x="35" y="1012">13</text><text x="85" y="1018" class="net">CENTRAL:GND</text>
+<rect x="670" y="774" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="792" style="font-weight:bold">CENTRAL_RCC  900k</text>
+<text x="680" y="809">usb_vbus_detect / 0603;0.1W;50V</text>
+<line x1="680" y1="822" x2="725" y2="822" stroke="#607587"/><text x="685" y="820">1</text><text x="735" y="826" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="680" y1="838" x2="725" y2="838" stroke="#607587"/><text x="685" y="836">2</text><text x="735" y="842" class="net">CENTRAL:VBUS_DET</text>
+<rect x="1320" y="774" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="792" style="font-weight:bold">CENTRAL_RCCP  10k</text>
+<text x="1330" y="809">cc_output_pullup / 0603;0.1W;50V</text>
+<line x1="1330" y1="822" x2="1375" y2="822" stroke="#607587"/><text x="1335" y="820">1</text><text x="1385" y="826" class="net">CENTRAL:CC3A_N</text>
+<line x1="1330" y1="838" x2="1375" y2="838" stroke="#607587"/><text x="1335" y="836">2</text><text x="1385" y="842" class="net">CENTRAL:BOOT3V3</text>
+<rect x="20" y="1116" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1134" style="font-weight:bold">CENTRAL_UINV  SN74LVC1G04DBVR</text>
+<text x="30" y="1151">cc_allow_inverter / DBV5</text>
+<line x1="30" y1="1164" x2="75" y2="1164" stroke="#607587"/><text x="35" y="1162">1</text><text x="85" y="1168" class="nc">NC:CENTRAL_UINV:1</text>
+<line x1="30" y1="1180" x2="75" y2="1180" stroke="#607587"/><text x="35" y="1178">2</text><text x="85" y="1184" class="net">CENTRAL:CC3A_N</text>
+<line x1="30" y1="1196" x2="75" y2="1196" stroke="#607587"/><text x="35" y="1194">3</text><text x="85" y="1200" class="net">CENTRAL:GND</text>
+<line x1="30" y1="1212" x2="75" y2="1212" stroke="#607587"/><text x="35" y="1210">4</text><text x="85" y="1216" class="net">CENTRAL:USB_ALLOW</text>
+<line x1="30" y1="1228" x2="75" y2="1228" stroke="#607587"/><text x="35" y="1226">5</text><text x="85" y="1232" class="net">CENTRAL:BOOT3V3</text>
+<rect x="670" y="1116" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1134" style="font-weight:bold">CENTRAL_CCCD  100nF</text>
+<text x="680" y="1151">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="1164" x2="725" y2="1164" stroke="#607587"/><text x="685" y="1162">1</text><text x="735" y="1168" class="net">CENTRAL:BOOT3V3</text>
+<line x1="680" y1="1180" x2="725" y2="1180" stroke="#607587"/><text x="685" y="1178">2</text><text x="735" y="1184" class="net">CENTRAL:GND</text>
+<rect x="1320" y="1116" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1134" style="font-weight:bold">CENTRAL_REN  100k</text>
+<text x="1330" y="1151">usb_main_default_off / 0603;0.1W;50V</text>
+<line x1="1330" y1="1164" x2="1375" y2="1164" stroke="#607587"/><text x="1335" y="1162">1</text><text x="1385" y="1168" class="net">CENTRAL:USB_ALLOW</text>
+<line x1="1330" y1="1180" x2="1375" y2="1180" stroke="#607587"/><text x="1335" y="1178">2</text><text x="1385" y="1184" class="net">CENTRAL:GND</text>
+<rect x="20" y="1458" width="620" height="210" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1476" style="font-weight:bold">CENTRAL_U1  TPS259470LRPWR</text>
+<text x="30" y="1493">input_protection / RPW10</text>
+<line x1="30" y1="1506" x2="75" y2="1506" stroke="#607587"/><text x="35" y="1504">1</text><text x="85" y="1510" class="net">CENTRAL:USB_ALLOW</text>
+<line x1="30" y1="1522" x2="75" y2="1522" stroke="#607587"/><text x="35" y="1520">2</text><text x="85" y="1526" class="net">CENTRAL:USB_OVLO</text>
+<line x1="30" y1="1538" x2="75" y2="1538" stroke="#607587"/><text x="35" y="1536">3</text><text x="85" y="1542" class="nc">NC:CENTRAL_U1:3</text>
+<line x1="30" y1="1554" x2="75" y2="1554" stroke="#607587"/><text x="35" y="1552">4</text><text x="85" y="1558" class="net">CENTRAL:USB_FLT_N</text>
+<line x1="30" y1="1570" x2="75" y2="1570" stroke="#607587"/><text x="35" y="1568">5</text><text x="85" y="1574" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="30" y1="1586" x2="75" y2="1586" stroke="#607587"/><text x="35" y="1584">6</text><text x="85" y="1590" class="net">CENTRAL:VBUS_SHUNT_IN</text>
+<line x1="30" y1="1602" x2="75" y2="1602" stroke="#607587"/><text x="35" y="1600">7</text><text x="85" y="1606" class="net">CENTRAL:U1_DVDT</text>
+<line x1="30" y1="1618" x2="75" y2="1618" stroke="#607587"/><text x="35" y="1616">8</text><text x="85" y="1622" class="net">CENTRAL:GND</text>
+<line x1="30" y1="1634" x2="75" y2="1634" stroke="#607587"/><text x="35" y="1632">9</text><text x="85" y="1638" class="net">CENTRAL:U1_ILIM</text>
+<line x1="30" y1="1650" x2="75" y2="1650" stroke="#607587"/><text x="35" y="1648">10</text><text x="85" y="1654" class="nc">NC:CENTRAL_U1:10</text>
+<rect x="670" y="1458" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1476" style="font-weight:bold">CENTRAL_U1R1  1.65k</text>
+<text x="680" y="1493">current_limit / 0603;0.1W;50V</text>
+<line x1="680" y1="1506" x2="725" y2="1506" stroke="#607587"/><text x="685" y="1504">1</text><text x="735" y="1510" class="net">CENTRAL:U1_ILIM</text>
+<line x1="680" y1="1522" x2="725" y2="1522" stroke="#607587"/><text x="685" y="1520">2</text><text x="735" y="1526" class="net">CENTRAL:GND</text>
+<rect x="1320" y="1458" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1476" style="font-weight:bold">CENTRAL_U1C1  10nF</text>
+<text x="1330" y="1493">inrush_slew / 0603;C0G;50V</text>
+<line x1="1330" y1="1506" x2="1375" y2="1506" stroke="#607587"/><text x="1335" y="1504">1</text><text x="1385" y="1510" class="net">CENTRAL:U1_DVDT</text>
+<line x1="1330" y1="1522" x2="1375" y2="1522" stroke="#607587"/><text x="1335" y="1520">2</text><text x="1385" y="1526" class="net">CENTRAL:GND</text>
+<rect x="20" y="1800" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1818" style="font-weight:bold">CENTRAL_RS1  20mOhm</text>
+<text x="30" y="1835">current_shunt / 2512;1W;4terminal_Kelvin</text>
+<line x1="30" y1="1848" x2="75" y2="1848" stroke="#607587"/><text x="35" y="1846">1</text><text x="85" y="1852" class="net">CENTRAL:VBUS_SHUNT_IN</text>
+<line x1="30" y1="1864" x2="75" y2="1864" stroke="#607587"/><text x="35" y="1862">2</text><text x="85" y="1868" class="net">CENTRAL:VBUS_SAFE</text>
+<rect x="670" y="1800" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1818" style="font-weight:bold">CENTRAL_ROVT  37.4k</text>
+<text x="680" y="1835">usb_ovlo / 0603;0.1W;50V</text>
+<line x1="680" y1="1848" x2="725" y2="1848" stroke="#607587"/><text x="685" y="1846">1</text><text x="735" y="1852" class="net">CENTRAL:VBUS_RAW</text>
+<line x1="680" y1="1864" x2="725" y2="1864" stroke="#607587"/><text x="685" y="1862">2</text><text x="735" y="1868" class="net">CENTRAL:USB_OVLO</text>
+<rect x="1320" y="1800" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1818" style="font-weight:bold">CENTRAL_ROVB  10k</text>
+<text x="1330" y="1835">usb_ovlo / 0603;0.1W;50V</text>
+<line x1="1330" y1="1848" x2="1375" y2="1848" stroke="#607587"/><text x="1335" y="1846">1</text><text x="1385" y="1852" class="net">CENTRAL:USB_OVLO</text>
+<line x1="1330" y1="1864" x2="1375" y2="1864" stroke="#607587"/><text x="1335" y="1862">2</text><text x="1385" y="1868" class="net">CENTRAL:GND</text>
+<rect x="20" y="2142" width="620" height="306" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2160" style="font-weight:bold">CENTRAL_UBB  TPS63070RNMR</text>
+<text x="30" y="2177">central_buck_boost / RNM15+EP</text>
+<line x1="30" y1="2190" x2="75" y2="2190" stroke="#607587"/><text x="35" y="2188">1</text><text x="85" y="2194" class="net">CENTRAL:GND</text>
+<line x1="30" y1="2206" x2="75" y2="2206" stroke="#607587"/><text x="35" y="2204">2</text><text x="85" y="2210" class="net">CENTRAL:BB_PG</text>
+<line x1="30" y1="2222" x2="75" y2="2222" stroke="#607587"/><text x="35" y="2220">3</text><text x="85" y="2226" class="net">CENTRAL:BB_AUX</text>
+<line x1="30" y1="2238" x2="75" y2="2238" stroke="#607587"/><text x="35" y="2236">4</text><text x="85" y="2242" class="net">CENTRAL:GND</text>
+<line x1="30" y1="2254" x2="75" y2="2254" stroke="#607587"/><text x="35" y="2252">5</text><text x="85" y="2258" class="net">CENTRAL:BB_FB</text>
+<line x1="30" y1="2270" x2="75" y2="2270" stroke="#607587"/><text x="35" y="2268">6</text><text x="85" y="2274" class="nc">NC:CENTRAL_UBB:6</text>
+<line x1="30" y1="2286" x2="75" y2="2286" stroke="#607587"/><text x="35" y="2284">7</text><text x="85" y="2290" class="net">CENTRAL:6V3</text>
+<line x1="30" y1="2302" x2="75" y2="2302" stroke="#607587"/><text x="35" y="2300">8</text><text x="85" y="2306" class="net">CENTRAL:6V3</text>
+<line x1="30" y1="2318" x2="75" y2="2318" stroke="#607587"/><text x="35" y="2316">9</text><text x="85" y="2322" class="net">CENTRAL:BB_L2</text>
+<line x1="30" y1="2334" x2="75" y2="2334" stroke="#607587"/><text x="35" y="2332">10</text><text x="85" y="2338" class="net">CENTRAL:GND</text>
+<line x1="30" y1="2350" x2="75" y2="2350" stroke="#607587"/><text x="35" y="2348">11</text><text x="85" y="2354" class="net">CENTRAL:BB_L1</text>
+<line x1="30" y1="2366" x2="75" y2="2366" stroke="#607587"/><text x="35" y="2364">12</text><text x="85" y="2370" class="net">CENTRAL:VBUS_SAFE</text>
+<line x1="30" y1="2382" x2="75" y2="2382" stroke="#607587"/><text x="35" y="2380">13</text><text x="85" y="2386" class="net">CENTRAL:VBUS_SAFE</text>
+<line x1="30" y1="2398" x2="75" y2="2398" stroke="#607587"/><text x="35" y="2396">14</text><text x="85" y="2402" class="net">CENTRAL:VBUS_SAFE</text>
+<line x1="30" y1="2414" x2="75" y2="2414" stroke="#607587"/><text x="35" y="2412">15</text><text x="85" y="2418" class="net">CENTRAL:GND</text>
+<line x1="30" y1="2430" x2="75" y2="2430" stroke="#607587"/><text x="35" y="2428">16</text><text x="85" y="2434" class="net">CENTRAL:GND</text>
+<rect x="670" y="2142" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2160" style="font-weight:bold">CENTRAL_LBB  1.5uH</text>
+<text x="680" y="2177">buckboost_inductor / shielded;Isat&gt;=6A_at_hot;DCR&lt;=35mOhm</text>
+<line x1="680" y1="2190" x2="725" y2="2190" stroke="#607587"/><text x="685" y="2188">1</text><text x="735" y="2194" class="net">CENTRAL:BB_L1</text>
+<line x1="680" y1="2206" x2="725" y2="2206" stroke="#607587"/><text x="685" y="2204">2</text><text x="735" y="2210" class="net">CENTRAL:BB_L2</text>
+<rect x="1320" y="2142" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2160" style="font-weight:bold">CENTRAL_CBBA  100nF</text>
+<text x="1330" y="2177">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="2190" x2="1375" y2="2190" stroke="#607587"/><text x="1335" y="2188">1</text><text x="1385" y="2194" class="net">CENTRAL:BB_AUX</text>
+<line x1="1330" y1="2206" x2="1375" y2="2206" stroke="#607587"/><text x="1335" y="2204">2</text><text x="1385" y="2210" class="net">CENTRAL:GND</text>
+<rect x="20" y="2484" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2502" style="font-weight:bold">CENTRAL_CBBI  10uF</text>
+<text x="30" y="2519">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="2532" x2="75" y2="2532" stroke="#607587"/><text x="35" y="2530">1</text><text x="85" y="2536" class="net">CENTRAL:VBUS_SAFE</text>
+<line x1="30" y1="2548" x2="75" y2="2548" stroke="#607587"/><text x="35" y="2546">2</text><text x="85" y="2552" class="net">CENTRAL:GND</text>
+<rect x="670" y="2484" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2502" style="font-weight:bold">CENTRAL_CBBO  47uF</text>
+<text x="680" y="2519">buckboost_output / 2x1210_or_singlequalified;Ceff&gt;=40uF;16V</text>
+<line x1="680" y1="2532" x2="725" y2="2532" stroke="#607587"/><text x="685" y="2530">1</text><text x="735" y="2536" class="net">CENTRAL:6V3</text>
+<line x1="680" y1="2548" x2="725" y2="2548" stroke="#607587"/><text x="685" y="2546">2</text><text x="735" y="2552" class="net">CENTRAL:GND</text>
+<rect x="1320" y="2484" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2502" style="font-weight:bold">CENTRAL_RBBT  68.7k</text>
+<text x="1330" y="2519">feedback / 0603;0.1W;50V</text>
+<line x1="1330" y1="2532" x2="1375" y2="2532" stroke="#607587"/><text x="1335" y="2530">1</text><text x="1385" y="2536" class="net">CENTRAL:6V3</text>
+<line x1="1330" y1="2548" x2="1375" y2="2548" stroke="#607587"/><text x="1335" y="2546">2</text><text x="1385" y="2552" class="net">CENTRAL:BB_FB</text>
+<rect x="20" y="2826" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2844" style="font-weight:bold">CENTRAL_RBBB  10k</text>
+<text x="30" y="2861">feedback / 0603;0.1W;50V</text>
+<line x1="30" y1="2874" x2="75" y2="2874" stroke="#607587"/><text x="35" y="2872">1</text><text x="85" y="2878" class="net">CENTRAL:BB_FB</text>
+<line x1="30" y1="2890" x2="75" y2="2890" stroke="#607587"/><text x="35" y="2888">2</text><text x="85" y="2894" class="net">CENTRAL:GND</text>
+<rect x="670" y="2826" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2844" style="font-weight:bold">CENTRAL_RBPG  10k</text>
+<text x="680" y="2861">power_good_pullup / 0603;0.1W;50V</text>
+<line x1="680" y1="2874" x2="725" y2="2874" stroke="#607587"/><text x="685" y="2872">1</text><text x="735" y="2878" class="net">CENTRAL:BB_PG</text>
+<line x1="680" y1="2890" x2="725" y2="2890" stroke="#607587"/><text x="685" y="2888">2</text><text x="735" y="2894" class="net">CENTRAL:3V3</text>
+<rect x="1320" y="2826" width="620" height="146" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2844" style="font-weight:bold">CENTRAL_U2  TPS54202DDCR</text>
+<text x="1330" y="2861">buck_3V3 / SOT23-6</text>
+<line x1="1330" y1="2874" x2="1375" y2="2874" stroke="#607587"/><text x="1335" y="2872">1</text><text x="1385" y="2878" class="net">CENTRAL:GND</text>
+<line x1="1330" y1="2890" x2="1375" y2="2890" stroke="#607587"/><text x="1335" y="2888">2</text><text x="1385" y="2894" class="net">CENTRAL:U2_SW</text>
+<line x1="1330" y1="2906" x2="1375" y2="2906" stroke="#607587"/><text x="1335" y="2904">3</text><text x="1385" y="2910" class="net">CENTRAL:6V3</text>
+<line x1="1330" y1="2922" x2="1375" y2="2922" stroke="#607587"/><text x="1335" y="2920">4</text><text x="1385" y="2926" class="net">CENTRAL:U2_FB</text>
+<line x1="1330" y1="2938" x2="1375" y2="2938" stroke="#607587"/><text x="1335" y="2936">5</text><text x="1385" y="2942" class="net">CENTRAL:6V3</text>
+<line x1="1330" y1="2954" x2="1375" y2="2954" stroke="#607587"/><text x="1335" y="2952">6</text><text x="1385" y="2958" class="net">CENTRAL:U2_BOOT</text>
+<rect x="20" y="3168" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3186" style="font-weight:bold">CENTRAL_U2L  22uH</text>
+<text x="30" y="3203">buck_inductor / shielded;Isat&gt;=3.5A at hot;DCR&lt;=0.15ohm</text>
+<line x1="30" y1="3216" x2="75" y2="3216" stroke="#607587"/><text x="35" y="3214">1</text><text x="85" y="3220" class="net">CENTRAL:U2_SW</text>
+<line x1="30" y1="3232" x2="75" y2="3232" stroke="#607587"/><text x="35" y="3230">2</text><text x="85" y="3236" class="net">CENTRAL:3V3</text>
+<rect x="670" y="3168" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3186" style="font-weight:bold">CENTRAL_U2CB  100nF</text>
+<text x="680" y="3203">bootstrap / 0603;X7R;25V</text>
+<line x1="680" y1="3216" x2="725" y2="3216" stroke="#607587"/><text x="685" y="3214">1</text><text x="735" y="3220" class="net">CENTRAL:U2_BOOT</text>
+<line x1="680" y1="3232" x2="725" y2="3232" stroke="#607587"/><text x="685" y="3230">2</text><text x="735" y="3236" class="net">CENTRAL:U2_SW</text>
+<rect x="1320" y="3168" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3186" style="font-weight:bold">CENTRAL_U2RT  45.3k</text>
+<text x="1330" y="3203">feedback / 0603;0.1W;50V</text>
+<line x1="1330" y1="3216" x2="1375" y2="3216" stroke="#607587"/><text x="1335" y="3214">1</text><text x="1385" y="3220" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="3232" x2="1375" y2="3232" stroke="#607587"/><text x="1335" y="3230">2</text><text x="1385" y="3236" class="net">CENTRAL:U2_FB</text>
+<rect x="20" y="3510" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3528" style="font-weight:bold">CENTRAL_U2RB  10k</text>
+<text x="30" y="3545">feedback / 0603;0.1W;50V</text>
+<line x1="30" y1="3558" x2="75" y2="3558" stroke="#607587"/><text x="35" y="3556">1</text><text x="85" y="3562" class="net">CENTRAL:U2_FB</text>
+<line x1="30" y1="3574" x2="75" y2="3574" stroke="#607587"/><text x="35" y="3572">2</text><text x="85" y="3578" class="net">CENTRAL:GND</text>
+<rect x="670" y="3510" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3528" style="font-weight:bold">CENTRAL_U2CI  10uF</text>
+<text x="680" y="3545">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="3558" x2="725" y2="3558" stroke="#607587"/><text x="685" y="3556">1</text><text x="735" y="3562" class="net">CENTRAL:6V3</text>
+<line x1="680" y1="3574" x2="725" y2="3574" stroke="#607587"/><text x="685" y="3572">2</text><text x="735" y="3578" class="net">CENTRAL:GND</text>
+<rect x="1320" y="3510" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3528" style="font-weight:bold">CENTRAL_U2CO  22uF</text>
+<text x="1330" y="3545">buck_output / 1210;X7R;16V;Ceff&gt;=12uF</text>
+<line x1="1330" y1="3558" x2="1375" y2="3558" stroke="#607587"/><text x="1335" y="3556">1</text><text x="1385" y="3562" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="3574" x2="1375" y2="3574" stroke="#607587"/><text x="1335" y="3572">2</text><text x="1385" y="3578" class="net">CENTRAL:GND</text>
+<rect x="20" y="3852" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3870" style="font-weight:bold">CENTRAL_U3  ADP7118AUJZ-5.0-R7</text>
+<text x="30" y="3887">analog_ldo / TSOT5</text>
+<line x1="30" y1="3900" x2="75" y2="3900" stroke="#607587"/><text x="35" y="3898">1</text><text x="85" y="3904" class="net">CENTRAL:6V3</text>
+<line x1="30" y1="3916" x2="75" y2="3916" stroke="#607587"/><text x="35" y="3914">2</text><text x="85" y="3920" class="net">CENTRAL:GND</text>
+<line x1="30" y1="3932" x2="75" y2="3932" stroke="#607587"/><text x="35" y="3930">3</text><text x="85" y="3936" class="net">CENTRAL:6V3</text>
+<line x1="30" y1="3948" x2="75" y2="3948" stroke="#607587"/><text x="35" y="3946">4</text><text x="85" y="3952" class="net">CENTRAL:AVCC5</text>
+<line x1="30" y1="3964" x2="75" y2="3964" stroke="#607587"/><text x="35" y="3962">5</text><text x="85" y="3968" class="net">CENTRAL:AVCC5</text>
+<rect x="670" y="3852" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3870" style="font-weight:bold">CENTRAL_U3CI  2.2uF</text>
+<text x="680" y="3887">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="3900" x2="725" y2="3900" stroke="#607587"/><text x="685" y="3898">1</text><text x="735" y="3904" class="net">CENTRAL:6V3</text>
+<line x1="680" y1="3916" x2="725" y2="3916" stroke="#607587"/><text x="685" y="3914">2</text><text x="735" y="3920" class="net">CENTRAL:GND</text>
+<rect x="1320" y="3852" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3870" style="font-weight:bold">CENTRAL_U3CO  4.7uF</text>
+<text x="1330" y="3887">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="3900" x2="1375" y2="3900" stroke="#607587"/><text x="1335" y="3898">1</text><text x="1385" y="3904" class="net">CENTRAL:AVCC5</text>
+<line x1="1330" y1="3916" x2="1375" y2="3916" stroke="#607587"/><text x="1335" y="3914">2</text><text x="1385" y="3920" class="net">CENTRAL:GND</text>
+<rect x="20" y="4194" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4212" style="font-weight:bold">CENTRAL_CAD1  100nF</text>
+<text x="30" y="4229">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="4242" x2="75" y2="4242" stroke="#607587"/><text x="35" y="4240">1</text><text x="85" y="4246" class="net">CENTRAL:AVCC5</text>
+<line x1="30" y1="4258" x2="75" y2="4258" stroke="#607587"/><text x="35" y="4256">2</text><text x="85" y="4262" class="net">CENTRAL:GND</text>
+<rect x="670" y="4194" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4212" style="font-weight:bold">CENTRAL_CAD37  100nF</text>
+<text x="680" y="4229">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="4242" x2="725" y2="4242" stroke="#607587"/><text x="685" y="4240">1</text><text x="735" y="4246" class="net">CENTRAL:AVCC5</text>
+<line x1="680" y1="4258" x2="725" y2="4258" stroke="#607587"/><text x="685" y="4256">2</text><text x="735" y="4262" class="net">CENTRAL:GND</text>
+<rect x="1320" y="4194" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4212" style="font-weight:bold">CENTRAL_CAD38  100nF</text>
+<text x="1330" y="4229">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="4242" x2="1375" y2="4242" stroke="#607587"/><text x="1335" y="4240">1</text><text x="1385" y="4246" class="net">CENTRAL:AVCC5</text>
+<line x1="1330" y1="4258" x2="1375" y2="4258" stroke="#607587"/><text x="1335" y="4256">2</text><text x="1385" y="4262" class="net">CENTRAL:GND</text>
+<rect x="20" y="4536" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4554" style="font-weight:bold">CENTRAL_CAD48  100nF</text>
+<text x="30" y="4571">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="4584" x2="75" y2="4584" stroke="#607587"/><text x="35" y="4582">1</text><text x="85" y="4588" class="net">CENTRAL:AVCC5</text>
+<line x1="30" y1="4600" x2="75" y2="4600" stroke="#607587"/><text x="35" y="4598">2</text><text x="85" y="4604" class="net">CENTRAL:GND</text>
+<rect x="670" y="4536" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4554" style="font-weight:bold">CENTRAL_CAD23  100nF</text>
+<text x="680" y="4571">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="4584" x2="725" y2="4584" stroke="#607587"/><text x="685" y="4582">1</text><text x="735" y="4588" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="4600" x2="725" y2="4600" stroke="#607587"/><text x="685" y="4598">2</text><text x="735" y="4604" class="net">CENTRAL:GND</text>
+<rect x="1320" y="4536" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4554" style="font-weight:bold">CENTRAL_CAD36  1uF</text>
+<text x="1330" y="4571">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="4584" x2="1375" y2="4584" stroke="#607587"/><text x="1335" y="4582">1</text><text x="1385" y="4588" class="net">CENTRAL:REGCAP_A</text>
+<line x1="1330" y1="4600" x2="1375" y2="4600" stroke="#607587"/><text x="1335" y="4598">2</text><text x="1385" y="4604" class="net">CENTRAL:GND</text>
+<rect x="20" y="4878" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4896" style="font-weight:bold">CENTRAL_CAD39  1uF</text>
+<text x="30" y="4913">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="4926" x2="75" y2="4926" stroke="#607587"/><text x="35" y="4924">1</text><text x="85" y="4930" class="net">CENTRAL:REGCAP_D</text>
+<line x1="30" y1="4942" x2="75" y2="4942" stroke="#607587"/><text x="35" y="4940">2</text><text x="85" y="4946" class="net">CENTRAL:GND</text>
+<rect x="670" y="4878" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4896" style="font-weight:bold">CENTRAL_CAD42  100nF</text>
+<text x="680" y="4913">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="4926" x2="725" y2="4926" stroke="#607587"/><text x="685" y="4924">1</text><text x="735" y="4930" class="net">CENTRAL:REF2V5</text>
+<line x1="680" y1="4942" x2="725" y2="4942" stroke="#607587"/><text x="685" y="4940">2</text><text x="735" y="4946" class="net">CENTRAL:GND</text>
+<rect x="1320" y="4878" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4896" style="font-weight:bold">CENTRAL_CAD44  10uF</text>
+<text x="1330" y="4913">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="4926" x2="1375" y2="4926" stroke="#607587"/><text x="1335" y="4924">1</text><text x="1385" y="4930" class="net">CENTRAL:REFCAP</text>
+<line x1="1330" y1="4942" x2="1375" y2="4942" stroke="#607587"/><text x="1335" y="4940">2</text><text x="1385" y="4946" class="net">CENTRAL:GND</text>
+<rect x="20" y="5220" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="5238" style="font-weight:bold">CENTRAL_CADB  10uF</text>
+<text x="30" y="5255">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="5268" x2="75" y2="5268" stroke="#607587"/><text x="35" y="5266">1</text><text x="85" y="5272" class="net">CENTRAL:AVCC5</text>
+<line x1="30" y1="5284" x2="75" y2="5284" stroke="#607587"/><text x="35" y="5282">2</text><text x="85" y="5288" class="net">CENTRAL:GND</text>
+<rect x="670" y="5220" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="5238" style="font-weight:bold">CENTRAL_CREFI  100nF</text>
+<text x="680" y="5255">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="5268" x2="725" y2="5268" stroke="#607587"/><text x="685" y="5266">1</text><text x="735" y="5272" class="net">CENTRAL:AVCC5</text>
+<line x1="680" y1="5284" x2="725" y2="5284" stroke="#607587"/><text x="685" y="5282">2</text><text x="735" y="5288" class="net">CENTRAL:GND</text>
+<rect x="1320" y="5220" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="5238" style="font-weight:bold">CENTRAL_CREFO  10uF</text>
+<text x="1330" y="5255">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="5268" x2="1375" y2="5268" stroke="#607587"/><text x="1335" y="5266">1</text><text x="1385" y="5272" class="net">CENTRAL:REF2V5</text>
+<line x1="1330" y1="5284" x2="1375" y2="5284" stroke="#607587"/><text x="1335" y="5282">2</text><text x="1385" y="5288" class="net">CENTRAL:GND</text>
+<rect x="20" y="5562" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="5580" style="font-weight:bold">CENTRAL_CREFN  1uF</text>
+<text x="30" y="5597">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="5610" x2="75" y2="5610" stroke="#607587"/><text x="35" y="5608">1</text><text x="85" y="5614" class="net">CENTRAL:REF_NR</text>
+<line x1="30" y1="5626" x2="75" y2="5626" stroke="#607587"/><text x="35" y="5624">2</text><text x="85" y="5630" class="net">CENTRAL:GND</text>
+<rect x="670" y="5562" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="5580" style="font-weight:bold">CENTRAL_CXA0  100nF</text>
+<text x="680" y="5597">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="5610" x2="725" y2="5610" stroke="#607587"/><text x="685" y="5608">1</text><text x="735" y="5614" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="5626" x2="725" y2="5626" stroke="#607587"/><text x="685" y="5624">2</text><text x="735" y="5630" class="net">CENTRAL:GND</text>
+<rect x="1320" y="5562" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="5580" style="font-weight:bold">CENTRAL_CXB0  100nF</text>
+<text x="1330" y="5597">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="5610" x2="1375" y2="5610" stroke="#607587"/><text x="1335" y="5608">1</text><text x="1385" y="5614" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="5626" x2="1375" y2="5626" stroke="#607587"/><text x="1335" y="5624">2</text><text x="1385" y="5630" class="net">CENTRAL:GND</text>
+<rect x="20" y="5904" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="5922" style="font-weight:bold">CENTRAL_CXA1  100nF</text>
+<text x="30" y="5939">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="5952" x2="75" y2="5952" stroke="#607587"/><text x="35" y="5950">1</text><text x="85" y="5956" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="5968" x2="75" y2="5968" stroke="#607587"/><text x="35" y="5966">2</text><text x="85" y="5972" class="net">CENTRAL:GND</text>
+<rect x="670" y="5904" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="5922" style="font-weight:bold">CENTRAL_CXB1  100nF</text>
+<text x="680" y="5939">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="5952" x2="725" y2="5952" stroke="#607587"/><text x="685" y="5950">1</text><text x="735" y="5956" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="5968" x2="725" y2="5968" stroke="#607587"/><text x="685" y="5966">2</text><text x="735" y="5972" class="net">CENTRAL:GND</text>
+<rect x="1320" y="5904" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="5922" style="font-weight:bold">CENTRAL_CXA2  100nF</text>
+<text x="1330" y="5939">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="5952" x2="1375" y2="5952" stroke="#607587"/><text x="1335" y="5950">1</text><text x="1385" y="5956" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="5968" x2="1375" y2="5968" stroke="#607587"/><text x="1335" y="5966">2</text><text x="1385" y="5972" class="net">CENTRAL:GND</text>
+<rect x="20" y="6246" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="6264" style="font-weight:bold">CENTRAL_CXB2  100nF</text>
+<text x="30" y="6281">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="6294" x2="75" y2="6294" stroke="#607587"/><text x="35" y="6292">1</text><text x="85" y="6298" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="6310" x2="75" y2="6310" stroke="#607587"/><text x="35" y="6308">2</text><text x="85" y="6314" class="net">CENTRAL:GND</text>
+<rect x="670" y="6246" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="6264" style="font-weight:bold">CENTRAL_CXA3  100nF</text>
+<text x="680" y="6281">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="6294" x2="725" y2="6294" stroke="#607587"/><text x="685" y="6292">1</text><text x="735" y="6298" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="6310" x2="725" y2="6310" stroke="#607587"/><text x="685" y="6308">2</text><text x="735" y="6314" class="net">CENTRAL:GND</text>
+<rect x="1320" y="6246" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="6264" style="font-weight:bold">CENTRAL_CXB3  100nF</text>
+<text x="1330" y="6281">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="6294" x2="1375" y2="6294" stroke="#607587"/><text x="1335" y="6292">1</text><text x="1385" y="6298" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="6310" x2="1375" y2="6310" stroke="#607587"/><text x="1335" y="6308">2</text><text x="1385" y="6314" class="net">CENTRAL:GND</text>
+<rect x="20" y="6588" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="6606" style="font-weight:bold">CENTRAL_CXA4  100nF</text>
+<text x="30" y="6623">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="6636" x2="75" y2="6636" stroke="#607587"/><text x="35" y="6634">1</text><text x="85" y="6640" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="6652" x2="75" y2="6652" stroke="#607587"/><text x="35" y="6650">2</text><text x="85" y="6656" class="net">CENTRAL:GND</text>
+<rect x="670" y="6588" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="6606" style="font-weight:bold">CENTRAL_CXB4  100nF</text>
+<text x="680" y="6623">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="6636" x2="725" y2="6636" stroke="#607587"/><text x="685" y="6634">1</text><text x="735" y="6640" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="6652" x2="725" y2="6652" stroke="#607587"/><text x="685" y="6650">2</text><text x="735" y="6656" class="net">CENTRAL:GND</text>
+<rect x="1320" y="6588" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="6606" style="font-weight:bold">CENTRAL_CXA5  100nF</text>
+<text x="1330" y="6623">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="6636" x2="1375" y2="6636" stroke="#607587"/><text x="1335" y="6634">1</text><text x="1385" y="6640" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="6652" x2="1375" y2="6652" stroke="#607587"/><text x="1335" y="6650">2</text><text x="1385" y="6656" class="net">CENTRAL:GND</text>
+<rect x="20" y="6930" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="6948" style="font-weight:bold">CENTRAL_CXB5  100nF</text>
+<text x="30" y="6965">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="6978" x2="75" y2="6978" stroke="#607587"/><text x="35" y="6976">1</text><text x="85" y="6982" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="6994" x2="75" y2="6994" stroke="#607587"/><text x="35" y="6992">2</text><text x="85" y="6998" class="net">CENTRAL:GND</text>
+<rect x="670" y="6930" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="6948" style="font-weight:bold">CENTRAL_CXA6  100nF</text>
+<text x="680" y="6965">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="6978" x2="725" y2="6978" stroke="#607587"/><text x="685" y="6976">1</text><text x="735" y="6982" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="6994" x2="725" y2="6994" stroke="#607587"/><text x="685" y="6992">2</text><text x="735" y="6998" class="net">CENTRAL:GND</text>
+<rect x="1320" y="6930" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="6948" style="font-weight:bold">CENTRAL_CXB6  100nF</text>
+<text x="1330" y="6965">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="6978" x2="1375" y2="6978" stroke="#607587"/><text x="1335" y="6976">1</text><text x="1385" y="6982" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="6994" x2="1375" y2="6994" stroke="#607587"/><text x="1335" y="6992">2</text><text x="1385" y="6998" class="net">CENTRAL:GND</text>
+<rect x="20" y="7272" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="7290" style="font-weight:bold">CENTRAL_CXA7  100nF</text>
+<text x="30" y="7307">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="7320" x2="75" y2="7320" stroke="#607587"/><text x="35" y="7318">1</text><text x="85" y="7324" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="7336" x2="75" y2="7336" stroke="#607587"/><text x="35" y="7334">2</text><text x="85" y="7340" class="net">CENTRAL:GND</text>
+<rect x="670" y="7272" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="7290" style="font-weight:bold">CENTRAL_CXB7  100nF</text>
+<text x="680" y="7307">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="7320" x2="725" y2="7320" stroke="#607587"/><text x="685" y="7318">1</text><text x="735" y="7324" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="7336" x2="725" y2="7336" stroke="#607587"/><text x="685" y="7334">2</text><text x="735" y="7340" class="net">CENTRAL:GND</text>
+<rect x="1320" y="7272" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="7290" style="font-weight:bold">CENTRAL_CXA8  100nF</text>
+<text x="1330" y="7307">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="7320" x2="1375" y2="7320" stroke="#607587"/><text x="1335" y="7318">1</text><text x="1385" y="7324" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="7336" x2="1375" y2="7336" stroke="#607587"/><text x="1335" y="7334">2</text><text x="1385" y="7340" class="net">CENTRAL:GND</text>
+<rect x="20" y="7614" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="7632" style="font-weight:bold">CENTRAL_CXB8  100nF</text>
+<text x="30" y="7649">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="7662" x2="75" y2="7662" stroke="#607587"/><text x="35" y="7660">1</text><text x="85" y="7666" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="7678" x2="75" y2="7678" stroke="#607587"/><text x="35" y="7676">2</text><text x="85" y="7682" class="net">CENTRAL:GND</text>
+<rect x="670" y="7614" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="7632" style="font-weight:bold">CENTRAL_RHOST  10k</text>
+<text x="680" y="7649">host_io_default_off / 0603;0.1W;50V</text>
+<line x1="680" y1="7662" x2="725" y2="7662" stroke="#607587"/><text x="685" y="7660">1</text><text x="735" y="7666" class="net">CENTRAL:HOST_OE_N</text>
+<line x1="680" y1="7678" x2="725" y2="7678" stroke="#607587"/><text x="685" y="7676">2</text><text x="735" y="7682" class="net">CENTRAL:3V3</text>
+<rect x="1320" y="7614" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="7632" style="font-weight:bold">CENTRAL_UESTOPC  100nF</text>
+<text x="1330" y="7649">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="7662" x2="1375" y2="7662" stroke="#607587"/><text x="1335" y="7660">1</text><text x="1385" y="7666" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="7678" x2="1375" y2="7678" stroke="#607587"/><text x="1335" y="7676">2</text><text x="1385" y="7682" class="net">CENTRAL:GND</text>
+<rect x="20" y="7956" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="7974" style="font-weight:bold">CENTRAL_CMUX  100nF</text>
+<text x="30" y="7991">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="8004" x2="75" y2="8004" stroke="#607587"/><text x="35" y="8002">1</text><text x="85" y="8008" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="8020" x2="75" y2="8020" stroke="#607587"/><text x="35" y="8018">2</text><text x="85" y="8024" class="net">CENTRAL:GND</text>
+<rect x="670" y="7956" width="620" height="210" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="7974" style="font-weight:bold">CENTRAL_UMON  INA226AIDGSR</text>
+<text x="680" y="7991">current_telemetry / DGS10</text>
+<line x1="680" y1="8004" x2="725" y2="8004" stroke="#607587"/><text x="685" y="8002">1</text><text x="735" y="8008" class="net">CENTRAL:GND</text>
+<line x1="680" y1="8020" x2="725" y2="8020" stroke="#607587"/><text x="685" y="8018">2</text><text x="735" y="8024" class="net">CENTRAL:GND</text>
+<line x1="680" y1="8036" x2="725" y2="8036" stroke="#607587"/><text x="685" y="8034">3</text><text x="735" y="8040" class="nc">NC:CENTRAL_UMON:3</text>
+<line x1="680" y1="8052" x2="725" y2="8052" stroke="#607587"/><text x="685" y="8050">4</text><text x="735" y="8056" class="net">CENTRAL:LOCAL_SDA</text>
+<line x1="680" y1="8068" x2="725" y2="8068" stroke="#607587"/><text x="685" y="8066">5</text><text x="735" y="8072" class="net">CENTRAL:LOCAL_SCL</text>
+<line x1="680" y1="8084" x2="725" y2="8084" stroke="#607587"/><text x="685" y="8082">6</text><text x="735" y="8088" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="8100" x2="725" y2="8100" stroke="#607587"/><text x="685" y="8098">7</text><text x="735" y="8104" class="net">CENTRAL:GND</text>
+<line x1="680" y1="8116" x2="725" y2="8116" stroke="#607587"/><text x="685" y="8114">8</text><text x="735" y="8120" class="net">CENTRAL:VBUS_SAFE</text>
+<line x1="680" y1="8132" x2="725" y2="8132" stroke="#607587"/><text x="685" y="8130">9</text><text x="735" y="8136" class="net">CENTRAL:VBUS_SAFE</text>
+<line x1="680" y1="8148" x2="725" y2="8148" stroke="#607587"/><text x="685" y="8146">10</text><text x="735" y="8152" class="net">CENTRAL:VBUS_SHUNT_IN</text>
+<rect x="1320" y="7956" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="7974" style="font-weight:bold">CENTRAL_CMON  100nF</text>
+<text x="1330" y="7991">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="8004" x2="1375" y2="8004" stroke="#607587"/><text x="1335" y="8002">1</text><text x="1385" y="8008" class="net">CENTRAL:3V3</text>
+<line x1="1330" y1="8020" x2="1375" y2="8020" stroke="#607587"/><text x="1335" y="8018">2</text><text x="1385" y="8024" class="net">CENTRAL:GND</text>
+<rect x="20" y="8298" width="620" height="162" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="8316" style="font-weight:bold">CENTRAL_UTEMP  TMP117AIDRVR</text>
+<text x="30" y="8333">temperature_telemetry / DRV6+EP</text>
+<line x1="30" y1="8346" x2="75" y2="8346" stroke="#607587"/><text x="35" y="8344">1</text><text x="85" y="8350" class="net">CENTRAL:LOCAL_SCL</text>
+<line x1="30" y1="8362" x2="75" y2="8362" stroke="#607587"/><text x="35" y="8360">2</text><text x="85" y="8366" class="net">CENTRAL:GND</text>
+<line x1="30" y1="8378" x2="75" y2="8378" stroke="#607587"/><text x="35" y="8376">3</text><text x="85" y="8382" class="nc">NC:CENTRAL_UTEMP:3</text>
+<line x1="30" y1="8394" x2="75" y2="8394" stroke="#607587"/><text x="35" y="8392">4</text><text x="85" y="8398" class="net">CENTRAL:GND</text>
+<line x1="30" y1="8410" x2="75" y2="8410" stroke="#607587"/><text x="35" y="8408">5</text><text x="85" y="8414" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="8426" x2="75" y2="8426" stroke="#607587"/><text x="35" y="8424">6</text><text x="85" y="8430" class="net">CENTRAL:LOCAL_SDA</text>
+<line x1="30" y1="8442" x2="75" y2="8442" stroke="#607587"/><text x="35" y="8440">7</text><text x="85" y="8446" class="net">CENTRAL:GND</text>
+<rect x="670" y="8298" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="8316" style="font-weight:bold">CENTRAL_CTEMP  100nF</text>
+<text x="680" y="8333">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="8346" x2="725" y2="8346" stroke="#607587"/><text x="685" y="8344">1</text><text x="735" y="8350" class="net">CENTRAL:3V3</text>
+<line x1="680" y1="8362" x2="725" y2="8362" stroke="#607587"/><text x="685" y="8360">2</text><text x="735" y="8366" class="net">CENTRAL:GND</text>
+<rect x="1320" y="8298" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="8316" style="font-weight:bold">CENTRAL_LED1  GREEN_LED_MPN_HOLD</text>
+<text x="1330" y="8333">status_led / 0603</text>
+<line x1="1330" y1="8346" x2="1375" y2="8346" stroke="#607587"/><text x="1335" y="8344">1</text><text x="1385" y="8350" class="net">CENTRAL:LED_AN</text>
+<line x1="1330" y1="8362" x2="1375" y2="8362" stroke="#607587"/><text x="1335" y="8360">2</text><text x="1385" y="8366" class="net">CENTRAL:GND</text>
+<rect x="20" y="8640" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="8658" style="font-weight:bold">CENTRAL_RLED  2.2k</text>
+<text x="30" y="8675">led_limit / 0603;0.1W;50V</text>
+<line x1="30" y1="8688" x2="75" y2="8688" stroke="#607587"/><text x="35" y="8686">1</text><text x="85" y="8692" class="net">CENTRAL:3V3</text>
+<line x1="30" y1="8704" x2="75" y2="8704" stroke="#607587"/><text x="35" y="8702">2</text><text x="85" y="8708" class="net">CENTRAL:LED_AN</text>
+</svg>

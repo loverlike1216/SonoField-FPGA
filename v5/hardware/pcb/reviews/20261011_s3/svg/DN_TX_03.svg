@@ -1,0 +1,594 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="11510" viewBox="0 0 1950 11510">
+<style>text{font:12px monospace;fill:#172a3a}.title{font:bold 22px sans-serif}.net{fill:#176a47}.nc{fill:#b64d18}</style>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="22" y="35" class="title">v5 PCB-S3 DN / TX_03 — PIN / NET REVIEW CANDIDATE</text>
+<text x="22" y="65">Equal board-qualified labels are electrically common. NC = unconnected. Not native CAD / ERC NOT RUN.</text>
+<rect x="20" y="90" width="620" height="306" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="108" style="font-weight:bold">DN_US6  SN74LVC595APWR</text>
+<text x="30" y="125">serializer / PW16</text>
+<line x1="30" y1="138" x2="75" y2="138" stroke="#607587"/><text x="35" y="136">8</text><text x="85" y="142" class="net">DN:GND</text>
+<line x1="30" y1="154" x2="75" y2="154" stroke="#607587"/><text x="35" y="152">16</text><text x="85" y="158" class="net">DN:3V3</text>
+<line x1="30" y1="170" x2="75" y2="170" stroke="#607587"/><text x="35" y="168">14</text><text x="85" y="174" class="net">DN:B_DATA6</text>
+<line x1="30" y1="186" x2="75" y2="186" stroke="#607587"/><text x="35" y="184">11</text><text x="85" y="190" class="net">DN:B_SRCLK</text>
+<line x1="30" y1="202" x2="75" y2="202" stroke="#607587"/><text x="35" y="200">12</text><text x="85" y="206" class="net">DN:B_RCLK</text>
+<line x1="30" y1="218" x2="75" y2="218" stroke="#607587"/><text x="35" y="216">13</text><text x="85" y="222" class="net">DN:595_OE_N</text>
+<line x1="30" y1="234" x2="75" y2="234" stroke="#607587"/><text x="35" y="232">10</text><text x="85" y="238" class="net">DN:B_RESET_N</text>
+<line x1="30" y1="250" x2="75" y2="250" stroke="#607587"/><text x="35" y="248">9</text><text x="85" y="254" class="nc">NC:DN_US6:9</text>
+<line x1="30" y1="266" x2="75" y2="266" stroke="#607587"/><text x="35" y="264">4</text><text x="85" y="270" class="nc">NC:DN_US6:4</text>
+<line x1="30" y1="282" x2="75" y2="282" stroke="#607587"/><text x="35" y="280">5</text><text x="85" y="286" class="nc">NC:DN_US6:5</text>
+<line x1="30" y1="298" x2="75" y2="298" stroke="#607587"/><text x="35" y="296">6</text><text x="85" y="302" class="nc">NC:DN_US6:6</text>
+<line x1="30" y1="314" x2="75" y2="314" stroke="#607587"/><text x="35" y="312">7</text><text x="85" y="318" class="nc">NC:DN_US6:7</text>
+<line x1="30" y1="330" x2="75" y2="330" stroke="#607587"/><text x="35" y="328">15</text><text x="85" y="334" class="net">DN:Q24</text>
+<line x1="30" y1="346" x2="75" y2="346" stroke="#607587"/><text x="35" y="344">1</text><text x="85" y="350" class="net">DN:Q25</text>
+<line x1="30" y1="362" x2="75" y2="362" stroke="#607587"/><text x="35" y="360">2</text><text x="85" y="366" class="net">DN:Q26</text>
+<line x1="30" y1="378" x2="75" y2="378" stroke="#607587"/><text x="35" y="376">3</text><text x="85" y="382" class="net">DN:Q27</text>
+<rect x="670" y="90" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="108" style="font-weight:bold">DN_US6C  100nF</text>
+<text x="680" y="125">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="138" x2="725" y2="138" stroke="#607587"/><text x="685" y="136">1</text><text x="735" y="142" class="net">DN:3V3</text>
+<line x1="680" y1="154" x2="725" y2="154" stroke="#607587"/><text x="685" y="152">2</text><text x="735" y="158" class="net">DN:GND</text>
+<rect x="1320" y="90" width="620" height="306" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="108" style="font-weight:bold">DN_US7  SN74LVC595APWR</text>
+<text x="1330" y="125">serializer / PW16</text>
+<line x1="1330" y1="138" x2="1375" y2="138" stroke="#607587"/><text x="1335" y="136">8</text><text x="1385" y="142" class="net">DN:GND</text>
+<line x1="1330" y1="154" x2="1375" y2="154" stroke="#607587"/><text x="1335" y="152">16</text><text x="1385" y="158" class="net">DN:3V3</text>
+<line x1="1330" y1="170" x2="1375" y2="170" stroke="#607587"/><text x="1335" y="168">14</text><text x="1385" y="174" class="net">DN:B_DATA7</text>
+<line x1="1330" y1="186" x2="1375" y2="186" stroke="#607587"/><text x="1335" y="184">11</text><text x="1385" y="190" class="net">DN:B_SRCLK</text>
+<line x1="1330" y1="202" x2="1375" y2="202" stroke="#607587"/><text x="1335" y="200">12</text><text x="1385" y="206" class="net">DN:B_RCLK</text>
+<line x1="1330" y1="218" x2="1375" y2="218" stroke="#607587"/><text x="1335" y="216">13</text><text x="1385" y="222" class="net">DN:595_OE_N</text>
+<line x1="1330" y1="234" x2="1375" y2="234" stroke="#607587"/><text x="1335" y="232">10</text><text x="1385" y="238" class="net">DN:B_RESET_N</text>
+<line x1="1330" y1="250" x2="1375" y2="250" stroke="#607587"/><text x="1335" y="248">9</text><text x="1385" y="254" class="nc">NC:DN_US7:9</text>
+<line x1="1330" y1="266" x2="1375" y2="266" stroke="#607587"/><text x="1335" y="264">4</text><text x="1385" y="270" class="nc">NC:DN_US7:4</text>
+<line x1="1330" y1="282" x2="1375" y2="282" stroke="#607587"/><text x="1335" y="280">5</text><text x="1385" y="286" class="nc">NC:DN_US7:5</text>
+<line x1="1330" y1="298" x2="1375" y2="298" stroke="#607587"/><text x="1335" y="296">6</text><text x="1385" y="302" class="nc">NC:DN_US7:6</text>
+<line x1="1330" y1="314" x2="1375" y2="314" stroke="#607587"/><text x="1335" y="312">7</text><text x="1385" y="318" class="nc">NC:DN_US7:7</text>
+<line x1="1330" y1="330" x2="1375" y2="330" stroke="#607587"/><text x="1335" y="328">15</text><text x="1385" y="334" class="net">DN:Q28</text>
+<line x1="1330" y1="346" x2="1375" y2="346" stroke="#607587"/><text x="1335" y="344">1</text><text x="1385" y="350" class="net">DN:Q29</text>
+<line x1="1330" y1="362" x2="1375" y2="362" stroke="#607587"/><text x="1335" y="360">2</text><text x="1385" y="366" class="net">DN:Q30</text>
+<line x1="1330" y1="378" x2="1375" y2="378" stroke="#607587"/><text x="1335" y="376">3</text><text x="1385" y="382" class="net">DN:Q31</text>
+<rect x="20" y="416" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="434" style="font-weight:bold">DN_US7C  100nF</text>
+<text x="30" y="451">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="464" x2="75" y2="464" stroke="#607587"/><text x="35" y="462">1</text><text x="85" y="468" class="net">DN:3V3</text>
+<line x1="30" y1="480" x2="75" y2="480" stroke="#607587"/><text x="35" y="478">2</text><text x="85" y="484" class="net">DN:GND</text>
+<rect x="670" y="416" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="434" style="font-weight:bold">DN_RIN24  1k</text>
+<text x="680" y="451">level_shift_base / 0603;0.1W;50V</text>
+<line x1="680" y1="464" x2="725" y2="464" stroke="#607587"/><text x="685" y="462">1</text><text x="735" y="468" class="net">DN:Q24</text>
+<line x1="680" y1="480" x2="725" y2="480" stroke="#607587"/><text x="685" y="478">2</text><text x="735" y="484" class="net">DN:BASE1_24</text>
+<rect x="1320" y="416" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="434" style="font-weight:bold">DN_RB124  10k</text>
+<text x="1330" y="451">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="464" x2="1375" y2="464" stroke="#607587"/><text x="1335" y="462">1</text><text x="1385" y="468" class="net">DN:BASE1_24</text>
+<line x1="1330" y1="480" x2="1375" y2="480" stroke="#607587"/><text x="1335" y="478">2</text><text x="1385" y="484" class="net">DN:GND</text>
+<rect x="20" y="742" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="760" style="font-weight:bold">DN_QA24  MMBT3904LT1G</text>
+<text x="30" y="777">level_shift_stage1 / SOT23</text>
+<line x1="30" y1="790" x2="75" y2="790" stroke="#607587"/><text x="35" y="788">1</text><text x="85" y="794" class="net">DN:BASE1_24</text>
+<line x1="30" y1="806" x2="75" y2="806" stroke="#607587"/><text x="35" y="804">2</text><text x="85" y="810" class="net">DN:GND</text>
+<line x1="30" y1="822" x2="75" y2="822" stroke="#607587"/><text x="35" y="820">3</text><text x="85" y="826" class="net">DN:MID_24</text>
+<rect x="670" y="742" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="760" style="font-weight:bold">DN_RC124  1k</text>
+<text x="680" y="777">level_shift_pullup / 0603;0.1W;50V</text>
+<line x1="680" y1="790" x2="725" y2="790" stroke="#607587"/><text x="685" y="788">1</text><text x="735" y="794" class="net">DN:3V3</text>
+<line x1="680" y1="806" x2="725" y2="806" stroke="#607587"/><text x="685" y="804">2</text><text x="735" y="810" class="net">DN:MID_24</text>
+<rect x="1320" y="742" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="760" style="font-weight:bold">DN_RB224  1k</text>
+<text x="1330" y="777">level_shift_base / 0603;0.1W;50V</text>
+<line x1="1330" y1="790" x2="1375" y2="790" stroke="#607587"/><text x="1335" y="788">1</text><text x="1385" y="794" class="net">DN:MID_24</text>
+<line x1="1330" y1="806" x2="1375" y2="806" stroke="#607587"/><text x="1335" y="804">2</text><text x="1385" y="810" class="net">DN:BASE2_24</text>
+<rect x="20" y="1068" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1086" style="font-weight:bold">DN_RBD24  10k</text>
+<text x="30" y="1103">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="1116" x2="75" y2="1116" stroke="#607587"/><text x="35" y="1114">1</text><text x="85" y="1120" class="net">DN:BASE2_24</text>
+<line x1="30" y1="1132" x2="75" y2="1132" stroke="#607587"/><text x="35" y="1130">2</text><text x="85" y="1136" class="net">DN:GND</text>
+<rect x="670" y="1068" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1086" style="font-weight:bold">DN_QB24  MMBT3904LT1G</text>
+<text x="680" y="1103">level_shift_stage2 / SOT23</text>
+<line x1="680" y1="1116" x2="725" y2="1116" stroke="#607587"/><text x="685" y="1114">1</text><text x="735" y="1120" class="net">DN:BASE2_24</text>
+<line x1="680" y1="1132" x2="725" y2="1132" stroke="#607587"/><text x="685" y="1130">2</text><text x="735" y="1136" class="net">DN:GND</text>
+<line x1="680" y1="1148" x2="725" y2="1148" stroke="#607587"/><text x="685" y="1146">3</text><text x="735" y="1152" class="net">DN:TCIN24</text>
+<rect x="1320" y="1068" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1086" style="font-weight:bold">DN_RC224  1.5k</text>
+<text x="1330" y="1103">level_shift_pullup / 0805;0.25W;50V</text>
+<line x1="1330" y1="1116" x2="1375" y2="1116" stroke="#607587"/><text x="1335" y="1114">1</text><text x="1385" y="1120" class="net">DN:TX12</text>
+<line x1="1330" y1="1132" x2="1375" y2="1132" stroke="#607587"/><text x="1335" y="1130">2</text><text x="1385" y="1136" class="net">DN:TCIN24</text>
+<rect x="20" y="1394" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1412" style="font-weight:bold">DN_RTI24  10k</text>
+<text x="30" y="1429">tc_input_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="1442" x2="75" y2="1442" stroke="#607587"/><text x="35" y="1440">1</text><text x="85" y="1446" class="net">DN:TCIN24</text>
+<line x1="30" y1="1458" x2="75" y2="1458" stroke="#607587"/><text x="35" y="1456">2</text><text x="85" y="1462" class="net">DN:GND</text>
+<rect x="670" y="1394" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1412" style="font-weight:bold">DN_RTX24  330</text>
+<text x="680" y="1429">tx_series_energy / 2512;1W;pulse_curve_HOLD;50V</text>
+<line x1="680" y1="1442" x2="725" y2="1442" stroke="#607587"/><text x="685" y="1440">1</text><text x="735" y="1446" class="net">DN:TCOUT24</text>
+<line x1="680" y1="1458" x2="725" y2="1458" stroke="#607587"/><text x="685" y="1456">2</text><text x="735" y="1462" class="net">DN:TX24</text>
+<rect x="1320" y="1394" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1412" style="font-weight:bold">DN_TX24  NU40C10T</text>
+<text x="1330" y="1429">ultrasound_transmitter / MECH_VENDOR_HOLD</text>
+<line x1="1330" y1="1442" x2="1375" y2="1442" stroke="#607587"/><text x="1335" y="1440">1</text><text x="1385" y="1446" class="net">DN:TX24</text>
+<line x1="1330" y1="1458" x2="1375" y2="1458" stroke="#607587"/><text x="1335" y="1456">2</text><text x="1385" y="1462" class="net">DN:GND</text>
+<rect x="20" y="1720" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1738" style="font-weight:bold">DN_RIN25  1k</text>
+<text x="30" y="1755">level_shift_base / 0603;0.1W;50V</text>
+<line x1="30" y1="1768" x2="75" y2="1768" stroke="#607587"/><text x="35" y="1766">1</text><text x="85" y="1772" class="net">DN:Q25</text>
+<line x1="30" y1="1784" x2="75" y2="1784" stroke="#607587"/><text x="35" y="1782">2</text><text x="85" y="1788" class="net">DN:BASE1_25</text>
+<rect x="670" y="1720" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1738" style="font-weight:bold">DN_RB125  10k</text>
+<text x="680" y="1755">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="680" y1="1768" x2="725" y2="1768" stroke="#607587"/><text x="685" y="1766">1</text><text x="735" y="1772" class="net">DN:BASE1_25</text>
+<line x1="680" y1="1784" x2="725" y2="1784" stroke="#607587"/><text x="685" y="1782">2</text><text x="735" y="1788" class="net">DN:GND</text>
+<rect x="1320" y="1720" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1738" style="font-weight:bold">DN_QA25  MMBT3904LT1G</text>
+<text x="1330" y="1755">level_shift_stage1 / SOT23</text>
+<line x1="1330" y1="1768" x2="1375" y2="1768" stroke="#607587"/><text x="1335" y="1766">1</text><text x="1385" y="1772" class="net">DN:BASE1_25</text>
+<line x1="1330" y1="1784" x2="1375" y2="1784" stroke="#607587"/><text x="1335" y="1782">2</text><text x="1385" y="1788" class="net">DN:GND</text>
+<line x1="1330" y1="1800" x2="1375" y2="1800" stroke="#607587"/><text x="1335" y="1798">3</text><text x="1385" y="1804" class="net">DN:MID_25</text>
+<rect x="20" y="2046" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2064" style="font-weight:bold">DN_RC125  1k</text>
+<text x="30" y="2081">level_shift_pullup / 0603;0.1W;50V</text>
+<line x1="30" y1="2094" x2="75" y2="2094" stroke="#607587"/><text x="35" y="2092">1</text><text x="85" y="2098" class="net">DN:3V3</text>
+<line x1="30" y1="2110" x2="75" y2="2110" stroke="#607587"/><text x="35" y="2108">2</text><text x="85" y="2114" class="net">DN:MID_25</text>
+<rect x="670" y="2046" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2064" style="font-weight:bold">DN_RB225  1k</text>
+<text x="680" y="2081">level_shift_base / 0603;0.1W;50V</text>
+<line x1="680" y1="2094" x2="725" y2="2094" stroke="#607587"/><text x="685" y="2092">1</text><text x="735" y="2098" class="net">DN:MID_25</text>
+<line x1="680" y1="2110" x2="725" y2="2110" stroke="#607587"/><text x="685" y="2108">2</text><text x="735" y="2114" class="net">DN:BASE2_25</text>
+<rect x="1320" y="2046" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2064" style="font-weight:bold">DN_RBD25  10k</text>
+<text x="1330" y="2081">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="2094" x2="1375" y2="2094" stroke="#607587"/><text x="1335" y="2092">1</text><text x="1385" y="2098" class="net">DN:BASE2_25</text>
+<line x1="1330" y1="2110" x2="1375" y2="2110" stroke="#607587"/><text x="1335" y="2108">2</text><text x="1385" y="2114" class="net">DN:GND</text>
+<rect x="20" y="2372" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2390" style="font-weight:bold">DN_QB25  MMBT3904LT1G</text>
+<text x="30" y="2407">level_shift_stage2 / SOT23</text>
+<line x1="30" y1="2420" x2="75" y2="2420" stroke="#607587"/><text x="35" y="2418">1</text><text x="85" y="2424" class="net">DN:BASE2_25</text>
+<line x1="30" y1="2436" x2="75" y2="2436" stroke="#607587"/><text x="35" y="2434">2</text><text x="85" y="2440" class="net">DN:GND</text>
+<line x1="30" y1="2452" x2="75" y2="2452" stroke="#607587"/><text x="35" y="2450">3</text><text x="85" y="2456" class="net">DN:TCIN25</text>
+<rect x="670" y="2372" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2390" style="font-weight:bold">DN_RC225  1.5k</text>
+<text x="680" y="2407">level_shift_pullup / 0805;0.25W;50V</text>
+<line x1="680" y1="2420" x2="725" y2="2420" stroke="#607587"/><text x="685" y="2418">1</text><text x="735" y="2424" class="net">DN:TX12</text>
+<line x1="680" y1="2436" x2="725" y2="2436" stroke="#607587"/><text x="685" y="2434">2</text><text x="735" y="2440" class="net">DN:TCIN25</text>
+<rect x="1320" y="2372" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2390" style="font-weight:bold">DN_RTI25  10k</text>
+<text x="1330" y="2407">tc_input_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="2420" x2="1375" y2="2420" stroke="#607587"/><text x="1335" y="2418">1</text><text x="1385" y="2424" class="net">DN:TCIN25</text>
+<line x1="1330" y1="2436" x2="1375" y2="2436" stroke="#607587"/><text x="1335" y="2434">2</text><text x="1385" y="2440" class="net">DN:GND</text>
+<rect x="20" y="2698" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2716" style="font-weight:bold">DN_RTX25  330</text>
+<text x="30" y="2733">tx_series_energy / 2512;1W;pulse_curve_HOLD;50V</text>
+<line x1="30" y1="2746" x2="75" y2="2746" stroke="#607587"/><text x="35" y="2744">1</text><text x="85" y="2750" class="net">DN:TCOUT25</text>
+<line x1="30" y1="2762" x2="75" y2="2762" stroke="#607587"/><text x="35" y="2760">2</text><text x="85" y="2766" class="net">DN:TX25</text>
+<rect x="670" y="2698" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2716" style="font-weight:bold">DN_TX25  NU40C10T</text>
+<text x="680" y="2733">ultrasound_transmitter / MECH_VENDOR_HOLD</text>
+<line x1="680" y1="2746" x2="725" y2="2746" stroke="#607587"/><text x="685" y="2744">1</text><text x="735" y="2750" class="net">DN:TX25</text>
+<line x1="680" y1="2762" x2="725" y2="2762" stroke="#607587"/><text x="685" y="2760">2</text><text x="735" y="2766" class="net">DN:GND</text>
+<rect x="1320" y="2698" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2716" style="font-weight:bold">DN_RIN26  1k</text>
+<text x="1330" y="2733">level_shift_base / 0603;0.1W;50V</text>
+<line x1="1330" y1="2746" x2="1375" y2="2746" stroke="#607587"/><text x="1335" y="2744">1</text><text x="1385" y="2750" class="net">DN:Q26</text>
+<line x1="1330" y1="2762" x2="1375" y2="2762" stroke="#607587"/><text x="1335" y="2760">2</text><text x="1385" y="2766" class="net">DN:BASE1_26</text>
+<rect x="20" y="3024" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3042" style="font-weight:bold">DN_RB126  10k</text>
+<text x="30" y="3059">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="3072" x2="75" y2="3072" stroke="#607587"/><text x="35" y="3070">1</text><text x="85" y="3076" class="net">DN:BASE1_26</text>
+<line x1="30" y1="3088" x2="75" y2="3088" stroke="#607587"/><text x="35" y="3086">2</text><text x="85" y="3092" class="net">DN:GND</text>
+<rect x="670" y="3024" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3042" style="font-weight:bold">DN_QA26  MMBT3904LT1G</text>
+<text x="680" y="3059">level_shift_stage1 / SOT23</text>
+<line x1="680" y1="3072" x2="725" y2="3072" stroke="#607587"/><text x="685" y="3070">1</text><text x="735" y="3076" class="net">DN:BASE1_26</text>
+<line x1="680" y1="3088" x2="725" y2="3088" stroke="#607587"/><text x="685" y="3086">2</text><text x="735" y="3092" class="net">DN:GND</text>
+<line x1="680" y1="3104" x2="725" y2="3104" stroke="#607587"/><text x="685" y="3102">3</text><text x="735" y="3108" class="net">DN:MID_26</text>
+<rect x="1320" y="3024" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3042" style="font-weight:bold">DN_RC126  1k</text>
+<text x="1330" y="3059">level_shift_pullup / 0603;0.1W;50V</text>
+<line x1="1330" y1="3072" x2="1375" y2="3072" stroke="#607587"/><text x="1335" y="3070">1</text><text x="1385" y="3076" class="net">DN:3V3</text>
+<line x1="1330" y1="3088" x2="1375" y2="3088" stroke="#607587"/><text x="1335" y="3086">2</text><text x="1385" y="3092" class="net">DN:MID_26</text>
+<rect x="20" y="3350" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3368" style="font-weight:bold">DN_RB226  1k</text>
+<text x="30" y="3385">level_shift_base / 0603;0.1W;50V</text>
+<line x1="30" y1="3398" x2="75" y2="3398" stroke="#607587"/><text x="35" y="3396">1</text><text x="85" y="3402" class="net">DN:MID_26</text>
+<line x1="30" y1="3414" x2="75" y2="3414" stroke="#607587"/><text x="35" y="3412">2</text><text x="85" y="3418" class="net">DN:BASE2_26</text>
+<rect x="670" y="3350" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3368" style="font-weight:bold">DN_RBD26  10k</text>
+<text x="680" y="3385">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="680" y1="3398" x2="725" y2="3398" stroke="#607587"/><text x="685" y="3396">1</text><text x="735" y="3402" class="net">DN:BASE2_26</text>
+<line x1="680" y1="3414" x2="725" y2="3414" stroke="#607587"/><text x="685" y="3412">2</text><text x="735" y="3418" class="net">DN:GND</text>
+<rect x="1320" y="3350" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3368" style="font-weight:bold">DN_QB26  MMBT3904LT1G</text>
+<text x="1330" y="3385">level_shift_stage2 / SOT23</text>
+<line x1="1330" y1="3398" x2="1375" y2="3398" stroke="#607587"/><text x="1335" y="3396">1</text><text x="1385" y="3402" class="net">DN:BASE2_26</text>
+<line x1="1330" y1="3414" x2="1375" y2="3414" stroke="#607587"/><text x="1335" y="3412">2</text><text x="1385" y="3418" class="net">DN:GND</text>
+<line x1="1330" y1="3430" x2="1375" y2="3430" stroke="#607587"/><text x="1335" y="3428">3</text><text x="1385" y="3434" class="net">DN:TCIN26</text>
+<rect x="20" y="3676" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3694" style="font-weight:bold">DN_RC226  1.5k</text>
+<text x="30" y="3711">level_shift_pullup / 0805;0.25W;50V</text>
+<line x1="30" y1="3724" x2="75" y2="3724" stroke="#607587"/><text x="35" y="3722">1</text><text x="85" y="3728" class="net">DN:TX12</text>
+<line x1="30" y1="3740" x2="75" y2="3740" stroke="#607587"/><text x="35" y="3738">2</text><text x="85" y="3744" class="net">DN:TCIN26</text>
+<rect x="670" y="3676" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3694" style="font-weight:bold">DN_RTI26  10k</text>
+<text x="680" y="3711">tc_input_idle / 0603;0.1W;50V</text>
+<line x1="680" y1="3724" x2="725" y2="3724" stroke="#607587"/><text x="685" y="3722">1</text><text x="735" y="3728" class="net">DN:TCIN26</text>
+<line x1="680" y1="3740" x2="725" y2="3740" stroke="#607587"/><text x="685" y="3738">2</text><text x="735" y="3744" class="net">DN:GND</text>
+<rect x="1320" y="3676" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3694" style="font-weight:bold">DN_RTX26  330</text>
+<text x="1330" y="3711">tx_series_energy / 2512;1W;pulse_curve_HOLD;50V</text>
+<line x1="1330" y1="3724" x2="1375" y2="3724" stroke="#607587"/><text x="1335" y="3722">1</text><text x="1385" y="3728" class="net">DN:TCOUT26</text>
+<line x1="1330" y1="3740" x2="1375" y2="3740" stroke="#607587"/><text x="1335" y="3738">2</text><text x="1385" y="3744" class="net">DN:TX26</text>
+<rect x="20" y="4002" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4020" style="font-weight:bold">DN_TX26  NU40C10T</text>
+<text x="30" y="4037">ultrasound_transmitter / MECH_VENDOR_HOLD</text>
+<line x1="30" y1="4050" x2="75" y2="4050" stroke="#607587"/><text x="35" y="4048">1</text><text x="85" y="4054" class="net">DN:TX26</text>
+<line x1="30" y1="4066" x2="75" y2="4066" stroke="#607587"/><text x="35" y="4064">2</text><text x="85" y="4070" class="net">DN:GND</text>
+<rect x="670" y="4002" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4020" style="font-weight:bold">DN_RIN27  1k</text>
+<text x="680" y="4037">level_shift_base / 0603;0.1W;50V</text>
+<line x1="680" y1="4050" x2="725" y2="4050" stroke="#607587"/><text x="685" y="4048">1</text><text x="735" y="4054" class="net">DN:Q27</text>
+<line x1="680" y1="4066" x2="725" y2="4066" stroke="#607587"/><text x="685" y="4064">2</text><text x="735" y="4070" class="net">DN:BASE1_27</text>
+<rect x="1320" y="4002" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4020" style="font-weight:bold">DN_RB127  10k</text>
+<text x="1330" y="4037">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="4050" x2="1375" y2="4050" stroke="#607587"/><text x="1335" y="4048">1</text><text x="1385" y="4054" class="net">DN:BASE1_27</text>
+<line x1="1330" y1="4066" x2="1375" y2="4066" stroke="#607587"/><text x="1335" y="4064">2</text><text x="1385" y="4070" class="net">DN:GND</text>
+<rect x="20" y="4328" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4346" style="font-weight:bold">DN_QA27  MMBT3904LT1G</text>
+<text x="30" y="4363">level_shift_stage1 / SOT23</text>
+<line x1="30" y1="4376" x2="75" y2="4376" stroke="#607587"/><text x="35" y="4374">1</text><text x="85" y="4380" class="net">DN:BASE1_27</text>
+<line x1="30" y1="4392" x2="75" y2="4392" stroke="#607587"/><text x="35" y="4390">2</text><text x="85" y="4396" class="net">DN:GND</text>
+<line x1="30" y1="4408" x2="75" y2="4408" stroke="#607587"/><text x="35" y="4406">3</text><text x="85" y="4412" class="net">DN:MID_27</text>
+<rect x="670" y="4328" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4346" style="font-weight:bold">DN_RC127  1k</text>
+<text x="680" y="4363">level_shift_pullup / 0603;0.1W;50V</text>
+<line x1="680" y1="4376" x2="725" y2="4376" stroke="#607587"/><text x="685" y="4374">1</text><text x="735" y="4380" class="net">DN:3V3</text>
+<line x1="680" y1="4392" x2="725" y2="4392" stroke="#607587"/><text x="685" y="4390">2</text><text x="735" y="4396" class="net">DN:MID_27</text>
+<rect x="1320" y="4328" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4346" style="font-weight:bold">DN_RB227  1k</text>
+<text x="1330" y="4363">level_shift_base / 0603;0.1W;50V</text>
+<line x1="1330" y1="4376" x2="1375" y2="4376" stroke="#607587"/><text x="1335" y="4374">1</text><text x="1385" y="4380" class="net">DN:MID_27</text>
+<line x1="1330" y1="4392" x2="1375" y2="4392" stroke="#607587"/><text x="1335" y="4390">2</text><text x="1385" y="4396" class="net">DN:BASE2_27</text>
+<rect x="20" y="4654" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4672" style="font-weight:bold">DN_RBD27  10k</text>
+<text x="30" y="4689">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="4702" x2="75" y2="4702" stroke="#607587"/><text x="35" y="4700">1</text><text x="85" y="4706" class="net">DN:BASE2_27</text>
+<line x1="30" y1="4718" x2="75" y2="4718" stroke="#607587"/><text x="35" y="4716">2</text><text x="85" y="4722" class="net">DN:GND</text>
+<rect x="670" y="4654" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4672" style="font-weight:bold">DN_QB27  MMBT3904LT1G</text>
+<text x="680" y="4689">level_shift_stage2 / SOT23</text>
+<line x1="680" y1="4702" x2="725" y2="4702" stroke="#607587"/><text x="685" y="4700">1</text><text x="735" y="4706" class="net">DN:BASE2_27</text>
+<line x1="680" y1="4718" x2="725" y2="4718" stroke="#607587"/><text x="685" y="4716">2</text><text x="735" y="4722" class="net">DN:GND</text>
+<line x1="680" y1="4734" x2="725" y2="4734" stroke="#607587"/><text x="685" y="4732">3</text><text x="735" y="4738" class="net">DN:TCIN27</text>
+<rect x="1320" y="4654" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4672" style="font-weight:bold">DN_RC227  1.5k</text>
+<text x="1330" y="4689">level_shift_pullup / 0805;0.25W;50V</text>
+<line x1="1330" y1="4702" x2="1375" y2="4702" stroke="#607587"/><text x="1335" y="4700">1</text><text x="1385" y="4706" class="net">DN:TX12</text>
+<line x1="1330" y1="4718" x2="1375" y2="4718" stroke="#607587"/><text x="1335" y="4716">2</text><text x="1385" y="4722" class="net">DN:TCIN27</text>
+<rect x="20" y="4980" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4998" style="font-weight:bold">DN_RTI27  10k</text>
+<text x="30" y="5015">tc_input_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="5028" x2="75" y2="5028" stroke="#607587"/><text x="35" y="5026">1</text><text x="85" y="5032" class="net">DN:TCIN27</text>
+<line x1="30" y1="5044" x2="75" y2="5044" stroke="#607587"/><text x="35" y="5042">2</text><text x="85" y="5048" class="net">DN:GND</text>
+<rect x="670" y="4980" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4998" style="font-weight:bold">DN_RTX27  330</text>
+<text x="680" y="5015">tx_series_energy / 2512;1W;pulse_curve_HOLD;50V</text>
+<line x1="680" y1="5028" x2="725" y2="5028" stroke="#607587"/><text x="685" y="5026">1</text><text x="735" y="5032" class="net">DN:TCOUT27</text>
+<line x1="680" y1="5044" x2="725" y2="5044" stroke="#607587"/><text x="685" y="5042">2</text><text x="735" y="5048" class="net">DN:TX27</text>
+<rect x="1320" y="4980" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4998" style="font-weight:bold">DN_TX27  NU40C10T</text>
+<text x="1330" y="5015">ultrasound_transmitter / MECH_VENDOR_HOLD</text>
+<line x1="1330" y1="5028" x2="1375" y2="5028" stroke="#607587"/><text x="1335" y="5026">1</text><text x="1385" y="5032" class="net">DN:TX27</text>
+<line x1="1330" y1="5044" x2="1375" y2="5044" stroke="#607587"/><text x="1335" y="5042">2</text><text x="1385" y="5048" class="net">DN:GND</text>
+<rect x="20" y="5306" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="5324" style="font-weight:bold">DN_RIN28  1k</text>
+<text x="30" y="5341">level_shift_base / 0603;0.1W;50V</text>
+<line x1="30" y1="5354" x2="75" y2="5354" stroke="#607587"/><text x="35" y="5352">1</text><text x="85" y="5358" class="net">DN:Q28</text>
+<line x1="30" y1="5370" x2="75" y2="5370" stroke="#607587"/><text x="35" y="5368">2</text><text x="85" y="5374" class="net">DN:BASE1_28</text>
+<rect x="670" y="5306" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="5324" style="font-weight:bold">DN_RB128  10k</text>
+<text x="680" y="5341">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="680" y1="5354" x2="725" y2="5354" stroke="#607587"/><text x="685" y="5352">1</text><text x="735" y="5358" class="net">DN:BASE1_28</text>
+<line x1="680" y1="5370" x2="725" y2="5370" stroke="#607587"/><text x="685" y="5368">2</text><text x="735" y="5374" class="net">DN:GND</text>
+<rect x="1320" y="5306" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="5324" style="font-weight:bold">DN_QA28  MMBT3904LT1G</text>
+<text x="1330" y="5341">level_shift_stage1 / SOT23</text>
+<line x1="1330" y1="5354" x2="1375" y2="5354" stroke="#607587"/><text x="1335" y="5352">1</text><text x="1385" y="5358" class="net">DN:BASE1_28</text>
+<line x1="1330" y1="5370" x2="1375" y2="5370" stroke="#607587"/><text x="1335" y="5368">2</text><text x="1385" y="5374" class="net">DN:GND</text>
+<line x1="1330" y1="5386" x2="1375" y2="5386" stroke="#607587"/><text x="1335" y="5384">3</text><text x="1385" y="5390" class="net">DN:MID_28</text>
+<rect x="20" y="5632" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="5650" style="font-weight:bold">DN_RC128  1k</text>
+<text x="30" y="5667">level_shift_pullup / 0603;0.1W;50V</text>
+<line x1="30" y1="5680" x2="75" y2="5680" stroke="#607587"/><text x="35" y="5678">1</text><text x="85" y="5684" class="net">DN:3V3</text>
+<line x1="30" y1="5696" x2="75" y2="5696" stroke="#607587"/><text x="35" y="5694">2</text><text x="85" y="5700" class="net">DN:MID_28</text>
+<rect x="670" y="5632" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="5650" style="font-weight:bold">DN_RB228  1k</text>
+<text x="680" y="5667">level_shift_base / 0603;0.1W;50V</text>
+<line x1="680" y1="5680" x2="725" y2="5680" stroke="#607587"/><text x="685" y="5678">1</text><text x="735" y="5684" class="net">DN:MID_28</text>
+<line x1="680" y1="5696" x2="725" y2="5696" stroke="#607587"/><text x="685" y="5694">2</text><text x="735" y="5700" class="net">DN:BASE2_28</text>
+<rect x="1320" y="5632" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="5650" style="font-weight:bold">DN_RBD28  10k</text>
+<text x="1330" y="5667">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="5680" x2="1375" y2="5680" stroke="#607587"/><text x="1335" y="5678">1</text><text x="1385" y="5684" class="net">DN:BASE2_28</text>
+<line x1="1330" y1="5696" x2="1375" y2="5696" stroke="#607587"/><text x="1335" y="5694">2</text><text x="1385" y="5700" class="net">DN:GND</text>
+<rect x="20" y="5958" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="5976" style="font-weight:bold">DN_QB28  MMBT3904LT1G</text>
+<text x="30" y="5993">level_shift_stage2 / SOT23</text>
+<line x1="30" y1="6006" x2="75" y2="6006" stroke="#607587"/><text x="35" y="6004">1</text><text x="85" y="6010" class="net">DN:BASE2_28</text>
+<line x1="30" y1="6022" x2="75" y2="6022" stroke="#607587"/><text x="35" y="6020">2</text><text x="85" y="6026" class="net">DN:GND</text>
+<line x1="30" y1="6038" x2="75" y2="6038" stroke="#607587"/><text x="35" y="6036">3</text><text x="85" y="6042" class="net">DN:TCIN28</text>
+<rect x="670" y="5958" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="5976" style="font-weight:bold">DN_RC228  1.5k</text>
+<text x="680" y="5993">level_shift_pullup / 0805;0.25W;50V</text>
+<line x1="680" y1="6006" x2="725" y2="6006" stroke="#607587"/><text x="685" y="6004">1</text><text x="735" y="6010" class="net">DN:TX12</text>
+<line x1="680" y1="6022" x2="725" y2="6022" stroke="#607587"/><text x="685" y="6020">2</text><text x="735" y="6026" class="net">DN:TCIN28</text>
+<rect x="1320" y="5958" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="5976" style="font-weight:bold">DN_RTI28  10k</text>
+<text x="1330" y="5993">tc_input_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="6006" x2="1375" y2="6006" stroke="#607587"/><text x="1335" y="6004">1</text><text x="1385" y="6010" class="net">DN:TCIN28</text>
+<line x1="1330" y1="6022" x2="1375" y2="6022" stroke="#607587"/><text x="1335" y="6020">2</text><text x="1385" y="6026" class="net">DN:GND</text>
+<rect x="20" y="6284" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="6302" style="font-weight:bold">DN_RTX28  330</text>
+<text x="30" y="6319">tx_series_energy / 2512;1W;pulse_curve_HOLD;50V</text>
+<line x1="30" y1="6332" x2="75" y2="6332" stroke="#607587"/><text x="35" y="6330">1</text><text x="85" y="6336" class="net">DN:TCOUT28</text>
+<line x1="30" y1="6348" x2="75" y2="6348" stroke="#607587"/><text x="35" y="6346">2</text><text x="85" y="6352" class="net">DN:TX28</text>
+<rect x="670" y="6284" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="6302" style="font-weight:bold">DN_TX28  NU40C10T</text>
+<text x="680" y="6319">ultrasound_transmitter / MECH_VENDOR_HOLD</text>
+<line x1="680" y1="6332" x2="725" y2="6332" stroke="#607587"/><text x="685" y="6330">1</text><text x="735" y="6336" class="net">DN:TX28</text>
+<line x1="680" y1="6348" x2="725" y2="6348" stroke="#607587"/><text x="685" y="6346">2</text><text x="735" y="6352" class="net">DN:GND</text>
+<rect x="1320" y="6284" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="6302" style="font-weight:bold">DN_RIN29  1k</text>
+<text x="1330" y="6319">level_shift_base / 0603;0.1W;50V</text>
+<line x1="1330" y1="6332" x2="1375" y2="6332" stroke="#607587"/><text x="1335" y="6330">1</text><text x="1385" y="6336" class="net">DN:Q29</text>
+<line x1="1330" y1="6348" x2="1375" y2="6348" stroke="#607587"/><text x="1335" y="6346">2</text><text x="1385" y="6352" class="net">DN:BASE1_29</text>
+<rect x="20" y="6610" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="6628" style="font-weight:bold">DN_RB129  10k</text>
+<text x="30" y="6645">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="6658" x2="75" y2="6658" stroke="#607587"/><text x="35" y="6656">1</text><text x="85" y="6662" class="net">DN:BASE1_29</text>
+<line x1="30" y1="6674" x2="75" y2="6674" stroke="#607587"/><text x="35" y="6672">2</text><text x="85" y="6678" class="net">DN:GND</text>
+<rect x="670" y="6610" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="6628" style="font-weight:bold">DN_QA29  MMBT3904LT1G</text>
+<text x="680" y="6645">level_shift_stage1 / SOT23</text>
+<line x1="680" y1="6658" x2="725" y2="6658" stroke="#607587"/><text x="685" y="6656">1</text><text x="735" y="6662" class="net">DN:BASE1_29</text>
+<line x1="680" y1="6674" x2="725" y2="6674" stroke="#607587"/><text x="685" y="6672">2</text><text x="735" y="6678" class="net">DN:GND</text>
+<line x1="680" y1="6690" x2="725" y2="6690" stroke="#607587"/><text x="685" y="6688">3</text><text x="735" y="6694" class="net">DN:MID_29</text>
+<rect x="1320" y="6610" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="6628" style="font-weight:bold">DN_RC129  1k</text>
+<text x="1330" y="6645">level_shift_pullup / 0603;0.1W;50V</text>
+<line x1="1330" y1="6658" x2="1375" y2="6658" stroke="#607587"/><text x="1335" y="6656">1</text><text x="1385" y="6662" class="net">DN:3V3</text>
+<line x1="1330" y1="6674" x2="1375" y2="6674" stroke="#607587"/><text x="1335" y="6672">2</text><text x="1385" y="6678" class="net">DN:MID_29</text>
+<rect x="20" y="6936" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="6954" style="font-weight:bold">DN_RB229  1k</text>
+<text x="30" y="6971">level_shift_base / 0603;0.1W;50V</text>
+<line x1="30" y1="6984" x2="75" y2="6984" stroke="#607587"/><text x="35" y="6982">1</text><text x="85" y="6988" class="net">DN:MID_29</text>
+<line x1="30" y1="7000" x2="75" y2="7000" stroke="#607587"/><text x="35" y="6998">2</text><text x="85" y="7004" class="net">DN:BASE2_29</text>
+<rect x="670" y="6936" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="6954" style="font-weight:bold">DN_RBD29  10k</text>
+<text x="680" y="6971">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="680" y1="6984" x2="725" y2="6984" stroke="#607587"/><text x="685" y="6982">1</text><text x="735" y="6988" class="net">DN:BASE2_29</text>
+<line x1="680" y1="7000" x2="725" y2="7000" stroke="#607587"/><text x="685" y="6998">2</text><text x="735" y="7004" class="net">DN:GND</text>
+<rect x="1320" y="6936" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="6954" style="font-weight:bold">DN_QB29  MMBT3904LT1G</text>
+<text x="1330" y="6971">level_shift_stage2 / SOT23</text>
+<line x1="1330" y1="6984" x2="1375" y2="6984" stroke="#607587"/><text x="1335" y="6982">1</text><text x="1385" y="6988" class="net">DN:BASE2_29</text>
+<line x1="1330" y1="7000" x2="1375" y2="7000" stroke="#607587"/><text x="1335" y="6998">2</text><text x="1385" y="7004" class="net">DN:GND</text>
+<line x1="1330" y1="7016" x2="1375" y2="7016" stroke="#607587"/><text x="1335" y="7014">3</text><text x="1385" y="7020" class="net">DN:TCIN29</text>
+<rect x="20" y="7262" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="7280" style="font-weight:bold">DN_RC229  1.5k</text>
+<text x="30" y="7297">level_shift_pullup / 0805;0.25W;50V</text>
+<line x1="30" y1="7310" x2="75" y2="7310" stroke="#607587"/><text x="35" y="7308">1</text><text x="85" y="7314" class="net">DN:TX12</text>
+<line x1="30" y1="7326" x2="75" y2="7326" stroke="#607587"/><text x="35" y="7324">2</text><text x="85" y="7330" class="net">DN:TCIN29</text>
+<rect x="670" y="7262" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="7280" style="font-weight:bold">DN_RTI29  10k</text>
+<text x="680" y="7297">tc_input_idle / 0603;0.1W;50V</text>
+<line x1="680" y1="7310" x2="725" y2="7310" stroke="#607587"/><text x="685" y="7308">1</text><text x="735" y="7314" class="net">DN:TCIN29</text>
+<line x1="680" y1="7326" x2="725" y2="7326" stroke="#607587"/><text x="685" y="7324">2</text><text x="735" y="7330" class="net">DN:GND</text>
+<rect x="1320" y="7262" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="7280" style="font-weight:bold">DN_RTX29  330</text>
+<text x="1330" y="7297">tx_series_energy / 2512;1W;pulse_curve_HOLD;50V</text>
+<line x1="1330" y1="7310" x2="1375" y2="7310" stroke="#607587"/><text x="1335" y="7308">1</text><text x="1385" y="7314" class="net">DN:TCOUT29</text>
+<line x1="1330" y1="7326" x2="1375" y2="7326" stroke="#607587"/><text x="1335" y="7324">2</text><text x="1385" y="7330" class="net">DN:TX29</text>
+<rect x="20" y="7588" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="7606" style="font-weight:bold">DN_TX29  NU40C10T</text>
+<text x="30" y="7623">ultrasound_transmitter / MECH_VENDOR_HOLD</text>
+<line x1="30" y1="7636" x2="75" y2="7636" stroke="#607587"/><text x="35" y="7634">1</text><text x="85" y="7640" class="net">DN:TX29</text>
+<line x1="30" y1="7652" x2="75" y2="7652" stroke="#607587"/><text x="35" y="7650">2</text><text x="85" y="7656" class="net">DN:GND</text>
+<rect x="670" y="7588" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="7606" style="font-weight:bold">DN_RIN30  1k</text>
+<text x="680" y="7623">level_shift_base / 0603;0.1W;50V</text>
+<line x1="680" y1="7636" x2="725" y2="7636" stroke="#607587"/><text x="685" y="7634">1</text><text x="735" y="7640" class="net">DN:Q30</text>
+<line x1="680" y1="7652" x2="725" y2="7652" stroke="#607587"/><text x="685" y="7650">2</text><text x="735" y="7656" class="net">DN:BASE1_30</text>
+<rect x="1320" y="7588" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="7606" style="font-weight:bold">DN_RB130  10k</text>
+<text x="1330" y="7623">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="7636" x2="1375" y2="7636" stroke="#607587"/><text x="1335" y="7634">1</text><text x="1385" y="7640" class="net">DN:BASE1_30</text>
+<line x1="1330" y1="7652" x2="1375" y2="7652" stroke="#607587"/><text x="1335" y="7650">2</text><text x="1385" y="7656" class="net">DN:GND</text>
+<rect x="20" y="7914" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="7932" style="font-weight:bold">DN_QA30  MMBT3904LT1G</text>
+<text x="30" y="7949">level_shift_stage1 / SOT23</text>
+<line x1="30" y1="7962" x2="75" y2="7962" stroke="#607587"/><text x="35" y="7960">1</text><text x="85" y="7966" class="net">DN:BASE1_30</text>
+<line x1="30" y1="7978" x2="75" y2="7978" stroke="#607587"/><text x="35" y="7976">2</text><text x="85" y="7982" class="net">DN:GND</text>
+<line x1="30" y1="7994" x2="75" y2="7994" stroke="#607587"/><text x="35" y="7992">3</text><text x="85" y="7998" class="net">DN:MID_30</text>
+<rect x="670" y="7914" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="7932" style="font-weight:bold">DN_RC130  1k</text>
+<text x="680" y="7949">level_shift_pullup / 0603;0.1W;50V</text>
+<line x1="680" y1="7962" x2="725" y2="7962" stroke="#607587"/><text x="685" y="7960">1</text><text x="735" y="7966" class="net">DN:3V3</text>
+<line x1="680" y1="7978" x2="725" y2="7978" stroke="#607587"/><text x="685" y="7976">2</text><text x="735" y="7982" class="net">DN:MID_30</text>
+<rect x="1320" y="7914" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="7932" style="font-weight:bold">DN_RB230  1k</text>
+<text x="1330" y="7949">level_shift_base / 0603;0.1W;50V</text>
+<line x1="1330" y1="7962" x2="1375" y2="7962" stroke="#607587"/><text x="1335" y="7960">1</text><text x="1385" y="7966" class="net">DN:MID_30</text>
+<line x1="1330" y1="7978" x2="1375" y2="7978" stroke="#607587"/><text x="1335" y="7976">2</text><text x="1385" y="7982" class="net">DN:BASE2_30</text>
+<rect x="20" y="8240" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="8258" style="font-weight:bold">DN_RBD30  10k</text>
+<text x="30" y="8275">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="8288" x2="75" y2="8288" stroke="#607587"/><text x="35" y="8286">1</text><text x="85" y="8292" class="net">DN:BASE2_30</text>
+<line x1="30" y1="8304" x2="75" y2="8304" stroke="#607587"/><text x="35" y="8302">2</text><text x="85" y="8308" class="net">DN:GND</text>
+<rect x="670" y="8240" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="8258" style="font-weight:bold">DN_QB30  MMBT3904LT1G</text>
+<text x="680" y="8275">level_shift_stage2 / SOT23</text>
+<line x1="680" y1="8288" x2="725" y2="8288" stroke="#607587"/><text x="685" y="8286">1</text><text x="735" y="8292" class="net">DN:BASE2_30</text>
+<line x1="680" y1="8304" x2="725" y2="8304" stroke="#607587"/><text x="685" y="8302">2</text><text x="735" y="8308" class="net">DN:GND</text>
+<line x1="680" y1="8320" x2="725" y2="8320" stroke="#607587"/><text x="685" y="8318">3</text><text x="735" y="8324" class="net">DN:TCIN30</text>
+<rect x="1320" y="8240" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="8258" style="font-weight:bold">DN_RC230  1.5k</text>
+<text x="1330" y="8275">level_shift_pullup / 0805;0.25W;50V</text>
+<line x1="1330" y1="8288" x2="1375" y2="8288" stroke="#607587"/><text x="1335" y="8286">1</text><text x="1385" y="8292" class="net">DN:TX12</text>
+<line x1="1330" y1="8304" x2="1375" y2="8304" stroke="#607587"/><text x="1335" y="8302">2</text><text x="1385" y="8308" class="net">DN:TCIN30</text>
+<rect x="20" y="8566" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="8584" style="font-weight:bold">DN_RTI30  10k</text>
+<text x="30" y="8601">tc_input_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="8614" x2="75" y2="8614" stroke="#607587"/><text x="35" y="8612">1</text><text x="85" y="8618" class="net">DN:TCIN30</text>
+<line x1="30" y1="8630" x2="75" y2="8630" stroke="#607587"/><text x="35" y="8628">2</text><text x="85" y="8634" class="net">DN:GND</text>
+<rect x="670" y="8566" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="8584" style="font-weight:bold">DN_RTX30  330</text>
+<text x="680" y="8601">tx_series_energy / 2512;1W;pulse_curve_HOLD;50V</text>
+<line x1="680" y1="8614" x2="725" y2="8614" stroke="#607587"/><text x="685" y="8612">1</text><text x="735" y="8618" class="net">DN:TCOUT30</text>
+<line x1="680" y1="8630" x2="725" y2="8630" stroke="#607587"/><text x="685" y="8628">2</text><text x="735" y="8634" class="net">DN:TX30</text>
+<rect x="1320" y="8566" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="8584" style="font-weight:bold">DN_TX30  NU40C10T</text>
+<text x="1330" y="8601">ultrasound_transmitter / MECH_VENDOR_HOLD</text>
+<line x1="1330" y1="8614" x2="1375" y2="8614" stroke="#607587"/><text x="1335" y="8612">1</text><text x="1385" y="8618" class="net">DN:TX30</text>
+<line x1="1330" y1="8630" x2="1375" y2="8630" stroke="#607587"/><text x="1335" y="8628">2</text><text x="1385" y="8634" class="net">DN:GND</text>
+<rect x="20" y="8892" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="8910" style="font-weight:bold">DN_RIN31  1k</text>
+<text x="30" y="8927">level_shift_base / 0603;0.1W;50V</text>
+<line x1="30" y1="8940" x2="75" y2="8940" stroke="#607587"/><text x="35" y="8938">1</text><text x="85" y="8944" class="net">DN:Q31</text>
+<line x1="30" y1="8956" x2="75" y2="8956" stroke="#607587"/><text x="35" y="8954">2</text><text x="85" y="8960" class="net">DN:BASE1_31</text>
+<rect x="670" y="8892" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="8910" style="font-weight:bold">DN_RB131  10k</text>
+<text x="680" y="8927">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="680" y1="8940" x2="725" y2="8940" stroke="#607587"/><text x="685" y="8938">1</text><text x="735" y="8944" class="net">DN:BASE1_31</text>
+<line x1="680" y1="8956" x2="725" y2="8956" stroke="#607587"/><text x="685" y="8954">2</text><text x="735" y="8960" class="net">DN:GND</text>
+<rect x="1320" y="8892" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="8910" style="font-weight:bold">DN_QA31  MMBT3904LT1G</text>
+<text x="1330" y="8927">level_shift_stage1 / SOT23</text>
+<line x1="1330" y1="8940" x2="1375" y2="8940" stroke="#607587"/><text x="1335" y="8938">1</text><text x="1385" y="8944" class="net">DN:BASE1_31</text>
+<line x1="1330" y1="8956" x2="1375" y2="8956" stroke="#607587"/><text x="1335" y="8954">2</text><text x="1385" y="8960" class="net">DN:GND</text>
+<line x1="1330" y1="8972" x2="1375" y2="8972" stroke="#607587"/><text x="1335" y="8970">3</text><text x="1385" y="8976" class="net">DN:MID_31</text>
+<rect x="20" y="9218" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="9236" style="font-weight:bold">DN_RC131  1k</text>
+<text x="30" y="9253">level_shift_pullup / 0603;0.1W;50V</text>
+<line x1="30" y1="9266" x2="75" y2="9266" stroke="#607587"/><text x="35" y="9264">1</text><text x="85" y="9270" class="net">DN:3V3</text>
+<line x1="30" y1="9282" x2="75" y2="9282" stroke="#607587"/><text x="35" y="9280">2</text><text x="85" y="9286" class="net">DN:MID_31</text>
+<rect x="670" y="9218" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="9236" style="font-weight:bold">DN_RB231  1k</text>
+<text x="680" y="9253">level_shift_base / 0603;0.1W;50V</text>
+<line x1="680" y1="9266" x2="725" y2="9266" stroke="#607587"/><text x="685" y="9264">1</text><text x="735" y="9270" class="net">DN:MID_31</text>
+<line x1="680" y1="9282" x2="725" y2="9282" stroke="#607587"/><text x="685" y="9280">2</text><text x="735" y="9286" class="net">DN:BASE2_31</text>
+<rect x="1320" y="9218" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="9236" style="font-weight:bold">DN_RBD31  10k</text>
+<text x="1330" y="9253">level_shift_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="9266" x2="1375" y2="9266" stroke="#607587"/><text x="1335" y="9264">1</text><text x="1385" y="9270" class="net">DN:BASE2_31</text>
+<line x1="1330" y1="9282" x2="1375" y2="9282" stroke="#607587"/><text x="1335" y="9280">2</text><text x="1385" y="9286" class="net">DN:GND</text>
+<rect x="20" y="9544" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="9562" style="font-weight:bold">DN_QB31  MMBT3904LT1G</text>
+<text x="30" y="9579">level_shift_stage2 / SOT23</text>
+<line x1="30" y1="9592" x2="75" y2="9592" stroke="#607587"/><text x="35" y="9590">1</text><text x="85" y="9596" class="net">DN:BASE2_31</text>
+<line x1="30" y1="9608" x2="75" y2="9608" stroke="#607587"/><text x="35" y="9606">2</text><text x="85" y="9612" class="net">DN:GND</text>
+<line x1="30" y1="9624" x2="75" y2="9624" stroke="#607587"/><text x="35" y="9622">3</text><text x="85" y="9628" class="net">DN:TCIN31</text>
+<rect x="670" y="9544" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="9562" style="font-weight:bold">DN_RC231  1.5k</text>
+<text x="680" y="9579">level_shift_pullup / 0805;0.25W;50V</text>
+<line x1="680" y1="9592" x2="725" y2="9592" stroke="#607587"/><text x="685" y="9590">1</text><text x="735" y="9596" class="net">DN:TX12</text>
+<line x1="680" y1="9608" x2="725" y2="9608" stroke="#607587"/><text x="685" y="9606">2</text><text x="735" y="9612" class="net">DN:TCIN31</text>
+<rect x="1320" y="9544" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="9562" style="font-weight:bold">DN_RTI31  10k</text>
+<text x="1330" y="9579">tc_input_idle / 0603;0.1W;50V</text>
+<line x1="1330" y1="9592" x2="1375" y2="9592" stroke="#607587"/><text x="1335" y="9590">1</text><text x="1385" y="9596" class="net">DN:TCIN31</text>
+<line x1="1330" y1="9608" x2="1375" y2="9608" stroke="#607587"/><text x="1335" y="9606">2</text><text x="1385" y="9612" class="net">DN:GND</text>
+<rect x="20" y="9870" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="9888" style="font-weight:bold">DN_RTX31  330</text>
+<text x="30" y="9905">tx_series_energy / 2512;1W;pulse_curve_HOLD;50V</text>
+<line x1="30" y1="9918" x2="75" y2="9918" stroke="#607587"/><text x="35" y="9916">1</text><text x="85" y="9922" class="net">DN:TCOUT31</text>
+<line x1="30" y1="9934" x2="75" y2="9934" stroke="#607587"/><text x="35" y="9932">2</text><text x="85" y="9938" class="net">DN:TX31</text>
+<rect x="670" y="9870" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="9888" style="font-weight:bold">DN_TX31  NU40C10T</text>
+<text x="680" y="9905">ultrasound_transmitter / MECH_VENDOR_HOLD</text>
+<line x1="680" y1="9918" x2="725" y2="9918" stroke="#607587"/><text x="685" y="9916">1</text><text x="735" y="9922" class="net">DN:TX31</text>
+<line x1="680" y1="9934" x2="725" y2="9934" stroke="#607587"/><text x="685" y="9932">2</text><text x="735" y="9938" class="net">DN:GND</text>
+<rect x="1320" y="9870" width="620" height="178" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="9888" style="font-weight:bold">DN_UD12  TC4427AEOA</text>
+<text x="1330" y="9905">tx_driver / SOIC8</text>
+<line x1="1330" y1="9918" x2="1375" y2="9918" stroke="#607587"/><text x="1335" y="9916">1</text><text x="1385" y="9922" class="nc">NC:DN_UD12:1</text>
+<line x1="1330" y1="9934" x2="1375" y2="9934" stroke="#607587"/><text x="1335" y="9932">2</text><text x="1385" y="9938" class="net">DN:TCIN24</text>
+<line x1="1330" y1="9950" x2="1375" y2="9950" stroke="#607587"/><text x="1335" y="9948">3</text><text x="1385" y="9954" class="net">DN:GND</text>
+<line x1="1330" y1="9966" x2="1375" y2="9966" stroke="#607587"/><text x="1335" y="9964">4</text><text x="1385" y="9970" class="net">DN:TCIN25</text>
+<line x1="1330" y1="9982" x2="1375" y2="9982" stroke="#607587"/><text x="1335" y="9980">5</text><text x="1385" y="9986" class="net">DN:TCOUT25</text>
+<line x1="1330" y1="9998" x2="1375" y2="9998" stroke="#607587"/><text x="1335" y="9996">6</text><text x="1385" y="10002" class="net">DN:TX12</text>
+<line x1="1330" y1="10014" x2="1375" y2="10014" stroke="#607587"/><text x="1335" y="10012">7</text><text x="1385" y="10018" class="net">DN:TCOUT24</text>
+<line x1="1330" y1="10030" x2="1375" y2="10030" stroke="#607587"/><text x="1335" y="10028">8</text><text x="1385" y="10034" class="nc">NC:DN_UD12:8</text>
+<rect x="20" y="10196" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="10214" style="font-weight:bold">DN_CD12  100nF</text>
+<text x="30" y="10231">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="10244" x2="75" y2="10244" stroke="#607587"/><text x="35" y="10242">1</text><text x="85" y="10248" class="net">DN:TX12</text>
+<line x1="30" y1="10260" x2="75" y2="10260" stroke="#607587"/><text x="35" y="10258">2</text><text x="85" y="10264" class="net">DN:GND</text>
+<rect x="670" y="10196" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="10214" style="font-weight:bold">DN_CDX12  1uF</text>
+<text x="680" y="10231">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="10244" x2="725" y2="10244" stroke="#607587"/><text x="685" y="10242">1</text><text x="735" y="10248" class="net">DN:TX12</text>
+<line x1="680" y1="10260" x2="725" y2="10260" stroke="#607587"/><text x="685" y="10258">2</text><text x="735" y="10264" class="net">DN:GND</text>
+<rect x="1320" y="10196" width="620" height="178" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="10214" style="font-weight:bold">DN_UD13  TC4427AEOA</text>
+<text x="1330" y="10231">tx_driver / SOIC8</text>
+<line x1="1330" y1="10244" x2="1375" y2="10244" stroke="#607587"/><text x="1335" y="10242">1</text><text x="1385" y="10248" class="nc">NC:DN_UD13:1</text>
+<line x1="1330" y1="10260" x2="1375" y2="10260" stroke="#607587"/><text x="1335" y="10258">2</text><text x="1385" y="10264" class="net">DN:TCIN26</text>
+<line x1="1330" y1="10276" x2="1375" y2="10276" stroke="#607587"/><text x="1335" y="10274">3</text><text x="1385" y="10280" class="net">DN:GND</text>
+<line x1="1330" y1="10292" x2="1375" y2="10292" stroke="#607587"/><text x="1335" y="10290">4</text><text x="1385" y="10296" class="net">DN:TCIN27</text>
+<line x1="1330" y1="10308" x2="1375" y2="10308" stroke="#607587"/><text x="1335" y="10306">5</text><text x="1385" y="10312" class="net">DN:TCOUT27</text>
+<line x1="1330" y1="10324" x2="1375" y2="10324" stroke="#607587"/><text x="1335" y="10322">6</text><text x="1385" y="10328" class="net">DN:TX12</text>
+<line x1="1330" y1="10340" x2="1375" y2="10340" stroke="#607587"/><text x="1335" y="10338">7</text><text x="1385" y="10344" class="net">DN:TCOUT26</text>
+<line x1="1330" y1="10356" x2="1375" y2="10356" stroke="#607587"/><text x="1335" y="10354">8</text><text x="1385" y="10360" class="nc">NC:DN_UD13:8</text>
+<rect x="20" y="10522" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="10540" style="font-weight:bold">DN_CD13  100nF</text>
+<text x="30" y="10557">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="10570" x2="75" y2="10570" stroke="#607587"/><text x="35" y="10568">1</text><text x="85" y="10574" class="net">DN:TX12</text>
+<line x1="30" y1="10586" x2="75" y2="10586" stroke="#607587"/><text x="35" y="10584">2</text><text x="85" y="10590" class="net">DN:GND</text>
+<rect x="670" y="10522" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="10540" style="font-weight:bold">DN_CDX13  1uF</text>
+<text x="680" y="10557">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="10570" x2="725" y2="10570" stroke="#607587"/><text x="685" y="10568">1</text><text x="735" y="10574" class="net">DN:TX12</text>
+<line x1="680" y1="10586" x2="725" y2="10586" stroke="#607587"/><text x="685" y="10584">2</text><text x="735" y="10590" class="net">DN:GND</text>
+<rect x="1320" y="10522" width="620" height="178" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="10540" style="font-weight:bold">DN_UD14  TC4427AEOA</text>
+<text x="1330" y="10557">tx_driver / SOIC8</text>
+<line x1="1330" y1="10570" x2="1375" y2="10570" stroke="#607587"/><text x="1335" y="10568">1</text><text x="1385" y="10574" class="nc">NC:DN_UD14:1</text>
+<line x1="1330" y1="10586" x2="1375" y2="10586" stroke="#607587"/><text x="1335" y="10584">2</text><text x="1385" y="10590" class="net">DN:TCIN28</text>
+<line x1="1330" y1="10602" x2="1375" y2="10602" stroke="#607587"/><text x="1335" y="10600">3</text><text x="1385" y="10606" class="net">DN:GND</text>
+<line x1="1330" y1="10618" x2="1375" y2="10618" stroke="#607587"/><text x="1335" y="10616">4</text><text x="1385" y="10622" class="net">DN:TCIN29</text>
+<line x1="1330" y1="10634" x2="1375" y2="10634" stroke="#607587"/><text x="1335" y="10632">5</text><text x="1385" y="10638" class="net">DN:TCOUT29</text>
+<line x1="1330" y1="10650" x2="1375" y2="10650" stroke="#607587"/><text x="1335" y="10648">6</text><text x="1385" y="10654" class="net">DN:TX12</text>
+<line x1="1330" y1="10666" x2="1375" y2="10666" stroke="#607587"/><text x="1335" y="10664">7</text><text x="1385" y="10670" class="net">DN:TCOUT28</text>
+<line x1="1330" y1="10682" x2="1375" y2="10682" stroke="#607587"/><text x="1335" y="10680">8</text><text x="1385" y="10686" class="nc">NC:DN_UD14:8</text>
+<rect x="20" y="10848" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="10866" style="font-weight:bold">DN_CD14  100nF</text>
+<text x="30" y="10883">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="10896" x2="75" y2="10896" stroke="#607587"/><text x="35" y="10894">1</text><text x="85" y="10900" class="net">DN:TX12</text>
+<line x1="30" y1="10912" x2="75" y2="10912" stroke="#607587"/><text x="35" y="10910">2</text><text x="85" y="10916" class="net">DN:GND</text>
+<rect x="670" y="10848" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="10866" style="font-weight:bold">DN_CDX14  1uF</text>
+<text x="680" y="10883">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="10896" x2="725" y2="10896" stroke="#607587"/><text x="685" y="10894">1</text><text x="735" y="10900" class="net">DN:TX12</text>
+<line x1="680" y1="10912" x2="725" y2="10912" stroke="#607587"/><text x="685" y="10910">2</text><text x="735" y="10916" class="net">DN:GND</text>
+<rect x="1320" y="10848" width="620" height="178" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="10866" style="font-weight:bold">DN_UD15  TC4427AEOA</text>
+<text x="1330" y="10883">tx_driver / SOIC8</text>
+<line x1="1330" y1="10896" x2="1375" y2="10896" stroke="#607587"/><text x="1335" y="10894">1</text><text x="1385" y="10900" class="nc">NC:DN_UD15:1</text>
+<line x1="1330" y1="10912" x2="1375" y2="10912" stroke="#607587"/><text x="1335" y="10910">2</text><text x="1385" y="10916" class="net">DN:TCIN30</text>
+<line x1="1330" y1="10928" x2="1375" y2="10928" stroke="#607587"/><text x="1335" y="10926">3</text><text x="1385" y="10932" class="net">DN:GND</text>
+<line x1="1330" y1="10944" x2="1375" y2="10944" stroke="#607587"/><text x="1335" y="10942">4</text><text x="1385" y="10948" class="net">DN:TCIN31</text>
+<line x1="1330" y1="10960" x2="1375" y2="10960" stroke="#607587"/><text x="1335" y="10958">5</text><text x="1385" y="10964" class="net">DN:TCOUT31</text>
+<line x1="1330" y1="10976" x2="1375" y2="10976" stroke="#607587"/><text x="1335" y="10974">6</text><text x="1385" y="10980" class="net">DN:TX12</text>
+<line x1="1330" y1="10992" x2="1375" y2="10992" stroke="#607587"/><text x="1335" y="10990">7</text><text x="1385" y="10996" class="net">DN:TCOUT30</text>
+<line x1="1330" y1="11008" x2="1375" y2="11008" stroke="#607587"/><text x="1335" y="11006">8</text><text x="1385" y="11012" class="nc">NC:DN_UD15:8</text>
+<rect x="20" y="11174" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="11192" style="font-weight:bold">DN_CD15  100nF</text>
+<text x="30" y="11209">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="11222" x2="75" y2="11222" stroke="#607587"/><text x="35" y="11220">1</text><text x="85" y="11226" class="net">DN:TX12</text>
+<line x1="30" y1="11238" x2="75" y2="11238" stroke="#607587"/><text x="35" y="11236">2</text><text x="85" y="11242" class="net">DN:GND</text>
+<rect x="670" y="11174" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="11192" style="font-weight:bold">DN_CDX15  1uF</text>
+<text x="680" y="11209">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="11222" x2="725" y2="11222" stroke="#607587"/><text x="685" y="11220">1</text><text x="735" y="11226" class="net">DN:TX12</text>
+<line x1="680" y1="11238" x2="725" y2="11238" stroke="#607587"/><text x="685" y="11236">2</text><text x="735" y="11242" class="net">DN:GND</text>
+</svg>

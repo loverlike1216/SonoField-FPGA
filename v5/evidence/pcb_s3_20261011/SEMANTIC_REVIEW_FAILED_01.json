@@ -1,0 +1,225 @@
+{
+  "classification": "STATIC_ALTERNATIVE_VALIDATION_NOT_NATIVE_ERC_NOT_INDEPENDENT_REVIEW",
+  "checks": [
+    {
+      "name": "unique_component_refs",
+      "result": "PASS",
+      "detail": 2126
+    },
+    {
+      "name": "unique_physical_pins",
+      "result": "PASS",
+      "detail": 6398
+    },
+    {
+      "name": "all_pins_have_component",
+      "result": "PASS",
+      "detail": 6398
+    },
+    {
+      "name": "no_empty_nets",
+      "result": "PASS",
+      "detail": 6398
+    },
+    {
+      "name": "supervisor_exact_two",
+      "result": "PASS",
+      "detail": "one per array"
+    },
+    {
+      "name": "legacy_four_retired",
+      "result": "PASS",
+      "detail": "B008/009=0"
+    },
+    {
+      "name": "physical_bom_matches_components",
+      "result": "PASS",
+      "detail": "group rows count installed positions once"
+    },
+    {
+      "name": "old_supervisor_combo_absent",
+      "result": "PASS",
+      "detail": "TPS3430 is additional window function;TPS3851 retained"
+    },
+    {
+      "name": "adc_all64pins",
+      "result": "PASS",
+      "detail": "ADI RevA Table9"
+    },
+    {
+      "name": "adc_regcaps_separate",
+      "result": "PASS",
+      "detail": "each1uF"
+    },
+    {
+      "name": "adc_refcap_common",
+      "result": "PASS",
+      "detail": "common10uF"
+    },
+    {
+      "name": "adc_serial_unused_outputs_not_grounded",
+      "result": "PASS",
+      "detail": "avoid short if8DOUT accidentally configured"
+    },
+    {
+      "name": "adc_os_software_straps",
+      "result": "PASS",
+      "detail": "software+serial"
+    },
+    {
+      "name": "tca9548a_physical_map",
+      "result": "PASS",
+      "detail": "RESET3;A2=21;SD4=13"
+    },
+    {
+      "name": "usb_hardware_3a_qualifier",
+      "result": "PASS",
+      "detail": "OUT2low->allow;default pull down"
+    },
+    {
+      "name": "usb_no_parallel_rd",
+      "result": "PASS",
+      "detail": "internal TUSB Rd"
+    },
+    {
+      "name": "UP_channel_counts",
+      "result": "PASS",
+      "detail": "32dual/16eightbit4used/64TX/4RX"
+    },
+    {
+      "name": "UP_latch_Q_pin5",
+      "result": "PASS",
+      "detail": "barred Q is pin3"
+    },
+    {
+      "name": "UP_window_straps",
+      "result": "PASS",
+      "detail": "CWDNC SET0=0 SET1=1"
+    },
+    {
+      "name": "UP_faultwired_or",
+      "result": "PASS",
+      "detail": "OD watchdog/UV/temp clear latch"
+    },
+    {
+      "name": "UP_TC_no_always_on_supply",
+      "result": "PASS",
+      "detail": "one independently switched TX rail"
+    },
+    {
+      "name": "UP_64_series_resistors",
+      "result": "PASS",
+      "detail": "includes100%dutyshort calculation"
+    },
+    {
+      "name": "UP_highside_pullups_switched",
+      "result": "PASS",
+      "detail": "Q2 collector pullups track TC supply"
+    },
+    {
+      "name": "UP_serializer_unused_four_NC",
+      "result": "PASS",
+      "detail": "exact32lanesx4used system"
+    },
+    {
+      "name": "DN_channel_counts",
+      "result": "PASS",
+      "detail": "32dual/16eightbit4used/64TX/4RX"
+    },
+    {
+      "name": "DN_latch_Q_pin5",
+      "result": "PASS",
+      "detail": "barred Q is pin3"
+    },
+    {
+      "name": "DN_window_straps",
+      "result": "PASS",
+      "detail": "CWDNC SET0=0 SET1=1"
+    },
+    {
+      "name": "DN_faultwired_or",
+      "result": "PASS",
+      "detail": "OD watchdog/UV/temp clear latch"
+    },
+    {
+      "name": "DN_TC_no_always_on_supply",
+      "result": "PASS",
+      "detail": "one independently switched TX rail"
+    },
+    {
+      "name": "DN_64_series_resistors",
+      "result": "PASS",
+      "detail": "includes100%dutyshort calculation"
+    },
+    {
+      "name": "DN_highside_pullups_switched",
+      "result": "PASS",
+      "detail": "Q2 collector pullups track TC supply"
+    },
+    {
+      "name": "DN_serializer_unused_four_NC",
+      "result": "PASS",
+      "detail": "exact32lanesx4used system"
+    },
+    {
+      "name": "128_unique_mapping",
+      "result": "PASS",
+      "detail": "all channels"
+    },
+    {
+      "name": "32_lane_mapping",
+      "result": "PASS",
+      "detail": "no dropped channels"
+    },
+    {
+      "name": "mirror_arrays",
+      "result": "PASS",
+      "detail": "identical population"
+    },
+    {
+      "name": "J10_power_unassigned_NC",
+      "result": "PASS",
+      "detail": "no header power fed to central rails"
+    },
+    {
+      "name": "J11_power_unassigned_NC",
+      "result": "FAIL",
+      "detail": "no header power fed to central rails"
+    },
+    {
+      "name": "all_fault_combinations_disable",
+      "result": "PASS",
+      "detail": "256 boolean model states;not transistor transient proof"
+    },
+    {
+      "name": "adc_avcc_static_range",
+      "result": "PASS",
+      "detail": "LDO accuracy condition needs6V3min>=6.09V"
+    },
+    {
+      "name": "ina_shunt_range",
+      "result": "PASS",
+      "detail": "not5A arbitrary mode"
+    },
+    {
+      "name": "undefined_logic_EN_off",
+      "result": "PASS",
+      "detail": "undefined FF below1.65V remains beloweFuseENfallmin"
+    },
+    {
+      "name": "defined_logic_EN_on",
+      "result": "PASS",
+      "detail": "healthy3V3min3.15 assumed output VOH>=Vcc-.2 atmicroamp"
+    },
+    {
+      "name": "core_files_unchanged",
+      "result": "PASS",
+      "detail": "scoped current files only"
+    }
+  ],
+  "pass_count": 42,
+  "failure_count": 1,
+  "single_endpoint_net_count": 0,
+  "native_schematic": "NOT_CREATED",
+  "native_erc": "NOT_RUN"
+}

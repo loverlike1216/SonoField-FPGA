@@ -86,3 +86,15 @@ invented. User private paths and credential patterns redacted; publication recor
 | T-20261011-PCB-001 | [tool flow](tool-flow/T-20261011-PCB-001__pcb-review.md) | PARTIAL | VALIDATION_INPUT |
 
 Current observable session only through recorded cutoff. No inaccessible history, private reasoning or invented ChatGPT review. Public records redact personal paths and credentials. Canonical instruction file hashes retained.
+
+## v5 PCB-S3 authorized device candidate
+
+| ID/source | Record | Status | Impact |
+|---|---|---|---|
+| S-20261011-pcb-s3-001 / Codex | [observable transcript](codex/S-20261011-pcb-s3-001.md) and [tool hashes](codex/S-20261011-pcb-s3-001.tools.json) | PARTIAL | IMPLEMENTATION_INPUT |
+| Actual S3 instruction / User | [canonical document](codex/instructions/v5_pcb_s3_engineering_20261011.md) | COMPLETE_DOCUMENT_ONLY | DESIGN_INPUT |
+| T-20261011-PCB-S3 | [tool flow](tool-flow/T-20261011-PCB-S3__device-candidate.md) | PARTIAL | VALIDATION_INPUT |
+
+Actual approval: 按 S3 文件完整执行，保持 v5、制造/采购/板写/main 合并 HOLD。
+Canonical instruction SHA256: b3a33a2b0541e8626ea952f2c6c8288ae0a78b8133f024c1cd05c42036475e44.
+Transcript hashes are recorded in SESSION_MANIFEST.json in S3 evidence. Current accessible observable messages only; no external ChatGPT decision or independent review invented.

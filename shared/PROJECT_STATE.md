@@ -54,3 +54,7 @@ unit/simulation reports, independent clean clone, before/after hashes and Git me
 Machine authority: PROJECT_STATE.json. Actual publication receipt records remote SHA/CI.
 
 Publication: DraftPR5 https://github.com/loverlike1216/SonoField-FPGA/pull/5; evidence commit 09201d34d15b21c4956f2d2377cc4daea33b1f71; push+PR CI success;417remote SHA256 checked;main unchanged. Receipt:shared/hardware_design/PUBLICATION_RECEIPT.json.
+
+## Current PCB-S3 state (supersedes S2 next-action wording)
+
+PCB-S3 user-authorized candidate delivered on feat/v5-pcb-design / PR6,base23f8d4c;soleactivev5. Central5V3A USB-C,candidate12.343Wsteadyinput envelope;upper/lower each12V3A36W GST36E12,candidate29.360Wsteadyinput envelope. Theseare limitdefined conditionaldesignbounds,not measuredload/allfaultguarantees. TPS3851one/array,two total;additionalwindow/thermal/latch/cutoff. Strict2126component/6390pin candidate,1541RCL,128TXmapping/8RX/64ADCpins. Fresh243tests,45staticchecks,256booleanstates,485cachedformulas/252numericcrosschecksPASS;S2fullframes inherited,not rerun. NativeNOT_CREATED/ERCNOT_RUN/hardwareNOT_VERIFIED. G1native/independent,G2powerfaultthermal,G3AFEandpoweroff,G4digitalintegration,VCCO,STA,BRAM,G5mechanical/SKUs. Manufacturing/procurement/boardwrite/main HOLD. ExternalChatGPT BLOCKED. See CP-20261011-003 and review11.

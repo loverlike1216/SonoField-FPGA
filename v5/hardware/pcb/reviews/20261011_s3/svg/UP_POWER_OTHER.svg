@@ -1,0 +1,390 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="5390" viewBox="0 0 1950 5390">
+<style>text{font:12px monospace;fill:#172a3a}.title{font:bold 22px sans-serif}.net{fill:#176a47}.nc{fill:#b64d18}</style>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="22" y="35" class="title">v5 PCB-S3 UP / POWER_OTHER — PIN / NET REVIEW CANDIDATE</text>
+<text x="22" y="65">Equal board-qualified labels are electrically common. NC = unconnected. Not native CAD / ERC NOT RUN.</text>
+<rect x="20" y="90" width="620" height="98" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="108" style="font-weight:bold">UP_J1  PJ-002BH</text>
+<text x="30" y="125">power_connector / THT5.5x2.5</text>
+<line x1="30" y1="138" x2="75" y2="138" stroke="#607587"/><text x="35" y="136">1</text><text x="85" y="142" class="net">UP:VIN12_RAW</text>
+<line x1="30" y1="154" x2="75" y2="154" stroke="#607587"/><text x="35" y="152">2</text><text x="85" y="158" class="net">UP:GND</text>
+<line x1="30" y1="170" x2="75" y2="170" stroke="#607587"/><text x="35" y="168">3</text><text x="85" y="174" class="nc">NC:UP_J1:3</text>
+<rect x="670" y="90" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="108" style="font-weight:bold">UP_F1  3A;125V;coordination_HOLD</text>
+<text x="680" y="125">upstream_fuse / 2410</text>
+<line x1="680" y1="138" x2="725" y2="138" stroke="#607587"/><text x="685" y="136">1</text><text x="735" y="142" class="net">UP:VIN12_RAW</text>
+<line x1="680" y1="154" x2="725" y2="154" stroke="#607587"/><text x="685" y="152">2</text><text x="735" y="158" class="net">UP:VIN12_FUSED</text>
+<rect x="1320" y="90" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="108" style="font-weight:bold">UP_D1  SMBJ15A</text>
+<text x="1330" y="125">input_tvs / SMB</text>
+<line x1="1330" y1="138" x2="1375" y2="138" stroke="#607587"/><text x="1335" y="136">1</text><text x="1385" y="142" class="net">UP:GND</text>
+<line x1="1330" y1="154" x2="1375" y2="154" stroke="#607587"/><text x="1335" y="152">2</text><text x="1385" y="158" class="net">UP:VIN12_FUSED</text>
+<rect x="20" y="320" width="620" height="210" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="338" style="font-weight:bold">UP_U1  TPS259470LRPWR</text>
+<text x="30" y="355">input_protection / RPW10</text>
+<line x1="30" y1="368" x2="75" y2="368" stroke="#607587"/><text x="35" y="366">1</text><text x="85" y="372" class="net">UP:UVLO12</text>
+<line x1="30" y1="384" x2="75" y2="384" stroke="#607587"/><text x="35" y="382">2</text><text x="85" y="388" class="net">UP:OVLO12</text>
+<line x1="30" y1="400" x2="75" y2="400" stroke="#607587"/><text x="35" y="398">3</text><text x="85" y="404" class="nc">NC:UP_U1:3</text>
+<line x1="30" y1="416" x2="75" y2="416" stroke="#607587"/><text x="35" y="414">4</text><text x="85" y="420" class="net">UP:MAIN_FLT_N</text>
+<line x1="30" y1="432" x2="75" y2="432" stroke="#607587"/><text x="35" y="430">5</text><text x="85" y="436" class="net">UP:VIN12_FUSED</text>
+<line x1="30" y1="448" x2="75" y2="448" stroke="#607587"/><text x="35" y="446">6</text><text x="85" y="452" class="net">UP:VIN12_SAFE</text>
+<line x1="30" y1="464" x2="75" y2="464" stroke="#607587"/><text x="35" y="462">7</text><text x="85" y="468" class="net">UP:U1_DVDT</text>
+<line x1="30" y1="480" x2="75" y2="480" stroke="#607587"/><text x="35" y="478">8</text><text x="85" y="484" class="net">UP:GND</text>
+<line x1="30" y1="496" x2="75" y2="496" stroke="#607587"/><text x="35" y="494">9</text><text x="85" y="500" class="net">UP:U1_ILIM</text>
+<line x1="30" y1="512" x2="75" y2="512" stroke="#607587"/><text x="35" y="510">10</text><text x="85" y="516" class="nc">NC:UP_U1:10</text>
+<rect x="670" y="320" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="338" style="font-weight:bold">UP_U1R1  1.65k</text>
+<text x="680" y="355">current_limit / 0603;0.1W;50V</text>
+<line x1="680" y1="368" x2="725" y2="368" stroke="#607587"/><text x="685" y="366">1</text><text x="735" y="372" class="net">UP:U1_ILIM</text>
+<line x1="680" y1="384" x2="725" y2="384" stroke="#607587"/><text x="685" y="382">2</text><text x="735" y="388" class="net">UP:GND</text>
+<rect x="1320" y="320" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="338" style="font-weight:bold">UP_U1C1  10nF</text>
+<text x="1330" y="355">inrush_slew / 0603;C0G;50V</text>
+<line x1="1330" y1="368" x2="1375" y2="368" stroke="#607587"/><text x="1335" y="366">1</text><text x="1385" y="372" class="net">UP:U1_DVDT</text>
+<line x1="1330" y1="384" x2="1375" y2="384" stroke="#607587"/><text x="1335" y="382">2</text><text x="1385" y="388" class="net">UP:GND</text>
+<rect x="20" y="550" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="568" style="font-weight:bold">UP_R1  38.3k</text>
+<text x="30" y="585">uvlo / 0603;0.1W;50V</text>
+<line x1="30" y1="598" x2="75" y2="598" stroke="#607587"/><text x="35" y="596">1</text><text x="85" y="602" class="net">UP:VIN12_FUSED</text>
+<line x1="30" y1="614" x2="75" y2="614" stroke="#607587"/><text x="35" y="612">2</text><text x="85" y="618" class="net">UP:UVLO12</text>
+<rect x="670" y="550" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="568" style="font-weight:bold">UP_R2  4.99k</text>
+<text x="680" y="585">uvlo / 0603;0.1W;50V</text>
+<line x1="680" y1="598" x2="725" y2="598" stroke="#607587"/><text x="685" y="596">1</text><text x="735" y="602" class="net">UP:UVLO12</text>
+<line x1="680" y1="614" x2="725" y2="614" stroke="#607587"/><text x="685" y="612">2</text><text x="735" y="618" class="net">UP:GND</text>
+<rect x="1320" y="550" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="568" style="font-weight:bold">UP_R3  48.3k</text>
+<text x="1330" y="585">ovlo / 0603;0.1W;50V</text>
+<line x1="1330" y1="598" x2="1375" y2="598" stroke="#607587"/><text x="1335" y="596">1</text><text x="1385" y="602" class="net">UP:VIN12_FUSED</text>
+<line x1="1330" y1="614" x2="1375" y2="614" stroke="#607587"/><text x="1335" y="612">2</text><text x="1385" y="618" class="net">UP:OVLO12</text>
+<rect x="20" y="780" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="798" style="font-weight:bold">UP_R4  4.99k</text>
+<text x="30" y="815">ovlo / 0603;0.1W;50V</text>
+<line x1="30" y1="828" x2="75" y2="828" stroke="#607587"/><text x="35" y="826">1</text><text x="85" y="832" class="net">UP:OVLO12</text>
+<line x1="30" y1="844" x2="75" y2="844" stroke="#607587"/><text x="35" y="842">2</text><text x="85" y="848" class="net">UP:GND</text>
+<rect x="670" y="780" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="798" style="font-weight:bold">UP_C1  22uF</text>
+<text x="680" y="815">input_bulk / 1210;X7R;25V;Ceff&gt;=10uF</text>
+<line x1="680" y1="828" x2="725" y2="828" stroke="#607587"/><text x="685" y="826">1</text><text x="735" y="832" class="net">UP:VIN12_SAFE</text>
+<line x1="680" y1="844" x2="725" y2="844" stroke="#607587"/><text x="685" y="842">2</text><text x="735" y="848" class="net">UP:GND</text>
+<rect x="1320" y="780" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="798" style="font-weight:bold">UP_C2  100nF</text>
+<text x="1330" y="815">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="828" x2="1375" y2="828" stroke="#607587"/><text x="1335" y="826">1</text><text x="1385" y="832" class="net">UP:VIN12_FUSED</text>
+<line x1="1330" y1="844" x2="1375" y2="844" stroke="#607587"/><text x="1335" y="842">2</text><text x="1385" y="848" class="net">UP:GND</text>
+<rect x="20" y="1010" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1028" style="font-weight:bold">UP_RS1  20mOhm</text>
+<text x="30" y="1045">current_shunt / 2512;1W;4terminal_Kelvin</text>
+<line x1="30" y1="1058" x2="75" y2="1058" stroke="#607587"/><text x="35" y="1056">1</text><text x="85" y="1062" class="net">UP:VIN12_SAFE</text>
+<line x1="30" y1="1074" x2="75" y2="1074" stroke="#607587"/><text x="35" y="1072">2</text><text x="85" y="1078" class="net">UP:VIN12_LOAD</text>
+<rect x="670" y="1010" width="620" height="146" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1028" style="font-weight:bold">UP_U2  TPS54202DDCR</text>
+<text x="680" y="1045">buck_3V3 / SOT23-6</text>
+<line x1="680" y1="1058" x2="725" y2="1058" stroke="#607587"/><text x="685" y="1056">1</text><text x="735" y="1062" class="net">UP:GND</text>
+<line x1="680" y1="1074" x2="725" y2="1074" stroke="#607587"/><text x="685" y="1072">2</text><text x="735" y="1078" class="net">UP:U2_SW</text>
+<line x1="680" y1="1090" x2="725" y2="1090" stroke="#607587"/><text x="685" y="1088">3</text><text x="735" y="1094" class="net">UP:VIN12_LOAD</text>
+<line x1="680" y1="1106" x2="725" y2="1106" stroke="#607587"/><text x="685" y="1104">4</text><text x="735" y="1110" class="net">UP:U2_FB</text>
+<line x1="680" y1="1122" x2="725" y2="1122" stroke="#607587"/><text x="685" y="1120">5</text><text x="735" y="1126" class="net">UP:VIN12_LOAD</text>
+<line x1="680" y1="1138" x2="725" y2="1138" stroke="#607587"/><text x="685" y="1136">6</text><text x="735" y="1142" class="net">UP:U2_BOOT</text>
+<rect x="1320" y="1010" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1028" style="font-weight:bold">UP_U2L  22uH</text>
+<text x="1330" y="1045">buck_inductor / shielded;Isat&gt;=3.5A at hot;DCR&lt;=0.15ohm</text>
+<line x1="1330" y1="1058" x2="1375" y2="1058" stroke="#607587"/><text x="1335" y="1056">1</text><text x="1385" y="1062" class="net">UP:U2_SW</text>
+<line x1="1330" y1="1074" x2="1375" y2="1074" stroke="#607587"/><text x="1335" y="1072">2</text><text x="1385" y="1078" class="net">UP:3V3</text>
+<rect x="20" y="1240" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1258" style="font-weight:bold">UP_U2CB  100nF</text>
+<text x="30" y="1275">bootstrap / 0603;X7R;25V</text>
+<line x1="30" y1="1288" x2="75" y2="1288" stroke="#607587"/><text x="35" y="1286">1</text><text x="85" y="1292" class="net">UP:U2_BOOT</text>
+<line x1="30" y1="1304" x2="75" y2="1304" stroke="#607587"/><text x="35" y="1302">2</text><text x="85" y="1308" class="net">UP:U2_SW</text>
+<rect x="670" y="1240" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1258" style="font-weight:bold">UP_U2RT  45.3k</text>
+<text x="680" y="1275">feedback / 0603;0.1W;50V</text>
+<line x1="680" y1="1288" x2="725" y2="1288" stroke="#607587"/><text x="685" y="1286">1</text><text x="735" y="1292" class="net">UP:3V3</text>
+<line x1="680" y1="1304" x2="725" y2="1304" stroke="#607587"/><text x="685" y="1302">2</text><text x="735" y="1308" class="net">UP:U2_FB</text>
+<rect x="1320" y="1240" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1258" style="font-weight:bold">UP_U2RB  10k</text>
+<text x="1330" y="1275">feedback / 0603;0.1W;50V</text>
+<line x1="1330" y1="1288" x2="1375" y2="1288" stroke="#607587"/><text x="1335" y="1286">1</text><text x="1385" y="1292" class="net">UP:U2_FB</text>
+<line x1="1330" y1="1304" x2="1375" y2="1304" stroke="#607587"/><text x="1335" y="1302">2</text><text x="1385" y="1308" class="net">UP:GND</text>
+<rect x="20" y="1470" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1488" style="font-weight:bold">UP_U2CI  10uF</text>
+<text x="30" y="1505">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="1518" x2="75" y2="1518" stroke="#607587"/><text x="35" y="1516">1</text><text x="85" y="1522" class="net">UP:VIN12_LOAD</text>
+<line x1="30" y1="1534" x2="75" y2="1534" stroke="#607587"/><text x="35" y="1532">2</text><text x="85" y="1538" class="net">UP:GND</text>
+<rect x="670" y="1470" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1488" style="font-weight:bold">UP_U2CO  22uF</text>
+<text x="680" y="1505">buck_output / 1210;X7R;16V;Ceff&gt;=12uF</text>
+<line x1="680" y1="1518" x2="725" y2="1518" stroke="#607587"/><text x="685" y="1516">1</text><text x="735" y="1522" class="net">UP:3V3</text>
+<line x1="680" y1="1534" x2="725" y2="1534" stroke="#607587"/><text x="685" y="1532">2</text><text x="735" y="1538" class="net">UP:GND</text>
+<rect x="1320" y="1470" width="620" height="146" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1488" style="font-weight:bold">UP_U3  TPS54202DDCR</text>
+<text x="1330" y="1505">buck_6V7 / SOT23-6</text>
+<line x1="1330" y1="1518" x2="1375" y2="1518" stroke="#607587"/><text x="1335" y="1516">1</text><text x="1385" y="1522" class="net">UP:GND</text>
+<line x1="1330" y1="1534" x2="1375" y2="1534" stroke="#607587"/><text x="1335" y="1532">2</text><text x="1385" y="1538" class="net">UP:U3_SW</text>
+<line x1="1330" y1="1550" x2="1375" y2="1550" stroke="#607587"/><text x="1335" y="1548">3</text><text x="1385" y="1554" class="net">UP:VIN12_LOAD</text>
+<line x1="1330" y1="1566" x2="1375" y2="1566" stroke="#607587"/><text x="1335" y="1564">4</text><text x="1385" y="1570" class="net">UP:U3_FB</text>
+<line x1="1330" y1="1582" x2="1375" y2="1582" stroke="#607587"/><text x="1335" y="1580">5</text><text x="1385" y="1586" class="net">UP:VIN12_LOAD</text>
+<line x1="1330" y1="1598" x2="1375" y2="1598" stroke="#607587"/><text x="1335" y="1596">6</text><text x="1385" y="1602" class="net">UP:U3_BOOT</text>
+<rect x="20" y="1700" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1718" style="font-weight:bold">UP_U3L  22uH</text>
+<text x="30" y="1735">buck_inductor / shielded;Isat&gt;=3.5A at hot;DCR&lt;=0.15ohm</text>
+<line x1="30" y1="1748" x2="75" y2="1748" stroke="#607587"/><text x="35" y="1746">1</text><text x="85" y="1752" class="net">UP:U3_SW</text>
+<line x1="30" y1="1764" x2="75" y2="1764" stroke="#607587"/><text x="35" y="1762">2</text><text x="85" y="1768" class="net">UP:6V7</text>
+<rect x="670" y="1700" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1718" style="font-weight:bold">UP_U3CB  100nF</text>
+<text x="680" y="1735">bootstrap / 0603;X7R;25V</text>
+<line x1="680" y1="1748" x2="725" y2="1748" stroke="#607587"/><text x="685" y="1746">1</text><text x="735" y="1752" class="net">UP:U3_BOOT</text>
+<line x1="680" y1="1764" x2="725" y2="1764" stroke="#607587"/><text x="685" y="1762">2</text><text x="735" y="1768" class="net">UP:U3_SW</text>
+<rect x="1320" y="1700" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1718" style="font-weight:bold">UP_U3RT  102k</text>
+<text x="1330" y="1735">feedback / 0603;0.1W;50V</text>
+<line x1="1330" y1="1748" x2="1375" y2="1748" stroke="#607587"/><text x="1335" y="1746">1</text><text x="1385" y="1752" class="net">UP:6V7</text>
+<line x1="1330" y1="1764" x2="1375" y2="1764" stroke="#607587"/><text x="1335" y="1762">2</text><text x="1385" y="1768" class="net">UP:U3_FB</text>
+<rect x="20" y="1930" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="1948" style="font-weight:bold">UP_U3RB  10k</text>
+<text x="30" y="1965">feedback / 0603;0.1W;50V</text>
+<line x1="30" y1="1978" x2="75" y2="1978" stroke="#607587"/><text x="35" y="1976">1</text><text x="85" y="1982" class="net">UP:U3_FB</text>
+<line x1="30" y1="1994" x2="75" y2="1994" stroke="#607587"/><text x="35" y="1992">2</text><text x="85" y="1998" class="net">UP:GND</text>
+<rect x="670" y="1930" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="1948" style="font-weight:bold">UP_U3CI  10uF</text>
+<text x="680" y="1965">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="1978" x2="725" y2="1978" stroke="#607587"/><text x="685" y="1976">1</text><text x="735" y="1982" class="net">UP:VIN12_LOAD</text>
+<line x1="680" y1="1994" x2="725" y2="1994" stroke="#607587"/><text x="685" y="1992">2</text><text x="735" y="1998" class="net">UP:GND</text>
+<rect x="1320" y="1930" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="1948" style="font-weight:bold">UP_U3CO  22uF</text>
+<text x="1330" y="1965">buck_output / 1210;X7R;16V;Ceff&gt;=12uF</text>
+<line x1="1330" y1="1978" x2="1375" y2="1978" stroke="#607587"/><text x="1335" y="1976">1</text><text x="1385" y="1982" class="net">UP:6V7</text>
+<line x1="1330" y1="1994" x2="1375" y2="1994" stroke="#607587"/><text x="1335" y="1992">2</text><text x="1385" y="1998" class="net">UP:GND</text>
+<rect x="20" y="2160" width="620" height="130" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2178" style="font-weight:bold">UP_U4  ADP7118AUJZ-5.0-R7</text>
+<text x="30" y="2195">analog_ldo / TSOT5</text>
+<line x1="30" y1="2208" x2="75" y2="2208" stroke="#607587"/><text x="35" y="2206">1</text><text x="85" y="2212" class="net">UP:6V7</text>
+<line x1="30" y1="2224" x2="75" y2="2224" stroke="#607587"/><text x="35" y="2222">2</text><text x="85" y="2228" class="net">UP:GND</text>
+<line x1="30" y1="2240" x2="75" y2="2240" stroke="#607587"/><text x="35" y="2238">3</text><text x="85" y="2244" class="net">UP:6V7</text>
+<line x1="30" y1="2256" x2="75" y2="2256" stroke="#607587"/><text x="35" y="2254">4</text><text x="85" y="2260" class="net">UP:AFE5</text>
+<line x1="30" y1="2272" x2="75" y2="2272" stroke="#607587"/><text x="35" y="2270">5</text><text x="85" y="2276" class="net">UP:AFE5</text>
+<rect x="670" y="2160" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2178" style="font-weight:bold">UP_U4CI  2.2uF</text>
+<text x="680" y="2195">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="2208" x2="725" y2="2208" stroke="#607587"/><text x="685" y="2206">1</text><text x="735" y="2212" class="net">UP:6V7</text>
+<line x1="680" y1="2224" x2="725" y2="2224" stroke="#607587"/><text x="685" y="2222">2</text><text x="735" y="2228" class="net">UP:GND</text>
+<rect x="1320" y="2160" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2178" style="font-weight:bold">UP_U4CO  4.7uF</text>
+<text x="1330" y="2195">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="2208" x2="1375" y2="2208" stroke="#607587"/><text x="1335" y="2206">1</text><text x="1385" y="2212" class="net">UP:AFE5</text>
+<line x1="1330" y1="2224" x2="1375" y2="2224" stroke="#607587"/><text x="1335" y="2222">2</text><text x="1385" y="2228" class="net">UP:GND</text>
+<rect x="20" y="2390" width="620" height="210" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2408" style="font-weight:bold">UP_U5  TPS259470LRPWR</text>
+<text x="30" y="2425">tx_cutoff / RPW10</text>
+<line x1="30" y1="2438" x2="75" y2="2438" stroke="#607587"/><text x="35" y="2436">1</text><text x="85" y="2442" class="net">UP:KILL_EN</text>
+<line x1="30" y1="2454" x2="75" y2="2454" stroke="#607587"/><text x="35" y="2452">2</text><text x="85" y="2458" class="net">UP:OVLO12</text>
+<line x1="30" y1="2470" x2="75" y2="2470" stroke="#607587"/><text x="35" y="2468">3</text><text x="85" y="2474" class="nc">NC:UP_U5:3</text>
+<line x1="30" y1="2486" x2="75" y2="2486" stroke="#607587"/><text x="35" y="2484">4</text><text x="85" y="2490" class="net">UP:TX_FLT_N</text>
+<line x1="30" y1="2502" x2="75" y2="2502" stroke="#607587"/><text x="35" y="2500">5</text><text x="85" y="2506" class="net">UP:VIN12_LOAD</text>
+<line x1="30" y1="2518" x2="75" y2="2518" stroke="#607587"/><text x="35" y="2516">6</text><text x="85" y="2522" class="net">UP:TX12</text>
+<line x1="30" y1="2534" x2="75" y2="2534" stroke="#607587"/><text x="35" y="2532">7</text><text x="85" y="2538" class="net">UP:U5_DVDT</text>
+<line x1="30" y1="2550" x2="75" y2="2550" stroke="#607587"/><text x="35" y="2548">8</text><text x="85" y="2554" class="net">UP:GND</text>
+<line x1="30" y1="2566" x2="75" y2="2566" stroke="#607587"/><text x="35" y="2564">9</text><text x="85" y="2570" class="net">UP:U5_ILIM</text>
+<line x1="30" y1="2582" x2="75" y2="2582" stroke="#607587"/><text x="35" y="2580">10</text><text x="85" y="2586" class="nc">NC:UP_U5:10</text>
+<rect x="670" y="2390" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2408" style="font-weight:bold">UP_U5R1  1.65k</text>
+<text x="680" y="2425">current_limit / 0603;0.1W;50V</text>
+<line x1="680" y1="2438" x2="725" y2="2438" stroke="#607587"/><text x="685" y="2436">1</text><text x="735" y="2442" class="net">UP:U5_ILIM</text>
+<line x1="680" y1="2454" x2="725" y2="2454" stroke="#607587"/><text x="685" y="2452">2</text><text x="735" y="2458" class="net">UP:GND</text>
+<rect x="1320" y="2390" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2408" style="font-weight:bold">UP_U5C1  47nF</text>
+<text x="1330" y="2425">inrush_slew / 0603;C0G;50V</text>
+<line x1="1330" y1="2438" x2="1375" y2="2438" stroke="#607587"/><text x="1335" y="2436">1</text><text x="1385" y="2442" class="net">UP:U5_DVDT</text>
+<line x1="1330" y1="2454" x2="1375" y2="2454" stroke="#607587"/><text x="1335" y="2452">2</text><text x="1385" y="2458" class="net">UP:GND</text>
+<rect x="20" y="2620" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2638" style="font-weight:bold">UP_C5  470uF</text>
+<text x="30" y="2655">tx_bulk / SMD_electrolytic;25V;Cmin376uF;Cmax564uF;ESR/ripple_HOLD</text>
+<line x1="30" y1="2668" x2="75" y2="2668" stroke="#607587"/><text x="35" y="2666">1</text><text x="85" y="2672" class="net">UP:TX12</text>
+<line x1="30" y1="2684" x2="75" y2="2684" stroke="#607587"/><text x="35" y="2682">2</text><text x="85" y="2688" class="net">UP:GND</text>
+<rect x="670" y="2620" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2638" style="font-weight:bold">UP_R5  680</text>
+<text x="680" y="2655">tx_bleeder / 2512;1W;50V</text>
+<line x1="680" y1="2668" x2="725" y2="2668" stroke="#607587"/><text x="685" y="2666">1</text><text x="735" y="2672" class="net">UP:TX12</text>
+<line x1="680" y1="2684" x2="725" y2="2684" stroke="#607587"/><text x="685" y="2682">2</text><text x="735" y="2688" class="net">UP:GND</text>
+<rect x="1320" y="2620" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2638" style="font-weight:bold">UP_R6  0</text>
+<text x="1330" y="2655">fault_join / 0603;0.1W;50V</text>
+<line x1="1330" y1="2668" x2="1375" y2="2668" stroke="#607587"/><text x="1335" y="2666">1</text><text x="1385" y="2672" class="net">UP:MAIN_FLT_N</text>
+<line x1="1330" y1="2684" x2="1375" y2="2684" stroke="#607587"/><text x="1335" y="2682">2</text><text x="1385" y="2688" class="net">UP:FAULT_N</text>
+<rect x="20" y="2850" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="2868" style="font-weight:bold">UP_R7  0</text>
+<text x="30" y="2885">fault_join / 0603;0.1W;50V</text>
+<line x1="30" y1="2898" x2="75" y2="2898" stroke="#607587"/><text x="35" y="2896">1</text><text x="85" y="2902" class="net">UP:TX_FLT_N</text>
+<line x1="30" y1="2914" x2="75" y2="2914" stroke="#607587"/><text x="35" y="2912">2</text><text x="85" y="2918" class="net">UP:FAULT_N</text>
+<rect x="670" y="2850" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="2868" style="font-weight:bold">UP_C10  100nF</text>
+<text x="680" y="2885">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="2898" x2="725" y2="2898" stroke="#607587"/><text x="685" y="2896">1</text><text x="735" y="2902" class="net">UP:3V3</text>
+<line x1="680" y1="2914" x2="725" y2="2914" stroke="#607587"/><text x="685" y="2912">2</text><text x="735" y="2918" class="net">UP:GND</text>
+<rect x="1320" y="2850" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="2868" style="font-weight:bold">UP_C11  100nF</text>
+<text x="1330" y="2885">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="2898" x2="1375" y2="2898" stroke="#607587"/><text x="1335" y="2896">1</text><text x="1385" y="2902" class="net">UP:3V3</text>
+<line x1="1330" y1="2914" x2="1375" y2="2914" stroke="#607587"/><text x="1335" y="2912">2</text><text x="1385" y="2918" class="net">UP:GND</text>
+<rect x="20" y="3080" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3098" style="font-weight:bold">UP_C12  100nF</text>
+<text x="30" y="3115">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="3128" x2="75" y2="3128" stroke="#607587"/><text x="35" y="3126">1</text><text x="85" y="3132" class="net">UP:3V3</text>
+<line x1="30" y1="3144" x2="75" y2="3144" stroke="#607587"/><text x="35" y="3142">2</text><text x="85" y="3148" class="net">UP:GND</text>
+<rect x="670" y="3080" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3098" style="font-weight:bold">UP_C13  100nF</text>
+<text x="680" y="3115">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="3128" x2="725" y2="3128" stroke="#607587"/><text x="685" y="3126">1</text><text x="735" y="3132" class="net">UP:3V3</text>
+<line x1="680" y1="3144" x2="725" y2="3144" stroke="#607587"/><text x="685" y="3142">2</text><text x="735" y="3148" class="net">UP:GND</text>
+<rect x="1320" y="3080" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3098" style="font-weight:bold">UP_U14C  100nF</text>
+<text x="1330" y="3115">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="3128" x2="1375" y2="3128" stroke="#607587"/><text x="1335" y="3126">1</text><text x="1385" y="3132" class="net">UP:3V3</text>
+<line x1="1330" y1="3144" x2="1375" y2="3144" stroke="#607587"/><text x="1335" y="3142">2</text><text x="1385" y="3148" class="net">UP:GND</text>
+<rect x="20" y="3310" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3328" style="font-weight:bold">UP_U15C  100nF</text>
+<text x="30" y="3345">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="3358" x2="75" y2="3358" stroke="#607587"/><text x="35" y="3356">1</text><text x="85" y="3362" class="net">UP:3V3</text>
+<line x1="30" y1="3374" x2="75" y2="3374" stroke="#607587"/><text x="35" y="3372">2</text><text x="85" y="3378" class="net">UP:GND</text>
+<rect x="670" y="3310" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3328" style="font-weight:bold">UP_U16C  100nF</text>
+<text x="680" y="3345">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="3358" x2="725" y2="3358" stroke="#607587"/><text x="685" y="3356">1</text><text x="735" y="3362" class="net">UP:3V3</text>
+<line x1="680" y1="3374" x2="725" y2="3374" stroke="#607587"/><text x="685" y="3372">2</text><text x="735" y="3378" class="net">UP:GND</text>
+<rect x="1320" y="3310" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3328" style="font-weight:bold">UP_U17C  100nF</text>
+<text x="1330" y="3345">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="3358" x2="1375" y2="3358" stroke="#607587"/><text x="1335" y="3356">1</text><text x="1385" y="3362" class="net">UP:3V3</text>
+<line x1="1330" y1="3374" x2="1375" y2="3374" stroke="#607587"/><text x="1335" y="3372">2</text><text x="1385" y="3378" class="net">UP:GND</text>
+<rect x="20" y="3540" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3558" style="font-weight:bold">UP_U18C  100nF</text>
+<text x="30" y="3575">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="3588" x2="75" y2="3588" stroke="#607587"/><text x="35" y="3586">1</text><text x="85" y="3592" class="net">UP:3V3</text>
+<line x1="30" y1="3604" x2="75" y2="3604" stroke="#607587"/><text x="35" y="3602">2</text><text x="85" y="3608" class="net">UP:GND</text>
+<rect x="670" y="3540" width="620" height="210" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3558" style="font-weight:bold">UP_U20  INA226AIDGSR</text>
+<text x="680" y="3575">current_telemetry / DGS10</text>
+<line x1="680" y1="3588" x2="725" y2="3588" stroke="#607587"/><text x="685" y="3586">1</text><text x="735" y="3592" class="net">UP:GND</text>
+<line x1="680" y1="3604" x2="725" y2="3604" stroke="#607587"/><text x="685" y="3602">2</text><text x="735" y="3608" class="net">UP:GND</text>
+<line x1="680" y1="3620" x2="725" y2="3620" stroke="#607587"/><text x="685" y="3618">3</text><text x="735" y="3624" class="nc">NC:UP_U20:3</text>
+<line x1="680" y1="3636" x2="725" y2="3636" stroke="#607587"/><text x="685" y="3634">4</text><text x="735" y="3640" class="net">UP:I2C_SDA</text>
+<line x1="680" y1="3652" x2="725" y2="3652" stroke="#607587"/><text x="685" y="3650">5</text><text x="735" y="3656" class="net">UP:I2C_SCL</text>
+<line x1="680" y1="3668" x2="725" y2="3668" stroke="#607587"/><text x="685" y="3666">6</text><text x="735" y="3672" class="net">UP:3V3</text>
+<line x1="680" y1="3684" x2="725" y2="3684" stroke="#607587"/><text x="685" y="3682">7</text><text x="735" y="3688" class="net">UP:GND</text>
+<line x1="680" y1="3700" x2="725" y2="3700" stroke="#607587"/><text x="685" y="3698">8</text><text x="735" y="3704" class="net">UP:VIN12_LOAD</text>
+<line x1="680" y1="3716" x2="725" y2="3716" stroke="#607587"/><text x="685" y="3714">9</text><text x="735" y="3720" class="net">UP:VIN12_LOAD</text>
+<line x1="680" y1="3732" x2="725" y2="3732" stroke="#607587"/><text x="685" y="3730">10</text><text x="735" y="3736" class="net">UP:VIN12_SAFE</text>
+<rect x="1320" y="3540" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3558" style="font-weight:bold">UP_C20  100nF</text>
+<text x="1330" y="3575">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="3588" x2="1375" y2="3588" stroke="#607587"/><text x="1335" y="3586">1</text><text x="1385" y="3592" class="net">UP:3V3</text>
+<line x1="1330" y1="3604" x2="1375" y2="3604" stroke="#607587"/><text x="1335" y="3602">2</text><text x="1385" y="3608" class="net">UP:GND</text>
+<rect x="20" y="3770" width="620" height="162" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="3788" style="font-weight:bold">UP_UT0  TMP117AIDRVR</text>
+<text x="30" y="3805">temperature_telemetry / DRV6+EP</text>
+<line x1="30" y1="3818" x2="75" y2="3818" stroke="#607587"/><text x="35" y="3816">1</text><text x="85" y="3822" class="net">UP:I2C_SCL</text>
+<line x1="30" y1="3834" x2="75" y2="3834" stroke="#607587"/><text x="35" y="3832">2</text><text x="85" y="3838" class="net">UP:GND</text>
+<line x1="30" y1="3850" x2="75" y2="3850" stroke="#607587"/><text x="35" y="3848">3</text><text x="85" y="3854" class="nc">NC:UP_UT0:3</text>
+<line x1="30" y1="3866" x2="75" y2="3866" stroke="#607587"/><text x="35" y="3864">4</text><text x="85" y="3870" class="net">UP:GND</text>
+<line x1="30" y1="3882" x2="75" y2="3882" stroke="#607587"/><text x="35" y="3880">5</text><text x="85" y="3886" class="net">UP:3V3</text>
+<line x1="30" y1="3898" x2="75" y2="3898" stroke="#607587"/><text x="35" y="3896">6</text><text x="85" y="3902" class="net">UP:I2C_SDA</text>
+<line x1="30" y1="3914" x2="75" y2="3914" stroke="#607587"/><text x="35" y="3912">7</text><text x="85" y="3918" class="net">UP:GND</text>
+<rect x="670" y="3770" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="3788" style="font-weight:bold">UP_CT0  100nF</text>
+<text x="680" y="3805">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="3818" x2="725" y2="3818" stroke="#607587"/><text x="685" y="3816">1</text><text x="735" y="3822" class="net">UP:3V3</text>
+<line x1="680" y1="3834" x2="725" y2="3834" stroke="#607587"/><text x="685" y="3832">2</text><text x="735" y="3838" class="net">UP:GND</text>
+<rect x="1320" y="3770" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="3788" style="font-weight:bold">UP_CB0  100nF</text>
+<text x="1330" y="3805">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="3818" x2="1375" y2="3818" stroke="#607587"/><text x="1335" y="3816">1</text><text x="1385" y="3822" class="net">UP:3V3</text>
+<line x1="1330" y1="3834" x2="1375" y2="3834" stroke="#607587"/><text x="1335" y="3832">2</text><text x="1385" y="3838" class="net">UP:GND</text>
+<rect x="20" y="4000" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4018" style="font-weight:bold">UP_CB1  100nF</text>
+<text x="30" y="4035">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="4048" x2="75" y2="4048" stroke="#607587"/><text x="35" y="4046">1</text><text x="85" y="4052" class="net">UP:3V3</text>
+<line x1="30" y1="4064" x2="75" y2="4064" stroke="#607587"/><text x="35" y="4062">2</text><text x="85" y="4068" class="net">UP:GND</text>
+<rect x="670" y="4000" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4018" style="font-weight:bold">UP_CB2  100nF</text>
+<text x="680" y="4035">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="4048" x2="725" y2="4048" stroke="#607587"/><text x="685" y="4046">1</text><text x="735" y="4052" class="net">UP:3V3</text>
+<line x1="680" y1="4064" x2="725" y2="4064" stroke="#607587"/><text x="685" y="4062">2</text><text x="735" y="4068" class="net">UP:GND</text>
+<rect x="1320" y="4000" width="620" height="66" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4018" style="font-weight:bold">UP_TP_SYNC  TEST_POINT</text>
+<text x="1330" y="4035">sync_handoff / 1mm_pad</text>
+<line x1="1330" y1="4048" x2="1375" y2="4048" stroke="#607587"/><text x="1335" y="4046">1</text><text x="1385" y="4052" class="net">UP:B_SYNC</text>
+<rect x="20" y="4230" width="620" height="66" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4248" style="font-weight:bold">UP_TP_HB  TEST_POINT</text>
+<text x="30" y="4265">heartbeat_observation / 1mm_pad</text>
+<line x1="30" y1="4278" x2="75" y2="4278" stroke="#607587"/><text x="35" y="4276">1</text><text x="85" y="4282" class="net">UP:B_HB</text>
+<rect x="670" y="4230" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4248" style="font-weight:bold">UP_CREFI  100nF</text>
+<text x="680" y="4265">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="4278" x2="725" y2="4278" stroke="#607587"/><text x="685" y="4276">1</text><text x="735" y="4282" class="net">UP:AFE5</text>
+<line x1="680" y1="4294" x2="725" y2="4294" stroke="#607587"/><text x="685" y="4292">2</text><text x="735" y="4298" class="net">UP:GND</text>
+<rect x="1320" y="4230" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4248" style="font-weight:bold">UP_CREFO  10uF</text>
+<text x="1330" y="4265">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="4278" x2="1375" y2="4278" stroke="#607587"/><text x="1335" y="4276">1</text><text x="1385" y="4282" class="net">UP:VBIAS</text>
+<line x1="1330" y1="4294" x2="1375" y2="4294" stroke="#607587"/><text x="1335" y="4292">2</text><text x="1385" y="4298" class="net">UP:GND</text>
+<rect x="20" y="4460" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4478" style="font-weight:bold">UP_CREFN  1uF</text>
+<text x="30" y="4495">reference_noise / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="30" y1="4508" x2="75" y2="4508" stroke="#607587"/><text x="35" y="4506">1</text><text x="85" y="4512" class="net">UP:REF_NR</text>
+<line x1="30" y1="4524" x2="75" y2="4524" stroke="#607587"/><text x="35" y="4522">2</text><text x="85" y="4528" class="net">UP:GND</text>
+<rect x="670" y="4460" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4478" style="font-weight:bold">UP_CA0  100nF</text>
+<text x="680" y="4495">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="4508" x2="725" y2="4508" stroke="#607587"/><text x="685" y="4506">1</text><text x="735" y="4512" class="net">UP:AFE5</text>
+<line x1="680" y1="4524" x2="725" y2="4524" stroke="#607587"/><text x="685" y="4522">2</text><text x="735" y="4528" class="net">UP:GND</text>
+<rect x="1320" y="4460" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4478" style="font-weight:bold">UP_CA1  100nF</text>
+<text x="1330" y="4495">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="1330" y1="4508" x2="1375" y2="4508" stroke="#607587"/><text x="1335" y="4506">1</text><text x="1385" y="4512" class="net">UP:AFE5</text>
+<line x1="1330" y1="4524" x2="1375" y2="4524" stroke="#607587"/><text x="1335" y="4522">2</text><text x="1385" y="4528" class="net">UP:GND</text>
+<rect x="20" y="4690" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4708" style="font-weight:bold">UP_RAO0  100</text>
+<text x="30" y="4725">cable_output_damping / 0603;0.1W;50V</text>
+<line x1="30" y1="4738" x2="75" y2="4738" stroke="#607587"/><text x="35" y="4736">1</text><text x="85" y="4742" class="net">UP:RX0_OUT_RAW</text>
+<line x1="30" y1="4754" x2="75" y2="4754" stroke="#607587"/><text x="35" y="4752">2</text><text x="85" y="4758" class="net">UP:RX0_OUT</text>
+<rect x="670" y="4690" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4708" style="font-weight:bold">UP_RAO1  100</text>
+<text x="680" y="4725">cable_output_damping / 0603;0.1W;50V</text>
+<line x1="680" y1="4738" x2="725" y2="4738" stroke="#607587"/><text x="685" y="4736">1</text><text x="735" y="4742" class="net">UP:RX1_OUT_RAW</text>
+<line x1="680" y1="4754" x2="725" y2="4754" stroke="#607587"/><text x="685" y="4752">2</text><text x="735" y="4758" class="net">UP:RX1_OUT</text>
+<rect x="1320" y="4690" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4708" style="font-weight:bold">UP_RAO2  100</text>
+<text x="1330" y="4725">cable_output_damping / 0603;0.1W;50V</text>
+<line x1="1330" y1="4738" x2="1375" y2="4738" stroke="#607587"/><text x="1335" y="4736">1</text><text x="1385" y="4742" class="net">UP:RX2_OUT_RAW</text>
+<line x1="1330" y1="4754" x2="1375" y2="4754" stroke="#607587"/><text x="1335" y="4752">2</text><text x="1385" y="4758" class="net">UP:RX2_OUT</text>
+<rect x="20" y="4920" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="4938" style="font-weight:bold">UP_RAO3  100</text>
+<text x="30" y="4955">cable_output_damping / 0603;0.1W;50V</text>
+<line x1="30" y1="4968" x2="75" y2="4968" stroke="#607587"/><text x="35" y="4966">1</text><text x="85" y="4972" class="net">UP:RX3_OUT_RAW</text>
+<line x1="30" y1="4984" x2="75" y2="4984" stroke="#607587"/><text x="35" y="4982">2</text><text x="85" y="4988" class="net">UP:RX3_OUT</text>
+<rect x="670" y="4920" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="4938" style="font-weight:bold">UP_CBLANK  100nF</text>
+<text x="680" y="4955">local_decoupling / 0603;X7R;16V;effective C must be qualified</text>
+<line x1="680" y1="4968" x2="725" y2="4968" stroke="#607587"/><text x="685" y="4966">1</text><text x="735" y="4972" class="net">UP:AFE5</text>
+<line x1="680" y1="4984" x2="725" y2="4984" stroke="#607587"/><text x="685" y="4982">2</text><text x="735" y="4988" class="net">UP:GND</text>
+<rect x="1320" y="4920" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="4938" style="font-weight:bold">UP_RPG  1k</text>
+<text x="1330" y="4955">status_series / 0603;0.1W;50V</text>
+<line x1="1330" y1="4968" x2="1375" y2="4968" stroke="#607587"/><text x="1335" y="4966">1</text><text x="1385" y="4972" class="net">UP:3V3</text>
+<line x1="1330" y1="4984" x2="1375" y2="4984" stroke="#607587"/><text x="1335" y="4982">2</text><text x="1385" y="4988" class="net">UP:PGOOD</text>
+<rect x="20" y="5150" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="30" y="5168" style="font-weight:bold">UP_RPGD  10k</text>
+<text x="30" y="5185">status_idle / 0603;0.1W;50V</text>
+<line x1="30" y1="5198" x2="75" y2="5198" stroke="#607587"/><text x="35" y="5196">1</text><text x="85" y="5202" class="net">UP:PGOOD</text>
+<line x1="30" y1="5214" x2="75" y2="5214" stroke="#607587"/><text x="35" y="5212">2</text><text x="85" y="5218" class="net">UP:GND</text>
+<rect x="670" y="5150" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="680" y="5168" style="font-weight:bold">UP_LED1  GREEN_LED_MPN_HOLD</text>
+<text x="680" y="5185">status_led / 0603</text>
+<line x1="680" y1="5198" x2="725" y2="5198" stroke="#607587"/><text x="685" y="5196">1</text><text x="735" y="5202" class="net">UP:LED_AN</text>
+<line x1="680" y1="5214" x2="725" y2="5214" stroke="#607587"/><text x="685" y="5212">2</text><text x="735" y="5218" class="net">UP:GND</text>
+<rect x="1320" y="5150" width="620" height="82" fill="#f7fafc" stroke="#8da6ba"/>
+<text x="1330" y="5168" style="font-weight:bold">UP_RLED  2.2k</text>
+<text x="1330" y="5185">led_limit / 0603;0.1W;50V</text>
+<line x1="1330" y1="5198" x2="1375" y2="5198" stroke="#607587"/><text x="1335" y="5196">1</text><text x="1385" y="5202" class="net">UP:3V3</text>
+<line x1="1330" y1="5214" x2="1375" y2="5214" stroke="#607587"/><text x="1335" y="5212">2</text><text x="1385" y="5218" class="net">UP:LED_AN</text>
+</svg>

@@ -1,0 +1,109 @@
+{
+  "status": "PASS_WITH_RELEASE_GATES",
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "branch": "feat/v5-pcb-design",
+  "base_commit": "23f8d4cedb44536f8c35fd132171868a80f9ded7",
+  "recorded_at": "2026-10-11T06:44:19.440863+00:00",
+  "scope": "Candidate artifacts and original digital preservation; not electrical/hardware acceptance",
+  "fresh_digital_tests": {
+    "count": 243,
+    "status": "PASS",
+    "command": "python -m unittest discover -s v5/tests -v",
+    "raw_log_local_only": "unit_243.log",
+    "raw_log_sha256": "c9c875e85e40d22a6a508e83dbf1bec81f9a2a3892956d0bea363aff13afaf31",
+    "evidence_boundary": "Real local test execution; no board operation"
+  },
+  "checks": {
+    "STRUCTURE_CHECK.json": "PASS",
+    "INHERITANCE_CHECK.json": "PASS",
+    "PROTECTED_HASH_CHECK.json": "PASS",
+    "HARDWARE_MODEL_CHECK.json": "PASS",
+    "WORKSPACE_INTEGRITY.json": "PASS",
+    "SEMANTIC_REVIEW.json": "PASS",
+    "WORKBOOK_VERIFICATION.json": "PASS"
+  },
+  "semantic_checks": 45,
+  "safety_boolean_combinations": 256,
+  "board_local_singleton_nets": 0,
+  "workbooks": {
+    "status": "PASS",
+    "formula_count_power": 249,
+    "formula_count_bom": 236,
+    "numeric_checks": 252,
+    "all_formula_caches_present": true,
+    "no_excel_error_cells": true,
+    "method": "stdlib XLSX XML caches vs independent Python results/actualrefdes counts;not nativeExcel runtime",
+    "files": [
+      {
+        "path": "02_THREE_BOARD_POWER_BUDGET.xlsx",
+        "sha256": "3845ae1a9cae767405118360356debc285d6827a18013cb0fed044f86b23aa38"
+      },
+      {
+        "path": "10_BOM_RELEASE_CANDIDATE_DELTA.xlsx",
+        "sha256": "9a4ef1f6040d175fdcea1110ebf2ece3ed1e48481cf4431e7f65d8d1243c31e3"
+      }
+    ]
+  },
+  "candidate_counts": {
+    "total_components": 2126,
+    "per_board": {
+      "UP": 995,
+      "DN": 995,
+      "CENTRAL": 136
+    },
+    "pins": 6390,
+    "passives": 1541,
+    "bom_group_rows": 227,
+    "legacy_baseline_installed": 1205,
+    "legacy_count_is_not_new_design_constraint": true,
+    "pcb_mpn_gates": [
+      "GREEN_LED_MPN_HOLD",
+      "I2C_HOST_ASSIGNMENT_HOLD",
+      "RX_MPN_UNKNOWN",
+      "SIGNAL_2x32_MPN_HOLD"
+    ]
+  },
+  "vector_pages": 27,
+  "inherited_not_rerun": [
+    "S2 3696frames x3 Icarus +1 XSim",
+    "Prior OOC synthesis/routing; no new board timing proof"
+  ],
+  "unchanged": {
+    "digital_core_paths": [
+      "v5/rtl",
+      "v5/tests",
+      "v5/config",
+      "v5/constraints",
+      "v5/firmware",
+      "v5/software",
+      "v5/tb",
+      "v5/simulation",
+      "v5/scripts"
+    ],
+    "S2_review_and_evidence": true,
+    "problem_body": true,
+    "historical_tree": "c07fb9c582ac11e34a59feda6798ea29d2351d0c",
+    "historical_body_read": false,
+    "sole_active_version": true
+  },
+  "native_schematic": "NOT_CREATED",
+  "native_erc": "NOT_RUN",
+  "independent_review": "PENDING",
+  "spice_ibis": "NOT_RUN",
+  "hardware": "NOT_VERIFIED",
+  "release_result": "REVISE",
+  "release_gates": [
+    "G1 nativeCAD/independent review",
+    "G2 power/fault/thermal",
+    "G3 AFE/protection/power-off isolation",
+    "G4 actual digital integration/VCCO/externalSTA/BRAM",
+    "G5 mechanical/SKUs"
+  ],
+  "holds": [
+    "Manufacturing",
+    "Procurement",
+    "Board write",
+    "Main merge"
+  ]
+}

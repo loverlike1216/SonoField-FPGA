@@ -46,3 +46,9 @@ history/recovery authorization. Use [current-scope search](shared/repository_cle
 GitHub website search indexing is not controlled by local exclusions. ExternalChatGPT
 reader BLOCKED; observable Codex interaction records PARTIAL. User authorized normal
 GitHub synchronization; unresolved engineering gates prevent main/production acceptance.
+
+## Current PCB-S3 candidate entry
+
+PCB-S3 user-authorized candidate delivered on feat/v5-pcb-design / PR6,base23f8d4c;soleactivev5. Central5V3A USB-C,candidate12.343Wsteadyinput envelope;upper/lower each12V3A36W GST36E12,candidate29.360Wsteadyinput envelope. Theseare limitdefined conditionaldesignbounds,not measuredload/allfaultguarantees. TPS3851one/array,two total;additionalwindow/thermal/latch/cutoff. Strict2126component/6390pin candidate,1541RCL,128TXmapping/8RX/64ADCpins. Fresh243tests,45staticchecks,256booleanstates,485cachedformulas/252numericcrosschecksPASS;S2fullframes inherited,not rerun. NativeNOT_CREATED/ERCNOT_RUN/hardwareNOT_VERIFIED. G1native/independent,G2powerfaultthermal,G3AFEandpoweroff,G4digitalintegration,VCCO,STA,BRAM,G5mechanical/SKUs. Manufacturing/procurement/boardwrite/main HOLD. ExternalChatGPT BLOCKED. See CP-20261011-003 and review11.
+
+Start with `v5/hardware/pcb/reviews/20261011_s3/11_FINAL_ENGINEERING_REVIEW_AND_REMAINING_GATES.md`, `REVIEW.html`, and `shared/CONTEXT_CHECKPOINT.md`. PriorS2andhardwareDraftstagesremainprovenance,notmergedmain.
