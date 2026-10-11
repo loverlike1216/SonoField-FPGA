@@ -1,0 +1,321 @@
+{
+  "inputs": {
+    "classification": "ENGINEERING_ASSUMPTIONS_UNLESS_SPECIFICALLY_SOURCED",
+    "C0_F": 2.2e-09,
+    "C0_tolerance": 0.2,
+    "frequency_Hz": 40000,
+    "voltage_step_V": 12,
+    "Vrail_corners_V": [
+      10.8,
+      12,
+      13.2
+    ],
+    "buck_fsw_min_Hz": 390000,
+    "buck_L_tolerance": 0.2,
+    "buck_load_A": 0.5,
+    "buck_stress_load_A": 2,
+    "ambient_assumption_C": 60,
+    "buck_Vref_bounds_V": [
+      0.581,
+      0.596,
+      0.611
+    ],
+    "feedback_R_tolerance": 0.001,
+    "charge_model": "fully settled non-energy-recovering ideal capacitor; excludes motional branch and driver cross conduction",
+    "sources": {
+      "C0": "User S2 instruction section4 GateA, assumption only; no vendor validation",
+      "buck": "TPS54202 RevC sections5.5/7.2.3; 390kHz min; 2A rated",
+      "watchdog": "TPS3851 RevB sections5.5/5.6/7.1.1.2",
+      "efuse": "TPS2663 RevG table6.5 and eq8 p30; 18 A*kOhm/RkOhm"
+    }
+  },
+  "status": "ALTERNATIVE_VALIDATION_CALCULATION_ONLY",
+  "capacitive_power": [
+    {
+      "channels": 1,
+      "nominal_W": 0.012672,
+      "C_only_min_W": 0.010137599999999998,
+      "C_only_max_W": 0.0152064,
+      "C_and_Vmax_W": 0.018399744,
+      "nominal_input_A": 0.0010559999999999999
+    },
+    {
+      "channels": 16,
+      "nominal_W": 0.202752,
+      "C_only_min_W": 0.16220159999999997,
+      "C_only_max_W": 0.2433024,
+      "C_and_Vmax_W": 0.294395904,
+      "nominal_input_A": 0.016895999999999998
+    },
+    {
+      "channels": 64,
+      "nominal_W": 0.811008,
+      "C_only_min_W": 0.6488063999999999,
+      "C_only_max_W": 0.9732096,
+      "C_and_Vmax_W": 1.177583616,
+      "nominal_input_A": 0.06758399999999999
+    },
+    {
+      "channels": 128,
+      "nominal_W": 1.622016,
+      "C_only_min_W": 1.2976127999999998,
+      "C_only_max_W": 1.9464192,
+      "C_and_Vmax_W": 2.355167232,
+      "nominal_input_A": 0.13516799999999998
+    }
+  ],
+  "driver_edge_examples": [
+    {
+      "Rext_ohm": 0,
+      "Rdriver_typ_assumed_ohm": 7,
+      "Iinitial_typ_A": 1.7142857142857142,
+      "rise_10_90_ns": 40.656000000000006,
+      "resistor_ideal_average_W": 0.0
+    },
+    {
+      "Rext_ohm": 22,
+      "Rdriver_typ_assumed_ohm": 7,
+      "Iinitial_typ_A": 0.41379310344827586,
+      "rise_10_90_ns": 168.43200000000002,
+      "resistor_ideal_average_W": 0.013958426482758619
+    },
+    {
+      "Rext_ohm": 47,
+      "Rdriver_typ_assumed_ohm": 7,
+      "Iinitial_typ_A": 0.2222222222222222,
+      "rise_10_90_ns": 313.63200000000006,
+      "resistor_ideal_average_W": 0.016014591999999998
+    }
+  ],
+  "buck": [
+    {
+      "Vout_V": 3.3,
+      "L_nom_uH": 6.8,
+      "L_min_uH": 5.44,
+      "delta_IL_A": 1.166572398190045,
+      "peak_0p5A_A": 1.0832861990950224,
+      "peak_2A_A": 2.5832861990950224,
+      "Irms_2A_A": 2.0281537408897052,
+      "ripple_Ceff22uF_ESR10mOhm_V": 0.02866124260355029
+    },
+    {
+      "Vout_V": 3.3,
+      "L_nom_uH": 15.0,
+      "L_min_uH": 12.0,
+      "delta_IL_A": 0.5288461538461537,
+      "peak_0p5A_A": 0.7644230769230769,
+      "peak_2A_A": 2.2644230769230766,
+      "Irms_2A_A": 2.0058181675324303,
+      "ripple_Ceff22uF_ESR10mOhm_V": 0.012993096646942799
+    },
+    {
+      "Vout_V": 3.3,
+      "L_nom_uH": 22.0,
+      "L_min_uH": 17.6,
+      "delta_IL_A": 0.360576923076923,
+      "peak_0p5A_A": 0.6802884615384615,
+      "peak_2A_A": 2.1802884615384617,
+      "Irms_2A_A": 2.00270682904945,
+      "ripple_Ceff22uF_ESR10mOhm_V": 0.008858929532006454
+    },
+    {
+      "Vout_V": 3.3,
+      "L_nom_uH": 33.0,
+      "L_min_uH": 26.400000000000006,
+      "delta_IL_A": 0.2403846153846153,
+      "peak_0p5A_A": 0.6201923076923077,
+      "peak_2A_A": 2.1201923076923075,
+      "Irms_2A_A": 2.001203487140376,
+      "ripple_Ceff22uF_ESR10mOhm_V": 0.005905953021337635
+    },
+    {
+      "Vout_V": 5.5,
+      "L_nom_uH": 6.8,
+      "L_min_uH": 5.44,
+      "delta_IL_A": 1.5122234791352436,
+      "peak_0p5A_A": 1.2561117395676218,
+      "peak_2A_A": 2.756111739567622,
+      "Irms_2A_A": 2.0470877658038975,
+      "ripple_Ceff22uF_ESR10mOhm_V": 0.03715346263423186
+    },
+    {
+      "Vout_V": 5.5,
+      "L_nom_uH": 15.0,
+      "L_min_uH": 12.0,
+      "delta_IL_A": 0.6855413105413104,
+      "peak_0p5A_A": 0.8427706552706552,
+      "peak_2A_A": 2.3427706552706553,
+      "Irms_2A_A": 2.0097671276472697,
+      "ripple_Ceff22uF_ESR10mOhm_V": 0.016842903060851774
+    },
+    {
+      "Vout_V": 5.5,
+      "L_nom_uH": 22.0,
+      "L_min_uH": 17.6,
+      "delta_IL_A": 0.46741452991452986,
+      "peak_0p5A_A": 0.7337072649572649,
+      "peak_2A_A": 2.233707264957265,
+      "Irms_2A_A": 2.004546422983996,
+      "ripple_Ceff22uF_ESR10mOhm_V": 0.011483797541489848
+    },
+    {
+      "Vout_V": 5.5,
+      "L_nom_uH": 33.0,
+      "L_min_uH": 26.400000000000006,
+      "delta_IL_A": 0.3116096866096865,
+      "peak_0p5A_A": 0.6558048433048432,
+      "peak_2A_A": 2.155804843304843,
+      "Irms_2A_A": 2.002021907072718,
+      "ripple_Ceff22uF_ESR10mOhm_V": 0.0076558650276598965
+    }
+  ],
+  "buck_Lmin_30percent_at_2A_uH": {
+    "3.3": 10.576923076923077,
+    "5.5": 13.71082621082621
+  },
+  "feedback": [
+    {
+      "target_V": 3.3,
+      "Rtop_ohm": 100000,
+      "Rbottom_ohm": 22100,
+      "ideal_Rbottom_ohm": 22041.420118343194,
+      "Vnom_V": 3.29283257918552,
+      "Vmin_V": 3.2047066101319492,
+      "Vmax_V": 3.3812408290643576,
+      "FB_bias_error_bound_V": null,
+      "FB_bias_formula": "I_FB*Rtop; guaranteed bound NOT_FOUND; not included"
+    },
+    {
+      "target_V": 5.5,
+      "Rtop_ohm": 100000,
+      "Rbottom_ohm": 12100,
+      "ideal_Rbottom_ohm": 12153.344208809136,
+      "Vnom_V": 5.5216198347107435,
+      "Vmin_V": 5.373059180488933,
+      "Vmax_V": 5.670696059696059,
+      "FB_bias_error_bound_V": null,
+      "FB_bias_formula": "I_FB*Rtop; guaranteed bound NOT_FOUND; not included"
+    }
+  ],
+  "supervisor": {
+    "VIT_nom_V": 3.069,
+    "VIT_min_V": 3.044448,
+    "VIT_max_V": 3.093552,
+    "CWD_1p8nF_nom_ms": 194.32000000000002,
+    "CWD_1p8nF_min_ms": 169.55537,
+    "CWD_1p8nF_max_ms": 220.40817000000004,
+    "fixed_10k_ms": [
+      170,
+      200,
+      230
+    ],
+    "pullup10k_sink_A": 0.00033,
+    "pullup10k_power_W": 0.001089
+  },
+  "efuse_ILIM": [
+    {
+      "R_ohm": 1650,
+      "I_nom_A": 10.909090909090908,
+      "I_lo_7percent_plus_Rtol_A": 10.045004500450045,
+      "I_hi_7percent_plus_Rtol_A": 11.790633608815426,
+      "status": "INVALID_LT_3K"
+    },
+    {
+      "R_ohm": 4020,
+      "I_nom_A": 4.477611940298507,
+      "I_lo_7percent_plus_Rtol_A": 4.122949608393675,
+      "I_hi_7percent_plus_Rtol_A": 4.8394391677973765,
+      "status": "CANDIDATE_PULSE_AND_SOURCE_HOLD"
+    },
+    {
+      "R_ohm": 4750,
+      "I_nom_A": 3.789473684210526,
+      "I_lo_7percent_plus_Rtol_A": 3.4893173527879107,
+      "I_hi_7percent_plus_Rtol_A": 4.095693779904306,
+      "status": "CANDIDATE_PULSE_AND_SOURCE_HOLD"
+    },
+    {
+      "R_ohm": 6040,
+      "I_nom_A": 2.980132450331126,
+      "I_lo_7percent_plus_Rtol_A": 2.7440823552553932,
+      "I_hi_7percent_plus_Rtol_A": 3.2209512341962676,
+      "status": "CANDIDATE_PULSE_AND_SOURCE_HOLD"
+    },
+    {
+      "R_ohm": 9090,
+      "I_nom_A": 1.9801980198019802,
+      "I_lo_7percent_plus_Rtol_A": 1.823350651896873,
+      "I_hi_7percent_plus_Rtol_A": 2.1402140214021403,
+      "status": "CANDIDATE_PULSE_AND_SOURCE_HOLD"
+    }
+  ],
+  "power_path": {
+    "adapter_load_max_W": {
+      "40": {
+        "0.2": 33.333333333333336,
+        "0.3": 30.769230769230766
+      },
+      "60": {
+        "0.2": 50.0,
+        "0.3": 46.15384615384615
+      }
+    },
+    "shunt20mOhm_5A_V": 0.1,
+    "shunt20mOhm_5A_W": 0.5,
+    "ina226_shunt_range_V": 0.08192,
+    "shunt_max_5A_1percent_ohm": 0.016221782178217823,
+    "efuse53mOhm_5A_W": 1.325,
+    "jack30mOhm_5A_W": 0.75,
+    "cap470uF_energy_12V_J": 0.03384,
+    "cap470uF_droop_64channels_V": 0.005931574468085105,
+    "driver_Ceff_for_2channels_drop0p1V_F": 6.969599999999999e-07,
+    "bleed12_to1V_in1s_Rmax_470uFplus20_ohm": 713.5276673436963,
+    "bleed680ohm_initial_13p2V_W": 0.256235294117647,
+    "slew_10nF_12V_typ_s": 0.002496,
+    "Icap470uF_slew_10nF_A": 2.2596153846153846
+  },
+  "pulldown": {
+    "leak_budget_A": 2.5e-05,
+    "VIL_V": 0.8,
+    "Rmax_ohm": 32000.0,
+    "R100k_off_voltage_V": 2.5,
+    "R10k_off_voltage_V": 0.25,
+    "R10k_high_load_A": 0.00033,
+    "warning": "25uA = 595 IOZ15uA + TC4427 input10uA; routing leakage extra; VOH low-load conditions must be checked"
+  },
+  "i2c": [
+    {
+      "bus_C_F": 1e-10,
+      "Rmax_1us_ohm": 11802.195208308744,
+      "Rmin_3mA_ohm": 966.6666666666666,
+      "rise4700_ns": 398.23100000000005
+    },
+    {
+      "bus_C_F": 2e-10,
+      "Rmax_1us_ohm": 5901.097604154372,
+      "Rmin_3mA_ohm": 966.6666666666666,
+      "rise4700_ns": 796.4620000000001
+    },
+    {
+      "bus_C_F": 4e-10,
+      "Rmax_1us_ohm": 2950.548802077186,
+      "Rmin_3mA_ohm": 966.6666666666666,
+      "rise4700_ns": 1592.9240000000002
+    }
+  ],
+  "afe_example": {
+    "highpass_Hz": 159.15494309189535,
+    "lowpass_Hz": 159154.94309189534,
+    "phase40k_deg_min": -14.709285773305321,
+    "phase40k_deg_max": -13.056708110889,
+    "max_interchannel_phase_deg": 1.6525776624163218,
+    "acceptance": "NOT_A_35dB_PASS; insufficient anti-aliasing without spectral envelope"
+  },
+  "digital": {
+    "T66MHz_s": 1.5151515151515152e-08,
+    "half_T66MHz_s": 7.575757575757576e-09,
+    "ADC32bits_800k_lowerbound_Hz": 25600000,
+    "raw_8x16x800k_byte_per_s": 12800000.0,
+    "UART115200_8N1_byte_per_s": 11520.0
+  }
+}

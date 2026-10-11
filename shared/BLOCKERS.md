@@ -23,3 +23,8 @@ image UNKNOWN. No boardreset/program/serialopen or realultrasound performed this
 Detailed priorities/minimal closure: v5/docs/hardware/RISKS.md and
 MISSING_FACTS_AND_NEXT_MEASUREMENTS.md. Current offline tests have no unresolved
 failures; physical/integration gates remain. Do not weaken acceptance or read history.
+
+
+## PCB-S2 P0 additions
+
+S2-P01 window/progress coverage; S2-P02 cold-start/失电/锁存/physical cutoff/discharge; S2-P03 actual load and eFuse/TVS/source/jack/shunt coordination; S2-P04 centralAVCC/RX/AFE; S2-P05 fullIO/VCCO/externalSTA/BRAM. See v5/hardware/pcb/reviews/20261011_s2/08_RISK_BLOCKERS_AND_DECISION_REQUESTS.md. S2-C/BOM/manufacturing HOLD. These are current candidate facts, not main-merged implementation.

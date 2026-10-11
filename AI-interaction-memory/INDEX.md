@@ -75,3 +75,14 @@ No inaccessible ChatGPT history or hidden reasoning captured. User-home paths, d
 Only actually accessible user/commentary/tool events captured from this request through
 the recorded cutoff. No reasoning, inaccessible ChatGPT output or independent review
 invented. User private paths and credential patterns redacted; publication recorded separately.
+
+
+## v5 PCB-S2 independent workstream
+
+| ID/source | Record | Status | Impact |
+|---|---|---|---|
+| S-20261011-pcb-s2-001 / Codex | [observable transcript](codex/S-20261011-pcb-s2-001.md) and [tool hashes](codex/S-20261011-pcb-s2-001.tools.json) | PARTIAL | IMPLEMENTATION_INPUT |
+| Actual instructions | [S2 canonical](codex/instructions/v5_pcb_architecture_parameter_review_20261011.md) / [startup](codex/instructions/v5_pcb_task_start_20261011.md) | COMPLETE_DOCUMENT_ONLY | DESIGN_INPUT |
+| T-20261011-PCB-001 | [tool flow](tool-flow/T-20261011-PCB-001__pcb-review.md) | PARTIAL | VALIDATION_INPUT |
+
+Current observable session only through recorded cutoff. No inaccessible history, private reasoning or invented ChatGPT review. Public records redact personal paths and credentials. Canonical instruction file hashes retained.

@@ -1,0 +1,168 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "base_commit": "8c27b5841b5494c3761ab211881a3ea2be63e8c8",
+  "recorded_at": "2026-10-11T04:15:29.323861+00:00",
+  "artifact_review": "REVISE_ELECTRICAL_S2_C_BLOCKED",
+  "unit_tests": {
+    "status": "PASS",
+    "count": 243,
+    "evidence": "published_baseline/unit243.txt"
+  },
+  "digital": {
+    "status": "PASS",
+    "scope": "FULL3696x3Icarus+1XSim_C16_CAPTURE_TOP_SOFTWARE_OFFLINE",
+    "summaries": [
+      {
+        "source": "digital_full/summary.json",
+        "published": "published_baseline\\nextstage.json",
+        "sha256": "9181294203e2f39e9a01b8c8a77c2a327a1fb28115e2fbe5caf6e836b4ae23a7",
+        "bytes": 2415
+      },
+      {
+        "source": "digital_full/full/summary.json",
+        "published": "published_baseline\\prepcb.json",
+        "sha256": "21e44216ff4dda9fa5709aaf6fcaaf056bccb796e603666e900bd9cf459cc1e7",
+        "bytes": 2336
+      },
+      {
+        "source": "digital_full/full/system/summary.json",
+        "published": "published_baseline\\system.json",
+        "sha256": "e0a71e4c934f30ec02402a0476fc139bb197badd0055992dff30d90ce3f86c06",
+        "bytes": 73822
+      },
+      {
+        "source": "digital_full/full/inherited_full/motion/summary.json",
+        "published": "published_baseline\\motion.json",
+        "sha256": "6a03b38f08118c7f6ab09c96261db692f5c411a07ef16fc6da22ca9dbf1e3ea5",
+        "bytes": 37600
+      },
+      {
+        "source": "digital_full/full/inherited_full/motion/regression/summary.json",
+        "published": "published_baseline\\3696_regression.json",
+        "sha256": "d2e362d3cc1f87ba1bf2c3cc48fd26364dc9fb1629a28c267c7eec5c18ce3599",
+        "bytes": 70318
+      },
+      {
+        "source": "digital_full/adc/summary.json",
+        "published": "published_baseline\\adc_c16.json",
+        "sha256": "51db423b95902d5cf0741fe9f8a34aa98fc265fefa29bb2858079735d8d6c1e6",
+        "bytes": 943
+      },
+      {
+        "source": "digital_full/capture_c16/summary.json",
+        "published": "published_baseline\\capture_c16.json",
+        "sha256": "4d5a2c2026c71f3c3b287a96b18870e864b90e00872e8fda1a767991d6620143",
+        "bytes": 454
+      },
+      {
+        "source": "digital_full/top_c16/summary.json",
+        "published": "published_baseline\\top_c16.json",
+        "sha256": "a8baa24a5deb599af4a9119e2a9aac6d26585367a7065cd3add1925990e9dfec",
+        "bytes": 495
+      },
+      {
+        "source": "digital_full/software/summary.json",
+        "published": "published_baseline\\software.json",
+        "sha256": "324638e23d55ae3622e02e6c4f5954e432d0805adf17ef7e3cd346d4bfe8cbbc",
+        "bytes": 2492
+      },
+      {
+        "source": "BASELINE_UNIT.log",
+        "published": "published_baseline\\unit243.txt",
+        "sha256": "48eab0bb67aa446298633cffe066c88455f007291d76e81038b2393c5eef6d2c",
+        "bytes": 16822
+      },
+      {
+        "source": "DIGITAL_RUN.log",
+        "published": "published_baseline\\digital_runner.txt",
+        "sha256": "7e2c1cef0f0f70373375059dea3e48c425d28492943bd0f77288996eafc8d129",
+        "bytes": 84
+      }
+    ]
+  },
+  "review_checks": "PASS",
+  "workbook": {
+    "workbook_sha256": "a55b38dab4ce6004ac542e2c5fc0a09a365616ebbe9b3ec2bdf603f7a1726b1c",
+    "item_types": 101,
+    "installed_by_sheet": {
+      "Upper": 551,
+      "Lower": 551,
+      "Central": 83,
+      "External": 20
+    },
+    "total_installed": 1205,
+    "spare_column_order": "BOM_INPUTS quantities: Upper,Lower,Central,Spare,External",
+    "formula_checks": 1010,
+    "formula_errors": [],
+    "exact_ref_duplicates": {},
+    "functional_duplicates": "B054 vs H020 unresolved; no actual nets, artificial unique names do not disprove overlap",
+    "passive_counts": {
+      "R": 554,
+      "L": 4,
+      "C": 302
+    },
+    "passive_inventory_rows": 860,
+    "new_total_with_only_supervisor_change": 1203,
+    "approved_new_passive_additions": 0,
+    "approved_passive_deletions": 0,
+    "conditional_change_groups": [
+      "B-022",
+      "B-030",
+      "B-062",
+      "H-020"
+    ],
+    "conditional_change_inventory_quantities": {
+      "L": 4,
+      "R": 134
+    },
+    "functional_duplicate_suspect_inventory": {
+      "B-054": 180,
+      "B-061": 136
+    },
+    "full_RCL_status": "S2_C_BLOCKED; no final procurement counts",
+    "new_total_not_final": true
+  },
+  "original_workspace": {
+    "head": "8c27b5841b5494c3761ab211881a3ea2be63e8c8",
+    "status": "?? BOM/",
+    "tracked_unchanged": true
+  },
+  "protected_core_unchanged": true,
+  "historical_body_read": false,
+  "original_sandbox_modified": false,
+  "native_schematic": "NOT_CREATED",
+  "ERC": "NOT_RUN",
+  "DRC": "NOT_RUN",
+  "board_operations": "NONE",
+  "hardware": "NOT_VERIFIED",
+  "manufacturing": "HOLD",
+  "problem_id": "P-20261011-001",
+  "problem_hash": "ff10749ee46342eae17ecc5eff632b9131055199be6eb2cfb0583c16d79ec77f",
+  "source_input_sha256": "d14eb709d7b625158ba40af32b2b0c56166101dc6e4beeb68b485d5d2da35e2e",
+  "post_docs_unit": {
+    "corrected_status": "PASS",
+    "count": 243,
+    "elapsed_s": 5.947,
+    "failed_attempt": "Missing CC/TMP/TEMP, 226 enumerated tests,9failures,2class setup errors; no test changes",
+    "receipts": [
+      {
+        "status": "ENVIRONMENT_FAILURE_RETAINED",
+        "source": "v5/build/pcb_s2_20261011/post_docs_unit.log",
+        "raw_sha256": "ec52b9bcac6353596a89165715ec5caccd121969701fa75b097e6599a8074317",
+        "published": "published_baseline/post_docs_unit_environment_failure.txt",
+        "published_sha256": "632e3eff993363d7ae9721a5052702d6b40b583745983487e2a7b523d17021ab",
+        "personal_path_redaction": true
+      },
+      {
+        "status": "PASS_243",
+        "source": "v5/build/pcb_s2_20261011/post_docs_unit_corrected.log",
+        "raw_sha256": "9ea1b94469457f2809cbdaf343fb7c622cf130021a85919a14505f4bc7f62945",
+        "published": "published_baseline/post_docs_unit_corrected.txt",
+        "published_sha256": "4e79be5c107d4a533739ee9bae44fd09dd8e704e89c6acce6e2119fe9f4b84f8",
+        "personal_path_redaction": true
+      }
+    ],
+    "recorded_at": "2026-10-11T04:21:41.534991+00:00"
+  }
+}

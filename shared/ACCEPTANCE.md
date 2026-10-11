@@ -16,3 +16,8 @@ externalSTA/nativeCAD/ERC/independentreview/particle remain NOT_VERIFIED or HOLD
 346BRAM asynchronous warnings still OPEN; no waiver. Previous nativeBSPsafe-status
 ELF exists but does not implement full motion/sensor runtime. No current UART/boardwrite.
 Final evidence v5/evidence/hardware_design_20261011/FINAL_VERIFICATION.json.
+
+
+## PCB-S2 review boundary
+
+Review artifact/calculation/baseline checks PASS in their stated scope. Circuit decision REVISE; S2-C BLOCKED; native schematic NOT_CREATED/ERC NOT_RUN/hardware NOT_VERIFIED. Neither1203arithmetic nor offline digitalPASS releases BOM/manufacturing. No acceptance threshold,35dB/test/golden/protocol was changed. External review remains required.

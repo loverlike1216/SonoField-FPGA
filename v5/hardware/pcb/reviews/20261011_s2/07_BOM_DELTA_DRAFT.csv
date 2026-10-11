@@ -1,0 +1,103 @@
+﻿id,old_spec,new_spec,old_upper,old_lower,old_central,old_spares_column,old_external,new_upper,new_lower,new_central,new_external,action,reason,status
+B-001,NU40C10T-2_ORDER_CODE_PENDING_VENDOR,NU40C10T-2_ORDER_CODE_PENDING_VENDOR,64,64,0,0,0,64,64,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-002,NU40C10R-2_CANDIDATE_EXACT_RX_MPN_HOLD,NU40C10R-2_CANDIDATE_EXACT_RX_MPN_HOLD,4,4,0,0,0,4,4,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-003,TC4427AEOA713,TC4427AEOA713,32,32,0,0,0,32,32,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-004,SN74LVC595APWR,SN74LVC595APWR,16,16,0,0,0,16,16,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-005,SN74AXC8T245PWR,SN74AXC8T245PWR,4,4,2,0,0,4,4,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-006,SN74LVC244APWR,SN74LVC244APWR,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-007,SN74LVC1G32DBVR,SN74LVC1G32DBVR,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-008,TLV803 / TPS3839 类（需定料）,0 INSTALLED; see S2-001,1,1,0,0,0,0,0,0,0,DELETE,"Merged into S2-001, provenance retained, safety coverage incomplete",PURCHASE_HOLD
+B-009,TPS3430 类（需定料）,0 INSTALLED; see S2-001,1,1,0,0,0,0,0,0,0,DELETE,"Merged into S2-001, provenance retained, safety coverage incomplete",PURCHASE_HOLD
+B-010,TMUX1574PWR,TMUX1574PWR,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-011,OPA4192IPWR,OPA4192IPWR,2,2,0,0,0,2,2,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-012,REF5025AIDR,REF5025AIDR,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-013,BAT54S,BAT54S,4,4,0,0,0,4,4,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-014,AD7606C-16BSTZ-RL,AD7606C-16BSTZ-RL,0,0,1,0,0,0,0,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-015,47Ω+1nF C0G 组合,47Ω+1nF C0G 组合,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-016,AD7606C16_REFERENCE_DECOUPLING_ALLOCATION,AD7606C16_REFERENCE_DECOUPLING_ALLOCATION,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-017,SHT45-AD1B-R2,SHT45-AD1B-R2,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-018,XT30PW-M30.G.Y,XT30PW-M30.G.Y,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-019,XT30PW-M30.G.Y,XT30PW-M30.G.Y,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-020,TPS259470LRPWR,TPS259470LRPWR,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-021,INA226AIDGSR,INA226AIDGSR,1,1,1,0,0,1,1,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-022,20mΩ 2512 1% 2W,CONDITIONAL; see calculation register,1,1,1,0,0,1,1,1,0,CHANGE,20mOhm at5A gives100mV > INA22681.92mV; coordinate each rail range,PURCHASE_HOLD
+B-023,SMBJ20A 类,SMBJ20A 类,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-024,2A 慢断候选，具体值TBD,2A 慢断候选，具体值TBD,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-025,E-STOP接口 + NC触点/继电开关待定,E-STOP接口 + NC触点/继电开关待定,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-026,开漏/拉升/隔离网络 TBD,开漏/拉升/隔离网络 TBD,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-027,TPS54202DDCR,TPS54202DDCR,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-028,TPS54202DDCR,TPS54202DDCR,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-029,ADP7118ACPZN5.0-R7,ADP7118ACPZN5.0-R7,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-030,6.8µH ≥5A 候选,CONDITIONAL; see calculation register,2,2,0,0,0,2,2,0,0,CHANGE,6.8uH cannot be universal; see buck corners; quantity4 retained only as placeholder,PURCHASE_HOLD
+B-031,BLM21PG221SN1D,BLM21PG221SN1D,1,1,1,0,0,1,1,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-032,TMP117AIDRVR,TMP117AIDRVR,1,1,1,0,0,1,1,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-033,2×20 2.54mm 对应插座/转接线（按实板决定）,2×20 2.54mm 对应插座/转接线（按实板决定）,0,0,2,0,0,0,0,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-034,2×25 IDC防呆（候选）,2×25 IDC防呆（候选）,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-035,2×25 IDC防呆（候选）,2×25 IDC防呆（候选）,0,0,2,0,0,0,0,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-036,不带变压器的被动8P8C/屏蔽连接器,不带变压器的被动8P8C/屏蔽连接器,1,1,2,0,0,1,1,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-037,JST XH 4P,JST XH 4P,0,0,1,0,0,0,0,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-038,JST XH 4P,JST XH 4P,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-039,DC5P5x2P5_CENTER_POSITIVE_LEAD_TBD,DC5P5x2P5_CENTER_POSITIVE_LEAD_TBD,0,0,0,0,2,0,0,0,2,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-040,XT30 2P线束,XT30 2P线束,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-041,50芯IDC定长≤20cm仅初选,50芯IDC定长≤20cm仅初选,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-042,屏蔽4对模拟线（独立专用）,屏蔽4对模拟线（独立专用）,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-043,J10/J11对应双40针连接（实板决定）,J10/J11对应双40针连接（实板决定）,0,0,0,0,2,0,0,0,2,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-044,12V 5A supply candidate (each),12V 5A supply candidate (each),0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-045,ALINX规定DC 5V配件,ALINX规定DC 5V配件,0,0,0,0,1,0,0,0,1,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-046,100nF 50V X7R,100nF 50V X7R,71,71,21,0,0,71,71,21,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-047,1µF 25V X7R,1µF 25V X7R,33,33,2,0,0,33,33,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-048,22µF 25V X7R,22µF 25V X7R,12,12,4,0,0,12,12,4,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-049,10µF 25V X7R,10µF 25V X7R,3,3,5,0,0,3,3,5,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-050,2.2µF 25V X7R,2.2µF 25V X7R,2,2,2,0,0,2,2,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-051,470µF 35V,470µF 35V,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-052,10nF 50V C0G,10nF 50V C0G,4,4,0,0,0,4,4,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-053,1nF 50V C0G,1nF 50V C0G,4,4,8,0,0,4,4,8,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-054,100kΩ 1%,100kΩ 1%,89,89,2,0,0,89,89,2,0,DUPLICATE_SUSPECT,No actual nets/refdes; B054 may overlap H020; B061 not proven to be TX damping,PURCHASE_HOLD
+B-055,10kΩ 1%,10kΩ 1%,3,3,0,0,0,3,3,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-056,4.7kΩ 1%,4.7kΩ 1%,2,2,2,0,0,2,2,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-057,1kΩ 1%,1kΩ 1%,8,8,0,0,0,8,8,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-058,47Ω 1%,47Ω 1%,4,4,8,0,0,4,4,8,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-059,33Ω 1%,33Ω 1%,8,8,0,0,0,8,8,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-060,10Ω 1%,10Ω 1%,2,2,2,0,0,2,2,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-061,0Ω 0603,0Ω 0603,68,68,0,0,0,68,68,0,0,DUPLICATE_SUSPECT,No actual nets/refdes; B054 may overlap H020; B061 not proven to be TX damping,PURCHASE_HOLD
+B-062,1.65kΩ 1%,CONDITIONAL; see calculation register,1,1,1,0,0,1,1,1,0,CHANGE,Array1.65k invalid for TPS26631; central chip unknown; final Rlim BLOCKED,PURCHASE_HOLD
+B-063,1.37MΩ 1%,1.37MΩ 1%,1,1,1,0,0,1,1,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-064,590kΩ 1%,590kΩ 1%,1,1,1,0,0,1,1,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-065,100kΩ 0.1%,100kΩ 0.1%,4,4,0,0,0,4,4,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-066,10kΩ 0.1%,10kΩ 0.1%,12,12,0,0,0,12,12,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-067,1.2kΩ 0603 DNP,1.2kΩ 0603 DNP,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-068,39kΩ 0.1% DNP,39kΩ 0.1% DNP,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-069,200x180mm_COMMON_ARRAY_EXTENSION_CANDIDATE,200x180mm_COMMON_ARRAY_EXTENSION_CANDIDATE,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-070,100×80mm 4L候选,100×80mm 4L候选,0,0,1,0,0,0,0,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-071,20×20mm 2L候选,20×20mm 2L候选,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+B-072,M3非磁性螺钉/尼龙柱/滑轨,M3非磁性螺钉/尼龙柱/滑轨,0,0,0,0,1,0,0,0,1,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+PC-001,TCA4307DGKR,TCA4307DGKR,0,0,2,0,0,0,0,2,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+PC-002,PART_SELECTION_HOLD,PART_SELECTION_HOLD,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+PC-003,PART_SELECTION_HOLD,PART_SELECTION_HOLD,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+PC-004,PART_SELECTION_HOLD,PART_SELECTION_HOLD,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+NS-001,PART_SELECTION_HOLD,PART_SELECTION_HOLD,1,1,1,0,0,1,1,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+NS-002,PART_SELECTION_HOLD,PART_SELECTION_HOLD,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+NS-003,PART_SELECTION_HOLD,PART_SELECTION_HOLD,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+NS-004,PART_SELECTION_HOLD,PART_SELECTION_HOLD,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-001,STUSB4500LQTR,STUSB4500LQTR,0,0,1,0,0,0,0,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-002,TYPE_C_RECEPTACLE_MPN_TBD,TYPE_C_RECEPTACLE_MPN_TBD,0,0,1,0,0,0,0,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-003,PJ-002BH,PJ-002BH,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-004,TPS26631RGER,TPS26631RGER,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-005,TCA9548APWR,TCA9548APWR,0,0,1,0,0,0,0,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-006,INA226AIDGSR,INA226AIDGSR,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-007,TPS3431SDRBR,TPS3431SDRBR,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-008,TPS54202DDCR,TPS54202DDCR,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-009,BACK_TO_BACK_FET_AND_DRIVER_TBD,BACK_TO_BACK_FET_AND_DRIVER_TBD,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-010,TVS_FUSE_SET_TBD,TVS_FUSE_SET_TBD,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-011,HOTSPOT_COMPARATOR_LATCH_REARM_TBD,HOTSPOT_COMPARATOR_LATCH_REARM_TBD,1,1,0,0,0,1,1,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-012,CENTRAL_USB_EFUSE_BUCKBOOST_TBD,CENTRAL_USB_EFUSE_BUCKBOOST_TBD,0,0,1,0,0,0,0,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-013,IOFF_BUFFER_SET_TBD,IOFF_BUFFER_SET_TBD,1,1,1,0,0,1,1,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-014,NC_ESTOP_MANUAL_REARM_TBD,NC_ESTOP_MANUAL_REARM_TBD,0,0,0,0,1,0,0,0,1,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-015,SHIELDED_RX_HARNESS_TBD,SHIELDED_RX_HARNESS_TBD,0,0,0,0,8,0,0,0,8,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-016,KEYED_SIGNAL_HARNESS_TBD,KEYED_SIGNAL_HARNESS_TBD,0,0,0,0,2,0,0,0,2,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-017,GST60A12-P1M,GST60A12-P1M,0,0,0,0,2,0,0,0,2,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-018,GST40A12-P1M,GST40A12-P1M,0,0,0,0,0,0,0,0,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-019,USB_C_5V_3A_SOURCE_TBD,USB_C_5V_3A_SOURCE_TBD,0,0,0,0,1,0,0,0,1,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+H-020,DRIVER_INPUT_PULLDOWN_TBD,CONDITIONAL; see calculation register,64,64,0,0,0,64,64,0,0,CHANGE,10k candidate from leakage budget; count128 retained; not finalized,PURCHASE_HOLD
+H-021,MUX_RESET_SUPERVISOR_TBD,MUX_RESET_SUPERVISOR_TBD,0,0,1,0,0,0,0,1,0,KEEP,Inherited placeholder; no electrical release,PURCHASE_HOLD
+S2-001,B008+B009 merged,TPS3851H33EDRBR,0,0,0,0,0,1,1,0,0,ADD,User approved2 total; not full protection replacement,PURCHASE_HOLD

@@ -45,3 +45,8 @@ CP006 and full report record all holds; no physicaloperation or automaticmainmer
 Audited3911historicalGitpathmoves preservingbody/blob/mode; currentv5/shared/openProblems remain. Exact Historical project root, explicitreadban, currentsearchallowlist andmetadata-onlyCI. Before171-test/four-run baselinePASS;afterindependentclonevalidationinprogress. Samev5;main/hardware/manufacturingpromotionrequiresseparateapproval.
 
 HistoricalcandidateafterverificationPASS:171tests/3696×4/newprePCBextra/three nativeOOC+reopens/history-absentnewvenv;seeCP008andcurrentcleanupFINAL_VERIFICATION. No hardware/mainpromotion.
+
+
+## 2026-10-11 — v5 PCB-S2 architecture review
+
+Independent approved worktree from Draft5; fixed-commit public hardware/primary-source review, reproducible power/timing/AFE calculations, independent101type workbook audit, explicit TPS3851x2 candidate and full860passive inventory. Fresh243/fullnextstage digitalPASS. ElectricalREVISE/S2-CBLOCKED; no core/hardware/manufacturing/main changes. CP-20261011-002 and P-20261011-001 retain unresolved decisions.

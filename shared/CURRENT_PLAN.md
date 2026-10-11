@@ -16,3 +16,8 @@ See v5/docs/hardware/MISSING_FACTS_AND_NEXT_MEASUREMENTS.md and RISKS.md.
 Main remains unpromoted due engineering gaps; routine publication needs no new approval.
 
 Publication: DraftPR5 https://github.com/loverlike1216/SonoField-FPGA/pull/5; evidence commit 09201d34d15b21c4956f2d2377cc4daea33b1f71; push+PR CI success;417remote SHA256 checked;main unchanged. Receipt:shared/hardware_design/PUBLICATION_RECEIPT.json.
+
+
+## PCB-S2 candidate workstream (current on feat/v5-pcb-design)
+
+S2-A evidence/reconciliation DELIVERED. S2-B power/driver/safety proposal REVISE. S2-C fullRCL freeze BLOCKED. Fresh243/full digital gates PASS. Retain parent hardware stage above as provenance; no main promotion. Next: main-chat independent review of P-20261011-001; approve concrete safety/progress/regulation scope and supply electrical facts; then native circuit review, S2-C and future BOM candidate. See CP-20261011-002 and v5/hardware/pcb/PCB_PROJECT_STATE.json.

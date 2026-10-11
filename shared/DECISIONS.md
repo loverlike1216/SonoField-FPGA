@@ -109,3 +109,8 @@ remain unqualified. Manufacturing/procurement/unknown-image operations remain HO
 main promotion is not acceptable with unresolved P0 engineering gates. No duplicate
 request for routine publication permission. Source contracts, primary sources and
 independent audit paths: v5/docs/hardware and v5/evidence/hardware_design_20261011.
+
+
+## ADR-043 — Actual user PCB-S2 / TPS3851 combined supervisor direction
+
+2026-10-11, v5, source actual user reply and canonical S2 instruction. Worktree/branch/base authorized as recorded above. B008/B009 physical4->TPS3851H33EDRBR2 total, not2perboard. Native/electrical/safety acceptance remains HOLD. Existing window requirement is not withdrawn; new gaps P-20261011-001 OPEN, body SHA256 ff10749ee46342eae17ecc5eff632b9131055199be6eb2cfb0583c16d79ec77f. No external ChatGPT decision. Extra protection/heartbeat architecture is a proposal, not approved by this record.
