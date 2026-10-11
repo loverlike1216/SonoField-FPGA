@@ -1,5 +1,5 @@
 {
-  "scope": "Final staged candidate excluding this manifest and scan receipt; publication receipts later",
+  "scope": "Staged S3 content at f23e17b excluding manifest/scan receipt; later publication/state/interaction updates are outside this frozen content snapshot",
   "entries": [
     {
       "path": ".gitattributes",
@@ -556,5 +556,6 @@
       "sha256": "8853924b9fd30be6e04fb8d0afdd9ecf27d0a419911cf9b3440bd48aac9d0669",
       "bytes": 63665
     }
-  ]
+  ],
+  "content_commit": "f23e17bfa005d1d496dc99af2c05712acc89c390"
 }

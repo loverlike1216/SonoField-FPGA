@@ -24,3 +24,7 @@ Actual user approved the S3 engineering document and replied “按 S3 文件完
 Canonical artifacts: v5/hardware/pcb/reviews/20261011_s3. Tool evidence: v5/evidence/pcb_s3_20261011. Observable tool event hashes: codex/S-20261011-pcb-s3-001.tools.json.
 
 Candidate asset delivery ACCEPT WITH LIMITATIONS; PCB-S3 / whole platform REVISE. G1 native CAD/independent review, G2 power/fault/thermal, G3 AFE/protection/power-off isolation, G4 actual digital/constraints integration, G5 mechanical/SKU qualification remain. No model self-certification, manufacturing, procurement, board write or main merge.
+
+## Observed publication
+
+Content f23e17bfa005d1d496dc99af2c05712acc89c390 committed/pushed normally; PR6 title/body updated via clone-local --body-file. Both GitHub CI runs38119158220/38119159960 succeeded. Remote main ecd32e76e9b6c08806eae30a3c75a9c3be5e7570 unchanged; original HEAD8c27b58 / ?? BOM/ unchanged. PUBLICATION_RECEIPT.json records actual gh output and metadata. A follow-up receipt commit does not alter candidate circuitry.

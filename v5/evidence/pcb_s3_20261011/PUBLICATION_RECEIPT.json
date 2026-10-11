@@ -1,0 +1,266 @@
+{
+  "status": "REMOTE_CONTENT_AND_BOTH_CI_VERIFIED",
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "recorded_at": "2026-10-11T06:48:03.276674+00:00",
+  "content_commit": "f23e17bfa005d1d496dc99af2c05712acc89c390",
+  "branch": "feat/v5-pcb-design",
+  "pr": {
+    "baseRefName": "codex/v5-hardware-design-20261011",
+    "headRefName": "feat/v5-pcb-design",
+    "headRefOid": "f23e17bfa005d1d496dc99af2c05712acc89c390",
+    "isDraft": true,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-11T06:46:52Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38119159960/job/114410121424",
+        "name": "integrity",
+        "startedAt": "2026-10-11T06:46:41Z",
+        "status": "COMPLETED",
+        "workflowName": "v5 workspace integrity"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-11T06:46:49Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38119158220/job/114410116551",
+        "name": "integrity",
+        "startedAt": "2026-10-11T06:46:39Z",
+        "status": "COMPLETED",
+        "workflowName": "v5 workspace integrity"
+      }
+    ],
+    "title": "v5 PCB-S3: 三板器件候选、限流功率预算与审查交付（制造 HOLD）",
+    "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/6"
+  },
+  "ci": [
+    {
+      "conclusion": "success",
+      "headSha": "f23e17bfa005d1d496dc99af2c05712acc89c390",
+      "jobs": [
+        {
+          "completedAt": "2026-10-11T06:46:49Z",
+          "conclusion": "success",
+          "databaseId": 114410116551,
+          "name": "integrity",
+          "startedAt": "2026-10-11T06:46:39Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-10-11T06:46:41Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-10-11T06:46:40Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:44Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "startedAt": "2026-10-11T06:46:41Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:44Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 3,
+              "startedAt": "2026-10-11T06:46:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:45Z",
+              "conclusion": "success",
+              "name": "Current structure and inherited copies",
+              "number": 4,
+              "startedAt": "2026-10-11T06:46:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:45Z",
+              "conclusion": "success",
+              "name": "Hardware design models and independent contract audit (offline)",
+              "number": 5,
+              "startedAt": "2026-10-11T06:46:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:45Z",
+              "conclusion": "success",
+              "name": "Frozen Git metadata and current scope (no historical source read)",
+              "number": 6,
+              "startedAt": "2026-10-11T06:46:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:46Z",
+              "conclusion": "success",
+              "name": "PCB-S3 static candidate and power envelopes (not native ERC)",
+              "number": 7,
+              "startedAt": "2026-10-11T06:46:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:46Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 13,
+              "startedAt": "2026-10-11T06:46:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:46Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 14,
+              "startedAt": "2026-10-11T06:46:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:46Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 15,
+              "startedAt": "2026-10-11T06:46:46Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38119158220/job/114410116551"
+        }
+      ],
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38119158220"
+    },
+    {
+      "conclusion": "success",
+      "headSha": "f23e17bfa005d1d496dc99af2c05712acc89c390",
+      "jobs": [
+        {
+          "completedAt": "2026-10-11T06:46:52Z",
+          "conclusion": "success",
+          "databaseId": 114410121424,
+          "name": "integrity",
+          "startedAt": "2026-10-11T06:46:41Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-10-11T06:46:43Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-10-11T06:46:42Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:45Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "startedAt": "2026-10-11T06:46:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:45Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 3,
+              "startedAt": "2026-10-11T06:46:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:46Z",
+              "conclusion": "success",
+              "name": "Current structure and inherited copies",
+              "number": 4,
+              "startedAt": "2026-10-11T06:46:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:47Z",
+              "conclusion": "success",
+              "name": "Hardware design models and independent contract audit (offline)",
+              "number": 5,
+              "startedAt": "2026-10-11T06:46:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:47Z",
+              "conclusion": "success",
+              "name": "Frozen Git metadata and current scope (no historical source read)",
+              "number": 6,
+              "startedAt": "2026-10-11T06:46:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:48Z",
+              "conclusion": "success",
+              "name": "PCB-S3 static candidate and power envelopes (not native ERC)",
+              "number": 7,
+              "startedAt": "2026-10-11T06:46:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:48Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 13,
+              "startedAt": "2026-10-11T06:46:48Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:48Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 14,
+              "startedAt": "2026-10-11T06:46:48Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-10-11T06:46:48Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 15,
+              "startedAt": "2026-10-11T06:46:48Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38119159960/job/114410121424"
+        }
+      ],
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38119159960"
+    }
+  ],
+  "remote": {
+    "refs/heads/feat/v5-pcb-design": "f23e17bfa005d1d496dc99af2c05712acc89c390",
+    "refs/heads/main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570"
+  },
+  "followup_receipt_commit": "Resolve git log -1 --format=%H -- v5/evidence/pcb_s3_20261011/PUBLICATION_RECEIPT.json; not self-referenced",
+  "original_workspace": {
+    "head": "8c27b5841b5494c3761ab211881a3ea2be63e8c8",
+    "status": "?? BOM/",
+    "private_BOM_body_read": false,
+    "modified_by_this_stage": false
+  },
+  "frozen_archive": {
+    "tree": "c07fb9c582ac11e34a59feda6798ea29d2351d0c",
+    "body_read": false,
+    "comparison": "Git metadata only"
+  },
+  "result": "REVISE",
+  "native_schematic": "NOT_CREATED",
+  "native_erc": "NOT_RUN",
+  "independent_review": "PENDING",
+  "holds": [
+    "manufacturing",
+    "procurement",
+    "board writes",
+    "main merge"
+  ],
+  "boundary": "CI validates candidate/preservation/workbooks only; no board/electrical/native ERC acceptance"
+}
