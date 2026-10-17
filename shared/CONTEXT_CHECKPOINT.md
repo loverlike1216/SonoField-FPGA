@@ -39,3 +39,8 @@ ADC终版8MHz/400kSPS，其余过程速率全部superseded。数据手册和脚�
 ## Resume
 
 Read00,FINAL_REVIEW,OPEN_BLOCKERS,sourcehash and actualGitstate first. StopforindependentReview; noautoCAD/PCB/hardware/v6.
+
+
+## GitHub publication verification
+
+Implementation commit c4b798437f08339c54d15b80229779140298898b was pushed and remote-verified on the existing v5 candidate branch; PR5 remains Draft and main is unchanged. Actual GitHub CI FAIL is retained: check_migration.py rejects eight user-authorized current source adaptations against the previous reviewed hashes. This is the same documented source-freeze review boundary; the gate was not weakened or changed to PASS. See PUBLICATION_RECEIPT.json and logs/github_ci_c4b7984_pr.log. Stop for independent review; no automatic main promotion.

@@ -95,7 +95,7 @@
   "published_evidence_commit": "09201d34d15b21c4956f2d2377cc4daea33b1f71",
   "last_verified_remote_main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
   "online_ci": "PASS_PUSH_AND_PR_AT09201D3_UBUNTU40MODEL_CONTRACT_STRUCTURAL",
-  "publication_receipt": "shared/hardware_design/PUBLICATION_RECEIPT.json",
+  "publication_receipt": "v5/hardware/draw_ready_20261016/PUBLICATION_RECEIPT.json",
   "checkpoint_base_commit": "618b6f1ffe3dae9b98c59bf1c981349e48644662",
   "checkpoint_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
   "checkpoint_commit_scope": "Commit containing CP-20261010-002; actual source and publication commits separately recorded",
@@ -153,5 +153,7 @@
   "tx_clock_profile": "128MHzcore/256MHzmicro/SRCLK42.666667MHzFpipeline",
   "adc_profile": "AD7606C16;8DOUT;SCLK8MHz;400kSPS;320corecycles;CS4cyclehold",
   "chat_consultation_messages": 0,
-  "head_commit": null
+  "head_commit": null,
+  "implementation_commit": "c4b798437f08339c54d15b80229779140298898b",
+  "github_ci": "FAIL_AUTHORIZED_SOURCE_FREEZE_REVIEW_PENDING"
 }

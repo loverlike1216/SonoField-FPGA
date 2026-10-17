@@ -37,3 +37,8 @@ ADC终版8MHz/400kSPS，其余过程速率全部superseded。数据手册和脚�
 ## BOM中保留的两项HOLD
 
 85种MPN中静态选型状态83PASS/2HOLD，未悄悄全部改为PASS。7101MD9AV2QE的5A/28VDC与针序已核对，HOLD对应实际接点反弹/浪涌资格；输入已精简为1µF并由后级eFuse缓启动，按本轮受控12V源条件可绘图。NU40C10R-2按用户T/R合并原厂资料作为接收候选，2脚/电容/前端连接已定义，HOLD对应采购机械极性确认、实际灵敏度离散/增益与声学SNR资格；没有把这些实物未验证项冒充PASS。两项均非本轮已知针位冲突或额定计算FAIL，制板/采购/实物验收前仍须关闭。
+
+
+## GitHub publication verification
+
+Implementation commit c4b798437f08339c54d15b80229779140298898b was pushed and remote-verified on the existing v5 candidate branch; PR5 remains Draft and main is unchanged. Actual GitHub CI FAIL is retained: check_migration.py rejects eight user-authorized current source adaptations against the previous reviewed hashes. This is the same documented source-freeze review boundary; the gate was not weakened or changed to PASS. See PUBLICATION_RECEIPT.json and logs/github_ci_c4b7984_pr.log. Stop for independent review; no automatic main promotion.

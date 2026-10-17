@@ -123,6 +123,12 @@
       "check": "Procurement/footprintmapping/PCBorder",
       "status": "HOLD",
       "evidence": "Noorders/manufacturingauthorization"
+    },
+    {
+      "check": "Actual GitHub CI at implementation commit",
+      "status": "FAIL",
+      "evidence": "v5/hardware/draw_ready_20261016/PUBLICATION_RECEIPT.json",
+      "reason": "Prior reviewed source hashes reject 8 authorized adaptations; independent Review pending, no gate relaxation"
     }
   ],
   "known_limitations": [
@@ -158,5 +164,6 @@
   "status": "VALID_THEORY_CANDIDATE_REVIEW_PENDING",
   "draw_ready": true,
   "overall": "ACCEPT WITH LIMITATIONS",
-  "audit_root": "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady"
+  "audit_root": "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady",
+  "implementation_commit": "c4b798437f08339c54d15b80229779140298898b"
 }
