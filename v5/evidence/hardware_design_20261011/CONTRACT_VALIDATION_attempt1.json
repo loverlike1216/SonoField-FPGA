@@ -1,0 +1,80 @@
+{
+  "status": "FAIL",
+  "errors": [
+    "Manual/native function mismatch R14",
+    "Manual/native function mismatch U15",
+    "Manual/native function mismatch U14",
+    "Manual/native function mismatch U17",
+    "Manual/native function mismatch T16",
+    "Manual/native function mismatch V18",
+    "Manual/native function mismatch V17",
+    "Manual/native function mismatch V13",
+    "Manual/native function mismatch U13",
+    "Manual/native function mismatch A20",
+    "Manual/native function mismatch B19",
+    "Manual/native function mismatch B20",
+    "Manual/native function mismatch C20",
+    "Manual/native function mismatch F17",
+    "Manual/native function mismatch F20",
+    "Manual/native function mismatch F19",
+    "Manual/native function mismatch G20",
+    "Manual/native function mismatch G19",
+    "Manual/native function mismatch H18",
+    "Manual/native function mismatch J18",
+    "Manual/native function mismatch L20",
+    "Manual/native function mismatch L19",
+    "Manual/native function mismatch M20",
+    "Manual/native function mismatch M19",
+    "Manual/native function mismatch K18",
+    "Manual/native function mismatch K17",
+    "Manual/native function mismatch J19",
+    "Manual/native function mismatch K19",
+    "Manual/native function mismatch H20",
+    "Manual/native function mismatch J20",
+    "Manual/native function mismatch L17",
+    "Manual/native function mismatch L16",
+    "Manual/native function mismatch M18",
+    "Manual/native function mismatch M17",
+    "Manual/native function mismatch E19",
+    "Manual/native function mismatch E18",
+    "Manual/native function mismatch H17",
+    "Manual/native function mismatch H16",
+    "Manual/native function mismatch G15",
+    "Manual/native function mismatch J14",
+    "Manual/native function mismatch K14"
+  ],
+  "negative_cases": [
+    {
+      "case": "bank",
+      "rejected": true
+    },
+    {
+      "case": "duplicate",
+      "rejected": true
+    },
+    {
+      "case": "power",
+      "rejected": true
+    },
+    {
+      "case": "reset",
+      "rejected": true
+    }
+  ],
+  "native_package_pins": 68,
+  "contacts": 80,
+  "used_gpio": 63,
+  "spare_gpio": 5,
+  "installed_counts": {
+    "Upper": 551,
+    "Lower": 551,
+    "Central": 83,
+    "External": 20
+  },
+  "component_references": 1205,
+  "bom_sha256": "a55b38dab4ce6004ac542e2c5fc0a09a365616ebbe9b3ec2bdf603f7a1726b1c",
+  "source": "Native Vivado2025.2 package CSV vs independently parsed manual80; XLSX XML formula caches vs Python JSON reduction",
+  "physical_pin_continuity": "NOT_RUN",
+  "erc": "NOT_RUN",
+  "production": "HOLD"
+}

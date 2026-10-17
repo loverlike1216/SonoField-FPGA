@@ -1,0 +1,122 @@
+[
+  {
+    "simulator": "icarus",
+    "status": "PASS",
+    "commands": [
+      {
+        "argv": [
+          "C:/iverilog/bin/iverilog.exe",
+          "-g2012",
+          "-I",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\generated",
+          "-s",
+          "tb_draw_ready_system",
+          "-o",
+          "prod.vvp",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_core.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_top.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\board_clock_candidate.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\sono_array_interface.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\adc_serial.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\axi_native_bridge.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\burst_generator.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\channel_waveform.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\motion_queue.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\phase\\phase_bank.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_digital_system.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_motion_system.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_axi_system.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\ad7606c16_if.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\prepcb_supervisor.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\prepcb_pl.v",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\nextstage_pl.v",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer_pipeline_44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\tx_pipeline44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\service_freshness.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\draw_ready_pl.v",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\ad7606c16_model.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_draw_ready_system.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "C:/iverilog/bin/vvp.exe",
+          "prod.vvp"
+        ],
+        "returncode": 0
+      }
+    ],
+    "frames": 37,
+    "ack_sha256": "006412e57285f5d1b4fae1351b249fdb26c4eadd25ac2ba8904339af875bbb21"
+  },
+  {
+    "simulator": "xsim",
+    "status": "PASS",
+    "commands": [
+      {
+        "argv": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+          "--sv",
+          "-i",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\generated",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_core.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_top.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\board_clock_candidate.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\ultrasonic_timebase.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\sono_array_interface.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\ad7606b_if.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\adc_serial.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\axi_native_bridge.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\burst_generator.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\channel_waveform.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\motion_queue.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\phase\\phase_bank.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_digital_system.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_motion_system.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\sono_axi_system.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\acquisition\\ad7606c16_if.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\prepcb_supervisor.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\motion\\prepcb_frame_mailbox.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\prepcb_pl.v",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\nextstage_pl.v",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer_pipeline_44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\tx_pipeline44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\service_freshness.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\board\\draw_ready_pl.v",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\ad7606c16_model.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_draw_ready_system.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+          "tb_draw_ready_system",
+          "-s",
+          "production"
+        ],
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+          "production",
+          "--runall"
+        ],
+        "returncode": 0
+      }
+    ],
+    "frames": 37,
+    "ack_sha256": "006412e57285f5d1b4fae1351b249fdb26c4eadd25ac2ba8904339af875bbb21"
+  }
+]

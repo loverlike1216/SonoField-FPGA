@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_baseline.py", line 50, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_baseline.py", line 18, in main
+    'runtime':{'source_root':str(ROOT),'python_executable':sys.executable,'python_prefix':sys.prefix,'cwd':str(ROOT),'temp_root':env['TMP'],'matplotlib_config_root':env['MPLCONFIGDIR'],'tools':{k:env[k] for k in ('VIVADO_BIN','IVERILOG_BIN','CC')}}}
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_baseline.py", line 18, in <dictcomp>
+    'runtime':{'source_root':str(ROOT),'python_executable':sys.executable,'python_prefix':sys.prefix,'cwd':str(ROOT),'temp_root':env['TMP'],'matplotlib_config_root':env['MPLCONFIGDIR'],'tools':{k:env[k] for k in ('VIVADO_BIN','IVERILOG_BIN','CC')}}}
+KeyError: 'VIVADO_BIN'

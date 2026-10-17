@@ -1,0 +1,19 @@
+﻿check,status,evidence
+UniqueMPN/pins/net/quantity,PASS,results/INDEPENDENT_CONSISTENCY_FINAL.json
+OEM XLSX/actualRTL-XDC/nativeIO 80+128contacts,PASS,09_RTL_XDC_PINMAP_CROSSCHECK.csv
+TX90 joint SI corners + worstpulse numerical convergence,PASS,results/SELECTED_FINAL_SI_INDEPENDENT.json;CONVERGENCE_FINAL.json
+ActualPSPL synthesis/place/route setup+hold+DRC,PASS,results/native21/
+128TX256phases38500/40000/41500Hz and fresh/defaultoff,PASS,results/final_digital_qualified_final/summary.json
+8DOUT400kSPS2048signedframes/read/ACK two tools,PASS,results/capture_adc_final/summary.json
+ActualGPIO/AXI/mailbox/ADC44nsproduction replay,PASS,results/production_profile_adc_final_fixed/summary.json
+Legacyindependent scheduler/queue/array golden,PASS,v5/evidence/final_theory_20261016/independent_qualified_final/summary.json
+Python247unit,PASS,logs/unit_sealed_final247.log
+3696frames x3Icarus+1XSim functional motion/goldens,PASS,v5/evidence/final_theory_20261016/functional_final128/motion/SUMMARY.json
+Originalfrozen_parent sourcehash gate,FAIL,OriginalFAILretained; explicitlyauthorizedRTLchanges; independentreviewofauthorizeddelta pending
+Power/BVD/thermal/fault/Cfeature bounded checks,PASS,results/ELECTRICAL_FINAL_CHECKS.json
+FullcompliantdynamicIBIS/realSSO/PCBPDN,HOLD,Notclaimed; datasheet/staticIVandboundedgeometry fallback used
+NativeEasyEDA/ERC,NOT_CHECKED,Schematic/PCBNOT_CREATED
+Physicalpower/acoustic/ADC/thermal/runtime,NOT_CHECKED,OnlyJTAGreadonlyID; nohardwarewrites
+FulltargetPSruntime/BSP deployment,HOLD,Noimageprogrammed; existing safe-status image is not production runtime
+ExternalChatGPTindependentreview,HOLD,Reader/senderunavailable;0messages/decisions; candidatewaitsreview
+Procurement/footprintmapping/PCBorder,HOLD,Noorders/manufacturingauthorization

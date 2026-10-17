@@ -2,18 +2,20 @@
 // Register-bus integration, deliberately independent of PS, pins and a board PLL.
 module sono_digital_system #(
  parameter integer CLOCK_HZ=132000000, POWER_WAIT_CYCLES=2*CLOCK_HZ+1,
- parameter integer ADC_C16=0
-)(input wire clk,rst_n,hardware_enable,
+ parameter integer ADC_C16=0,ADC_DOUT_LANES=4,ADC_SCLK_DIVIDER=4,TX_PIPELINE44=0
+)(input wire clk,tx_clk,rst_n,hardware_enable,
  input wire bus_valid,bus_write,input wire[7:0] bus_address,input wire[31:0] bus_wdata,
  output reg[31:0] bus_rdata,output wire bus_ready,output reg bus_error,
- input wire adc_busy,input wire[3:0] adc_dout,
+ input wire adc_busy,input wire[ADC_DOUT_LANES-1:0] adc_dout,
  output wire adc_reset,adc_convst,adc_cs_n,adc_sclk,adc_sdi,
  output wire[1:0] rx_blank,output wire[31:0] serial_data,
  output wire shift_clock,latch_clock,output wire output_disable,
  output wire[127:0] commanded_waveform,output wire irq,
  output wire motion_map_ack);
  `include "registers.svh"
- initial if(CLOCK_HZ!=SYS_CLOCK_HZ)$fatal(1,"Regenerate and validate ADC timing profile for a different system clock");
+ localparam integer DRAW_PROFILE=CLOCK_HZ==128000000&&ADC_C16&&ADC_DOUT_LANES==8&&ADC_SCLK_DIVIDER==16&&TX_PIPELINE44;
+ localparam integer ADC_PERIOD_MIN=DRAW_PROFILE?320:SYS_ADC_PERIOD;
+ initial if(CLOCK_HZ!=SYS_CLOCK_HZ&&!DRAW_PROFILE)$fatal(1,"Unqualified system/ADC timing profile");
  reg[31:0] cfg[0:27];reg[2:0] mode;reg software_enable;
  reg start,abort,ack,map_write,map_commit;reg[63:0] time_now;
  (* ASYNC_REG="TRUE" *) reg[1:0] reset_sync,enable_sync;
@@ -43,7 +45,7 @@ module sono_digital_system #(
  // The default preserves the original executable B reference; the current
  // nextstage_pl production candidate explicitly selects C-16.
  generate if(ADC_C16)begin:c16
- ad7606c16_if #(.CLOCK_HZ(CLOCK_HZ),.POWER_WAIT_CYCLES(POWER_WAIT_CYCLES)) adc(
+ ad7606c16_if #(.DOUT_LANES(ADC_DOUT_LANES),.SCLK_DIVIDER(ADC_SCLK_DIVIDER),.CLOCK_HZ(CLOCK_HZ),.POWER_WAIT_CYCLES(POWER_WAIT_CYCLES)) adc(
   .clk(clk),.rst_n(core_rst),.sample_request(sample_request&&!cal_abort),.time_now(time_now),
   .busy_async(adc_busy),.dout(adc_dout),.adc_reset(adc_reset),.convst(adc_convst),
   .cs_n(adc_cs_n),.sclk(adc_sclk),.sdi(adc_sdi),.ready(adc_ready),.error(adc_error),
@@ -55,7 +57,7 @@ module sono_digital_system #(
   .cs_n(adc_cs_n),.sclk(adc_sclk),.sdi(adc_sdi),.ready(adc_ready),.error(adc_error),
   .frame_valid(frame_valid),.frame(frame),.frame_timestamp(frame_timestamp),.idle(adc_idle));
  end endgenerate
- calibration_scheduler #(.DEPTH(SYS_BUFFER_DEPTH)) scheduler(
+ calibration_scheduler #(.DEPTH(SYS_BUFFER_DEPTH),.BRAM_PIPELINE(TX_PIPELINE44)) scheduler(
   .clk(clk),.rst_n(core_rst),.start(start&&calibrating&&!kill),.abort(cal_abort),.ack(ack),
   .adc_ready(adc_ready),.adc_idle(adc_idle),.adc_error(adc_error),.frame_valid(frame_valid),
   .frame(frame),.frame_timestamp(frame_timestamp),.time_now(time_now),
@@ -91,27 +93,55 @@ module sono_digital_system #(
  wire write_ready,pending,commit_ack,map_valid;
  assign motion_map_ack=commit_ack;
  wire[1023:0] effective;wire[127:0] mask,normal_wave;
+ wire bank_write,bank_commit;wire[6:0]bank_channel;wire[16:0]bank_word;
+ generate if(TX_PIPELINE44)begin:map_pipeline
+  (* MAX_FANOUT=32 *)reg[16:0]word_q;reg[6:0]channel_q;reg write_q,commit_q;
+  always@(posedge clk)begin
+   if(!core_rst)begin word_q<=0;channel_q<=0;write_q<=0;commit_q<=0;end
+   else begin
+    write_q<=map_write;commit_q<=map_commit;
+    if(map_write)begin word_q<=cfg[REG_MAP_DATA/4][16:0];channel_q<=cfg[REG_MAP_CHANNEL/4][6:0];end
+   end
+  end
+  assign bank_write=write_q;assign bank_commit=commit_q;assign bank_channel=channel_q;assign bank_word=word_q;
+ end else begin:map_direct
+  assign bank_write=map_write;assign bank_commit=map_commit;assign bank_channel=cfg[REG_MAP_CHANNEL/4][6:0];assign bank_word=cfg[REG_MAP_DATA/4][16:0];
+ end endgenerate
  phase_bank bank(.clk(clk),.rst_n(core_rst),.period_boundary(boundary),
-  .write_valid(map_write),.channel_enable(cfg[REG_MAP_DATA/4][16]),
-  .write_channel(cfg[REG_MAP_CHANNEL/4][6:0]),.requested_phase(cfg[REG_MAP_DATA/4][7:0]),
-  .calibration_phase(cfg[REG_MAP_DATA/4][15:8]),.commit(map_commit),.write_ready(write_ready),
+  .write_valid(bank_write),.channel_enable(bank_word[16]),
+  .write_channel(bank_channel),.requested_phase(bank_word[7:0]),
+  .calibration_phase(bank_word[15:8]),.commit(bank_commit),.write_ready(write_ready),
   .pending(pending),.commit_ack(commit_ack),.command_error(map_error),.active_valid(map_valid),
   .effective_phase(effective),.active_mask(mask));
  channel_waveform wave(.master_phase(master_phase),.effective_phase(effective),.active_mask(mask),.waveform(normal_wave));
  assign commanded_waveform=kill?128'b0:(normal?(map_valid?normal_wave:128'b0):
                            (calibrating&&burst_wave?(128'b1<<selected_tx):128'b0));
  wire frame_done,serial_busy;
+ generate if(TX_PIPELINE44)begin:tx44
+ tx_pipeline44 serial(.clk(clk),.tx_clk(tx_clk),.rst_n(core_rst),.start(tick),.waveform(commanded_waveform),
+  .serial_data(serial_data),.shift_clock(shift_clock),.latch_clock(latch_clock),.busy(serial_busy),.frame_done(frame_done),.overrun(serializer_fault));
+ end else begin:tx66
  serializer serial(.clk(clk),.rst_n(core_rst),.start(tick),.waveform(commanded_waveform),
   .serial_data(serial_data),.shift_clock(shift_clock),.latch_clock(latch_clock),
   .busy(serial_busy),.frame_done(frame_done),.overrun(serializer_fault));
+ end endgenerate
  reg frame_armed,published;reg[63:0] tx_enable_timestamp;
+ //F completion returns after the following phase capture. Preserve the
+ //qualification of each complete word instead of using the newer frame tag.
+ reg[1:0]tx_arm_fifo;reg tx_arm_wr,tx_arm_rd;
+ always@(posedge clk or negedge core_rst)
+  if(!core_rst)begin tx_arm_fifo<=0;tx_arm_wr<=0;tx_arm_rd<=0;end
+  else if(TX_PIPELINE44)begin
+   if(tick)begin tx_arm_fifo[tx_arm_wr]<=!kill&&((normal&&map_valid)||(calibrating&&burst_active));tx_arm_wr<=!tx_arm_wr;end
+   if(frame_done)tx_arm_rd<=!tx_arm_rd;
+  end
  always @(posedge clk or negedge core_rst)
   if(!core_rst)begin frame_armed<=0;published<=0;tx_enable_timestamp<=0;end
   else begin
    if(tick)frame_armed<=!kill && ((normal&&map_valid)||(calibrating&&burst_active));
    if(kill)begin published<=0;frame_armed<=0;end else if(frame_done)begin
-    published<=frame_armed;
-    if(frame_armed&&!published&&calibrating)tx_enable_timestamp<=time_now;
+    published<=TX_PIPELINE44?tx_arm_fifo[tx_arm_rd]:frame_armed;
+    if((TX_PIPELINE44?tx_arm_fifo[tx_arm_rd]:frame_armed)&&!published&&calibrating)tx_enable_timestamp<=time_now;
    end
   end
  // External hardware kill bypasses synchronizers for immediate disable; release is synchronous.
@@ -119,15 +149,16 @@ module sono_digital_system #(
  assign irq=capture_ready||scan_done||fault;
  assign bus_ready=bus_valid;
  integer i;
- always @(posedge clk or negedge core_rst)begin
+ //Config includes BRAM read-address control; reset it synchronously.
+ always @(posedge clk)begin
   if(!core_rst)begin
    mode<=MODE_SAFE_DISABLED;software_enable<=0;start<=0;abort<=0;ack<=0;
    map_write<=0;map_commit<=0;bus_error<=0;time_now<=0;
    for(i=0;i<28;i=i+1)cfg[i]<=0;
    cfg[REG_FREQUENCY/4]<=SYS_CARRIER_HZ;cfg[REG_BURST_CYCLES/4]<=SYS_BURST_CYCLES;
-   cfg[REG_FIRST_TX/4]<=64;cfg[REG_SCAN_COUNT/4]<=128;cfg[REG_SAMPLE_PERIOD/4]<=SYS_ADC_PERIOD;
+    cfg[REG_FIRST_TX/4]<=64;cfg[REG_SCAN_COUNT/4]<=128;cfg[REG_SAMPLE_PERIOD/4]<=ADC_PERIOD_MIN;
    cfg[REG_PRE_SAMPLES/4]<=SYS_PRE_SAMPLES;cfg[REG_MAIN_SAMPLES/4]<=SYS_MAIN_SAMPLES;cfg[REG_TAIL_SAMPLES/4]<=SYS_TAIL_SAMPLES;
-   cfg[REG_SETTLE_CYCLES/4]<=SYS_SETTLE_CYCLES;cfg[REG_GUARD_CYCLES/4]<=SYS_GUARD_CYCLES;
+    cfg[REG_SETTLE_CYCLES/4]<=CLOCK_HZ/10000;cfg[REG_GUARD_CYCLES/4]<=CLOCK_HZ/10000;
   end else begin
    time_now<=time_now+1;start<=0;abort<=0;ack<=0;map_write<=0;map_commit<=0;
    if(fault)begin software_enable<=0;mode<=MODE_SAFE_DISABLED;end
@@ -146,7 +177,7 @@ module sono_digital_system #(
      REG_FREQUENCY:if(mode==0&&bus_wdata>=38500&&bus_wdata<=41500)cfg[REG_FREQUENCY/4]<=bus_wdata;else bus_error<=1;
      REG_FIRST_TX:if(mode==0&&bus_wdata<128)cfg[REG_FIRST_TX/4]<=bus_wdata;else bus_error<=1;
      REG_SCAN_COUNT:if(mode==0&&bus_wdata>0&&bus_wdata<=128)cfg[REG_SCAN_COUNT/4]<=bus_wdata;else bus_error<=1;
-     REG_SAMPLE_PERIOD:if(mode==0&&bus_wdata>=165&&bus_wdata<=132000)cfg[REG_SAMPLE_PERIOD/4]<=bus_wdata;else bus_error<=1;
+      REG_SAMPLE_PERIOD:if(mode==0&&bus_wdata>=ADC_PERIOD_MIN&&bus_wdata<=CLOCK_HZ/1000)cfg[REG_SAMPLE_PERIOD/4]<=bus_wdata;else bus_error<=1;
      REG_START_PHASE:if(mode==0&&bus_wdata<256)cfg[REG_START_PHASE/4]<=bus_wdata;else bus_error<=1;
      REG_BURST_CYCLES:if(mode==0&&bus_wdata>0&&bus_wdata<=SYS_BUFFER_DEPTH)cfg[REG_BURST_CYCLES/4]<=bus_wdata;else bus_error<=1;
      REG_PRE_SAMPLES,REG_MAIN_SAMPLES,REG_TAIL_SAMPLES:

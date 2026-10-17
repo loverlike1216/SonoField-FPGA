@@ -2,7 +2,7 @@
 // PS execution boundary: complete maps enter a bounded ring. A PL clock owns cadence.
 // Single bus master while running; integration/arbitration into PS is not deployed.
 module motion_queue #(
- parameter integer DEPTH=4, INTERVAL_CYCLES=2640000, ACK_TIMEOUT_CYCLES=6600
+ parameter integer DEPTH=4, INTERVAL_CYCLES=2640000, ACK_TIMEOUT_CYCLES=6600, PIPELINED_VALIDATION=0
 )(input wire clk,rst_n,arm,stop,
  input wire frame_valid,input wire [2175:0] frame_data,
  input wire [31:0] frame_sequence,input wire frame_last,
@@ -53,7 +53,8 @@ module motion_queue #(
  wire [16:0] selected_word=selected_bank[channel[6:3]];
  wire fault=underflow||overflow||invalid_frame||ack_timeout||bus_error;
  wire pop=running&&timer==0&&state==0&&occupancy!=0;
- assign frame_ready=rst_n&&!fault&&!stop&&!stopped&&!sealed&&(occupancy<DEPTH)&&!pop;
+ (* MAX_FANOUT=32 *) reg validation_done,validation_ok;
+ assign frame_ready=rst_n&&!fault&&!stop&&!stopped&&!sealed&&(occupancy<DEPTH)&&!pop&&(!PIPELINED_VALIDATION||validation_done);
  assign disable_request=!rst_n||stop||stopped||fault;
  // No acceptance on the same cycle as pop: avoids ambiguous FIFO occupancy updates.
  wire push=frame_valid&&frame_ready&&!pop;
@@ -65,6 +66,15 @@ module motion_queue #(
  end
  initial begin
   if(DEPTH<2||INTERVAL_CYCLES<800||ACK_TIMEOUT_CYCLES<1)$fatal(1,"Invalid motion queue parameters");
+ end
+ //Ready/valid source holds payload until accepted. Register the128-way OR
+ //and sequence comparison before they fan out to the wide FIFO write enable.
+ always@(posedge clk or negedge rst_n)begin
+  if(!rst_n)begin validation_done<=0;validation_ok<=0;end
+  else if(!frame_valid||push||stop||fault)validation_done<=0;
+  else if(!validation_done)begin
+   validation_done<=1;validation_ok<=(frame_sequence==next_sequence)&&enabled_any;
+  end
  end
  always @(posedge clk or negedge rst_n) begin
   if(!rst_n)begin
@@ -82,7 +92,7 @@ module motion_queue #(
     if(frame_valid&&(occupancy>=DEPTH))overflow<=1;
     if(frame_valid&&sealed)invalid_frame<=1;
     if(push)begin
-     if(frame_sequence!=next_sequence||!enabled_any)invalid_frame<=1;
+     if(PIPELINED_VALIDATION?!validation_ok:(frame_sequence!=next_sequence||!enabled_any))invalid_frame<=1;
      else begin
       queue[wr]<=frame_data;seq[wr]<=frame_sequence;last[wr]<=frame_last;
       wr<=(wr==DEPTH-1)?0:wr+1'b1;occupancy<=occupancy+1;next_sequence<=next_sequence+1;

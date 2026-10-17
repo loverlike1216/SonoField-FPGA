@@ -1,0 +1,77 @@
+The system cannot find the path specified.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Oct 16 12:40:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source X:/scripts/inspect_native.tcl
+# set r [file normalize [file join [file dirname [info script]] ..]]
+# open_checkpoint [file join $r results NATIVE_ROUTED.dcp]
+Command: open_checkpoint X:/results/NATIVE_ROUTED.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 326.250 ; gain = 3.816
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.271 . Memory (MB): peak = 822.766 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1322 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 958.113 ; gain = 5.934
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1587.871 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1587.871 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1587.871 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.656 . Memory (MB): peak = 1594.844 ; gain = 6.973
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1594.844 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.236 . Memory (MB): peak = 1613.930 ; gain = 19.086
+Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.964 . Memory (MB): peak = 1613.930 ; gain = 26.059
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1613.930 ; gain = 28.051
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1636.562 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1642.199 ; gain = 1329.188
+# set f [open [file join $r results NATIVE_PAD_TIMING.csv] w]
+# puts $f "port,max_ns,min_ns,source"
+# foreach p [get_ports {serial_data_0[*] shift_clock_0 latch_clock_0}] {
+#  set mx [get_timing_paths -to $p -delay_type max -max_paths 1]
+#  set mn [get_timing_paths -to $p -delay_type min -max_paths 1]
+#  puts $f "$p,[get_property DATAPATH_DELAY $mx],[get_property DATAPATH_DELAY $mn],[get_property STARTPOINT_PIN $mx]"
+# }
+# close $f
+# set_param messaging.defaultLimit 1000
+# report_drc -ruledecks default -file [file join $r results NATIVE_DRC_ALL.rpt]
+Command: report_drc -ruledecks default -file X:/results/NATIVE_DRC_ALL.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2025.2/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file X:/results/NATIVE_DRC_ALL.rpt.
+report_drc completed successfully
+# set f [open [file join $r results LATCH_PAD_TRACE.txt] w]
+# set pin [get_pins -hier -filter {NAME =~ *tx44*serial*tx*latch_clock_reg/Q}]
+# puts $f "pin $pin"
+# puts $f "net [get_nets -of_objects $pin]"
+# puts $f "endpoints [all_fanout -from $pin -endpoints_only]"
+WARNING: [Vivado 12-829] No fanin objects found for 'all_fanin -to [get_ports latch_clock_0] -startpoints_only'.
+# puts $f "portSources [all_fanin -to [get_ports latch_clock_0] -startpoints_only]"
+# close $f
+# report_timing -to [get_ports latch_clock_0] -max_paths 1 -file [file join $r results LATCH_PAD_TIMING.rpt]
+INFO: [Timing 38-78] ReportTimingParams: -to_pins  -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 16 12:41:25 2026...

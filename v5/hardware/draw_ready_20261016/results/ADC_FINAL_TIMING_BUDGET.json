@@ -1,0 +1,22 @@
+{
+  "sclk_hz": 8000000,
+  "sample_hz": 400000,
+  "half_period_ns": 62.5,
+  "buffer_tpd_min_ns": 1,
+  "buffer_tpd_max_ns": 8.5,
+  "extra_slew_threshold_budget_ns": 2,
+  "fpga_duty_budget_ns": 0.5,
+  "wire_budget_ns": 0.5,
+  "jitter_budget_ns": 0.4,
+  "minimum_pulse_bound_ns": 51.6,
+  "required_pulse_ns": 50,
+  "cs_hold_core_cycles": 4,
+  "cs_hold_bound_ns": 3.25,
+  "required_cs_hold_ns": 2,
+  "sdi_setup_bound_ns": 34.5,
+  "required_sdi_setup_ns": 9,
+  "load_requirement_pf": 15,
+  "local_control_trace_max_mm": 25,
+  "selection": "Preserve existingAHCT244, noadditionalIC; lowerADCthroughput still10samples/40kcycle and8simultaneouschannels",
+  "scope": "Boundeddatasheet+finiteedge engineering budget, nothardwaremeasurement"
+}

@@ -1,0 +1,2387 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 16 18:55:20 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -file X:/results/native21/NATIVE_ROUTED_TIMING.rpt
+| Design       : draw_ready_ps_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule     Severity  Description                                                       Violations  
+-------  --------  ----------------------------------------------------------------  ----------  
+LUTAR-1  Warning   LUT drives async reset alert                                      3           
+XDCV-2   Advisory  Incomplete constraint coverage due to missing replicated objects  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (6)
+6. checking no_output_delay (13)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (2)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (6)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 6 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay (13)
+--------------------------------
+ There are 12 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There is 1 port with no output delay but with a timing clock defined on it or propagating through it (LOW)
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (2)
+------------------------------------
+ There are 2 input ports with partial input delay specified. (HIGH)
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.084        0.000                      0                83207        0.039        0.000                      0                83174        1.453        0.000                       0                 27664  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock           Waveform(ns)         Period(ns)      Frequency(MHz)
+-----           ------------         ----------      --------------
+clk_fpga_0      {0.000 5.000}        10.000          100.000         
+ref50           {0.000 10.000}       20.000          50.000          
+  c64u          {0.000 7.812}        15.625          64.000          
+    c128        {0.000 3.906}        7.812           128.000         
+      ADC_SCLK  {0.000 62.500}       125.000         8.000           
+    c256        {0.000 1.953}        3.906           256.000         
+    fb2         {0.000 7.812}        15.625          64.000          
+  fb1           {0.000 10.000}       20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ref50                                                                                                                                                           7.000        0.000                       0                     1  
+  c64u                                                                                                                                                          4.812        0.000                       0                     3  
+    c128            0.084        0.000                      0                73911        0.039        0.000                      0                73911        2.776        0.000                       0                 27341  
+    c256            0.359        0.000                      0                  442        0.121        0.000                      0                  442        1.453        0.000                       0                   313  
+    fb2                                                                                                                                                        14.033        0.000                       0                     3  
+  fb1                                                                                                                                                          18.408        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+ADC_SCLK      c128               72.320        0.000                      0                    8        2.567        0.000                      0                    8  
+c256          c128                1.551        0.000                      0                    2        0.166        0.000                      0                    2  
+c128          c256                1.672        0.000                      0                  129        0.134        0.000                      0                  129  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  c128               c128                     1.439        0.000                      0                 8381        0.813        0.000                      0                 8381  
+**async_default**  c256               c256                     0.821        0.000                      0                  309        0.649        0.000                      0                  309  
+**default**        c256                                        1.024        0.000                      0                   33                                                                        
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)        c256                        
+(none)                      c128          
+(none)        c128          c128          
+(none)        c128          c256          
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+(none)        c128                        
+(none)        c256                        
+(none)                      c128          
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ref50
+  To Clock:  ref50
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        7.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ref50
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { ref_clk50_0 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         20.000      18.751     MMCME2_ADV_X1Y1  draw_ready_ps_i/clocks/inst/mmcm1/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       20.000      80.000     MMCME2_ADV_X1Y1  draw_ready_ps_i/clocks/inst/mmcm1/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            3.000         10.000      7.000      MMCME2_ADV_X1Y1  draw_ready_ps_i/clocks/inst/mmcm1/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            3.000         10.000      7.000      MMCME2_ADV_X1Y1  draw_ready_ps_i/clocks/inst/mmcm1/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  c64u
+  To Clock:  c64u
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        4.812ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         c64u
+Waveform(ns):       { 0.000 7.812 }
+Period(ns):         15.625
+Sources:            { draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I             n/a            1.592         15.625      14.033     BUFGCTRL_X0Y17   draw_ready_ps_i/clocks/inst/midbuf/I
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       15.625      84.375     MMCME2_ADV_X1Y0  draw_ready_ps_i/clocks/inst/mmcm2/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            3.000         7.813       4.813      MMCME2_ADV_X1Y0  draw_ready_ps_i/clocks/inst/mmcm2/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            3.000         7.812       4.812      MMCME2_ADV_X1Y0  draw_ready_ps_i/clocks/inst/mmcm2/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  c128
+  To Clock:  c128
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.084ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.039ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.776ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.084ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/write_address_q_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/memory_reg_128_191_54_56/RAMA/WADR3
+                            (rising edge-triggered cell RAMD64E clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             c128
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            7.812ns  (c128 rise@7.812ns - c128 rise@0.000ns)
+  Data Path Delay:        7.391ns  (logic 0.379ns (5.128%)  route 7.012ns (94.872%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.106ns = ( 6.706 - 7.812 ) 
+    Source Clock Delay      (SCD):    -0.583ns
+    Clock Pessimism Removal (CPR):    0.330ns
+  Clock Uncertainty:      0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.135ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.441    -0.583    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/clk
+    SLICE_X57Y90         FDRE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/write_address_q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y90         FDRE (Prop_fdre_C_Q)         0.379    -0.204 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/write_address_q_reg[3]/Q
+                         net (fo=3441, routed)        7.012     6.809    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/memory_reg_128_191_54_56/ADDRD3
+    SLICE_X32Y62         RAMD64E                                      r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/memory_reg_128_191_54_56/RAMA/WADR3
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       7.812     7.812 r  
+    U18                                               0.000     7.812 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     7.812    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     9.176 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004    10.179    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242     3.938 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454     5.392    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     5.469 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386     6.855    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     3.940 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.454     5.394    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.471 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.235     6.706    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/memory_reg_128_191_54_56/WCLK
+    SLICE_X32Y62         RAMD64E                                      r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/memory_reg_128_191_54_56/RAMA/CLK
+                         clock pessimism              0.330     7.036    
+                         clock uncertainty           -0.076     6.960    
+    SLICE_X32Y62         RAMD64E (Setup_ramd64e_CLK_WADR3)
+                                                     -0.067     6.893    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/memory_reg_128_191_54_56/RAMA
+  -------------------------------------------------------------------
+                         required time                          6.893    
+                         arrival time                          -6.809    
+  -------------------------------------------------------------------
+                         slack                                  0.084    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.039ns  (arrival time - required time)
+  Source:                 draw_ready_ps_i/task_bram/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_WRDATA[3].bram_wrdata_int_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/task_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/DIADI[1]
+                            (rising edge-triggered cell RAMB36E1 clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             c128
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (c128 rise@0.000ns - c128 rise@0.000ns)
+  Data Path Delay:        0.388ns  (logic 0.141ns (36.354%)  route 0.247ns (63.646%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.053ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.836ns
+    Source Clock Delay      (SCD):    -0.631ns
+    Clock Pessimism Removal (CPR):    -0.258ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.550    -0.631    draw_ready_ps_i/task_bram/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/s_axi_aclk
+    SLICE_X33Y78         FDRE                                         r  draw_ready_ps_i/task_bram/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_WRDATA[3].bram_wrdata_int_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y78         FDRE (Prop_fdre_C_Q)         0.141    -0.490 r  draw_ready_ps_i/task_bram/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_WRDATA[3].bram_wrdata_int_reg[3]/Q
+                         net (fo=1, routed)           0.247    -0.243    draw_ready_ps_i/task_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/dina[1]
+    RAMB36_X2Y15         RAMB36E1                                     r  draw_ready_ps_i/task_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/DIADI[1]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.854    -0.836    draw_ready_ps_i/task_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/clka
+    RAMB36_X2Y15         RAMB36E1                                     r  draw_ready_ps_i/task_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/CLKARDCLK
+                         clock pessimism              0.258    -0.578    
+    RAMB36_X2Y15         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[1])
+                                                      0.296    -0.282    draw_ready_ps_i/task_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram
+  -------------------------------------------------------------------
+                         required time                          0.282    
+                         arrival time                          -0.243    
+  -------------------------------------------------------------------
+                         slack                                  0.039    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         c128
+Waveform(ns):       { 0.000 3.906 }
+Period(ns):         7.812
+Sources:            { draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.170         7.812       5.643      RAMB36_X2Y12     draw_ready_ps_i/task_memory/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram/CLKARDCLK
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       7.812       205.547    MMCME2_ADV_X1Y0  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.130         3.906       2.776      SLICE_X58Y94     draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/memory_reg_0_63_0_2/RAMA/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.130         3.906       2.776      SLICE_X58Y94     draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/scheduler/memory_reg_0_63_0_2/RAMA/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  c256
+  To Clock:  c256
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.359ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.121ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        1.453ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.359ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/age_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/pre_data_reg[17]/CE
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Path Group:             c256
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.906ns  (c256 rise@3.906ns - c256 rise@0.000ns)
+  Data Path Delay:        3.187ns  (logic 0.589ns (18.480%)  route 2.598ns (81.520%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.123ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.990ns = ( 2.916 - 3.906 ) 
+    Source Clock Delay      (SCD):    -0.454ns
+    Clock Pessimism Removal (CPR):    0.413ns
+  Clock Uncertainty:      0.069ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.119ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         1.570    -0.454    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/tx_clk
+    SLICE_X106Y86        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/age_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y86        FDCE (Prop_fdce_C_Q)         0.379    -0.075 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/age_reg[0]/Q
+                         net (fo=11, routed)          1.018     0.943    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/age_reg[0]
+    SLICE_X105Y87        LUT6 (Prop_lut6_I2_O)        0.105     1.048 f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/busy_sync[0]_i_1/O
+                         net (fo=42, routed)          0.522     1.570    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/busy_fast
+    SLICE_X106Y85        LUT4 (Prop_lut4_I0_O)        0.105     1.675 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/pre_data[31]_i_1/O
+                         net (fo=32, routed)          1.058     2.734    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/pre_data[31]_i_1_n_0
+    SLICE_X105Y98        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/pre_data_reg[17]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c256 rise edge)       3.906     3.906 r  
+    U18                                               0.000     3.906 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     3.906    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     5.270 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004     6.273    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242     0.032 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454     1.486    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     1.563 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386     2.949    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.915     0.034 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           1.454     1.488    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     1.565 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         1.351     2.916    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/tx_clk
+    SLICE_X105Y98        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/pre_data_reg[17]/C
+                         clock pessimism              0.413     3.330    
+                         clock uncertainty           -0.069     3.261    
+    SLICE_X105Y98        FDCE (Setup_fdce_C_CE)      -0.168     3.093    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/pre_data_reg[17]
+  -------------------------------------------------------------------
+                         required time                          3.093    
+                         arrival time                          -2.734    
+  -------------------------------------------------------------------
+                         slack                                  0.359    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.121ns  (arrival time - required time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Path Group:             c256
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (c256 rise@0.000ns - c256 rise@0.000ns)
+  Data Path Delay:        0.196ns  (logic 0.141ns (71.838%)  route 0.055ns (28.162%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.809ns
+    Source Clock Delay      (SCD):    -0.571ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.610    -0.571    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X105Y93        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y93        FDCE (Prop_fdce_C_Q)         0.141    -0.430 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/Q
+                         net (fo=1, routed)           0.055    -0.374    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release[0]
+    SLICE_X105Y93        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.881    -0.809    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X105Y93        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/C
+                         clock pessimism              0.238    -0.571    
+    SLICE_X105Y93        FDCE (Hold_fdce_C_D)         0.075    -0.496    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.496    
+                         arrival time                          -0.374    
+  -------------------------------------------------------------------
+                         slack                                  0.121    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         c256
+Waveform(ns):       { 0.000 1.953 }
+Period(ns):         3.906
+Sources:            { draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            1.592         3.906       2.314      BUFGCTRL_X0Y1    draw_ready_ps_i/clocks/inst/txbuf/I
+Max Period        n/a     MMCME2_ADV/CLKOUT1  n/a            213.360       3.906       209.454    MMCME2_ADV_X1Y0  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         1.953       1.453      SLICE_X105Y86    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_toggle_reg/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         1.953       1.453      SLICE_X105Y86    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_toggle_reg/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  fb2
+  To Clock:  fb2
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       14.033ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         fb2
+Waveform(ns):       { 0.000 7.812 }
+Period(ns):         15.625
+Sources:            { draw_ready_ps_i/clocks/inst/mmcm2/CLKFBOUT }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I              n/a            1.592         15.625      14.033     BUFGCTRL_X0Y2    draw_ready_ps_i/clocks/inst/feedback2/I
+Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       15.625      84.375     MMCME2_ADV_X1Y0  draw_ready_ps_i/clocks/inst/mmcm2/CLKFBIN
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  fb1
+  To Clock:  fb1
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       18.408ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         fb1
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { draw_ready_ps_i/clocks/inst/mmcm1/CLKFBOUT }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I              n/a            1.592         20.000      18.408     BUFGCTRL_X0Y16   draw_ready_ps_i/clocks/inst/feedback1/I
+Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       20.000      80.000     MMCME2_ADV_X1Y1  draw_ready_ps_i/clocks/inst/mmcm1/CLKFBIN
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ADC_SCLK
+  To Clock:  c128
+
+Setup :            0  Failing Endpoints,  Worst Slack       72.320ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        2.567ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             72.320ns  (required time - arrival time)
+  Source:                 adc_dout_0[2]
+                            (input port clocked by ADC_SCLK  {rise@0.000ns fall@62.500ns period=125.000ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane_reg[2][0]/D
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             c128
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            125.000ns  (c128 rise@125.000ns - ADC_SCLK rise@0.000ns)
+  Data Path Delay:        4.729ns  (logic 1.600ns (33.844%)  route 3.128ns (66.156%))
+  Logic Levels:           2  (IBUF=1 LUT2=1)
+  Input Delay:            44.000ns
+  Clock Path Skew:        -3.908ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.117ns = ( 6.695 - 7.812 ) 
+    Source Clock Delay      (SCD):    3.109ns
+    Clock Pessimism Removal (CPR):    0.318ns
+  Clock Uncertainty:      0.075ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       MultiCycle Path   Setup -end   16
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ADC_SCLK rise edge)
+                                                      0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.780    -0.244    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/clk
+    OLOGIC_X1Y145        FDPE (Prop_fdpe_C_Q)         0.418     0.174 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/sclk_reg/Q
+                         net (fo=1, routed)           0.001     0.175    adc_sclk_0_OBUF
+    A20                  OBUF (Prop_obuf_I_O)         2.934     3.109 r  adc_sclk_0_OBUF_inst/O
+                         net (fo=0)                   0.000     3.109    adc_sclk_0
+  -------------------------------------------------------------------    -------------------
+                         input delay                 44.000    47.109    
+    T12                                               0.000    47.109 r  adc_dout_0[2] (IN)
+                         net (fo=0)                   0.000    47.109    adc_dout_0[2]
+    T12                  IBUF (Prop_ibuf_I_O)         1.495    48.604 r  adc_dout_0_IBUF[2]_inst/O
+                         net (fo=1, routed)           3.128    51.733    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/adc_dout[2]
+    SLICE_X48Y77         LUT2 (Prop_lut2_I0_O)        0.105    51.838 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane[2][0]_i_1/O
+                         net (fo=1, routed)           0.000    51.838    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane[2][0]_i_1_n_0
+    SLICE_X48Y77         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane_reg[2][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)     125.000   125.000 r  
+    U18                                               0.000   125.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000   125.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363   126.363 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004   127.367    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242   121.125 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454   122.580    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077   122.657 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386   124.043    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915   121.127 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.454   122.582    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077   122.659 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.224   123.883    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/clk
+    SLICE_X48Y77         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane_reg[2][0]/C
+                         clock pessimism              0.318   124.200    
+                         clock uncertainty           -0.075   124.126    
+    SLICE_X48Y77         FDCE (Setup_fdce_C_D)        0.032   124.158    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane_reg[2][0]
+  -------------------------------------------------------------------
+                         required time                        124.158    
+                         arrival time                         -51.838    
+  -------------------------------------------------------------------
+                         slack                                 72.320    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.567ns  (arrival time - required time)
+  Source:                 adc_dout_0[0]
+                            (input port clocked by ADC_SCLK  {rise@0.000ns fall@62.500ns period=125.000ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane_reg[0][0]/D
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             c128
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (c128 rise@0.000ns - ADC_SCLK rise@0.000ns)
+  Data Path Delay:        1.282ns  (logic 0.359ns (27.967%)  route 0.924ns (72.033%))
+  Logic Levels:           2  (IBUF=1 LUT2=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        -1.376ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.824ns
+    Source Clock Delay      (SCD):    1.062ns
+    Clock Pessimism Removal (CPR):    -0.509ns
+  Timing Exception:       MultiCycle Path   Setup -end   16    Hold  -end   15
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ADC_SCLK rise edge)
+                                                      0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.712    -0.468    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/clk
+    OLOGIC_X1Y145        FDPE (Prop_fdpe_C_Q)         0.177    -0.291 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/sclk_reg/Q
+                         net (fo=1, routed)           0.001    -0.290    adc_sclk_0_OBUF
+    A20                  OBUF (Prop_obuf_I_O)         1.352     1.062 r  adc_sclk_0_OBUF_inst/O
+                         net (fo=0)                   0.000     1.062    adc_sclk_0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000     1.062    
+    V12                                               0.000     1.062 r  adc_dout_0[0] (IN)
+                         net (fo=0)                   0.000     1.062    adc_dout_0[0]
+    V12                  IBUF (Prop_ibuf_I_O)         0.314     1.375 r  adc_dout_0_IBUF[0]_inst/O
+                         net (fo=1, routed)           0.924     2.299    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/adc_dout[0]
+    SLICE_X91Y78         LUT2 (Prop_lut2_I0_O)        0.045     2.344 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane[0][0]_i_1/O
+                         net (fo=1, routed)           0.000     2.344    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane[0][0]_i_1_n_0
+    SLICE_X91Y78         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane_reg[0][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.866    -0.824    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/clk
+    SLICE_X91Y78         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane_reg[0][0]/C
+                         clock pessimism              0.509    -0.314    
+    SLICE_X91Y78         FDCE (Hold_fdce_C_D)         0.091    -0.223    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/lane_reg[0][0]
+  -------------------------------------------------------------------
+                         required time                          0.223    
+                         arrival time                           2.344    
+  -------------------------------------------------------------------
+                         slack                                  2.567    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  c256
+  To Clock:  c128
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.551ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.166ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.551ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/overrun_reg/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/overrun_sync_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             c128
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.906ns  (c128 rise@7.812ns - c256 rise@3.906ns)
+  Data Path Delay:        1.737ns  (logic 0.379ns (21.820%)  route 1.358ns (78.180%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.364ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.051ns = ( 6.761 - 7.812 ) 
+    Source Clock Delay      (SCD):    -0.520ns = ( 3.387 - 3.906 ) 
+    Clock Pessimism Removal (CPR):    0.167ns
+  Clock Uncertainty:      0.195ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.120ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       3.906     3.906 r  
+    U18                                               0.000     3.906 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     3.906    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     5.336 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     6.446    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247     0.199 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597     1.796    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085     1.881 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552     3.433    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.232     0.201 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           1.597     1.798    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.085     1.883 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         1.504     3.387    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/tx_clk
+    SLICE_X105Y86        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/overrun_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y86        FDCE (Prop_fdce_C_Q)         0.379     3.766 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/overrun_reg/Q
+                         net (fo=2, routed)           1.358     5.124    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/overrun
+    SLICE_X87Y84         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/overrun_sync_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       7.812     7.812 r  
+    U18                                               0.000     7.812 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     7.812    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     9.176 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004    10.179    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242     3.938 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454     5.392    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     5.469 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386     6.855    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     3.940 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.454     5.394    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.471 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.290     6.761    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/clk
+    SLICE_X87Y84         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/overrun_sync_reg[0]/C
+                         clock pessimism              0.167     6.928    
+                         clock uncertainty           -0.195     6.734    
+    SLICE_X87Y84         FDCE (Setup_fdce_C_D)       -0.059     6.675    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/overrun_sync_reg[0]
+  -------------------------------------------------------------------
+                         required time                          6.675    
+                         arrival time                          -5.124    
+  -------------------------------------------------------------------
+                         slack                                  1.551    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.166ns  (arrival time - required time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_toggle_reg/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_sync_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             c128
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (c128 rise@0.000ns - c256 rise@0.000ns)
+  Data Path Delay:        0.767ns  (logic 0.141ns (18.391%)  route 0.626ns (81.609%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.320ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.814ns
+    Source Clock Delay      (SCD):    -0.575ns
+    Clock Pessimism Removal (CPR):    -0.560ns
+  Clock Uncertainty:      0.195ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.120ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.606    -0.575    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X105Y86        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_toggle_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y86        FDCE (Prop_fdce_C_Q)         0.141    -0.434 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_toggle_reg/Q
+                         net (fo=2, routed)           0.626     0.192    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_toggle
+    SLICE_X100Y87        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_sync_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.876    -0.814    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/clk
+    SLICE_X100Y87        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_sync_reg[0]/C
+                         clock pessimism              0.560    -0.254    
+                         clock uncertainty            0.195    -0.059    
+    SLICE_X100Y87        FDCE (Hold_fdce_C_D)         0.085     0.026    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/done_sync_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.026    
+                         arrival time                           0.192    
+  -------------------------------------------------------------------
+                         slack                                  0.166    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  c128
+  To Clock:  c256
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.672ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.134ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.672ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/request_q_reg/C
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/request_pipe_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Path Group:             c256
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.906ns  (c256 rise@3.906ns - c128 rise@0.000ns)
+  Data Path Delay:        1.694ns  (logic 0.433ns (25.561%)  route 1.261ns (74.439%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.298ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.990ns = ( 2.916 - 3.906 ) 
+    Source Clock Delay      (SCD):    -0.525ns
+    Clock Pessimism Removal (CPR):    0.167ns
+  Clock Uncertainty:      0.195ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.120ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.499    -0.525    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/clk
+    SLICE_X94Y83         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/request_q_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X94Y83         FDCE (Prop_fdce_C_Q)         0.433    -0.092 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/request_q_reg/Q
+                         net (fo=1, routed)           1.261     1.169    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/request_q
+    SLICE_X105Y92        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/request_pipe_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c256 rise edge)       3.906     3.906 r  
+    U18                                               0.000     3.906 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     3.906    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     5.270 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004     6.273    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242     0.032 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454     1.486    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     1.563 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386     2.949    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.915     0.034 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           1.454     1.488    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     1.565 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         1.351     2.916    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X105Y92        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/request_pipe_reg[0]/C
+                         clock pessimism              0.167     3.083    
+                         clock uncertainty           -0.195     2.888    
+    SLICE_X105Y92        FDCE (Setup_fdce_C_D)       -0.047     2.841    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/request_pipe_reg[0]
+  -------------------------------------------------------------------
+                         required time                          2.841    
+                         arrival time                          -1.169    
+  -------------------------------------------------------------------
+                         slack                                  1.672    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.134ns  (arrival time - required time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/snapshot_reg[126]/C
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_hold_reg[126]/D
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Path Group:             c256
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (c256 rise@0.000ns - c128 rise@0.000ns)
+  Data Path Delay:        0.740ns  (logic 0.164ns (22.151%)  route 0.576ns (77.849%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.324ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.723ns
+    Source Clock Delay      (SCD):    -0.487ns
+    Clock Pessimism Removal (CPR):    -0.560ns
+  Clock Uncertainty:      0.195ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.120ns
+  Timing Exception:       MultiCycle Path   Setup -end   2    Hold  -end   1
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.693    -0.487    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/clk
+    SLICE_X104Y102       FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/snapshot_reg[126]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X104Y102       FDCE (Prop_fdce_C_Q)         0.164    -0.323 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/snapshot_reg[126]/Q
+                         net (fo=1, routed)           0.576     0.253    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/snapshot[126]
+    SLICE_X102Y101       FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_hold_reg[126]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.967    -0.723    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X102Y101       FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_hold_reg[126]/C
+                         clock pessimism              0.560    -0.163    
+                         clock uncertainty            0.195     0.032    
+    SLICE_X102Y101       FDCE (Hold_fdce_C_D)         0.088     0.120    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_hold_reg[126]
+  -------------------------------------------------------------------
+                         required time                         -0.120    
+                         arrival time                           0.253    
+  -------------------------------------------------------------------
+                         slack                                  0.134    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  c128
+  To Clock:  c128
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.439ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.813ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.439ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/shadow_calibration_reg[102][0]/CLR
+                            (recovery check against rising-edge clock c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            7.812ns  (c128 rise@7.812ns - c128 rise@0.000ns)
+  Data Path Delay:        6.118ns  (logic 0.590ns (9.644%)  route 5.528ns (90.356%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.151ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.770ns = ( 7.042 - 7.812 ) 
+    Source Clock Delay      (SCD):    -0.592ns
+    Clock Pessimism Removal (CPR):    0.330ns
+  Clock Uncertainty:      0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.135ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.432    -0.592    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/clk
+    SLICE_X67Y78         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X67Y78         FDCE (Prop_fdce_C_Q)         0.348    -0.244 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/Q
+                         net (fo=11, routed)          0.566     0.322    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/out[0]
+    SLICE_X67Y78         LUT1 (Prop_lut1_I0_O)        0.242     0.564 f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/adc_reset_i_3/O
+                         net (fo=6579, routed)        4.962     5.526    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/clear
+    SLICE_X113Y108       FDCE                                         f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/shadow_calibration_reg[102][0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       7.812     7.812 r  
+    U18                                               0.000     7.812 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     7.812    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     9.176 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004    10.179    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242     3.938 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454     5.392    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     5.469 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386     6.855    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915     3.940 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.454     5.394    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.471 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.571     7.042    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/clk
+    SLICE_X113Y108       FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/shadow_calibration_reg[102][0]/C
+                         clock pessimism              0.330     7.372    
+                         clock uncertainty           -0.076     7.296    
+    SLICE_X113Y108       FDCE (Recov_fdce_C_CLR)     -0.331     6.965    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/shadow_calibration_reg[102][0]
+  -------------------------------------------------------------------
+                         required time                          6.965    
+                         arrival time                          -5.526    
+  -------------------------------------------------------------------
+                         slack                                  1.439    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.813ns  (arrival time - required time)
+  Source:                 draw_ready_ps_i/pl_core/inst/service_watch/age_reg[23]/C
+                            (rising edge-triggered cell FDPE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/PRE
+                            (removal check against rising-edge clock c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (c128 rise@0.000ns - c128 rise@0.000ns)
+  Data Path Delay:        0.974ns  (logic 0.231ns (23.719%)  route 0.743ns (76.281%))
+  Logic Levels:           2  (LUT6=2)
+  Clock Path Skew:        0.256ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.875ns
+    Source Clock Delay      (SCD):    -0.627ns
+    Clock Pessimism Removal (CPR):    -0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.554    -0.627    draw_ready_ps_i/pl_core/inst/service_watch/clk
+    SLICE_X49Y62         FDPE                                         r  draw_ready_ps_i/pl_core/inst/service_watch/age_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y62         FDPE (Prop_fdpe_C_Q)         0.141    -0.486 f  draw_ready_ps_i/pl_core/inst/service_watch/age_reg[23]/Q
+                         net (fo=4, routed)           0.259    -0.227    draw_ready_ps_i/pl_core/inst/service_watch/age[23]
+    SLICE_X51Y63         LUT6 (Prop_lut6_I3_O)        0.045    -0.182 f  draw_ready_ps_i/pl_core/inst/service_watch/fault_latched_i_3/O
+                         net (fo=1, routed)           0.254     0.072    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/fault_latched_reg
+    SLICE_X51Y68         LUT6 (Prop_lut6_I0_O)        0.045     0.117 f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/fault_latched_i_2/O
+                         net (fo=3, routed)           0.231     0.347    draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg_2
+    SLICE_X53Y66         FDPE                                         f  draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.815    -0.875    draw_ready_ps_i/pl_core/inst/implementation/supervisor/clk
+    SLICE_X53Y66         FDPE                                         r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/C
+                         clock pessimism              0.504    -0.370    
+    SLICE_X53Y66         FDPE (Remov_fdpe_C_PRE)     -0.095    -0.465    draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg
+  -------------------------------------------------------------------
+                         required time                          0.465    
+                         arrival time                           0.347    
+  -------------------------------------------------------------------
+                         slack                                  0.813    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  c256
+  To Clock:  c256
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.821ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.649ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.821ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[22]/CLR
+                            (recovery check against rising-edge clock c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            3.906ns  (c256 rise@3.906ns - c256 rise@0.000ns)
+  Data Path Delay:        2.818ns  (logic 0.590ns (20.938%)  route 2.228ns (79.062%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.047ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.799ns = ( 3.108 - 3.906 ) 
+    Source Clock Delay      (SCD):    -0.516ns
+    Clock Pessimism Removal (CPR):    0.330ns
+  Clock Uncertainty:      0.069ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.119ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         1.508    -0.516    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X105Y93        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y93        FDCE (Prop_fdce_C_Q)         0.348    -0.168 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/Q
+                         net (fo=1, routed)           0.347     0.179    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/out[0]
+    SLICE_X105Y93        LUT1 (Prop_lut1_I0_O)        0.242     0.421 f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data[31]_i_1/O
+                         net (fo=309, routed)         1.881     2.302    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/fast_release_reg[1]
+    OLOGIC_X1Y121        FDCE                                         f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[22]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c256 rise edge)       3.906     3.906 r  
+    U18                                               0.000     3.906 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     3.906    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     5.270 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004     6.273    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242     0.032 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454     1.486    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     1.563 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386     2.949    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.915     0.034 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           1.454     1.488    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     1.565 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         1.543     3.108    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/tx_clk
+    OLOGIC_X1Y121        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[22]/C
+                         clock pessimism              0.330     3.437    
+                         clock uncertainty           -0.069     3.368    
+    OLOGIC_X1Y121        FDCE (Recov_fdce_C_CLR)     -0.245     3.123    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[22]
+  -------------------------------------------------------------------
+                         required time                          3.123    
+                         arrival time                          -2.302    
+  -------------------------------------------------------------------
+                         slack                                  0.821    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.649ns  (arrival time - required time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_hold_reg[4]/CLR
+                            (removal check against rising-edge clock c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (c256 rise@0.000ns - c256 rise@0.000ns)
+  Data Path Delay:        0.597ns  (logic 0.227ns (38.030%)  route 0.370ns (61.970%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.810ns
+    Source Clock Delay      (SCD):    -0.571ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.610    -0.571    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X105Y93        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y93        FDCE (Prop_fdce_C_Q)         0.128    -0.443 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[1]/Q
+                         net (fo=1, routed)           0.142    -0.301    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/out[0]
+    SLICE_X105Y93        LUT1 (Prop_lut1_I0_O)        0.099    -0.202 f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data[31]_i_1/O
+                         net (fo=309, routed)         0.228     0.026    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_n_0
+    SLICE_X104Y91        FDCE                                         f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_hold_reg[4]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.880    -0.810    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X104Y91        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_hold_reg[4]/C
+                         clock pessimism              0.254    -0.556    
+    SLICE_X104Y91        FDCE (Remov_fdce_C_CLR)     -0.067    -0.623    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_hold_reg[4]
+  -------------------------------------------------------------------
+                         required time                          0.623    
+                         arrival time                           0.026    
+  -------------------------------------------------------------------
+                         slack                                  0.649    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **default**
+From Clock:  c256
+  To Clock:  
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.024ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.024ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[9]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.476ns  (logic 3.475ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y84                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[9]/C
+    OLOGIC_X1Y84         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[9]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[9]
+    W14                  OBUF (Prop_obuf_I_O)         3.057     3.476 r  serial_data_0_OBUF[9]_inst/O
+                         net (fo=0)                   0.000     3.476    serial_data_0[9]
+    W14                                                               r  serial_data_0[9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.476    
+  -------------------------------------------------------------------
+                         slack                                  1.024    
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  c256
+  To Clock:  
+
+Max Delay             0 Endpoints
+Min Delay            33 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[10]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.514ns  (logic 1.513ns (99.934%)  route 0.001ns (0.066%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.178ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.116ns
+    Phase Error              (PE):    0.115ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.630    -0.551    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/tx_clk
+    OLOGIC_X1Y53         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y53         FDCE (Prop_fdce_C_Q)         0.177    -0.374 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[10]/Q
+                         net (fo=1, routed)           0.001    -0.373    serial_data_0_OBUF[10]
+    P18                  OBUF (Prop_obuf_I_O)         1.336     0.963 r  serial_data_0_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     0.963    serial_data_0[10]
+    P18                                                               r  serial_data_0[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  c128
+
+Max Delay            10 Endpoints
+Min Delay            10 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 physical_health_0[0]
+                            (input port)
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/PRE
+                            (recovery check against rising-edge clock c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        7.515ns  (logic 1.599ns (21.272%)  route 5.916ns (78.728%))
+  Logic Levels:           3  (IBUF=1 LUT6=2)
+  Clock Path Skew:        -1.120ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.120ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.185ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.115ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    H17                                               0.000     0.000 r  physical_health_0[0] (IN)
+                         net (fo=0)                   0.000     0.000    physical_health_0[0]
+    H17                  IBUF (Prop_ibuf_I_O)         1.389     1.389 r  physical_health_0_IBUF[0]_inst/O
+                         net (fo=16, routed)          4.823     6.212    draw_ready_ps_i/pl_core/inst/service_watch/physical_health[0]
+    SLICE_X51Y63         LUT6 (Prop_lut6_I5_O)        0.105     6.317 f  draw_ready_ps_i/pl_core/inst/service_watch/fault_latched_i_3/O
+                         net (fo=1, routed)           0.558     6.874    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/fault_latched_reg
+    SLICE_X51Y68         LUT6 (Prop_lut6_I0_O)        0.105     6.979 f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/fault_latched_i_2/O
+                         net (fo=3, routed)           0.536     7.515    draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg_2
+    SLICE_X53Y66         FDPE                                         f  draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     1.363 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004     2.367    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242    -3.875 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.420    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077    -2.343 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386    -0.957    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915    -3.873 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.418    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    -2.341 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.221    -1.120    draw_ready_ps_i/pl_core/inst/implementation/supervisor/clk
+    SLICE_X53Y66         FDPE                                         r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/ps7/inst/PS7_i/FCLKRESETN[0]
+                            (internal pin)
+  Destination:            draw_ready_ps_i/reset/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/syncstages_ff_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.857ns  (logic 0.045ns (5.253%)  route 0.812ns (94.747%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.185ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.115ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS7_X0Y0             PS7                          0.000     0.000 f  draw_ready_ps_i/ps7/inst/PS7_i/FCLKRESETN[0]
+                         net (fo=1, routed)           0.812     0.812    draw_ready_ps_i/reset/U0/EXT_LPF/ext_reset_in
+    SLICE_X67Y103        LUT1 (Prop_lut1_I0_O)        0.045     0.857 r  draw_ready_ps_i/reset/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT_i_1/O
+                         net (fo=1, routed)           0.000     0.857    draw_ready_ps_i/reset/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/src_in
+    SLICE_X67Y103        FDRE                                         r  draw_ready_ps_i/reset/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/syncstages_ff_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.936    -0.754    draw_ready_ps_i/reset/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/dest_clk
+    SLICE_X67Y103        FDRE                                         r  draw_ready_ps_i/reset/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/syncstages_ff_reg[0]/C
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  c128
+  To Clock:  c128
+
+Max Delay            29 Endpoints
+Min Delay            29 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/supervisor/state_reg_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/syncstages_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.560ns  (logic 0.507ns (14.242%)  route 3.053ns (85.758%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        -0.247ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.899ns
+    Source Clock Delay      (SCD):    -0.653ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.135ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.371    -0.653    draw_ready_ps_i/pl_core/inst/implementation/supervisor/clk
+    SLICE_X51Y66         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/state_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y66         FDCE (Prop_fdce_C_Q)         0.379    -0.274 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/state_reg_reg[3]/Q
+                         net (fo=47, routed)          2.798     2.524    draw_ready_ps_i/pl_core/inst/implementation/supervisor/state_reg_reg_n_0_[3]
+    SLICE_X54Y101        LUT4 (Prop_lut4_I1_O)        0.128     2.652 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/status[3]_INST_0/O
+                         net (fo=1, routed)           0.255     2.907    draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/async_path_bit[3]
+    SLICE_X56Y101        FDRE                                         r  draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/syncstages_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     1.363 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004     2.367    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242    -3.875 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.420    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077    -2.343 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386    -0.957    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915    -3.873 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.418    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    -2.341 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.442    -0.899    draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/dest_clk
+    SLICE_X56Y101        FDRE                                         r  draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/syncstages_ff_reg[0][3]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/occupancy_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/syncstages_ff_reg[0][10]/D
+                            (rising edge-triggered cell FDRE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Slow Process Corner)
+  Data Path Delay:        1.028ns  (logic 0.304ns (29.570%)  route 0.724ns (70.430%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.463ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.642ns
+    Source Clock Delay      (SCD):    -1.105ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.135ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     1.363 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004     2.367    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242    -3.875 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.420    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077    -2.343 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386    -0.957    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915    -3.873 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.418    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    -2.341 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.236    -1.105    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/clk
+    SLICE_X47Y53         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/occupancy_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y53         FDCE (Prop_fdce_C_Q)         0.304    -0.801 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/occupancy_reg[0]/Q
+                         net (fo=30, routed)          0.724    -0.077    draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/async_path_bit[10]
+    SLICE_X44Y67         FDRE                                         r  draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/syncstages_ff_reg[0][10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.382    -0.642    draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/dest_clk
+    SLICE_X44Y67         FDRE                                         r  draw_ready_ps_i/service_io/U0/gpio_core_1/Dual.INPUT_DOUBLE_REGS5/syncstages_ff_reg[0][10]/C
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  c128
+  To Clock:  c256
+
+Max Delay             2 Endpoints
+Min Delay             2 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/CLR
+                            (recovery check against rising-edge clock c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        5.837ns  (logic 0.590ns (10.108%)  route 5.247ns (89.892%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.398ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.990ns
+    Source Clock Delay      (SCD):    -0.592ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.195ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.120ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.432    -0.592    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/clk
+    SLICE_X67Y78         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X67Y78         FDCE (Prop_fdce_C_Q)         0.348    -0.244 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/Q
+                         net (fo=11, routed)          0.566     0.322    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/out[0]
+    SLICE_X67Y78         LUT1 (Prop_lut1_I0_O)        0.242     0.564 f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/adc_reset_i_3/O
+                         net (fo=6579, routed)        4.681     5.245    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/clear
+    SLICE_X105Y93        FDCE                                         f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     1.363 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004     2.367    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242    -3.875 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.420    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077    -2.343 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386    -0.957    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.915    -3.873 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           1.454    -2.418    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077    -2.341 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         1.351    -0.990    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X105Y93        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/CLR
+                            (removal check against rising-edge clock c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        2.968ns  (logic 0.227ns (7.648%)  route 2.741ns (92.352%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.199ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.809ns
+    Source Clock Delay      (SCD):    -0.610ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.195ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.120ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.571    -0.610    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/clk
+    SLICE_X67Y78         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X67Y78         FDCE (Prop_fdce_C_Q)         0.128    -0.482 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/reset_sync_reg[1]/Q
+                         net (fo=11, routed)          0.266    -0.216    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/out[0]
+    SLICE_X67Y78         LUT1 (Prop_lut1_I0_O)        0.099    -0.117 f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/bank/adc_reset_i_3/O
+                         net (fo=6579, routed)        2.475     2.358    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/clear
+    SLICE_X105Y93        FDCE                                         f  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.881    -0.809    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx_clk
+    SLICE_X105Y93        FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/fast_release_reg[0]/C
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay             3 Endpoints
+Min Delay             3 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 physical_health_0[0]
+                            (input port)
+  Destination:            efuse_dn_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.128ns  (logic 4.724ns (31.224%)  route 10.405ns (68.776%))
+  Logic Levels:           5  (IBUF=1 LUT5=1 LUT6=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    H17                                               0.000     0.000 f  physical_health_0[0] (IN)
+                         net (fo=0)                   0.000     0.000    physical_health_0[0]
+    H17                  IBUF (Prop_ibuf_I_O)         1.389     1.389 f  physical_health_0_IBUF[0]_inst/O
+                         net (fo=16, routed)          4.562     5.951    draw_ready_ps_i/pl_core/inst/implementation/supervisor/physical_health[0]
+    SLICE_X52Y66         LUT5 (Prop_lut5_I3_O)        0.105     6.056 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0_i_5/O
+                         net (fo=1, routed)           0.518     6.573    draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0_i_5_n_0
+    SLICE_X53Y65         LUT6 (Prop_lut6_I0_O)        0.105     6.678 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0_i_2/O
+                         net (fo=3, routed)           0.886     7.564    draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0_i_2_n_0
+    SLICE_X55Y72         LUT6 (Prop_lut6_I1_O)        0.105     7.669 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0/O
+                         net (fo=3, routed)           4.439    12.108    efuse_dn_0_OBUF
+    L16                  OBUF (Prop_obuf_I_O)         3.020    15.128 r  efuse_dn_0_OBUF_inst/O
+                         net (fo=0)                   0.000    15.128    efuse_dn_0
+    L16                                                               r  efuse_dn_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 physical_health_0[0]
+                            (input port)
+  Destination:            efuse_up_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        5.486ns  (logic 1.701ns (31.005%)  route 3.785ns (68.995%))
+  Logic Levels:           4  (IBUF=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    H17                                               0.000     0.000 r  physical_health_0[0] (IN)
+                         net (fo=0)                   0.000     0.000    physical_health_0[0]
+    H17                  IBUF (Prop_ibuf_I_O)         0.226     0.226 r  physical_health_0_IBUF[0]_inst/O
+                         net (fo=16, routed)          1.563     1.789    draw_ready_ps_i/pl_core/inst/implementation/supervisor/physical_health[0]
+    SLICE_X54Y100        LUT5 (Prop_lut5_I1_O)        0.045     1.834 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0_i_3/O
+                         net (fo=2, routed)           0.645     2.479    draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0_i_3_n_0
+    SLICE_X55Y72         LUT6 (Prop_lut6_I3_O)        0.045     2.524 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0/O
+                         net (fo=3, routed)           1.577     4.101    efuse_up_0_OBUF
+    V17                  OBUF (Prop_obuf_I_O)         1.385     5.486 r  efuse_up_0_OBUF_inst/O
+                         net (fo=0)                   0.000     5.486    efuse_up_0
+    V17                                                               r  efuse_up_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  c128
+  To Clock:  
+
+Max Delay            13 Endpoints
+Min Delay            13 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/C
+                            (rising edge-triggered cell FDPE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            efuse_dn_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.614ns  (logic 3.609ns (31.075%)  route 8.005ns (68.925%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.185ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.115ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.371    -0.653    draw_ready_ps_i/pl_core/inst/implementation/supervisor/clk
+    SLICE_X53Y66         FDPE                                         r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y66         FDPE (Prop_fdpe_C_Q)         0.379    -0.274 f  draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched_reg/Q
+                         net (fo=65, routed)          2.234     1.960    draw_ready_ps_i/pl_core/inst/implementation/supervisor/fault_latched
+    SLICE_X54Y100        LUT5 (Prop_lut5_I2_O)        0.105     2.065 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0_i_3/O
+                         net (fo=2, routed)           1.332     3.397    draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0_i_3_n_0
+    SLICE_X55Y72         LUT6 (Prop_lut6_I3_O)        0.105     3.502 r  draw_ready_ps_i/pl_core/inst/implementation/supervisor/efuse_dn_INST_0/O
+                         net (fo=3, routed)           4.439     7.941    efuse_dn_0_OBUF
+    L16                  OBUF (Prop_obuf_I_O)         3.020    10.961 r  efuse_dn_0_OBUF_inst/O
+                         net (fo=0)                   0.000    10.961    efuse_dn_0
+    L16                                                               r  efuse_dn_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/sclk_reg/C
+                            (rising edge-triggered cell FDPE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Destination:            adc_sclk_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.530ns  (logic 1.529ns (99.935%)  route 0.001ns (0.065%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.185ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.115ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.712    -0.468    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/clk
+    OLOGIC_X1Y145        FDPE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/sclk_reg/C
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y145        FDPE (Prop_fdpe_C_Q)         0.177    -0.291 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/c16.adc/serial/sclk_reg/Q
+                         net (fo=1, routed)           0.001    -0.290    adc_sclk_0_OBUF
+    A20                  OBUF (Prop_obuf_I_O)         1.352     1.062 r  adc_sclk_0_OBUF_inst/O
+                         net (fo=0)                   0.000     1.062    adc_sclk_0
+    A20                                                               r  adc_sclk_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  c256
+  To Clock:  
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/latch_clock_reg_rep/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            latch_clock_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.406ns  (logic 3.405ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.178ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.116ns
+    Phase Error              (PE):    0.115ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.429     1.429 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.110     2.539    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.247    -3.708 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.597    -2.111    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085    -2.026 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.552    -0.474    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.232    -3.706 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           1.597    -2.109    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.085    -2.024 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         1.600    -0.424    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/tx_clk
+    OLOGIC_X1Y82         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/latch_clock_reg_rep/C
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y82         FDCE (Prop_fdce_C_Q)         0.418    -0.006 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/latch_clock_reg_rep/Q
+                         net (fo=1, routed)           0.001    -0.005    latch_clock_0_OBUF
+    T16                  OBUF (Prop_obuf_I_O)         2.987     2.982 r  latch_clock_0_OBUF_inst/O
+                         net (fo=0)                   0.000     2.982    latch_clock_0
+    T16                                                               r  latch_clock_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/latch_clock_reg_rep/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            latch_clock_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.582ns  (logic 1.581ns (99.937%)  route 0.001ns (0.063%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.178ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.116ns
+    Phase Error              (PE):    0.115ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock c256 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.266     0.266 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.440     0.706    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.444    -1.737 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.529    -1.208    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -1.182 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.597    -0.586    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -1.150    -1.735 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT1
+                         net (fo=1, routed)           0.529    -1.206    draw_ready_ps_i/clocks/inst/c256
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.180 r  draw_ready_ps_i/clocks/inst/txbuf/O
+                         net (fo=311, routed)         0.625    -0.556    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/tx_clk
+    OLOGIC_X1Y82         FDCE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/latch_clock_reg_rep/C
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y82         FDCE (Prop_fdce_C_Q)         0.177    -0.379 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/latch_clock_reg_rep/Q
+                         net (fo=1, routed)           0.001    -0.378    latch_clock_0_OBUF
+    T16                  OBUF (Prop_obuf_I_O)         1.404     1.027 r  latch_clock_0_OBUF_inst/O
+                         net (fo=0)                   0.000     1.027    latch_clock_0
+    T16                                                               r  latch_clock_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  c128
+
+Max Delay          8848 Endpoints
+Min Delay          8848 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 physical_health_0[0]
+                            (input port)
+  Destination:            draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/queue_reg[0][563]/CE
+                            (rising edge-triggered cell FDRE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        11.485ns  (logic 1.914ns (16.661%)  route 9.572ns (83.339%))
+  Logic Levels:           6  (IBUF=1 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -1.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.021ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.185ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.115ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    H17                                               0.000     0.000 r  physical_health_0[0] (IN)
+                         net (fo=0)                   0.000     0.000    physical_health_0[0]
+    H17                  IBUF (Prop_ibuf_I_O)         1.389     1.389 r  physical_health_0_IBUF[0]_inst/O
+                         net (fo=16, routed)          5.171     6.559    draw_ready_ps_i/pl_core/inst/implementation/supervisor/physical_health[0]
+    SLICE_X51Y68         LUT4 (Prop_lut4_I0_O)        0.105     6.664 f  draw_ready_ps_i/pl_core/inst/implementation/supervisor/publish_armed_i_3/O
+                         net (fo=1, routed)           0.435     7.100    draw_ready_ps_i/pl_core/inst/implementation/supervisor/publish_armed_i_3_n_0
+    SLICE_X51Y65         LUT6 (Prop_lut6_I5_O)        0.105     7.205 f  draw_ready_ps_i/pl_core/inst/implementation/supervisor/publish_armed_i_2/O
+                         net (fo=3, routed)           0.721     7.925    draw_ready_ps_i/pl_core/inst/implementation/mailbox/frame_valid_reg_0
+    SLICE_X45Y52         LUT2 (Prop_lut2_I1_O)        0.105     8.030 r  draw_ready_ps_i/pl_core/inst/implementation/mailbox/invalid_frame_i_2/O
+                         net (fo=6, routed)           0.456     8.486    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/frame_valid0
+    SLICE_X45Y51         LUT4 (Prop_lut4_I2_O)        0.105     8.591 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/occupancy[2]_i_3/O
+                         net (fo=12, routed)          1.059     9.650    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/validation_ok_reg_0
+    SLICE_X43Y29         LUT5 (Prop_lut5_I4_O)        0.105     9.755 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/seq[0][15]_i_1/O
+                         net (fo=2192, routed)        1.730    11.485    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/seq[0][15]_i_1_n_0
+    SLICE_X10Y17         FDRE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/queue_reg[0][563]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         1.363     1.363 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           1.004     2.367    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.242    -3.875 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.420    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077    -2.343 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           1.386    -0.957    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.915    -3.873 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           1.454    -2.418    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    -2.341 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       1.320    -1.021    draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/clk
+    SLICE_X10Y17         FDRE                                         r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/queue/queue_reg[0][563]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 draw_ready_ps_i/clocks/inst/mmcm2/LOCKED
+                            (internal pin)
+  Destination:            draw_ready_ps_i/reset/U0/EXT_LPF/lpf_int_reg/D
+                            (rising edge-triggered cell FDRE clocked by c128  {rise@0.000ns fall@3.906ns period=7.813ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        2.445ns  (logic 0.090ns (3.681%)  route 2.355ns (96.319%))
+  Logic Levels:           2  (LUT2=1 LUT4=1)
+  Clock Uncertainty:      0.185ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.132ns
+    Phase Error              (PE):    0.115ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X1Y0      MMCME2_ADV                   0.000     0.000 f  draw_ready_ps_i/clocks/inst/mmcm2/LOCKED
+                         net (fo=1, routed)           0.827     0.827    draw_ready_ps_i/clocks/inst/l2
+    SLICE_X112Y48        LUT2 (Prop_lut2_I1_O)        0.045     0.872 f  draw_ready_ps_i/clocks/inst/locked_INST_0/O
+                         net (fo=1, routed)           1.527     2.400    draw_ready_ps_i/reset/U0/EXT_LPF/dcm_locked
+    SLICE_X67Y105        LUT4 (Prop_lut4_I0_O)        0.045     2.445 r  draw_ready_ps_i/reset/U0/EXT_LPF/lpf_int0/O
+                         net (fo=1, routed)           0.000     2.445    draw_ready_ps_i/reset/U0/EXT_LPF/lpf_int0__0
+    SLICE_X67Y105        FDRE                                         r  draw_ready_ps_i/reset/U0/EXT_LPF/lpf_int_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock c128 rise edge)       0.000     0.000 r  
+    U18                                               0.000     0.000 r  ref_clk50_0 (IN)
+                         net (fo=0)                   0.000     0.000    draw_ready_ps_i/clocks/inst/ref_clk50
+    U18                  IBUF (Prop_ibuf_I_O)         0.454     0.454 r  draw_ready_ps_i/clocks/inst/input_clock/O
+                         net (fo=1, routed)           0.480     0.934    draw_ready_ps_i/clocks/inst/ic
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.231    -2.297 r  draw_ready_ps_i/clocks/inst/mmcm1/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.721    draw_ready_ps_i/clocks/inst/c64u
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029    -1.692 r  draw_ready_ps_i/clocks/inst/midbuf/O
+                         net (fo=1, routed)           0.864    -0.828    draw_ready_ps_i/clocks/inst/c64
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.467    -2.295 r  draw_ready_ps_i/clocks/inst/mmcm2/CLKOUT0
+                         net (fo=1, routed)           0.576    -1.719    draw_ready_ps_i/clocks/inst/c128
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.690 r  draw_ready_ps_i/clocks/inst/corebuf/O
+                         net (fo=27340, routed)       0.936    -0.754    draw_ready_ps_i/reset/U0/EXT_LPF/slowest_sync_clk
+    SLICE_X67Y105        FDRE                                         r  draw_ready_ps_i/reset/U0/EXT_LPF/lpf_int_reg/C
+
+
+
+
+

@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Oct 16 11:24:45 2026
+# Process ID         : 81828
+# Current directory  : E:/Codex_project/SonoField_v5_MinimalBOM_Audit/20261016_FinalTheory_DrawReady
+# Command line       : vivado.exe -mode batch -notrace -source E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\scripts\build_native.tcl -log E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\logs\native_full.log -journal E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\logs\native_full.jou
+# Log file           : E:/Codex_project/SonoField_v5_MinimalBOM_Audit/20261016_FinalTheory_DrawReady/logs/native_full.log
+# Journal file       : E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\logs\native_full.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 23622 MB
+# Total Virtual      : 40396 MB
+# Available Virtual  : 12346 MB
+#-----------------------------------------------------------
+source {E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\scripts\build_native.tcl} -notrace
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'E:/Codex_project/SonoField_v5_MinimalBOM_Audit/20261016_FinalTheory_DrawReady/results/native_ps_full'
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 532.082 ; gain = 218.516
+Wrote  : <E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\results\native_ps_full\final.srcs\sources_1\bd\draw_ready_ps\draw_ready_ps.bd> 
+ERROR: [filemgmt 56-195] Reference 'draw_ready_clocks' contains top file 'E:/Codex_project/AMD_Sonofield/v5/rtl/timing/draw_ready_clocks.sv' of type SystemVerilog. This type is not allowed as the top file in the reference.
+ERROR: [BD 41-1690] Unable to resolve module-source based on inputs: draw_ready_clocks
+ERROR: [BD 5-7] Error: running create_bd_cell  -type module -reference draw_ready_clocks -name clocks .
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+
+    while executing
+"create_bd_cell -type module -reference draw_ready_clocks clocks"
+    invoked from within
+"set clk [create_bd_cell -type module -reference draw_ready_clocks clocks]"
+    (file "E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\scripts\build_native.tcl" line 18)
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 16 11:25:00 2026...

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "X:\scripts\run_electrical_checks.py", line 42, in <module>
+    idx={(x['refdes'],int(x['pin'])):x['net']for x in d['pins']if x['board']=='UP'}
+                      ^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'EP'

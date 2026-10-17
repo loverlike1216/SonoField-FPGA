@@ -1,0 +1,35 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 16 18:57:54 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_exceptions -coverage -file X:/results/native21_final/EXCEPTION_COVERAGE.rpt
+| Design       : draw_ready_ps_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Exceptions Report
+
+Position  Type                     Setup           Hold            From       Through  To         Endpoints  From (%)  Through (%)  To (%)
+--------  -----------------------  --------------  --------------  ---------  -------  ---------  ---------  --------  -----------  ------
+4         Max Delay Datapath Only  max_dpo=4.5     -               34 cells            34 ports   33         97.06                  97.06
+8         Multicycle Path          cycles=16(end)  -               8 ports             128 cells  8          100.00                 2.08
+9         Multicycle Path          -               cycles=15(end)  8 ports             128 cells  8          100.00                 2.08
+10        False Path               false           false           5 ports             1 cells    1          100.00                 33.33
+11        False Path               false           false           1 ports             1 cells    1          100.00                 33.33
+12        False Path               false           false           5 ports             1 pins     1          100.00                 100.00
+13        Max Delay Datapath Only  max_dpo=1000    -               2 ports                        2          100.00                  
+14        Multicycle Path          cycles=2(end)   -               256 cells           128 cells  128        100.00                 33.33
+15        Multicycle Path          -               cycles=1(end)   256 cells           128 cells  128        100.00                 33.33
+16        False Path               false           false                               2 pins     2                                 100.00
+17        False Path               false           false                               32 cells   29                                30.21
+18        False Path               false           false                               32 cells   0                                 0.00
+19        False Path               false           false                               1 cells    1                                 33.33
+20        False Path               false           false                               1 cells    1                                 0.00
+21        False Path               false           false                               1 cells    0                                 0.00
+22        False Path               false           false                               1 cells    1                                 33.33
+23        Max Delay Datapath Only  max_dpo=4.5     -               34 cells            34 ports   33         97.06                  97.06
+
+Warning: the percentages reported indicate the number of pins covered by the exception relative to the number of pins specified implicitly or explicitly.

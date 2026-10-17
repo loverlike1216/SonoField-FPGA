@@ -5,3 +5,5 @@ SonoField-FPGA: BLOCKED / CHAT_MEMORY_ACCESS_BLOCKED. Unique chat ID/URL UNKNOWN
 [Source record](SonoField-FPGA.md) · [import requirements](CHAT_MEMORY_IMPORT_REQUIRED.md)
 
 2026-10-10 next-stage capability check: remains BLOCKED; no exposed supported externalChatGPT history reader and no imported external messages. Actual user ADC decision is separately sourced in AI-problem/decision; it is not a ChatGPT response.
+
+2026-10-16: userprovidedprivateChatGPTconversation, CHAT_MEMORY_ACCESS_BLOCKED (loginonly; no read/send tool). 0messages/0adopteddecisions. Currenttaskauthorizedautonomousdecisions independently; finalChatGPTReviewstillpending.

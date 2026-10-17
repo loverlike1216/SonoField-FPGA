@@ -1,0 +1,4 @@
+# Preserve delivery hashes, UTF-8 BOM CSVs, received inputs and tool evidence.
+* -text -filter -ident whitespace=cr-at-eol
+*.log -whitespace
+*.rpt -whitespace

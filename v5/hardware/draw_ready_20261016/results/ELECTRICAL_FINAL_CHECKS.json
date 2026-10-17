@@ -1,0 +1,115 @@
+[
+  {
+    "check": "ADC/OPA/analog switches5Vrail",
+    "status": "PASS",
+    "detail": {
+      "min": 4.9666599804464395,
+      "max": 5.202589666558075
+    }
+  },
+  {
+    "check": "LVT/5953V3rail",
+    "status": "PASS",
+    "detail": {
+      "min": 3.1612552058885144,
+      "max": 3.4323605423656183
+    }
+  },
+  {
+    "check": "Passive-load upper power and eFuse/3A connector",
+    "status": "PASS",
+    "detail": {
+      "array_upper_w": 20.784991522069205,
+      "input_at11V4_a": 1.8232448703569477,
+      "ilim_min_a": 2.2853008377760853,
+      "ilim_max_a": 2.8495726495726497
+    }
+  },
+  {
+    "check": "150R1W resistor bounded passive power",
+    "status": "PASS",
+    "detail": {
+      "upper_w": 0.1881615585780664
+    }
+  },
+  {
+    "check": "TXbuck2A and1.5A reservation",
+    "status": "PASS",
+    "detail": {
+      "upper_a": 1.296784911599858
+    }
+  },
+  {
+    "check": "Thermal estimate within stated PCB thermal budget",
+    "status": "PASS",
+    "detail": {
+      "basis": "engineering upperloss1.2W; requirePCBtheta<=65C/W, TI EVM57.2C/W is feasibility reference, noactualboardmeasurement",
+      "ambient_design_c": [
+        0,
+        40
+      ],
+      "buck_loss_design_w": 1.2,
+      "buck_theta_board_assumption": 65.0,
+      "buck_tj_estimate": 118.0,
+      "buck_theta_official_evm": 57.2,
+      "ldo_reserved_a": 0.15,
+      "ldo_tj_estimate": 76.92287163774645,
+      "scope": "THERMAL_ESTIMATE; actual copper/layout not created; TPS7A26DRV requiresEPgroundcopper;TPS54202DDC hasnoEP,usepinthermalcopper/plane/vias"
+    }
+  },
+  {
+    "check": "NU continuous<20Vpp in stated BVD envelope",
+    "status": "PASS",
+    "detail": {
+      "vpp_v": 14.95474729691442,
+      "vmin_v": -7.443384520492764,
+      "vmax_v": 7.511362776421657,
+      "r_series_w": 0.03276377171346039,
+      "driver_ron_w": 0.0006759573859609944,
+      "net_load_supply_w": 0.05098501210580196,
+      "max_edge_a": 0.053768380561516955,
+      "motional_plus_bleed_w": 0.017593666497544923,
+      "discrete_energy_residual_w": -4.838349116434784e-05
+    }
+  },
+  {
+    "check": "512 physical-pin-derived safety combinations",
+    "status": "PASS",
+    "detail": {
+      "cases": 512
+    }
+  },
+  {
+    "check": "Fault-report RC does not filter localEN cutoff",
+    "status": "PASS",
+    "detail": {
+      "v_after5ns": 3.2835411813358513,
+      "fall_below0V7_us": 1.5505974124111672,
+      "local_en": "asynchronous unfiltered"
+    }
+  },
+  {
+    "check": "Switched TX capacitance7.2uF",
+    "status": "PASS",
+    "detail": {
+      "capacitors": 36,
+      "nominal_f": 7.2e-06
+    }
+  },
+  {
+    "check": "Generic softstart inrush<1.5A, defaultoff and settled",
+    "status": "PASS",
+    "detail": {
+      "cases": 16,
+      "max_inrush_a": 0.809821406
+    }
+  },
+  {
+    "check": "Actual C biased/noncoherent feature extraction",
+    "status": "PASS",
+    "detail": {
+      "cases": 24,
+      "classification": "HOST_FIXTURE_NOT_PHYSICAL_ADC"
+    }
+  }
+]

@@ -1,0 +1,43 @@
+The system cannot find the path specified.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 11 02:56:40 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source v5/scripts/hardware_design_package_review.tcl
+# set input [lindex $argv 0]
+# set output [lindex $argv 1]
+# create_project -in_memory -part xc7z020clg400-2
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 533.996 ; gain = 219.188
+# link_design -part xc7z020clg400-2
+Command: link_design -part xc7z020clg400-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 771.723 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 911.043 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+# set data [open $input r]
+# set report [open $output w]
+# puts $report "package_pin,bank,pin_function"
+# foreach pin [split [string trim [read $data]] "\n"] {
+#     set obj [get_package_pins [string trim $pin]]
+#     if {[llength $obj] != 1} {error "Invalid or ambiguous package pin $pin"}
+#     puts $report "$pin,[get_property BANK $obj],[get_property PIN_FUNC $obj]"
+# }
+# close $data
+# close $report
+# puts "HARDWARE_DESIGN_PACKAGE_REVIEW_PASS version=[version -short]"
+HARDWARE_DESIGN_PACKAGE_REVIEW_PASS version=2025.2
+# exit
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 11 02:56:52 2026...

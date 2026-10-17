@@ -1,0 +1,29 @@
+[
+  {
+    "mpn": "12V3A isolatedregulated DCadapter; plugmatchedDC-050-20",
+    "manufacturer": "用户自配/合格电源厂商",
+    "quantity": 3,
+    "rating": "12V±5%;≥3A36W; SELVfloatingoutput; centerpositive",
+    "role": "ThreeindependentPCBinputs; AX7020usesitsownadapter",
+    "status": "PASS_THEORETICAL_SPEC;采购型号/机械插头待映射",
+    "source_url": "Userfixed12Varchitecture; DC-050-20supplierdrawing"
+  },
+  {
+    "mpn": "2.54mm2x20 male–male harness",
+    "manufacturer": "用户自配",
+    "quantity": 2,
+    "rating": "40conductors1:1; allGNDcontactsconnected;<=150mm target; nohotplug",
+    "role": "AXJ10/J11toCENTRALfemaleheaders",
+    "status": "HOLD_LAYOUT_SI_IMPLEMENTATION;理论接口已定",
+    "source_url": "03_AX7020_J10_J11_PINMAP.csv"
+  },
+  {
+    "mpn": "2.54mm2x32 male–male harness",
+    "manufacturer": "用户自配",
+    "quantity": 2,
+    "rating": "64conductors1:1; all32evenGNDconductors;<=150mm; nohotplug",
+    "role": "CENTRALtoUP/DNfemaleheaders",
+    "status": "PASS_THEORETICAL_INTERFACE;采购型号待映射",
+    "source_url": "04_CENTRAL_TO_ARRAY_2x32_PINMAP.csv"
+  }
+]

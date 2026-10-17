@@ -1,0 +1,25 @@
+The system cannot find the path specified.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Oct 11 02:32:00 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source v5/scripts/hardware_design_package_review.tcl
+# set input [lindex $argv 0]
+# set output [lindex $argv 1]
+# create_project -in_memory -part xc7z020clg400-2
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 530.074 ; gain = 217.633
+# set data [open $input r]
+# set report [open $output w]
+# puts $report "package_pin,bank,pin_function"
+# foreach pin [split [string trim [read $data]] "\n"] {
+#     set obj [get_package_pins [string trim $pin]]
+#     if {[llength $obj] != 1} {error "Invalid or ambiguous package pin $pin"}
+#     puts $report "$pin,[get_property BANK $obj],[get_property PIN_FUNC $obj]"
+# }
+ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 11 02:32:09 2026...

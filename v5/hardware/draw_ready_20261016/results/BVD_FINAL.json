@@ -1,0 +1,33 @@
+{
+  "cases": 648,
+  "worst": {
+    "c0_f": 2e-09,
+    "cm_f": 5e-10,
+    "q": 100,
+    "fs_hz": 40800,
+    "drive_hz": 41500,
+    "r_ohm": 147.675,
+    "cb_f": 9.5e-08,
+    "vpp_v": 14.954561244351837,
+    "vmin_v": -7.443221050773799,
+    "vmax_v": 7.511340193578038,
+    "r_series_w": 0.033466093958272276,
+    "driver_ron_w": 0.0006902756597128719,
+    "net_load_supply_w": 0.051328906728486244,
+    "max_edge_a": 0.05376838056151567,
+    "motional_plus_bleed_w": 0.017593668756223004,
+    "discrete_energy_residual_w": -0.00042113164572190817
+  },
+  "refined": {
+    "vpp_v": 14.95474729691442,
+    "vmin_v": -7.443384520492764,
+    "vmax_v": 7.511362776421657,
+    "r_series_w": 0.03276377171346039,
+    "driver_ron_w": 0.0006759573859609944,
+    "net_load_supply_w": 0.05098501210580196,
+    "max_edge_a": 0.053768380561516955,
+    "motional_plus_bleed_w": 0.017593666497544923,
+    "discrete_energy_residual_w": -4.838349116434784e-05
+  },
+  "scope": "UNFITTED_BVD sensitivity, motional Q/Cm are engineering assumptions, no supplier impedance fit, no SPL claim"
+}

@@ -1,0 +1,185 @@
+{
+  "checkpoint_id": "CP-20261017-GUIDEFORMAT",
+  "project_id": "SONOFIELD_FPGA",
+  "project_name": "SonoField-FPGA",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "workspace_path": "E:\\Codex_project\\AMD_Sonofield",
+  "branch": "codex/v5-hardware-design-20261011",
+  "base_commit": "62330fb35022421c0560b3bede8803c53b30b02d",
+  "head_commit": null,
+  "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json; document publication receipt is local20261017_BoardPage_StepGuide/PUBLICATION_RECEIPT.json",
+  "active_version": "v5",
+  "version_status": "ACTIVE",
+  "current_stage": "V5_THEORY_DRAW_READY_AWAIT_INDEPENDENT_REVIEW",
+  "created_at": "2026-10-17T18:00:51.519478+00:00",
+  "checkpoint_reason": "User-requested detailed board/page/placement guide conversion; electrically identical verified documents",
+  "source_of_truth": "currentrepository+actualtooloutputs",
+  "architecture_ref": "v5/hardware/draw_ready_20261016/00_FINAL_THEORY_DECISION.md",
+  "completed": [
+    "TESTED247unit",
+    "SIMULATEDtwoindependenttools128TX+8ADC+goldens+freshness",
+    "ROUTEDcompletePSPL-2positiveWNS/WHS,DRC0",
+    "MODELED90SI+648BVD+512fault+16softstartSPICE",
+    "DOCUMENTED85MPN1611devices5205pins1259passives80+128contacts",
+    "DOCUMENTED_AND_TESTED full board/page/placement guide and 13 booklets; expanded5205pins0difference;8negativechecks;2Pythonversions"
+  ],
+  "next_actions": [
+    "ChatGPTindependentReview",
+    "Onlyafternewuserrequest createactualschematic; noautomaticnextstage"
+  ],
+  "active_decisions": [
+    "User20261016autonomousv5theory/necessaryRTL-XDC/samebranchpublication",
+    "UserdevicecorrectionXC7Z020-2CLG400I",
+    "F-LVT128/256MHz;ADC8MHz400kSPS;3x12V10VTX"
+  ],
+  "blockers": [],
+  "critical_issues": [],
+  "latest_validation": [
+    {
+      "check": "UniqueMPN/pins/net/quantity",
+      "status": "PASS",
+      "evidence": "results/INDEPENDENT_CONSISTENCY_FINAL.json"
+    },
+    {
+      "check": "OEM XLSX/actualRTL-XDC/nativeIO 80+128contacts",
+      "status": "PASS",
+      "evidence": "09_RTL_XDC_PINMAP_CROSSCHECK.csv"
+    },
+    {
+      "check": "TX90 joint SI corners + worstpulse numerical convergence",
+      "status": "PASS",
+      "evidence": "results/SELECTED_FINAL_SI_INDEPENDENT.json;CONVERGENCE_FINAL.json"
+    },
+    {
+      "check": "ActualPSPL synthesis/place/route setup+hold+DRC",
+      "status": "PASS",
+      "evidence": "results/native21/"
+    },
+    {
+      "check": "128TX256phases38500/40000/41500Hz and fresh/defaultoff",
+      "status": "PASS",
+      "evidence": "results/final_digital_qualified_final/summary.json"
+    },
+    {
+      "check": "8DOUT400kSPS2048signedframes/read/ACK two tools",
+      "status": "PASS",
+      "evidence": "results/capture_adc_final/summary.json"
+    },
+    {
+      "check": "ActualGPIO/AXI/mailbox/ADC44nsproduction replay",
+      "status": "PASS",
+      "evidence": "results/production_profile_adc_final_fixed/summary.json"
+    },
+    {
+      "check": "Legacyindependent scheduler/queue/array golden",
+      "status": "PASS",
+      "evidence": "v5/evidence/final_theory_20261016/independent_qualified_final/summary.json"
+    },
+    {
+      "check": "Python247unit",
+      "status": "PASS",
+      "evidence": "logs/unit_sealed_final247.log"
+    },
+    {
+      "check": "3696frames x3Icarus+1XSim functional motion/goldens",
+      "status": "PASS",
+      "evidence": "v5/evidence/final_theory_20261016/functional_final128/motion/SUMMARY.json"
+    },
+    {
+      "check": "Originalfrozen_parent sourcehash gate",
+      "status": "FAIL",
+      "evidence": "OriginalFAILretained; explicitlyauthorizedRTLchanges; independentreviewofauthorizeddelta pending"
+    },
+    {
+      "check": "Power/BVD/thermal/fault/Cfeature bounded checks",
+      "status": "PASS",
+      "evidence": "results/ELECTRICAL_FINAL_CHECKS.json"
+    },
+    {
+      "check": "FullcompliantdynamicIBIS/realSSO/PCBPDN",
+      "status": "HOLD",
+      "evidence": "Notclaimed; datasheet/staticIVandboundedgeometry fallback used"
+    },
+    {
+      "check": "NativeEasyEDA/ERC",
+      "status": "NOT_CHECKED",
+      "evidence": "Schematic/PCBNOT_CREATED"
+    },
+    {
+      "check": "Physicalpower/acoustic/ADC/thermal/runtime",
+      "status": "NOT_CHECKED",
+      "evidence": "OnlyJTAGreadonlyID; nohardwarewrites"
+    },
+    {
+      "check": "FulltargetPSruntime/BSP deployment",
+      "status": "HOLD",
+      "evidence": "Noimageprogrammed; existing safe-status image is not production runtime"
+    },
+    {
+      "check": "ExternalChatGPTindependentreview",
+      "status": "HOLD",
+      "evidence": "Reader/senderunavailable;0messages/decisions; candidatewaitsreview"
+    },
+    {
+      "check": "Procurement/footprintmapping/PCBorder",
+      "status": "HOLD",
+      "evidence": "Noorders/manufacturingauthorization"
+    },
+    {
+      "check": "Actual GitHub CI at implementation commit",
+      "status": "FAIL",
+      "evidence": "v5/hardware/draw_ready_20261016/PUBLICATION_RECEIPT.json",
+      "reason": "Prior reviewed source hashes reject 8 authorized adaptations; independent Review pending, no gate relaxation"
+    },
+    {
+      "check": "Detailed guide representation equivalence",
+      "status": "PASS",
+      "evidence": "v5/hardware/draw_ready_20261016/guide_by_page_20261017/results/CONSISTENCY.json",
+      "source_sha256": "8db415eb181ea840831148a40458620974d549f5b8052f325b23a7e89f21b9ee",
+      "output_sha256": "d897bad1cf87862eeee3d632321b8b23ebea5d8108426947e50715a3b4bb1c48",
+      "expanded_pins": 5205,
+      "negative_checks": 8,
+      "scope": "Document equivalence only; no new ERC/hardware or circuit acceptance"
+    }
+  ],
+  "known_limitations": [
+    "Originalfrozen_parenthashFAILretained",
+    "FullIBIS/SSO/PDNnotqualified",
+    "NoCAD/ERC/physical/deployment",
+    "ChatGPTreadsendBLOCKED"
+  ],
+  "do_not_change": [
+    "NoV6",
+    "NoHistoricalprojectbodyreads/changes",
+    "NoS3/S4/nativeEDAmodifications",
+    "NoMainmerge/hardwarewrites/fabrication/procurement"
+  ],
+  "invariants": [
+    "128TX8RX",
+    "8bitrequested/calibrationseparate",
+    "atomiccompletemapcommit",
+    "40kHz256phases50Hzmotion",
+    "UCC27624andSN74LVC595A",
+    "threeindependent12V/fixed10VTX",
+    "2x20+2x32physicalpincontracts"
+  ],
+  "open_ai_problems": [
+    "P-20261016-001"
+  ],
+  "evidence_refs": [
+    "v5/hardware/draw_ready_20261016/results/FINAL_NATIVE_SOURCE_MANIFEST.json",
+    "v5/hardware/draw_ready_20261016/09_RTL_XDC_PINMAP_CROSSCHECK.csv",
+    "v5/hardware/draw_ready_20261016/results/native21/NATIVE_ROUTED_TIMING.rpt",
+    "v5/hardware/draw_ready_20261016/guide_by_page_20261017/results/CONSISTENCY.json"
+  ],
+  "resume_from": "v5/hardware/draw_ready_20261016/FINAL_REVIEW.md",
+  "status": "VALID_THEORY_CANDIDATE_REVIEW_PENDING",
+  "draw_ready": true,
+  "overall": "ACCEPT WITH LIMITATIONS",
+  "audit_root": "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady",
+  "implementation_commit": "c4b798437f08339c54d15b80229779140298898b",
+  "guide_ref": "v5/hardware/draw_ready_20261016/guide_by_page_20261017/README.md",
+  "guide_equivalence_evidence": "v5/hardware/draw_ready_20261016/guide_by_page_20261017/results/CONSISTENCY.json",
+  "previous_checkpoint_id": "CP-20261016-FINALTHEORY",
+  "repository_delta_since_previous_checkpoint": "Add only guide conversion, verification scripts/logs and recovery/interaction metadata; no BOM/RTL/XDC/circuit changes"
+}

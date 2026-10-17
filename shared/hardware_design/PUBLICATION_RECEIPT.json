@@ -1,0 +1,52 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "created_at": "2026-10-10T19:05:11.633836+00:00",
+  "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
+  "branch": "codex/v5-hardware-design-20261011",
+  "source_commit": "6ba6314be25db2268d00a35260285afdc4fe9f9c",
+  "evidence_commit": "09201d34d15b21c4956f2d2377cc4daea33b1f71",
+  "pr": {
+    "baseRefName": "codex/v5-ad7606c16-nextstage-20261010",
+    "headRefName": "codex/v5-hardware-design-20261011",
+    "headRefOid": "09201d34d15b21c4956f2d2377cc4daea33b1f71",
+    "isDraft": true,
+    "mergedAt": null,
+    "number": 5,
+    "state": "OPEN",
+    "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/5"
+  },
+  "remote_seal": "shared/hardware_design/REMOTE_SEAL_VERIFICATION.json",
+  "seal_count": 417,
+  "ci": [
+    {
+      "conclusion": "success",
+      "databaseId": 38078261443,
+      "event": "pull_request",
+      "headSha": "09201d34d15b21c4956f2d2377cc4daea33b1f71",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38078261443"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38078257570,
+      "event": "push",
+      "headSha": "09201d34d15b21c4956f2d2377cc4daea33b1f71",
+      "status": "completed",
+      "url": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38078257570"
+    }
+  ],
+  "ci_scope": "Ubuntu structural/frozenGitmetadata/current40modeltests/independent80contact+68nativeCSV/404BOMformulas; not nativeEDA or physicalhardware",
+  "main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "main_promoted": false,
+  "base_pr4": "618b6f1ffe3dae9b98c59bf1c981349e48644662",
+  "user_authority": "Actual user autonomous development and GitHub synchronization; no repeated routine-push permission request",
+  "quality": {
+    "stage": "ACCEPT WITH LIMITATIONS",
+    "whole_platform": "REVISE",
+    "manufacturing": "HOLD"
+  },
+  "containing_receipt_commit": null,
+  "containing_receipt_commit_resolution": "git log -1 --format=%H -- shared/hardware_design/PUBLICATION_RECEIPT.json",
+  "rollback": "v5/docs/hardware/ROLLBACK.md"
+}

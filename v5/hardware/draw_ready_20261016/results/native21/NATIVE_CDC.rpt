@@ -1,0 +1,21 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 16 18:55:32 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_cdc -file X:/results/native21/NATIVE_CDC.rpt
+| Design       : draw_ready_ps_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+Severity  Source Clock      Destination Clock  CDC Type                 Exceptions  Endpoints  Safe  Unsafe  Unknown  No ASYNC_REG  
+--------  ----------------  -----------------  -----------------------  ----------  ---------  ----  ------  -------  ------------  
+Critical  input port clock  c128               No Common Primary Clock  False Path          9     8       0        1             0  
+Info      ADC_SCLK          c128               Safely Timed             None                8     8       0        0             0  
+Info      c256              c128               Safely Timed             None                2     2       0        0             0  
+Info      c128              c256               Safely Timed             None              130   130       0        0             0  
+

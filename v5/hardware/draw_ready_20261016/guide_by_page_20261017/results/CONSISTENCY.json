@@ -1,0 +1,82 @@
+{
+  "template_devices": 982,
+  "expanded_devices": 1611,
+  "template_pins": 3241,
+  "expanded_pins": 5205,
+  "template_networks": 685,
+  "expanded_networks": 1088,
+  "expanded_passives": 1259,
+  "fpga_contacts": 80,
+  "array_contacts": 128,
+  "nc_pins": 261,
+  "pages": 13,
+  "page_devices": {
+    "CENTRAL/00_POWER": 55,
+    "CENTRAL/01_FPGA_HEADERS": 3,
+    "CENTRAL/02_TX_BUFFERS": 167,
+    "CENTRAL/03_ARRAY_HEADERS": 2,
+    "CENTRAL/04_ADC": 52,
+    "CENTRAL/05_RX_INPUT": 40,
+    "CENTRAL/06_I2C_TEMP_SAFETY": 34,
+    "ARRAY/00_POWER": 80,
+    "ARRAY/01_LINK_BUFFERS": 40,
+    "ARRAY/02_595": 96,
+    "ARRAY/03_UCC_TX": 324,
+    "ARRAY/04_RX": 38,
+    "ARRAY/05_SAFETY_TEMP": 51
+  },
+  "page_booklets_verified": 13,
+  "status": "PASS",
+  "contract_differences": 0,
+  "input_files_unchanged": true,
+  "source_guide_sha256": "8db415eb181ea840831148a40458620974d549f5b8052f325b23a7e89f21b9ee",
+  "output_guide_sha256": "d897bad1cf87862eeee3d632321b8b23ebea5d8108426947e50715a3b4bb1c48",
+  "negative_checks": [
+    {
+      "case": "missing_SER_physical_pin",
+      "status": "PASS_REJECTED",
+      "reason": "final physical pin omission/extra"
+    },
+    {
+      "case": "wrong_SER_network",
+      "status": "PASS_REJECTED",
+      "reason": "final/original pin mismatch ('ARRAY', 'U_SR00', '14') net"
+    },
+    {
+      "case": "wrong_series_resistor_value",
+      "status": "PASS_REJECTED",
+      "reason": "passive value mismatch ('ARRAY', 'R_TX00')"
+    },
+    {
+      "case": "wrong_connected_device_pin",
+      "status": "PASS_REJECTED",
+      "reason": "wrong direct same-net peer ('CENTRAL', 'J_PWR', '1')"
+    },
+    {
+      "case": "wrong_FPGA_cable_pin",
+      "status": "PASS_REJECTED",
+      "reason": "FPGA 80-contact mapping changed"
+    },
+    {
+      "case": "wrong_component_page",
+      "status": "PASS_REJECTED",
+      "reason": "pin row page differs from placement ('CENTRAL', 'U_EF', '1')"
+    },
+    {
+      "case": "wrong_polarized_capacitor_orientation",
+      "status": "PASS_REJECTED",
+      "reason": "passive polarity mismatch ('CENTRAL', 'C_EF_OUT')"
+    },
+    {
+      "case": "missing_full_net_endpoint",
+      "status": "PASS_REJECTED",
+      "reason": "wrong/incomplete full net endpoints N0001"
+    }
+  ],
+  "native_erc": "NOT_CHECKED",
+  "hardware": "NOT_CHECKED",
+  "circuit_changes": false,
+  "rtl_xdc_changes": false,
+  "scope": "Representation equivalence only; no new electrical or hardware acceptance",
+  "python_version": "3.10.11"
+}

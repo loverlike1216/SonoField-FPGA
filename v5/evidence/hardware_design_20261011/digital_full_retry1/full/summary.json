@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "classification": "OFFLINE_NOT_PHYSICAL",
+  "commands": [
+    {
+      "name": "preservation",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\check_prepcb_preservation.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "inherited_full",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\run_baseline.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry1\\full\\inherited_full"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "started_at": "2026-10-10T18:33:20.426916+00:00",
+  "source_root": "E:\\Codex_project\\AMD_Sonofield\\v5",
+  "python": "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+  "error": "inherited_full failed; preserve logs"
+}

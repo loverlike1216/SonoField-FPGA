@@ -1,0 +1,10 @@
+preservation 0
+inherited_full 1
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_prepcb.py", line 28, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_prepcb.py", line 21, in main
+    run('inherited_full','run_baseline.py','--output',out/'inherited_full')
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_prepcb.py", line 18, in run
+    if proc.returncode:raise RuntimeError(name+' failed; preserve logs')
+RuntimeError: inherited_full failed; preserve logs

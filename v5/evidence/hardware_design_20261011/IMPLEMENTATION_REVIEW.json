@@ -1,0 +1,13 @@
+{
+  "status": "REVIEWED_WITH_EXPLICIT_LIMITATIONS",
+  "method": "Scoped rg current RTL/software/firmware/scripts; no archive access",
+  "findings": [
+    "disabled matches are safety/UI states",
+    "CRC-enabled profile intentionally unsupported; unexpected CRC enable rejected; not claimed verified",
+    "old package stub is native database fixture only, not core implementation",
+    "new safety/I2C models explicitly offline; no claims of native electrical circuit",
+    "Confirmed63GPIOwrapper gaps and nativeCAD/ERC absent are recorded release blockers"
+  ],
+  "core_fake_implementation_found": false,
+  "hardware_completeness": "REVISE"
+}

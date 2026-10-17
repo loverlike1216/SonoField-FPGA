@@ -1,0 +1,44 @@
+The system cannot find the path specified.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Oct 16 11:42:49 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source X:/scripts/build_native.tcl
+# set audit [file normalize [file join [file dirname [info script]] ..]]
+# set root E:/Codex_project/AMD_Sonofield/v5
+# set label [expr {[llength $argv]?[lindex $argv 0]:"native01"}]
+# set work [file join $audit $label]
+# if {[file exists [file join $work final.xpr]]} {error "Use fresh implementation directory"}
+# create_project final $work -part xc7z020clg400-1
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 531.113 ; gain = 219.430
+# set_property source_mgmt_mode None [current_project]
+# set f [open [file join $root config nextstage_source_list.txt] r]
+# foreach rel [split [string trim [read $f]] \n] {
+#  set p [file join $root [string trim $rel]]
+#  if {[file extension $p]eq ".v"} {read_verilog $p} else {read_verilog -sv $p}
+# }
+# close $f
+# read_verilog [file join $root rtl board draw_ready_pl.v]
+# read_verilog [file join $root rtl timing draw_ready_clocks.v]
+# set_property include_dirs [list [file join $root rtl generated]] [current_fileset]
+# create_bd_design draw_ready_ps
+Wrote  : <X:\native03\final.srcs\sources_1\bd\draw_ready_ps\draw_ready_ps.bd> 
+# set ps [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:* ps7]
+# set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_EN_CLK0_PORT {1} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1} CONFIG.PCW_UIPARAM_DDR_ENABLE {0} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART1_UART1_IO {MIO 48 .. 49}] $ps
+CRITICAL WARNING: [filemgmt 56-176] Module references are not supported in manual compile order mode and will be ignored.
+ERROR: [filemgmt 56-587] Failed to resolve reference. Nothing was found in the project to match the name draw_ready_clocks Try changing the compile order from manual to automatic. 
+ERROR: [BD 41-1690] Unable to resolve module-source based on inputs: draw_ready_clocks
+ERROR: [BD 5-7] Error: running create_bd_cell  -type module -reference draw_ready_clocks -name clocks .
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+
+    while executing
+"create_bd_cell -type module -reference draw_ready_clocks clocks"
+    invoked from within
+"set clk [create_bd_cell -type module -reference draw_ready_clocks clocks]"
+    (file "X:/scripts/build_native.tcl" line 20)
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 16 11:43:06 2026...

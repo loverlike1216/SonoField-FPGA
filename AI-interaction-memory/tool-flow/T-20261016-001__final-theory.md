@@ -1,0 +1,5 @@
+# Observable tool flow
+
+Recovery/backups→primarydatamanuals→JTAGreadonly→models and genuinefailurecorrection→Icarus/XSim→ngspice→fullVivadoPS/PLroute→independentvendor/XDC/nativepincheck→artifact-toolXLSX render/recalc→pytest8checks→reviewablepublicsubset/secretcheck→authorizedsamebranchGitpublication. Exactcommands/scripts/versions/logs in v5/hardware/draw_ready_20261016 and localaudit. Not a hidden reasoning transcript. NoEDA drawing,hardwarewrites orChatGPTconsultations.
+
+Publication checks: local and public REPRODUCE Validate both executed with 8/8 checks passing. Raw packet bytes are retained by its local .gitattributes and indexed by DELIVERY_SHA256.csv; formal source hashes retain the documented CRLF-to-LF policy. Secret/privacy checks cover the reviewed source, packet and workbook XML. A nonfunctional whitespace warning in serializer_pipeline_44.sv line 34 is retained rather than changing the sealed native21 source for style. Original files and earlier failure logs remain. This warning is not a timing or simulation failure and is not reported as a passing whitespace check.

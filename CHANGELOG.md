@@ -1,3 +1,9 @@
+# 2026-10-11 v5 hardware design candidate
+
+Four-source/63GPIO candidate,40newtests,5sheet101typeBOM,real2025.2packageaudit,
+full243digitalgate andclean243/12assetreproduction; nativeCAD/ERC/physicalHOLD.
+No versionupgrade/historybody/coretest/threshold change. CP-20261011-001.
+
 # 2026-10-10 v5 UART continuation
 
 Close UART driver enumeration blocker (COM3Code0), add lockedpyserial3.5,
@@ -39,3 +45,16 @@ CP006 and full report record all holds; no physicaloperation or automaticmainmer
 Audited3911historicalGitpathmoves preservingbody/blob/mode; currentv5/shared/openProblems remain. Exact Historical project root, explicitreadban, currentsearchallowlist andmetadata-onlyCI. Before171-test/four-run baselinePASS;afterindependentclonevalidationinprogress. Samev5;main/hardware/manufacturingpromotionrequiresseparateapproval.
 
 HistoricalcandidateafterverificationPASS:171tests/3696×4/newprePCBextra/three nativeOOC+reopens/history-absentnewvenv;seeCP008andcurrentcleanupFINAL_VERIFICATION. No hardware/mainpromotion.
+
+
+## Current task update 2026-10-16
+
+# Current v5 state — 2026-10-16
+
+THEORY_DRAW_READY=YES; ACCEPT WITH LIMITATIONS; P0theory=0. This is a candidate waiting independentReview, not main/PCB/hardware acceptance. Current files: v5/hardware/draw_ready_20261016. Board userconfirmedXC7Z020-2CLG400I;128/256MHzF-LVT;three12Vinputs/fixed10VTX;ADC8DOUT8MHz400kSPS. Originalfrozen_parenthashFAILretained and explained; all oldgoldens/thresholds retained.
+
+Next action: STOPforChatGPTindependentReview. Do not automatically create schematic/PCB, programhardware, buy, merge main or createv6. NativeERC/physical/runtime/SSO/PDN remain unqualified within statedscope.
+
+## 2026-10-17
+
+Add board/page/placement connection guide plus13booklets; independently verify all5205pins, values, interfaces andsame-net peers, zero electrical changes;8negative checks andtwoPythonversionsPASS. Original design candidate/Review/CI failure unchanged.

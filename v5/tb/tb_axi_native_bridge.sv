@@ -1,6 +1,7 @@
 `timescale 1ns/1ps
 module tb_axi_native_bridge;
  reg clk=0;always #5 clk=~clk;
+ wire tx_clk=clk; //Legacy profile: fast clock input unused.
  reg rst_n=0;
  reg [31:0] s_awaddr=0,s_wdata=0,s_araddr=0;reg[3:0]s_wstrb=15;
  reg s_awvalid=0,s_wvalid=0,s_arvalid=0,s_bready=0,s_rready=0;

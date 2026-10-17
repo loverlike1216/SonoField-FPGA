@@ -1,0 +1,39 @@
+{
+  "rails": {
+    "V3V3": {
+      "min": 3.1612552058885144,
+      "max": 3.4323605423656183
+    },
+    "V7V15": {
+      "min": 6.88006438957476,
+      "max": 7.428184756296203
+    },
+    "VTX_PRE": {
+      "min": 9.638995468661928,
+      "max": 10.392629304498183
+    },
+    "V5A": {
+      "min": 4.9666599804464395,
+      "max": 5.202589666558075
+    }
+  },
+  "tx_bus_transient_assumption_v": 0.15,
+  "tx_upper_w": 12.49970388674019,
+  "array_input_upper_w": 20.784991522069205,
+  "array_reserved_w": 24,
+  "central_reserved_w": 8,
+  "adapter_each": "regulated12V3A36W, independently isolated SELV output",
+  "thermal": {
+    "ambient_design_c": [
+      0,
+      40
+    ],
+    "buck_loss_design_w": 1.2,
+    "buck_theta_board_assumption": 65.0,
+    "buck_tj_estimate": 118.0,
+    "buck_theta_official_evm": 57.2,
+    "ldo_reserved_a": 0.15,
+    "ldo_tj_estimate": 76.92287163774645,
+    "scope": "THERMAL_ESTIMATE; actual copper/layout not created; TPS7A26DRV requiresEPgroundcopper;TPS54202DDC hasnoEP,usepinthermalcopper/plane/vias"
+  }
+}

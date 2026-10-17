@@ -1,0 +1,425 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "negative_cases": [
+    {
+      "case": "bank",
+      "rejected": true
+    },
+    {
+      "case": "duplicate",
+      "rejected": true
+    },
+    {
+      "case": "power",
+      "rejected": true
+    },
+    {
+      "case": "reset",
+      "rejected": true
+    },
+    {
+      "case": "lane",
+      "rejected": true
+    },
+    {
+      "case": "polarity",
+      "rejected": true
+    },
+    {
+      "case": "tile",
+      "rejected": true
+    },
+    {
+      "case": "unknown_suffix",
+      "rejected": true
+    }
+  ],
+  "manual_short_name_differences": [
+    {
+      "package_pin": "R14",
+      "manual": "IO_L6N_T0_34",
+      "native": "IO_L6N_T0_VREF_34",
+      "identity": [
+        "IO_L6N_T0",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "U15",
+      "manual": "IO_L11N_T1_34",
+      "native": "IO_L11N_T1_SRCC_34",
+      "identity": [
+        "IO_L11N_T1",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "U14",
+      "manual": "IO_L11P_T1_34",
+      "native": "IO_L11P_T1_SRCC_34",
+      "identity": [
+        "IO_L11P_T1",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "U17",
+      "manual": "IO_L9N _T1_34",
+      "native": "IO_L9N_T1_DQS_34",
+      "identity": [
+        "IO_L9N_T1",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "T16",
+      "manual": "IO_L9P_T1_34",
+      "native": "IO_L9P_T1_DQS_34",
+      "identity": [
+        "IO_L9P_T1",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "V18",
+      "manual": "IO_L21_N_T3_34",
+      "native": "IO_L21N_T3_DQS_34",
+      "identity": [
+        "IO_L21N_T3",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "V17",
+      "manual": "IO_L21_P_T3_34",
+      "native": "IO_L21P_T3_DQS_34",
+      "identity": [
+        "IO_L21P_T3",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "V13",
+      "manual": "IO_L3N_T0_34",
+      "native": "IO_L3N_T0_DQS_34",
+      "identity": [
+        "IO_L3N_T0",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "U13",
+      "manual": "IO_L3P_T0_34",
+      "native": "IO_L3P_T0_DQS_PUDC_B_34",
+      "identity": [
+        "IO_L3P_T0",
+        "34"
+      ]
+    },
+    {
+      "package_pin": "A20",
+      "manual": "IO_L2N_T0_35",
+      "native": "IO_L2N_T0_AD8N_35",
+      "identity": [
+        "IO_L2N_T0",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "B19",
+      "manual": "IO_L2P_T0_35",
+      "native": "IO_L2P_T0_AD8P_35",
+      "identity": [
+        "IO_L2P_T0",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "B20",
+      "manual": "IO_L1N_T0_35",
+      "native": "IO_L1N_T0_AD0N_35",
+      "identity": [
+        "IO_L1N_T0",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "C20",
+      "manual": "IO_L1P_T0_35",
+      "native": "IO_L1P_T0_AD0P_35",
+      "identity": [
+        "IO_L1P_T0",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "F17",
+      "manual": "IO_L6N_T0_35",
+      "native": "IO_L6N_T0_VREF_35",
+      "identity": [
+        "IO_L6N_T0",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "F20",
+      "manual": "IO_L15N_T2_35",
+      "native": "IO_L15N_T2_DQS_AD12N_35",
+      "identity": [
+        "IO_L15N_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "F19",
+      "manual": "IO_L15P_T2_35",
+      "native": "IO_L15P_T2_DQS_AD12P_35",
+      "identity": [
+        "IO_L15P_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "G20",
+      "manual": "IO_L18N_T2_35",
+      "native": "IO_L18N_T2_AD13N_35",
+      "identity": [
+        "IO_L18N_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "G19",
+      "manual": "IO_L18P_T2_35",
+      "native": "IO_L18P_T2_AD13P_35",
+      "identity": [
+        "IO_L18P_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "H18",
+      "manual": "IO_L14N_T2_35",
+      "native": "IO_L14N_T2_AD4N_SRCC_35",
+      "identity": [
+        "IO_L14N_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "J18",
+      "manual": "IO_L14P_T2_35",
+      "native": "IO_L14P_T2_AD4P_SRCC_35",
+      "identity": [
+        "IO_L14P_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "L20",
+      "manual": "IO_L9N_T1_35",
+      "native": "IO_L9N_T1_DQS_AD3N_35",
+      "identity": [
+        "IO_L9N_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "L19",
+      "manual": "IO_L9P_T1_35",
+      "native": "IO_L9P_T1_DQS_AD3P_35",
+      "identity": [
+        "IO_L9P_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "M20",
+      "manual": "IO_L7N_T1_35",
+      "native": "IO_L7N_T1_AD2N_35",
+      "identity": [
+        "IO_L7N_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "M19",
+      "manual": "IO_L7P_T1_35",
+      "native": "IO_L7P_T1_AD2P_35",
+      "identity": [
+        "IO_L7P_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "K18",
+      "manual": "IO_L12N_T1_35",
+      "native": "IO_L12N_T1_MRCC_35",
+      "identity": [
+        "IO_L12N_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "K17",
+      "manual": "IO_L12P_T1_35",
+      "native": "IO_L12P_T1_MRCC_35",
+      "identity": [
+        "IO_L12P_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "J19",
+      "manual": "IO_L10N_T1_35",
+      "native": "IO_L10N_T1_AD11N_35",
+      "identity": [
+        "IO_L10N_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "K19",
+      "manual": "IO_L10P_T1_35",
+      "native": "IO_L10P_T1_AD11P_35",
+      "identity": [
+        "IO_L10P_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "H20",
+      "manual": "IO_L17N_T2_35",
+      "native": "IO_L17N_T2_AD5N_35",
+      "identity": [
+        "IO_L17N_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "J20",
+      "manual": "IO_L17P_T2_35",
+      "native": "IO_L17P_T2_AD5P_35",
+      "identity": [
+        "IO_L17P_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "L17",
+      "manual": "IO_L11N_T1_35",
+      "native": "IO_L11N_T1_SRCC_35",
+      "identity": [
+        "IO_L11N_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "L16",
+      "manual": "IO_L11P_T1_35",
+      "native": "IO_L11P_T1_SRCC_35",
+      "identity": [
+        "IO_L11P_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "M18",
+      "manual": "IO_L8N_T1_35",
+      "native": "IO_L8N_T1_AD10N_35",
+      "identity": [
+        "IO_L8N_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "M17",
+      "manual": "IO_L8P_T1_35",
+      "native": "IO_L8P_T1_AD10P_35",
+      "identity": [
+        "IO_L8P_T1",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "E19",
+      "manual": "IO_L5N_T0_35",
+      "native": "IO_L5N_T0_AD9N_35",
+      "identity": [
+        "IO_L5N_T0",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "E18",
+      "manual": "IO_L5P_T0_35",
+      "native": "IO_L5P_T0_AD9P_35",
+      "identity": [
+        "IO_L5P_T0",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "H17",
+      "manual": "IO_L13N_T2_35",
+      "native": "IO_L13N_T2_MRCC_35",
+      "identity": [
+        "IO_L13N_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "H16",
+      "manual": "IO_L13P_T2_35",
+      "native": "IO_L13P_T2_MRCC_35",
+      "identity": [
+        "IO_L13P_T2",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "G15",
+      "manual": "IO_L19N_T3_35",
+      "native": "IO_L19N_T3_VREF_35",
+      "identity": [
+        "IO_L19N_T3",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "J14",
+      "manual": "IO_L20N_T3_35",
+      "native": "IO_L20N_T3_AD6N_35",
+      "identity": [
+        "IO_L20N_T3",
+        "35"
+      ]
+    },
+    {
+      "package_pin": "K14",
+      "manual": "IO_L20P_T3_35",
+      "native": "IO_L20P_T3_AD6P_35",
+      "identity": [
+        "IO_L20P_T3",
+        "35"
+      ]
+    }
+  ],
+  "native_package_pins": 68,
+  "contacts": 80,
+  "used_gpio": 63,
+  "spare_gpio": 5,
+  "installed_counts": {
+    "Upper": 551,
+    "Lower": 551,
+    "Central": 83,
+    "External": 20
+  },
+  "component_references": 1205,
+  "bom_sha256": "a55b38dab4ce6004ac542e2c5fc0a09a365616ebbe9b3ec2bdf603f7a1726b1c",
+  "source": "Native Vivado2025.2 package CSV vs independently parsed manual80; XLSX XML formula caches vs Python JSON reduction",
+  "physical_pin_continuity": "NOT_RUN",
+  "erc": "NOT_RUN",
+  "production": "HOLD"
+}

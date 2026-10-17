@@ -1,0 +1,1007 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 16 18:57:51 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_timing -from [get_cells -hier -include_replicated_objects -filter {NAME =~ *tx44*serial*tx*serial_data_reg* || NAME =~ *tx44*serial*tx*shift_clock_reg || NAME =~ *tx44*serial*tx*latch_clock_reg}] -to [get_ports {{serial_data_0[*]} shift_clock_0 latch_clock_0}] -delay_type max -max_paths 40 -file X:/results/native21_final/PAD_TIMING.rpt
+| Design       : draw_ready_ps_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.024ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[9]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.476ns  (logic 3.475ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y84                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[9]/C
+    OLOGIC_X1Y84         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[9]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[9]
+    W14                  OBUF (Prop_obuf_I_O)         3.057     3.476 r  serial_data_0_OBUF[9]_inst/O
+                         net (fo=0)                   0.000     3.476    serial_data_0[9]
+    W14                                                               r  serial_data_0[9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.476    
+  -------------------------------------------------------------------
+                         slack                                  1.024    
+
+Slack (MET) :             1.035ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[13]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[13]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.465ns  (logic 3.464ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y78                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[13]/C
+    OLOGIC_X1Y78         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[13]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[13]
+    U14                  OBUF (Prop_obuf_I_O)         3.046     3.465 r  serial_data_0_OBUF[13]_inst/O
+                         net (fo=0)                   0.000     3.465    serial_data_0[13]
+    U14                                                               r  serial_data_0[13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.465    
+  -------------------------------------------------------------------
+                         slack                                  1.035    
+
+Slack (MET) :             1.036ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[8]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.464ns  (logic 3.463ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y83                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[8]/C
+    OLOGIC_X1Y83         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[8]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[8]
+    Y14                  OBUF (Prop_obuf_I_O)         3.045     3.464 r  serial_data_0_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     3.464    serial_data_0[8]
+    Y14                                                               r  serial_data_0[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.464    
+  -------------------------------------------------------------------
+                         slack                                  1.036    
+
+Slack (MET) :             1.040ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[12]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.460ns  (logic 3.459ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y77                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[12]/C
+    OLOGIC_X1Y77         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[12]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[12]
+    U15                  OBUF (Prop_obuf_I_O)         3.041     3.460 r  serial_data_0_OBUF[12]_inst/O
+                         net (fo=0)                   0.000     3.460    serial_data_0[12]
+    U15                                                               r  serial_data_0[12] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.460    
+  -------------------------------------------------------------------
+                         slack                                  1.040    
+
+Slack (MET) :             1.046ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[6]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.454ns  (logic 3.453ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y79                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[6]/C
+    OLOGIC_X1Y79         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[6]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[6]
+    W15                  OBUF (Prop_obuf_I_O)         3.035     3.454 r  serial_data_0_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     3.454    serial_data_0[6]
+    W15                                                               r  serial_data_0[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.454    
+  -------------------------------------------------------------------
+                         slack                                  1.046    
+
+Slack (MET) :             1.047ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[7]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.453ns  (logic 3.452ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y80                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[7]/C
+    OLOGIC_X1Y80         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[7]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[7]
+    V15                  OBUF (Prop_obuf_I_O)         3.034     3.453 r  serial_data_0_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     3.453    serial_data_0[7]
+    V15                                                               r  serial_data_0[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.453    
+  -------------------------------------------------------------------
+                         slack                                  1.047    
+
+Slack (MET) :             1.055ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[5]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[5]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.445ns  (logic 3.444ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y86                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[5]/C
+    OLOGIC_X1Y86         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[5]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[5]
+    Y16                  OBUF (Prop_obuf_I_O)         3.026     3.445 r  serial_data_0_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     3.445    serial_data_0[5]
+    Y16                                                               r  serial_data_0[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.445    
+  -------------------------------------------------------------------
+                         slack                                  1.055    
+
+Slack (MET) :             1.058ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[4]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.442ns  (logic 3.441ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y85                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[4]/C
+    OLOGIC_X1Y85         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[4]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[4]
+    Y17                  OBUF (Prop_obuf_I_O)         3.023     3.442 r  serial_data_0_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     3.442    serial_data_0[4]
+    Y17                                                               r  serial_data_0[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.442    
+  -------------------------------------------------------------------
+                         slack                                  1.058    
+
+Slack (MET) :             1.077ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/shift_clock_reg/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            shift_clock_0
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.423ns  (logic 3.422ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y81                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/shift_clock_reg/C
+    OLOGIC_X1Y81         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/shift_clock_reg/Q
+                         net (fo=1, routed)           0.001     0.419    shift_clock_0_OBUF
+    U17                  OBUF (Prop_obuf_I_O)         3.004     3.423 r  shift_clock_0_OBUF_inst/O
+                         net (fo=0)                   0.000     3.423    shift_clock_0
+    U17                                                               r  shift_clock_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.423    
+  -------------------------------------------------------------------
+                         slack                                  1.077    
+
+Slack (MET) :             1.082ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[26]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.418ns  (logic 3.417ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y135                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[26]/C
+    OLOGIC_X1Y135        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[26]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[26]
+    M20                  OBUF (Prop_obuf_I_O)         2.999     3.418 r  serial_data_0_OBUF[26]_inst/O
+                         net (fo=0)                   0.000     3.418    serial_data_0[26]
+    M20                                                               r  serial_data_0[26] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.418    
+  -------------------------------------------------------------------
+                         slack                                  1.082    
+
+Slack (MET) :             1.092ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[27]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[27]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.408ns  (logic 3.407ns (99.971%)  route 0.001ns (0.029%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y136                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[27]/C
+    OLOGIC_X1Y136        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[27]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[27]
+    M19                  OBUF (Prop_obuf_I_O)         2.989     3.408 r  serial_data_0_OBUF[27]_inst/O
+                         net (fo=0)                   0.000     3.408    serial_data_0[27]
+    M19                                                               r  serial_data_0[27] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.408    
+  -------------------------------------------------------------------
+                         slack                                  1.092    
+
+Slack (MET) :             1.112ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[24]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[24]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.388ns  (logic 3.387ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y131                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[24]/C
+    OLOGIC_X1Y131        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[24]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[24]
+    L20                  OBUF (Prop_obuf_I_O)         2.969     3.388 r  serial_data_0_OBUF[24]_inst/O
+                         net (fo=0)                   0.000     3.388    serial_data_0[24]
+    L20                                                               r  serial_data_0[24] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.388    
+  -------------------------------------------------------------------
+                         slack                                  1.112    
+
+Slack (MET) :             1.114ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[31]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[31]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.386ns  (logic 3.385ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y130                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[31]/C
+    OLOGIC_X1Y130        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[31]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[31]
+    K19                  OBUF (Prop_obuf_I_O)         2.967     3.386 r  serial_data_0_OBUF[31]_inst/O
+                         net (fo=0)                   0.000     3.386    serial_data_0[31]
+    K19                                                               r  serial_data_0[31] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.386    
+  -------------------------------------------------------------------
+                         slack                                  1.114    
+
+Slack (MET) :             1.115ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[30]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[30]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.385ns  (logic 3.384ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y129                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[30]/C
+    OLOGIC_X1Y129        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[30]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[30]
+    J19                  OBUF (Prop_obuf_I_O)         2.966     3.385 r  serial_data_0_OBUF[30]_inst/O
+                         net (fo=0)                   0.000     3.385    serial_data_0[30]
+    J19                                                               r  serial_data_0[30] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.385    
+  -------------------------------------------------------------------
+                         slack                                  1.115    
+
+Slack (MET) :             1.117ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[25]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[25]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.383ns  (logic 3.382ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y132                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[25]/C
+    OLOGIC_X1Y132        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[25]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[25]
+    L19                  OBUF (Prop_obuf_I_O)         2.964     3.383 r  serial_data_0_OBUF[25]_inst/O
+                         net (fo=0)                   0.000     3.383    serial_data_0[25]
+    L19                                                               r  serial_data_0[25] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.383    
+  -------------------------------------------------------------------
+                         slack                                  1.117    
+
+Slack (MET) :             1.122ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[3]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.378ns  (logic 3.377ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y88                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[3]/C
+    OLOGIC_X1Y88         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[3]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[3]
+    P14                  OBUF (Prop_obuf_I_O)         2.959     3.378 r  serial_data_0_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     3.378    serial_data_0[3]
+    P14                                                               r  serial_data_0[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.378    
+  -------------------------------------------------------------------
+                         slack                                  1.122    
+
+Slack (MET) :             1.134ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[1]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.366ns  (logic 3.365ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y56                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[1]/C
+    OLOGIC_X1Y56         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[1]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[1]
+    W18                  OBUF (Prop_obuf_I_O)         2.947     3.366 r  serial_data_0_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     3.366    serial_data_0[1]
+    W18                                                               r  serial_data_0[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.366    
+  -------------------------------------------------------------------
+                         slack                                  1.134    
+
+Slack (MET) :             1.136ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[28]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[28]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.364ns  (logic 3.363ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y125                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[28]/C
+    OLOGIC_X1Y125        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[28]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[28]
+    K18                  OBUF (Prop_obuf_I_O)         2.945     3.364 r  serial_data_0_OBUF[28]_inst/O
+                         net (fo=0)                   0.000     3.364    serial_data_0[28]
+    K18                                                               r  serial_data_0[28] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.364    
+  -------------------------------------------------------------------
+                         slack                                  1.136    
+
+Slack (MET) :             1.138ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[0]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.362ns  (logic 3.361ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y55                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[0]/C
+    OLOGIC_X1Y55         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[0]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[0]
+    W19                  OBUF (Prop_obuf_I_O)         2.943     3.362 r  serial_data_0_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     3.362    serial_data_0[0]
+    W19                                                               r  serial_data_0[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.362    
+  -------------------------------------------------------------------
+                         slack                                  1.138    
+
+Slack (MET) :             1.140ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[14]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.360ns  (logic 3.359ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y51                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[14]/C
+    OLOGIC_X1Y51         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[14]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[14]
+    P16                  OBUF (Prop_obuf_I_O)         2.941     3.360 r  serial_data_0_OBUF[14]_inst/O
+                         net (fo=0)                   0.000     3.360    serial_data_0[14]
+    P16                                                               r  serial_data_0[14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.360    
+  -------------------------------------------------------------------
+                         slack                                  1.140    
+
+Slack (MET) :             1.145ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[15]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[15]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.355ns  (logic 3.354ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y52                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[15]/C
+    OLOGIC_X1Y52         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[15]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[15]
+    P15                  OBUF (Prop_obuf_I_O)         2.936     3.355 r  serial_data_0_OBUF[15]_inst/O
+                         net (fo=0)                   0.000     3.355    serial_data_0[15]
+    P15                                                               r  serial_data_0[15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.355    
+  -------------------------------------------------------------------
+                         slack                                  1.145    
+
+Slack (MET) :             1.148ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[11]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.352ns  (logic 3.351ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y54                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[11]/C
+    OLOGIC_X1Y54         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[11]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[11]
+    N17                  OBUF (Prop_obuf_I_O)         2.933     3.352 r  serial_data_0_OBUF[11]_inst/O
+                         net (fo=0)                   0.000     3.352    serial_data_0[11]
+    N17                                                               r  serial_data_0[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.352    
+  -------------------------------------------------------------------
+                         slack                                  1.148    
+
+Slack (MET) :             1.149ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[23]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[23]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.351ns  (logic 3.350ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y122                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[23]/C
+    OLOGIC_X1Y122        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[23]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[23]
+    J18                  OBUF (Prop_obuf_I_O)         2.932     3.351 r  serial_data_0_OBUF[23]_inst/O
+                         net (fo=0)                   0.000     3.351    serial_data_0[23]
+    J18                                                               r  serial_data_0[23] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.351    
+  -------------------------------------------------------------------
+                         slack                                  1.149    
+
+Slack (MET) :             1.150ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[2]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.350ns  (logic 3.349ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y87                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[2]/C
+    OLOGIC_X1Y87         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[2]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[2]
+    R14                  OBUF (Prop_obuf_I_O)         2.931     3.350 r  serial_data_0_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     3.350    serial_data_0[2]
+    R14                                                               r  serial_data_0[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.350    
+  -------------------------------------------------------------------
+                         slack                                  1.150    
+
+Slack (MET) :             1.150ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[29]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[29]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.350ns  (logic 3.349ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y126                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[29]/C
+    OLOGIC_X1Y126        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[29]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[29]
+    K17                  OBUF (Prop_obuf_I_O)         2.931     3.350 r  serial_data_0_OBUF[29]_inst/O
+                         net (fo=0)                   0.000     3.350    serial_data_0[29]
+    K17                                                               r  serial_data_0[29] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.350    
+  -------------------------------------------------------------------
+                         slack                                  1.150    
+
+Slack (MET) :             1.164ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[10]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[10]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.336ns  (logic 3.335ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y53                                      0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[10]/C
+    OLOGIC_X1Y53         FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[10]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[10]
+    P18                  OBUF (Prop_obuf_I_O)         2.917     3.336 r  serial_data_0_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     3.336    serial_data_0[10]
+    P18                                                               r  serial_data_0[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.336    
+  -------------------------------------------------------------------
+                         slack                                  1.164    
+
+Slack (MET) :             1.165ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[22]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[22]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.335ns  (logic 3.334ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y121                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[22]/C
+    OLOGIC_X1Y121        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[22]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[22]
+    H18                  OBUF (Prop_obuf_I_O)         2.916     3.335 r  serial_data_0_OBUF[22]_inst/O
+                         net (fo=0)                   0.000     3.335    serial_data_0[22]
+    H18                                                               r  serial_data_0[22] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.335    
+  -------------------------------------------------------------------
+                         slack                                  1.165    
+
+Slack (MET) :             1.167ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[18]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.333ns  (logic 3.332ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y119                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[18]/C
+    OLOGIC_X1Y119        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[18]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[18]
+    F20                  OBUF (Prop_obuf_I_O)         2.914     3.333 r  serial_data_0_OBUF[18]_inst/O
+                         net (fo=0)                   0.000     3.333    serial_data_0[18]
+    F20                                                               r  serial_data_0[18] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.333    
+  -------------------------------------------------------------------
+                         slack                                  1.167    
+
+Slack (MET) :             1.172ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[19]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[19]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.328ns  (logic 3.327ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y120                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[19]/C
+    OLOGIC_X1Y120        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[19]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[19]
+    F19                  OBUF (Prop_obuf_I_O)         2.909     3.328 r  serial_data_0_OBUF[19]_inst/O
+                         net (fo=0)                   0.000     3.328    serial_data_0[19]
+    F19                                                               r  serial_data_0[19] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.328    
+  -------------------------------------------------------------------
+                         slack                                  1.172    
+
+Slack (MET) :             1.173ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[20]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[20]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.327ns  (logic 3.326ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y113                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[20]/C
+    OLOGIC_X1Y113        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[20]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[20]
+    G20                  OBUF (Prop_obuf_I_O)         2.908     3.327 r  serial_data_0_OBUF[20]_inst/O
+                         net (fo=0)                   0.000     3.327    serial_data_0[20]
+    G20                                                               r  serial_data_0[20] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.327    
+  -------------------------------------------------------------------
+                         slack                                  1.173    
+
+Slack (MET) :             1.173ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[21]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[21]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.327ns  (logic 3.326ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y114                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[21]/C
+    OLOGIC_X1Y114        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[21]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[21]
+    G19                  OBUF (Prop_obuf_I_O)         2.908     3.327 r  serial_data_0_OBUF[21]_inst/O
+                         net (fo=0)                   0.000     3.327    serial_data_0[21]
+    G19                                                               r  serial_data_0[21] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.327    
+  -------------------------------------------------------------------
+                         slack                                  1.173    
+
+Slack (MET) :             1.174ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[17]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[17]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.326ns  (logic 3.325ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y138                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[17]/C
+    OLOGIC_X1Y138        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[17]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[17]
+    F16                  OBUF (Prop_obuf_I_O)         2.907     3.326 r  serial_data_0_OBUF[17]_inst/O
+                         net (fo=0)                   0.000     3.326    serial_data_0[17]
+    F16                                                               r  serial_data_0[17] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.326    
+  -------------------------------------------------------------------
+                         slack                                  1.174    
+
+Slack (MET) :             1.189ns  (required time - arrival time)
+  Source:                 draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[16]/C
+                            (rising edge-triggered cell FDCE clocked by c256  {rise@0.000ns fall@1.953ns period=3.906ns})
+  Destination:            serial_data_0[16]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.500ns  (MaxDelay Path 4.500ns)
+  Data Path Delay:        3.311ns  (logic 3.310ns (99.970%)  route 0.001ns (0.030%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 4.500ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y137                                     0.000     0.000 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[16]/C
+    OLOGIC_X1Y137        FDCE (Prop_fdce_C_Q)         0.418     0.418 r  draw_ready_ps_i/pl_core/inst/implementation/core/native_system/digital/tx44.serial/tx/serial_data_reg[16]/Q
+                         net (fo=1, routed)           0.001     0.419    serial_data_0_OBUF[16]
+    F17                  OBUF (Prop_obuf_I_O)         2.892     3.311 r  serial_data_0_OBUF[16]_inst/O
+                         net (fo=0)                   0.000     3.311    serial_data_0[16]
+    F17                                                               r  serial_data_0[16] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    4.500     4.500    
+                         output delay                -0.000     4.500    
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -3.311    
+  -------------------------------------------------------------------
+                         slack                                  1.189    
+
+
+
+

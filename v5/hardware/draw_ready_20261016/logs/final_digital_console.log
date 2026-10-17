@@ -1,0 +1,22 @@
+tx icarus FAIL E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\candidate_rtl\tb_final_tx.sv:8: error: port ``output_disable'' is not a port of safety.
+E:\Codex_project\SonoField_v5_MinimalBOM_Audit\20261016_FinalTheory_DrawReady\candidate_rtl\tb_final_tx.sv:8: error: port ``shift_clear_n'' is not a port of safety.
+2 error(s) during elaboration.
+
+tx xsim FAIL Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/2025.2/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_final_tx -s sim 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'shift_clear_n' on this module [E:/Codex_project/SonoField_v5_MinimalBOM_Audit/20261016_FinalTheory_DrawReady/candidate_rtl/tb_final_tx.sv:8]
+ERROR: [VRFC 10-8530] module 'safety_controller_default' is ignored due to previous errors [E:/Codex_project/AMD_Sonofield/v5/rtl/control/safety_controller.sv:2]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+The system cannot find the path specified.
+
+clocks xsim FAIL 
+Traceback (most recent call last):
+  File "X:\scripts\run_final_digital.py", line 16, in <module>
+    assert all(x['status']=='PASS'for x in rows)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,15 @@
+# 8路RX/ADC与三点温度
+
+| kind | channel | board | receiver | frontend | array_header_pin | central_net | central_switch | adc_positive_pin | adc_negative_pin | adc_net | mode | status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| RX_ADC_CHANNEL | 1 | UP | RX0:NU40C10R-2 | OPA4192IPWR biased2.5V; detailedphysicalpins/passives in02 | 55 | UP_RX0 | ADG4612BRUZ poweroffprotection | 49 | 50 | ADC_IN0 | singleended ±5V; signed16bit; DCoffsetremoved inCfeatures | PASS |
+| RX_ADC_CHANNEL | 2 | UP | RX1:NU40C10R-2 | OPA4192IPWR biased2.5V; detailedphysicalpins/passives in02 | 57 | UP_RX1 | ADG4612BRUZ poweroffprotection | 51 | 52 | ADC_IN1 | singleended ±5V; signed16bit; DCoffsetremoved inCfeatures | PASS |
+| RX_ADC_CHANNEL | 3 | UP | RX2:NU40C10R-2 | OPA4192IPWR biased2.5V; detailedphysicalpins/passives in02 | 59 | UP_RX2 | ADG4612BRUZ poweroffprotection | 53 | 54 | ADC_IN2 | singleended ±5V; signed16bit; DCoffsetremoved inCfeatures | PASS |
+| RX_ADC_CHANNEL | 4 | UP | RX3:NU40C10R-2 | OPA4192IPWR biased2.5V; detailedphysicalpins/passives in02 | 61 | UP_RX3 | ADG4612BRUZ poweroffprotection | 55 | 56 | ADC_IN3 | singleended ±5V; signed16bit; DCoffsetremoved inCfeatures | PASS |
+| RX_ADC_CHANNEL | 5 | DN | RX0:NU40C10R-2 | OPA4192IPWR biased2.5V; detailedphysicalpins/passives in02 | 55 | DN_RX0 | ADG4612BRUZ poweroffprotection | 57 | 58 | ADC_IN4 | singleended ±5V; signed16bit; DCoffsetremoved inCfeatures | PASS |
+| RX_ADC_CHANNEL | 6 | DN | RX1:NU40C10R-2 | OPA4192IPWR biased2.5V; detailedphysicalpins/passives in02 | 57 | DN_RX1 | ADG4612BRUZ poweroffprotection | 59 | 60 | ADC_IN5 | singleended ±5V; signed16bit; DCoffsetremoved inCfeatures | PASS |
+| RX_ADC_CHANNEL | 7 | DN | RX2:NU40C10R-2 | OPA4192IPWR biased2.5V; detailedphysicalpins/passives in02 | 59 | DN_RX2 | ADG4612BRUZ poweroffprotection | 61 | 62 | ADC_IN6 | singleended ±5V; signed16bit; DCoffsetremoved inCfeatures | PASS |
+| RX_ADC_CHANNEL | 8 | DN | RX3:NU40C10R-2 | OPA4192IPWR biased2.5V; detailedphysicalpins/passives in02 | 61 | DN_RX3 | ADG4612BRUZ poweroffprotection | 63 | 64 | ADC_IN7 | singleended ±5V; signed16bit; DCoffsetremoved inCfeatures | PASS |
+| TEMP | 0 | CENTRAL | TMP117NAIDRVR | TCA9548A0x70onehot channel; TMP117all0x48; volatileconfig01=0000;20msfirstwait;50mspoll | localchannel0 | I2C mux; TCA9517A-B-B-A topology | onechannelenabledatonce | N/A | N/A | N/A | 200msPSfreshnesstimeout; EEPROMneverwritten | PASS |
+| TEMP | 1 | UP | TMP117NAIDRVR | TCA9548A0x70onehot channel; TMP117all0x48; volatileconfig01=0000;20msfirstwait;50mspoll | 51SCL/53SDA | I2C mux; TCA9517A-B-B-A topology | onechannelenabledatonce | N/A | N/A | N/A | 200msPSfreshnesstimeout; EEPROMneverwritten | PASS |
+| TEMP | 2 | DN | TMP117NAIDRVR | TCA9548A0x70onehot channel; TMP117all0x48; volatileconfig01=0000;20msfirstwait;50mspoll | 51SCL/53SDA | I2C mux; TCA9517A-B-B-A topology | onechannelenabledatonce | N/A | N/A | N/A | 200msPSfreshnesstimeout; EEPROMneverwritten | PASS |

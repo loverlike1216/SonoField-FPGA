@@ -1,0 +1,9 @@
+preservation 1
+Traceback (most recent call last):
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_prepcb.py", line 28, in <module>
+    if __name__=='__main__':main()
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_prepcb.py", line 20, in main
+    run('preservation','check_prepcb_preservation.py')
+  File "E:\Codex_project\AMD_Sonofield\v5\scripts\run_prepcb.py", line 18, in run
+    if proc.returncode:raise RuntimeError(name+' failed; preserve logs')
+RuntimeError: preservation failed; preserve logs

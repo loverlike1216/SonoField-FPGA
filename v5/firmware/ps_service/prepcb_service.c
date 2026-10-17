@@ -126,15 +126,19 @@ uint8_t sf_pc_dispatch(sf_service *s,uint8_t cmd,const uint8_t *data,size_t n,ui
  }
 }
 int sf_pc_features(const int16_t *data,unsigned frames,unsigned channel,double fs,double f,double *amplitude,double *phase,double *coarse_s){
- double re=0,im=0,energy=0,peak=0;unsigned onset=0;
+ double re=0,im=0,energy=0,peak=0,mean=0;unsigned onset=0;
  if(!data||frames<16||frames>1024||channel>=8||fs<=2*f||f<38500||f>41500)return -1;
- for(unsigned i=0;i<frames;i++){double v=data[8*i+channel];if(v>=32760||v<=-32760)return -2;
+ /* The single-supply RX amplifier has a 2.5V bias. Check clipping before
+  * removing that bias; otherwise DC leaks into a noncoherent 40kHz window. */
+ for(unsigned i=0;i<frames;i++){double v=data[8*i+channel];if(v>=32760||v<=-32760)return -2;mean+=v;}
+ mean/=frames;
+ for(unsigned i=0;i<frames;i++){double v=data[8*i+channel]-mean;
   re+=v*cos(2*3.14159265358979323846*f*i/fs);im-=v*sin(2*3.14159265358979323846*f*i/fs);
   if(fabs(v)>peak)peak=fabs(v);
   energy+=v*v;
  }
  if(energy==0)return -3;
- for(unsigned i=0;i<frames;i++)if(fabs((double)data[8*i+channel])>.25*peak){onset=i;break;}
+ for(unsigned i=0;i<frames;i++)if(fabs((double)data[8*i+channel]-mean)>.25*peak){onset=i;break;}
  *amplitude=2*sqrt(re*re+im*im)/frames;*phase=atan2(im,re);*coarse_s=onset/fs;
  return 0; /* envelope onset is an ESTIMATE requiring ring-up/frontend qualification */
 }

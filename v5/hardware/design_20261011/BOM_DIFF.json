@@ -1,0 +1,2385 @@
+[
+  {
+    "id": "B-017",
+    "before": {
+      "id": "B-017",
+      "description": "温湿度传感器",
+      "mpn": "SHT45-AD1B-R2",
+      "package": "DFN-4",
+      "quantities": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "supply": "I2C，远离发射功率温升",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://sensirion.com/products/catalog/SHT45",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "OPTIONAL_DIAGNOSTIC_ONLY",
+      "risk": "Humidity not applied to numerical compensation",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [
+          "CE_B017_001"
+        ],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-017",
+      "description": "温湿度传感器",
+      "mpn": "SHT45-AD1B-R2",
+      "package": "DFN-4",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "I2C，远离发射功率温升",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://sensirion.com/products/catalog/SHT45",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "OPTIONAL_DIAGNOSTIC_ONLY",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-018",
+    "before": {
+      "id": "B-018",
+      "description": "独立12V电源输入座",
+      "mpn": "XT30PW-M30.G.Y",
+      "package": "THT",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "每阵列专属PWR_UP_IN/PWR_LO_IN；不得从J10/J11取功率",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Inherited candidate quantity; netlist/thermal review pending",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B018_001"
+        ],
+        "Lower": [
+          "DN_B018_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-018",
+      "description": "独立12V电源输入座",
+      "mpn": "XT30PW-M30.G.Y",
+      "package": "THT",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "每阵列专属PWR_UP_IN/PWR_LO_IN；不得从J10/J11取功率",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-020",
+    "before": {
+      "id": "B-020",
+      "description": "正向/反向/过流eFuse",
+      "mpn": "TPS259470LRPWR",
+      "package": "VQFN-10",
+      "quantities": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "supply": "三路电源各自配置ILIM/OVLO；历史2A只是候选",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.ti.com/product/TPS25947",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Inherited candidate quantity; netlist/thermal review pending",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B020_001"
+        ],
+        "Lower": [
+          "DN_B020_001"
+        ],
+        "Central": [
+          "CE_B020_001"
+        ],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-020",
+      "description": "正向/反向/过流eFuse",
+      "mpn": "TPS259470LRPWR",
+      "package": "VQFN-10",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "三路电源各自配置ILIM/OVLO；历史2A只是候选",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.ti.com/product/TPS25947",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-023",
+    "before": {
+      "id": "B-023",
+      "description": "输入TVS",
+      "mpn": "SMBJ20A 类",
+      "package": "SMB",
+      "quantities": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "supply": "SMBJ20A候选撤销释放；32.4V钳位高于eFuse28V abs max",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.littelfuse.com/products/tvs-diodes/smbj.aspx",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Inherited SMBJ20A clamp cannot be assumed safe for <=23V eFuse; dynamic clamp/current and buck absolute limits HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B023_001"
+        ],
+        "Lower": [
+          "DN_B023_001"
+        ],
+        "Central": [
+          "CE_B023_001"
+        ],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-023",
+      "description": "输入TVS",
+      "mpn": "SMBJ20A 类",
+      "package": "SMB",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "SMBJ20A候选撤销释放；32.4V钳位高于eFuse28V abs max",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.littelfuse.com/products/tvs-diodes/smbj.aspx",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Old SMBJ20A removed from installed candidate; replacement requires clamp/energy proof",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-024",
+    "before": {
+      "id": "B-024",
+      "description": "独立熔断器及座",
+      "mpn": "2A 慢断候选，具体值TBD",
+      "package": "TBD",
+      "quantities": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "supply": "3路/需按实测峰值选值",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "2A candidate is not validated with5A source; fuse/eFuse/wire inrush/selectivity HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B024_001"
+        ],
+        "Lower": [
+          "DN_B024_001"
+        ],
+        "Central": [
+          "CE_B024_001"
+        ],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-024",
+      "description": "独立熔断器及座",
+      "mpn": "2A 慢断候选，具体值TBD",
+      "package": "TBD",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "3路/需按实测峰值选值",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Old eFuse removed; TPS26631 path below is new candidate",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-027",
+    "before": {
+      "id": "B-027",
+      "description": "3.3V数字电源DC/DC",
+      "mpn": "AP63203WU-7",
+      "package": "TSOT-26",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "每板12V→3.3V；负载核验",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.diodes.com/part/view/AP63203",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "No central12V supply/converter or5V-to5V LDO headroom; central header budget HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B027_001"
+        ],
+        "Lower": [
+          "DN_B027_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-027",
+      "description": "3.3V数字电源DC/DC",
+      "mpn": "TPS54202DDCR",
+      "package": "SOT23_6_DDC",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "每板12V→3.3V；负载核验",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.ti.com/lit/ds/symlink/tps54202.pdf",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "12V to 3.3V digital; L/C/thermal/EMI design HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B027_001"
+        ],
+        "Lower": [
+          "DN_B027_001"
+        ],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "Texas Instruments",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-028",
+    "before": {
+      "id": "B-028",
+      "description": "5.5V可调DC/DC",
+      "mpn": "AP63200WU-7",
+      "package": "TSOT-26",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "5.5V预稳压+5V LDO；按实际负载核验",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.diodes.com/part/view/AP63200",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "No central12V supply/converter or5V-to5V LDO headroom; central header budget HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B028_001"
+        ],
+        "Lower": [
+          "DN_B028_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-028",
+      "description": "5.5V可调DC/DC",
+      "mpn": "TPS54202DDCR",
+      "package": "SOT23_6_DDC",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "5.5V预稳压+5V LDO；按实际负载核验",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.ti.com/lit/ds/symlink/tps54202.pdf",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "12V to 5.5V then existing5V AFE LDO; L/C/thermal/EMI design HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B028_001"
+        ],
+        "Lower": [
+          "DN_B028_001"
+        ],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "Texas Instruments",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-032",
+    "before": {
+      "id": "B-032",
+      "description": "PCB板温监测",
+      "mpn": "TMP117MAIDRVR",
+      "package": "WSON-6",
+      "quantities": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "supply": "监测驱动温度，不等于空气温湿度",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.ti.com/lit/ds/symlink/tmp117.pdf",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "3 sensors required; CENTER air representative away from heat; UP0x49/DOWN0x4b/CENTER0x48; read ID/readiness and bounded bus; no temperatureCRC",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": 6,
+      "references": {
+        "Upper": [
+          "UP_B032_001"
+        ],
+        "Lower": [
+          "DN_B032_001"
+        ],
+        "Central": [
+          "CE_B032_001"
+        ],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-032",
+      "description": "PCB板温监测",
+      "mpn": "TMP117AIDRVR",
+      "package": "WSON-6",
+      "quantities": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "supply": "监测驱动温度，不等于空气温湿度",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.ti.com/lit/ds/symlink/tmp117.pdf",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "3 sensors required; CENTER air representative away from heat; UP0x49/DOWN0x4b/CENTER0x48; read ID/readiness and bounded bus; no temperatureCRC",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": 6,
+      "references": {
+        "Upper": [
+          "UP_B032_001"
+        ],
+        "Lower": [
+          "DN_B032_001"
+        ],
+        "Central": [
+          "CE_B032_001"
+        ],
+        "External": []
+      },
+      "qualification": "DESIGN_SELECTED_PACKAGE_PIN_REVIEW_HOLD",
+      "procurement": "HOLD",
+      "manufacturer": "Texas Instruments",
+      "datasheet_revision": "Rev.D",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-039",
+    "before": {
+      "id": "B-039",
+      "description": "上下独立电源线束",
+      "mpn": "XT30 2P线束 18AWG（线径TBD）",
+      "package": "外置",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "supply": "各板单独从外置供电装置接线",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com/custom-cable-assembly",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Inherited candidate quantity; netlist/thermal review pending",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_B039_001",
+          "EX_B039_002"
+        ]
+      }
+    },
+    "after": {
+      "id": "B-039",
+      "description": "上下独立电源线束",
+      "mpn": "DC5P5x2P5_CENTER_POSITIVE_LEAD_TBD",
+      "package": "外置",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "supply": "各板单独从外置供电装置接线",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com/custom-cable-assembly",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "5A nominal path; wire/fuse/plug length/temperature verification HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_B039_001",
+          "EX_B039_002"
+        ]
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-041",
+    "before": {
+      "id": "B-041",
+      "description": "上/下数字线束",
+      "mpn": "50芯IDC定长≤20cm仅初选",
+      "package": "线束",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "supply": "每阵列1条；需屏蔽/回流/时序验证",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com/custom-cable-assembly",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Inherited candidate quantity; netlist/thermal review pending",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_B041_001",
+          "EX_B041_002"
+        ]
+      }
+    },
+    "after": {
+      "id": "B-041",
+      "description": "上/下数字线束",
+      "mpn": "50芯IDC定长≤20cm仅初选",
+      "package": "线束",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "每阵列1条；需屏蔽/回流/时序验证",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com/custom-cable-assembly",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-042",
+    "before": {
+      "id": "B-042",
+      "description": "上/下RX信号线束",
+      "mpn": "屏蔽4对模拟线（独立专用）",
+      "package": "线束",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "supply": "每阵列1条；建议远离TX与功率",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com/custom-cable-assembly",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Inherited candidate quantity; netlist/thermal review pending",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_B042_001",
+          "EX_B042_002"
+        ]
+      }
+    },
+    "after": {
+      "id": "B-042",
+      "description": "上/下RX信号线束",
+      "mpn": "屏蔽4对模拟线（独立专用）",
+      "package": "线束",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "每阵列1条；建议远离TX与功率",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.lcsc.com/custom-cable-assembly",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-044",
+    "before": {
+      "id": "B-044",
+      "description": "双路限流可调直流电源",
+      "mpn": "12V 5A supply candidate (each)",
+      "package": "设备",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "supply": "两个阵列独立可断电、可调限流",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.meanwell.com/webapp/product/search.aspx?prod=GST120A",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Two independent60W-rated sources;2A protection baseline unchanged, not60W load authorization",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_B044_001",
+          "EX_B044_002"
+        ]
+      }
+    },
+    "after": {
+      "id": "B-044",
+      "description": "双路限流可调直流电源",
+      "mpn": "12V 5A supply candidate (each)",
+      "package": "设备",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "两个阵列独立可断电、可调限流",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://www.meanwell.com/webapp/product/search.aspx?prod=GST120A",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "B-069",
+    "before": {
+      "id": "B-069",
+      "description": "4层阵列PCB",
+      "mpn": "130×130mm 4L 1.6mm FR4候选",
+      "package": "PCB",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "单板64 TX+4RX+驱动/AFE；空间布局受限需密度审查",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://jlcpcb.com",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "One shared array PCB, opposite assembly orientation; 64TX +4outsideRX, hole/clearance not released",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B069_001"
+        ],
+        "Lower": [
+          "DN_B069_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "B-069",
+      "description": "4层阵列PCB",
+      "mpn": "200x180mm_COMMON_ARRAY_EXTENSION_CANDIDATE",
+      "package": "PCB",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "单板64 TX+4RX+驱动/AFE；空间布局受限需密度审查",
+      "current_A": null,
+      "logic": "3V3 ONLY if GPIO; other domains require review",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Public source only; pin1/EP/native footprint UNVERIFIED",
+      "source": "https://jlcpcb.com",
+      "supplier": "AUTHORIZED_VENDOR_NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Electronics outside118.3mm acoustic projection; mechanical/routing/thermal proof HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_B069_001"
+        ],
+        "Lower": [
+          "DN_B069_001"
+        ],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "PC-002",
+    "before": {
+      "id": "PC-002",
+      "description": "Driver hotspot independent comparator",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "HOLD",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "CANDIDATE_REVIEW_REQUIRED",
+      "current_A": null,
+      "logic": "ELECTRICAL_REVIEW_REQUIRED",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Native pin1/EP not verified",
+      "source": "USER_SAFETY_REQUIREMENT",
+      "supplier": "NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Electrical/thermal qualification HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [
+          "UP_PC002_001"
+        ],
+        "Lower": [
+          "DN_PC002_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "PC-002",
+      "description": "Driver hotspot independent comparator",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "HOLD",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "CANDIDATE_REVIEW_REQUIRED",
+      "current_A": null,
+      "logic": "ELECTRICAL_REVIEW_REQUIRED",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Native pin1/EP not verified",
+      "source": "USER_SAFETY_REQUIREMENT",
+      "supplier": "NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "PC-003",
+    "before": {
+      "id": "PC-003",
+      "description": "Central header reverse-blocking protection",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "HOLD",
+      "quantities": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "supply": "CANDIDATE_REVIEW_REQUIRED",
+      "current_A": null,
+      "logic": "ELECTRICAL_REVIEW_REQUIRED",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Native pin1/EP not verified",
+      "source": "USER_AX7020_POWER_ONLY_REQUIREMENT",
+      "supplier": "NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Electrical/thermal qualification HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [
+          "CE_PC003_001",
+          "CE_PC003_002"
+        ],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "PC-003",
+      "description": "Central header reverse-blocking protection",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "HOLD",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "CANDIDATE_REVIEW_REQUIRED",
+      "current_A": null,
+      "logic": "ELECTRICAL_REVIEW_REQUIRED",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Native pin1/EP not verified",
+      "source": "USER_AX7020_POWER_ONLY_REQUIREMENT",
+      "supplier": "NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "PC-004",
+    "before": {
+      "id": "PC-004",
+      "description": "NC emergency stop independent contact",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "HOLD",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "supply": "CANDIDATE_REVIEW_REQUIRED",
+      "current_A": null,
+      "logic": "ELECTRICAL_REVIEW_REQUIRED",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Native pin1/EP not verified",
+      "source": "USER_SAFETY_REQUIREMENT",
+      "supplier": "NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "Electrical/thermal qualification HOLD",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_PC004_001"
+        ]
+      }
+    },
+    "after": {
+      "id": "PC-004",
+      "description": "NC emergency stop independent contact",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "HOLD",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "CANDIDATE_REVIEW_REQUIRED",
+      "current_A": null,
+      "logic": "ELECTRICAL_REVIEW_REQUIRED",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "Native pin1/EP not verified",
+      "source": "USER_SAFETY_REQUIREMENT",
+      "supplier": "NOT_SELECTED",
+      "approval": "NOT_APPROVED_FOR_PROCUREMENT",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "electrical_release": "HOLD",
+      "pin_count": null,
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "NS-002",
+    "before": {
+      "id": "NS-002",
+      "description": "Independent thermal comparator and threshold network",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "UNKNOWN",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "LOGIC/12V_DOMAIN_REVIEW",
+      "current_A": null,
+      "logic": "INDEPENDENT_OF_FPGA_PS_PL",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "NOT_VERIFIED",
+      "source": "Current user GateC3/D1",
+      "supplier": "NOT_SELECTED",
+      "approval": "PROPOSED_HOLD",
+      "risk": "Power-loss/cable/unpowered/clock-stop physical injection required",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "pin_count": null,
+      "electrical_release": "HOLD",
+      "references": {
+        "Upper": [
+          "UP_NS002_001"
+        ],
+        "Lower": [
+          "DN_NS002_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "NS-002",
+      "description": "Independent thermal comparator and threshold network",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "UNKNOWN",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "LOGIC/12V_DOMAIN_REVIEW",
+      "current_A": null,
+      "logic": "INDEPENDENT_OF_FPGA_PS_PL",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "NOT_VERIFIED",
+      "source": "Current user GateC3/D1",
+      "supplier": "NOT_SELECTED",
+      "approval": "PROPOSED_HOLD",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "pin_count": null,
+      "electrical_release": "HOLD",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "NS-003",
+    "before": {
+      "id": "NS-003",
+      "description": "Cold-start/rearm latch and power-good AND cutoff controller",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "UNKNOWN",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "supply": "LOGIC/12V_DOMAIN_REVIEW",
+      "current_A": null,
+      "logic": "INDEPENDENT_OF_FPGA_PS_PL",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "NOT_VERIFIED",
+      "source": "Current user GateC3/D1",
+      "supplier": "NOT_SELECTED",
+      "approval": "PROPOSED_HOLD",
+      "risk": "Power-loss/cable/unpowered/clock-stop physical injection required",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "pin_count": null,
+      "electrical_release": "HOLD",
+      "references": {
+        "Upper": [
+          "UP_NS003_001"
+        ],
+        "Lower": [
+          "DN_NS003_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    },
+    "after": {
+      "id": "NS-003",
+      "description": "Cold-start/rearm latch and power-good AND cutoff controller",
+      "mpn": "PART_SELECTION_HOLD",
+      "package": "UNKNOWN",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "supply": "LOGIC/12V_DOMAIN_REVIEW",
+      "current_A": null,
+      "logic": "INDEPENDENT_OF_FPGA_PS_PL",
+      "measured": "NOT_VERIFIED",
+      "package_evidence": "NOT_VERIFIED",
+      "source": "Current user GateC3/D1",
+      "supplier": "NOT_SELECTED",
+      "approval": "PROPOSED_HOLD",
+      "risk": "SUPERSEDED_OR_OPTIONAL_DNP: see new H entries; not installed twice",
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "pin_count": null,
+      "electrical_release": "HOLD",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      },
+      "qualification": "INHERITED_CANDIDATE_REQUIRES_NATIVE_PIN_REVIEW",
+      "procurement": "HOLD",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "datasheet_revision": "UNKNOWN_VERIFY",
+      "access_date": "2026-10-11",
+      "approval_source": "User v5 scope; no procurement permission"
+    }
+  },
+  {
+    "id": "H-001",
+    "before": null,
+    "after": {
+      "id": "H-001",
+      "mpn": "STUSB4500LQTR",
+      "description": "中央 Type-C 5V Sink",
+      "quantities": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "package": "QFN24_EP_VERIFY",
+      "source": "https://www.st.com/resource/en/datasheet/stusb4500l.pdf",
+      "manufacturer": "STMicroelectronics",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "CC default/1.5A/3A detection and load inhibit required",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [
+          "CE_H001_001"
+        ],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-002",
+    "before": null,
+    "after": {
+      "id": "H-002",
+      "mpn": "TYPE_C_RECEPTACLE_MPN_TBD",
+      "description": "中央 Type-C 电源插座",
+      "quantities": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "package": "NATIVE_FOOTPRINT_TBD",
+      "source": "CANDIDATE",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Pin/native library/electrical review required",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [
+          "CE_H002_001"
+        ],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-003",
+    "before": null,
+    "after": {
+      "id": "H-003",
+      "mpn": "PJ-002BH",
+      "description": "阵列 DC5.5x2.5 插座",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "package": "THT3_SWITCH_CONTACT",
+      "source": "https://www.sameskydevices.com/product/resource/pj-002bh.pdf",
+      "manufacturer": "Same Sky",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "5A nominal/30mohm; switch lug not independent source; temperature derating HOLD",
+      "references": {
+        "Upper": [
+          "UP_H003_001"
+        ],
+        "Lower": [
+          "DN_H003_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-004",
+    "before": null,
+    "after": {
+      "id": "H-004",
+      "mpn": "TPS26631RGER",
+      "description": "阵列 eFuse",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "package": "VQFN24_RGE_EP",
+      "source": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "manufacturer": "Texas Instruments",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "2x pulse support; RILIM/UVLO/OVP/fuse coordination HOLD, not automatic5A setting",
+      "references": {
+        "Upper": [
+          "UP_H004_001"
+        ],
+        "Lower": [
+          "DN_H004_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-005",
+    "before": null,
+    "after": {
+      "id": "H-005",
+      "mpn": "TCA9548APWR",
+      "description": "中央 I2C 3域选择",
+      "quantities": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "package": "TSSOP24_PW",
+      "source": "https://www.ti.com/lit/ds/symlink/tca9548a.pdf",
+      "manufacturer": "Texas Instruments",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Independent RESET still required for selected stuck-low branch",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [
+          "CE_H005_001"
+        ],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-006",
+    "before": null,
+    "after": {
+      "id": "H-006",
+      "mpn": "INA226AIDGSR",
+      "description": "已有B021覆盖三颗，无重复装配",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "package": "VSSOP10_DGS",
+      "source": "https://www.ti.com/lit/ds/symlink/ina226.pdf",
+      "manufacturer": "Texas Instruments",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Pin/native library/electrical review required",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-007",
+    "before": null,
+    "after": {
+      "id": "H-007",
+      "mpn": "TPS3431SDRBR",
+      "description": "被拒绝的标准看门狗备选DNP",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "package": "VSON8_DRB_EP",
+      "source": "https://www.ti.com/lit/ds/symlink/tps3431.pdf",
+      "manufacturer": "Texas Instruments",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "STANDARD watchdog; not a window watchdog. Retain window requirement and B009 pending qualification",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-008",
+    "before": null,
+    "after": {
+      "id": "H-008",
+      "mpn": "TPS54202DDCR",
+      "description": "B027/B028已计两颗Buck，无重复装配",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "package": "SOT23_6_DDC",
+      "source": "https://www.ti.com/lit/ds/symlink/tps54202.pdf",
+      "manufacturer": "Texas Instruments",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "B027/B028 independent buck rails; not central5V LDO",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-009",
+    "before": null,
+    "after": {
+      "id": "H-009",
+      "mpn": "BACK_TO_BACK_FET_AND_DRIVER_TBD",
+      "description": "默认OFF TX电源切断及反灌阻断",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "package": "PIN_REVIEW_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Independent of PL; gate pulldown and power-off paths required",
+      "references": {
+        "Upper": [
+          "UP_H009_001"
+        ],
+        "Lower": [
+          "DN_H009_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-010",
+    "before": null,
+    "after": {
+      "id": "H-010",
+      "mpn": "TVS_FUSE_SET_TBD",
+      "description": "阵列协调保护组",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "package": "VALUES_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "No SMBJ20A assumption; eFuse67V and driver18V transient envelope separate",
+      "references": {
+        "Upper": [
+          "UP_H010_001"
+        ],
+        "Lower": [
+          "DN_H010_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-011",
+    "before": null,
+    "after": {
+      "id": "H-011",
+      "mpn": "HOTSPOT_COMPARATOR_LATCH_REARM_TBD",
+      "description": "硬件过温及人工重启锁存",
+      "quantities": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "package": "PIN_REVIEW_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "TMP117/I2C is not independent hard cutoff",
+      "references": {
+        "Upper": [
+          "UP_H011_001"
+        ],
+        "Lower": [
+          "DN_H011_001"
+        ],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-012",
+    "before": null,
+    "after": {
+      "id": "H-012",
+      "mpn": "CENTRAL_USB_EFUSE_BUCKBOOST_TBD",
+      "description": "中央5V保护及ADC供电调节",
+      "quantities": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "package": "PIN_REVIEW_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "VBUSmin minus cable and switch may violate4.75V ADC AVCC",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [
+          "CE_H012_001"
+        ],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-013",
+    "before": null,
+    "after": {
+      "id": "H-013",
+      "mpn": "IOFF_BUFFER_SET_TBD",
+      "description": "双侧断电高阻信号缓冲",
+      "quantities": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "package": "PIN_REVIEW_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Every crossing needs Ioff, OE default-off and ground-return review",
+      "references": {
+        "Upper": [
+          "UP_H013_001"
+        ],
+        "Lower": [
+          "DN_H013_001"
+        ],
+        "Central": [
+          "CE_H013_001"
+        ],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-014",
+    "before": null,
+    "after": {
+      "id": "H-014",
+      "mpn": "NC_ESTOP_MANUAL_REARM_TBD",
+      "description": "外部急停及人工重启，板座见NS001",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "package": "KEYED_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Break any wire forces local power-off; fault removal alone cannot restart",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_H014_001"
+        ]
+      }
+    }
+  },
+  {
+    "id": "H-015",
+    "before": null,
+    "after": {
+      "id": "H-015",
+      "mpn": "SHIELDED_RX_HARNESS_TBD",
+      "description": "八路接收屏蔽线束",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        8
+      ],
+      "package": "KEYED_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Local AFE outputs; no direct unprotected transducer toADC",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_H015_001",
+          "EX_H015_002",
+          "EX_H015_003",
+          "EX_H015_004",
+          "EX_H015_005",
+          "EX_H015_006",
+          "EX_H015_007",
+          "EX_H015_008"
+        ]
+      }
+    }
+  },
+  {
+    "id": "H-016",
+    "before": null,
+    "after": {
+      "id": "H-016",
+      "mpn": "KEYED_SIGNAL_HARNESS_TBD",
+      "description": "两阵列数据/时钟/状态线束",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "package": "RETURN_GROUND_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "66MHz is unqualified; no ribbon guarantee",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_H016_001",
+          "EX_H016_002"
+        ]
+      }
+    }
+  },
+  {
+    "id": "H-017",
+    "before": null,
+    "after": {
+      "id": "H-017",
+      "mpn": "GST60A12-P1M",
+      "description": "12V60W电源候选",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "package": "EXTERNAL_5P5x2P5",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Manufacturer P1M plug+5A thermal/load proof and user procurement required",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_H017_001",
+          "EX_H017_002"
+        ]
+      }
+    }
+  },
+  {
+    "id": "H-018",
+    "before": null,
+    "after": {
+      "id": "H-018",
+      "mpn": "GST40A12-P1M",
+      "description": "12V40W备选不重复装配",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "package": "EXTERNAL_5P5x2P5",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "Alternative only, <=30.77W/board at30% headroom before derating",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-019",
+    "before": null,
+    "after": {
+      "id": "H-019",
+      "mpn": "USB_C_5V_3A_SOURCE_TBD",
+      "description": "中央独立USB-C电源",
+      "quantities": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "package": "EXTERNAL",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "CC3A availability; no implicit draw3A",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [],
+        "External": [
+          "EX_H019_001"
+        ]
+      }
+    }
+  },
+  {
+    "id": "H-020",
+    "before": null,
+    "after": {
+      "id": "H-020",
+      "mpn": "DRIVER_INPUT_PULLDOWN_TBD",
+      "description": "每路驱动输入默认低",
+      "quantities": [
+        64,
+        64,
+        0,
+        0,
+        0
+      ],
+      "package": "R_VALUE_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "595OE high makes Q high-Z; pulldown must defeat leakage without load excess",
+      "references": {
+        "Upper": [
+          "UP_H020_001",
+          "UP_H020_002",
+          "UP_H020_003",
+          "UP_H020_004",
+          "UP_H020_005",
+          "UP_H020_006",
+          "UP_H020_007",
+          "UP_H020_008",
+          "UP_H020_009",
+          "UP_H020_010",
+          "UP_H020_011",
+          "UP_H020_012",
+          "UP_H020_013",
+          "UP_H020_014",
+          "UP_H020_015",
+          "UP_H020_016",
+          "UP_H020_017",
+          "UP_H020_018",
+          "UP_H020_019",
+          "UP_H020_020",
+          "UP_H020_021",
+          "UP_H020_022",
+          "UP_H020_023",
+          "UP_H020_024",
+          "UP_H020_025",
+          "UP_H020_026",
+          "UP_H020_027",
+          "UP_H020_028",
+          "UP_H020_029",
+          "UP_H020_030",
+          "UP_H020_031",
+          "UP_H020_032",
+          "UP_H020_033",
+          "UP_H020_034",
+          "UP_H020_035",
+          "UP_H020_036",
+          "UP_H020_037",
+          "UP_H020_038",
+          "UP_H020_039",
+          "UP_H020_040",
+          "UP_H020_041",
+          "UP_H020_042",
+          "UP_H020_043",
+          "UP_H020_044",
+          "UP_H020_045",
+          "UP_H020_046",
+          "UP_H020_047",
+          "UP_H020_048",
+          "UP_H020_049",
+          "UP_H020_050",
+          "UP_H020_051",
+          "UP_H020_052",
+          "UP_H020_053",
+          "UP_H020_054",
+          "UP_H020_055",
+          "UP_H020_056",
+          "UP_H020_057",
+          "UP_H020_058",
+          "UP_H020_059",
+          "UP_H020_060",
+          "UP_H020_061",
+          "UP_H020_062",
+          "UP_H020_063",
+          "UP_H020_064"
+        ],
+        "Lower": [
+          "DN_H020_001",
+          "DN_H020_002",
+          "DN_H020_003",
+          "DN_H020_004",
+          "DN_H020_005",
+          "DN_H020_006",
+          "DN_H020_007",
+          "DN_H020_008",
+          "DN_H020_009",
+          "DN_H020_010",
+          "DN_H020_011",
+          "DN_H020_012",
+          "DN_H020_013",
+          "DN_H020_014",
+          "DN_H020_015",
+          "DN_H020_016",
+          "DN_H020_017",
+          "DN_H020_018",
+          "DN_H020_019",
+          "DN_H020_020",
+          "DN_H020_021",
+          "DN_H020_022",
+          "DN_H020_023",
+          "DN_H020_024",
+          "DN_H020_025",
+          "DN_H020_026",
+          "DN_H020_027",
+          "DN_H020_028",
+          "DN_H020_029",
+          "DN_H020_030",
+          "DN_H020_031",
+          "DN_H020_032",
+          "DN_H020_033",
+          "DN_H020_034",
+          "DN_H020_035",
+          "DN_H020_036",
+          "DN_H020_037",
+          "DN_H020_038",
+          "DN_H020_039",
+          "DN_H020_040",
+          "DN_H020_041",
+          "DN_H020_042",
+          "DN_H020_043",
+          "DN_H020_044",
+          "DN_H020_045",
+          "DN_H020_046",
+          "DN_H020_047",
+          "DN_H020_048",
+          "DN_H020_049",
+          "DN_H020_050",
+          "DN_H020_051",
+          "DN_H020_052",
+          "DN_H020_053",
+          "DN_H020_054",
+          "DN_H020_055",
+          "DN_H020_056",
+          "DN_H020_057",
+          "DN_H020_058",
+          "DN_H020_059",
+          "DN_H020_060",
+          "DN_H020_061",
+          "DN_H020_062",
+          "DN_H020_063",
+          "DN_H020_064"
+        ],
+        "Central": [],
+        "External": []
+      }
+    }
+  },
+  {
+    "id": "H-021",
+    "before": null,
+    "after": {
+      "id": "H-021",
+      "mpn": "MUX_RESET_SUPERVISOR_TBD",
+      "description": "I2C独立复位电路",
+      "quantities": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "package": "PIN_REVIEW_TBD",
+      "source": "CANDIDATE_ENGINEERING_REQUIREMENT",
+      "manufacturer": "UNKNOWN_VERIFY",
+      "qualification": "CANDIDATE",
+      "procurement": "HOLD",
+      "datasheet_revision": "SEE_SOURCE_REGISTER",
+      "access_date": "2026-10-11",
+      "approval_source": "User hardware design direction, electrical release pending",
+      "supply": "SEE_POWER_DOMAIN_CONTRACT",
+      "current_A": null,
+      "unit_price": null,
+      "currency": "CNY",
+      "native_footprint": "UNVERIFIED",
+      "risk": "No new PL GPIO claimed; supervisor/recovery method needs actual circuit",
+      "references": {
+        "Upper": [],
+        "Lower": [],
+        "Central": [
+          "CE_H021_001"
+        ],
+        "External": []
+      }
+    }
+  }
+]

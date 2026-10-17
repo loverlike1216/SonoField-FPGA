@@ -1,0 +1,60 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "branch": "codex/v5-hardware-design-20261011",
+  "implementation_commit": "c4b798437f08339c54d15b80229779140298898b",
+  "implementation_remote_verified": true,
+  "main_commit_unchanged": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
+  "receipt_publication_commit": null,
+  "receipt_publication_commit_resolution": "git log -1 --format=%H -- v5/hardware/draw_ready_20261016/PUBLICATION_RECEIPT.json",
+  "pr": {
+    "baseRefName": "codex/v5-ad7606c16-nextstage-20261010",
+    "headRefName": "codex/v5-hardware-design-20261011",
+    "headRefOid": "c4b798437f08339c54d15b80229779140298898b",
+    "isDraft": true,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-17T02:35:32Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38995519077/job/117287094625",
+        "name": "integrity",
+        "startedAt": "2026-10-17T02:35:27Z",
+        "status": "COMPLETED",
+        "workflowName": "v5 workspace integrity"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-17T02:35:28Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/loverlike1216/SonoField-FPGA/actions/runs/38995514904/job/117287079980",
+        "name": "integrity",
+        "startedAt": "2026-10-17T02:35:23Z",
+        "status": "COMPLETED",
+        "workflowName": "v5 workspace integrity"
+      }
+    ],
+    "url": "https://github.com/loverlike1216/SonoField-FPGA/pull/5"
+  },
+  "ci_for_implementation_commit": "FAIL",
+  "ci_failure_cause": "check_migration.py reports 8 authorized inherited-source changes against the prior reviewed adaptation hashes. Original gate retained; independent review pending.",
+  "ci_log": "logs/github_ci_c4b7984_pr.log",
+  "ci_log_sha256": "3e0bc977ce606b6b264adb6639e9d88db9fb582aa75ebf30fcb641052eac86a2",
+  "draw_ready_scope": "THEORY_ONLY_ACCEPT_WITH_LIMITATIONS; no main merge or hardware acceptance",
+  "sealed_git_blob_check": {
+    "status": "PASS",
+    "exact_public_git_blobs": 389,
+    "canonical_native_sources": 29,
+    "staged_files": 435,
+    "protected_paths_staged": false,
+    "historical_body_access": false,
+    "byte_policy": "packet exact; formal sources CRLF to LF only"
+  },
+  "hardware_programming": false,
+  "schematic_created": false,
+  "pcb_created": false,
+  "chat_messages": 0,
+  "chat_decisions": 0,
+  "created_at": "2026-10-17T02:37:33.669502+00:00"
+}

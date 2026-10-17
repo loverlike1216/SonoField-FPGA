@@ -1,0 +1,20 @@
+{
+  "status": "FAIL",
+  "classification": "OFFLINE_ONLY",
+  "source_root": "E:\\Codex_project\\AMD_Sonofield\\v5",
+  "python": "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+  "started_at": "2026-10-10T18:33:20.352677+00:00",
+  "commands": [
+    {
+      "name": "prepcb_full",
+      "command": [
+        "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\run_prepcb.py",
+        "--output",
+        "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry1\\full"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "error": "prepcb_full failed; preserved logs"
+}
