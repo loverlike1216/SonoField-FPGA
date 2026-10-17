@@ -1,18 +1,18 @@
 {
-  "checkpoint_id": "CP-20261016-FINALTHEORY",
+  "checkpoint_id": "CP-20261017-GUIDEFORMAT",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex_project\\AMD_Sonofield",
   "branch": "codex/v5-hardware-design-20261011",
-  "base_commit": "8c27b5841b5494c3761ab211881a3ea2be63e8c8",
+  "base_commit": "62330fb35022421c0560b3bede8803c53b30b02d",
   "head_commit": null,
-  "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json; then read localPUBLICATION_RECEIPT.json",
+  "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json; document publication receipt is local20261017_BoardPage_StepGuide/PUBLICATION_RECEIPT.json",
   "active_version": "v5",
   "version_status": "ACTIVE",
   "current_stage": "V5_THEORY_DRAW_READY_AWAIT_INDEPENDENT_REVIEW",
-  "created_at": "2026-10-17T02:05:43.561954+00:00",
-  "checkpoint_reason": "FinalRTL/XDC/uniquehardware/pincontract/nativeSTA/modelclosed; stopbeforeCAD",
+  "created_at": "2026-10-17T18:00:51.519478+00:00",
+  "checkpoint_reason": "User-requested detailed board/page/placement guide conversion; electrically identical verified documents",
   "source_of_truth": "currentrepository+actualtooloutputs",
   "architecture_ref": "v5/hardware/draw_ready_20261016/00_FINAL_THEORY_DECISION.md",
   "completed": [
@@ -20,7 +20,8 @@
     "SIMULATEDtwoindependenttools128TX+8ADC+goldens+freshness",
     "ROUTEDcompletePSPL-2positiveWNS/WHS,DRC0",
     "MODELED90SI+648BVD+512fault+16softstartSPICE",
-    "DOCUMENTED85MPN1611devices5205pins1259passives80+128contacts"
+    "DOCUMENTED85MPN1611devices5205pins1259passives80+128contacts",
+    "DOCUMENTED_AND_TESTED full board/page/placement guide and 13 booklets; expanded5205pins0difference;8negativechecks;2Pythonversions"
   ],
   "next_actions": [
     "ChatGPTindependentReview",
@@ -129,6 +130,16 @@
       "status": "FAIL",
       "evidence": "v5/hardware/draw_ready_20261016/PUBLICATION_RECEIPT.json",
       "reason": "Prior reviewed source hashes reject 8 authorized adaptations; independent Review pending, no gate relaxation"
+    },
+    {
+      "check": "Detailed guide representation equivalence",
+      "status": "PASS",
+      "evidence": "v5/hardware/draw_ready_20261016/guide_by_page_20261017/results/CONSISTENCY.json",
+      "source_sha256": "8db415eb181ea840831148a40458620974d549f5b8052f325b23a7e89f21b9ee",
+      "output_sha256": "d897bad1cf87862eeee3d632321b8b23ebea5d8108426947e50715a3b4bb1c48",
+      "expanded_pins": 5205,
+      "negative_checks": 8,
+      "scope": "Document equivalence only; no new ERC/hardware or circuit acceptance"
     }
   ],
   "known_limitations": [
@@ -158,12 +169,17 @@
   "evidence_refs": [
     "v5/hardware/draw_ready_20261016/results/FINAL_NATIVE_SOURCE_MANIFEST.json",
     "v5/hardware/draw_ready_20261016/09_RTL_XDC_PINMAP_CROSSCHECK.csv",
-    "v5/hardware/draw_ready_20261016/results/native21/NATIVE_ROUTED_TIMING.rpt"
+    "v5/hardware/draw_ready_20261016/results/native21/NATIVE_ROUTED_TIMING.rpt",
+    "v5/hardware/draw_ready_20261016/guide_by_page_20261017/results/CONSISTENCY.json"
   ],
   "resume_from": "v5/hardware/draw_ready_20261016/FINAL_REVIEW.md",
   "status": "VALID_THEORY_CANDIDATE_REVIEW_PENDING",
   "draw_ready": true,
   "overall": "ACCEPT WITH LIMITATIONS",
   "audit_root": "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady",
-  "implementation_commit": "c4b798437f08339c54d15b80229779140298898b"
+  "implementation_commit": "c4b798437f08339c54d15b80229779140298898b",
+  "guide_ref": "v5/hardware/draw_ready_20261016/guide_by_page_20261017/README.md",
+  "guide_equivalence_evidence": "v5/hardware/draw_ready_20261016/guide_by_page_20261017/results/CONSISTENCY.json",
+  "previous_checkpoint_id": "CP-20261016-FINALTHEORY",
+  "repository_delta_since_previous_checkpoint": "Add only guide conversion, verification scripts/logs and recovery/interaction metadata; no BOM/RTL/XDC/circuit changes"
 }

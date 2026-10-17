@@ -54,3 +54,7 @@ HistoricalcandidateafterverificationPASS:171tests/3696×4/newprePCBextra/three n
 THEORY_DRAW_READY=YES; ACCEPT WITH LIMITATIONS; P0theory=0. This is a candidate waiting independentReview, not main/PCB/hardware acceptance. Current files: v5/hardware/draw_ready_20261016. Board userconfirmedXC7Z020-2CLG400I;128/256MHzF-LVT;three12Vinputs/fixed10VTX;ADC8DOUT8MHz400kSPS. Originalfrozen_parenthashFAILretained and explained; all oldgoldens/thresholds retained.
 
 Next action: STOPforChatGPTindependentReview. Do not automatically create schematic/PCB, programhardware, buy, merge main or createv6. NativeERC/physical/runtime/SSO/PDN remain unqualified within statedscope.
+
+## 2026-10-17
+
+Add board/page/placement connection guide plus13booklets; independently verify all5205pins, values, interfaces andsame-net peers, zero electrical changes;8negative checks andtwoPythonversionsPASS. Original design candidate/Review/CI failure unchanged.

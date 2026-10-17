@@ -60,10 +60,10 @@
   "interaction_memory_index": "AI-interaction-memory/INDEX.md",
   "interaction_memory_status": "PARTIAL",
   "codex_thread_id": "01a13e3e-e993-7480-82ee-ac3bc9473fc4",
-  "latest_context_checkpoint": "CP-20261016-FINALTHEORY",
+  "latest_context_checkpoint": "CP-20261017-GUIDEFORMAT",
   "checkpoint_status": "VALID_THEORY_CANDIDATE_REVIEW_PENDING",
   "next_action": "STOP; ChatGPTindependentReview oftheorypackage. NoautomaticCAD/PCB/hardwarewrites/procurement/mainmerge/v6.",
-  "updated_at": "2026-10-17T02:11:17.429439+00:00",
+  "updated_at": "2026-10-17T18:00:51.519478+00:00",
   "checkpoint_commit": null,
   "latest_bom_submission": "v5/hardware/bom/submissions/2026-10-08/BOM_AX7020_NU40C10T_2026-10-08.xlsx",
   "latest_bom_review": "v5/hardware/bom/submissions/2026-10-08/submission.json",
@@ -94,7 +94,7 @@
   "pr_url": "https://github.com/loverlike1216/SonoField-FPGA/pull/5",
   "published_evidence_commit": "09201d34d15b21c4956f2d2377cc4daea33b1f71",
   "last_verified_remote_main": "ecd32e76e9b6c08806eae30a3c75a9c3be5e7570",
-  "online_ci": "PASS_PUSH_AND_PR_AT09201D3_UBUNTU40MODEL_CONTRACT_STRUCTURAL",
+  "online_ci": "FAIL_SOURCE_FREEZE_REVIEW_PENDING_AT62330FB",
   "publication_receipt": "v5/hardware/draw_ready_20261016/PUBLICATION_RECEIPT.json",
   "checkpoint_base_commit": "618b6f1ffe3dae9b98c59bf1c981349e48644662",
   "checkpoint_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
@@ -155,5 +155,8 @@
   "chat_consultation_messages": 0,
   "head_commit": null,
   "implementation_commit": "c4b798437f08339c54d15b80229779140298898b",
-  "github_ci": "FAIL_AUTHORIZED_SOURCE_FREEZE_REVIEW_PENDING"
+  "github_ci": "FAIL_AUTHORIZED_SOURCE_FREEZE_REVIEW_PENDING",
+  "latest_connection_guide": "v5/hardware/draw_ready_20261016/guide_by_page_20261017/13_JLCEDA_PRO_BOARD_PAGE_STEP_GUIDE.md",
+  "latest_connection_guide_index": "v5/hardware/draw_ready_20261016/guide_by_page_20261017/README.md",
+  "guide_format_validation": "PASS_5205_PINS_0_DIFFERENCE_8_MUTATIONS_2_PYTHON"
 }

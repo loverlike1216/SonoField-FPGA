@@ -1,46 +1,68 @@
+---
+checkpoint_id: CP-20261017-GUIDEFORMAT
+project_id: SONOFIELD_FPGA
+repository: https://github.com/loverlike1216/SonoField-FPGA.git
+branch: codex/v5-hardware-design-20261011
+base_commit: 62330fb35022421c0560b3bede8803c53b30b02d
+head_commit: UNKNOWN_SELF_REFERENTIAL_USE_GIT_RESOLVER
+active_version: v5
+current_stage: V5_THEORY_DRAW_READY_AWAIT_INDEPENDENT_REVIEW
+created_at: 2026-10-17T18:00:51.519478+00:00
+status: VALID_THEORY_CANDIDATE_REVIEW_PENDING
+---
+
 # Context checkpoint
 
-# FINAL_REVIEW
+## 1. Current Identity
+SONOFIELD_FPGA; E:/Codex_project/AMD_Sonofield; codex/v5-hardware-design-20261011; active v5. Entry HEAD 62330fb35022421c0560b3bede8803c53b30b02d. Resolve checkpoint commit with `git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json`.
 
-**DRAW_READY：YES。整体结论：ACCEPT WITH LIMITATIONS。P0理论阻塞：0。**
+## 2. Current Goal
+User-requested re-expression of the existing connection guide is complete. Engineering remains at independent Review; no automatic CAD/PCB.
 
-项目SONOFIELD_FPGA，唯一活动版本v5，工作区E:/Codex_project/AMD_Sonofield，分支codex/v5-hardware-design-20261011，任务开始HEAD8c27b5841b5494c3761ab211881a3ea2be63e8c8。用户已明确授权必要正式RTL/XDC修改及同分支commit/push。用户当前确认器件XC7Z020-2CLG400I，原-1结果保留为历史保守试验；JTAG只确认Z020 ID，不确认速度/温度后缀。
+## 3. Architecture
+Unchanged user-authorized final theory contract: XC7Z020-2CLG400I; 128/256MHz F-LVT; 128TX/8RX; three independent12V inputs, 10V TX; C16 eightDOUT8MHz400kSPS. Architecture reference: v5/hardware/draw_ready_20261016/00_FINAL_THEORY_DECISION.md.
 
-终版完整BOM85种、1611个安装器件、5205个物理针、1259个无源双端、1088个板内网络；FPGA80触点、阵列上下共128触点、128TX和8RX全部单一映射。
+## 4. Completed
+Documented 982 template devices on13pages; verified expanded1611devices/5205pins/1259passives/1088nets, 80+128contacts, 13booklets. TESTED with two Python versions and8negative mutations. Earlier simulation/route evidence remains scoped as recorded in the previous checkpoint; no new physical validation.
 
-| 检查 | 状态 | 证据/边界 |
-|---|---|---|
-| UniqueMPN/pins/net/quantity | PASS | results/INDEPENDENT_CONSISTENCY_FINAL.json |
-| OEM XLSX/actualRTL-XDC/nativeIO 80+128contacts | PASS | 09_RTL_XDC_PINMAP_CROSSCHECK.csv |
-| TX90 joint SI corners + worstpulse numerical convergence | PASS | results/SELECTED_FINAL_SI_INDEPENDENT.json;CONVERGENCE_FINAL.json |
-| ActualPSPL synthesis/place/route setup+hold+DRC | PASS | results/native21/ |
-| 128TX256phases38500/40000/41500Hz and fresh/defaultoff | PASS | results/final_digital_qualified_final/summary.json |
-| 8DOUT400kSPS2048signedframes/read/ACK two tools | PASS | results/capture_adc_final/summary.json |
-| ActualGPIO/AXI/mailbox/ADC44nsproduction replay | PASS | results/production_profile_adc_final_fixed/summary.json |
-| Legacyindependent scheduler/queue/array golden | PASS | v5/evidence/final_theory_20261016/independent_qualified_final/summary.json |
-| Python247unit | PASS | logs/unit_sealed_final247.log |
-| 3696frames x3Icarus+1XSim functional motion/goldens | PASS | v5/evidence/final_theory_20261016/functional_final128/motion/SUMMARY.json |
-| Originalfrozen_parent sourcehash gate | FAIL | OriginalFAILretained; explicitlyauthorizedRTLchanges; independentreviewofauthorizeddelta pending |
-| Power/BVD/thermal/fault/Cfeature bounded checks | PASS | results/ELECTRICAL_FINAL_CHECKS.json |
-| FullcompliantdynamicIBIS/realSSO/PCBPDN | HOLD | Notclaimed; datasheet/staticIVandboundedgeometry fallback used |
-| NativeEasyEDA/ERC | NOT_CHECKED | Schematic/PCBNOT_CREATED |
-| Physicalpower/acoustic/ADC/thermal/runtime | NOT_CHECKED | OnlyJTAGreadonlyID; nohardwarewrites |
-| FulltargetPSruntime/BSP deployment | HOLD | Noimageprogrammed; existing safe-status image is not production runtime |
-| ExternalChatGPTindependentreview | HOLD | Reader/senderunavailable;0messages/decisions; candidatewaitsreview |
-| Procurement/footprintmapping/PCBorder | HOLD | Noorders/manufacturingauthorization |
+## 5. Current Plan Position
+Guide conversion complete. Same stage: V5_THEORY_DRAW_READY_AWAIT_INDEPENDENT_REVIEW.
 
+## 6. Next Actions
+Independent Review of theory/design package; guide may now be read per page. Stop before CAD/PCB unless a new user instruction authorizes that stage.
 
-原始frozen_parent FAIL是当前正式源码与20261011已审adaptation hash不同；本轮用户明确批准这些修改。未删除测试、未重写golden、未改35dB阈值，也没有将该FAIL改成PASS。旧RAM等价FAIL已由保持legacy默认、生产BRAM写前递/同步复位修复，新独立对照PASS。整机3696×4功能/确定性与原golden回归PASS与源码冻结hash FAIL分别报告。当前sourcehash另见FINAL_NATIVE_SOURCE_MANIFEST.json，等待独立Reviewer确认授权差异；main和量产均未放行。
+## 7. Active Decisions
+["User20261016autonomousv5theory/necessaryRTL-XDC/samebranchpublication", "UserdevicecorrectionXC7Z020-2CLG400I", "F-LVT128/256MHz;ADC8MHz400kSPS;3x12V10VTX"]
+No new architecture or ChatGPT decision was created by formatting documents.
 
-ADC终版8MHz/400kSPS，其余过程速率全部superseded。数据手册和脚本边界在08、电源报告及12索引；所有公式、等效SPICE和行为RTL结果均不冒充样机测试。外部ChatGPT链接只读到登录页，工具没有会话read/send能力，0条消息、0条外部决策；本地源记录保留，公开材料脱敏。
+## 8. Blockers / Critical Issues
+No document-equivalence blocker. Original source-freeze CI FAIL remains; independent engineering Review, physical/SSO/PDN/ERC/runtime qualification remain open. No automatic main promotion.
 
-未修改用户BOM/PCB目录或S3/S4原始文件；Historical project没有内容读取或Git变更。仅必要v5源/约束/配套适配与本审核交付变更。未运行EDA画图、PCB、采购、烧录或部署。已达到本轮理论连接合同交付点，停止继续优化，交给ChatGPT-chat独立Review。
+## 9. Latest Validation
+v5/hardware/draw_ready_20261016/guide_by_page_20261017/results/CONSISTENCY.json: PASS, zero connection differences, 8/8invalid documents rejected. Logs include Python3.12.14 and3.10.11 actual executions. Earlier native21/functional evidence remains referenced in JSON.
 
-## Resume
+## 10. Known Limitations
+["Originalfrozen_parenthashFAILretained", "FullIBIS/SSO/PDNnotqualified", "NoCAD/ERC/physical/deployment", "ChatGPTreadsendBLOCKED"]
 
-Read00,FINAL_REVIEW,OPEN_BLOCKERS,sourcehash and actualGitstate first. StopforindependentReview; noautoCAD/PCB/hardware/v6.
+## 11. Do Not Change
+["NoV6", "NoHistoricalprojectbodyreads/changes", "NoS3/S4/nativeEDAmodifications", "NoMainmerge/hardwarewrites/fabrication/procurement"]
+Original02guide, BOM and formalRTL/XDC were not modified by this task.
 
+## 12. Invariants
+["128TX8RX", "8bitrequested/calibrationseparate", "atomiccompletemapcommit", "40kHz256phases50Hzmotion", "UCC27624andSN74LVC595A", "threeindependent12V/fixed10VTX", "2x20+2x32physicalpincontracts"]
 
-## GitHub publication verification
+## 13. Open AI Problems
+["P-20261016-001"]
+No new architecture problem; external ChatGPT review not fabricated.
 
-Implementation commit c4b798437f08339c54d15b80229779140298898b was pushed and remote-verified on the existing v5 candidate branch; PR5 remains Draft and main is unchanged. Actual GitHub CI FAIL is retained: check_migration.py rejects eight user-authorized current source adaptations against the previous reviewed hashes. This is the same documented source-freeze review boundary; the gate was not weakened or changed to PASS. See PUBLICATION_RECEIPT.json and logs/github_ci_c4b7984_pr.log. Stop for independent review; no automatic main promotion.
+## 14. Repository Delta Since Previous Checkpoint
+Only added detailed guide, page booklets, independent checks/logs and project/interaction recovery metadata. Historical project bodies untouched; existing BOM/PCB/untracked raw evidence retained.
+
+## 15. Resume Instruction
+Read current shared state, then v5/hardware/draw_ready_20261016/guide_by_page_20261017/README.md and original v5/hardware/draw_ready_20261016/FINAL_REVIEW.md. Preserve review/physical boundaries; do not restart optimization or drawing automatically.
+
+## 16. Evidence References
+v5/hardware/draw_ready_20261016/guide_by_page_20261017/14_GUIDE_CONSISTENCY_REPORT.md; scripts/check_guide_consistency.py; results/CONSISTENCY.json; logs/check_guide_consistency.log; logs/check_guide_consistency_python310.log; original theory evidence remains in JSON.
+
+## 17. Provenance
+Actual originalMarkdown and8hashed source files, current Git entry HEAD, original CSV and saved pin database, newlyparsed finalMarkdown, actualtwoPython executions andnegative mutation checks. Document PASS does not certify hardware.

@@ -77,3 +77,5 @@ the recorded cutoff. No reasoning, inaccessible ChatGPT output or independent re
 invented. User private paths and credential patterns redacted; publication recorded separately.
 
 | S-20261016-final-theory-001 | [finaltheoryrecord](codex/S-20261016-final-theory-001.md) | PARTIAL | IMPLEMENTATION_INPUT / VALIDATION_INPUT |
+
+| S-20261017-guide-format-001 | [record](codex/S-20261017-guide-format-001.md) | PARTIAL | DOCUMENTATION_INPUT / VALIDATION_INPUT | SHA256 90ec082338ddfe09548b21a9c0b665a91e2b2562181195bdf062d3987c27d017 |
