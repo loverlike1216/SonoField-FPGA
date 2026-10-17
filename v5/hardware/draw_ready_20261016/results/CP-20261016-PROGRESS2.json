@@ -1,0 +1,70 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "version": "v5",
+  "stage": "FINAL_THEORY_CLOSURE_IN_PROGRESS",
+  "updated_at": "2026-10-16T19:18:02.272529+00:00",
+  "audit": "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady",
+  "formal_branch": "codex/v5-hardware-design-20261011",
+  "head_before": "8c27b5841b5494c3761ab211881a3ea2be63e8c8",
+  "authorization": "User permits formalRTL/XDC, candidateBOM, samebranchcommitpush; noCAD/nohardwareprogramming/nohistorybodyreads",
+  "chosen_profile": {
+    "core_hz": 125000000,
+    "micro_hz": 250000000,
+    "srclk_hz": 41666666.666666664,
+    "carrier_hz": 40000,
+    "phases": 256,
+    "adc_dout_lanes": 8,
+    "adc_sclk_hz": 15625000,
+    "adc_sample_period_cycles": 167,
+    "adc_fs_hz": 748502.994011976,
+    "adc_reason": "Bounded650nsmax/500nsmin conversion, sequentialreads may overlap nextconversion, reserveBUSYquiet;800klegacyfixture remains132MHz only",
+    "fast_buffers": "13xSN74LVT244BPWR local3.3V",
+    "first_receiver": "22Rseries+4.7pFC0G; AXboardexisting33R retained",
+    "second_source": "47R; data595local47R; clock595local15R4loads/driver; <=27mmclockbranch"
+  },
+  "completed": [
+    "Sourcebackup104files",
+    "JTAGreadonly23727093/4BA00477",
+    "243unittestPASS repeated",
+    "Production8ADC44TX132MHz integratedIcarus/XSimPASS beforelatest125pipelineadaptation",
+    "90selected125MHzSIcases PASS plus independentrise/fall/partdelay; minima setup6.5016 hold3.5125 pulse5.7423 latch4.6009ns",
+    "Native132MHz PS/PL routed realxc7z020clg400-1 FAILsetup-1.630ns/hold+0.051ns; failuresnotrelaxed",
+    "Functionalmotion3696framesx4 andcalibrationregressionPASS; oldfrozen_sourcehashgateFAIL expectedauthorizedchanges, keepimmutablegate",
+    "Finalconnectiondatabase1647instances/5277pins/1295passives/80BOMtypes built"
+  ],
+  "latest_changes": [
+    "CLOCK_HZ125 productionpropagated; legacy132defaults kept; ADCphysical125profileguard167cycles/SCLKdiv8",
+    "Correctedbadparameterdeclarationin4hierarchyfiles",
+    "Registeredcore_resetrelease+fastrelease",
+    "Queueprevalidationparameter enabledonlyproductionTXpipeline",
+    "Serializerregisteredpredata/shift_next/latch_next scheduleunchanged; fast_hold8ns enabledcapture+3requestFF; XDCsnapshot2cyclelegitimateCE",
+    "Movedunusedlegacytx_clk declaration afterclk (XSim compilefix)",
+    "CandidateBOMallLVTremoved2.5rail; twoindependentLTC6993-2+DFFtimers perarray; RCfaultreportfiltermanualrearm"
+  ],
+  "running": {
+    "native09": "session14046 logs/native_retry9_console.log",
+    "formal_functional_retry1": "session53451 continues; motionFAIL onlyimmutablehash, axiFAILtbdeclnowfixed; supervisorPASS",
+    "selected_si": "completed90/90"
+  },
+  "pending": [
+    "Runlatest125productionprofileIcarus/XSim &4096phaseupdates &UNISIM125/250MMCM",
+    "Missing-frameformal64cycle fix +hardwarewatchdog/faultRC independent simulation",
+    "Native09 actual-1 route closure; inspectCDC/constraints/IOB/padskew; nofalsepath betweenclockdomains",
+    "Handleactualnewfailures notskip; runremainingcurrentgatesafterdeclfix; preserveoriginalhashgateasauthorizeddelta",
+    "Independentnoise/SSOmodelboundary notfullIBIS; avoidclaimingactualPCBSSO proof",
+    "TMP117multiplexed3locations all0x48adapter vslegacy48/49/4b",
+    "FinalBOMXLSXartifacttool, allpin/passiveguide,128channelchain,ADCtemp/powerfaultlists",
+    "IndependentRTL/XDC/vendorxlsx/nativepackageDBcrosscheck",
+    "Fullsourcesindex/newpartsprimaryPDFs",
+    "Formalsharedstate/AIinteractionPARTIAL/ChatGPTBLOCKEDurl, sourcepreservation/secret scan, samebranchcommitpush",
+    "FinalDRAWHEREADY onlyaftervalidchecks; noCAD/hardwaretesting"
+  ],
+  "chat": {
+    "url": "[REDACTED_PRIVATE_CHAT_URL]",
+    "status": "BLOCKED_LOGIN_ONLY_NO_CHAT_READ_SEND_TOOL",
+    "messages_sent": 0,
+    "messages_received": 0
+  },
+  "source_of_truth": "Currentfiles andactualtooloutputs; thisprogressrecordnotacceptance",
+  "draw_ready": "NOT_YET_QUALIFIED"
+}

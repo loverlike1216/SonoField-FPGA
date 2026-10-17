@@ -9,9 +9,11 @@ module prepcb_frame_mailbox(input wire clk,rst_n,publish,
  output reg [31:0] frame_sequence,output reg frame_last,input wire frame_ready,
  output wire busy,output reg invalid);
  reg seen;reg [2:0] state;reg [7:0] word_index;
- assign bram_clk=clk;assign bram_rst=~rst_n;assign bram_we=0;assign bram_wrdata=0;
+ assign bram_clk=clk;reg bram_reset_q;always@(posedge clk)bram_reset_q<=!rst_n;
+ assign bram_rst=bram_reset_q;assign bram_we=0;assign bram_wrdata=0;
  assign busy=(state!=0)||frame_valid;
- always @(posedge clk or negedge rst_n)begin
+ //Synchronous BRAM controls prevent asynchronous address/enable changes.
+ always @(posedge clk)begin
   if(!rst_n)begin seen<=0;state<=0;word_index<=0;bram_en<=0;bram_addr<=0;frame_valid<=0;frame_data<=0;frame_sequence<=0;frame_last<=0;invalid<=0;end
   else case(state)
    0:begin

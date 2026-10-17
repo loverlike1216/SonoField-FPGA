@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 // Candidate module-reference top. All I/O are logical; never a production pinout.
-module prepcb_pl #(parameter integer ADC_C16=0)(input wire clk,rst_n,
+module prepcb_pl #(parameter integer CLOCK_HZ=132000000,ADC_C16=0,ADC_DOUT_LANES=4,ADC_SCLK_DIVIDER=4,TX_PIPELINE44=0)(input wire clk,tx_clk,rst_n,
  input wire [31:0] S_AXI_awaddr,input wire S_AXI_awvalid,output wire S_AXI_awready,
  input wire [31:0] S_AXI_wdata,input wire [3:0] S_AXI_wstrb,input wire S_AXI_wvalid,output wire S_AXI_wready,
  output wire [1:0] S_AXI_bresp,output wire S_AXI_bvalid,input wire S_AXI_bready,
@@ -10,7 +10,7 @@ module prepcb_pl #(parameter integer ADC_C16=0)(input wire clk,rst_n,
  (* X_INTERFACE_PARAMETER = "FREQ_HZ 132000000" *) output wire bram_clk,
  output wire bram_rst,output wire [3:0] bram_we,output wire bram_en,
  output wire [31:0] bram_addr,bram_wrdata,input wire [31:0] bram_rddata,
- input wire adc_busy,input wire [3:0] adc_dout,
+ input wire adc_busy,input wire [ADC_DOUT_LANES-1:0] adc_dout,
  output wire adc_reset,adc_convst,adc_cs_n,adc_sclk,adc_sdi,
  output wire [1:0] rx_blank,output wire [31:0] serial_data,
  // Serializer strobes are logical data ports; their off-chip timing is held.
@@ -26,7 +26,11 @@ module prepcb_pl #(parameter integer ADC_C16=0)(input wire clk,rst_n,
  wire frame_valid,frame_ready,frame_last,mailbox_busy,mailbox_invalid;
  wire core_frame_ready;
  wire task_allowed=(state==6)||(state==7)||(state==8);
- wire core_reset_n=rst_n && state!=9 && state!=10 && !control[7];
+ wire core_reset_request_n=rst_n && state!=9 && state!=10 && !control[7];
+ (* ASYNC_REG="TRUE" *) reg[1:0]core_release;
+ always@(posedge clk or negedge core_reset_request_n)
+  if(!core_reset_request_n)core_release<=0;else core_release<={core_release[0],1'b1};
+ wire core_reset_n=core_release[1];
  wire [31:0] ps_ack_sequence=acknowledged_sequence+1;
  reg publish_armed;
  always @(posedge clk or negedge core_reset_n)begin
@@ -39,7 +43,7 @@ module prepcb_pl #(parameter integer ADC_C16=0)(input wire clk,rst_n,
  prepcb_frame_mailbox mailbox(.clk(clk),.rst_n(core_reset_n),.publish(control[9]&publish_armed),
   .bram_clk(bram_clk),.bram_rst(bram_rst),.bram_we(bram_we),.bram_en(bram_en),.bram_addr(bram_addr),.bram_wrdata(bram_wrdata),.bram_rddata(bram_rddata),
   .frame_valid(frame_valid),.frame_data(frame_data),.frame_sequence(frame_sequence),.frame_last(frame_last),.frame_ready(frame_ready),.busy(mailbox_busy),.invalid(mailbox_invalid));
- prepcb_supervisor supervisor(.clk(clk),.rst_n(rst_n),.estop_loop_ok(health[0]),
+ prepcb_supervisor #(.CAL_TIMEOUT_MS(TX_PIPELINE44?600000:30000),.MS_CYCLES(CLOCK_HZ/1000)) supervisor(.clk(clk),.rst_n(rst_n),.estop_loop_ok(health[0]),
   .pgood_up(health[1]),.pgood_dn(health[2]),.thermal_ok(health[3]&health[6]&health[7]&~mailbox_invalid&~core_fault),.link_ok(health[4]),.watchdog_ok(health[5]),
   .ps_arm(control[0]),.pl_cal(control[1]),.clear_fault(control[2]),.cal_complete(control[3]),.cal_quality(control[4]),
   .trap_request(control[5]),.motion_request(control[6]),.motion_done(motion_done),.stop(control[7]),
@@ -50,7 +54,7 @@ module prepcb_pl #(parameter integer ADC_C16=0)(input wire clk,rst_n,
  // alive during SAFE for ADC setup and safe prefill; physical OE/eFuse stay
  // dominated by supervisor_disable above. Fault/STOP resets the whole core.
  // Mailbox uses task sequence1..N; original queue/ACK use0..N-1.
- sono_axi_system #(.ADC_C16(ADC_C16)) core(.clk(clk),.rst_n(core_reset_n),.hardware_enable(1'b1),.motion_arm(control[8]&emit_permit),.motion_stop(1'b0),
+ sono_axi_system #(.CLOCK_HZ(CLOCK_HZ),.ADC_DOUT_LANES(ADC_DOUT_LANES),.ADC_SCLK_DIVIDER(ADC_SCLK_DIVIDER),.TX_PIPELINE44(TX_PIPELINE44),.ADC_C16(ADC_C16)) core(.clk(clk),.tx_clk(tx_clk),.rst_n(core_reset_n),.hardware_enable(1'b1),.motion_arm(control[8]&emit_permit),.motion_stop(1'b0),
  .frame_valid(frame_valid&task_allowed),.frame_data(frame_data),.frame_sequence(frame_sequence-1),.frame_last(frame_last),.frame_ready(core_frame_ready),
  .buffered_count(buffered_count),.acknowledged_sequence(acknowledged_sequence),.motion_running(motion_running),.motion_done(motion_done),
  .motion_underflow(motion_underflow),.motion_overflow(motion_overflow),.motion_invalid(motion_invalid),.motion_timeout(motion_timeout),

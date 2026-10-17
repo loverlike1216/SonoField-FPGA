@@ -1,0 +1,52 @@
+                                                                          AX7020
+
+
+和BANK35上，电平默认为3.3V，扩展口J10的部分IO可以通过更换开发板上电源芯片(SPX3819M5-3-3)改变
+IO的电平。切勿直接跟5V设备直接连接，以免烧坏FPGA。如果要接5V设备，需要接电平转换芯片。
+
+  在扩展口和FPGA连接之间串联了33欧姆的排阻，用于保护FPGA以免外界电压或电流过高造成损坏。
+PCB设计上P和N的走线使用差分走线，控制差分阻抗为100欧姆。J10扩展口引脚分配见下表所示：
+
+  J10管脚       信号名称         ZYNQ引脚名        ZYNQ引脚号
+
+   PIN1              GND                                  -                                         -
+
+   PIN2                 +5V                                   -                                         -
+
+   PIN3                 EX_IO1_1N              IO_L22N_T3_34          W19
+
+   PIN4                 EX_IO1_1P              IO_L22P_T3_34          W18
+
+   PIN5                 EX_IO1_2N              IO_L6N_T0_34            R14
+
+   PIN6                 EX_IO1_2P              IO_L6P_T0_34            P14
+
+   PIN7                 EX_IO1_3N              IO_L7N_T1_34            Y17
+
+   PIN8                 EX_IO1_3P              IO_L7P_T1_34            Y16
+
+   PIN9                 EX_IO1_4N              IO_L10N_T1_34          W15
+
+   PIN10                EX_IO1_4P              IO_L10P_T1_34           V15
+
+   PIN11                EX_IO1_5N              IO_L8N_T1_34            Y14
+
+   PIN12                EX_IO1_5P              IO_L8P_T1_34          W14
+
+   PIN13                EX_IO1_6N              IO_L23N_T3_34           P18
+
+   PIN14                EX_IO1_6P              IO_L23P_T3_34           N17
+
+   PIN15                EX_IO1_7N              IO_L11N_T1_34           U15
+
+   PIN16                EX_IO1_7P              IO_L11P_T1_34           U14
+
+   PIN17                EX_IO1_8N              IO_L24N_T3_34           P16
+
+   PIN18                EX_IO1_8P              IO_L24P_T3_34           P15
+
+   PIN19                EX_IO1_9N              IO_L9N _T1_34           U17
+
+
+
+版权所有© 2026 芯驿电子科技（上海）有限公司                                             29 / 35

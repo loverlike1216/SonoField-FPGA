@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // Logical safety supervisor. Independent physical watchdog/cutoff remains REQUIRED.
 module prepcb_supervisor #(
- parameter integer MS_CYCLES=132000, LONG_PRESS_MS=1000, DEBOUNCE_MS=20, TIMEOUT_MS=30000
+ parameter integer MS_CYCLES=132000, LONG_PRESS_MS=1000, DEBOUNCE_MS=20, TIMEOUT_MS=30000, CAL_TIMEOUT_MS=TIMEOUT_MS
 )(input wire clk,rst_n,estop_loop_ok,pgood_up,pgood_dn,thermal_ok,link_ok,watchdog_ok,
  input wire ps_arm,pl_cal,clear_fault,cal_complete,cal_quality,trap_request,motion_request,motion_done,stop,
  output wire [3:0] state,output wire emit_permit,efuse_up,efuse_dn,output_disable,
@@ -10,7 +10,12 @@ module prepcb_supervisor #(
  CAL_READY=6,IDLE_TRAP=7,MOTION_EXEC=8,FAULT_LATCHED=9,ESTOP=10;
  wire healthy=pgood_up & pgood_dn & thermal_ok & link_ok & watchdog_ok;
  wire kill_ok=estop_loop_ok & healthy;
- reg [31:0] ms_div,arm_count,cal_count,age,arm_stable,cal_stable;
+ //Assert kill asynchronously; qualify release through two clocked stages.
+ //Only this first stage receives asynchronous board-health transitions.
+ (* ASYNC_REG="TRUE" *)reg[1:0]kill_sync;
+ always@(posedge clk or negedge rst_n)
+  if(!rst_n)kill_sync<=0;else kill_sync<={kill_sync[0],kill_ok};
+ reg [31:0] ms_div,arm_count,cal_count,age,cal_age,arm_stable,cal_stable;
  reg [1:0] arm_sync,cal_sync;
  reg arm_db,cal_db,arm_released,cal_released;
  reg [3:0] state_reg;
@@ -33,16 +38,16 @@ module prepcb_supervisor #(
  // counters are synchronously controlled; no data-dependent asynchronous load.
  always @(posedge clk or negedge fault_reset_n) begin
   if(!fault_reset_n)fault_latched<=1;
-  else if(cold||(clear_fault&&!arm_db&&!cal_db))fault_latched<=0;
+  else if(kill_sync[1]&&(cold||(clear_fault&&!arm_db&&!cal_db)))fault_latched<=0;
  end
  always @(posedge clk or negedge rst_n) begin
   if(!rst_n)begin
-   state_reg<=RESET_SAFE;cold<=1;arm_count<=0;cal_count<=0;age<=0;arm_stable<=0;cal_stable<=0;
+   state_reg<=RESET_SAFE;cold<=1;arm_count<=0;cal_count<=0;age<=0;cal_age<=0;arm_stable<=0;cal_stable<=0;
    arm_db<=0;cal_db<=0;arm_released<=0;cal_released<=0;
-  end else if(!kill_ok||fault_latched)begin
-   if(cold&&kill_ok)begin state_reg<=RESET_SAFE;cold<=0;end
+  end else if(!kill_sync[1]||fault_latched)begin
+   if(cold&&kill_sync[1])begin state_reg<=RESET_SAFE;cold<=0;end
    else state_reg<=FAULT_LATCHED;
-   arm_count<=0;cal_count<=0;age<=0;arm_stable<=0;cal_stable<=0;
+   arm_count<=0;cal_count<=0;age<=0;cal_age<=0;arm_stable<=0;cal_stable<=0;
    arm_db<=0;cal_db<=0;arm_released<=0;cal_released<=0;
   end else if(tick)begin
    cold<=0;
@@ -56,11 +61,12 @@ module prepcb_supervisor #(
    if(!cal_db&&!cal_sync[1]&&!pl_cal)cal_released<=1;
    arm_count<=(arm_db&&arm_released)?((arm_count<LONG_PRESS_MS)?arm_count+1:arm_count):0;
    cal_count<=(cal_db&&cal_released)?((cal_count<LONG_PRESS_MS)?cal_count+1:cal_count):0;
-   age<=((state>=BOARD_CHECK)&&(state<=CAL_QUALITY_GATE))?age+1:0;
+   age<=((state_reg>=BOARD_CHECK)&&(state_reg<=CAL_QUALITY_GATE))?((CAL_TIMEOUT_MS!=TIMEOUT_MS && state_reg==CAL_SPARSE)?age:age+1):0;
+   cal_age<=(state_reg==CAL_SPARSE)?cal_age+1:0;
    if((state_reg==FAULT_LATCHED)||(state_reg==ESTOP))begin
     if(clear_fault&&!arm_db&&!cal_db)begin state_reg<=RESET_SAFE;arm_released<=0;cal_released<=0;end
    end else if(stop)begin state_reg<=RESET_SAFE;arm_released<=0;cal_released<=0;end
-   else if(age>=TIMEOUT_MS)state_reg<=FAULT_LATCHED;
+   else if((CAL_TIMEOUT_MS!=TIMEOUT_MS && state_reg==CAL_SPARSE)?(cal_age>=CAL_TIMEOUT_MS):(age>=TIMEOUT_MS))state_reg<=FAULT_LATCHED;
    else case(state_reg)
     RESET_SAFE:state_reg<=BOARD_CHECK;
     BOARD_CHECK:if(arm_released&&arm_count>=LONG_PRESS_MS)state_reg<=ARMED_SAFE;

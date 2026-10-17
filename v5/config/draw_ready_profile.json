@@ -1,0 +1,36 @@
+{
+  "project_id": "SONOFIELD_FPGA",
+  "active_version": "v5",
+  "part": "xc7z020clg400-2",
+  "user_device_marking": "XC7Z020-2CLG400I",
+  "temperature_grade": "industrial",
+  "ref_clock_hz": 50000000,
+  "core_clock_hz": 128000000,
+  "tx_micro_clock_hz": 256000000,
+  "tx_shift_clock_hz": 42666666.666666664,
+  "tx_channels": 128,
+  "phase_levels": 256,
+  "carrier_nominal_hz": 40000,
+  "carrier_range_hz": [
+    38500,
+    41500
+  ],
+  "adc": "AD7606C-16BSTZ",
+  "adc_dout_lanes": 8,
+  "adc_sclk_divider": 16,
+  "adc_sample_period_core_cycles": 320,
+  "adc_sample_rate_hz": 400000,
+  "tmp117_i2c_address": 72,
+  "tca9548a_address": 112,
+  "temperature_mux_channels": {
+    "center": 0,
+    "upper": 1,
+    "lower": 2
+  },
+  "temperature_poll_period_ms": 50,
+  "ps_freshness_timeout_ms": 200,
+  "calibration_task_timeout_ms": 600000,
+  "deployment": "NOT_DEPLOYED; profile and adapters are pre-PCB engineering inputs",
+  "adc_cs_hold_core_cycles": 4,
+  "adc_clock_reason": "AHCT244worstCL15rise/fall7.5ns plus2ns slew/threshold and1.5ns FPGA/wire/jitter reserve;8MHz hasmargin withoutaddingactiveparts"
+}

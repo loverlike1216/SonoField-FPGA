@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "X:\scripts\run_convergence.py", line 14, in <module>
+    q=subprocess.run([sys.executable,__file__,'--one',json.dumps(x)],env=e,capture_output=True,text=True,timeout=90);assert q.returncode==0,q.stdout+q.stderr
+                                                                                                                            ^^^^^^^^^^^^^^^
+AssertionError: Traceback (most recent call last):
+  File "X:\scripts\run_convergence.py", line 6, in <module>
+    x=json.loads(sys.argv[-1]);y=run_case(x['solution'],x['case'],x['z0_ohm'],x['ron_ohm'],x['voltage'],x['cin_pf'],x['corner'],x['td_ns'],x['variant'],x['ax_model']=='OEM_IV_SUBSET',x['actual_package'])
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\scripts\si_engine.py", line 233, in run_case
+    t,v=run_segment(directory/signal/'second',first_kind,second_kind,ev,z,ron,vsource,cap,corner,td,second_term,signal=signal,input_multiplier=4 if signal!='data'else 1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\scripts\si_engine.py", line 142, in run_segment
+    raise RuntimeError('MODEL_HOLD: transient incomplete/divergent after GEAR2; not physical SI evidence')
+RuntimeError: MODEL_HOLD: transient incomplete/divergent after GEAR2; not physical SI evidence
+

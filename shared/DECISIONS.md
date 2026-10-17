@@ -109,3 +109,7 @@ remain unqualified. Manufacturing/procurement/unknown-image operations remain HO
 main promotion is not acceptable with unresolved P0 engineering gates. No duplicate
 request for routine publication permission. Source contracts, primary sources and
 independent audit paths: v5/docs/hardware and v5/evidence/hardware_design_20261011.
+
+## ADR043 — User-authorized final v5 theory/RTL-XDC closure, 2026-10-16
+
+Source: actual userexecutionrequest and supplied finaltheorycontract; current userdevicecorrection. Not a ChatGPT decision. Supersedes ADR042 USB-C/centralpower candidate and earlier noformalRTL-change boundary for this authorizedtask. ThreePCB12Vinputs,arrays10V,smallAXreferenceonly;61activeGPIO with80contact mapping;F-LVT128/256MHz;ADC8DOUT8MHz400kSPS;TMP117muxall0x48 andfreshness. User permits necessaryformalRTL/XDC andsamebranchpublication. Fixed128TX8RX,requested/calibration8bitseparation,atomicmapcommit,50Hzmotion and35dBacceptance unchanged. Native21-2fullPSPLroute WNS+.084/WHS+.039/DRC0, simulation/index evidence in v5/hardware/draw_ready_20261016. IndependentReview pending;originalfrozen_parenthashFAILretained,main/physical/manufacturingHOLD. NoV6, noCAD/PCB/hardwarewrites/paidprocurement authorized by thisdelivery.

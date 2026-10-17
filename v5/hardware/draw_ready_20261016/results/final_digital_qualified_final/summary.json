@@ -1,0 +1,353 @@
+[
+  {
+    "case": "scheduler_production",
+    "simulator": "icarus",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "C:/iverilog/bin/iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_scheduler_production",
+          "-o",
+          "sim.vvp",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\scheduler_golden.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_scheduler_production.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "C:/iverilog/bin/vvp.exe",
+          "sim.vvp"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "scheduler_production",
+    "simulator": "xsim",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+          "--sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\calibration\\calibration_scheduler.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\scheduler_golden.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_scheduler_production.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+          "tb_scheduler_production",
+          "-s",
+          "sim"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+          "sim",
+          "--runall"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "freshness",
+    "simulator": "icarus",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "C:/iverilog/bin/iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_freshness",
+          "-o",
+          "sim.vvp",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\service_freshness.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_freshness.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "C:/iverilog/bin/vvp.exe",
+          "sim.vvp"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "freshness",
+    "simulator": "xsim",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+          "--sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\service_freshness.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_freshness.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+          "tb_freshness",
+          "-s",
+          "sim"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+          "sim",
+          "--runall"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "tx38500",
+    "simulator": "icarus",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "C:/iverilog/bin/iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_final_tx38500",
+          "-o",
+          "sim.vvp",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\tx_pipeline44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer_pipeline_44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_final_tx38500.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "C:/iverilog/bin/vvp.exe",
+          "sim.vvp"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "tx38500",
+    "simulator": "xsim",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+          "--sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\tx_pipeline44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer_pipeline_44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_final_tx38500.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+          "tb_final_tx38500",
+          "-s",
+          "sim"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+          "sim",
+          "--runall"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "tx40000",
+    "simulator": "icarus",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "C:/iverilog/bin/iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_final_tx40000",
+          "-o",
+          "sim.vvp",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\tx_pipeline44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer_pipeline_44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_final_tx40000.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "C:/iverilog/bin/vvp.exe",
+          "sim.vvp"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "tx40000",
+    "simulator": "xsim",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+          "--sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\tx_pipeline44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer_pipeline_44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_final_tx40000.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+          "tb_final_tx40000",
+          "-s",
+          "sim"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+          "sim",
+          "--runall"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "tx41500",
+    "simulator": "icarus",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "C:/iverilog/bin/iverilog.exe",
+          "-g2012",
+          "-s",
+          "tb_final_tx41500",
+          "-o",
+          "sim.vvp",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\tx_pipeline44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer_pipeline_44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_final_tx41500.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "C:/iverilog/bin/vvp.exe",
+          "sim.vvp"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "tx41500",
+    "simulator": "xsim",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+          "--sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\tx_pipeline44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\output\\serializer_pipeline_44.sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\control\\safety_controller.sv",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_final_tx41500.sv"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+          "tb_final_tx41500",
+          "-s",
+          "sim"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+          "sim",
+          "--runall"
+        ],
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "case": "clocks",
+    "simulator": "xsim",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xvlog.bat",
+          "--sv",
+          "E:\\Codex_project\\AMD_Sonofield\\v5\\rtl\\timing\\draw_ready_clocks.v",
+          "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady\\candidate_rtl\\tb_final_clocks.sv",
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\data\\verilog\\src\\glbl.v"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xelab.bat",
+          "tb_final_clocks",
+          "glbl",
+          "-L",
+          "unisims_ver",
+          "-s",
+          "sim"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Vivado\\2025.2\\2025.2\\Vivado\\bin\\xsim.bat",
+          "sim",
+          "--runall"
+        ],
+        "returncode": 0
+      }
+    ]
+  }
+]

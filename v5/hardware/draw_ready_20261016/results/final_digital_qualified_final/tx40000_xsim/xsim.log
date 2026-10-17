@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Oct 16 18:21:27 2026
+# Process ID         : 82152
+# Current directory  : E:/Codex_project/SonoField_v5_MinimalBOM_Audit/20261016_FinalTheory_DrawReady/results/final_digital_qualified_final/tx40000_xsim
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/sim/xsim_script.tcl}
+# Log file           : E:/Codex_project/SonoField_v5_MinimalBOM_Audit/20261016_FinalTheory_DrawReady/results/final_digital_qualified_final/tx40000_xsim/xsim.log
+# Journal file       : E:/Codex_project/SonoField_v5_MinimalBOM_Audit/20261016_FinalTheory_DrawReady/results/final_digital_qualified_final/tx40000_xsim\xsim.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 23622 MB
+# Total Virtual      : 40396 MB
+# Available Virtual  : 7477 MB
+#-----------------------------------------------------------
+source xsim.dir/sim/xsim_script.tcl
+# xsim {sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS4096frames128TX256phase128/256MHz carrier40000Hz
+$finish called at time : 400786848 ps : File "E:/Codex_project/SonoField_v5_MinimalBOM_Audit/20261016_FinalTheory_DrawReady/candidate_rtl/tb_final_tx40000.sv" Line 35
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Oct 16 18:21:29 2026...

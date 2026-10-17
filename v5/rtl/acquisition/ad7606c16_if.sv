@@ -1,8 +1,10 @@
 `timescale 1ns/1ps
 // AD7606C-16 Rev.A Tables3/5/26/33/38, Figures111-113. Digital qualification only.
-// OS=111, PAR/SER=1, VDRIVE=3V3 are external straps, not inferred from software.
+// OS=111/PAR-SER=1 are external straps. Production VDRIVE=AVCC=V5A;
+// legacy fixtures may use3.3V. Pin supply is never inferred from software.
 module ad7606c16_if #(
  parameter integer CLOCK_HZ=132000000,
+ parameter integer DOUT_LANES=4, SCLK_DIVIDER=4,
  parameter integer POWER_WAIT_CYCLES=2*CLOCK_HZ+1,
  parameter integer RESET_CYCLES=(CLOCK_HZ/1000000)*4,
  parameter integer SETUP_CYCLES=(CLOCK_HZ/1000000)*275,
@@ -10,7 +12,7 @@ module ad7606c16_if #(
  parameter integer BUSY_TIMEOUT_CYCLES=CLOCK_HZ/100000,
  parameter integer SPI_TIMEOUT_CYCLES=512
 )(input wire clk,rst_n,sample_request,input wire [63:0] time_now,
- input wire busy_async,input wire [3:0] dout,
+ input wire busy_async,input wire [DOUT_LANES-1:0] dout,
  output reg adc_reset,convst,output wire cs_n,sclk,sdi,
  output reg ready,error,frame_valid,output reg [127:0] frame,
  output reg [63:0] frame_timestamp,output wire idle);
@@ -18,6 +20,7 @@ module ad7606c16_if #(
  reg [2:0] state;reg [31:0] count,age,spi_age;
  reg [4:0] init_index;reg start;reg [5:0] bits;reg [15:0] command;
  wire spi_busy,done;wire [127:0] received;
+ wire[7:0] register_response=DOUT_LANES==8?received[7:0]:received[23:16];
  (* ASYNC_REG="TRUE" *) reg [1:0] busy_sync;
  reg previous,pending,reading;reg [1:0] pulse;
  reg [63:0] pending_time,read_time;
@@ -27,7 +30,7 @@ module ad7606c16_if #(
   case(n)
    0:initialization=16'h6f00; // device ID read, response on following frame
    1:initialization=16'h4200;
-   2:initialization=16'h0210; // reserved0, normal, four DOUT, status off
+   2:initialization=DOUT_LANES==8?16'h0218:16'h0210; // reserved0, normal, four DOUT, status off
    3:initialization=16'h0311;4:initialization=16'h0411;
    5:initialization=16'h0511;6:initialization=16'h0611; // +/-5V single-ended
    7:initialization={8'h07,BANDWIDTH_MASK};
@@ -41,7 +44,7 @@ module ad7606c16_if #(
    default:initialization=16'h0000; // exit register mode
   endcase
  endfunction
- adc_serial serial(.clk(clk),.rst_n(rst_n),.start(start),.bits(bits),.command(command),.dout(dout),
+ adc_serial #(.DOUT_LANES(DOUT_LANES),.SCLK_DIVIDER(SCLK_DIVIDER),.FINISH_HOLD_CYCLES(DOUT_LANES==8?4:1)) serial(.clk(clk),.rst_n(rst_n),.start(start),.bits(bits),.command(command),.dout(dout),
  .cs_n(cs_n),.sclk(sclk),.sdi(sdi),.busy(spi_busy),.done(done),.received(received));
  always @(posedge clk or negedge rst_n)
   if(!rst_n)begin busy_sync<=0;previous<=0;end
@@ -64,11 +67,11 @@ module ad7606c16_if #(
      spi_age<=spi_age+1;
      if(spi_age>=SPI_TIMEOUT_CYCLES)error<=1;
      if(done)begin
-      if(init_index==1 && received[23:20]!=4'h2)error<=1;
-      if(init_index==11 && received[23:16]!=8'h10)error<=1;
-      if(init_index>=12 && init_index<=15 && received[23:16]!=8'h11)error<=1;
-      if(init_index==16 && received[23:16]!=BANDWIDTH_MASK)error<=1;
-      if((init_index==17||init_index==18) && received[23:16]!=0)error<=1;
+      if(init_index==1 && register_response[7:4]!=4'h2)error<=1;
+      if(init_index==11 && register_response!=(DOUT_LANES==8?8'h18:8'h10))error<=1;
+      if(init_index>=12 && init_index<=15 && register_response!=8'h11)error<=1;
+      if(init_index==16 && register_response!=BANDWIDTH_MASK)error<=1;
+      if((init_index==17||init_index==18) && register_response!=0)error<=1;
       if(init_index==19)begin state<=RUN;ready<=1;end
       else begin init_index<=init_index+1;state<=ISSUE;end
      end
@@ -82,7 +85,7 @@ module ad7606c16_if #(
      if(falling&&pending)begin
       pending<=0;
       if(spi_busy||reading)error<=1;
-      else begin start<=1;bits<=32;command<=0;reading<=1;spi_age<=0;read_time<=pending_time;end
+      else begin start<=1;bits<=DOUT_LANES==8?16:32;command<=0;reading<=1;spi_age<=0;read_time<=pending_time;end
      end
      if(reading)begin spi_age<=spi_age+1;if(spi_age>=SPI_TIMEOUT_CYCLES)error<=1;end
      if(done&&reading)begin frame<=received;frame_timestamp<=read_time;frame_valid<=1;reading<=0;end

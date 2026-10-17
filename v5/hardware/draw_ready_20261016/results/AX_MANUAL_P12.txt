@@ -1,0 +1,46 @@
+                                                                          AX7020
+
+
+   PS部分的电源有VCCPINT、VCCPAUX、VCCPLL和PS VCCO。VCCPINT为PS内核供电引脚，接1.0V；
+VCCPAUX为PS系统辅助供电引脚，接1.8V；VCCPLL为PS的内部时钟PLL的电源供电引脚，也接1.8V；PS
+VCCO为BANK的电压，包含VCCO_MIO0，VCCO_MIO1和VCCO_DDR，根据连接的外设不同，连接的电源
+电源也会不同，在AX7020开发板上，VCC_MIO0连接3.3V，VCCO_MIO1连接1.8V，VCCO_DDR连接1.5V。PS
+系统要求上电顺序分别为先VCCPINT供电，然后VCCPAUX和VCCPLL，最后为PS VCCO。断电的顺序则相
+
+反。
+
+   PL部分的电源有VCCINT, VCCBRAM, VCCAUX和VCCO。VCCINT为FPGA内核供电引脚，接1.0V；
+VCCBRAM为FPGA Block RAM的供电引脚，接1.0V；VCCAUX为FPGA辅助供电引脚,接1.8V；VCCO为PL的各
+个BANK的电压，包含BANK13，BANK34，BANK35，在AX7020开发板上，BANK的电压连接3.3V。PL系统要
+求上电顺序分别为先VCCINT供电，再是VCCBRAM, 然后是VCCAUX，最后为VCCO。如果VCCINT和
+VCCBRAM的电压一样，可以同时上电。断电的顺序则相反。
+
+4.3 ZYNQ启动配置
+
+
+  AX7020开发平台支持三种启动模式。这三种启动模式分别是JTAG调试模式,QSPI FLASH和SD卡启动
+模式。ZYNQ7020芯片上电后会检测响应MIO口的电平来决定那种启动模式。用户可以通过核心板上的J13
+的跳线来选择不同的启动模式。J13启动模式配置如下表所示。
+
+ J13               跳帽位置          启动模式
+
+                 连接左边两个引脚           SD Card
+
+                 连接中间两个引脚            QSPI FLASH
+
+
+                 连接右边边两个引脚          JTAG
+
+
+                                    表4.3.1- J13启动模式配置
+
+5 时钟配置
+
+
+  AX7020开发板上分别为PS系统和PL逻辑部分提供了有源时钟，使PS系统和PL逻辑可以单独工作。
+
+
+
+
+
+版权所有© 2026 芯驿电子科技（上海）有限公司                                             12 / 35

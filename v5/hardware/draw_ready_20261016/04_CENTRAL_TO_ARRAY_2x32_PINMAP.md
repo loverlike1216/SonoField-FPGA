@@ -1,0 +1,132 @@
+# 上下阵列全部128触点
+
+| board | pin | signal | central_net | array_net | direction | safe_default |
+| --- | --- | --- | --- | --- | --- | --- |
+| UP | 1 | DATA_00 | UP_DATA_00 | DATA_00 | CENTRAL_TO_ARRAY | 0 |
+| UP | 2 | GND | GND | GND | GROUND | GND |
+| UP | 3 | DATA_01 | UP_DATA_01 | DATA_01 | CENTRAL_TO_ARRAY | 0 |
+| UP | 4 | GND | GND | GND | GROUND | GND |
+| UP | 5 | DATA_02 | UP_DATA_02 | DATA_02 | CENTRAL_TO_ARRAY | 0 |
+| UP | 6 | GND | GND | GND | GROUND | GND |
+| UP | 7 | DATA_03 | UP_DATA_03 | DATA_03 | CENTRAL_TO_ARRAY | 0 |
+| UP | 8 | GND | GND | GND | GROUND | GND |
+| UP | 9 | DATA_04 | UP_DATA_04 | DATA_04 | CENTRAL_TO_ARRAY | 0 |
+| UP | 10 | GND | GND | GND | GROUND | GND |
+| UP | 11 | DATA_05 | UP_DATA_05 | DATA_05 | CENTRAL_TO_ARRAY | 0 |
+| UP | 12 | GND | GND | GND | GROUND | GND |
+| UP | 13 | DATA_06 | UP_DATA_06 | DATA_06 | CENTRAL_TO_ARRAY | 0 |
+| UP | 14 | GND | GND | GND | GROUND | GND |
+| UP | 15 | DATA_07 | UP_DATA_07 | DATA_07 | CENTRAL_TO_ARRAY | 0 |
+| UP | 16 | GND | GND | GND | GROUND | GND |
+| UP | 17 | DATA_08 | UP_DATA_08 | DATA_08 | CENTRAL_TO_ARRAY | 0 |
+| UP | 18 | GND | GND | GND | GROUND | GND |
+| UP | 19 | DATA_09 | UP_DATA_09 | DATA_09 | CENTRAL_TO_ARRAY | 0 |
+| UP | 20 | GND | GND | GND | GROUND | GND |
+| UP | 21 | DATA_10 | UP_DATA_10 | DATA_10 | CENTRAL_TO_ARRAY | 0 |
+| UP | 22 | GND | GND | GND | GROUND | GND |
+| UP | 23 | DATA_11 | UP_DATA_11 | DATA_11 | CENTRAL_TO_ARRAY | 0 |
+| UP | 24 | GND | GND | GND | GROUND | GND |
+| UP | 25 | DATA_12 | UP_DATA_12 | DATA_12 | CENTRAL_TO_ARRAY | 0 |
+| UP | 26 | GND | GND | GND | GROUND | GND |
+| UP | 27 | DATA_13 | UP_DATA_13 | DATA_13 | CENTRAL_TO_ARRAY | 0 |
+| UP | 28 | GND | GND | GND | GROUND | GND |
+| UP | 29 | DATA_14 | UP_DATA_14 | DATA_14 | CENTRAL_TO_ARRAY | 0 |
+| UP | 30 | GND | GND | GND | GROUND | GND |
+| UP | 31 | DATA_15 | UP_DATA_15 | DATA_15 | CENTRAL_TO_ARRAY | 0 |
+| UP | 32 | GND | GND | GND | GROUND | GND |
+| UP | 33 | SRCLK | UP_SRCLK | SRCLK | CENTRAL_TO_ARRAY | 0 |
+| UP | 34 | GND | GND | GND | GROUND | GND |
+| UP | 35 | RCLK | UP_RCLK | RCLK | CENTRAL_TO_ARRAY | 0 |
+| UP | 36 | GND | GND | GND | GROUND | GND |
+| UP | 37 | OE_N | UP_OE_N | OE_N | CENTRAL_TO_ARRAY | 1; disable |
+| UP | 38 | GND | GND | GND | GROUND | GND |
+| UP | 39 | TX_PERMIT | UP_TX_PERMIT | TX_PERMIT | CENTRAL_TO_ARRAY | 0; cutoff |
+| UP | 40 | GND | GND | GND | GROUND | GND |
+| UP | 41 | CENTRAL_POWER_OK | UP_CENTRAL_POWER_OK | CENTRAL_POWER_OK | CENTRAL_TO_ARRAY | 0; cutoff |
+| UP | 42 | GND | GND | GND | GROUND | GND |
+| UP | 43 | RX_BLANK | UP_RX_BLANK | RX_BLANK | CENTRAL_TO_ARRAY | 1; blank |
+| UP | 44 | GND | GND | GND | GROUND | GND |
+| UP | 45 | HB | UP_HB | HB | CENTRAL_TO_ARRAY | 0; diagnostic |
+| UP | 46 | GND | GND | GND | GROUND | GND |
+| UP | 47 | FAULT_N | UP_FAULT_N | FAULT_N | ARRAY_TO_CENTRAL_OD | 0 on fault; unplug treated by PGOOD |
+| UP | 48 | GND | GND | GND | GROUND | GND |
+| UP | 49 | PGOOD | UP_PGOOD | PGOOD | ARRAY_TO_CENTRAL | 0 |
+| UP | 50 | GND | GND | GND | GROUND | GND |
+| UP | 51 | SCL | UP_SCL | SCL | BIDIR_OD | pullup on central |
+| UP | 52 | GND | GND | GND | GROUND | GND |
+| UP | 53 | SDA | UP_SDA | SDA | BIDIR_OD | pullup on central |
+| UP | 54 | GND | GND | GND | GROUND | GND |
+| UP | 55 | RX0 | UP_RX0 | RX0 | ARRAY_TO_CENTRAL_ANALOG | 0..V5A |
+| UP | 56 | GND | GND | GND | GROUND | GND |
+| UP | 57 | RX1 | UP_RX1 | RX1 | ARRAY_TO_CENTRAL_ANALOG | 0..V5A |
+| UP | 58 | GND | GND | GND | GROUND | GND |
+| UP | 59 | RX2 | UP_RX2 | RX2 | ARRAY_TO_CENTRAL_ANALOG | 0..V5A |
+| UP | 60 | GND | GND | GND | GROUND | GND |
+| UP | 61 | RX3 | UP_RX3 | RX3 | ARRAY_TO_CENTRAL_ANALOG | 0..V5A |
+| UP | 62 | GND | GND | GND | GROUND | GND |
+| UP | 63 | NC | NC | NC | NC | isolated |
+| UP | 64 | GND | GND | GND | GROUND | GND |
+| DN | 1 | DATA_00 | DN_DATA_00 | DATA_00 | CENTRAL_TO_ARRAY | 0 |
+| DN | 2 | GND | GND | GND | GROUND | GND |
+| DN | 3 | DATA_01 | DN_DATA_01 | DATA_01 | CENTRAL_TO_ARRAY | 0 |
+| DN | 4 | GND | GND | GND | GROUND | GND |
+| DN | 5 | DATA_02 | DN_DATA_02 | DATA_02 | CENTRAL_TO_ARRAY | 0 |
+| DN | 6 | GND | GND | GND | GROUND | GND |
+| DN | 7 | DATA_03 | DN_DATA_03 | DATA_03 | CENTRAL_TO_ARRAY | 0 |
+| DN | 8 | GND | GND | GND | GROUND | GND |
+| DN | 9 | DATA_04 | DN_DATA_04 | DATA_04 | CENTRAL_TO_ARRAY | 0 |
+| DN | 10 | GND | GND | GND | GROUND | GND |
+| DN | 11 | DATA_05 | DN_DATA_05 | DATA_05 | CENTRAL_TO_ARRAY | 0 |
+| DN | 12 | GND | GND | GND | GROUND | GND |
+| DN | 13 | DATA_06 | DN_DATA_06 | DATA_06 | CENTRAL_TO_ARRAY | 0 |
+| DN | 14 | GND | GND | GND | GROUND | GND |
+| DN | 15 | DATA_07 | DN_DATA_07 | DATA_07 | CENTRAL_TO_ARRAY | 0 |
+| DN | 16 | GND | GND | GND | GROUND | GND |
+| DN | 17 | DATA_08 | DN_DATA_08 | DATA_08 | CENTRAL_TO_ARRAY | 0 |
+| DN | 18 | GND | GND | GND | GROUND | GND |
+| DN | 19 | DATA_09 | DN_DATA_09 | DATA_09 | CENTRAL_TO_ARRAY | 0 |
+| DN | 20 | GND | GND | GND | GROUND | GND |
+| DN | 21 | DATA_10 | DN_DATA_10 | DATA_10 | CENTRAL_TO_ARRAY | 0 |
+| DN | 22 | GND | GND | GND | GROUND | GND |
+| DN | 23 | DATA_11 | DN_DATA_11 | DATA_11 | CENTRAL_TO_ARRAY | 0 |
+| DN | 24 | GND | GND | GND | GROUND | GND |
+| DN | 25 | DATA_12 | DN_DATA_12 | DATA_12 | CENTRAL_TO_ARRAY | 0 |
+| DN | 26 | GND | GND | GND | GROUND | GND |
+| DN | 27 | DATA_13 | DN_DATA_13 | DATA_13 | CENTRAL_TO_ARRAY | 0 |
+| DN | 28 | GND | GND | GND | GROUND | GND |
+| DN | 29 | DATA_14 | DN_DATA_14 | DATA_14 | CENTRAL_TO_ARRAY | 0 |
+| DN | 30 | GND | GND | GND | GROUND | GND |
+| DN | 31 | DATA_15 | DN_DATA_15 | DATA_15 | CENTRAL_TO_ARRAY | 0 |
+| DN | 32 | GND | GND | GND | GROUND | GND |
+| DN | 33 | SRCLK | DN_SRCLK | SRCLK | CENTRAL_TO_ARRAY | 0 |
+| DN | 34 | GND | GND | GND | GROUND | GND |
+| DN | 35 | RCLK | DN_RCLK | RCLK | CENTRAL_TO_ARRAY | 0 |
+| DN | 36 | GND | GND | GND | GROUND | GND |
+| DN | 37 | OE_N | DN_OE_N | OE_N | CENTRAL_TO_ARRAY | 1; disable |
+| DN | 38 | GND | GND | GND | GROUND | GND |
+| DN | 39 | TX_PERMIT | DN_TX_PERMIT | TX_PERMIT | CENTRAL_TO_ARRAY | 0; cutoff |
+| DN | 40 | GND | GND | GND | GROUND | GND |
+| DN | 41 | CENTRAL_POWER_OK | DN_CENTRAL_POWER_OK | CENTRAL_POWER_OK | CENTRAL_TO_ARRAY | 0; cutoff |
+| DN | 42 | GND | GND | GND | GROUND | GND |
+| DN | 43 | RX_BLANK | DN_RX_BLANK | RX_BLANK | CENTRAL_TO_ARRAY | 1; blank |
+| DN | 44 | GND | GND | GND | GROUND | GND |
+| DN | 45 | HB | DN_HB | HB | CENTRAL_TO_ARRAY | 0; diagnostic |
+| DN | 46 | GND | GND | GND | GROUND | GND |
+| DN | 47 | FAULT_N | DN_FAULT_N | FAULT_N | ARRAY_TO_CENTRAL_OD | 0 on fault; unplug treated by PGOOD |
+| DN | 48 | GND | GND | GND | GROUND | GND |
+| DN | 49 | PGOOD | DN_PGOOD | PGOOD | ARRAY_TO_CENTRAL | 0 |
+| DN | 50 | GND | GND | GND | GROUND | GND |
+| DN | 51 | SCL | DN_SCL | SCL | BIDIR_OD | pullup on central |
+| DN | 52 | GND | GND | GND | GROUND | GND |
+| DN | 53 | SDA | DN_SDA | SDA | BIDIR_OD | pullup on central |
+| DN | 54 | GND | GND | GND | GROUND | GND |
+| DN | 55 | RX0 | DN_RX0 | RX0 | ARRAY_TO_CENTRAL_ANALOG | 0..V5A |
+| DN | 56 | GND | GND | GND | GROUND | GND |
+| DN | 57 | RX1 | DN_RX1 | RX1 | ARRAY_TO_CENTRAL_ANALOG | 0..V5A |
+| DN | 58 | GND | GND | GND | GROUND | GND |
+| DN | 59 | RX2 | DN_RX2 | RX2 | ARRAY_TO_CENTRAL_ANALOG | 0..V5A |
+| DN | 60 | GND | GND | GND | GROUND | GND |
+| DN | 61 | RX3 | DN_RX3 | RX3 | ARRAY_TO_CENTRAL_ANALOG | 0..V5A |
+| DN | 62 | GND | GND | GND | GROUND | GND |
+| DN | 63 | NC | NC | NC | NC | isolated |
+| DN | 64 | GND | GND | GND | GROUND | GND |

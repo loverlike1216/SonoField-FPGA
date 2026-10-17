@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Oct 16 12:37:14 2026
+# Process ID         : 72060
+# Current directory  : E:/Codex_project/AMD_Sonofield
+# Command line       : vivado.exe -mode batch -source X:/scripts/inspect_native.tcl -log X:/logs/inspect_native.log -journal X:/logs/inspect_native.jou
+# Log file           : X:/logs/inspect_native.log
+# Journal file       : X:/logs/inspect_native.jou
+# Running On         : loverlike
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 16774 MB
+# Swap memory        : 23622 MB
+# Total Virtual      : 40396 MB
+# Available Virtual  : 14062 MB
+#-----------------------------------------------------------
+source X:/scripts/inspect_native.tcl
+# set r [file normalize [file join [file dirname [info script]] ..]]
+# open_checkpoint [file join $r results NATIVE_ROUTED.dcp]
+Command: open_checkpoint X:/results/NATIVE_ROUTED.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 325.824 ; gain = 3.840
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.269 . Memory (MB): peak = 822.895 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1322 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 958.105 ; gain = 5.164
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1580.547 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1580.547 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1580.547 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.616 . Memory (MB): peak = 1594.750 ; gain = 14.203
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1594.750 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.225 . Memory (MB): peak = 1615.961 ; gain = 21.211
+Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.904 . Memory (MB): peak = 1615.961 ; gain = 35.414
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.941 . Memory (MB): peak = 1615.961 ; gain = 35.430
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1638.383 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1644.016 ; gain = 1331.555
+# set f [open [file join $r results NATIVE_PAD_TIMING.csv] w]
+# puts $f "port,max_ns,min_ns,source"
+# foreach p [get_ports {serial_data_0[*] shift_clock_0 latch_clock_0}] {
+#  set mx [get_timing_paths -to $p -delay_type max -max_paths 1]
+#  set mn [get_timing_paths -to $p -delay_type min -max_paths 1]
+#  puts $f "$p,[get_property DATAPATH_DELAY $mx],[get_property DATAPATH_DELAY $mn],[get_property STARTPOINT_PIN $mx]"
+# }
+get_timing_paths: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1710.512 ; gain = 66.496
+# close $f
+# report_drc -ruledecks default -max_violations 1000 -file [file join $r results NATIVE_DRC_ALL.rpt]
+ERROR: [Common 17-170] Unknown option '-max_violations', please type 'report_drc -help' for usage info.
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 16 12:37:41 2026...

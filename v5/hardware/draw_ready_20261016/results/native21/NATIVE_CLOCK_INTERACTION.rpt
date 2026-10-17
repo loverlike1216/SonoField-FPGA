@@ -1,0 +1,27 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 16 18:55:31 2026
+| Host         : loverlike running 64-bit major release  (build 9200)
+| Command      : report_clock_interaction -file X:/results/native21/NATIVE_CLOCK_INTERACTION.rpt
+| Design       : draw_ready_ps_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                            WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock         
+From Clock    To Clock      Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints         
+------------  ------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  ------------------  
+ADC_SCLK      c128          rise - rise    72.32     0.00            0            8           125.00  Clean                Timed               
+c128          c128          rise - rise     0.08     0.00            0        82321             7.81  Clean                Partial False Path  
+c128          c256          rise - rise     1.67     0.00            0          131             3.91  Clean                Partial False Path  
+c256          c128          rise - rise     1.55     0.00            0            2             3.91  Clean                Timed               
+c256          c256          rise - rise     0.36     0.00            0          751             3.91  Clean                Timed               
+
+

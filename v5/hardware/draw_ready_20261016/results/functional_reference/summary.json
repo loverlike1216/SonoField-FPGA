@@ -1,0 +1,150 @@
+[
+  {
+    "name": "unit",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\tests",
+      "-v"
+    ]
+  },
+  {
+    "name": "generated_system",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\generate_system.py",
+      "--check"
+    ]
+  },
+  {
+    "name": "generated_transport",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\generate_transport.py",
+      "--check"
+    ]
+  },
+  {
+    "name": "motion",
+    "returncode": 1,
+    "status": "FAIL",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\motion_gate.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\motion"
+    ]
+  },
+  {
+    "name": "axi",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\board_transport_gate.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\axi"
+    ]
+  },
+  {
+    "name": "independent",
+    "returncode": 1,
+    "status": "FAIL",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\pre_pcb_checks.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\independent"
+    ]
+  },
+  {
+    "name": "supervisor",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\prepcb_rtl_gate.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\supervisor"
+    ]
+  },
+  {
+    "name": "temp_sparse_gui",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\prepcb_system_gate.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\temp_sparse_gui"
+    ]
+  },
+  {
+    "name": "adc_c16",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\adc7606c16_gate.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\adc_c16"
+    ]
+  },
+  {
+    "name": "c16_capture",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\c16_capture_chain_gate.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\c16_capture"
+    ]
+  },
+  {
+    "name": "top_legacy_c16",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\nextstage_top_gate.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\top_legacy_c16",
+      "--maps",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\hardware_design_20261011\\digital_full_retry2\\full\\system\\gui\\case_1\\icarus\\motion_maps.hex"
+    ]
+  },
+  {
+    "name": "software",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\nextstage_software_gate.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\software"
+    ]
+  },
+  {
+    "name": "timing_equivalence",
+    "returncode": 0,
+    "status": "PASS",
+    "command": [
+      "E:\\Codex_project\\AMD_Sonofield\\.venv\\Scripts\\python.exe",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\scripts\\timing_equivalence.py",
+      "--output",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\evidence\\final_theory_20261016\\functional_final128\\equivalence",
+      "--work",
+      "E:\\Codex_project\\AMD_Sonofield\\v5\\build\\final_theory_equivalence128_20261016"
+    ]
+  }
+]

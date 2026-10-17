@@ -19,3 +19,12 @@ Persist actual observable prompts/messages/tool flows with hashes and PARTIAL bo
 Current task: Gate0-7 hardware design20261011 on codex/v5-hardware-design-20261011, stacked on PR4. Keep all original203 tests/goldens/thresholds and add40 hardware-model tests. Exact instruction is AI-interaction-memory/codex/instructions/v5_hardware_design_20261011.md. User confirms no external loads and V2/V3 compatibility, but internal PDF revisions/UART bridge mismatch, current VCCO/image/backup remain unqualified. SD backup is intended, not verified. No current-image programming or ultrasound; continue safe offline design and normal GitHub publication. Native schematic NOT_CREATED/ERC NOT_RUN. Prior history migration complete candidate, archive bodies remain forbidden.
 
 After this migration, do not open, scan or search Historical project/ without new explicit user authorization, including when debugging or suspecting an old-code root cause. First report the exact proposed historical files and reason and obtain user authorization; then record targeted access. Default source discovery, imports, build, simulation, CI, IDE, packaging and search exclude it. Use shared/repository_cleanup/search_current.ps1 or explicit allow paths v5/, shared/, current AI indexes, README.md and AGENTS.md for rg/git grep. git grep does not honor .ignore/.rgignore; never run repository-wide git grep. Do not promise GitHub website indexing is suppressed. Routine integrity checks inspect only active mapping and Git index/tree metadata; --archive-audit is explicit migration/recovery-only content access.
+
+
+## Current task update 2026-10-16
+
+# Current v5 state — 2026-10-16
+
+THEORY_DRAW_READY=YES; ACCEPT WITH LIMITATIONS; P0theory=0. This is a candidate waiting independentReview, not main/PCB/hardware acceptance. Current files: v5/hardware/draw_ready_20261016. Board userconfirmedXC7Z020-2CLG400I;128/256MHzF-LVT;three12Vinputs/fixed10VTX;ADC8DOUT8MHz400kSPS. Originalfrozen_parenthashFAILretained and explained; all oldgoldens/thresholds retained.
+
+Next action: STOPforChatGPTindependentReview. Do not automatically create schematic/PCB, programhardware, buy, merge main or createv6. NativeERC/physical/runtime/SSO/PDN remain unqualified within statedscope.

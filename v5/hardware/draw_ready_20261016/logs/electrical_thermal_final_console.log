@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "X:\scripts\run_electrical_checks.py", line 29, in <module>
+    check('Thermal estimate within stated PCB thermal budget',power['thermal']['buck_tj_estimate']<125 and power['thermal']['ldo_tj_estimate']<125,dict(scope='engineering upperloss1.2W; requirePCBtheta<=65C/W, TI EVM57.2C/W is feasibility reference, noactualboardmeasurement',**power['thermal']))
+                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'scope'

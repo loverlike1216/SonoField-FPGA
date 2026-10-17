@@ -2,6 +2,7 @@
 // Actual top including supervisor, BRAM mailbox, AXI bridge and preserved core.
 module tb_prepcb_system;
  reg clk=0;always #3.787879 clk=~clk;
+ wire tx_clk=clk; //Legacy profile: fast clock input unused.
  reg rst_n=0;reg[15:0] control=0;reg[7:0] health=8'hff;wire[31:0]status;
  reg[31:0]S_AXI_awaddr=0,S_AXI_wdata=0,S_AXI_araddr=0;
  reg S_AXI_awvalid=0,S_AXI_wvalid=0,S_AXI_bready=1,S_AXI_arvalid=0,S_AXI_rready=1;reg[3:0]S_AXI_wstrb=15;

@@ -45,3 +45,12 @@ CP006 and full report record all holds; no physicaloperation or automaticmainmer
 Audited3911historicalGitpathmoves preservingbody/blob/mode; currentv5/shared/openProblems remain. Exact Historical project root, explicitreadban, currentsearchallowlist andmetadata-onlyCI. Before171-test/four-run baselinePASS;afterindependentclonevalidationinprogress. Samev5;main/hardware/manufacturingpromotionrequiresseparateapproval.
 
 HistoricalcandidateafterverificationPASS:171tests/3696×4/newprePCBextra/three nativeOOC+reopens/history-absentnewvenv;seeCP008andcurrentcleanupFINAL_VERIFICATION. No hardware/mainpromotion.
+
+
+## Current task update 2026-10-16
+
+# Current v5 state — 2026-10-16
+
+THEORY_DRAW_READY=YES; ACCEPT WITH LIMITATIONS; P0theory=0. This is a candidate waiting independentReview, not main/PCB/hardware acceptance. Current files: v5/hardware/draw_ready_20261016. Board userconfirmedXC7Z020-2CLG400I;128/256MHzF-LVT;three12Vinputs/fixed10VTX;ADC8DOUT8MHz400kSPS. Originalfrozen_parenthashFAILretained and explained; all oldgoldens/thresholds retained.
+
+Next action: STOPforChatGPTindependentReview. Do not automatically create schematic/PCB, programhardware, buy, merge main or createv6. NativeERC/physical/runtime/SSO/PDN remain unqualified within statedscope.

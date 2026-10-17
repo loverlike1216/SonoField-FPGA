@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 // All acquisition windows overlap the burst/propagation interval. Host ACK owns reuse.
-module calibration_scheduler #(parameter integer DEPTH=1024)(
+module calibration_scheduler #(parameter integer DEPTH=1024,BRAM_PIPELINE=0)(
  input wire clk,rst_n,start,abort,ack,adc_ready,adc_idle,adc_error,frame_valid,
  input wire [127:0] frame,input wire[63:0] frame_timestamp,time_now,
  input wire[31:0] sample_period,pre_samples,main_samples,tail_samples,settle_cycles,guard_cycles,
@@ -15,23 +15,91 @@ module calibration_scheduler #(parameter integer DEPTH=1024)(
  reg[3:0] state;reg[31:0] wait_count,period_count,issued,total;
  (* ram_style="block" *) reg[127:0] memory[0:DEPTH-1];
  reg[127:0] read_frame;reg[1:0] read_word;reg read_valid;
+ reg write_enable_q;reg[10:0]write_address_q;reg[127:0]write_data_q;
  assign active=state==SETTLE||state==CAPTURE||state==DRAIN||state==GUARD;
  assign state_debug=state;
  // 1 = receiver bank blanked. Opposite bank unblanked before settling starts.
  assign rx_blank=(state==SETTLE||state==CAPTURE||state==DRAIN)?(selected_tx[6]?2'b10:2'b01):2'b11;
  // Synchronous full-frame read enables block RAM inference; select the host word afterwards.
  always @(posedge clk)begin
-  read_frame<=memory[read_address[11:2]];read_word<=read_address[1:0];
-  read_valid<=read_address[11:2]<frame_count;
+  //Forward the queued write: an accepted frame is readable at the original
+  //interface cycle even though the BRAM write port is now pipelined.
+  read_frame<=(BRAM_PIPELINE&&write_enable_q&&write_address_q==read_address[11:2])?
+              write_data_q:memory[read_address[11:2]];
+  read_word<=read_address[1:0];
+  read_valid<=BRAM_PIPELINE?(rst_n&&(read_address[11:2]<frame_count)):(read_address[11:2]<frame_count);
  end
  assign read_data=read_valid?read_frame[read_word*32+:32]:0;
  // Keep the RAM write port free of asynchronous reset sensitivity. Only control
  // state/frame_count reset; the valid-count mask prevents stale RAM publication.
  // Same acceptance condition as the CAPTURE/DRAIN control branch below.
  always @(posedge clk)begin
-  if(rst_n&&!abort&&!adc_error&&(state==CAPTURE||state==DRAIN)&&frame_valid&&frame_count<DEPTH)
+  if(BRAM_PIPELINE)begin
+   write_enable_q<=rst_n&&!abort&&!adc_error&&(state==CAPTURE||state==DRAIN)&&frame_valid&&frame_count<DEPTH;
+   write_address_q<=frame_count;write_data_q<=frame;
+   if(write_enable_q)memory[write_address_q]<=write_data_q;
+  end else if(rst_n&&!abort&&!adc_error&&(state==CAPTURE||state==DRAIN)&&frame_valid&&frame_count<DEPTH)
    memory[frame_count]<=frame;
  end
+ //BRAM address/enable controls reset synchronously. Independent TX kill remains
+ //asynchronous in safety_controller and the physical array permit chain.
+ generate if(BRAM_PIPELINE)begin:production_control
+ always @(posedge clk)begin
+  if(!rst_n)begin
+   state<=IDLE;sample_request<=0;burst_start<=0;capture_ready<=0;done<=0;error<=0;
+   selected_tx<=0;capture_sequence<=0;frame_count<=0;first_timestamp<=0;burst_timestamp<=0;
+   wait_count<=0;period_count<=0;issued<=0;total<=0;
+  end else begin
+   sample_request<=0;burst_start<=0;
+   if(abort)begin state<=IDLE;capture_ready<=0;done<=0;end
+   else if(adc_error)begin state<=FAULT;error<=1;capture_ready<=0;end
+   else case(state)
+    IDLE,FINISHED:if(start)begin
+     // Clear private wait state on admission, including rejected commands.
+     // Rejected commands enter FAULT and never publish/use this counter.
+     // Keeping validation off its CE removes the measured 12-level timing cone.
+     wait_count<=0;
+     if(!adc_ready||!adc_idle||scan_count==0||scan_count>128||pre_samples==0||
+        pre_samples+main_samples+tail_samples>DEPTH||main_samples==0||sample_period<165)begin error<=1;state<=FAULT;end
+     else begin selected_tx<=first_tx;capture_sequence<=0;total<=pre_samples+main_samples+tail_samples;
+      frame_count<=0;issued<=0;capture_ready<=0;done<=0;state<=SETTLE;end
+    end
+    SETTLE:if(wait_count>=settle_cycles)begin period_count<=0;state<=CAPTURE;end else wait_count<=wait_count+1;
+    CAPTURE,DRAIN:begin
+     if(state==CAPTURE)begin
+      if(period_count==0)begin
+       sample_request<=1;issued<=issued+1;period_count<=sample_period-1;
+       if(issued==pre_samples)begin burst_start<=1;burst_timestamp<=time_now+1;end
+       if(issued+1==total)state<=DRAIN;
+      end else period_count<=period_count-1;
+     end
+     if(frame_valid)begin
+      if(frame_count>=DEPTH)begin error<=1;state<=FAULT;end
+      else begin
+       frame_count<=frame_count+1;
+       if(frame_count==0)first_timestamp<=frame_timestamp;
+       if(frame_count+1==total)begin
+        if(burst_active)begin error<=1;state<=FAULT;end
+        else begin capture_ready<=1;state<=WAIT_ACK;end
+       end
+      end
+     end
+    end
+    WAIT_ACK:if(ack)begin
+     capture_ready<=0;
+     if(capture_sequence+1==scan_count)begin done<=1;state<=FINISHED;end
+     else begin wait_count<=0;state<=GUARD;end
+    end
+    GUARD:if(wait_count>=guard_cycles && adc_idle)begin
+     selected_tx<=selected_tx+1;capture_sequence<=capture_sequence+1;
+     frame_count<=0;issued<=0;wait_count<=0;state<=SETTLE;
+    end else wait_count<=wait_count+1;
+    FAULT:begin capture_ready<=0;done<=0;end
+    default:begin error<=1;state<=FAULT;end
+   endcase
+  end
+ end
+ end else begin:legacy_control
  always @(posedge clk or negedge rst_n)begin
   if(!rst_n)begin
    state<=IDLE;sample_request<=0;burst_start<=0;capture_ready<=0;done<=0;error<=0;
@@ -87,4 +155,5 @@ module calibration_scheduler #(parameter integer DEPTH=1024)(
    endcase
   end
  end
+ end endgenerate
 endmodule

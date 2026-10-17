@@ -1,0 +1,570 @@
+[
+  {
+    "solution": "F",
+    "case": 0,
+    "z0_ohm": 120,
+    "ron_ohm": 5,
+    "voltage": 3.45,
+    "cin_pf": 3.0,
+    "corner": "typ",
+    "td_ns": 1.0,
+    "variant": "auc_filter",
+    "ax_model": "RON_ENVELOPE",
+    "setup_ns": 8.051752941439503,
+    "hold_ns": 11.145244954026651,
+    "pulse_ns": 4.7466358634718375,
+    "srclk_rclk_ns": 9.423064016920065,
+    "stage_metrics": {
+      "data": {
+        "status": "PASS",
+        "stages": [
+          {
+            "vmax": 3.54736891,
+            "vmin": -0.0973651979,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 5.940908037664046e-08,
+            "negative_injection_charge_c": 1.167805567245429e-14,
+            "threshold_counts": [
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 20.030797337567407,
+            "max_vil_to_vih_ns": 1.1684545930779677,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 3.34547571,
+            "vmin": -0.561101757,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "FAIL",
+            "negative_clamp_exception_used": true,
+            "negative_clamp_peak_a": 0.00129692500093,
+            "negative_injection_charge_c": 1.5073484651165485e-12,
+            "threshold_counts": [
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 21.044312471461893,
+            "max_vil_to_vih_ns": 0.3202665650296126,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 2.50179805,
+            "vmin": -0.000569985011,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": null,
+            "negative_injection_charge_c": null,
+            "threshold_counts": [
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 21.006751493905995,
+            "max_vil_to_vih_ns": 0.8395093862263039,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          }
+        ],
+        "lvds": null
+      },
+      "clock": {
+        "status": "PASS",
+        "stages": [
+          {
+            "vmax": 3.50297531,
+            "vmin": -0.0530750641,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 5.839068744866349e-08,
+            "negative_injection_charge_c": 9.536769122069426e-15,
+            "threshold_counts": [
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 4.590715248022491,
+            "max_vil_to_vih_ns": 1.309273941861619,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 2.79248735,
+            "vmin": -0.113783827,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 5.978660499280038e-08,
+            "negative_injection_charge_c": 9.566208068606293e-15,
+            "threshold_counts": [
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 4.5690064190874295,
+            "max_vil_to_vih_ns": 1.3562431726505437,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 2.50002163,
+            "vmin": -0.000569985011,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": null,
+            "negative_injection_charge_c": null,
+            "threshold_counts": [
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 4.7466358634718375,
+            "max_vil_to_vih_ns": 1.808839595639256,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          }
+        ],
+        "lvds": null
+      },
+      "latch": {
+        "status": "PASS",
+        "stages": [
+          {
+            "vmax": 3.50297531,
+            "vmin": -0.0530691069,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 5.8390550470744713e-08,
+            "negative_injection_charge_c": 1.5250321938548338e-14,
+            "threshold_counts": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 15.218489697621976,
+            "max_vil_to_vih_ns": 1.3000993459291408,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 2.78266192,
+            "vmin": -0.11375091,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 5.978584811001106e-08,
+            "negative_injection_charge_c": 1.5253930376985877e-14,
+            "threshold_counts": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 15.4352707290343,
+            "max_vil_to_vih_ns": 1.3560882808362607,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 2.50002163,
+            "vmin": -0.000569985011,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": null,
+            "negative_injection_charge_c": null,
+            "threshold_counts": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 14.870827446519002,
+            "max_vil_to_vih_ns": 1.802504416399671,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          }
+        ],
+        "lvds": null
+      }
+    },
+    "model_joint_status": "FAIL",
+    "evidence_level": "IBIS_DERIVED_STATIC_IV; MODEL_HOLD; not full compliant IBIS",
+    "wave_dir": "results\\si_auc_filter_duty42\\F_auc_filter_0_typ_1.0_0",
+    "model_revision": "si_auc_filter_duty42",
+    "actual_package": false
+  },
+  {
+    "solution": "F",
+    "case": 1000,
+    "z0_ohm": 120,
+    "ron_ohm": 20,
+    "voltage": 3.465,
+    "cin_pf": 6.0,
+    "corner": "max",
+    "td_ns": 1.25,
+    "variant": "auc_filter",
+    "ax_model": "OEM_IV_SUBSET",
+    "setup_ns": 7.819301415279114,
+    "hold_ns": 11.026913332502083,
+    "pulse_ns": 4.739168614554849,
+    "srclk_rclk_ns": 9.258141854701478,
+    "stage_metrics": {
+      "data": {
+        "status": "PASS",
+        "stages": [
+          {
+            "vmax": 3.51619398,
+            "vmin": -0.0870333266,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 2.124987719343013e-07,
+            "negative_injection_charge_c": 4.170406888550796e-14,
+            "threshold_counts": [
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 19.274677429322566,
+            "max_vil_to_vih_ns": 1.5409650399767685,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 3.49750196,
+            "vmin": -0.287071425,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 7.807392304812508e-06,
+            "negative_injection_charge_c": 5.4196130215595945e-14,
+            "threshold_counts": [
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 20.452822201001922,
+            "max_vil_to_vih_ns": 0.4790642201001418,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 2.62132122,
+            "vmin": -0.0244155435,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": null,
+            "negative_injection_charge_c": null,
+            "threshold_counts": [
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 20.60507327202754,
+            "max_vil_to_vih_ns": 0.5928482983253716,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          }
+        ],
+        "lvds": null
+      },
+      "clock": {
+        "status": "PASS",
+        "stages": [
+          {
+            "vmax": 3.49354022,
+            "vmin": -0.0514829897,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 2.0957220445979348e-07,
+            "negative_injection_charge_c": 3.355218524247024e-14,
+            "threshold_counts": [
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 3.608165680138896,
+            "max_vil_to_vih_ns": 1.7962864932728309,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 3.01671554,
+            "vmin": -0.300612535,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 1.5995058319087513e-05,
+            "negative_injection_charge_c": 6.106220350558017e-14,
+            "threshold_counts": [
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 4.147002155454885,
+            "max_vil_to_vih_ns": 1.490548093507904,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 2.57633927,
+            "vmin": -0.000989192459,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": null,
+            "negative_injection_charge_c": null,
+            "threshold_counts": [
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                8,
+                8
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 4.739168614554849,
+            "max_vil_to_vih_ns": 1.7641910761346082,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          }
+        ],
+        "lvds": null
+      },
+      "latch": {
+        "status": "PASS",
+        "stages": [
+          {
+            "vmax": 3.49354022,
+            "vmin": -0.051490782,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 2.0957284593590088e-07,
+            "negative_injection_charge_c": 5.464238501798616e-14,
+            "threshold_counts": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 15.15823081807028,
+            "max_vil_to_vih_ns": 1.6912588025341506,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 3.0001293,
+            "vmin": -0.300791532,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": 1.610328930262999e-05,
+            "negative_injection_charge_c": 1.0089983462647136e-13,
+            "threshold_counts": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 15.76270543252744,
+            "max_vil_to_vih_ns": 1.487278210309853,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          },
+          {
+            "vmax": 2.57620338,
+            "vmin": -0.000989203397,
+            "voltage_status": "PASS",
+            "negative_voltage_screen": "PASS",
+            "negative_clamp_exception_used": false,
+            "negative_clamp_peak_a": null,
+            "negative_injection_charge_c": null,
+            "threshold_counts": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "edge_status": "PASS",
+            "min_pulse_ns": 15.392649923918114,
+            "max_vil_to_vih_ns": 1.7617516083039675,
+            "scope": "receiver voltage relative to modeled local ground;595 clamp/injection absent MODEL_HOLD"
+          }
+        ],
+        "lvds": null
+      }
+    },
+    "model_joint_status": "FAIL",
+    "evidence_level": "IBIS_DERIVED_STATIC_IV; MODEL_HOLD; not full compliant IBIS",
+    "wave_dir": "results\\si_auc_filter_duty42\\F_auc_filter_1000_max_1.25_1_actualpkg",
+    "model_revision": "si_auc_filter_duty42",
+    "actual_package": true
+  }
+]

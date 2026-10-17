@@ -1,0 +1,1 @@
+厂家PDF、IBIS、压缩包、Vivado DCP/XSA与私有会话原文留在本地审核目录，未上传。公开SOURCE_FILE_MANIFEST/COMPONENT_DATASHEET_INDEX包含来源和SHA；Full重放应在完整本地审核包执行，或先依法下载模型到sources并核对SHA。Validate只检查已保存证据和当前源码，不冒充重跑硬件。

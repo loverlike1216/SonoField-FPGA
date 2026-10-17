@@ -1,93 +1,162 @@
 {
-  "checkpoint_id": "CP-20261011-001",
+  "checkpoint_id": "CP-20261016-FINALTHEORY",
   "project_id": "SONOFIELD_FPGA",
   "project_name": "SonoField-FPGA",
   "repository": "https://github.com/loverlike1216/SonoField-FPGA.git",
   "workspace_path": "E:\\Codex_project\\AMD_Sonofield",
   "branch": "codex/v5-hardware-design-20261011",
-  "base_commit": "618b6f1ffe3dae9b98c59bf1c981349e48644662",
+  "base_commit": "8c27b5841b5494c3761ab211881a3ea2be63e8c8",
   "head_commit": null,
-  "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json",
-  "source_commit": "6ba6314",
+  "head_commit_resolution": "git log -1 --format=%H -- shared/CONTEXT_CHECKPOINT.json; then read localPUBLICATION_RECEIPT.json",
   "active_version": "v5",
   "version_status": "ACTIVE",
-  "current_stage": "V5_HARDWARE_GATE7_OFFLINE_DELIVERED_ELECTRICAL_HOLD",
-  "created_at": "2026-10-10T19:00:47.016059+00:00",
-  "created_by": "Codex",
-  "checkpoint_reason": "Actual user four-source design direction; full243 digital regression; clean243/12byteexact/nativepackage/BOM audit; source/pin/revision reconciliation",
-  "source_of_truth": "repository",
-  "status": "VALID_CANDIDATE_WITH_LIMITATIONS",
-  "architecture_ref": "v5/docs/hardware/DESIGN_REVIEW.md",
+  "current_stage": "V5_THEORY_DRAW_READY_AWAIT_INDEPENDENT_REVIEW",
+  "created_at": "2026-10-17T02:05:43.561954+00:00",
+  "checkpoint_reason": "FinalRTL/XDC/uniquehardware/pincontract/nativeSTA/modelclosed; stopbeforeCAD",
+  "source_of_truth": "currentrepository+actualtooloutputs",
+  "architecture_ref": "v5/hardware/draw_ready_20261016/00_FINAL_THEORY_DECISION.md",
   "completed": [
-    "IMPLEMENTED four-source/63GPIO review contracts and101type five-sheet workingBOM",
-    "TESTED243current+243freshclone; original203 unchanged",
-    "SIMULATED3696x3Icarus+1XSim;full C16/temp/sparse/GUI/AXI/safety/equivalence PASS",
-    "TESTED68nativepackage/80manual/8negativepin cases/404formula rows/12byteequal outputs",
-    "SYNTHESIZED_OOC only prior sealed scope retained; no new synthesis/board claim",
-    "HARDWARE_CURRENT OS COM3Code0 only; prior readonly scope retained"
+    "TESTED247unit",
+    "SIMULATEDtwoindependenttools128TX+8ADC+goldens+freshness",
+    "ROUTEDcompletePSPL-2positiveWNS/WHS,DRC0",
+    "MODELED90SI+648BVD+512fault+16softstartSPICE",
+    "DOCUMENTED85MPN1611devices5205pins1259passives80+128contacts"
   ],
   "next_actions": [
-    "Verify publication receipt/remote SHA/CI",
-    "Obtain real EasyEDA/native libraries; close electrical unknowns and63GPIO wrapper integration",
-    "Resolve P-20261010-001 through real architecture review; obtain validated image/SDbackup before boardwrites",
-    "Run actual power/cutoff/AFE/ADC/TMP117/fullTX/EPS tests after qualified hardware"
+    "ChatGPTindependentReview",
+    "Onlyafternewuserrequest createactualschematic; noautomaticnextstage"
   ],
   "active_decisions": [
-    "ADR035-041 retained in scope",
-    "ADR042 actual user four-source/USB-C/63GPIO/EPS2-5mm/autonomousGitHub sync"
+    "User20261016autonomousv5theory/necessaryRTL-XDC/samebranchpublication",
+    "UserdevicecorrectionXC7Z020-2CLG400I",
+    "F-LVT128/256MHz;ADC8MHz400kSPS;3x12V10VTX"
   ],
-  "blockers": [
-    "PC-B01..13 with current meanings in BLOCKERS.md"
-  ],
-  "critical_issues": [
-    "63GPIOwrapper_RESET_SYNC_mux_FAULT_not_integrated",
-    "NativeSafetyCircuit_not_created_or_physicallyverified",
-    "LowVBUS_AVCC_regulation_unqualified",
-    "BRAM_asyncreset_OPEN",
-    "AFE_load_VCCO_externalSTA_nativeCAD_ERC_unqualified"
-  ],
+  "blockers": [],
+  "critical_issues": [],
   "latest_validation": [
-    "digital_full_retry2/summary.json",
-    "clean_clone/REPRODUCTION.json",
-    "CONTRACT_VALIDATION_portable.json",
-    "REGENERATION_FINAL.json",
-    "PRESERVATION_final.json",
-    "PRIVACY_SCAN.json",
-    "FILE_HASHES.json"
+    {
+      "check": "UniqueMPN/pins/net/quantity",
+      "status": "PASS",
+      "evidence": "results/INDEPENDENT_CONSISTENCY_FINAL.json"
+    },
+    {
+      "check": "OEM XLSX/actualRTL-XDC/nativeIO 80+128contacts",
+      "status": "PASS",
+      "evidence": "09_RTL_XDC_PINMAP_CROSSCHECK.csv"
+    },
+    {
+      "check": "TX90 joint SI corners + worstpulse numerical convergence",
+      "status": "PASS",
+      "evidence": "results/SELECTED_FINAL_SI_INDEPENDENT.json;CONVERGENCE_FINAL.json"
+    },
+    {
+      "check": "ActualPSPL synthesis/place/route setup+hold+DRC",
+      "status": "PASS",
+      "evidence": "results/native21/"
+    },
+    {
+      "check": "128TX256phases38500/40000/41500Hz and fresh/defaultoff",
+      "status": "PASS",
+      "evidence": "results/final_digital_qualified_final/summary.json"
+    },
+    {
+      "check": "8DOUT400kSPS2048signedframes/read/ACK two tools",
+      "status": "PASS",
+      "evidence": "results/capture_adc_final/summary.json"
+    },
+    {
+      "check": "ActualGPIO/AXI/mailbox/ADC44nsproduction replay",
+      "status": "PASS",
+      "evidence": "results/production_profile_adc_final_fixed/summary.json"
+    },
+    {
+      "check": "Legacyindependent scheduler/queue/array golden",
+      "status": "PASS",
+      "evidence": "v5/evidence/final_theory_20261016/independent_qualified_final/summary.json"
+    },
+    {
+      "check": "Python247unit",
+      "status": "PASS",
+      "evidence": "logs/unit_sealed_final247.log"
+    },
+    {
+      "check": "3696frames x3Icarus+1XSim functional motion/goldens",
+      "status": "PASS",
+      "evidence": "v5/evidence/final_theory_20261016/functional_final128/motion/SUMMARY.json"
+    },
+    {
+      "check": "Originalfrozen_parent sourcehash gate",
+      "status": "FAIL",
+      "evidence": "OriginalFAILretained; explicitlyauthorizedRTLchanges; independentreviewofauthorizeddelta pending"
+    },
+    {
+      "check": "Power/BVD/thermal/fault/Cfeature bounded checks",
+      "status": "PASS",
+      "evidence": "results/ELECTRICAL_FINAL_CHECKS.json"
+    },
+    {
+      "check": "FullcompliantdynamicIBIS/realSSO/PCBPDN",
+      "status": "HOLD",
+      "evidence": "Notclaimed; datasheet/staticIVandboundedgeometry fallback used"
+    },
+    {
+      "check": "NativeEasyEDA/ERC",
+      "status": "NOT_CHECKED",
+      "evidence": "Schematic/PCBNOT_CREATED"
+    },
+    {
+      "check": "Physicalpower/acoustic/ADC/thermal/runtime",
+      "status": "NOT_CHECKED",
+      "evidence": "OnlyJTAGreadonlyID; nohardwarewrites"
+    },
+    {
+      "check": "FulltargetPSruntime/BSP deployment",
+      "status": "HOLD",
+      "evidence": "Noimageprogrammed; existing safe-status image is not production runtime"
+    },
+    {
+      "check": "ExternalChatGPTindependentreview",
+      "status": "HOLD",
+      "evidence": "Reader/senderunavailable;0messages/decisions; candidatewaitsreview"
+    },
+    {
+      "check": "Procurement/footprintmapping/PCBorder",
+      "status": "HOLD",
+      "evidence": "Noorders/manufacturingauthorization"
+    }
   ],
   "known_limitations": [
-    "NativeCADNOT_CREATED/ERCNOT_RUN",
-    "No actualUARTPSAXIPL control loop or ultrasound",
-    "Unknownworstpower/VCCO/SDbackup/nativeelectrical",
-    "SameOS/EDA clean reproduction; full current digital, cleanunit/contract/package this round",
-    "No independent ChatGPT/electrical review; mainunmerged"
+    "Originalfrozen_parenthashFAILretained",
+    "FullIBIS/SSO/PDNnotqualified",
+    "NoCAD/ERC/physical/deployment",
+    "ChatGPTreadsendBLOCKED"
   ],
   "do_not_change": [
-    "v5 soleactive; originalRTL/tests/thresholds/goldens/BOM/evidence",
-    "Frozenarchive bodies/oldphysicalworkspace notread",
-    "No forcepush/historyrewrite",
-    "No unknownimage/productionXDC/realultrasound from candidate"
+    "NoV6",
+    "NoHistoricalprojectbodyreads/changes",
+    "NoS3/S4/nativeEDAmodifications",
+    "NoMainmerge/hardwarewrites/fabrication/procurement"
   ],
   "invariants": [
-    "128TX8RX/32lanesx4/commonclock/8bitrequestedcal/atomicmaps",
-    "50Hz/12mmpitch/100mm90-115gap/geometricorigin",
-    "C16 direction; threeTMP117; independentfour-source/noheaderbackfeed",
-    "DefaultOFF/latchedfault/manualrearm and35dB criterion"
+    "128TX8RX",
+    "8bitrequested/calibrationseparate",
+    "atomiccompletemapcommit",
+    "40kHz256phases50Hzmotion",
+    "UCC27624andSN74LVC595A",
+    "threeindependent12V/fixed10VTX",
+    "2x20+2x32physicalpincontracts"
   ],
   "open_ai_problems": [
-    "P-20261008-001",
-    "P-20261009-001",
-    "P-20261010-001"
+    "P-20261016-001"
   ],
   "evidence_refs": [
-    "v5/evidence/hardware_design_20261011/FINAL_VERIFICATION.json",
-    "v5/docs/hardware/FINAL_REPORT.md"
+    "v5/hardware/draw_ready_20261016/results/FINAL_NATIVE_SOURCE_MANIFEST.json",
+    "v5/hardware/draw_ready_20261016/09_RTL_XDC_PINMAP_CROSSCHECK.csv",
+    "v5/hardware/draw_ready_20261016/results/native21/NATIVE_ROUTED_TIMING.rpt"
   ],
-  "resume_from": "README -> current PROJECT_STATE/VERSION_STATE/CHECKPOINT -> CURRENT_PLAN -> current hardware docs/evidence; never defaultreadhistory",
-  "state_conflicts": [
-    "ADR042 supersedes centralheaderpower and50mgactive target, old artifacts retained",
-    "UserV2V3compatibility statement retained but internalPDFREV/UARTbridge mismatch not independently resolved",
-    "SDbackup expressedintention not verified",
-    "AutonomousGitHub sync authorized; mainquality not met"
-  ]
+  "resume_from": "v5/hardware/draw_ready_20261016/FINAL_REVIEW.md",
+  "status": "VALID_THEORY_CANDIDATE_REVIEW_PENDING",
+  "draw_ready": true,
+  "overall": "ACCEPT WITH LIMITATIONS",
+  "audit_root": "E:\\Codex_project\\SonoField_v5_MinimalBOM_Audit\\20261016_FinalTheory_DrawReady"
 }
